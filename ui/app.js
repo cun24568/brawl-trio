@@ -1,6 +1,8 @@
 let DB = null;
 let currentMap = null;
 let currentTierFilter = "all";  // all / S+ / S / A / B / C
+let synergyPick1 = "";  // シナジー検索: 1人目
+let synergyPick2 = "";  // シナジー検索: 2人目
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -63,6 +65,18 @@ function selectMap(m) {
 
 function setTierFilter(tier) {
   currentTierFilter = tier;
+  renderMapDetail();
+}
+
+function setSynergyPick(slot, brawler) {
+  if (slot === 1) synergyPick1 = brawler;
+  else if (slot === 2) synergyPick2 = brawler;
+  renderMapDetail();
+}
+
+function resetSynergy() {
+  synergyPick1 = "";
+  synergyPick2 = "";
   renderMapDetail();
 }
 
@@ -171,6 +185,8 @@ function renderMapDetail() {
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
         ${tableHtml}
 
+        ${renderSynergySection(m)}
+
         ${m.recommended_trios && m.recommended_trios.length > 0 ? `
           <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">推奨トリオ編成</h3>
           <div class="space-y-2">
@@ -194,6 +210,81 @@ function renderMapDetail() {
           </div>
         ` : ""}
       </div>
+    </div>`;
+}
+
+function renderSynergySection(m) {
+  if (!m.all_trios || m.all_trios.length === 0) return "";
+
+  // 出現する全ブロウラー (sorted)
+  const brawlerSet = new Set();
+  for (const t of m.all_trios) {
+    for (const mem of t.members) brawlerSet.add(mem.brawler);
+  }
+  const brawlers = [...brawlerSet].sort();
+
+  const opt = (val, sel) =>
+    `<option value="${escapeHtml(val)}" ${val === sel ? "selected" : ""}>${escapeHtml(val)}</option>`;
+  const dropdown = (slot, selected) => `
+    <select onchange="setSynergyPick(${slot}, this.value)" class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm">
+      <option value="">-- ${slot}人目 --</option>
+      ${brawlers.map(b => opt(b, selected)).join("")}
+    </select>`;
+
+  // フィルタ: 選択されたブロウラーを含むtrios
+  let filtered = m.all_trios;
+  if (synergyPick1) {
+    filtered = filtered.filter(t => t.members.some(mem => mem.brawler === synergyPick1));
+  }
+  if (synergyPick2) {
+    filtered = filtered.filter(t => t.members.some(mem => mem.brawler === synergyPick2));
+  }
+  if (synergyPick1 && synergyPick2 && synergyPick1 === synergyPick2) {
+    filtered = [];  // 同じキャラ2人選択は無効
+  }
+
+  // 表示制限
+  const top = filtered.slice(0, 30);
+  const selectedSet = new Set([synergyPick1, synergyPick2].filter(Boolean));
+
+  const resultHtml = top.length === 0
+    ? `<div class="p-3 text-gray-500 text-sm">該当する組み合わせなし (5戦以上のトリオから検索)</div>`
+    : top.map(t => {
+        const others = t.members.filter(mem => !selectedSet.has(mem.brawler));
+        const wrColor = t.win_rate >= 0.75 ? "text-green-400" : t.win_rate >= 0.5 ? "text-yellow-400" : "text-red-400";
+        return `<div class="flex items-center justify-between p-2 bg-gray-700/30 hover:bg-gray-700/50 rounded">
+          <div class="flex items-center gap-2 flex-wrap">
+            ${t.members.map((mem, i) => `
+              ${i > 0 ? '<span class="text-gray-500">+</span>' : ""}
+              <div class="flex items-center gap-1 px-2 py-1 ${selectedSet.has(mem.brawler) ? 'bg-blue-700/50 ring-1 ring-blue-500' : 'bg-gray-700'} rounded">
+                ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ""}
+                <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler)}</span>
+              </div>
+            `).join("")}
+          </div>
+          <div class="text-sm whitespace-nowrap ml-2">
+            <span class="font-mono font-bold ${wrColor}">${(t.win_rate * 100).toFixed(0)}%</span>
+            <span class="text-gray-400 ml-1 font-mono text-xs">${t.wins}/${t.picks}</span>
+          </div>
+        </div>`;
+      }).join("");
+
+  const hint = !synergyPick1
+    ? "1人目を選ぶと相方候補、2人決めると3人目候補が出ます"
+    : !synergyPick2
+      ? `${synergyPick1} の相方候補TOP30 (勝率順)`
+      : `${synergyPick1} + ${synergyPick2} の3人目候補TOP30 (勝率順)`;
+
+  return `
+    <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">シナジー検索 / ピック提案</h3>
+    <div class="bg-gray-700/20 p-3 rounded mb-2">
+      <div class="flex flex-wrap gap-2 items-center mb-2">
+        ${dropdown(1, synergyPick1)}
+        ${dropdown(2, synergyPick2)}
+        ${(synergyPick1 || synergyPick2) ? `<button onclick="resetSynergy()" class="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm">クリア</button>` : ""}
+      </div>
+      <div class="text-xs text-gray-400 mb-2">${hint}</div>
+      <div class="space-y-1 max-h-96 overflow-y-auto">${resultHtml}</div>
     </div>`;
 }
 

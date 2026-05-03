@@ -330,9 +330,9 @@ def main():
             brawler_rows, brawler_by_name, rank_dist.get(map_name)
         )
 
-        # 推奨編成: WR降順 + picks降順
+        # 推奨編成 + 全trios (シナジー検索用)
         m_trios = trio_stats.get(map_name, {})
-        rec_trios = []
+        all_trios = []
         for trio_key, s in m_trios.items():
             if s["picks"] < MIN_PICKS_FOR_TRIO:
                 continue
@@ -340,7 +340,6 @@ def main():
             wins = s["wins"]
             wr = wins / picks
             avg_r = sum(s["ranks"]) / len(s["ranks"])
-            # 各メンバーの画像URL付き
             members = []
             for br in trio_key:
                 bm = brawler_by_name.get(br.upper(), {})
@@ -350,7 +349,7 @@ def main():
                         "image_url": bm.get("image_url"),
                     }
                 )
-            rec_trios.append(
+            all_trios.append(
                 {
                     "members": members,
                     "picks": picks,
@@ -359,8 +358,8 @@ def main():
                     "avg_rank": round(avg_r, 2),
                 }
             )
-        rec_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
-        rec_trios = rec_trios[:TOP_N_TRIOS]
+        all_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
+        rec_trios = all_trios[:TOP_N_TRIOS]
 
         maps_out.append(
             {
@@ -375,6 +374,7 @@ def main():
                 "map_avg_rank": round(map_avg_rank, 2),
                 "tier_list": tier_list,
                 "recommended_trios": rec_trios,
+                "all_trios": all_trios,  # シナジー検索用 (min picks 5以上)
             }
         )
     maps_out.sort(key=lambda m: -m["total_picks"])
