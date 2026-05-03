@@ -37,8 +37,8 @@ SAVE_EVERY = 20
 
 # トロフィー閾値で qualifying プールを永続蓄積
 TROPHY_THRESHOLD = 50000
-TROPHY_CHECK_LIMIT = 100  # 1cycleで新規にチェックする数
-MAX_QUALIFYING = 5000  # qualifyingプール上限 (上位trophy順で保持)
+TROPHY_CHECK_LIMIT = 200  # 1cycleで新規にチェックする数 (10kまで早く到達)
+MAX_QUALIFYING = 10000  # qualifyingプール上限 (上位trophy順で保持)
 MAX_DISCOVERED = 100000  # discovered キャッシュ上限
 
 DISCOVERED_FILE = OUT / "discovered_tags.json"
