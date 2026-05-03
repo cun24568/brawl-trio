@@ -10,7 +10,7 @@ const TIER_COLORS = {
 
 async function load() {
   try {
-    const res = await fetch("../data/db.json");
+    const res = await fetch("/data/db.json");
     DB = await res.json();
   } catch (e) {
     document.getElementById("meta-info").textContent =
