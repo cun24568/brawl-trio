@@ -43,9 +43,14 @@ MIN_PICKS_ABS = 5  # 絶対最小pick数
 MIN_PICK_RATE = 0.005  # マップ内ピック率最小値 (0.5%)
 BAYES_PRIOR = 10  # ベイズ事前分布の強さ
 RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
-MIN_PICKS_FOR_TRIO = 2
+MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数 (信頼性UP、2→5)
 TOP_N_TRIOS = 8
 TOP_N_TIER = 25
+# ティア percentile-based 閾値 (上位から %)
+TIER_PCT_S_PLUS = 0.10
+TIER_PCT_S = 0.25
+TIER_PCT_A = 0.55
+TIER_PCT_B = 0.80
 
 
 def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
@@ -127,18 +132,6 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         score = bayes_weighted * 100 + rank_adv * RANK_WEIGHT
         delta = bayes_weighted - map_avg_weighted
 
-        # ティア = マップ平均weightedからの相対delta (対称ペナルティで幅広め)
-        if delta >= 0.12:
-            tier = "S+"
-        elif delta >= 0.06:
-            tier = "S"
-        elif delta >= -0.02:
-            tier = "A"
-        elif delta >= -0.08:
-            tier = "B"
-        else:
-            tier = "C"
-
         master = brawler_by_name.get(r["brawler"].upper(), {})
         scored.append({
             "brawler": r["brawler"],
@@ -155,10 +148,25 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
             "rank2_rate": rank2_rate,
             "pick_rate": round(pick_rate, 3),
             "score": round(score, 2),
-            "tier": tier,
+            "delta": round(delta, 3),
+            "tier": "",  # 後でpercentileで埋める
         })
 
     scored.sort(key=lambda x: -x["score"])
+    # percentile-based ティア割り当て
+    n = len(scored)
+    for i, s in enumerate(scored):
+        pct = i / n if n else 1
+        if pct < TIER_PCT_S_PLUS:
+            s["tier"] = "S+"
+        elif pct < TIER_PCT_S:
+            s["tier"] = "S"
+        elif pct < TIER_PCT_A:
+            s["tier"] = "A"
+        elif pct < TIER_PCT_B:
+            s["tier"] = "B"
+        else:
+            s["tier"] = "C"
     return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
 
 

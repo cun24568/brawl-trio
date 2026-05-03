@@ -360,6 +360,16 @@ def _check_one_player(tag):
         return tag, None, "err"
 
 
+def get_dynamic_threshold(qualifying):
+    """qualifying が上限近くなったら閾値を bottom 5% qualifier の trophy に引き上げ"""
+    if len(qualifying) < MAX_QUALIFYING * 0.95:
+        return TROPHY_THRESHOLD
+    sorted_q = sorted(qualifying, key=lambda x: x.get("trophies", 0))
+    idx = max(0, int(len(sorted_q) * 0.05))
+    bottom_trophy = sorted_q[idx].get("trophies", TROPHY_THRESHOLD)
+    return max(TROPHY_THRESHOLD, bottom_trophy)
+
+
 def trophy_check_candidates(discovered, qualifying):
     """discovered の中で未確認のタグから N人 トロフィーチェック → qualifying に追加"""
     qual_tags = {q["tag"] for q in qualifying}
@@ -368,7 +378,11 @@ def trophy_check_candidates(discovered, qualifying):
         return qualifying
     random.shuffle(candidates)
     candidates = candidates[:TROPHY_CHECK_LIMIT]
-    print(f"\n[Phase 4] トロフィーチェック ({len(candidates)} 候補, {PARALLEL_WORKERS} 並列)")
+    threshold = get_dynamic_threshold(qualifying)
+    if threshold > TROPHY_THRESHOLD:
+        print(f"\n[Phase 4] トロフィーチェック ({len(candidates)} 候補, {PARALLEL_WORKERS} 並列, 動的閾値: {threshold}+)")
+    else:
+        print(f"\n[Phase 4] トロフィーチェック ({len(candidates)} 候補, {PARALLEL_WORKERS} 並列, 閾値: {threshold}+)")
     new_count = 0
     rate_limited = False
     with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as ex:
@@ -382,7 +396,7 @@ def trophy_check_candidates(discovered, qualifying):
             if err is not None or data is None:
                 continue
             tro = data.get("trophies", 0)
-            if tro >= TROPHY_THRESHOLD:
+            if tro >= threshold:
                 qualifying.append({
                     "tag": tag,
                     "trophies": tro,
