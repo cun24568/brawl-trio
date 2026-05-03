@@ -157,7 +157,7 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
         delta = bayes_weighted - map_avg_weighted
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
-        br_jp = (brawler_jp or {}).get((master.get("hash") or "").lower(), "")
+        br_jp = get_brawler_jp(r["brawler"], brawler_by_name, brawler_jp)
         insufficient = picks < MIN_PICKS_FOR_RELIABLE_TIER
         scored.append({
             "brawler": r["brawler"],
@@ -210,6 +210,20 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
 
 HIGH_TROPHY_THRESHOLD = 2000  # この値以上の team avg trophy は重み2倍
 HIGH_TROPHY_WEIGHT = 2.0
+
+
+def name_to_hash(name):
+    """EN名からBrawlify hash推定 (Brawlify未収録ブロウラー用)"""
+    return (name or "").lower().replace(" ", "-").replace("_", "-")
+
+
+def get_brawler_jp(brawler_name, brawler_by_name, brawler_jp):
+    """master優先、無ければEN名からhash推定でJP取得"""
+    if not brawler_jp:
+        return ""
+    master = brawler_by_name.get((brawler_name or "").upper(), {})
+    h = master.get("hash") or name_to_hash(brawler_name)
+    return brawler_jp.get(h, "")
 
 
 def extract_trios_and_rank_dist(battles):
@@ -351,7 +365,7 @@ def main():
             members = []
             for br in trio_key:
                 bm = brawler_by_name.get(br.upper(), {})
-                bm_jp = brawler_jp.get((bm.get("hash") or "").lower(), "")
+                bm_jp = get_brawler_jp(br, brawler_by_name, brawler_jp)
                 members.append(
                     {
                         "brawler": br,
@@ -409,7 +423,7 @@ def main():
             {
                 "id": master.get("id"),
                 "name": br_name,
-                "name_jp": brawler_jp.get((master.get("hash") or "").lower(), ""),
+                "name_jp": get_brawler_jp(br_name, brawler_by_name, brawler_jp),
                 "image_url": master.get("image_url"),
                 "rarity": master.get("rarity"),
                 "total_picks": sum(r["picks"] for r in br_rows),
