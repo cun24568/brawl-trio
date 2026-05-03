@@ -70,9 +70,11 @@ function selectMap(m) {
         <h2 class="text-2xl font-bold">${escapeHtml(m.name_jp || m.name)}</h2>
         ${m.name_jp ? `<div class="text-sm text-gray-400">${escapeHtml(m.name)}</div>` : ""}
         <div class="text-sm text-gray-400 mt-2">
-          総ピック ${m.total_picks} / 掲載 ${m.tier_list.length}人
+          総ピック ${m.total_picks} / 掲載 ${m.tier_list.length}人 /
+          <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
+        <div class="text-xs text-gray-500 mt-1">ティアはマップ平均からの相対deltaで判定。スコア順にソート (ベイズ平均WR+順位優位)</div>
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト</h3>
         <table class="w-full">
           <thead>

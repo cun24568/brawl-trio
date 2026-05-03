@@ -38,21 +38,82 @@ BRAWLERS = DATA / "brawlers.json"
 MAPS_POOL = DATA / "maps_pool.json"
 OUT = DATA / "db.json"
 
-MIN_PICKS_FOR_TIER = 5  # ティア掲載最小pick数
-MIN_PICKS_FOR_TRIO = 2  # 推奨編成掲載最小pick数
+MIN_PICKS_ABS = 5  # 絶対最小pick数
+MIN_PICK_RATE = 0.005  # マップ内ピック率最小値 (0.5%)
+BAYES_PRIOR = 10  # ベイズ事前分布の強さ
+RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
+MIN_PICKS_FOR_TRIO = 2
 TOP_N_TRIOS = 8
+TOP_N_TIER = 25
 
 
-def tier_of(wr: float, picks: int) -> str:
-    """簡易ティアリング。pick少ないやつは1段下げる。"""
-    base = (
-        "S+" if wr >= 0.85 else "S" if wr >= 0.75 else "A" if wr >= 0.65 else "B" if wr >= 0.55 else "C"
+def build_map_tier_list(brawler_rows, brawler_by_name):
+    """
+    マップ別ティアリストを生成。
+    - ベイズ平均でWRを縮小 (少サンプルがS+にならない)
+    - マップ平均WRを基準に相対評価 (マップ間公平)
+    - avg_rank を強さスコアに反映 (1位率重視)
+    - 使用率フィルタ (メタ外を除外)
+    - 強さスコア降順でソート (強い順)
+    """
+    if not brawler_rows:
+        return [], 0.0, 0.0
+
+    total_picks = sum(r["picks"] for r in brawler_rows)
+    if total_picks == 0:
+        return [], 0.0, 0.0
+
+    total_wins = sum(r["wins"] for r in brawler_rows)
+    map_avg_wr = total_wins / total_picks
+    map_avg_rank = (
+        sum(r["avg_rank"] * r["picks"] for r in brawler_rows) / total_picks
     )
-    if picks < 10:  # サンプル少ないなら1段下げ
-        rank = ["S+", "S", "A", "B", "C"]
-        i = rank.index(base)
-        return rank[min(i + 1, len(rank) - 1)]
-    return base
+
+    scored = []
+    for r in brawler_rows:
+        picks = r["picks"]
+        if picks < MIN_PICKS_ABS:
+            continue
+        pick_rate = picks / total_picks
+        if pick_rate < MIN_PICK_RATE:
+            continue
+
+        # ベイズ平均: マップ平均を事前分布に
+        bayes_wr = (r["wins"] + map_avg_wr * BAYES_PRIOR) / (picks + BAYES_PRIOR)
+        rank_adv = map_avg_rank - r["avg_rank"]  # 正なら強い (低順位=好)
+        score = bayes_wr * 100 + rank_adv * RANK_WEIGHT
+        wr_delta = bayes_wr - map_avg_wr  # マップ平均からの差
+
+        # ティア = マップ平均からの相対deltaで決定
+        if wr_delta >= 0.10:
+            tier = "S+"
+        elif wr_delta >= 0.05:
+            tier = "S"
+        elif wr_delta >= -0.02:
+            tier = "A"
+        elif wr_delta >= -0.08:
+            tier = "B"
+        else:
+            tier = "C"
+
+        master = brawler_by_name.get(r["brawler"].upper(), {})
+        scored.append({
+            "brawler": r["brawler"],
+            "brawler_id": master.get("id"),
+            "image_url": master.get("image_url"),
+            "picks": picks,
+            "wins": r["wins"],
+            "win_rate": r["win_rate"],
+            "bayes_wr": round(bayes_wr, 3),
+            "avg_rank": r["avg_rank"],
+            "pick_rate": round(pick_rate, 3),
+            "score": round(score, 2),
+            "tier": tier,
+        })
+
+    # 強さスコア降順 (= 強いキャラほど上)
+    scored.sort(key=lambda x: -x["score"])
+    return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
 
 
 def extract_trios(battles):
@@ -127,26 +188,9 @@ def main():
         pool_map = pool_by_hash.get(hash_guess, {})
 
         total = sum(r["picks"] for r in brawler_rows)
-        # ティア順: WR降順, picks降順
-        sorted_rows = sorted(
-            [r for r in brawler_rows if r["picks"] >= MIN_PICKS_FOR_TIER],
-            key=lambda x: (-x["win_rate"], -x["picks"]),
+        tier_list, map_avg_wr, map_avg_rank = build_map_tier_list(
+            brawler_rows, brawler_by_name
         )
-        tier_list = []
-        for r in sorted_rows[:20]:
-            br_master = brawler_by_name.get(r["brawler"].upper(), {})
-            tier_list.append(
-                {
-                    "brawler": r["brawler"],
-                    "brawler_id": br_master.get("id"),
-                    "image_url": br_master.get("image_url"),
-                    "picks": r["picks"],
-                    "wins": r["wins"],
-                    "win_rate": r["win_rate"],
-                    "avg_rank": r["avg_rank"],
-                    "tier": tier_of(r["win_rate"], r["picks"]),
-                }
-            )
 
         # 推奨編成: WR降順 + picks降順
         m_trios = trio_stats.get(map_name, {})
@@ -189,6 +233,8 @@ def main():
                 "image_url": pool_map.get("image_url"),
                 "in_pool": in_pool,
                 "total_picks": total,
+                "map_avg_wr": round(map_avg_wr, 3),
+                "map_avg_rank": round(map_avg_rank, 2),
                 "tier_list": tier_list,
                 "recommended_trios": rec_trios,
             }
@@ -204,7 +250,7 @@ def main():
     for br_name, br_rows in by_brawler.items():
         master = brawler_by_name.get(br_name.upper(), {})
         # 強いマップ: WR降順 (5pick以上)
-        valid = [r for r in br_rows if r["picks"] >= MIN_PICKS_FOR_TIER]
+        valid = [r for r in br_rows if r["picks"] >= MIN_PICKS_ABS]
         best = sorted(valid, key=lambda x: -x["win_rate"])[:5]
         worst = sorted(valid, key=lambda x: x["win_rate"])[:3]
         brawlers_out.append(
