@@ -62,8 +62,8 @@ POPULARITY_BONUS = 1.05
 # 使用ボーナス: 各マップ使用率TOP3のキャラに 1.02倍 (注目枠)
 USED_BONUS = 1.02
 USED_TOP_N = 3
-# サンプル少penalty: picks <= 300 で 0.9倍
-LOW_PICKS_THRESHOLD = 300
+# サンプル少penalty: picks <= 500 で 0.9倍
+LOW_PICKS_THRESHOLD = 500
 LOW_PICKS_PENALTY = 0.9
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
