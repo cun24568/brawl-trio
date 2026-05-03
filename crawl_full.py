@@ -11,8 +11,10 @@ import csv
 import json
 import random
 import sys
+import threading
 import time
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
@@ -33,7 +35,8 @@ EXTRA_CLUBS = [
 COUNTRIES = ["global", "JP", "KR", "US", "TW", "DE"]
 DELAY = 0.15
 TIMEOUT = 8
-SAVE_EVERY = 20
+SAVE_EVERY = 100  # 並列化で件数が早く流れるので頻度下げる
+PARALLEL_WORKERS = 8
 
 # トロフィー閾値で qualifying プールを永続蓄積
 TROPHY_THRESHOLD = 50000
@@ -159,53 +162,83 @@ def is_trio_battle(b):
     return False
 
 
+def _process_one_battlelog(tag, discovered, lock):
+    """1タグ分のbattlelog取得 → trio抽出 + discovered更新。スレッドセーフ。"""
+    t0 = time.time()
+    try:
+        data = fetch(f"/players/{quote(tag, safe='')}/battlelog")
+    except HTTPError as e:
+        return tag, [], e.code, time.time() - t0
+    except (URLError, Exception) as e:
+        return tag, [], f"err:{e}", time.time() - t0
+
+    trio_battles = []
+    new_tags_local = set()
+    for b in data.get("items", []):
+        if not is_trio_battle(b):
+            continue
+        b["_requester_tag"] = tag
+        idx = None
+        for ti, team in enumerate(b["battle"].get("teams", [])):
+            if any(p.get("tag") == tag for p in team):
+                idx = ti
+                break
+        b["_requester_team_idx"] = idx
+        for team in b["battle"].get("teams", []):
+            for p in team:
+                t = p.get("tag")
+                if t:
+                    new_tags_local.add(t)
+        trio_battles.append(b)
+    # discovered 更新は最後にまとめてロック
+    if new_tags_local:
+        with lock:
+            discovered.update(new_tags_local)
+    return tag, trio_battles, None, time.time() - t0
+
+
 def fetch_battles(tags, discovered):
     battles = []
     fail = 0
     rate_limited = False
-    for i, tag in enumerate(tags, 1):
-        t0 = time.time()
-        try:
-            data = fetch(f"/players/{quote(tag, safe='')}/battlelog")
-            n = 0
-            for b in data.get("items", []):
-                if not is_trio_battle(b):
-                    continue
-                b["_requester_tag"] = tag
-                idx = None
-                for ti, team in enumerate(b["battle"].get("teams", [])):
-                    if any(p.get("tag") == tag for p in team):
-                        idx = ti
-                        break
-                b["_requester_team_idx"] = idx
-                # 全プレイヤータグを discovered に追加 (発見)
-                for team in b["battle"].get("teams", []):
-                    for p in team:
-                        t = p.get("tag")
-                        if t:
-                            discovered.add(t)
-                battles.append(b)
-                n += 1
-            ms = (time.time() - t0) * 1000
-            print(f"  {i:3d}/{len(tags)}  {tag:<12} trio:{n:2d}  ({ms:.0f}ms)  total:{len(battles)}")
-        except HTTPError as e:
-            fail += 1
-            print(f"  {i:3d}/{len(tags)}  {tag:<12} HTTP {e.code}")
-            if e.code == 429:
-                print("\n⚠ Rate limited! 中断")
-                rate_limited = True
-                break
-        except URLError as e:
-            fail += 1
-            print(f"  {i:3d}/{len(tags)}  {tag:<12} timeout: {e}")
-        except Exception as e:
-            fail += 1
-            print(f"  {i:3d}/{len(tags)}  {tag:<12} ERROR: {e}")
-        time.sleep(DELAY)
+    lock = threading.Lock()
+    n = len(tags)
+    print(f"[Phase 2] バトルログ取得 ({n} tags, {PARALLEL_WORKERS} 並列)")
+    print("=" * 60)
+    t_start = time.time()
 
-        if i % SAVE_EVERY == 0:
-            with open(OUT / "trio_battles_partial.json", "w", encoding="utf-8") as f:
-                json.dump(battles, f, ensure_ascii=False)
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as ex:
+        futures = {
+            ex.submit(_process_one_battlelog, tag, discovered, lock): tag
+            for tag in tags
+        }
+        completed = 0
+        for fut in as_completed(futures):
+            completed += 1
+            tag, trio_results, err, elapsed = fut.result()
+            if err == 429:
+                fail += 1
+                print(f"  {completed:4d}/{n}  {tag:<12} HTTP 429 (rate limit)")
+                rate_limited = True
+                # キャンセルできるものはキャンセル
+                for f in futures:
+                    f.cancel()
+                break
+            elif err is not None:
+                fail += 1
+                print(f"  {completed:4d}/{n}  {tag:<12} {err}")
+            else:
+                with lock:
+                    battles.extend(trio_results)
+                if completed % 50 == 0 or completed == n:
+                    rate = completed / (time.time() - t_start)
+                    print(f"  {completed:4d}/{n}  trio:{len(trio_results):2d}  ({elapsed*1000:.0f}ms)  total:{len(battles)}  [{rate:.1f} tags/s]")
+
+            if completed % SAVE_EVERY == 0:
+                with lock:
+                    snapshot = list(battles)
+                with open(OUT / "trio_battles_partial.json", "w", encoding="utf-8") as f:
+                    json.dump(snapshot, f, ensure_ascii=False)
 
     return battles, fail, rate_limited
 
@@ -236,6 +269,17 @@ def aggregate(battles):
     return agg, len(seen)
 
 
+def _check_one_player(tag):
+    """並列実行用: 1人のtrophy確認。"""
+    try:
+        data = fetch(f"/players/{quote(tag, safe='')}")
+        return tag, data, None
+    except HTTPError as e:
+        return tag, None, e.code
+    except Exception:
+        return tag, None, "err"
+
+
 def trophy_check_candidates(discovered, qualifying):
     """discovered の中で未確認のタグから N人 トロフィーチェック → qualifying に追加"""
     qual_tags = {q["tag"] for q in qualifying}
@@ -244,11 +288,19 @@ def trophy_check_candidates(discovered, qualifying):
         return qualifying
     random.shuffle(candidates)
     candidates = candidates[:TROPHY_CHECK_LIMIT]
-    print(f"\n[Phase 4] トロフィーチェック ({len(candidates)} 候補)")
+    print(f"\n[Phase 4] トロフィーチェック ({len(candidates)} 候補, {PARALLEL_WORKERS} 並列)")
     new_count = 0
-    for tag in candidates:
-        try:
-            data = fetch(f"/players/{quote(tag, safe='')}")
+    rate_limited = False
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as ex:
+        futures = {ex.submit(_check_one_player, t): t for t in candidates}
+        for fut in as_completed(futures):
+            tag, data, err = fut.result()
+            if err == 429:
+                print("  ⚠ rate limit during trophy check, abort")
+                rate_limited = True
+                break
+            if err is not None or data is None:
+                continue
             tro = data.get("trophies", 0)
             if tro >= TROPHY_THRESHOLD:
                 qualifying.append({
@@ -258,11 +310,6 @@ def trophy_check_candidates(discovered, qualifying):
                     "checked": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 })
                 new_count += 1
-                print(f"  +qualifying: {tag} ({tro}トロ)  {data.get('name', '')}")
-        except (HTTPError, URLError):
-            pass
-        time.sleep(DELAY)
-    # 上位trophy順で MAX_QUALIFYING に切り詰め
     qualifying.sort(key=lambda x: -x.get("trophies", 0))
     qualifying = qualifying[:MAX_QUALIFYING]
     print(f"  +{new_count} new qualifying (total {len(qualifying)})")
