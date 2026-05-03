@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T19:31:04.691237+00:00",
+  "generated_at": "2026-05-03T19:33:04.591353+00:00",
   "stats": {
     "total_maps": 17,
     "maps_in_pool": 13,
@@ -59,26 +59,6 @@
           "tier": "S+"
         },
         {
-          "brawler": "GIGI",
-          "brawler_jp": "ジジ",
-          "brawler_id": 16000100,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000100.png",
-          "picks": 309,
-          "wins": 218,
-          "win_rate": 0.706,
-          "bayes_wr": 0.69,
-          "weighted_wr": 0.69,
-          "bayes_weighted": 0.676,
-          "avg_rank": 1.94,
-          "rank1_rate": 0.466,
-          "rank2_rate": 0.239,
-          "pick_rate": 0.003,
-          "score": 68.48,
-          "delta": 0.044,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
           "brawler": "JAE-YONG",
           "brawler_jp": "ジェヨン",
           "brawler_id": 16000093,
@@ -115,26 +95,6 @@
           "pick_rate": 0.005,
           "score": 68.06,
           "delta": 0.041,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
-          "brawler": "ZIGGY",
-          "brawler_jp": "ジギー",
-          "brawler_id": 16000098,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
-          "picks": 456,
-          "wins": 317,
-          "win_rate": 0.695,
-          "bayes_wr": 0.686,
-          "weighted_wr": 0.679,
-          "bayes_weighted": 0.671,
-          "avg_rank": 1.98,
-          "rank1_rate": 0.466,
-          "rank2_rate": 0.233,
-          "pick_rate": 0.004,
-          "score": 67.76,
-          "delta": 0.038,
           "insufficient": false,
           "tier": "S+"
         },
@@ -199,26 +159,6 @@
           "tier": "S+"
         },
         {
-          "brawler": "HANK",
-          "brawler_jp": "ハンク",
-          "brawler_id": 16000069,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
-          "picks": 421,
-          "wins": 282,
-          "win_rate": 0.67,
-          "bayes_wr": 0.665,
-          "weighted_wr": 0.667,
-          "bayes_weighted": 0.661,
-          "avg_rank": 2.04,
-          "rank1_rate": 0.48,
-          "rank2_rate": 0.196,
-          "pick_rate": 0.004,
-          "score": 66.46,
-          "delta": 0.029,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
           "brawler": "GALE",
           "brawler_jp": "ゲイル",
           "brawler_id": 16000035,
@@ -256,7 +196,7 @@
           "score": 66.29,
           "delta": 0.026,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "LILY",
@@ -276,7 +216,7 @@
           "score": 66.23,
           "delta": 0.026,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "MR. P",
@@ -296,7 +236,7 @@
           "score": 66.22,
           "delta": 0.025,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "DOUG",
@@ -395,26 +335,6 @@
           "pick_rate": 0.009,
           "score": 65.39,
           "delta": 0.018,
-          "insufficient": false,
-          "tier": "S"
-        },
-        {
-          "brawler": "GRAY",
-          "brawler_jp": "グレイ",
-          "brawler_id": 16000064,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
-          "picks": 452,
-          "wins": 300,
-          "win_rate": 0.664,
-          "bayes_wr": 0.66,
-          "weighted_wr": 0.653,
-          "bayes_weighted": 0.649,
-          "avg_rank": 2.05,
-          "rank1_rate": 0.436,
-          "rank2_rate": 0.228,
-          "pick_rate": 0.004,
-          "score": 65.27,
-          "delta": 0.017,
           "insufficient": false,
           "tier": "S"
         },
@@ -539,26 +459,6 @@
           "tier": "S"
         },
         {
-          "brawler": "CHARLIE",
-          "brawler_jp": "チャーリー",
-          "brawler_id": 16000074,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
-          "picks": 368,
-          "wins": 236,
-          "win_rate": 0.641,
-          "bayes_wr": 0.642,
-          "weighted_wr": 0.645,
-          "bayes_weighted": 0.642,
-          "avg_rank": 2.06,
-          "rank1_rate": 0.429,
-          "rank2_rate": 0.211,
-          "pick_rate": 0.003,
-          "score": 64.48,
-          "delta": 0.01,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
           "brawler": "BIBI",
           "brawler_jp": "ビビ",
           "brawler_id": 16000026,
@@ -576,7 +476,7 @@
           "score": 64.44,
           "delta": 0.011,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "MAISIE",
@@ -596,7 +496,7 @@
           "score": 64.4,
           "delta": 0.009,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "LEON",
@@ -616,7 +516,7 @@
           "score": 64.36,
           "delta": 0.01,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "CORDELIUS",
@@ -636,27 +536,7 @@
           "score": 64.36,
           "delta": 0.009,
           "insufficient": false,
-          "tier": "A"
-        },
-        {
-          "brawler": "WILLOW",
-          "brawler_jp": "ウィロー",
-          "brawler_id": 16000067,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000067.png",
-          "picks": 452,
-          "wins": 300,
-          "win_rate": 0.664,
-          "bayes_wr": 0.66,
-          "weighted_wr": 0.646,
-          "bayes_weighted": 0.643,
-          "avg_rank": 2.11,
-          "rank1_rate": 0.404,
-          "rank2_rate": 0.27,
-          "pick_rate": 0.004,
-          "score": 64.35,
-          "delta": 0.011,
-          "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "BERRY",
@@ -819,26 +699,6 @@
           "tier": "A"
         },
         {
-          "brawler": "SHADE",
-          "brawler_jp": "シェイド",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 476,
-          "wins": 315,
-          "win_rate": 0.662,
-          "bayes_wr": 0.658,
-          "weighted_wr": 0.638,
-          "bayes_weighted": 0.637,
-          "avg_rank": 2.11,
-          "rank1_rate": 0.404,
-          "rank2_rate": 0.258,
-          "pick_rate": 0.004,
-          "score": 63.72,
-          "delta": 0.005,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
           "brawler": "BROCK",
           "brawler_jp": "ブロック",
           "brawler_id": 16000003,
@@ -853,26 +713,6 @@
           "rank1_rate": 0.422,
           "rank2_rate": 0.225,
           "pick_rate": 0.021,
-          "score": 63.71,
-          "delta": 0.004,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
-          "brawler": "MELODIE",
-          "brawler_jp": "メロディー",
-          "brawler_id": 16000078,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000078.png",
-          "picks": 438,
-          "wins": 285,
-          "win_rate": 0.651,
-          "bayes_wr": 0.649,
-          "weighted_wr": 0.637,
-          "bayes_weighted": 0.636,
-          "avg_rank": 2.1,
-          "rank1_rate": 0.39,
-          "rank2_rate": 0.26,
-          "pick_rate": 0.004,
           "score": 63.71,
           "delta": 0.004,
           "insufficient": false,
@@ -955,26 +795,6 @@
           "pick_rate": 0.012,
           "score": 63.39,
           "delta": 0.001,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
-          "brawler": "LOLA",
-          "brawler_jp": "ローラ",
-          "brawler_id": 16000053,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
-          "picks": 353,
-          "wins": 221,
-          "win_rate": 0.626,
-          "bayes_wr": 0.63,
-          "weighted_wr": 0.632,
-          "bayes_weighted": 0.632,
-          "avg_rank": 2.1,
-          "rank1_rate": 0.442,
-          "rank2_rate": 0.184,
-          "pick_rate": 0.003,
-          "score": 63.25,
-          "delta": -0.001,
           "insufficient": false,
           "tier": "A"
         },
@@ -1176,7 +996,7 @@
           "score": 61.95,
           "delta": -0.011,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "COLT",
@@ -1196,7 +1016,7 @@
           "score": 61.83,
           "delta": -0.012,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "SANDY",
@@ -1216,7 +1036,7 @@
           "score": 61.76,
           "delta": -0.013,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "MORTIS",
@@ -1236,7 +1056,7 @@
           "score": 61.75,
           "delta": -0.013,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "SURGE",
@@ -1256,7 +1076,7 @@
           "score": 61.75,
           "delta": -0.013,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "EMZ",
@@ -1276,27 +1096,27 @@
           "score": 61.72,
           "delta": -0.013,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
-          "brawler": "BARLEY",
-          "brawler_jp": "バーリー",
-          "brawler_id": 16000006,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
-          "picks": 454,
-          "wins": 283,
-          "win_rate": 0.623,
-          "bayes_wr": 0.627,
-          "weighted_wr": 0.616,
-          "bayes_weighted": 0.619,
-          "avg_rank": 2.16,
-          "rank1_rate": 0.404,
-          "rank2_rate": 0.221,
-          "pick_rate": 0.004,
-          "score": 61.7,
-          "delta": -0.013,
+          "brawler": "GIGI",
+          "brawler_jp": "ジジ",
+          "brawler_id": 16000100,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000100.png",
+          "picks": 309,
+          "wins": 218,
+          "win_rate": 0.706,
+          "bayes_wr": 0.69,
+          "weighted_wr": 0.69,
+          "bayes_weighted": 0.676,
+          "avg_rank": 1.94,
+          "rank1_rate": 0.466,
+          "rank2_rate": 0.239,
+          "pick_rate": 0.003,
+          "score": 61.63,
+          "delta": 0.044,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "SHELLY",
@@ -1316,27 +1136,7 @@
           "score": 61.51,
           "delta": -0.015,
           "insufficient": false,
-          "tier": "B"
-        },
-        {
-          "brawler": "LUMI",
-          "brawler_jp": "ルミ",
-          "brawler_id": 16000091,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
-          "picks": 441,
-          "wins": 276,
-          "win_rate": 0.626,
-          "bayes_wr": 0.629,
-          "weighted_wr": 0.614,
-          "bayes_weighted": 0.617,
-          "avg_rank": 2.18,
-          "rank1_rate": 0.389,
-          "rank2_rate": 0.24,
-          "pick_rate": 0.004,
-          "score": 61.36,
-          "delta": -0.016,
-          "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "CLANCY",
@@ -1356,7 +1156,7 @@
           "score": 61.23,
           "delta": -0.018,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "GUS",
@@ -1439,6 +1239,26 @@
           "tier": "B"
         },
         {
+          "brawler": "ZIGGY",
+          "brawler_jp": "ジギー",
+          "brawler_id": 16000098,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
+          "picks": 456,
+          "wins": 317,
+          "win_rate": 0.695,
+          "bayes_wr": 0.686,
+          "weighted_wr": 0.679,
+          "bayes_weighted": 0.671,
+          "avg_rank": 1.98,
+          "rank1_rate": 0.466,
+          "rank2_rate": 0.233,
+          "pick_rate": 0.004,
+          "score": 60.98,
+          "delta": 0.038,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
           "brawler": "BELLE",
           "brawler_jp": "ベル",
           "brawler_id": 16000046,
@@ -1495,26 +1315,6 @@
           "pick_rate": 0.02,
           "score": 60.89,
           "delta": -0.021,
-          "insufficient": false,
-          "tier": "B"
-        },
-        {
-          "brawler": "LARRY & LAWRIE",
-          "brawler_jp": "ラリー&ローリー",
-          "brawler_id": 16000077,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
-          "picks": 386,
-          "wins": 230,
-          "win_rate": 0.596,
-          "bayes_wr": 0.605,
-          "weighted_wr": 0.605,
-          "bayes_weighted": 0.611,
-          "avg_rank": 2.18,
-          "rank1_rate": 0.396,
-          "rank2_rate": 0.199,
-          "pick_rate": 0.003,
-          "score": 60.75,
-          "delta": -0.022,
           "insufficient": false,
           "tier": "B"
         },
@@ -1599,6 +1399,26 @@
           "tier": "B"
         },
         {
+          "brawler": "HANK",
+          "brawler_jp": "ハンク",
+          "brawler_id": 16000069,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
+          "picks": 421,
+          "wins": 282,
+          "win_rate": 0.67,
+          "bayes_wr": 0.665,
+          "weighted_wr": 0.667,
+          "bayes_weighted": 0.661,
+          "avg_rank": 2.04,
+          "rank1_rate": 0.48,
+          "rank2_rate": 0.196,
+          "pick_rate": 0.004,
+          "score": 59.82,
+          "delta": 0.029,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
           "brawler": "RICO",
           "brawler_jp": "リコ",
           "brawler_id": 16000004,
@@ -1676,27 +1496,7 @@
           "score": 59.58,
           "delta": -0.032,
           "insufficient": false,
-          "tier": "C"
-        },
-        {
-          "brawler": "BONNIE",
-          "brawler_jp": "ボニー",
-          "brawler_id": 16000058,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000058.png",
-          "picks": 389,
-          "wins": 227,
-          "win_rate": 0.584,
-          "bayes_wr": 0.596,
-          "weighted_wr": 0.59,
-          "bayes_weighted": 0.598,
-          "avg_rank": 2.23,
-          "rank1_rate": 0.373,
-          "rank2_rate": 0.208,
-          "pick_rate": 0.003,
-          "score": 59.25,
-          "delta": -0.034,
-          "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "JESSIE",
@@ -1716,7 +1516,27 @@
           "score": 59.0,
           "delta": -0.037,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
+        },
+        {
+          "brawler": "GRAY",
+          "brawler_jp": "グレイ",
+          "brawler_id": 16000064,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
+          "picks": 452,
+          "wins": 300,
+          "win_rate": 0.664,
+          "bayes_wr": 0.66,
+          "weighted_wr": 0.653,
+          "bayes_weighted": 0.649,
+          "avg_rank": 2.05,
+          "rank1_rate": 0.436,
+          "rank2_rate": 0.228,
+          "pick_rate": 0.004,
+          "score": 58.74,
+          "delta": 0.017,
+          "insufficient": false,
+          "tier": "B"
         },
         {
           "brawler": "ROSA",
@@ -1736,7 +1556,7 @@
           "score": 58.68,
           "delta": 0.016,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "PIPER",
@@ -1756,7 +1576,7 @@
           "score": 58.21,
           "delta": -0.044,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "EVE",
@@ -1776,7 +1596,27 @@
           "score": 58.08,
           "delta": 0.011,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
+        },
+        {
+          "brawler": "CHARLIE",
+          "brawler_jp": "チャーリー",
+          "brawler_id": 16000074,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
+          "picks": 368,
+          "wins": 236,
+          "win_rate": 0.641,
+          "bayes_wr": 0.642,
+          "weighted_wr": 0.645,
+          "bayes_weighted": 0.642,
+          "avg_rank": 2.06,
+          "rank1_rate": 0.429,
+          "rank2_rate": 0.211,
+          "pick_rate": 0.003,
+          "score": 58.03,
+          "delta": 0.01,
+          "insufficient": false,
+          "tier": "B"
         },
         {
           "brawler": "TRUNK",
@@ -1796,7 +1636,7 @@
           "score": 57.94,
           "delta": 0.009,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "MANDY",
@@ -1815,6 +1655,26 @@
           "pick_rate": 0.019,
           "score": 57.93,
           "delta": -0.047,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
+          "brawler": "WILLOW",
+          "brawler_jp": "ウィロー",
+          "brawler_id": 16000067,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000067.png",
+          "picks": 452,
+          "wins": 300,
+          "win_rate": 0.664,
+          "bayes_wr": 0.66,
+          "weighted_wr": 0.646,
+          "bayes_weighted": 0.643,
+          "avg_rank": 2.11,
+          "rank1_rate": 0.404,
+          "rank2_rate": 0.27,
+          "pick_rate": 0.004,
+          "score": 57.92,
+          "delta": 0.011,
           "insufficient": false,
           "tier": "C"
         },
@@ -1839,6 +1699,46 @@
           "tier": "C"
         },
         {
+          "brawler": "SHADE",
+          "brawler_jp": "シェイド",
+          "brawler_id": 16000086,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
+          "picks": 476,
+          "wins": 315,
+          "win_rate": 0.662,
+          "bayes_wr": 0.658,
+          "weighted_wr": 0.638,
+          "bayes_weighted": 0.637,
+          "avg_rank": 2.11,
+          "rank1_rate": 0.404,
+          "rank2_rate": 0.258,
+          "pick_rate": 0.004,
+          "score": 57.35,
+          "delta": 0.005,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "MELODIE",
+          "brawler_jp": "メロディー",
+          "brawler_id": 16000078,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000078.png",
+          "picks": 438,
+          "wins": 285,
+          "win_rate": 0.651,
+          "bayes_wr": 0.649,
+          "weighted_wr": 0.637,
+          "bayes_weighted": 0.636,
+          "avg_rank": 2.1,
+          "rank1_rate": 0.39,
+          "rank2_rate": 0.26,
+          "pick_rate": 0.004,
+          "score": 57.34,
+          "delta": 0.004,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
           "brawler": "JACKY",
           "brawler_jp": "ジャッキー",
           "brawler_id": 16000034,
@@ -1855,6 +1755,26 @@
           "pick_rate": 0.002,
           "score": 57.04,
           "delta": 0.001,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "LOLA",
+          "brawler_jp": "ローラ",
+          "brawler_id": 16000053,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
+          "picks": 353,
+          "wins": 221,
+          "win_rate": 0.626,
+          "bayes_wr": 0.63,
+          "weighted_wr": 0.632,
+          "bayes_weighted": 0.632,
+          "avg_rank": 2.1,
+          "rank1_rate": 0.442,
+          "rank2_rate": 0.184,
+          "pick_rate": 0.003,
+          "score": 56.92,
+          "delta": -0.001,
           "insufficient": false,
           "tier": "C"
         },
@@ -1919,22 +1839,42 @@
           "tier": "C"
         },
         {
-          "brawler": "OLLIE",
-          "brawler_jp": "オーリー",
-          "brawler_id": 16000090,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
-          "picks": 340,
-          "wins": 194,
-          "win_rate": 0.571,
-          "bayes_wr": 0.587,
-          "weighted_wr": 0.545,
-          "bayes_weighted": 0.565,
-          "avg_rank": 2.38,
-          "rank1_rate": 0.303,
-          "rank2_rate": 0.268,
-          "pick_rate": 0.003,
-          "score": 55.18,
-          "delta": -0.067,
+          "brawler": "BARLEY",
+          "brawler_jp": "バーリー",
+          "brawler_id": 16000006,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
+          "picks": 454,
+          "wins": 283,
+          "win_rate": 0.623,
+          "bayes_wr": 0.627,
+          "weighted_wr": 0.616,
+          "bayes_weighted": 0.619,
+          "avg_rank": 2.16,
+          "rank1_rate": 0.404,
+          "rank2_rate": 0.221,
+          "pick_rate": 0.004,
+          "score": 55.53,
+          "delta": -0.013,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "LUMI",
+          "brawler_jp": "ルミ",
+          "brawler_id": 16000091,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
+          "picks": 441,
+          "wins": 276,
+          "win_rate": 0.626,
+          "bayes_wr": 0.629,
+          "weighted_wr": 0.614,
+          "bayes_weighted": 0.617,
+          "avg_rank": 2.18,
+          "rank1_rate": 0.389,
+          "rank2_rate": 0.24,
+          "pick_rate": 0.004,
+          "score": 55.22,
+          "delta": -0.016,
           "insufficient": false,
           "tier": "C"
         },
@@ -1959,22 +1899,22 @@
           "tier": "C"
         },
         {
-          "brawler": "ANGELO",
-          "brawler_jp": "アンジェロ",
-          "brawler_id": 16000079,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000079.png",
-          "picks": 362,
-          "wins": 200,
-          "win_rate": 0.552,
-          "bayes_wr": 0.572,
-          "weighted_wr": 0.544,
-          "bayes_weighted": 0.563,
-          "avg_rank": 2.37,
-          "rank1_rate": 0.334,
-          "rank2_rate": 0.216,
+          "brawler": "LARRY & LAWRIE",
+          "brawler_jp": "ラリー&ローリー",
+          "brawler_id": 16000077,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
+          "picks": 386,
+          "wins": 230,
+          "win_rate": 0.596,
+          "bayes_wr": 0.605,
+          "weighted_wr": 0.605,
+          "bayes_weighted": 0.611,
+          "avg_rank": 2.18,
+          "rank1_rate": 0.396,
+          "rank2_rate": 0.199,
           "pick_rate": 0.003,
-          "score": 55.01,
-          "delta": -0.07,
+          "score": 54.68,
+          "delta": -0.022,
           "insufficient": false,
           "tier": "C"
         },
@@ -2039,6 +1979,26 @@
           "tier": "C"
         },
         {
+          "brawler": "BONNIE",
+          "brawler_jp": "ボニー",
+          "brawler_id": 16000058,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000058.png",
+          "picks": 389,
+          "wins": 227,
+          "win_rate": 0.584,
+          "bayes_wr": 0.596,
+          "weighted_wr": 0.59,
+          "bayes_weighted": 0.598,
+          "avg_rank": 2.23,
+          "rank1_rate": 0.373,
+          "rank2_rate": 0.208,
+          "pick_rate": 0.003,
+          "score": 53.33,
+          "delta": -0.034,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
           "brawler": "CHUCK",
           "brawler_jp": "チャック",
           "brawler_id": 16000073,
@@ -2055,6 +2015,46 @@
           "pick_rate": 0.001,
           "score": 52.24,
           "delta": -0.042,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "OLLIE",
+          "brawler_jp": "オーリー",
+          "brawler_id": 16000090,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
+          "picks": 340,
+          "wins": 194,
+          "win_rate": 0.571,
+          "bayes_wr": 0.587,
+          "weighted_wr": 0.545,
+          "bayes_weighted": 0.565,
+          "avg_rank": 2.38,
+          "rank1_rate": 0.303,
+          "rank2_rate": 0.268,
+          "pick_rate": 0.003,
+          "score": 49.66,
+          "delta": -0.067,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "ANGELO",
+          "brawler_jp": "アンジェロ",
+          "brawler_id": 16000079,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000079.png",
+          "picks": 362,
+          "wins": 200,
+          "win_rate": 0.552,
+          "bayes_wr": 0.572,
+          "weighted_wr": 0.544,
+          "bayes_weighted": 0.563,
+          "avg_rank": 2.37,
+          "rank1_rate": 0.334,
+          "rank2_rate": 0.216,
+          "pick_rate": 0.003,
+          "score": 49.51,
+          "delta": -0.07,
           "insufficient": false,
           "tier": "C"
         }
