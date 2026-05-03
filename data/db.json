@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:19:10.584987+00:00",
+  "generated_at": "2026-05-03T18:23:45.396333+00:00",
   "stats": {
     "total_maps": 16,
     "maps_in_pool": 12,
@@ -18,25 +18,6 @@
       "map_avg_wr": 0.646,
       "map_avg_rank": 2.1,
       "tier_list": [
-        {
-          "brawler": "ALLI",
-          "brawler_id": 16000095,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
-          "picks": 200,
-          "wins": 144,
-          "win_rate": 0.72,
-          "bayes_wr": 0.716,
-          "weighted_wr": 0.709,
-          "bayes_weighted": 0.706,
-          "avg_rank": 1.88,
-          "rank1_rate": 0.5,
-          "rank2_rate": 0.218,
-          "pick_rate": 0.002,
-          "score": 71.69,
-          "delta": 0.07,
-          "insufficient": false,
-          "tier": "S+"
-        },
         {
           "brawler": "DAMIAN",
           "brawler_id": null,
@@ -76,25 +57,6 @@
           "tier": "S+"
         },
         {
-          "brawler": "GIGI",
-          "brawler_id": 16000100,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000100.png",
-          "picks": 202,
-          "wins": 144,
-          "win_rate": 0.713,
-          "bayes_wr": 0.71,
-          "weighted_wr": 0.699,
-          "bayes_weighted": 0.696,
-          "avg_rank": 1.91,
-          "rank1_rate": 0.485,
-          "rank2_rate": 0.228,
-          "pick_rate": 0.002,
-          "score": 70.59,
-          "delta": 0.06,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
           "brawler": "JAE-YONG",
           "brawler_id": 16000093,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
@@ -110,25 +72,6 @@
           "pick_rate": 0.007,
           "score": 70.58,
           "delta": 0.061,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
-          "brawler": "GRAY",
-          "brawler_id": 16000064,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
-          "picks": 270,
-          "wins": 195,
-          "win_rate": 0.722,
-          "bayes_wr": 0.719,
-          "weighted_wr": 0.699,
-          "bayes_weighted": 0.696,
-          "avg_rank": 1.92,
-          "rank1_rate": 0.474,
-          "rank2_rate": 0.248,
-          "pick_rate": 0.003,
-          "score": 70.56,
-          "delta": 0.06,
           "insufficient": false,
           "tier": "S+"
         },
@@ -190,25 +133,6 @@
           "tier": "S+"
         },
         {
-          "brawler": "SHADE",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 275,
-          "wins": 199,
-          "win_rate": 0.724,
-          "bayes_wr": 0.721,
-          "weighted_wr": 0.68,
-          "bayes_weighted": 0.678,
-          "avg_rank": 2.0,
-          "rank1_rate": 0.428,
-          "rank2_rate": 0.299,
-          "pick_rate": 0.003,
-          "score": 68.34,
-          "delta": 0.042,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
           "brawler": "MEG",
           "brawler_id": 16000052,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
@@ -244,7 +168,7 @@
           "score": 67.22,
           "delta": 0.032,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "CARL",
@@ -263,7 +187,7 @@
           "score": 67.12,
           "delta": 0.031,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "MR. P",
@@ -282,7 +206,7 @@
           "score": 67.06,
           "delta": 0.03,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "GRIFF",
@@ -301,7 +225,7 @@
           "score": 66.88,
           "delta": 0.028,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "OTIS",
@@ -357,25 +281,6 @@
           "pick_rate": 0.013,
           "score": 66.49,
           "delta": 0.025,
-          "insufficient": false,
-          "tier": "S"
-        },
-        {
-          "brawler": "JACKY",
-          "brawler_id": 16000034,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000034.png",
-          "picks": 111,
-          "wins": 76,
-          "win_rate": 0.685,
-          "bayes_wr": 0.681,
-          "weighted_wr": 0.662,
-          "bayes_weighted": 0.66,
-          "avg_rank": 2.01,
-          "rank1_rate": 0.442,
-          "rank2_rate": 0.239,
-          "pick_rate": 0.001,
-          "score": 66.44,
-          "delta": 0.024,
           "insufficient": false,
           "tier": "S"
         },
@@ -529,7 +434,7 @@
           "score": 65.75,
           "delta": 0.019,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "LEON",
@@ -548,26 +453,7 @@
           "score": 65.68,
           "delta": 0.019,
           "insufficient": false,
-          "tier": "A"
-        },
-        {
-          "brawler": "CHARLIE",
-          "brawler_id": 16000074,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
-          "picks": 275,
-          "wins": 179,
-          "win_rate": 0.651,
-          "bayes_wr": 0.651,
-          "weighted_wr": 0.654,
-          "bayes_weighted": 0.653,
-          "avg_rank": 2.03,
-          "rank1_rate": 0.42,
-          "rank2_rate": 0.226,
-          "pick_rate": 0.003,
-          "score": 65.67,
-          "delta": 0.017,
-          "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "MINA",
@@ -586,7 +472,7 @@
           "score": 65.4,
           "delta": 0.018,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "MEEPLE",
@@ -605,7 +491,7 @@
           "score": 65.3,
           "delta": 0.015,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "NITA",
@@ -624,7 +510,7 @@
           "score": 65.07,
           "delta": 0.013,
           "insufficient": false,
-          "tier": "A"
+          "tier": "S"
         },
         {
           "brawler": "PIERCE",
@@ -684,25 +570,6 @@
           "tier": "A"
         },
         {
-          "brawler": "TRUNK",
-          "brawler_id": 16000096,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
-          "picks": 167,
-          "wins": 111,
-          "win_rate": 0.665,
-          "bayes_wr": 0.664,
-          "weighted_wr": 0.646,
-          "bayes_weighted": 0.646,
-          "avg_rank": 2.07,
-          "rank1_rate": 0.389,
-          "rank2_rate": 0.275,
-          "pick_rate": 0.002,
-          "score": 64.75,
-          "delta": 0.01,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
           "brawler": "CORDELIUS",
           "brawler_id": 16000070,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
@@ -718,25 +585,6 @@
           "pick_rate": 0.012,
           "score": 64.69,
           "delta": 0.009,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
-          "brawler": "ASH",
-          "brawler_id": 16000051,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
-          "picks": 104,
-          "wins": 68,
-          "win_rate": 0.654,
-          "bayes_wr": 0.653,
-          "weighted_wr": 0.647,
-          "bayes_weighted": 0.646,
-          "avg_rank": 2.08,
-          "rank1_rate": 0.438,
-          "rank2_rate": 0.219,
-          "pick_rate": 0.001,
-          "score": 64.69,
-          "delta": 0.01,
           "insufficient": false,
           "tier": "A"
         },
@@ -760,21 +608,21 @@
           "tier": "A"
         },
         {
-          "brawler": "PAM",
-          "brawler_id": 16000016,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
-          "picks": 204,
-          "wins": 132,
-          "win_rate": 0.647,
-          "bayes_wr": 0.647,
-          "weighted_wr": 0.645,
-          "bayes_weighted": 0.644,
-          "avg_rank": 2.07,
-          "rank1_rate": 0.449,
-          "rank2_rate": 0.2,
+          "brawler": "ALLI",
+          "brawler_id": 16000095,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
+          "picks": 200,
+          "wins": 144,
+          "win_rate": 0.72,
+          "bayes_wr": 0.716,
+          "weighted_wr": 0.709,
+          "bayes_weighted": 0.706,
+          "avg_rank": 1.88,
+          "rank1_rate": 0.5,
+          "rank2_rate": 0.218,
           "pick_rate": 0.002,
-          "score": 64.6,
-          "delta": 0.008,
+          "score": 64.52,
+          "delta": 0.07,
           "insufficient": false,
           "tier": "A"
         },
@@ -874,25 +722,6 @@
           "tier": "A"
         },
         {
-          "brawler": "ROSA",
-          "brawler_id": 16000024,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000024.png",
-          "picks": 215,
-          "wins": 142,
-          "win_rate": 0.66,
-          "bayes_wr": 0.66,
-          "weighted_wr": 0.64,
-          "bayes_weighted": 0.64,
-          "avg_rank": 2.09,
-          "rank1_rate": 0.409,
-          "rank2_rate": 0.251,
-          "pick_rate": 0.003,
-          "score": 64.04,
-          "delta": 0.004,
-          "insufficient": false,
-          "tier": "A"
-        },
-        {
           "brawler": "BEA",
           "brawler_id": 16000029,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png",
@@ -946,6 +775,44 @@
           "pick_rate": 0.004,
           "score": 63.83,
           "delta": 0.002,
+          "insufficient": false,
+          "tier": "A"
+        },
+        {
+          "brawler": "GIGI",
+          "brawler_id": 16000100,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000100.png",
+          "picks": 202,
+          "wins": 144,
+          "win_rate": 0.713,
+          "bayes_wr": 0.71,
+          "weighted_wr": 0.699,
+          "bayes_weighted": 0.696,
+          "avg_rank": 1.91,
+          "rank1_rate": 0.485,
+          "rank2_rate": 0.228,
+          "pick_rate": 0.002,
+          "score": 63.53,
+          "delta": 0.06,
+          "insufficient": false,
+          "tier": "A"
+        },
+        {
+          "brawler": "GRAY",
+          "brawler_id": 16000064,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
+          "picks": 270,
+          "wins": 195,
+          "win_rate": 0.722,
+          "bayes_wr": 0.719,
+          "weighted_wr": 0.699,
+          "bayes_weighted": 0.696,
+          "avg_rank": 1.92,
+          "rank1_rate": 0.474,
+          "rank2_rate": 0.248,
+          "pick_rate": 0.003,
+          "score": 63.5,
+          "delta": 0.06,
           "insufficient": false,
           "tier": "A"
         },
@@ -1102,25 +969,6 @@
           "tier": "A"
         },
         {
-          "brawler": "EVE",
-          "brawler_id": 16000056,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
-          "picks": 184,
-          "wins": 121,
-          "win_rate": 0.658,
-          "bayes_wr": 0.657,
-          "weighted_wr": 0.631,
-          "bayes_weighted": 0.631,
-          "avg_rank": 2.13,
-          "rank1_rate": 0.368,
-          "rank2_rate": 0.292,
-          "pick_rate": 0.002,
-          "score": 62.99,
-          "delta": -0.005,
-          "insufficient": false,
-          "tier": "B"
-        },
-        {
           "brawler": "BULL",
           "brawler_id": 16000002,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
@@ -1137,7 +985,7 @@
           "score": 62.95,
           "delta": -0.005,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "MORTIS",
@@ -1156,7 +1004,7 @@
           "score": 62.89,
           "delta": -0.005,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "KAZE",
@@ -1175,7 +1023,7 @@
           "score": 62.88,
           "delta": -0.006,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "SURGE",
@@ -1194,7 +1042,7 @@
           "score": 62.56,
           "delta": -0.009,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "CLANCY",
@@ -1213,45 +1061,7 @@
           "score": 62.4,
           "delta": -0.011,
           "insufficient": false,
-          "tier": "B"
-        },
-        {
-          "brawler": "MOE",
-          "brawler_id": 16000084,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000084.png",
-          "picks": 178,
-          "wins": 117,
-          "win_rate": 0.657,
-          "bayes_wr": 0.657,
-          "weighted_wr": 0.625,
-          "bayes_weighted": 0.626,
-          "avg_rank": 2.14,
-          "rank1_rate": 0.403,
-          "rank2_rate": 0.254,
-          "pick_rate": 0.002,
-          "score": 62.4,
-          "delta": -0.01,
-          "insufficient": false,
-          "tier": "B"
-        },
-        {
-          "brawler": "SPROUT",
-          "brawler_id": 16000037,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
-          "picks": 154,
-          "wins": 99,
-          "win_rate": 0.643,
-          "bayes_wr": 0.643,
-          "weighted_wr": 0.625,
-          "bayes_weighted": 0.625,
-          "avg_rank": 2.14,
-          "rank1_rate": 0.416,
-          "rank2_rate": 0.227,
-          "pick_rate": 0.002,
-          "score": 62.37,
-          "delta": -0.01,
-          "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "EMZ",
@@ -1270,26 +1080,7 @@
           "score": 62.25,
           "delta": -0.012,
           "insufficient": false,
-          "tier": "B"
-        },
-        {
-          "brawler": "LOLA",
-          "brawler_id": 16000053,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
-          "picks": 268,
-          "wins": 163,
-          "win_rate": 0.608,
-          "bayes_wr": 0.61,
-          "weighted_wr": 0.623,
-          "bayes_weighted": 0.623,
-          "avg_rank": 2.12,
-          "rank1_rate": 0.448,
-          "rank2_rate": 0.16,
-          "pick_rate": 0.003,
-          "score": 62.24,
-          "delta": -0.013,
-          "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "BO",
@@ -1308,7 +1099,7 @@
           "score": 62.17,
           "delta": -0.012,
           "insufficient": false,
-          "tier": "B"
+          "tier": "A"
         },
         {
           "brawler": "BYRON",
@@ -1364,6 +1155,25 @@
           "pick_rate": 0.019,
           "score": 61.56,
           "delta": -0.018,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
+          "brawler": "SHADE",
+          "brawler_id": 16000086,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
+          "picks": 275,
+          "wins": 199,
+          "win_rate": 0.724,
+          "bayes_wr": 0.721,
+          "weighted_wr": 0.68,
+          "bayes_weighted": 0.678,
+          "avg_rank": 2.0,
+          "rank1_rate": 0.428,
+          "rank2_rate": 0.299,
+          "pick_rate": 0.003,
+          "score": 61.5,
+          "delta": 0.042,
           "insufficient": false,
           "tier": "B"
         },
@@ -1558,25 +1368,6 @@
           "tier": "B"
         },
         {
-          "brawler": "BARLEY",
-          "brawler_id": 16000006,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
-          "picks": 273,
-          "wins": 168,
-          "win_rate": 0.615,
-          "bayes_wr": 0.616,
-          "weighted_wr": 0.607,
-          "bayes_weighted": 0.608,
-          "avg_rank": 2.19,
-          "rank1_rate": 0.385,
-          "rank2_rate": 0.233,
-          "pick_rate": 0.003,
-          "score": 60.38,
-          "delta": -0.028,
-          "insufficient": false,
-          "tier": "B"
-        },
-        {
           "brawler": "8-BIT",
           "brawler_id": 16000027,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000027.png",
@@ -1593,7 +1384,7 @@
           "score": 60.22,
           "delta": -0.03,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "DYNAMIKE",
@@ -1612,26 +1403,7 @@
           "score": 60.18,
           "delta": -0.03,
           "insufficient": false,
-          "tier": "C"
-        },
-        {
-          "brawler": "R-T",
-          "brawler_id": 16000066,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
-          "picks": 157,
-          "wins": 93,
-          "win_rate": 0.592,
-          "bayes_wr": 0.596,
-          "weighted_wr": 0.603,
-          "bayes_weighted": 0.605,
-          "avg_rank": 2.18,
-          "rank1_rate": 0.401,
-          "rank2_rate": 0.191,
-          "pick_rate": 0.002,
-          "score": 60.12,
-          "delta": -0.031,
-          "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "RICO",
@@ -1650,7 +1422,7 @@
           "score": 59.92,
           "delta": -0.032,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "TARA",
@@ -1669,7 +1441,7 @@
           "score": 59.88,
           "delta": -0.032,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "JESSIE",
@@ -1688,26 +1460,26 @@
           "score": 59.8,
           "delta": -0.033,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
-          "brawler": "DRACO",
-          "brawler_id": 16000080,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000080.png",
-          "picks": 158,
-          "wins": 98,
-          "win_rate": 0.62,
-          "bayes_wr": 0.622,
-          "weighted_wr": 0.602,
-          "bayes_weighted": 0.604,
-          "avg_rank": 2.22,
-          "rank1_rate": 0.352,
-          "rank2_rate": 0.27,
-          "pick_rate": 0.002,
+          "brawler": "JACKY",
+          "brawler_id": 16000034,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000034.png",
+          "picks": 111,
+          "wins": 76,
+          "win_rate": 0.685,
+          "bayes_wr": 0.681,
+          "weighted_wr": 0.662,
+          "bayes_weighted": 0.66,
+          "avg_rank": 2.01,
+          "rank1_rate": 0.442,
+          "rank2_rate": 0.239,
+          "pick_rate": 0.001,
           "score": 59.79,
-          "delta": -0.032,
+          "delta": 0.024,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "SQUEAK",
@@ -1726,7 +1498,7 @@
           "score": 59.32,
           "delta": -0.038,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
           "brawler": "SANDY",
@@ -1745,24 +1517,81 @@
           "score": 59.18,
           "delta": -0.039,
           "insufficient": false,
-          "tier": "C"
+          "tier": "B"
         },
         {
-          "brawler": "BONNIE",
-          "brawler_id": 16000058,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000058.png",
-          "picks": 242,
-          "wins": 137,
-          "win_rate": 0.566,
-          "bayes_wr": 0.569,
-          "weighted_wr": 0.585,
-          "bayes_weighted": 0.587,
-          "avg_rank": 2.23,
-          "rank1_rate": 0.377,
-          "rank2_rate": 0.186,
+          "brawler": "CHARLIE",
+          "brawler_id": 16000074,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
+          "picks": 275,
+          "wins": 179,
+          "win_rate": 0.651,
+          "bayes_wr": 0.651,
+          "weighted_wr": 0.654,
+          "bayes_weighted": 0.653,
+          "avg_rank": 2.03,
+          "rank1_rate": 0.42,
+          "rank2_rate": 0.226,
           "pick_rate": 0.003,
-          "score": 58.1,
-          "delta": -0.049,
+          "score": 59.1,
+          "delta": 0.017,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
+          "brawler": "TRUNK",
+          "brawler_id": 16000096,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
+          "picks": 167,
+          "wins": 111,
+          "win_rate": 0.665,
+          "bayes_wr": 0.664,
+          "weighted_wr": 0.646,
+          "bayes_weighted": 0.646,
+          "avg_rank": 2.07,
+          "rank1_rate": 0.389,
+          "rank2_rate": 0.275,
+          "pick_rate": 0.002,
+          "score": 58.28,
+          "delta": 0.01,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
+          "brawler": "ASH",
+          "brawler_id": 16000051,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
+          "picks": 104,
+          "wins": 68,
+          "win_rate": 0.654,
+          "bayes_wr": 0.653,
+          "weighted_wr": 0.647,
+          "bayes_weighted": 0.646,
+          "avg_rank": 2.08,
+          "rank1_rate": 0.438,
+          "rank2_rate": 0.219,
+          "pick_rate": 0.001,
+          "score": 58.22,
+          "delta": 0.01,
+          "insufficient": false,
+          "tier": "B"
+        },
+        {
+          "brawler": "PAM",
+          "brawler_id": 16000016,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
+          "picks": 204,
+          "wins": 132,
+          "win_rate": 0.647,
+          "bayes_wr": 0.647,
+          "weighted_wr": 0.645,
+          "bayes_weighted": 0.644,
+          "avg_rank": 2.07,
+          "rank1_rate": 0.449,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.002,
+          "score": 58.14,
+          "delta": 0.008,
           "insufficient": false,
           "tier": "C"
         },
@@ -1805,21 +1634,21 @@
           "tier": "C"
         },
         {
-          "brawler": "LARRY & LAWRIE",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 261,
-          "wins": 148,
-          "win_rate": 0.567,
-          "bayes_wr": 0.57,
-          "weighted_wr": 0.581,
-          "bayes_weighted": 0.583,
-          "avg_rank": 2.25,
-          "rank1_rate": 0.375,
-          "rank2_rate": 0.192,
+          "brawler": "ROSA",
+          "brawler_id": 16000024,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000024.png",
+          "picks": 215,
+          "wins": 142,
+          "win_rate": 0.66,
+          "bayes_wr": 0.66,
+          "weighted_wr": 0.64,
+          "bayes_weighted": 0.64,
+          "avg_rank": 2.09,
+          "rank1_rate": 0.409,
+          "rank2_rate": 0.251,
           "pick_rate": 0.003,
-          "score": 57.57,
-          "delta": -0.053,
+          "score": 57.63,
+          "delta": 0.004,
           "insufficient": false,
           "tier": "C"
         },
@@ -1843,6 +1672,25 @@
           "tier": "C"
         },
         {
+          "brawler": "EVE",
+          "brawler_id": 16000056,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
+          "picks": 184,
+          "wins": 121,
+          "win_rate": 0.658,
+          "bayes_wr": 0.657,
+          "weighted_wr": 0.631,
+          "bayes_weighted": 0.631,
+          "avg_rank": 2.13,
+          "rank1_rate": 0.368,
+          "rank2_rate": 0.292,
+          "pick_rate": 0.002,
+          "score": 56.69,
+          "delta": -0.005,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
           "brawler": "GROM",
           "brawler_id": 16000048,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000048.png",
@@ -1862,6 +1710,158 @@
           "tier": "C"
         },
         {
+          "brawler": "MOE",
+          "brawler_id": 16000084,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000084.png",
+          "picks": 178,
+          "wins": 117,
+          "win_rate": 0.657,
+          "bayes_wr": 0.657,
+          "weighted_wr": 0.625,
+          "bayes_weighted": 0.626,
+          "avg_rank": 2.14,
+          "rank1_rate": 0.403,
+          "rank2_rate": 0.254,
+          "pick_rate": 0.002,
+          "score": 56.16,
+          "delta": -0.01,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "SPROUT",
+          "brawler_id": 16000037,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
+          "picks": 154,
+          "wins": 99,
+          "win_rate": 0.643,
+          "bayes_wr": 0.643,
+          "weighted_wr": 0.625,
+          "bayes_weighted": 0.625,
+          "avg_rank": 2.14,
+          "rank1_rate": 0.416,
+          "rank2_rate": 0.227,
+          "pick_rate": 0.002,
+          "score": 56.14,
+          "delta": -0.01,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "LOLA",
+          "brawler_id": 16000053,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
+          "picks": 268,
+          "wins": 163,
+          "win_rate": 0.608,
+          "bayes_wr": 0.61,
+          "weighted_wr": 0.623,
+          "bayes_weighted": 0.623,
+          "avg_rank": 2.12,
+          "rank1_rate": 0.448,
+          "rank2_rate": 0.16,
+          "pick_rate": 0.003,
+          "score": 56.02,
+          "delta": -0.013,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "BARLEY",
+          "brawler_id": 16000006,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
+          "picks": 273,
+          "wins": 168,
+          "win_rate": 0.615,
+          "bayes_wr": 0.616,
+          "weighted_wr": 0.607,
+          "bayes_weighted": 0.608,
+          "avg_rank": 2.19,
+          "rank1_rate": 0.385,
+          "rank2_rate": 0.233,
+          "pick_rate": 0.003,
+          "score": 54.34,
+          "delta": -0.028,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "R-T",
+          "brawler_id": 16000066,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
+          "picks": 157,
+          "wins": 93,
+          "win_rate": 0.592,
+          "bayes_wr": 0.596,
+          "weighted_wr": 0.603,
+          "bayes_weighted": 0.605,
+          "avg_rank": 2.18,
+          "rank1_rate": 0.401,
+          "rank2_rate": 0.191,
+          "pick_rate": 0.002,
+          "score": 54.11,
+          "delta": -0.031,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "DRACO",
+          "brawler_id": 16000080,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000080.png",
+          "picks": 158,
+          "wins": 98,
+          "win_rate": 0.62,
+          "bayes_wr": 0.622,
+          "weighted_wr": 0.602,
+          "bayes_weighted": 0.604,
+          "avg_rank": 2.22,
+          "rank1_rate": 0.352,
+          "rank2_rate": 0.27,
+          "pick_rate": 0.002,
+          "score": 53.81,
+          "delta": -0.032,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "BONNIE",
+          "brawler_id": 16000058,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000058.png",
+          "picks": 242,
+          "wins": 137,
+          "win_rate": 0.566,
+          "bayes_wr": 0.569,
+          "weighted_wr": 0.585,
+          "bayes_weighted": 0.587,
+          "avg_rank": 2.23,
+          "rank1_rate": 0.377,
+          "rank2_rate": 0.186,
+          "pick_rate": 0.003,
+          "score": 52.29,
+          "delta": -0.049,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
+          "brawler": "LARRY & LAWRIE",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 261,
+          "wins": 148,
+          "win_rate": 0.567,
+          "bayes_wr": 0.57,
+          "weighted_wr": 0.581,
+          "bayes_weighted": 0.583,
+          "avg_rank": 2.25,
+          "rank1_rate": 0.375,
+          "rank2_rate": 0.192,
+          "pick_rate": 0.003,
+          "score": 51.81,
+          "delta": -0.053,
+          "insufficient": false,
+          "tier": "C"
+        },
+        {
           "brawler": "SAM",
           "brawler_id": 16000060,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000060.png",
@@ -1875,7 +1875,7 @@
           "rank1_rate": 0.378,
           "rank2_rate": 0.201,
           "pick_rate": 0.003,
-          "score": 56.29,
+          "score": 50.66,
           "delta": -0.063,
           "insufficient": false,
           "tier": "C"
@@ -1894,7 +1894,7 @@
           "rank1_rate": 0.316,
           "rank2_rate": 0.215,
           "pick_rate": 0.001,
-          "score": 55.44,
+          "score": 49.9,
           "delta": -0.071,
           "insufficient": false,
           "tier": "C"
@@ -1913,7 +1913,7 @@
           "rank1_rate": 0.323,
           "rank2_rate": 0.24,
           "pick_rate": 0.001,
-          "score": 55.29,
+          "score": 49.76,
           "delta": -0.072,
           "insufficient": false,
           "tier": "C"
@@ -1932,7 +1932,7 @@
           "rank1_rate": 0.302,
           "rank2_rate": 0.256,
           "pick_rate": 0.003,
-          "score": 52.52,
+          "score": 47.27,
           "delta": -0.096,
           "insufficient": false,
           "tier": "C"
@@ -1951,7 +1951,7 @@
           "rank1_rate": 0.324,
           "rank2_rate": 0.18,
           "pick_rate": 0.003,
-          "score": 49.67,
+          "score": 44.7,
           "delta": -0.121,
           "insufficient": false,
           "tier": "C"
@@ -2145,7 +2145,7 @@
           "rank1_rate": 0.663,
           "rank2_rate": 0.124,
           "pick_rate": 0.022,
-          "score": 78.49,
+          "score": 70.64,
           "delta": 0.125,
           "insufficient": false,
           "tier": "S+"
@@ -2164,7 +2164,7 @@
           "rank1_rate": 0.424,
           "rank2_rate": 0.278,
           "pick_rate": 0.064,
-          "score": 74.48,
+          "score": 67.03,
           "delta": 0.034,
           "insufficient": false,
           "tier": "S+"
@@ -2183,7 +2183,7 @@
           "rank1_rate": 0.556,
           "rank2_rate": 0.175,
           "pick_rate": 0.013,
-          "score": 73.87,
+          "score": 66.48,
           "delta": 0.083,
           "insufficient": false,
           "tier": "S+"
@@ -2202,7 +2202,7 @@
           "rank1_rate": 0.545,
           "rank2_rate": 0.168,
           "pick_rate": 0.018,
-          "score": 72.69,
+          "score": 65.42,
           "delta": 0.075,
           "insufficient": false,
           "tier": "S"
@@ -2221,7 +2221,7 @@
           "rank1_rate": 0.543,
           "rank2_rate": 0.193,
           "pick_rate": 0.034,
-          "score": 71.73,
+          "score": 64.55,
           "delta": 0.068,
           "insufficient": false,
           "tier": "S"
@@ -2240,7 +2240,7 @@
           "rank1_rate": 0.475,
           "rank2_rate": 0.246,
           "pick_rate": 0.016,
-          "score": 70.38,
+          "score": 63.34,
           "delta": 0.055,
           "insufficient": false,
           "tier": "S"
@@ -2259,7 +2259,7 @@
           "rank1_rate": 0.602,
           "rank2_rate": 0.092,
           "pick_rate": 0.025,
-          "score": 70.06,
+          "score": 63.05,
           "delta": 0.053,
           "insufficient": false,
           "tier": "S"
@@ -2278,7 +2278,7 @@
           "rank1_rate": 0.46,
           "rank2_rate": 0.22,
           "pick_rate": 0.013,
-          "score": 65.73,
+          "score": 59.16,
           "delta": 0.016,
           "insufficient": false,
           "tier": "S"
@@ -2297,7 +2297,7 @@
           "rank1_rate": 0.466,
           "rank2_rate": 0.165,
           "pick_rate": 0.021,
-          "score": 64.87,
+          "score": 58.39,
           "delta": 0.008,
           "insufficient": false,
           "tier": "A"
@@ -2316,7 +2316,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.271,
           "pick_rate": 0.018,
-          "score": 64.77,
+          "score": 58.3,
           "delta": 0.008,
           "insufficient": false,
           "tier": "A"
@@ -2335,7 +2335,7 @@
           "rank1_rate": 0.387,
           "rank2_rate": 0.29,
           "pick_rate": 0.016,
-          "score": 64.48,
+          "score": 58.03,
           "delta": 0.006,
           "insufficient": false,
           "tier": "A"
@@ -2354,7 +2354,7 @@
           "rank1_rate": 0.43,
           "rank2_rate": 0.222,
           "pick_rate": 0.034,
-          "score": 64.45,
+          "score": 58.01,
           "delta": 0.005,
           "insufficient": false,
           "tier": "A"
@@ -2373,7 +2373,7 @@
           "rank1_rate": 0.415,
           "rank2_rate": 0.264,
           "pick_rate": 0.013,
-          "score": 64.22,
+          "score": 57.8,
           "delta": 0.003,
           "insufficient": false,
           "tier": "A"
@@ -2392,7 +2392,7 @@
           "rank1_rate": 0.515,
           "rank2_rate": 0.093,
           "pick_rate": 0.023,
-          "score": 63.78,
+          "score": 57.4,
           "delta": -0.002,
           "insufficient": false,
           "tier": "A"
@@ -2411,7 +2411,7 @@
           "rank1_rate": 0.415,
           "rank2_rate": 0.236,
           "pick_rate": 0.031,
-          "score": 63.67,
+          "score": 57.31,
           "delta": -0.002,
           "insufficient": false,
           "tier": "A"
@@ -2430,7 +2430,7 @@
           "rank1_rate": 0.385,
           "rank2_rate": 0.284,
           "pick_rate": 0.026,
-          "score": 63.37,
+          "score": 57.03,
           "delta": -0.004,
           "insufficient": false,
           "tier": "A"
@@ -2449,7 +2449,7 @@
           "rank1_rate": 0.455,
           "rank2_rate": 0.167,
           "pick_rate": 0.016,
-          "score": 62.17,
+          "score": 55.96,
           "delta": -0.015,
           "insufficient": false,
           "tier": "B"
@@ -2468,7 +2468,7 @@
           "rank1_rate": 0.491,
           "rank2_rate": 0.113,
           "pick_rate": 0.013,
-          "score": 62.08,
+          "score": 55.87,
           "delta": -0.016,
           "insufficient": false,
           "tier": "B"
@@ -2487,7 +2487,7 @@
           "rank1_rate": 0.393,
           "rank2_rate": 0.214,
           "pick_rate": 0.013,
-          "score": 61.44,
+          "score": 55.29,
           "delta": -0.022,
           "insufficient": false,
           "tier": "B"
@@ -2506,7 +2506,7 @@
           "rank1_rate": 0.33,
           "rank2_rate": 0.298,
           "pick_rate": 0.023,
-          "score": 59.16,
+          "score": 53.24,
           "delta": -0.039,
           "insufficient": false,
           "tier": "B"
@@ -2525,7 +2525,7 @@
           "rank1_rate": 0.347,
           "rank2_rate": 0.263,
           "pick_rate": 0.041,
-          "score": 58.16,
+          "score": 52.35,
           "delta": -0.048,
           "insufficient": false,
           "tier": "B"
@@ -2544,7 +2544,7 @@
           "rank1_rate": 0.338,
           "rank2_rate": 0.273,
           "pick_rate": 0.02,
-          "score": 57.93,
+          "score": 52.14,
           "delta": -0.05,
           "insufficient": false,
           "tier": "B"
@@ -2563,7 +2563,7 @@
           "rank1_rate": 0.366,
           "rank2_rate": 0.247,
           "pick_rate": 0.023,
-          "score": 56.59,
+          "score": 50.93,
           "delta": -0.061,
           "insufficient": false,
           "tier": "B"
@@ -2582,7 +2582,7 @@
           "rank1_rate": 0.357,
           "rank2_rate": 0.214,
           "pick_rate": 0.014,
-          "score": 56.34,
+          "score": 50.71,
           "delta": -0.065,
           "insufficient": false,
           "tier": "B"
@@ -2601,7 +2601,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.246,
           "pick_rate": 0.014,
-          "score": 54.87,
+          "score": 49.38,
           "delta": -0.076,
           "insufficient": false,
           "tier": "C"
@@ -2620,7 +2620,7 @@
           "rank1_rate": 0.329,
           "rank2_rate": 0.247,
           "pick_rate": 0.018,
-          "score": 54.73,
+          "score": 49.26,
           "delta": -0.079,
           "insufficient": false,
           "tier": "C"
@@ -2639,7 +2639,7 @@
           "rank1_rate": 0.395,
           "rank2_rate": 0.163,
           "pick_rate": 0.032,
-          "score": 54.62,
+          "score": 49.16,
           "delta": -0.081,
           "insufficient": false,
           "tier": "C"
@@ -2658,7 +2658,7 @@
           "rank1_rate": 0.387,
           "rank2_rate": 0.161,
           "pick_rate": 0.015,
-          "score": 53.41,
+          "score": 48.07,
           "delta": -0.089,
           "insufficient": false,
           "tier": "C"
@@ -2677,7 +2677,7 @@
           "rank1_rate": 0.317,
           "rank2_rate": 0.22,
           "pick_rate": 0.021,
-          "score": 52.89,
+          "score": 47.6,
           "delta": -0.094,
           "insufficient": false,
           "tier": "C"
@@ -2696,7 +2696,7 @@
           "rank1_rate": 0.773,
           "rank2_rate": 0.182,
           "pick_rate": 0.006,
-          "score": 87.1,
+          "score": 78.39,
           "delta": 0.191,
           "insufficient": true,
           "tier": "?"
@@ -2715,7 +2715,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 77.67,
+          "score": 69.9,
           "delta": 0.083,
           "insufficient": true,
           "tier": "?"
@@ -2734,7 +2734,7 @@
           "rank1_rate": 0.682,
           "rank2_rate": 0.136,
           "pick_rate": 0.006,
-          "score": 76.74,
+          "score": 69.07,
           "delta": 0.106,
           "insufficient": true,
           "tier": "?"
@@ -2753,7 +2753,7 @@
           "rank1_rate": 0.833,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 76.72,
+          "score": 69.05,
           "delta": 0.09,
           "insufficient": true,
           "tier": "?"
@@ -2772,7 +2772,7 @@
           "rank1_rate": 0.7,
           "rank2_rate": 0.2,
           "pick_rate": 0.002,
-          "score": 76.07,
+          "score": 68.47,
           "delta": 0.103,
           "insufficient": true,
           "tier": "?"
@@ -2791,7 +2791,7 @@
           "rank1_rate": 0.523,
           "rank2_rate": 0.295,
           "pick_rate": 0.011,
-          "score": 75.89,
+          "score": 68.3,
           "delta": 0.1,
           "insufficient": true,
           "tier": "?"
@@ -2810,7 +2810,7 @@
           "rank1_rate": 0.55,
           "rank2_rate": 0.225,
           "pick_rate": 0.01,
-          "score": 74.83,
+          "score": 67.35,
           "delta": 0.092,
           "insufficient": true,
           "tier": "?"
@@ -2829,7 +2829,7 @@
           "rank1_rate": 0.619,
           "rank2_rate": 0.143,
           "pick_rate": 0.005,
-          "score": 72.99,
+          "score": 65.69,
           "delta": 0.075,
           "insufficient": true,
           "tier": "?"
@@ -2848,7 +2848,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.125,
           "pick_rate": 0.002,
-          "score": 72.73,
+          "score": 65.45,
           "delta": 0.065,
           "insufficient": true,
           "tier": "?"
@@ -2867,7 +2867,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.306,
           "pick_rate": 0.009,
-          "score": 72.09,
+          "score": 64.88,
           "delta": 0.069,
           "insufficient": true,
           "tier": "?"
@@ -2886,7 +2886,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 72.0,
+          "score": 64.8,
           "delta": 0.052,
           "insufficient": true,
           "tier": "?"
@@ -2905,7 +2905,7 @@
           "rank1_rate": 0.455,
           "rank2_rate": 0.318,
           "pick_rate": 0.005,
-          "score": 71.7,
+          "score": 64.53,
           "delta": 0.066,
           "insufficient": true,
           "tier": "?"
@@ -2924,7 +2924,7 @@
           "rank1_rate": 0.471,
           "rank2_rate": 0.294,
           "pick_rate": 0.004,
-          "score": 71.12,
+          "score": 64.0,
           "delta": 0.059,
           "insufficient": true,
           "tier": "?"
@@ -2943,7 +2943,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.333,
           "pick_rate": 0.002,
-          "score": 70.56,
+          "score": 63.51,
           "delta": 0.051,
           "insufficient": true,
           "tier": "?"
@@ -2962,7 +2962,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.001,
-          "score": 70.54,
+          "score": 63.49,
           "delta": 0.037,
           "insufficient": true,
           "tier": "?"
@@ -2981,7 +2981,7 @@
           "rank1_rate": 0.487,
           "rank2_rate": 0.231,
           "pick_rate": 0.01,
-          "score": 70.02,
+          "score": 63.01,
           "delta": 0.052,
           "insufficient": true,
           "tier": "?"
@@ -3000,7 +3000,7 @@
           "rank1_rate": 0.529,
           "rank2_rate": 0.235,
           "pick_rate": 0.004,
-          "score": 69.79,
+          "score": 62.81,
           "delta": 0.049,
           "insufficient": true,
           "tier": "?"
@@ -3019,7 +3019,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.333,
           "pick_rate": 0.005,
-          "score": 69.6,
+          "score": 62.64,
           "delta": 0.048,
           "insufficient": true,
           "tier": "?"
@@ -3038,7 +3038,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.143,
           "pick_rate": 0.004,
-          "score": 69.45,
+          "score": 62.5,
           "delta": 0.044,
           "insufficient": true,
           "tier": "?"
@@ -3057,7 +3057,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.333,
           "pick_rate": 0.002,
-          "score": 69.01,
+          "score": 62.11,
           "delta": 0.038,
           "insufficient": true,
           "tier": "?"
@@ -3076,7 +3076,7 @@
           "rank1_rate": 0.619,
           "rank2_rate": 0.048,
           "pick_rate": 0.005,
-          "score": 68.53,
+          "score": 61.67,
           "delta": 0.037,
           "insufficient": true,
           "tier": "?"
@@ -3095,7 +3095,7 @@
           "rank1_rate": 0.559,
           "rank2_rate": 0.088,
           "pick_rate": 0.008,
-          "score": 68.44,
+          "score": 61.6,
           "delta": 0.038,
           "insufficient": true,
           "tier": "?"
@@ -3114,7 +3114,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.286,
           "pick_rate": 0.002,
-          "score": 68.15,
+          "score": 61.33,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -3133,7 +3133,7 @@
           "rank1_rate": 0.485,
           "rank2_rate": 0.212,
           "pick_rate": 0.008,
-          "score": 67.52,
+          "score": 60.77,
           "delta": 0.032,
           "insufficient": true,
           "tier": "?"
@@ -3152,7 +3152,7 @@
           "rank1_rate": 0.542,
           "rank2_rate": 0.125,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.028,
           "insufficient": true,
           "tier": "?"
@@ -3171,7 +3171,7 @@
           "rank1_rate": 0.517,
           "rank2_rate": 0.138,
           "pick_rate": 0.007,
-          "score": 67.14,
+          "score": 60.43,
           "delta": 0.027,
           "insufficient": true,
           "tier": "?"
@@ -3190,7 +3190,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.222,
           "pick_rate": 0.005,
-          "score": 66.73,
+          "score": 60.06,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -3209,7 +3209,7 @@
           "rank1_rate": 0.417,
           "rank2_rate": 0.333,
           "pick_rate": 0.003,
-          "score": 66.62,
+          "score": 59.96,
           "delta": 0.023,
           "insufficient": true,
           "tier": "?"
@@ -3228,7 +3228,7 @@
           "rank1_rate": 0.581,
           "rank2_rate": 0.097,
           "pick_rate": 0.008,
-          "score": 66.59,
+          "score": 59.93,
           "delta": 0.023,
           "insufficient": true,
           "tier": "?"
@@ -3247,7 +3247,7 @@
           "rank1_rate": 0.469,
           "rank2_rate": 0.224,
           "pick_rate": 0.012,
-          "score": 66.47,
+          "score": 59.82,
           "delta": 0.022,
           "insufficient": true,
           "tier": "?"
@@ -3266,7 +3266,7 @@
           "rank1_rate": 0.375,
           "rank2_rate": 0.312,
           "pick_rate": 0.004,
-          "score": 66.27,
+          "score": 59.65,
           "delta": 0.019,
           "insufficient": true,
           "tier": "?"
@@ -3285,7 +3285,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.257,
           "pick_rate": 0.009,
-          "score": 66.0,
+          "score": 59.4,
           "delta": 0.018,
           "insufficient": true,
           "tier": "?"
@@ -3304,7 +3304,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.231,
           "pick_rate": 0.007,
-          "score": 65.7,
+          "score": 59.13,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -3323,7 +3323,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.25,
           "pick_rate": 0.001,
-          "score": 65.53,
+          "score": 58.98,
           "delta": 0.012,
           "insufficient": true,
           "tier": "?"
@@ -3342,7 +3342,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.25,
           "pick_rate": 0.001,
-          "score": 65.53,
+          "score": 58.98,
           "delta": 0.012,
           "insufficient": true,
           "tier": "?"
@@ -3361,7 +3361,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.167,
           "pick_rate": 0.002,
-          "score": 65.38,
+          "score": 58.85,
           "delta": 0.011,
           "insufficient": true,
           "tier": "?"
@@ -3380,7 +3380,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.167,
           "pick_rate": 0.002,
-          "score": 65.38,
+          "score": 58.85,
           "delta": 0.011,
           "insufficient": true,
           "tier": "?"
@@ -3399,7 +3399,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 64.98,
+          "score": 58.48,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -3418,7 +3418,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.143,
           "pick_rate": 0.002,
-          "score": 64.83,
+          "score": 58.35,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -3437,7 +3437,7 @@
           "rank1_rate": 0.419,
           "rank2_rate": 0.233,
           "pick_rate": 0.011,
-          "score": 64.48,
+          "score": 58.03,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -3456,7 +3456,7 @@
           "rank1_rate": 0.455,
           "rank2_rate": 0.136,
           "pick_rate": 0.006,
-          "score": 64.28,
+          "score": 57.85,
           "delta": 0.002,
           "insufficient": true,
           "tier": "?"
@@ -3475,7 +3475,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.389,
           "pick_rate": 0.005,
-          "score": 64.2,
+          "score": 57.78,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -3494,7 +3494,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.233,
           "pick_rate": 0.007,
-          "score": 63.88,
+          "score": 57.5,
           "delta": 0.003,
           "insufficient": true,
           "tier": "?"
@@ -3513,7 +3513,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.667,
           "pick_rate": 0.002,
-          "score": 63.84,
+          "score": 57.46,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -3532,7 +3532,7 @@
           "rank1_rate": 0.436,
           "rank2_rate": 0.231,
           "pick_rate": 0.01,
-          "score": 63.8,
+          "score": 57.42,
           "delta": -0.0,
           "insufficient": true,
           "tier": "?"
@@ -3551,7 +3551,7 @@
           "rank1_rate": 0.424,
           "rank2_rate": 0.212,
           "pick_rate": 0.008,
-          "score": 63.71,
+          "score": 57.34,
           "delta": -0.002,
           "insufficient": true,
           "tier": "?"
@@ -3570,7 +3570,7 @@
           "rank1_rate": 0.556,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 62.77,
+          "score": 56.5,
           "delta": -0.01,
           "insufficient": true,
           "tier": "?"
@@ -3589,7 +3589,7 @@
           "rank1_rate": 0.417,
           "rank2_rate": 0.222,
           "pick_rate": 0.009,
-          "score": 62.45,
+          "score": 56.2,
           "delta": -0.012,
           "insufficient": true,
           "tier": "?"
@@ -3608,7 +3608,7 @@
           "rank1_rate": 0.385,
           "rank2_rate": 0.231,
           "pick_rate": 0.003,
-          "score": 62.27,
+          "score": 56.04,
           "delta": -0.013,
           "insufficient": true,
           "tier": "?"
@@ -3627,7 +3627,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.5,
           "pick_rate": 0.003,
-          "score": 62.24,
+          "score": 56.01,
           "delta": -0.011,
           "insufficient": true,
           "tier": "?"
@@ -3646,7 +3646,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.25,
           "pick_rate": 0.003,
-          "score": 61.73,
+          "score": 55.56,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -3665,7 +3665,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.2,
           "pick_rate": 0.008,
-          "score": 61.28,
+          "score": 55.16,
           "delta": -0.022,
           "insufficient": true,
           "tier": "?"
@@ -3684,7 +3684,7 @@
           "rank1_rate": 0.344,
           "rank2_rate": 0.281,
           "pick_rate": 0.008,
-          "score": 61.03,
+          "score": 54.92,
           "delta": -0.024,
           "insufficient": true,
           "tier": "?"
@@ -3703,7 +3703,7 @@
           "rank1_rate": 0.341,
           "rank2_rate": 0.293,
           "pick_rate": 0.01,
-          "score": 60.2,
+          "score": 54.18,
           "delta": -0.031,
           "insufficient": true,
           "tier": "?"
@@ -3722,7 +3722,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 59.52,
+          "score": 53.57,
           "delta": -0.023,
           "insufficient": true,
           "tier": "?"
@@ -3741,7 +3741,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.111,
           "pick_rate": 0.002,
-          "score": 58.75,
+          "score": 52.87,
           "delta": -0.039,
           "insufficient": true,
           "tier": "?"
@@ -3760,7 +3760,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 57.87,
+          "score": 52.08,
           "delta": -0.04,
           "insufficient": true,
           "tier": "?"
@@ -3779,7 +3779,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.002,
-          "score": 57.82,
+          "score": 52.03,
           "delta": -0.046,
           "insufficient": true,
           "tier": "?"
@@ -3798,7 +3798,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.5,
           "pick_rate": 0.002,
-          "score": 57.68,
+          "score": 51.91,
           "delta": -0.042,
           "insufficient": true,
           "tier": "?"
@@ -3817,7 +3817,7 @@
           "rank1_rate": 0.393,
           "rank2_rate": 0.143,
           "pick_rate": 0.007,
-          "score": 55.68,
+          "score": 50.12,
           "delta": -0.068,
           "insufficient": true,
           "tier": "?"
@@ -3836,7 +3836,7 @@
           "rank1_rate": 0.381,
           "rank2_rate": 0.143,
           "pick_rate": 0.005,
-          "score": 55.55,
+          "score": 50.0,
           "delta": -0.069,
           "insufficient": true,
           "tier": "?"
@@ -3855,7 +3855,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.312,
           "pick_rate": 0.004,
-          "score": 55.31,
+          "score": 49.78,
           "delta": -0.068,
           "insufficient": true,
           "tier": "?"
@@ -3874,7 +3874,7 @@
           "rank1_rate": 0.375,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 54.75,
+          "score": 49.27,
           "delta": -0.071,
           "insufficient": true,
           "tier": "?"
@@ -3893,7 +3893,7 @@
           "rank1_rate": 0.325,
           "rank2_rate": 0.2,
           "pick_rate": 0.01,
-          "score": 53.8,
+          "score": 48.42,
           "delta": -0.085,
           "insufficient": true,
           "tier": "?"
@@ -3912,7 +3912,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.004,
-          "score": 53.3,
+          "score": 47.97,
           "delta": -0.085,
           "insufficient": true,
           "tier": "?"
@@ -3931,7 +3931,7 @@
           "rank1_rate": 0.143,
           "rank2_rate": 0.286,
           "pick_rate": 0.002,
-          "score": 52.13,
+          "score": 46.92,
           "delta": -0.086,
           "insufficient": true,
           "tier": "?"
@@ -3950,7 +3950,7 @@
           "rank1_rate": 0.211,
           "rank2_rate": 0.263,
           "pick_rate": 0.005,
-          "score": 50.73,
+          "score": 45.66,
           "delta": -0.108,
           "insufficient": true,
           "tier": "?"
@@ -3969,7 +3969,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.125,
           "pick_rate": 0.004,
-          "score": 50.65,
+          "score": 45.59,
           "delta": -0.109,
           "insufficient": true,
           "tier": "?"
@@ -3988,7 +3988,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 50.21,
+          "score": 45.19,
           "delta": -0.091,
           "insufficient": true,
           "tier": "?"
@@ -4007,7 +4007,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.2,
           "pick_rate": 0.005,
-          "score": 49.13,
+          "score": 44.22,
           "delta": -0.122,
           "insufficient": true,
           "tier": "?"
@@ -4026,7 +4026,7 @@
           "rank1_rate": 0.238,
           "rank2_rate": 0.19,
           "pick_rate": 0.005,
-          "score": 48.8,
+          "score": 43.92,
           "delta": -0.124,
           "insufficient": true,
           "tier": "?"
@@ -4045,7 +4045,7 @@
           "rank1_rate": 0.31,
           "rank2_rate": 0.069,
           "pick_rate": 0.007,
-          "score": 46.13,
+          "score": 41.51,
           "delta": -0.15,
           "insufficient": true,
           "tier": "?"
@@ -4064,7 +4064,7 @@
           "rank1_rate": 0.222,
           "rank2_rate": 0.111,
           "pick_rate": 0.002,
-          "score": 44.87,
+          "score": 40.39,
           "delta": -0.145,
           "insufficient": true,
           "tier": "?"
@@ -4258,7 +4258,7 @@
           "rank1_rate": 0.473,
           "rank2_rate": 0.203,
           "pick_rate": 0.063,
-          "score": 72.37,
+          "score": 65.14,
           "delta": 0.028,
           "insufficient": false,
           "tier": "S+"
@@ -4277,7 +4277,7 @@
           "rank1_rate": 0.464,
           "rank2_rate": 0.167,
           "pick_rate": 0.062,
-          "score": 70.73,
+          "score": 63.66,
           "delta": 0.017,
           "insufficient": false,
           "tier": "A"
@@ -4296,7 +4296,7 @@
           "rank1_rate": 0.433,
           "rank2_rate": 0.222,
           "pick_rate": 0.076,
-          "score": 70.14,
+          "score": 63.13,
           "delta": 0.011,
           "insufficient": false,
           "tier": "A"
@@ -4315,7 +4315,7 @@
           "rank1_rate": 0.41,
           "rank2_rate": 0.23,
           "pick_rate": 0.048,
-          "score": 62.54,
+          "score": 56.29,
           "delta": 0.001,
           "insufficient": false,
           "tier": "B"
@@ -4334,7 +4334,7 @@
           "rank1_rate": 0.8,
           "rank2_rate": 0.2,
           "pick_rate": 0.004,
-          "score": 77.83,
+          "score": 70.05,
           "delta": 0.106,
           "insufficient": true,
           "tier": "?"
@@ -4353,7 +4353,7 @@
           "rank1_rate": 0.524,
           "rank2_rate": 0.381,
           "pick_rate": 0.018,
-          "score": 77.76,
+          "score": 69.99,
           "delta": 0.127,
           "insufficient": true,
           "tier": "?"
@@ -4372,7 +4372,7 @@
           "rank1_rate": 0.722,
           "rank2_rate": 0.111,
           "pick_rate": 0.015,
-          "score": 76.54,
+          "score": 68.89,
           "delta": 0.114,
           "insufficient": true,
           "tier": "?"
@@ -4391,7 +4391,7 @@
           "rank1_rate": 0.833,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 75.73,
+          "score": 68.16,
           "delta": 0.095,
           "insufficient": true,
           "tier": "?"
@@ -4410,7 +4410,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.25,
           "pick_rate": 0.003,
-          "score": 75.66,
+          "score": 68.1,
           "delta": 0.087,
           "insufficient": true,
           "tier": "?"
@@ -4429,7 +4429,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 74.43,
+          "score": 66.99,
           "delta": 0.063,
           "insufficient": true,
           "tier": "?"
@@ -4448,7 +4448,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 74.43,
+          "score": 66.99,
           "delta": 0.063,
           "insufficient": true,
           "tier": "?"
@@ -4467,7 +4467,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.114,
           "pick_rate": 0.023,
-          "score": 73.15,
+          "score": 65.83,
           "delta": 0.094,
           "insufficient": true,
           "tier": "?"
@@ -4486,7 +4486,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.25,
           "pick_rate": 0.007,
-          "score": 73.11,
+          "score": 65.8,
           "delta": 0.08,
           "insufficient": true,
           "tier": "?"
@@ -4505,7 +4505,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.333,
           "pick_rate": 0.003,
-          "score": 73.05,
+          "score": 65.74,
           "delta": 0.065,
           "insufficient": true,
           "tier": "?"
@@ -4524,7 +4524,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.111,
           "pick_rate": 0.008,
-          "score": 72.07,
+          "score": 64.86,
           "delta": 0.072,
           "insufficient": true,
           "tier": "?"
@@ -4543,7 +4543,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 71.59,
+          "score": 64.43,
           "delta": 0.034,
           "insufficient": true,
           "tier": "?"
@@ -4562,7 +4562,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.312,
           "pick_rate": 0.014,
-          "score": 71.4,
+          "score": 64.26,
           "delta": 0.073,
           "insufficient": true,
           "tier": "?"
@@ -4581,7 +4581,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 71.24,
+          "score": 64.11,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -4600,7 +4600,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.004,
-          "score": 71.02,
+          "score": 63.91,
           "delta": 0.058,
           "insufficient": true,
           "tier": "?"
@@ -4619,7 +4619,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.002,
-          "score": 69.62,
+          "score": 62.66,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -4638,7 +4638,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.002,
-          "score": 69.62,
+          "score": 62.66,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -4657,7 +4657,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.667,
           "pick_rate": 0.003,
-          "score": 69.21,
+          "score": 62.29,
           "delta": 0.044,
           "insufficient": true,
           "tier": "?"
@@ -4676,7 +4676,7 @@
           "rank1_rate": 0.423,
           "rank2_rate": 0.346,
           "pick_rate": 0.02,
-          "score": 68.4,
+          "score": 61.56,
           "delta": 0.05,
           "insufficient": true,
           "tier": "?"
@@ -4695,7 +4695,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.004,
-          "score": 68.16,
+          "score": 61.35,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -4714,7 +4714,7 @@
           "rank1_rate": 0.556,
           "rank2_rate": 0.222,
           "pick_rate": 0.008,
-          "score": 68.05,
+          "score": 61.24,
           "delta": 0.043,
           "insufficient": true,
           "tier": "?"
@@ -4733,7 +4733,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.2,
           "pick_rate": 0.008,
-          "score": 68.03,
+          "score": 61.23,
           "delta": 0.038,
           "insufficient": true,
           "tier": "?"
@@ -4752,7 +4752,7 @@
           "rank1_rate": 0.526,
           "rank2_rate": 0.158,
           "pick_rate": 0.012,
-          "score": 68.02,
+          "score": 61.22,
           "delta": 0.048,
           "insufficient": true,
           "tier": "?"
@@ -4771,7 +4771,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.133,
           "pick_rate": 0.013,
-          "score": 67.81,
+          "score": 61.03,
           "delta": 0.043,
           "insufficient": true,
           "tier": "?"
@@ -4790,7 +4790,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.192,
           "pick_rate": 0.021,
-          "score": 67.47,
+          "score": 60.73,
           "delta": 0.041,
           "insufficient": true,
           "tier": "?"
@@ -4809,7 +4809,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 66.75,
+          "score": 60.08,
           "delta": 0.036,
           "insufficient": true,
           "tier": "?"
@@ -4828,7 +4828,7 @@
           "rank1_rate": 0.524,
           "rank2_rate": 0.143,
           "pick_rate": 0.014,
-          "score": 66.6,
+          "score": 59.94,
           "delta": 0.037,
           "insufficient": true,
           "tier": "?"
@@ -4847,7 +4847,7 @@
           "rank1_rate": 0.509,
           "rank2_rate": 0.182,
           "pick_rate": 0.041,
-          "score": 66.3,
+          "score": 59.67,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -4866,7 +4866,7 @@
           "rank1_rate": 0.562,
           "rank2_rate": 0.125,
           "pick_rate": 0.014,
-          "score": 65.96,
+          "score": 59.37,
           "delta": 0.028,
           "insufficient": true,
           "tier": "?"
@@ -4885,7 +4885,7 @@
           "rank1_rate": 0.375,
           "rank2_rate": 0.375,
           "pick_rate": 0.007,
-          "score": 65.65,
+          "score": 59.09,
           "delta": 0.025,
           "insufficient": true,
           "tier": "?"
@@ -4904,7 +4904,7 @@
           "rank1_rate": 0.636,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 65.1,
+          "score": 58.59,
           "delta": 0.019,
           "insufficient": true,
           "tier": "?"
@@ -4923,7 +4923,7 @@
           "rank1_rate": 0.35,
           "rank2_rate": 0.3,
           "pick_rate": 0.016,
-          "score": 64.85,
+          "score": 58.37,
           "delta": 0.017,
           "insufficient": true,
           "tier": "?"
@@ -4942,7 +4942,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 64.14,
+          "score": 57.73,
           "delta": 0.01,
           "insufficient": true,
           "tier": "?"
@@ -4961,7 +4961,7 @@
           "rank1_rate": 0.406,
           "rank2_rate": 0.25,
           "pick_rate": 0.026,
-          "score": 64.09,
+          "score": 57.68,
           "delta": 0.011,
           "insufficient": true,
           "tier": "?"
@@ -4980,7 +4980,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -4999,7 +4999,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5018,7 +5018,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5037,7 +5037,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5056,7 +5056,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5075,7 +5075,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5094,7 +5094,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.001,
-          "score": 64.07,
+          "score": 57.66,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5113,7 +5113,7 @@
           "rank1_rate": 0.346,
           "rank2_rate": 0.269,
           "pick_rate": 0.019,
-          "score": 64.03,
+          "score": 57.63,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -5132,7 +5132,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 63.58,
+          "score": 57.22,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -5151,7 +5151,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 63.58,
+          "score": 57.22,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -5170,7 +5170,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.286,
           "pick_rate": 0.006,
-          "score": 62.89,
+          "score": 56.6,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -5189,7 +5189,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 62.73,
+          "score": 56.46,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -5208,7 +5208,7 @@
           "rank1_rate": 0.312,
           "rank2_rate": 0.312,
           "pick_rate": 0.014,
-          "score": 62.58,
+          "score": 56.33,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -5227,7 +5227,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.154,
           "pick_rate": 0.011,
-          "score": 61.89,
+          "score": 55.7,
           "delta": -0.005,
           "insufficient": true,
           "tier": "?"
@@ -5246,7 +5246,7 @@
           "rank1_rate": 0.273,
           "rank2_rate": 0.364,
           "pick_rate": 0.009,
-          "score": 61.56,
+          "score": 55.4,
           "delta": -0.007,
           "insufficient": true,
           "tier": "?"
@@ -5265,7 +5265,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.103,
           "pick_rate": 0.027,
-          "score": 60.64,
+          "score": 54.57,
           "delta": -0.014,
           "insufficient": true,
           "tier": "?"
@@ -5284,7 +5284,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.003,
-          "score": 60.36,
+          "score": 54.32,
           "delta": -0.012,
           "insufficient": true,
           "tier": "?"
@@ -5303,7 +5303,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.003,
-          "score": 60.36,
+          "score": 54.32,
           "delta": -0.012,
           "insufficient": true,
           "tier": "?"
@@ -5322,7 +5322,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.15,
           "pick_rate": 0.016,
-          "score": 60.16,
+          "score": 54.15,
           "delta": -0.022,
           "insufficient": true,
           "tier": "?"
@@ -5341,7 +5341,7 @@
           "rank1_rate": 0.412,
           "rank2_rate": 0.118,
           "pick_rate": 0.013,
-          "score": 59.9,
+          "score": 53.91,
           "delta": -0.029,
           "insufficient": true,
           "tier": "?"
@@ -5360,7 +5360,7 @@
           "rank1_rate": 0.286,
           "rank2_rate": 0.286,
           "pick_rate": 0.006,
-          "score": 59.53,
+          "score": 53.57,
           "delta": -0.022,
           "insufficient": true,
           "tier": "?"
@@ -5379,7 +5379,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.8,
           "pick_rate": 0.003,
-          "score": 59.11,
+          "score": 53.2,
           "delta": -0.016,
           "insufficient": true,
           "tier": "?"
@@ -5398,7 +5398,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.002,
-          "score": 58.6,
+          "score": 52.74,
           "delta": -0.021,
           "insufficient": true,
           "tier": "?"
@@ -5417,7 +5417,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.002,
-          "score": 58.6,
+          "score": 52.74,
           "delta": -0.021,
           "insufficient": true,
           "tier": "?"
@@ -5436,7 +5436,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 58.6,
+          "score": 52.74,
           "delta": -0.021,
           "insufficient": true,
           "tier": "?"
@@ -5455,7 +5455,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 58.6,
+          "score": 52.74,
           "delta": -0.021,
           "insufficient": true,
           "tier": "?"
@@ -5474,7 +5474,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 58.58,
+          "score": 52.72,
           "delta": -0.03,
           "insufficient": true,
           "tier": "?"
@@ -5493,7 +5493,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.143,
           "pick_rate": 0.01,
-          "score": 58.5,
+          "score": 52.65,
           "delta": -0.043,
           "insufficient": true,
           "tier": "?"
@@ -5512,7 +5512,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.1,
           "pick_rate": 0.008,
-          "score": 58.21,
+          "score": 52.39,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -5531,7 +5531,7 @@
           "rank1_rate": 0.3,
           "rank2_rate": 0.2,
           "pick_rate": 0.008,
-          "score": 58.21,
+          "score": 52.39,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -5550,7 +5550,7 @@
           "rank1_rate": 0.368,
           "rank2_rate": 0.211,
           "pick_rate": 0.031,
-          "score": 57.76,
+          "score": 51.98,
           "delta": -0.042,
           "insufficient": true,
           "tier": "?"
@@ -5569,7 +5569,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.167,
           "pick_rate": 0.004,
-          "score": 57.23,
+          "score": 51.51,
           "delta": -0.03,
           "insufficient": true,
           "tier": "?"
@@ -5588,7 +5588,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.004,
-          "score": 56.54,
+          "score": 50.88,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -5607,7 +5607,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.003,
-          "score": 56.52,
+          "score": 50.87,
           "delta": -0.033,
           "insufficient": true,
           "tier": "?"
@@ -5626,7 +5626,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.4,
           "pick_rate": 0.004,
-          "score": 55.65,
+          "score": 50.08,
           "delta": -0.045,
           "insufficient": true,
           "tier": "?"
@@ -5645,7 +5645,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 55.24,
+          "score": 49.71,
           "delta": -0.046,
           "insufficient": true,
           "tier": "?"
@@ -5664,7 +5664,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.007,
-          "score": 55.13,
+          "score": 49.61,
           "delta": -0.056,
           "insufficient": true,
           "tier": "?"
@@ -5683,7 +5683,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 55.03,
+          "score": 49.52,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -5702,7 +5702,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 55.03,
+          "score": 49.52,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -5721,7 +5721,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 55.03,
+          "score": 49.52,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -5740,7 +5740,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 55.03,
+          "score": 49.52,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -5759,7 +5759,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 55.03,
+          "score": 49.52,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -5778,7 +5778,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.2,
           "pick_rate": 0.004,
-          "score": 54.53,
+          "score": 49.08,
           "delta": -0.056,
           "insufficient": true,
           "tier": "?"
@@ -5797,7 +5797,7 @@
           "rank1_rate": 0.286,
           "rank2_rate": 0.214,
           "pick_rate": 0.024,
-          "score": 54.22,
+          "score": 48.79,
           "delta": -0.07,
           "insufficient": true,
           "tier": "?"
@@ -5816,7 +5816,7 @@
           "rank1_rate": 0.375,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 54.2,
+          "score": 48.78,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -5835,7 +5835,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 53.88,
+          "score": 48.49,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -5854,7 +5854,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.003,
-          "score": 53.88,
+          "score": 48.49,
           "delta": -0.056,
           "insufficient": true,
           "tier": "?"
@@ -5873,7 +5873,7 @@
           "rank1_rate": 0.294,
           "rank2_rate": 0.235,
           "pick_rate": 0.014,
-          "score": 53.79,
+          "score": 48.41,
           "delta": -0.07,
           "insufficient": true,
           "tier": "?"
@@ -5892,7 +5892,7 @@
           "rank1_rate": 0.368,
           "rank2_rate": 0.053,
           "pick_rate": 0.016,
-          "score": 53.47,
+          "score": 48.12,
           "delta": -0.076,
           "insufficient": true,
           "tier": "?"
@@ -5911,7 +5911,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.25,
           "pick_rate": 0.003,
-          "score": 52.69,
+          "score": 47.42,
           "delta": -0.067,
           "insufficient": true,
           "tier": "?"
@@ -5930,7 +5930,7 @@
           "rank1_rate": 0.296,
           "rank2_rate": 0.148,
           "pick_rate": 0.021,
-          "score": 51.76,
+          "score": 46.59,
           "delta": -0.094,
           "insufficient": true,
           "tier": "?"
@@ -5949,7 +5949,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.003,
-          "score": 51.45,
+          "score": 46.31,
           "delta": -0.067,
           "insufficient": true,
           "tier": "?"
@@ -5968,7 +5968,7 @@
           "rank1_rate": 0.143,
           "rank2_rate": 0.381,
           "pick_rate": 0.018,
-          "score": 48.5,
+          "score": 43.65,
           "delta": -0.113,
           "insufficient": true,
           "tier": "?"
@@ -5987,7 +5987,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.001,
-          "score": 47.5,
+          "score": 42.75,
           "delta": -0.057,
           "insufficient": true,
           "tier": "?"
@@ -6006,7 +6006,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 46.37,
+          "score": 41.73,
           "delta": -0.129,
           "insufficient": true,
           "tier": "?"
@@ -6025,7 +6025,7 @@
           "rank1_rate": 0.227,
           "rank2_rate": 0.136,
           "pick_rate": 0.019,
-          "score": 46.16,
+          "score": 41.54,
           "delta": -0.136,
           "insufficient": true,
           "tier": "?"
@@ -6044,7 +6044,7 @@
           "rank1_rate": 0.286,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 45.85,
+          "score": 41.26,
           "delta": -0.123,
           "insufficient": true,
           "tier": "?"
@@ -6063,7 +6063,7 @@
           "rank1_rate": 0.182,
           "rank2_rate": 0.182,
           "pick_rate": 0.008,
-          "score": 41.85,
+          "score": 37.66,
           "delta": -0.163,
           "insufficient": true,
           "tier": "?"
@@ -6257,7 +6257,7 @@
           "rank1_rate": 0.559,
           "rank2_rate": 0.103,
           "pick_rate": 0.164,
-          "score": 73.88,
+          "score": 66.5,
           "delta": 0.031,
           "insufficient": false,
           "tier": "S+"
@@ -6276,7 +6276,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.015,
-          "score": 82.64,
+          "score": 74.37,
           "delta": 0.137,
           "insufficient": true,
           "tier": "?"
@@ -6295,7 +6295,7 @@
           "rank1_rate": 0.8,
           "rank2_rate": 0.2,
           "pick_rate": 0.012,
-          "score": 78.26,
+          "score": 70.44,
           "delta": 0.103,
           "insufficient": true,
           "tier": "?"
@@ -6314,7 +6314,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 77.37,
+          "score": 69.63,
           "delta": 0.084,
           "insufficient": true,
           "tier": "?"
@@ -6333,7 +6333,7 @@
           "rank1_rate": 0.778,
           "rank2_rate": 0.111,
           "pick_rate": 0.022,
-          "score": 77.32,
+          "score": 69.59,
           "delta": 0.106,
           "insufficient": true,
           "tier": "?"
@@ -6352,7 +6352,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 75.02,
+          "score": 67.52,
           "delta": 0.061,
           "insufficient": true,
           "tier": "?"
@@ -6371,7 +6371,7 @@
           "rank1_rate": 0.833,
           "rank2_rate": 0.0,
           "pick_rate": 0.015,
-          "score": 73.89,
+          "score": 66.5,
           "delta": 0.075,
           "insufficient": true,
           "tier": "?"
@@ -6390,7 +6390,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6409,7 +6409,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6428,7 +6428,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6447,7 +6447,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6466,7 +6466,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6485,7 +6485,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 72.25,
+          "score": 65.03,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -6504,7 +6504,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.007,
-          "score": 72.05,
+          "score": 64.85,
           "delta": 0.065,
           "insufficient": true,
           "tier": "?"
@@ -6523,7 +6523,7 @@
           "rank1_rate": 0.583,
           "rank2_rate": 0.167,
           "pick_rate": 0.029,
-          "score": 71.48,
+          "score": 64.33,
           "delta": 0.063,
           "insufficient": true,
           "tier": "?"
@@ -6542,7 +6542,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 71.3,
+          "score": 64.17,
           "delta": 0.057,
           "insufficient": true,
           "tier": "?"
@@ -6561,7 +6561,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.429,
           "pick_rate": 0.017,
-          "score": 71.28,
+          "score": 64.15,
           "delta": 0.059,
           "insufficient": true,
           "tier": "?"
@@ -6580,7 +6580,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.111,
           "pick_rate": 0.022,
-          "score": 70.35,
+          "score": 63.32,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -6599,7 +6599,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.111,
           "pick_rate": 0.022,
-          "score": 70.35,
+          "score": 63.32,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -6618,7 +6618,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.02,
-          "score": 70.31,
+          "score": 63.28,
           "delta": 0.051,
           "insufficient": true,
           "tier": "?"
@@ -6637,7 +6637,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.005,
-          "score": 70.21,
+          "score": 63.19,
           "delta": 0.038,
           "insufficient": true,
           "tier": "?"
@@ -6656,7 +6656,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.005,
-          "score": 70.21,
+          "score": 63.19,
           "delta": 0.038,
           "insufficient": true,
           "tier": "?"
@@ -6675,7 +6675,7 @@
           "rank1_rate": 0.556,
           "rank2_rate": 0.167,
           "pick_rate": 0.044,
-          "score": 69.13,
+          "score": 62.21,
           "delta": 0.046,
           "insufficient": true,
           "tier": "?"
@@ -6694,7 +6694,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 68.46,
+          "score": 61.61,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -6713,7 +6713,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.015,
-          "score": 67.72,
+          "score": 60.95,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -6732,7 +6732,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.179,
           "pick_rate": 0.066,
-          "score": 66.89,
+          "score": 60.21,
           "delta": -0.02,
           "insufficient": true,
           "tier": "?"
@@ -6751,7 +6751,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 66.81,
+          "score": 60.13,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -6770,7 +6770,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.0,
           "pick_rate": 0.015,
-          "score": 66.23,
+          "score": 59.61,
           "delta": 0.023,
           "insufficient": true,
           "tier": "?"
@@ -6789,7 +6789,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 65.14,
+          "score": 58.62,
           "delta": 0.012,
           "insufficient": true,
           "tier": "?"
@@ -6808,7 +6808,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.002,
-          "score": 64.73,
+          "score": 58.26,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -6827,7 +6827,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.002,
-          "score": 64.73,
+          "score": 58.26,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -6846,7 +6846,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.002,
-          "score": 64.73,
+          "score": 58.26,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -6865,7 +6865,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.002,
-          "score": 64.73,
+          "score": 58.26,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -6884,7 +6884,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.002,
-          "score": 64.73,
+          "score": 58.26,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -6903,7 +6903,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 64.67,
+          "score": 58.21,
           "delta": 0.007,
           "insufficient": true,
           "tier": "?"
@@ -6922,7 +6922,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.007,
-          "score": 64.67,
+          "score": 58.21,
           "delta": 0.007,
           "insufficient": true,
           "tier": "?"
@@ -6941,7 +6941,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 64.63,
+          "score": 58.17,
           "delta": 0.007,
           "insufficient": true,
           "tier": "?"
@@ -6960,7 +6960,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 64.0,
+          "score": 57.6,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -6979,7 +6979,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 64.0,
+          "score": 57.6,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -6998,7 +6998,7 @@
           "rank1_rate": 0.467,
           "rank2_rate": 0.067,
           "pick_rate": 0.034,
-          "score": 63.42,
+          "score": 57.07,
           "delta": -0.005,
           "insufficient": true,
           "tier": "?"
@@ -7017,7 +7017,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.111,
           "pick_rate": 0.022,
-          "score": 62.56,
+          "score": 56.31,
           "delta": -0.008,
           "insufficient": true,
           "tier": "?"
@@ -7036,7 +7036,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.015,
-          "score": 62.55,
+          "score": 56.3,
           "delta": -0.005,
           "insufficient": true,
           "tier": "?"
@@ -7055,7 +7055,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.007,
-          "score": 60.89,
+          "score": 54.8,
           "delta": -0.014,
           "insufficient": true,
           "tier": "?"
@@ -7074,7 +7074,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.143,
           "pick_rate": 0.017,
-          "score": 57.55,
+          "score": 51.79,
           "delta": -0.042,
           "insufficient": true,
           "tier": "?"
@@ -7093,7 +7093,7 @@
           "rank1_rate": 0.273,
           "rank2_rate": 0.273,
           "pick_rate": 0.049,
-          "score": 57.43,
+          "score": 51.68,
           "delta": -0.053,
           "insufficient": true,
           "tier": "?"
@@ -7112,7 +7112,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.0,
           "pick_rate": 0.01,
-          "score": 56.4,
+          "score": 50.76,
           "delta": -0.05,
           "insufficient": true,
           "tier": "?"
@@ -7131,7 +7131,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 56.39,
+          "score": 50.75,
           "delta": -0.05,
           "insufficient": true,
           "tier": "?"
@@ -7150,7 +7150,7 @@
           "rank1_rate": 0.091,
           "rank2_rate": 0.455,
           "pick_rate": 0.025,
-          "score": 55.94,
+          "score": 50.35,
           "delta": -0.06,
           "insufficient": true,
           "tier": "?"
@@ -7169,7 +7169,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 55.77,
+          "score": 50.19,
           "delta": -0.048,
           "insufficient": true,
           "tier": "?"
@@ -7188,7 +7188,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 55.69,
+          "score": 50.12,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -7207,7 +7207,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 55.69,
+          "score": 50.12,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -7226,7 +7226,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 55.69,
+          "score": 50.12,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -7245,7 +7245,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 55.69,
+          "score": 50.12,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -7264,7 +7264,7 @@
           "rank1_rate": 0.125,
           "rank2_rate": 0.375,
           "pick_rate": 0.02,
-          "score": 55.45,
+          "score": 49.91,
           "delta": -0.06,
           "insufficient": true,
           "tier": "?"
@@ -7283,7 +7283,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.01,
-          "score": 54.35,
+          "score": 48.92,
           "delta": -0.058,
           "insufficient": true,
           "tier": "?"
@@ -7302,7 +7302,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.01,
-          "score": 54.35,
+          "score": 48.92,
           "delta": -0.058,
           "insufficient": true,
           "tier": "?"
@@ -7321,7 +7321,7 @@
           "rank1_rate": 0.273,
           "rank2_rate": 0.273,
           "pick_rate": 0.027,
-          "score": 53.87,
+          "score": 48.48,
           "delta": -0.073,
           "insufficient": true,
           "tier": "?"
@@ -7340,7 +7340,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 52.76,
+          "score": 47.48,
           "delta": -0.078,
           "insufficient": true,
           "tier": "?"
@@ -7359,7 +7359,7 @@
           "rank1_rate": 0.368,
           "rank2_rate": 0.105,
           "pick_rate": 0.042,
-          "score": 52.06,
+          "score": 46.85,
           "delta": -0.086,
           "insufficient": true,
           "tier": "?"
@@ -7378,7 +7378,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.167,
           "pick_rate": 0.015,
-          "score": 50.22,
+          "score": 45.2,
           "delta": -0.096,
           "insufficient": true,
           "tier": "?"
@@ -7397,7 +7397,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.2,
           "pick_rate": 0.012,
-          "score": 49.26,
+          "score": 44.34,
           "delta": -0.097,
           "insufficient": true,
           "tier": "?"
@@ -7416,7 +7416,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 48.16,
+          "score": 43.35,
           "delta": -0.058,
           "insufficient": true,
           "tier": "?"
@@ -7435,7 +7435,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.002,
-          "score": 48.16,
+          "score": 43.35,
           "delta": -0.058,
           "insufficient": true,
           "tier": "?"
@@ -7454,7 +7454,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.25,
           "pick_rate": 0.01,
-          "score": 46.69,
+          "score": 42.03,
           "delta": -0.11,
           "insufficient": true,
           "tier": "?"
@@ -7473,7 +7473,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 45.1,
+          "score": 40.59,
           "delta": -0.122,
           "insufficient": true,
           "tier": "?"
@@ -7492,7 +7492,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 43.36,
+          "score": 39.02,
           "delta": -0.106,
           "insufficient": true,
           "tier": "?"
@@ -7606,7 +7606,7 @@
           "rank1_rate": 0.792,
           "rank2_rate": 0.167,
           "pick_rate": 0.086,
-          "score": 98.93,
+          "score": 89.04,
           "delta": 0.061,
           "insufficient": true,
           "tier": "?"
@@ -7625,7 +7625,7 @@
           "rank1_rate": 0.842,
           "rank2_rate": 0.0,
           "pick_rate": 0.068,
-          "score": 96.4,
+          "score": 86.76,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -7644,7 +7644,7 @@
           "rank1_rate": 0.842,
           "rank2_rate": 0.0,
           "pick_rate": 0.068,
-          "score": 96.4,
+          "score": 86.76,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -7663,7 +7663,7 @@
           "rank1_rate": 0.708,
           "rank2_rate": 0.208,
           "pick_rate": 0.086,
-          "score": 96.1,
+          "score": 86.49,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -7682,7 +7682,7 @@
           "rank1_rate": 0.8,
           "rank2_rate": 0.05,
           "pick_rate": 0.072,
-          "score": 95.72,
+          "score": 86.14,
           "delta": 0.035,
           "insufficient": true,
           "tier": "?"
@@ -7701,7 +7701,7 @@
           "rank1_rate": 0.643,
           "rank2_rate": 0.214,
           "pick_rate": 0.1,
-          "score": 90.02,
+          "score": 81.02,
           "delta": -0.006,
           "insufficient": true,
           "tier": "?"
@@ -7720,7 +7720,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 89.28,
+          "score": 80.36,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -7739,7 +7739,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.333,
           "pick_rate": 0.022,
-          "score": 88.09,
+          "score": 79.28,
           "delta": 0.045,
           "insufficient": true,
           "tier": "?"
@@ -7758,7 +7758,7 @@
           "rank1_rate": 0.643,
           "rank2_rate": 0.143,
           "pick_rate": 0.05,
-          "score": 87.73,
+          "score": 78.96,
           "delta": -0.023,
           "insufficient": true,
           "tier": "?"
@@ -7777,7 +7777,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.054,
-          "score": 87.21,
+          "score": 78.49,
           "delta": -0.026,
           "insufficient": true,
           "tier": "?"
@@ -7796,7 +7796,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 86.84,
+          "score": 78.15,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -7815,7 +7815,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 86.84,
+          "score": 78.15,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -7834,7 +7834,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 86.84,
+          "score": 78.15,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -7853,7 +7853,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 86.84,
+          "score": 78.15,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -7872,7 +7872,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 86.84,
+          "score": 78.15,
           "delta": 0.016,
           "insufficient": true,
           "tier": "?"
@@ -7891,7 +7891,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.375,
           "pick_rate": 0.029,
-          "score": 86.49,
+          "score": 77.84,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -7910,7 +7910,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.429,
           "pick_rate": 0.025,
-          "score": 86.36,
+          "score": 77.72,
           "delta": 0.033,
           "insufficient": true,
           "tier": "?"
@@ -7929,7 +7929,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.007,
-          "score": 83.35,
+          "score": 75.01,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -7948,7 +7948,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.167,
           "pick_rate": 0.022,
-          "score": 83.06,
+          "score": 74.75,
           "delta": 0.003,
           "insufficient": true,
           "tier": "?"
@@ -7967,7 +7967,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.167,
           "pick_rate": 0.025,
-          "score": 82.15,
+          "score": 73.94,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -7986,7 +7986,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.286,
           "pick_rate": 0.025,
-          "score": 82.09,
+          "score": 73.88,
           "delta": -0.003,
           "insufficient": true,
           "tier": "?"
@@ -8005,7 +8005,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.018,
-          "score": 81.41,
+          "score": 73.27,
           "delta": -0.008,
           "insufficient": true,
           "tier": "?"
@@ -8024,7 +8024,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.75,
           "pick_rate": 0.022,
-          "score": 80.41,
+          "score": 72.37,
           "delta": -0.015,
           "insufficient": true,
           "tier": "?"
@@ -8043,7 +8043,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.004,
-          "score": 79.31,
+          "score": 71.38,
           "delta": -0.009,
           "insufficient": true,
           "tier": "?"
@@ -8062,7 +8062,7 @@
           "rank1_rate": 0.385,
           "rank2_rate": 0.462,
           "pick_rate": 0.043,
-          "score": 77.86,
+          "score": 70.07,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -8081,7 +8081,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.0,
           "pick_rate": 0.018,
-          "score": 77.45,
+          "score": 69.7,
           "delta": -0.038,
           "insufficient": true,
           "tier": "?"
@@ -8100,7 +8100,7 @@
           "rank1_rate": 0.583,
           "rank2_rate": 0.167,
           "pick_rate": 0.043,
-          "score": 77.4,
+          "score": 69.66,
           "delta": -0.041,
           "insufficient": true,
           "tier": "?"
@@ -8119,7 +8119,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 77.14,
+          "score": 69.43,
           "delta": -0.031,
           "insufficient": true,
           "tier": "?"
@@ -8138,7 +8138,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 77.14,
+          "score": 69.43,
           "delta": -0.031,
           "insufficient": true,
           "tier": "?"
@@ -8157,7 +8157,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.667,
           "pick_rate": 0.022,
-          "score": 72.76,
+          "score": 65.49,
           "delta": -0.066,
           "insufficient": true,
           "tier": "?"
@@ -8176,7 +8176,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.2,
           "pick_rate": 0.018,
-          "score": 71.75,
+          "score": 64.57,
           "delta": -0.075,
           "insufficient": true,
           "tier": "?"
@@ -8195,7 +8195,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 70.27,
+          "score": 63.24,
           "delta": -0.05,
           "insufficient": true,
           "tier": "?"
@@ -8214,7 +8214,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 70.27,
+          "score": 63.24,
           "delta": -0.05,
           "insufficient": true,
           "tier": "?"
@@ -8233,7 +8233,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.333,
           "pick_rate": 0.022,
-          "score": 68.14,
+          "score": 61.33,
           "delta": -0.105,
           "insufficient": true,
           "tier": "?"
@@ -8252,7 +8252,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.004,
-          "score": 62.75,
+          "score": 56.47,
           "delta": -0.075,
           "insufficient": true,
           "tier": "?"
@@ -8346,7 +8346,7 @@
           "rank1_rate": 0.519,
           "rank2_rate": 0.333,
           "pick_rate": 0.123,
-          "score": 84.9,
+          "score": 76.41,
           "delta": 0.045,
           "insufficient": true,
           "tier": "?"
@@ -8365,7 +8365,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.346,
           "pick_rate": 0.119,
-          "score": 84.01,
+          "score": 75.61,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -8384,7 +8384,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.346,
           "pick_rate": 0.119,
-          "score": 84.01,
+          "score": 75.61,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -8403,7 +8403,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 80.85,
+          "score": 72.77,
           "delta": 0.047,
           "insufficient": true,
           "tier": "?"
@@ -8422,7 +8422,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.333,
           "pick_rate": 0.014,
-          "score": 78.87,
+          "score": 70.99,
           "delta": 0.044,
           "insufficient": true,
           "tier": "?"
@@ -8441,7 +8441,7 @@
           "rank1_rate": 0.45,
           "rank2_rate": 0.35,
           "pick_rate": 0.091,
-          "score": 78.74,
+          "score": 70.86,
           "delta": -0.001,
           "insufficient": true,
           "tier": "?"
@@ -8460,7 +8460,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 78.71,
+          "score": 70.84,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -8479,7 +8479,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 78.71,
+          "score": 70.84,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -8498,7 +8498,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 78.71,
+          "score": 70.84,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -8517,7 +8517,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.25,
           "pick_rate": 0.037,
-          "score": 76.95,
+          "score": 69.26,
           "delta": 0.039,
           "insufficient": true,
           "tier": "?"
@@ -8536,7 +8536,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.018,
-          "score": 76.55,
+          "score": 68.9,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -8555,7 +8555,7 @@
           "rank1_rate": 0.357,
           "rank2_rate": 0.429,
           "pick_rate": 0.064,
-          "score": 76.26,
+          "score": 68.64,
           "delta": -0.018,
           "insufficient": true,
           "tier": "?"
@@ -8574,7 +8574,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.009,
-          "score": 76.04,
+          "score": 68.43,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -8593,7 +8593,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.009,
-          "score": 76.04,
+          "score": 68.43,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -8612,7 +8612,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.009,
-          "score": 76.04,
+          "score": 68.43,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -8631,7 +8631,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.009,
-          "score": 76.04,
+          "score": 68.43,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -8650,7 +8650,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.009,
-          "score": 76.04,
+          "score": 68.43,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -8669,7 +8669,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.25,
           "pick_rate": 0.018,
-          "score": 73.32,
+          "score": 65.99,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -8688,7 +8688,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.25,
           "pick_rate": 0.018,
-          "score": 73.32,
+          "score": 65.99,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -8707,7 +8707,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.023,
-          "score": 73.04,
+          "score": 65.74,
           "delta": 0.009,
           "insufficient": true,
           "tier": "?"
@@ -8726,7 +8726,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.222,
           "pick_rate": 0.082,
-          "score": 71.87,
+          "score": 64.68,
           "delta": -0.053,
           "insufficient": true,
           "tier": "?"
@@ -8745,7 +8745,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.005,
-          "score": 71.19,
+          "score": 64.07,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -8764,7 +8764,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.5,
           "pick_rate": 0.027,
-          "score": 70.28,
+          "score": 63.25,
           "delta": -0.009,
           "insufficient": true,
           "tier": "?"
@@ -8783,7 +8783,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 69.83,
+          "score": 62.85,
           "delta": -0.013,
           "insufficient": true,
           "tier": "?"
@@ -8802,7 +8802,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.167,
           "pick_rate": 0.027,
-          "score": 69.23,
+          "score": 62.31,
           "delta": -0.019,
           "insufficient": true,
           "tier": "?"
@@ -8821,7 +8821,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 65.02,
+          "score": 58.52,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -8840,7 +8840,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 65.02,
+          "score": 58.52,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -8859,7 +8859,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.009,
-          "score": 65.02,
+          "score": 58.52,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -8878,7 +8878,7 @@
           "rank1_rate": 0.429,
           "rank2_rate": 0.143,
           "pick_rate": 0.032,
-          "score": 63.67,
+          "score": 57.31,
           "delta": -0.06,
           "insufficient": true,
           "tier": "?"
@@ -8897,7 +8897,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.2,
           "pick_rate": 0.023,
-          "score": 62.26,
+          "score": 56.04,
           "delta": -0.069,
           "insufficient": true,
           "tier": "?"
@@ -8916,7 +8916,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 62.15,
+          "score": 55.93,
           "delta": -0.04,
           "insufficient": true,
           "tier": "?"
@@ -8935,7 +8935,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 62.15,
+          "score": 55.93,
           "delta": -0.04,
           "insufficient": true,
           "tier": "?"
@@ -8954,7 +8954,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 62.15,
+          "score": 55.93,
           "delta": -0.04,
           "insufficient": true,
           "tier": "?"
@@ -8973,7 +8973,7 @@
           "rank1_rate": 0.125,
           "rank2_rate": 0.375,
           "pick_rate": 0.037,
-          "score": 61.12,
+          "score": 55.0,
           "delta": -0.081,
           "insufficient": true,
           "tier": "?"
@@ -8992,7 +8992,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.005,
-          "score": 54.62,
+          "score": 49.16,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -9106,7 +9106,7 @@
           "rank1_rate": 0.889,
           "rank2_rate": 0.0,
           "pick_rate": 0.055,
-          "score": 90.85,
+          "score": 81.77,
           "delta": 0.12,
           "insufficient": true,
           "tier": "?"
@@ -9125,7 +9125,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.036,
-          "score": 84.2,
+          "score": 75.78,
           "delta": 0.125,
           "insufficient": true,
           "tier": "?"
@@ -9144,7 +9144,7 @@
           "rank1_rate": 0.778,
           "rank2_rate": 0.222,
           "pick_rate": 0.048,
-          "score": 83.32,
+          "score": 74.99,
           "delta": 0.129,
           "insufficient": true,
           "tier": "?"
@@ -9163,7 +9163,7 @@
           "rank1_rate": 0.875,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 81.26,
+          "score": 73.13,
           "delta": 0.108,
           "insufficient": true,
           "tier": "?"
@@ -9182,7 +9182,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.333,
           "pick_rate": 0.036,
-          "score": 79.07,
+          "score": 71.17,
           "delta": 0.091,
           "insufficient": true,
           "tier": "?"
@@ -9201,7 +9201,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 77.23,
+          "score": 69.51,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -9220,7 +9220,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 77.23,
+          "score": 69.51,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -9239,7 +9239,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.125,
           "pick_rate": 0.048,
-          "score": 76.92,
+          "score": 69.23,
           "delta": 0.078,
           "insufficient": true,
           "tier": "?"
@@ -9258,7 +9258,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 74.7,
+          "score": 67.23,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -9277,7 +9277,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 74.7,
+          "score": 67.23,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -9296,7 +9296,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 74.7,
+          "score": 67.23,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -9315,7 +9315,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 74.7,
+          "score": 67.23,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -9334,7 +9334,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 74.7,
+          "score": 67.23,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -9353,7 +9353,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.167,
           "pick_rate": 0.036,
-          "score": 72.86,
+          "score": 65.57,
           "delta": 0.046,
           "insufficient": true,
           "tier": "?"
@@ -9372,7 +9372,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.167,
           "pick_rate": 0.036,
-          "score": 72.86,
+          "score": 65.57,
           "delta": 0.046,
           "insufficient": true,
           "tier": "?"
@@ -9391,7 +9391,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.125,
           "pick_rate": 0.048,
-          "score": 71.66,
+          "score": 64.49,
           "delta": 0.037,
           "insufficient": true,
           "tier": "?"
@@ -9410,7 +9410,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.018,
-          "score": 70.47,
+          "score": 63.42,
           "delta": 0.022,
           "insufficient": true,
           "tier": "?"
@@ -9429,7 +9429,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.111,
           "pick_rate": 0.055,
-          "score": 67.99,
+          "score": 61.19,
           "delta": -0.038,
           "insufficient": true,
           "tier": "?"
@@ -9448,7 +9448,7 @@
           "rank1_rate": 0.556,
           "rank2_rate": 0.0,
           "pick_rate": 0.055,
-          "score": 67.99,
+          "score": 61.19,
           "delta": -0.038,
           "insufficient": true,
           "tier": "?"
@@ -9467,7 +9467,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.006,
-          "score": 67.17,
+          "score": 60.46,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -9486,7 +9486,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.006,
-          "score": 67.17,
+          "score": 60.46,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -9505,7 +9505,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.006,
-          "score": 67.17,
+          "score": 60.46,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -9524,7 +9524,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.006,
-          "score": 67.17,
+          "score": 60.46,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -9543,7 +9543,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 66.21,
+          "score": 59.59,
           "delta": -0.004,
           "insufficient": true,
           "tier": "?"
@@ -9562,7 +9562,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.0,
           "pick_rate": 0.042,
-          "score": 66.05,
+          "score": 59.44,
           "delta": -0.006,
           "insufficient": true,
           "tier": "?"
@@ -9581,7 +9581,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.024,
-          "score": 65.89,
+          "score": 59.3,
           "delta": -0.008,
           "insufficient": true,
           "tier": "?"
@@ -9600,7 +9600,7 @@
           "rank1_rate": 0.357,
           "rank2_rate": 0.214,
           "pick_rate": 0.085,
-          "score": 65.68,
+          "score": 59.11,
           "delta": -0.055,
           "insufficient": true,
           "tier": "?"
@@ -9619,7 +9619,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 61.4,
+          "score": 55.26,
           "delta": -0.028,
           "insufficient": true,
           "tier": "?"
@@ -9638,7 +9638,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 61.4,
+          "score": 55.26,
           "delta": -0.028,
           "insufficient": true,
           "tier": "?"
@@ -9657,7 +9657,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 61.4,
+          "score": 55.26,
           "delta": -0.028,
           "insufficient": true,
           "tier": "?"
@@ -9676,7 +9676,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.024,
-          "score": 59.43,
+          "score": 53.48,
           "delta": -0.047,
           "insufficient": true,
           "tier": "?"
@@ -9695,7 +9695,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 58.13,
+          "score": 52.32,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -9714,7 +9714,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.018,
-          "score": 57.78,
+          "score": 52.0,
           "delta": -0.055,
           "insufficient": true,
           "tier": "?"
@@ -9733,7 +9733,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.012,
-          "score": 56.58,
+          "score": 50.92,
           "delta": -0.051,
           "insufficient": true,
           "tier": "?"
@@ -9752,7 +9752,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.012,
-          "score": 56.58,
+          "score": 50.92,
           "delta": -0.051,
           "insufficient": true,
           "tier": "?"
@@ -9771,7 +9771,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.018,
-          "score": 53.99,
+          "score": 48.59,
           "delta": -0.077,
           "insufficient": true,
           "tier": "?"
@@ -9790,7 +9790,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 50.61,
+          "score": 45.55,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -9809,7 +9809,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 50.61,
+          "score": 45.55,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -9828,7 +9828,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 50.61,
+          "score": 45.55,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -9847,7 +9847,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.006,
-          "score": 50.61,
+          "score": 45.55,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -9866,7 +9866,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 50.38,
+          "score": 45.34,
           "delta": -0.088,
           "insufficient": true,
           "tier": "?"
@@ -9885,7 +9885,7 @@
           "rank1_rate": 0.167,
           "rank2_rate": 0.0,
           "pick_rate": 0.036,
-          "score": 45.57,
+          "score": 41.01,
           "delta": -0.152,
           "insufficient": true,
           "tier": "?"
@@ -9904,7 +9904,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 44.13,
+          "score": 39.71,
           "delta": -0.169,
           "insufficient": true,
           "tier": "?"
@@ -9998,7 +9998,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.125,
           "pick_rate": 0.054,
-          "score": 86.64,
+          "score": 77.98,
           "delta": 0.058,
           "insufficient": true,
           "tier": "?"
@@ -10017,7 +10017,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.125,
           "pick_rate": 0.054,
-          "score": 86.64,
+          "score": 77.98,
           "delta": 0.058,
           "insufficient": true,
           "tier": "?"
@@ -10036,7 +10036,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.111,
           "pick_rate": 0.061,
-          "score": 80.66,
+          "score": 72.59,
           "delta": 0.018,
           "insufficient": true,
           "tier": "?"
@@ -10055,7 +10055,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.25,
           "pick_rate": 0.027,
-          "score": 80.52,
+          "score": 72.47,
           "delta": 0.063,
           "insufficient": true,
           "tier": "?"
@@ -10074,7 +10074,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 80.3,
+          "score": 72.27,
           "delta": 0.048,
           "insufficient": true,
           "tier": "?"
@@ -10093,7 +10093,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 80.3,
+          "score": 72.27,
           "delta": 0.048,
           "insufficient": true,
           "tier": "?"
@@ -10112,7 +10112,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.136,
-          "score": 79.86,
+          "score": 71.87,
           "delta": 0.014,
           "insufficient": true,
           "tier": "?"
@@ -10131,7 +10131,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.136,
-          "score": 79.86,
+          "score": 71.87,
           "delta": 0.014,
           "insufficient": true,
           "tier": "?"
@@ -10150,7 +10150,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.136,
-          "score": 79.86,
+          "score": 71.87,
           "delta": 0.014,
           "insufficient": true,
           "tier": "?"
@@ -10169,7 +10169,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10188,7 +10188,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10207,7 +10207,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10226,7 +10226,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10245,7 +10245,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10264,7 +10264,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 78.1,
+          "score": 70.29,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -10283,7 +10283,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.308,
           "pick_rate": 0.088,
-          "score": 77.66,
+          "score": 69.9,
           "delta": -0.003,
           "insufficient": true,
           "tier": "?"
@@ -10302,7 +10302,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.007,
-          "score": 70.58,
+          "score": 63.52,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -10321,7 +10321,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.007,
-          "score": 70.58,
+          "score": 63.52,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -10340,7 +10340,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.007,
-          "score": 70.58,
+          "score": 63.52,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -10359,7 +10359,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.007,
-          "score": 70.58,
+          "score": 63.52,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -10378,7 +10378,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.007,
-          "score": 70.58,
+          "score": 63.52,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -10397,7 +10397,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.5,
           "pick_rate": 0.027,
-          "score": 69.63,
+          "score": 62.67,
           "delta": -0.008,
           "insufficient": true,
           "tier": "?"
@@ -10416,7 +10416,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 69.28,
+          "score": 62.35,
           "delta": -0.012,
           "insufficient": true,
           "tier": "?"
@@ -10435,7 +10435,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 69.28,
+          "score": 62.35,
           "delta": -0.012,
           "insufficient": true,
           "tier": "?"
@@ -10454,7 +10454,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.5,
           "pick_rate": 0.027,
-          "score": 66.4,
+          "score": 59.76,
           "delta": -0.028,
           "insufficient": true,
           "tier": "?"
@@ -10473,7 +10473,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.02,
-          "score": 65.68,
+          "score": 59.11,
           "delta": -0.031,
           "insufficient": true,
           "tier": "?"
@@ -10492,7 +10492,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 64.47,
+          "score": 58.02,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -10511,7 +10511,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.014,
-          "score": 64.47,
+          "score": 58.02,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -10530,7 +10530,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.014,
-          "score": 64.47,
+          "score": 58.02,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -10549,7 +10549,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 61.54,
+          "score": 55.38,
           "delta": -0.039,
           "insufficient": true,
           "tier": "?"
@@ -10568,7 +10568,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 61.54,
+          "score": 55.38,
           "delta": -0.039,
           "insufficient": true,
           "tier": "?"
@@ -10587,7 +10587,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 61.54,
+          "score": 55.38,
           "delta": -0.039,
           "insufficient": true,
           "tier": "?"
@@ -10606,7 +10606,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 58.26,
+          "score": 52.44,
           "delta": -0.072,
           "insufficient": true,
           "tier": "?"
@@ -10625,7 +10625,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 54.01,
+          "score": 48.61,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -10644,7 +10644,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 54.01,
+          "score": 48.61,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -10663,7 +10663,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 54.01,
+          "score": 48.61,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -10682,7 +10682,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.007,
-          "score": 54.01,
+          "score": 48.61,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -10756,7 +10756,7 @@
           "rank1_rate": 0.636,
           "rank2_rate": 0.273,
           "pick_rate": 0.089,
-          "score": 87.55,
+          "score": 78.79,
           "delta": 0.101,
           "insufficient": true,
           "tier": "?"
@@ -10775,7 +10775,7 @@
           "rank1_rate": 0.636,
           "rank2_rate": 0.273,
           "pick_rate": 0.089,
-          "score": 87.55,
+          "score": 78.79,
           "delta": 0.101,
           "insufficient": true,
           "tier": "?"
@@ -10794,7 +10794,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.25,
           "pick_rate": 0.065,
-          "score": 84.7,
+          "score": 76.23,
           "delta": 0.077,
           "insufficient": true,
           "tier": "?"
@@ -10813,7 +10813,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.016,
-          "score": 77.34,
+          "score": 69.61,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -10832,7 +10832,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.033,
-          "score": 74.84,
+          "score": 67.36,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -10851,7 +10851,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 74.82,
+          "score": 67.34,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -10870,7 +10870,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 74.82,
+          "score": 67.34,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -10889,7 +10889,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 74.82,
+          "score": 67.34,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -10908,7 +10908,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 74.82,
+          "score": 67.34,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -10927,7 +10927,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 74.82,
+          "score": 67.34,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -10946,7 +10946,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.6,
           "pick_rate": 0.041,
-          "score": 74.34,
+          "score": 66.91,
           "delta": 0.056,
           "insufficient": true,
           "tier": "?"
@@ -10965,7 +10965,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.016,
-          "score": 72.53,
+          "score": 65.27,
           "delta": 0.032,
           "insufficient": true,
           "tier": "?"
@@ -10984,7 +10984,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.0,
           "pick_rate": 0.024,
-          "score": 70.57,
+          "score": 63.52,
           "delta": 0.021,
           "insufficient": true,
           "tier": "?"
@@ -11003,7 +11003,7 @@
           "rank1_rate": 0.3,
           "rank2_rate": 0.4,
           "pick_rate": 0.081,
-          "score": 69.62,
+          "score": 62.65,
           "delta": -0.025,
           "insufficient": true,
           "tier": "?"
@@ -11022,7 +11022,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.5,
           "pick_rate": 0.049,
-          "score": 67.83,
+          "score": 61.05,
           "delta": 0.01,
           "insufficient": true,
           "tier": "?"
@@ -11041,7 +11041,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11060,7 +11060,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11079,7 +11079,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11098,7 +11098,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11117,7 +11117,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11136,7 +11136,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11155,7 +11155,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.008,
-          "score": 67.29,
+          "score": 60.56,
           "delta": 0.005,
           "insufficient": true,
           "tier": "?"
@@ -11174,7 +11174,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.167,
           "pick_rate": 0.049,
-          "score": 66.79,
+          "score": 60.11,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -11193,7 +11193,7 @@
           "rank1_rate": 0.125,
           "rank2_rate": 0.5,
           "pick_rate": 0.065,
-          "score": 65.94,
+          "score": 59.35,
           "delta": -0.049,
           "insufficient": true,
           "tier": "?"
@@ -11212,7 +11212,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.75,
           "pick_rate": 0.033,
-          "score": 63.95,
+          "score": 57.55,
           "delta": -0.016,
           "insufficient": true,
           "tier": "?"
@@ -11231,7 +11231,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.2,
           "pick_rate": 0.041,
-          "score": 63.56,
+          "score": 57.21,
           "delta": -0.022,
           "insufficient": true,
           "tier": "?"
@@ -11250,7 +11250,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.016,
-          "score": 61.51,
+          "score": 55.36,
           "delta": -0.028,
           "insufficient": true,
           "tier": "?"
@@ -11269,7 +11269,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 58.25,
+          "score": 52.43,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -11288,7 +11288,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.333,
           "pick_rate": 0.024,
-          "score": 57.88,
+          "score": 52.09,
           "delta": -0.056,
           "insufficient": true,
           "tier": "?"
@@ -11307,7 +11307,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.2,
           "pick_rate": 0.041,
-          "score": 56.75,
+          "score": 51.07,
           "delta": -0.07,
           "insufficient": true,
           "tier": "?"
@@ -11326,7 +11326,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.016,
-          "score": 56.69,
+          "score": 51.02,
           "delta": -0.051,
           "insufficient": true,
           "tier": "?"
@@ -11345,7 +11345,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.016,
-          "score": 56.69,
+          "score": 51.02,
           "delta": -0.051,
           "insufficient": true,
           "tier": "?"
@@ -11364,7 +11364,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.016,
-          "score": 55.31,
+          "score": 49.77,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -11383,7 +11383,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.016,
-          "score": 55.31,
+          "score": 49.77,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -11402,7 +11402,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.016,
-          "score": 55.31,
+          "score": 49.77,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -11421,7 +11421,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 50.73,
+          "score": 45.65,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -11440,7 +11440,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.008,
-          "score": 50.73,
+          "score": 45.65,
           "delta": -0.061,
           "insufficient": true,
           "tier": "?"
@@ -11459,7 +11459,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.024,
-          "score": 49.03,
+          "score": 44.12,
           "delta": -0.111,
           "insufficient": true,
           "tier": "?"
@@ -11513,7 +11513,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.053,
-          "score": 80.07,
+          "score": 72.07,
           "delta": 0.047,
           "insufficient": true,
           "tier": "?"
@@ -11532,7 +11532,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.053,
-          "score": 76.94,
+          "score": 69.24,
           "delta": 0.028,
           "insufficient": true,
           "tier": "?"
@@ -11551,7 +11551,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.021,
-          "score": 76.79,
+          "score": 69.11,
           "delta": 0.057,
           "insufficient": true,
           "tier": "?"
@@ -11570,7 +11570,7 @@
           "rank1_rate": 0.375,
           "rank2_rate": 0.375,
           "pick_rate": 0.085,
-          "score": 76.11,
+          "score": 68.5,
           "delta": 0.025,
           "insufficient": true,
           "tier": "?"
@@ -11589,7 +11589,7 @@
           "rank1_rate": 0.667,
           "rank2_rate": 0.333,
           "pick_rate": 0.032,
-          "score": 75.18,
+          "score": 67.66,
           "delta": 0.057,
           "insufficient": true,
           "tier": "?"
@@ -11608,7 +11608,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11627,7 +11627,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11646,7 +11646,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11665,7 +11665,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11684,7 +11684,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11703,7 +11703,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11722,7 +11722,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11741,7 +11741,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 74.21,
+          "score": 66.79,
           "delta": 0.031,
           "insufficient": true,
           "tier": "?"
@@ -11760,7 +11760,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.021,
-          "score": 71.97,
+          "score": 64.77,
           "delta": 0.034,
           "insufficient": true,
           "tier": "?"
@@ -11779,7 +11779,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.021,
-          "score": 71.97,
+          "score": 64.77,
           "delta": 0.034,
           "insufficient": true,
           "tier": "?"
@@ -11798,7 +11798,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.021,
-          "score": 71.97,
+          "score": 64.77,
           "delta": 0.034,
           "insufficient": true,
           "tier": "?"
@@ -11817,7 +11817,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.032,
-          "score": 71.12,
+          "score": 64.01,
           "delta": 0.034,
           "insufficient": true,
           "tier": "?"
@@ -11836,7 +11836,7 @@
           "rank1_rate": 0.444,
           "rank2_rate": 0.222,
           "pick_rate": 0.096,
-          "score": 70.88,
+          "score": 63.79,
           "delta": -0.011,
           "insufficient": true,
           "tier": "?"
@@ -11855,7 +11855,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.5,
           "pick_rate": 0.043,
-          "score": 66.71,
+          "score": 60.04,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11874,7 +11874,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.5,
           "pick_rate": 0.043,
-          "score": 66.71,
+          "score": 60.04,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11893,7 +11893,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.011,
-          "score": 66.68,
+          "score": 60.01,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11912,7 +11912,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.011,
-          "score": 66.68,
+          "score": 60.01,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11931,7 +11931,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.011,
-          "score": 66.68,
+          "score": 60.01,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11950,7 +11950,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.011,
-          "score": 66.68,
+          "score": 60.01,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -11969,7 +11969,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.4,
           "pick_rate": 0.053,
-          "score": 66.3,
+          "score": 59.67,
           "delta": -0.038,
           "insufficient": true,
           "tier": "?"
@@ -11988,7 +11988,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.032,
-          "score": 62.49,
+          "score": 56.24,
           "delta": -0.02,
           "insufficient": true,
           "tier": "?"
@@ -12007,7 +12007,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.043,
-          "score": 62.29,
+          "score": 56.06,
           "delta": -0.026,
           "insufficient": true,
           "tier": "?"
@@ -12026,7 +12026,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.021,
-          "score": 60.95,
+          "score": 54.86,
           "delta": -0.027,
           "insufficient": true,
           "tier": "?"
@@ -12045,7 +12045,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.021,
-          "score": 60.95,
+          "score": 54.86,
           "delta": -0.027,
           "insufficient": true,
           "tier": "?"
@@ -12064,7 +12064,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.5,
           "pick_rate": 0.043,
-          "score": 59.05,
+          "score": 53.15,
           "delta": -0.046,
           "insufficient": true,
           "tier": "?"
@@ -12083,7 +12083,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12102,7 +12102,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12121,7 +12121,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12140,7 +12140,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12159,7 +12159,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12178,7 +12178,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.011,
-          "score": 57.64,
+          "score": 51.88,
           "delta": -0.035,
           "insufficient": true,
           "tier": "?"
@@ -12197,7 +12197,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.032,
-          "score": 57.37,
+          "score": 51.63,
           "delta": -0.054,
           "insufficient": true,
           "tier": "?"
@@ -12216,7 +12216,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.021,
-          "score": 49.93,
+          "score": 44.94,
           "delta": -0.087,
           "insufficient": true,
           "tier": "?"
@@ -12235,7 +12235,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.021,
-          "score": 49.93,
+          "score": 44.94,
           "delta": -0.087,
           "insufficient": true,
           "tier": "?"
@@ -12268,7 +12268,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 82.07,
+          "score": 73.86,
           "delta": 0.091,
           "insufficient": true,
           "tier": "?"
@@ -12287,7 +12287,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.06,
-          "score": 81.31,
+          "score": 73.18,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -12306,7 +12306,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.036,
-          "score": 80.32,
+          "score": 72.28,
           "delta": 0.074,
           "insufficient": true,
           "tier": "?"
@@ -12325,7 +12325,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.125,
           "pick_rate": 0.095,
-          "score": 79.49,
+          "score": 71.54,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -12344,7 +12344,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.024,
-          "score": 78.27,
+          "score": 70.45,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -12363,7 +12363,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.036,
-          "score": 76.45,
+          "score": 68.8,
           "delta": 0.051,
           "insufficient": true,
           "tier": "?"
@@ -12382,7 +12382,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 75.86,
+          "score": 68.28,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -12401,7 +12401,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 75.86,
+          "score": 68.28,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -12420,7 +12420,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 75.86,
+          "score": 68.28,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -12439,7 +12439,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 75.86,
+          "score": 68.28,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -12458,7 +12458,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 75.86,
+          "score": 68.28,
           "delta": 0.029,
           "insufficient": true,
           "tier": "?"
@@ -12477,7 +12477,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.024,
-          "score": 73.46,
+          "score": 66.11,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -12496,7 +12496,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.0,
           "pick_rate": 0.083,
-          "score": 73.37,
+          "score": 66.04,
           "delta": -0.013,
           "insufficient": true,
           "tier": "?"
@@ -12515,7 +12515,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 71.17,
+          "score": 64.06,
           "delta": 0.02,
           "insufficient": true,
           "tier": "?"
@@ -12534,7 +12534,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.024,
-          "score": 69.13,
+          "score": 62.22,
           "delta": 0.012,
           "insufficient": true,
           "tier": "?"
@@ -12553,7 +12553,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.012,
-          "score": 68.34,
+          "score": 61.5,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -12572,7 +12572,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.012,
-          "score": 68.34,
+          "score": 61.5,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -12591,7 +12591,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.012,
-          "score": 68.34,
+          "score": 61.5,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -12610,7 +12610,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.036,
-          "score": 67.62,
+          "score": 60.86,
           "delta": -0.003,
           "insufficient": true,
           "tier": "?"
@@ -12629,7 +12629,7 @@
           "rank1_rate": 0.176,
           "rank2_rate": 0.471,
           "pick_rate": 0.179,
-          "score": 66.04,
+          "score": 59.43,
           "delta": -0.063,
           "insufficient": true,
           "tier": "?"
@@ -12648,7 +12648,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 63.51,
+          "score": 57.16,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -12667,7 +12667,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.667,
           "pick_rate": 0.024,
-          "score": 62.99,
+          "score": 56.69,
           "delta": -0.025,
           "insufficient": true,
           "tier": "?"
@@ -12686,7 +12686,7 @@
           "rank1_rate": 0.25,
           "rank2_rate": 0.25,
           "pick_rate": 0.048,
-          "score": 60.28,
+          "score": 54.25,
           "delta": -0.052,
           "insufficient": true,
           "tier": "?"
@@ -12705,7 +12705,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 59.3,
+          "score": 53.37,
           "delta": -0.037,
           "insufficient": true,
           "tier": "?"
@@ -12724,7 +12724,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 59.3,
+          "score": 53.37,
           "delta": -0.037,
           "insufficient": true,
           "tier": "?"
@@ -12743,7 +12743,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 59.3,
+          "score": 53.37,
           "delta": -0.037,
           "insufficient": true,
           "tier": "?"
@@ -12762,7 +12762,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.036,
-          "score": 53.65,
+          "score": 48.28,
           "delta": -0.093,
           "insufficient": true,
           "tier": "?"
@@ -12781,7 +12781,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 51.77,
+          "score": 46.59,
           "delta": -0.062,
           "insufficient": true,
           "tier": "?"
@@ -12800,7 +12800,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.012,
-          "score": 51.77,
+          "score": 46.59,
           "delta": -0.062,
           "insufficient": true,
           "tier": "?"
@@ -12833,7 +12833,7 @@
           "rank1_rate": 0.714,
           "rank2_rate": 0.143,
           "pick_rate": 0.097,
-          "score": 84.98,
+          "score": 76.49,
           "delta": 0.042,
           "insufficient": true,
           "tier": "?"
@@ -12852,7 +12852,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.286,
           "pick_rate": 0.097,
-          "score": 84.98,
+          "score": 76.49,
           "delta": 0.042,
           "insufficient": true,
           "tier": "?"
@@ -12871,7 +12871,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 80.65,
+          "score": 72.58,
           "delta": 0.047,
           "insufficient": true,
           "tier": "?"
@@ -12890,7 +12890,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 80.65,
+          "score": 72.58,
           "delta": 0.047,
           "insufficient": true,
           "tier": "?"
@@ -12909,7 +12909,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 80.65,
+          "score": 72.58,
           "delta": 0.047,
           "insufficient": true,
           "tier": "?"
@@ -12928,7 +12928,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.4,
           "pick_rate": 0.069,
-          "score": 80.16,
+          "score": 72.14,
           "delta": 0.01,
           "insufficient": true,
           "tier": "?"
@@ -12947,7 +12947,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.069,
-          "score": 80.16,
+          "score": 72.14,
           "delta": 0.01,
           "insufficient": true,
           "tier": "?"
@@ -12966,7 +12966,7 @@
           "rank1_rate": 0.6,
           "rank2_rate": 0.2,
           "pick_rate": 0.069,
-          "score": 80.16,
+          "score": 72.14,
           "delta": 0.01,
           "insufficient": true,
           "tier": "?"
@@ -12985,7 +12985,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 78.49,
+          "score": 70.64,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -13004,7 +13004,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 78.49,
+          "score": 70.64,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -13023,7 +13023,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 78.49,
+          "score": 70.64,
           "delta": 0.026,
           "insufficient": true,
           "tier": "?"
@@ -13042,7 +13042,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.028,
-          "score": 75.83,
+          "score": 68.25,
           "delta": 0.024,
           "insufficient": true,
           "tier": "?"
@@ -13061,7 +13061,7 @@
           "rank1_rate": 0.4,
           "rank2_rate": 0.2,
           "pick_rate": 0.069,
-          "score": 72.66,
+          "score": 65.4,
           "delta": -0.038,
           "insufficient": true,
           "tier": "?"
@@ -13080,7 +13080,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.014,
-          "score": 70.96,
+          "score": 63.87,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -13099,7 +13099,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.014,
-          "score": 70.96,
+          "score": 63.87,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -13118,7 +13118,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.014,
-          "score": 70.96,
+          "score": 63.87,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -13137,7 +13137,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.014,
-          "score": 70.96,
+          "score": 63.87,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -13156,7 +13156,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.014,
-          "score": 70.96,
+          "score": 63.87,
           "delta": 0.001,
           "insufficient": true,
           "tier": "?"
@@ -13175,7 +13175,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.042,
-          "score": 69.78,
+          "score": 62.8,
           "delta": -0.011,
           "insufficient": true,
           "tier": "?"
@@ -13194,7 +13194,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.333,
           "pick_rate": 0.042,
-          "score": 69.78,
+          "score": 62.8,
           "delta": -0.011,
           "insufficient": true,
           "tier": "?"
@@ -13213,7 +13213,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 69.63,
+          "score": 62.67,
           "delta": -0.013,
           "insufficient": true,
           "tier": "?"
@@ -13232,7 +13232,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 69.63,
+          "score": 62.67,
           "delta": -0.013,
           "insufficient": true,
           "tier": "?"
@@ -13251,7 +13251,7 @@
           "rank1_rate": 0.2,
           "rank2_rate": 0.4,
           "pick_rate": 0.069,
-          "score": 69.53,
+          "score": 62.57,
           "delta": -0.057,
           "insufficient": true,
           "tier": "?"
@@ -13270,7 +13270,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 64.81,
+          "score": 58.33,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -13289,7 +13289,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 61.92,
+          "score": 55.73,
           "delta": -0.04,
           "insufficient": true,
           "tier": "?"
@@ -13308,7 +13308,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.0,
           "pick_rate": 0.042,
-          "score": 57.09,
+          "score": 51.38,
           "delta": -0.088,
           "insufficient": true,
           "tier": "?"
@@ -13327,7 +13327,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.014,
-          "score": 54.4,
+          "score": 48.96,
           "delta": -0.065,
           "insufficient": true,
           "tier": "?"
@@ -13381,7 +13381,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.056,
-          "score": 68.89,
+          "score": 62.0,
           "delta": 0.09,
           "insufficient": true,
           "tier": "?"
@@ -13400,7 +13400,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 58.55,
+          "score": 52.69,
           "delta": 0.049,
           "insufficient": true,
           "tier": "?"
@@ -13419,7 +13419,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 58.55,
+          "score": 52.69,
           "delta": 0.049,
           "insufficient": true,
           "tier": "?"
@@ -13438,7 +13438,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.222,
-          "score": 52.65,
+          "score": 47.38,
           "delta": 0.017,
           "insufficient": true,
           "tier": "?"
@@ -13457,7 +13457,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.167,
-          "score": 52.36,
+          "score": 47.12,
           "delta": 0.014,
           "insufficient": true,
           "tier": "?"
@@ -13476,7 +13476,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.056,
-          "score": 51.47,
+          "score": 46.33,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -13495,7 +13495,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.0,
           "pick_rate": 0.333,
-          "score": 50.77,
+          "score": 45.69,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -13514,7 +13514,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 34.46,
+          "score": 31.01,
           "delta": -0.042,
           "insufficient": true,
           "tier": "?"
@@ -13533,7 +13533,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 34.46,
+          "score": 31.01,
           "delta": -0.042,
           "insufficient": true,
           "tier": "?"
@@ -13552,7 +13552,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 30.96,
+          "score": 27.87,
           "delta": -0.077,
           "insufficient": true,
           "tier": "?"
@@ -13571,7 +13571,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.028,
-          "score": 30.96,
+          "score": 27.87,
           "delta": -0.077,
           "insufficient": true,
           "tier": "?"
@@ -13625,7 +13625,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.2,
-          "score": 67.67,
+          "score": 60.91,
           "delta": 0.19,
           "insufficient": true,
           "tier": "?"
@@ -13644,7 +13644,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.033,
-          "score": 50.92,
+          "score": 45.83,
           "delta": 0.059,
           "insufficient": true,
           "tier": "?"
@@ -13663,7 +13663,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.133,
-          "score": 49.42,
+          "score": 44.47,
           "delta": 0.061,
           "insufficient": true,
           "tier": "?"
@@ -13682,7 +13682,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.067,
-          "score": 31.85,
+          "score": 28.66,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -13701,7 +13701,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.167,
-          "score": 29.44,
+          "score": 26.5,
           "delta": -0.063,
           "insufficient": true,
           "tier": "?"
@@ -13720,7 +13720,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.033,
-          "score": 26.83,
+          "score": 24.15,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -13739,7 +13739,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.033,
-          "score": 26.83,
+          "score": 24.15,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -13758,7 +13758,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.033,
-          "score": 26.83,
+          "score": 24.15,
           "delta": -0.032,
           "insufficient": true,
           "tier": "?"
@@ -13777,7 +13777,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.3,
-          "score": 23.39,
+          "score": 21.06,
           "delta": -0.11,
           "insufficient": true,
           "tier": "?"
@@ -13810,7 +13810,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.19,
-          "score": 82.83,
+          "score": 74.54,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -13829,7 +13829,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.19,
-          "score": 82.83,
+          "score": 74.54,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -13848,7 +13848,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.667,
           "pick_rate": 0.143,
-          "score": 79.59,
+          "score": 71.63,
           "delta": 0.032,
           "insufficient": true,
           "tier": "?"
@@ -13867,7 +13867,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 75.43,
+          "score": 67.88,
           "delta": 0.03,
           "insufficient": true,
           "tier": "?"
@@ -13886,7 +13886,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.048,
-          "score": 67.9,
+          "score": 61.11,
           "delta": 0.004,
           "insufficient": true,
           "tier": "?"
@@ -13905,7 +13905,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.333,
           "pick_rate": 0.143,
-          "score": 64.22,
+          "score": 57.79,
           "delta": -0.057,
           "insufficient": true,
           "tier": "?"
@@ -13924,7 +13924,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.333,
           "pick_rate": 0.143,
-          "score": 64.22,
+          "score": 57.79,
           "delta": -0.057,
           "insufficient": true,
           "tier": "?"
@@ -13943,7 +13943,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 58.86,
+          "score": 52.97,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -13962,7 +13962,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.048,
-          "score": 58.86,
+          "score": 52.97,
           "delta": -0.036,
           "insufficient": true,
           "tier": "?"
@@ -13995,7 +13995,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.182,
-          "score": 105.01,
+          "score": 94.51,
           "delta": 0.015,
           "insufficient": true,
           "tier": "?"
@@ -14014,7 +14014,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 104.24,
+          "score": 93.82,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -14033,7 +14033,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 104.24,
+          "score": 93.82,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -14052,7 +14052,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 104.24,
+          "score": 93.82,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -14071,7 +14071,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 104.24,
+          "score": 93.82,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -14090,7 +14090,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.091,
-          "score": 95.96,
+          "score": 86.37,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -14109,7 +14109,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.091,
-          "score": 95.96,
+          "score": 86.37,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -14128,7 +14128,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.182,
-          "score": 93.21,
+          "score": 83.89,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -14147,7 +14147,7 @@
           "rank1_rate": 0,
           "rank2_rate": 0,
           "pick_rate": 0.091,
-          "score": 92.31,
+          "score": 83.08,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
