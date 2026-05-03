@@ -299,11 +299,13 @@ function renderSynergySection(m) {
 function renderBrawlerGrid(filter = "") {
   const el = document.getElementById("brawler-grid");
   const f = filter.toLowerCase();
-  const list = DB.brawlers.filter(b => !f || b.name.toLowerCase().includes(f));
+  const list = DB.brawlers.filter(b =>
+    !f || b.name.toLowerCase().includes(f) || (b.name_jp || "").includes(filter)
+  );
   el.innerHTML = list.map(b => `
     <div class="brawler-card p-2 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500" data-name="${escapeHtml(b.name)}">
       ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
-      <div class="text-xs mt-1 truncate font-semibold">${escapeHtml(b.name)}</div>
+      <div class="text-xs mt-1 truncate font-semibold">${escapeHtml(b.name_jp || b.name)}</div>
       <div class="text-xs text-gray-500">${b.total_picks}p</div>
     </div>
   `).join("");
@@ -319,12 +321,14 @@ function renderBrawlerGrid(filter = "") {
 
 function selectBrawler(b) {
   const el = document.getElementById("brawler-detail");
+  const dispName = b.name_jp || b.name;
   el.innerHTML = `
     <div class="bg-gray-800 p-6 rounded">
       <div class="flex items-center mb-6">
         ${b.image_url ? `<img src="${b.image_url}" class="w-20 h-20 rounded mr-4">` : ""}
         <div>
-          <h2 class="text-2xl font-bold">${escapeHtml(b.name)}</h2>
+          <h2 class="text-2xl font-bold">${escapeHtml(dispName)}</h2>
+          ${b.name_jp ? `<div class="text-xs text-gray-500">${escapeHtml(b.name)}</div>` : ""}
           <div class="text-sm text-gray-400">${escapeHtml(b.rarity || "")} / 総ピック ${b.total_picks}</div>
         </div>
       </div>
@@ -335,7 +339,7 @@ function selectBrawler(b) {
             ? '<div class="text-gray-500 text-sm">サンプル不足</div>'
             : b.best_maps.map(m => `
               <div class="flex justify-between items-center p-2 hover:bg-gray-700/50 rounded">
-                <span>${escapeHtml(m.map)}</span>
+                <span>${escapeHtml(m.map_jp || m.map)}</span>
                 <span class="text-sm font-mono">${(m.win_rate * 100).toFixed(1)}% (${m.picks}p)</span>
               </div>
             `).join("")}
@@ -346,7 +350,7 @@ function selectBrawler(b) {
             ? '<div class="text-gray-500 text-sm">サンプル不足</div>'
             : b.worst_maps.map(m => `
               <div class="flex justify-between items-center p-2 hover:bg-gray-700/50 rounded">
-                <span>${escapeHtml(m.map)}</span>
+                <span>${escapeHtml(m.map_jp || m.map)}</span>
                 <span class="text-sm font-mono">${(m.win_rate * 100).toFixed(1)}% (${m.picks}p)</span>
               </div>
             `).join("")}

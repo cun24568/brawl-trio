@@ -53,9 +53,9 @@ SCORE_MAX = SCORE_R1  # 9
 SCORE_RANGE = SCORE_MAX - SCORE_MIN  # 18
 # ティア判定に必要な最小サンプル数 (これ未満は「?」)
 MIN_PICKS_FOR_RELIABLE_TIER = 50
-# 人気ボーナス: pick_rate >= 5% で score を 1.1倍
+# 人気ボーナス: pick_rate >= 5% で score を 1.05倍 (条件: WR>マップ平均)
 POPULAR_PICK_RATE = 0.05
-POPULARITY_BONUS = 1.10
+POPULARITY_BONUS = 1.05
 # サンプル少penalty: picks <= 300 で 0.9倍
 LOW_PICKS_THRESHOLD = 300
 LOW_PICKS_PENALTY = 0.9
@@ -416,6 +416,7 @@ def main():
                 "best_maps": [
                     {
                         "map": r["map"],
+                        "map_jp": map_jp.get(r["map"].lower().replace(" ", "-"), ""),
                         "win_rate": r["win_rate"],
                         "picks": r["picks"],
                     }
@@ -424,6 +425,7 @@ def main():
                 "worst_maps": [
                     {
                         "map": r["map"],
+                        "map_jp": map_jp.get(r["map"].lower().replace(" ", "-"), ""),
                         "win_rate": r["win_rate"],
                         "picks": r["picks"],
                     }
