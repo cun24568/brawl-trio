@@ -47,7 +47,7 @@ MIN_PICK_RATE = 0  # マップ内ピック率フィルタ無効
 BAYES_PRIOR = 10  # ベイズ事前分布の強さ (少サンプルはマップ平均寄り)
 RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
 MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
-TOP_N_TRIOS = 8
+TOP_N_TRIOS = 3
 TOP_N_TIER = 200  # 全102体収まる
 # 順位スコア重み (Brawl Stars トロフィー変動準拠、調整版)
 SCORE_R1, SCORE_R2, SCORE_R3, SCORE_R4 = 9, 4, -4, -9
