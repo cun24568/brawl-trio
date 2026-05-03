@@ -8,8 +8,12 @@ const TIER_COLORS = {
   "A":  "bg-yellow-500 text-gray-900",
   "B":  "bg-blue-500 text-white",
   "C":  "bg-gray-600 text-white",
+  "?":  "bg-gray-500 text-gray-200 italic",
 };
-const TIER_ORDER = ["S+", "S", "A", "B", "C"];
+const TIER_ORDER = ["S+", "S", "A", "B", "C", "?"];
+const TIER_LABELS = {
+  "?": "サンプル不足 (50戦未満)",
+};
 
 async function load() {
   try {
@@ -107,10 +111,12 @@ function renderMapDetail() {
     let header = "";
     // All のときだけセクションヘッダー
     if (currentTierFilter === "all" && t.tier !== lastTier) {
+      const label = TIER_LABELS[t.tier] || `Tier ${t.tier}`;
       header = `<tr class="bg-gray-700/70">
         <td colspan="7" class="py-2 px-2 font-bold">
           <span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span>
           <span class="ml-2 text-gray-200 text-sm">${counts[t.tier]}体</span>
+          ${TIER_LABELS[t.tier] ? `<span class="ml-2 text-gray-400 text-xs">${TIER_LABELS[t.tier]}</span>` : ""}
         </td>
       </tr>`;
       lastTier = t.tier;
@@ -160,7 +166,7 @@ function renderMapDetail() {
           <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
-        <div class="text-xs text-gray-500 mt-1">スコア重み: 1位+9 / 2位+4 / 3位-5 / 4位-11 (2000帯トロ変動準拠) + 高トロ帯バトル(平均2000+)は2倍重み / ベイズ平均化 + percentileティア</div>
+        <div class="text-xs text-gray-500 mt-1">スコア: 1位+9 / 2位+4 / 3位-4 / 4位-9。高トロ帯(2000+)バトル2倍重み。ベイズ平均化。50戦以上の信頼サンプルでpercentileティア (50戦未満は「?」)</div>
         ${filterButtons}
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
         ${tableHtml}

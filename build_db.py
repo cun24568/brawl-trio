@@ -46,11 +46,13 @@ RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
 MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
 TOP_N_TRIOS = 8
 TOP_N_TIER = 200  # 全102体収まる
-# 順位スコア重み (Brawl Stars 2000-2199トロ帯のトロフィー変動準拠)
-SCORE_R1, SCORE_R2, SCORE_R3, SCORE_R4 = 9, 4, -5, -11
-SCORE_MIN = SCORE_R4  # -11
+# 順位スコア重み (Brawl Stars トロフィー変動準拠、調整版)
+SCORE_R1, SCORE_R2, SCORE_R3, SCORE_R4 = 9, 4, -4, -9
+SCORE_MIN = SCORE_R4  # -9
 SCORE_MAX = SCORE_R1  # 9
-SCORE_RANGE = SCORE_MAX - SCORE_MIN  # 20
+SCORE_RANGE = SCORE_MAX - SCORE_MIN  # 18
+# ティア判定に必要な最小サンプル数 (これ未満は「?」)
+MIN_PICKS_FOR_RELIABLE_TIER = 50
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
 TIER_PCT_S = 0.25
@@ -142,6 +144,7 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         delta = bayes_weighted - map_avg_weighted
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
+        insufficient = picks < MIN_PICKS_FOR_RELIABLE_TIER
         scored.append({
             "brawler": r["brawler"],
             "brawler_id": master.get("id"),
@@ -158,13 +161,19 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
             "pick_rate": round(pick_rate, 3),
             "score": round(score, 2),
             "delta": round(delta, 3),
-            "tier": "",  # 後でpercentileで埋める
+            "insufficient": insufficient,
+            "tier": "",
         })
 
-    scored.sort(key=lambda x: -x["score"])
-    # percentile-based ティア割り当て
-    n = len(scored)
-    for i, s in enumerate(scored):
+    # 信頼サンプル(picks>=50)だけでpercentileティア割当
+    sufficient = sorted(
+        [s for s in scored if not s["insufficient"]], key=lambda x: -x["score"]
+    )
+    insufficient_list = sorted(
+        [s for s in scored if s["insufficient"]], key=lambda x: -x["score"]
+    )
+    n = len(sufficient)
+    for i, s in enumerate(sufficient):
         pct = i / n if n else 1
         if pct < TIER_PCT_S_PLUS:
             s["tier"] = "S+"
@@ -176,7 +185,12 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
             s["tier"] = "B"
         else:
             s["tier"] = "C"
-    return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
+    for s in insufficient_list:
+        s["tier"] = "?"
+
+    # 出力: 信頼サンプル(score降順) → 不足サンプル(score降順)
+    final = sufficient + insufficient_list
+    return final[:TOP_N_TIER], map_avg_wr, map_avg_rank
 
 
 HIGH_TROPHY_THRESHOLD = 2000  # この値以上の team avg trophy は重み2倍
