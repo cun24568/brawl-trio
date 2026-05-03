@@ -179,15 +179,19 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
     return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
 
 
+HIGH_TROPHY_THRESHOLD = 2000  # この値以上の team avg trophy は重み2倍
+HIGH_TROPHY_WEIGHT = 2.0
+
+
 def extract_trios_and_rank_dist(battles):
     """
     raw battles から
     - trio 編成統計 (map → trio_key → 集計)
-    - ブロウラー別順位分布 (map → brawler → 1位/2位/3位/4位 count)
-    の両方を返す。
+    - ブロウラー別順位分布 (map → brawler → 1位/2位/3位/4位 count, weighted)
+    高トロ帯(2000+)バトルは2倍重みでカウント。
     """
     trio_stats = defaultdict(lambda: defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []}))
-    rank_dist = defaultdict(lambda: defaultdict(lambda: {"r1": 0, "r2": 0, "r3": 0, "r4": 0}))
+    rank_dist = defaultdict(lambda: defaultdict(lambda: {"r1": 0.0, "r2": 0.0, "r3": 0.0, "r4": 0.0}))
     seen = set()
     for b in battles:
         key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
@@ -210,7 +214,17 @@ def extract_trios_and_rank_dist(battles):
         is_win = rank <= 2
         map_name = ev.get("map", "?")
 
-        # trio 統計
+        # チーム平均トロフィー(各ブロウラーのpersonalトロ)
+        team_trophies = [
+            (p.get("brawler") or {}).get("trophies", 0) for p in team
+        ]
+        avg_trophy = (
+            sum(team_trophies) / len(team_trophies) if team_trophies else 0
+        )
+        # 高トロ帯(2000+)は重み2倍、それ以外は1.0
+        weight = HIGH_TROPHY_WEIGHT if avg_trophy >= HIGH_TROPHY_THRESHOLD else 1.0
+
+        # trio 統計 (推奨編成は素のpicks/winsで集計)
         trio_key = tuple(brawlers)
         s = trio_stats[map_name][trio_key]
         s["picks"] += 1
@@ -218,17 +232,17 @@ def extract_trios_and_rank_dist(battles):
             s["wins"] += 1
         s["ranks"].append(rank)
 
-        # 各ブロウラーの順位分布
+        # 各ブロウラーの順位分布 (weighted)
         for br in brawlers:
             rd = rank_dist[map_name][br]
             if rank == 1:
-                rd["r1"] += 1
+                rd["r1"] += weight
             elif rank == 2:
-                rd["r2"] += 1
+                rd["r2"] += weight
             elif rank == 3:
-                rd["r3"] += 1
+                rd["r3"] += weight
             else:
-                rd["r4"] += 1
+                rd["r4"] += weight
     return trio_stats, rank_dist
 
 

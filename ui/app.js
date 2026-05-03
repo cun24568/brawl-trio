@@ -1,4 +1,6 @@
 let DB = null;
+let currentMap = null;
+let currentTierFilter = "all";  // all / S+ / S / A / B / C
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -7,6 +9,7 @@ const TIER_COLORS = {
   "B":  "bg-blue-500 text-white",
   "C":  "bg-gray-600 text-white",
 };
+const TIER_ORDER = ["S+", "S", "A", "B", "C"];
 
 async function load() {
   try {
@@ -50,6 +53,18 @@ function renderMapList() {
 }
 
 function selectMap(m) {
+  currentMap = m;
+  renderMapDetail();
+}
+
+function setTierFilter(tier) {
+  currentTierFilter = tier;
+  renderMapDetail();
+}
+
+function renderMapDetail() {
+  const m = currentMap;
+  if (!m) return;
   const el = document.getElementById("map-detail");
   if (!m.tier_list || m.tier_list.length === 0) {
     el.innerHTML = `
@@ -63,6 +78,77 @@ function selectMap(m) {
       </div>`;
     return;
   }
+
+  // ティア人数カウント
+  const counts = {};
+  for (const t of m.tier_list) counts[t.tier] = (counts[t.tier] || 0) + 1;
+
+  // フィルタボタン
+  const filterButtons = `
+    <div class="flex flex-wrap gap-1 mt-3">
+      <button onclick="setTierFilter('all')" class="px-3 py-1 rounded text-sm font-bold ${currentTierFilter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}">All ${m.tier_list.length}</button>
+      ${TIER_ORDER.map(tier => {
+        const count = counts[tier] || 0;
+        if (count === 0) return "";
+        const isActive = currentTierFilter === tier;
+        const colorClass = isActive ? TIER_COLORS[tier] : "bg-gray-700 text-gray-300 hover:bg-gray-600";
+        return `<button onclick="setTierFilter('${tier}')" class="px-3 py-1 rounded text-sm font-bold ${colorClass}">${tier} ${count}</button>`;
+      }).join("")}
+    </div>`;
+
+  // フィルタ適用
+  const filtered = currentTierFilter === "all"
+    ? m.tier_list
+    : m.tier_list.filter(t => t.tier === currentTierFilter);
+
+  // 行レンダリング
+  let lastTier = null;
+  const rowsHtml = filtered.map(t => {
+    let header = "";
+    // All のときだけセクションヘッダー
+    if (currentTierFilter === "all" && t.tier !== lastTier) {
+      header = `<tr class="bg-gray-700/70">
+        <td colspan="7" class="py-2 px-2 font-bold">
+          <span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span>
+          <span class="ml-2 text-gray-200 text-sm">${counts[t.tier]}体</span>
+        </td>
+      </tr>`;
+      lastTier = t.tier;
+    }
+    return header + `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
+      <td class="py-2 px-2 w-12"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span></td>
+      <td class="py-2 px-2">
+        <div class="flex items-center">
+          ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
+          <span class="truncate">${escapeHtml(t.brawler)}</span>
+        </div>
+      </td>
+      <td class="py-2 px-2 text-right w-12">${t.picks}</td>
+      <td class="py-2 px-2 text-right font-mono text-green-300 w-14">${((t.rank1_rate || 0) * 100).toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono text-blue-300 w-14">${((t.rank2_rate || 0) * 100).toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono w-12 hidden sm:table-cell">${(t.win_rate * 100).toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono w-14 hidden md:table-cell">${t.avg_rank.toFixed(2)}</td>
+    </tr>`;
+  }).join("");
+
+  const tableHtml = `
+    <div class="overflow-x-auto -mx-2 sm:mx-0">
+    <table class="w-full">
+      <thead>
+        <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+          <th class="pb-2 w-12 px-2">Tier</th>
+          <th class="pb-2 px-2">ブロウラー</th>
+          <th class="pb-2 text-right w-12 px-2">picks</th>
+          <th class="pb-2 text-right w-14 px-2">1位率</th>
+          <th class="pb-2 text-right w-14 px-2">2位率</th>
+          <th class="pb-2 text-right w-12 px-2 hidden sm:table-cell">TOP2</th>
+          <th class="pb-2 text-right w-14 px-2 hidden md:table-cell">平均順位</th>
+        </tr>
+      </thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+    </div>`;
+
   el.innerHTML = `
     <div class="bg-gray-800 rounded overflow-hidden">
       ${m.image_url ? `<img src="${m.image_url}" class="w-full" style="max-height:280px;object-fit:cover">` : ""}
@@ -74,57 +160,10 @@ function selectMap(m) {
           <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
-        <div class="text-xs text-gray-500 mt-1">スコア重み: 1位+9 / 2位+4 / 3位-5 / 4位-11 (ゲーム内2000帯トロ変動準拠)。ベイズ平均化 + percentileティア</div>
-        <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト</h3>
-        ${(() => {
-          // ティア毎の人数カウント
-          const counts = {};
-          for (const t of m.tier_list) counts[t.tier] = (counts[t.tier] || 0) + 1;
-          let lastTier = null;
-          const rowsHtml = m.tier_list.map(t => {
-            let header = "";
-            if (t.tier !== lastTier) {
-              header = `<tr class="bg-gray-700/70">
-                <td colspan="7" class="py-2 px-2 font-bold">
-                  <span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span>
-                  <span class="ml-2 text-gray-200 text-sm">${counts[t.tier]}体</span>
-                </td>
-              </tr>`;
-              lastTier = t.tier;
-            }
-            return header + `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
-              <td class="py-2 px-2 w-12"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span></td>
-              <td class="py-2 px-2">
-                <div class="flex items-center">
-                  ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
-                  <span class="truncate">${escapeHtml(t.brawler)}</span>
-                </div>
-              </td>
-              <td class="py-2 px-2 text-right w-12">${t.picks}</td>
-              <td class="py-2 px-2 text-right font-mono text-green-300 w-14">${((t.rank1_rate || 0) * 100).toFixed(1)}%</td>
-              <td class="py-2 px-2 text-right font-mono text-blue-300 w-14">${((t.rank2_rate || 0) * 100).toFixed(1)}%</td>
-              <td class="py-2 px-2 text-right font-mono w-12 hidden sm:table-cell">${(t.win_rate * 100).toFixed(1)}%</td>
-              <td class="py-2 px-2 text-right font-mono w-14 hidden md:table-cell">${t.avg_rank.toFixed(2)}</td>
-            </tr>`;
-          }).join("");
-          return `
-          <div class="overflow-x-auto -mx-2 sm:mx-0">
-          <table class="w-full">
-            <thead>
-              <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
-                <th class="pb-2 w-12 px-2">Tier</th>
-                <th class="pb-2 px-2">ブロウラー</th>
-                <th class="pb-2 text-right w-12 px-2">picks</th>
-                <th class="pb-2 text-right w-14 px-2">1位率</th>
-                <th class="pb-2 text-right w-14 px-2">2位率</th>
-                <th class="pb-2 text-right w-12 px-2 hidden sm:table-cell">TOP2</th>
-                <th class="pb-2 text-right w-14 px-2 hidden md:table-cell">平均順位</th>
-              </tr>
-            </thead>
-            <tbody>${rowsHtml}</tbody>
-          </table>
-          </div>`;
-        })()}
+        <div class="text-xs text-gray-500 mt-1">スコア重み: 1位+9 / 2位+4 / 3位-5 / 4位-11 (2000帯トロ変動準拠) + 高トロ帯バトル(平均2000+)は2倍重み / ベイズ平均化 + percentileティア</div>
+        ${filterButtons}
+        <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
+        ${tableHtml}
 
         ${m.recommended_trios && m.recommended_trios.length > 0 ? `
           <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">推奨トリオ編成</h3>
