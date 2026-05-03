@@ -32,7 +32,8 @@ ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 
 META_CSV = DATA / "trio_meta_full.csv"
-BATTLES_JSON = DATA / "trio_battles_full.json"
+BATTLES_JSON = DATA / "trio_battles_full.json"  # 旧形式 (互換)
+BATTLES_JSONL = DATA / "trio_battles.jsonl"  # 新形式 (蓄積型)
 MANUAL = DATA / "manual_mappings.json"
 BRAWLERS = DATA / "brawlers.json"
 MAPS_POOL = DATA / "maps_pool.json"
@@ -202,8 +203,23 @@ def main():
     for r in rows:
         by_map_name[r["map"]].append(r)
 
-    # 推奨編成 + 順位分布抽出
-    battles = json.loads(BATTLES_JSON.read_text(encoding="utf-8"))
+    # 推奨編成 + 順位分布抽出 (JSONL streaming 優先, 互換でJSONも対応)
+    if BATTLES_JSONL.exists():
+        def battle_iter():
+            with open(BATTLES_JSONL, encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        yield json.loads(line)
+                    except Exception:
+                        pass
+        battles = battle_iter()
+    elif BATTLES_JSON.exists():
+        battles = json.loads(BATTLES_JSON.read_text(encoding="utf-8"))
+    else:
+        battles = []
     trio_stats, rank_dist = extract_trios_and_rank_dist(battles)
     print(f"Extracted trio + rank dist for {len(trio_stats)} maps")
 

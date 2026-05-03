@@ -47,6 +47,8 @@ CRAWL_SAMPLE_SIZE = 15000  # 1cycleでqualifyingから sample してクロール
 
 DISCOVERED_FILE = OUT / "discovered_tags.json"
 QUALIFYING_FILE = OUT / "qualifying_tags.json"
+BATTLES_JSONL = OUT / "trio_battles.jsonl"  # 1行=1battle、append蓄積
+BATTLES_LEGACY_JSON = OUT / "trio_battles_full.json"  # 旧形式 (互換のため残す)
 
 
 def load_token():
@@ -95,6 +97,71 @@ def load_qualifying():
 
 def save_qualifying(qs):
     QUALIFYING_FILE.write_text(json.dumps(qs, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def battle_key(b):
+    """battle dedup key: 同一battleを別プレイヤー視点で取得しても1件"""
+    bt = b.get("battleTime", "")
+    teams = b.get("battle", {}).get("teams", [])
+    tags = sorted([p.get("tag", "") for team in teams for p in team])
+    return bt + "|" + "|".join(tags)
+
+
+def migrate_legacy_json():
+    """旧 trio_battles_full.json があれば JSONL に1回限り変換"""
+    if BATTLES_JSONL.exists():
+        return
+    if not BATTLES_LEGACY_JSON.exists():
+        return
+    print(f"Migrating {BATTLES_LEGACY_JSON.name} → {BATTLES_JSONL.name}")
+    try:
+        battles = json.loads(BATTLES_LEGACY_JSON.read_text(encoding="utf-8"))
+        with open(BATTLES_JSONL, "w", encoding="utf-8") as f:
+            for b in battles:
+                f.write(json.dumps(b, ensure_ascii=False) + "\n")
+        print(f"  migrated {len(battles)} battles")
+    except Exception as e:
+        print(f"  migration failed: {e}")
+
+
+def load_existing_battle_keys():
+    """JSONLから既存battle keysを読み込む(streaming)"""
+    keys = set()
+    if not BATTLES_JSONL.exists():
+        return keys
+    with open(BATTLES_JSONL, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                b = json.loads(line)
+                keys.add(battle_key(b))
+            except Exception:
+                pass
+    return keys
+
+
+def append_battles_jsonl(battles):
+    """新規battlesをJSONLに追記"""
+    with open(BATTLES_JSONL, "a", encoding="utf-8") as f:
+        for b in battles:
+            f.write(json.dumps(b, ensure_ascii=False) + "\n")
+
+
+def stream_all_battles():
+    """JSONLを順次読み出すgenerator (集計用)"""
+    if not BATTLES_JSONL.exists():
+        return
+    with open(BATTLES_JSONL, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                yield json.loads(line)
+            except Exception:
+                pass
 
 
 def collect_tags():
@@ -162,8 +229,8 @@ def is_trio_battle(b):
     return False
 
 
-def _process_one_battlelog(tag, discovered, lock):
-    """1タグ分のbattlelog取得 → trio抽出 + discovered更新。スレッドセーフ。"""
+def _process_one_battlelog(tag, discovered, existing_keys, lock):
+    """1タグ分のbattlelog取得 → trio抽出 + dedup + discovered更新。スレッドセーフ。"""
     t0 = time.time()
     try:
         data = fetch(f"/players/{quote(tag, safe='')}/battlelog")
@@ -177,6 +244,12 @@ def _process_one_battlelog(tag, discovered, lock):
     for b in data.get("items", []):
         if not is_trio_battle(b):
             continue
+        # dedup: 既存JSONLや今cycle内の他workerで取得済みならskip
+        k = battle_key(b)
+        with lock:
+            if k in existing_keys:
+                continue
+            existing_keys.add(k)  # 同cycle内重複も防止
         b["_requester_tag"] = tag
         idx = None
         for ti, team in enumerate(b["battle"].get("teams", [])):
@@ -190,26 +263,25 @@ def _process_one_battlelog(tag, discovered, lock):
                 if t:
                     new_tags_local.add(t)
         trio_battles.append(b)
-    # discovered 更新は最後にまとめてロック
     if new_tags_local:
         with lock:
             discovered.update(new_tags_local)
     return tag, trio_battles, None, time.time() - t0
 
 
-def fetch_battles(tags, discovered):
-    battles = []
+def fetch_battles(tags, discovered, existing_keys):
+    new_battles = []
     fail = 0
     rate_limited = False
     lock = threading.Lock()
     n = len(tags)
-    print(f"[Phase 2] バトルログ取得 ({n} tags, {PARALLEL_WORKERS} 並列)")
+    print(f"[Phase 2] バトルログ取得 ({n} tags, {PARALLEL_WORKERS} 並列, dedup against {len(existing_keys)} existing)")
     print("=" * 60)
     t_start = time.time()
 
     with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as ex:
         futures = {
-            ex.submit(_process_one_battlelog, tag, discovered, lock): tag
+            ex.submit(_process_one_battlelog, tag, discovered, existing_keys, lock): tag
             for tag in tags
         }
         completed = 0
@@ -220,7 +292,6 @@ def fetch_battles(tags, discovered):
                 fail += 1
                 print(f"  {completed:4d}/{n}  {tag:<12} HTTP 429 (rate limit)")
                 rate_limited = True
-                # キャンセルできるものはキャンセル
                 for f in futures:
                     f.cancel()
                 break
@@ -229,24 +300,33 @@ def fetch_battles(tags, discovered):
                 print(f"  {completed:4d}/{n}  {tag:<12} {err}")
             else:
                 with lock:
-                    battles.extend(trio_results)
+                    new_battles.extend(trio_results)
                 if completed % 50 == 0 or completed == n:
                     rate = completed / (time.time() - t_start)
-                    print(f"  {completed:4d}/{n}  trio:{len(trio_results):2d}  ({elapsed*1000:.0f}ms)  total:{len(battles)}  [{rate:.1f} tags/s]")
+                    print(f"  {completed:4d}/{n}  new:{len(trio_results):2d}  ({elapsed*1000:.0f}ms)  cycle_new:{len(new_battles)}  [{rate:.1f} tags/s]")
 
+            # 100件ごとにJSONL flush (中断対策)
             if completed % SAVE_EVERY == 0:
                 with lock:
-                    snapshot = list(battles)
-                with open(OUT / "trio_battles_partial.json", "w", encoding="utf-8") as f:
-                    json.dump(snapshot, f, ensure_ascii=False)
+                    flush_batch = list(new_battles)
+                    new_battles.clear()
+                if flush_batch:
+                    append_battles_jsonl(flush_batch)
 
-    return battles, fail, rate_limited
+    # 残りをflush
+    if new_battles:
+        append_battles_jsonl(new_battles)
+
+    return len(new_battles), fail, rate_limited
 
 
-def aggregate(battles):
+def aggregate_from_jsonl():
+    """JSONL を streaming で読んで集計"""
     agg = defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []})
     seen = set()
-    for b in battles:
+    n_total = 0
+    for b in stream_all_battles():
+        n_total += 1
         key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
         if key in seen:
             continue
@@ -266,7 +346,7 @@ def aggregate(battles):
             if is_win:
                 agg[mkey]["wins"] += 1
             agg[mkey]["ranks"].append(rank)
-    return agg, len(seen)
+    return agg, len(seen), n_total
 
 
 def _check_one_player(tag):
@@ -320,27 +400,31 @@ def main():
     OUT.mkdir(exist_ok=True)
     t0 = time.time()
 
+    # 旧JSON → JSONL 移行 (1回限り)
+    migrate_legacy_json()
+
     tags = collect_tags()
-    print(f"\nUnique tags: {len(tags)}\n推定時間: {len(tags) * 1.0 / 60:.1f}分\n")
+    print(f"\nUnique tags: {len(tags)}\n推定時間: {len(tags) * 0.2:.1f}分 (8並列)\n")
     print("=" * 60)
 
     discovered = load_discovered()
     print(f"[discovered キャッシュ] {len(discovered)} tags")
 
-    battles, fail, rate_limited = fetch_battles(tags, discovered)
+    print(f"[既存battlelog読込中...]")
+    existing_keys = load_existing_battle_keys()
+    print(f"[既存] {len(existing_keys)} battles")
+
+    new_count, fail, rate_limited = fetch_battles(tags, discovered, existing_keys)
     print("=" * 60)
-    print(f"完了: {len(battles)} trio battles / 失敗 {fail} / rate_limited={rate_limited}")
+    print(f"完了: +{new_count} new trio battles (累積 {len(existing_keys)+new_count}) / 失敗 {fail} / rate_limited={rate_limited}")
     print(f"discovered: {len(discovered)} tags")
     save_discovered(discovered)
 
-    out_raw = OUT / "trio_battles_full.json"
-    with open(out_raw, "w", encoding="utf-8") as f:
-        json.dump(battles, f, ensure_ascii=False)
-    print(f"Saved: {out_raw}")
+    print(f"Saved: {BATTLES_JSONL}")
 
-    print("\n[Phase 3] 集計")
-    agg, unique_n = aggregate(battles)
-    print(f"unique battles: {unique_n} / cells: {len(agg)}\n")
+    print("\n[Phase 3] 集計 (JSONL streaming)")
+    agg, unique_n, total_n = aggregate_from_jsonl()
+    print(f"raw lines: {total_n} / unique: {unique_n} / cells: {len(agg)}\n")
 
     # CSV出力
     rows = []

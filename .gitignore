@@ -14,6 +14,7 @@ __pycache__/
 data/trio_battles_full.json
 data/trio_battles_partial.json
 data/trio_battles_club.json
+data/trio_battles.jsonl
 data/trio_meta.csv
 
 # 永続キャッシュ (VPS固有のstate、gitに入れる必要なし)
