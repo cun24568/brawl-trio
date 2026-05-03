@@ -47,7 +47,7 @@ MIN_PICK_RATE = 0  # マップ内ピック率フィルタ無効
 BAYES_PRIOR = 10  # ベイズ事前分布の強さ (少サンプルはマップ平均寄り)
 RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
 MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
-TOP_N_TRIOS = 3
+TOP_N_TRIOS = 8
 TOP_N_TIER = 200  # 全102体収まる
 # 順位スコア重み (Brawl Stars トロフィー変動準拠、調整版)
 SCORE_R1, SCORE_R2, SCORE_R3, SCORE_R4 = 9, 4, -4, -9
@@ -59,9 +59,9 @@ MIN_PICKS_FOR_RELIABLE_TIER = 50
 # 人気ボーナス: pick_rate >= 5% で score を 1.05倍 (条件: WR>マップ平均)
 POPULAR_PICK_RATE = 0.05
 POPULARITY_BONUS = 1.05
-# 使用ボーナス: pick_rate >= 1% で 1.02倍 (使われてる証拠)
-USED_PICK_RATE = 0.01
+# 使用ボーナス: 各マップ使用率TOP3のキャラに 1.02倍 (注目枠)
 USED_BONUS = 1.02
+USED_TOP_N = 3
 # サンプル少penalty: picks <= 300 で 0.9倍
 LOW_PICKS_THRESHOLD = 300
 LOW_PICKS_PENALTY = 0.9
@@ -114,6 +114,12 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
     total_wins = sum(r["wins"] for r in brawler_rows)
     map_avg_wr = total_wins / total_picks
 
+    # 使用率TOP3のブロウラー (USED_BONUS 対象)
+    top_used_brawlers = {
+        r["brawler"]
+        for r in sorted(brawler_rows, key=lambda x: -x["picks"])[:USED_TOP_N]
+    }
+
     scored = []
     for r in brawler_rows:
         picks = r["picks"]
@@ -156,8 +162,8 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
         # サンプル少penalty (picks <= 300 で 0.9倍)
         if picks <= LOW_PICKS_THRESHOLD:
             score *= LOW_PICKS_PENALTY
-        # 使用ボーナス (pick_rate >= 1% で 1.02倍 - 使われてるキャラ)
-        if pick_rate >= USED_PICK_RATE:
+        # 使用ボーナス (使用率TOP3のキャラのみ 1.02倍)
+        if r["brawler"] in top_used_brawlers:
             score *= USED_BONUS
         # 人気ボーナス (pick_rate >= 5% かつ WR>マップ平均で +1.05倍)
         if pick_rate >= POPULAR_PICK_RATE and bayes_weighted > map_avg_weighted:
