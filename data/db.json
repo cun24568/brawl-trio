@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T19:10:48.587308+00:00",
+  "generated_at": "2026-05-03T19:18:57.928224+00:00",
   "stats": {
     "total_maps": 17,
     "maps_in_pool": 13,
@@ -21,8 +21,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 1756,
           "wins": 1263,
           "win_rate": 0.719,
@@ -201,8 +201,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 671,
           "wins": 460,
           "win_rate": 0.686,
@@ -281,8 +281,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 652,
           "wins": 430,
           "win_rate": 0.66,
@@ -361,8 +361,8 @@
         {
           "brawler": "GLOWY",
           "brawler_jp": "グローウィー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000101,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
           "picks": 513,
           "wins": 336,
           "win_rate": 0.655,
@@ -541,8 +541,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 1505,
           "wins": 971,
           "win_rate": 0.645,
@@ -1421,8 +1421,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 698,
           "wins": 451,
           "win_rate": 0.646,
@@ -1501,8 +1501,8 @@
         {
           "brawler": "LARRY & LAWRIE",
           "brawler_jp": "ラリー&ローリー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000077,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
           "picks": 386,
           "wins": 230,
           "win_rate": 0.596,
@@ -2536,7 +2536,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 10,
@@ -2877,7 +2877,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "FANG",
@@ -2958,7 +2958,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "PEARL",
@@ -3103,7 +3103,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             }
           ],
           "picks": 7,
@@ -3228,7 +3228,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JAE-YONG",
@@ -3265,7 +3265,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 7,
@@ -3454,7 +3454,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -3768,7 +3768,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KENJI",
@@ -3778,7 +3778,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -3849,7 +3849,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GIGI",
@@ -4011,7 +4011,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EMZ",
@@ -4146,7 +4146,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KENJI",
@@ -4264,7 +4264,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -4308,7 +4308,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DOUG",
@@ -4372,7 +4372,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -4448,7 +4448,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "PIPER",
@@ -4524,7 +4524,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DOUG",
@@ -4907,7 +4907,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "WILLOW",
@@ -5150,7 +5150,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SURGE",
@@ -5199,7 +5199,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "PIERCE",
@@ -5641,7 +5641,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 24,
@@ -5749,7 +5749,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 28,
@@ -5766,7 +5766,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JESSIE",
@@ -5847,7 +5847,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -5857,7 +5857,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 13,
@@ -5884,7 +5884,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 13,
@@ -6019,7 +6019,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 12,
@@ -6262,7 +6262,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 10,
@@ -6311,7 +6311,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -6392,7 +6392,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SAM",
@@ -6900,7 +6900,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "PAM",
@@ -6937,7 +6937,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 25,
@@ -7018,7 +7018,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 8,
@@ -7094,7 +7094,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MORTIS",
@@ -7153,7 +7153,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 8,
@@ -7207,7 +7207,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 8,
@@ -7224,7 +7224,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EVE",
@@ -7261,7 +7261,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             }
           ],
           "picks": 8,
@@ -7315,7 +7315,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 8,
@@ -7342,7 +7342,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 8,
@@ -7418,7 +7418,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "POCO",
@@ -7445,7 +7445,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DOUG",
@@ -7818,7 +7818,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -7931,7 +7931,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SURGE",
@@ -8179,7 +8179,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 7,
@@ -8655,7 +8655,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GUS",
@@ -8795,7 +8795,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "KIT",
@@ -8817,7 +8817,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DOUG",
@@ -8849,7 +8849,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "MEEPLE",
@@ -9011,7 +9011,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "RUFFS",
@@ -9411,7 +9411,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DOUG",
@@ -9421,7 +9421,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 6,
@@ -10167,12 +10167,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "GRIFF",
@@ -10226,7 +10226,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SURGE",
@@ -10356,7 +10356,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -10410,12 +10410,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "RICO",
@@ -10447,7 +10447,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -10744,7 +10744,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -10923,7 +10923,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "DYNAMIKE",
@@ -10955,7 +10955,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KAZE",
@@ -11090,7 +11090,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "WILLOW",
@@ -11176,7 +11176,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 11,
@@ -11220,7 +11220,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "JANET",
@@ -11360,7 +11360,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "POCO",
@@ -11382,7 +11382,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -11527,7 +11527,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 11,
@@ -11603,7 +11603,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "ROSA",
@@ -11824,7 +11824,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 16,
@@ -11922,12 +11922,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "MEEPLE",
@@ -12273,7 +12273,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "FINX",
@@ -12354,7 +12354,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KIT",
@@ -12364,7 +12364,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 10,
@@ -12813,12 +12813,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "KIT",
@@ -13191,7 +13191,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -13520,12 +13520,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             }
           ],
           "picks": 5,
@@ -13714,7 +13714,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -13849,7 +13849,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -13866,7 +13866,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -14033,7 +14033,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GIGI",
@@ -14416,7 +14416,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -14497,7 +14497,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 5,
@@ -14681,7 +14681,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MEG",
@@ -14735,12 +14735,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 5,
@@ -14902,7 +14902,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -14924,7 +14924,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "POCO",
@@ -15140,7 +15140,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "RICO",
@@ -15216,7 +15216,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "MORTIS",
@@ -15275,7 +15275,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MINA",
@@ -15361,7 +15361,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 5,
@@ -15437,7 +15437,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GENE",
@@ -15842,7 +15842,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "STU",
@@ -15891,7 +15891,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "PIERCE",
@@ -15945,7 +15945,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MORTIS",
@@ -16026,7 +16026,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LOU",
@@ -16225,7 +16225,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -16441,7 +16441,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -16512,7 +16512,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "NITA",
@@ -16652,7 +16652,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SURGE",
@@ -17084,7 +17084,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "KIT",
@@ -17197,7 +17197,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 12,
@@ -17656,7 +17656,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 8,
@@ -17673,7 +17673,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LOU",
@@ -17732,7 +17732,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "WILLOW",
@@ -18407,7 +18407,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LILY",
@@ -18650,7 +18650,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JAE-YONG",
@@ -18677,7 +18677,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SPIKE",
@@ -19185,7 +19185,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KIT",
@@ -19347,7 +19347,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JANET",
@@ -19568,7 +19568,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "POCO",
@@ -19676,7 +19676,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -19924,7 +19924,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -20113,7 +20113,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 7,
@@ -20248,7 +20248,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -20265,7 +20265,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JANET",
@@ -20675,7 +20675,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "LOU",
@@ -20815,7 +20815,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -20918,7 +20918,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "PEARL",
@@ -21004,7 +21004,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             }
           ],
           "picks": 7,
@@ -21058,7 +21058,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 7,
@@ -21080,7 +21080,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "MORTIS",
@@ -21193,7 +21193,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 7,
@@ -21404,7 +21404,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "LEON",
@@ -21480,7 +21480,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -21755,7 +21755,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "LILY",
@@ -21858,7 +21858,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "MINA",
@@ -21939,7 +21939,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MORTIS",
@@ -22052,7 +22052,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "SURGE",
@@ -22327,7 +22327,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             }
           ],
           "picks": 13,
@@ -22452,7 +22452,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JANET",
@@ -22462,7 +22462,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 16,
@@ -22570,7 +22570,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 25,
@@ -22965,7 +22965,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -23159,7 +23159,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "GRIFF",
@@ -23213,7 +23213,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -23245,7 +23245,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 12,
@@ -23272,7 +23272,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -23402,7 +23402,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "TRUNK",
@@ -23532,7 +23532,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "POCO",
@@ -23672,7 +23672,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KAZE",
@@ -23780,7 +23780,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "MORTIS",
@@ -23812,7 +23812,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -23888,7 +23888,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "STU",
@@ -24050,7 +24050,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -24104,7 +24104,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "R-T",
@@ -24271,7 +24271,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -24369,7 +24369,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LOU",
@@ -24666,7 +24666,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -25621,7 +25621,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 6,
@@ -25702,7 +25702,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -25729,7 +25729,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 6,
@@ -26237,7 +26237,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SURGE",
@@ -26377,7 +26377,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 6,
@@ -27042,7 +27042,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "EMZ",
@@ -27425,7 +27425,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KAZE",
@@ -27538,7 +27538,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 11,
@@ -28586,7 +28586,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "LILY",
@@ -28613,7 +28613,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -28699,7 +28699,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 8,
@@ -28861,7 +28861,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 13,
@@ -29212,7 +29212,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 23,
@@ -29266,7 +29266,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 20,
@@ -29850,12 +29850,12 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "R-T",
@@ -30233,7 +30233,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "SPIKE",
@@ -30368,7 +30368,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "R-T",
@@ -30611,7 +30611,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JANET",
@@ -30967,7 +30967,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -31038,7 +31038,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "HANK",
@@ -31443,7 +31443,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -31534,7 +31534,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             }
           ],
           "picks": 5,
@@ -31750,7 +31750,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -32182,7 +32182,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -32258,7 +32258,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "GENE",
@@ -32344,7 +32344,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 5,
@@ -32442,7 +32442,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -32690,7 +32690,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "TICK",
@@ -32928,7 +32928,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SQUEAK",
@@ -33019,7 +33019,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 5,
@@ -33181,7 +33181,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -33878,7 +33878,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "PEARL",
@@ -33991,7 +33991,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -34337,7 +34337,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "POCO",
@@ -34634,7 +34634,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LILY",
@@ -34801,7 +34801,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -34823,7 +34823,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "PIERCE",
@@ -34845,7 +34845,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "NITA",
@@ -34931,7 +34931,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "JESSIE",
@@ -34953,7 +34953,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "JANET",
@@ -35120,7 +35120,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KAZE",
@@ -35552,7 +35552,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "STU",
@@ -35584,7 +35584,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -35611,7 +35611,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 9,
@@ -35719,7 +35719,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 20,
@@ -35979,7 +35979,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SURGE",
@@ -36200,7 +36200,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -36281,7 +36281,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "PENNY",
@@ -36632,7 +36632,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "SURGE",
@@ -36929,7 +36929,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -37366,7 +37366,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 8,
@@ -37739,12 +37739,12 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -37874,7 +37874,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "STU",
@@ -38517,7 +38517,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "EDGAR",
@@ -38900,7 +38900,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SURGE",
@@ -39359,12 +39359,12 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             },
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -39381,7 +39381,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "MORTIS",
@@ -39634,7 +39634,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 9,
@@ -40201,7 +40201,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 7,
@@ -40255,7 +40255,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 7,
@@ -41686,7 +41686,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 5,
@@ -41767,7 +41767,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -42010,7 +42010,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 5,
@@ -42356,7 +42356,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             },
             {
               "brawler": "SPIKE",
@@ -42604,7 +42604,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 6,
@@ -42847,7 +42847,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             }
           ],
           "picks": 6,
@@ -43031,7 +43031,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "RICO",
@@ -43058,7 +43058,7 @@
             {
               "brawler": "EL PRIMO",
               "brawler_jp": "エル・プリモ",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png"
             },
             {
               "brawler": "FANG",
@@ -43576,7 +43576,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -43820,8 +43820,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 102,
           "wins": 82,
           "win_rate": 0.804,
@@ -44300,8 +44300,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 59,
           "wins": 36,
           "win_rate": 0.61,
@@ -44860,8 +44860,8 @@
         {
           "brawler": "GLOWY",
           "brawler_jp": "グローウィー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000101,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
           "picks": 36,
           "wins": 23,
           "win_rate": 0.639,
@@ -44980,8 +44980,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 29,
           "wins": 21,
           "win_rate": 0.724,
@@ -45020,8 +45020,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 33,
           "wins": 22,
           "win_rate": 0.667,
@@ -45040,8 +45040,8 @@
         {
           "brawler": "LARRY & LAWRIE",
           "brawler_jp": "ラリー&ローリー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000077,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
           "picks": 9,
           "wins": 7,
           "win_rate": 0.778,
@@ -45480,8 +45480,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 45,
           "wins": 27,
           "win_rate": 0.6,
@@ -45977,7 +45977,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SURGE",
@@ -46026,7 +46026,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GRIFF",
@@ -46195,7 +46195,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "SURGE",
@@ -46244,7 +46244,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "GRIFF",
@@ -46298,7 +46298,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "KAZE",
@@ -46362,7 +46362,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             }
           ],
           "picks": 6,
@@ -46416,7 +46416,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             }
           ],
           "picks": 6,
@@ -46524,7 +46524,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 8,
@@ -46595,7 +46595,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "HANK",
@@ -46681,7 +46681,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "TRUNK",
@@ -46767,7 +46767,7 @@
             {
               "brawler": "NAJIA",
               "brawler_jp": "ナジア",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png"
             }
           ],
           "picks": 6,
@@ -46951,7 +46951,7 @@
             {
               "brawler": "GLOWY",
               "brawler_jp": "グローウィー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png"
             },
             {
               "brawler": "MINA",
@@ -47111,8 +47111,8 @@
         {
           "brawler": "GLOWY",
           "brawler_jp": "グローウィー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000101,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
           "picks": 12,
           "wins": 10,
           "win_rate": 0.833,
@@ -47151,8 +47151,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 6,
           "wins": 5,
           "win_rate": 0.833,
@@ -47471,8 +47471,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 9,
           "wins": 7,
           "win_rate": 0.778,
@@ -47511,8 +47511,8 @@
         {
           "brawler": "LARRY & LAWRIE",
           "brawler_jp": "ラリー&ローリー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000077,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
           "picks": 15,
           "wins": 11,
           "win_rate": 0.733,
@@ -47571,8 +47571,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 26,
           "wins": 17,
           "win_rate": 0.654,
@@ -48091,8 +48091,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 38,
           "wins": 24,
           "win_rate": 0.632,
@@ -48491,8 +48491,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 14,
           "wins": 7,
           "win_rate": 0.5,
@@ -49061,7 +49061,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "LILY",
@@ -49164,7 +49164,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "RUFFS",
@@ -49279,7 +49279,7 @@
             {
               "brawler": "LARRY & LAWRIE",
               "brawler_jp": "ラリー&ローリー",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png"
             },
             {
               "brawler": "LILY",
@@ -49382,7 +49382,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "RUFFS",
@@ -49527,8 +49527,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 3,
           "wins": 3,
           "win_rate": 1.0,
@@ -49747,8 +49747,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -49947,8 +49947,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 7,
           "wins": 5,
           "win_rate": 0.714,
@@ -50207,8 +50207,8 @@
         {
           "brawler": "LARRY & LAWRIE",
           "brawler_jp": "ラリー&ローリー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000077,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -50507,8 +50507,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 16,
           "wins": 9,
           "win_rate": 0.562,
@@ -50807,8 +50807,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 5,
           "wins": 2,
           "win_rate": 0.4,
@@ -51900,8 +51900,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 6,
           "wins": 3,
           "win_rate": 0.5,
@@ -52319,8 +52319,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 26,
           "wins": 22,
           "win_rate": 0.846,
@@ -52819,8 +52819,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 2,
           "wins": 1,
           "win_rate": 0.5,
@@ -53019,8 +53019,8 @@
         {
           "brawler": "GLOWY",
           "brawler_jp": "グローウィー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000101,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
           "picks": 1,
           "wins": 0,
           "win_rate": 0.0,
@@ -53048,7 +53048,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -53158,7 +53158,7 @@
             {
               "brawler": "DAMIAN",
               "brawler_jp": "ダミアン",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png"
             },
             {
               "brawler": "LEON",
@@ -53392,8 +53392,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -53612,8 +53612,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 6,
           "wins": 5,
           "win_rate": 0.833,
@@ -53652,8 +53652,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -54052,8 +54052,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 1,
           "wins": 0,
           "win_rate": 0.0,
@@ -54233,7 +54233,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -54316,7 +54316,7 @@
             {
               "brawler": "SIRIUS",
               "brawler_jp": "シリウス",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png"
             }
           ],
           "picks": 5,
@@ -54391,8 +54391,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 8,
           "wins": 7,
           "win_rate": 0.875,
@@ -54951,8 +54951,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 1,
           "wins": 0,
           "win_rate": 0.0,
@@ -55131,8 +55131,8 @@
         {
           "brawler": "SIRIUS",
           "brawler_jp": "シリウス",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000102,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
           "picks": 3,
           "wins": 0,
           "win_rate": 0.0,
@@ -55160,7 +55160,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "SHADE",
@@ -55216,7 +55216,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             },
             {
               "brawler": "SHADE",
@@ -55296,8 +55296,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 11,
           "wins": 10,
           "win_rate": 0.909,
@@ -55416,8 +55416,8 @@
         {
           "brawler": "GLOWY",
           "brawler_jp": "グローウィー",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000101,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -56130,7 +56130,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 8,
@@ -56159,7 +56159,7 @@
             {
               "brawler": "MR. P",
               "brawler_jp": "",
-              "image_url": null
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png"
             }
           ],
           "picks": 8,
@@ -56367,8 +56367,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -57082,8 +57082,8 @@
         {
           "brawler": "DAMIAN",
           "brawler_jp": "ダミアン",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000104,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
           "picks": 8,
           "wins": 6,
           "win_rate": 0.75,
@@ -58499,8 +58499,8 @@
         {
           "brawler": "EL PRIMO",
           "brawler_jp": "エル・プリモ",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000010,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -58694,8 +58694,8 @@
         {
           "brawler": "MR. P",
           "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000031,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
           "picks": 4,
           "wins": 4,
           "win_rate": 1.0,
@@ -58754,8 +58754,8 @@
         {
           "brawler": "NAJIA",
           "brawler_jp": "ナジア",
-          "brawler_id": null,
-          "image_url": null,
+          "brawler_id": 16000103,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
           "picks": 1,
           "wins": 1,
           "win_rate": 1.0,
@@ -60148,10 +60148,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000104,
       "name": "DAMIAN",
       "name_jp": "ダミアン",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
       "rarity": null,
       "total_picks": 1919,
       "best_maps": [
@@ -60568,10 +60568,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000102,
       "name": "SIRIUS",
       "name_jp": "シリウス",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
       "rarity": null,
       "total_picks": 1627,
       "best_maps": [
@@ -62182,10 +62182,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000010,
       "name": "EL PRIMO",
       "name_jp": "エル・プリモ",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
       "rarity": null,
       "total_picks": 763,
       "best_maps": [
@@ -62362,10 +62362,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000103,
       "name": "NAJIA",
       "name_jp": "ナジア",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
       "rarity": null,
       "total_picks": 731,
       "best_maps": [
@@ -62482,10 +62482,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000031,
       "name": "MR. P",
       "name_jp": "",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000031.png",
       "rarity": null,
       "total_picks": 716,
       "best_maps": [
@@ -63376,10 +63376,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000101,
       "name": "GLOWY",
       "name_jp": "グローウィー",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
       "rarity": null,
       "total_picks": 563,
       "best_maps": [
@@ -64024,10 +64024,10 @@
       ]
     },
     {
-      "id": null,
+      "id": 16000077,
       "name": "LARRY & LAWRIE",
       "name_jp": "ラリー&ローリー",
-      "image_url": null,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000077.png",
       "rarity": null,
       "total_picks": 411,
       "best_maps": [
