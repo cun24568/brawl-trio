@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T19:08:50.171951+00:00",
+  "generated_at": "2026-05-03T19:10:48.587308+00:00",
   "stats": {
     "total_maps": 17,
     "maps_in_pool": 13,
@@ -200,7 +200,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 671,
@@ -360,7 +360,7 @@
         },
         {
           "brawler": "GLOWY",
-          "brawler_jp": "",
+          "brawler_jp": "グローウィー",
           "brawler_id": null,
           "image_url": null,
           "picks": 513,
@@ -460,7 +460,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 521,
@@ -500,7 +500,7 @@
         },
         {
           "brawler": "CHARLIE",
-          "brawler_jp": "シャーリー",
+          "brawler_jp": "チャーリー",
           "brawler_id": 16000074,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
           "picks": 368,
@@ -940,7 +940,7 @@
         },
         {
           "brawler": "KAZE",
-          "brawler_jp": "ジェヨン",
+          "brawler_jp": "カゼ",
           "brawler_id": 16000094,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
           "picks": 617,
@@ -1040,7 +1040,7 @@
         },
         {
           "brawler": "MAX",
-          "brawler_jp": "マックス",
+          "brawler_jp": "MAX",
           "brawler_id": 16000032,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
           "picks": 727,
@@ -1180,7 +1180,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 590,
@@ -1420,7 +1420,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 698,
@@ -1500,7 +1500,7 @@
         },
         {
           "brawler": "LARRY & LAWRIE",
-          "brawler_jp": "",
+          "brawler_jp": "ラリー&ローリー",
           "brawler_id": null,
           "image_url": null,
           "picks": 386,
@@ -1800,7 +1800,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 2022,
@@ -1960,7 +1960,7 @@
         },
         {
           "brawler": "OLLIE",
-          "brawler_jp": "オリー",
+          "brawler_jp": "オーリー",
           "brawler_id": 16000090,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
           "picks": 340,
@@ -2535,7 +2535,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -2886,7 +2886,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -2903,7 +2903,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -2994,7 +2994,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -3264,7 +3264,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -3281,7 +3281,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -4128,7 +4128,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -4199,7 +4199,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -4452,7 +4452,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -4496,7 +4496,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -4992,7 +4992,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -5198,7 +5198,7 @@
           "members": [
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -5235,7 +5235,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -5856,7 +5856,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -5883,7 +5883,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -6018,7 +6018,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -6175,7 +6175,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -6585,7 +6585,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -6936,7 +6936,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -7260,7 +7260,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             }
           ],
@@ -7341,7 +7341,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -8529,7 +8529,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -8610,7 +8610,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -8745,7 +8745,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -8794,7 +8794,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -8848,7 +8848,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -8902,7 +8902,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -9010,7 +9010,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -9150,7 +9150,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -9339,7 +9339,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -9420,7 +9420,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -9550,7 +9550,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             },
             {
@@ -9717,7 +9717,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -9982,7 +9982,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -10171,7 +10171,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -10333,7 +10333,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -10598,7 +10598,7 @@
           "members": [
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -10819,7 +10819,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -10851,7 +10851,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -10905,7 +10905,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -10959,7 +10959,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -11175,7 +11175,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -11219,7 +11219,7 @@
           "members": [
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -11305,7 +11305,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -11850,7 +11850,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -11877,7 +11877,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -11926,7 +11926,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -12579,7 +12579,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -12817,7 +12817,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -13011,7 +13011,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -13038,7 +13038,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -13465,7 +13465,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -13524,7 +13524,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             }
           ],
@@ -13654,7 +13654,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -13789,7 +13789,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -14167,7 +14167,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -14248,7 +14248,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             },
             {
@@ -14302,7 +14302,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -14469,7 +14469,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -14496,7 +14496,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -14739,7 +14739,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -14923,7 +14923,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -15166,7 +15166,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -15215,7 +15215,7 @@
           "members": [
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -15360,7 +15360,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -15463,7 +15463,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -16030,7 +16030,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -16570,7 +16570,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -16835,7 +16835,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -16889,7 +16889,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -17061,7 +17061,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -17083,7 +17083,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -17677,7 +17677,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -18276,7 +18276,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -18433,7 +18433,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -18627,7 +18627,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -18897,7 +18897,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -19329,7 +19329,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -19383,7 +19383,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -19464,7 +19464,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -19567,7 +19567,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -19653,7 +19653,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -19864,7 +19864,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -19891,7 +19891,7 @@
             },
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -20112,7 +20112,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -20161,7 +20161,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -20377,7 +20377,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -20566,7 +20566,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -20620,7 +20620,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -20674,12 +20674,12 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -20728,7 +20728,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -21057,7 +21057,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -21079,7 +21079,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -21138,7 +21138,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -21192,7 +21192,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -21403,7 +21403,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -21489,7 +21489,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -21705,7 +21705,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -21732,7 +21732,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -21754,7 +21754,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -21786,7 +21786,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -21857,7 +21857,7 @@
           "members": [
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -22019,7 +22019,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -22051,7 +22051,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -22240,7 +22240,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -22461,7 +22461,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -22488,7 +22488,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -22510,7 +22510,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -22569,7 +22569,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -22812,7 +22812,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -22893,7 +22893,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -23158,7 +23158,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -23244,7 +23244,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -23315,7 +23315,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -23347,7 +23347,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -23676,7 +23676,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -23752,7 +23752,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -23779,7 +23779,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -24103,7 +24103,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -24189,7 +24189,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -24373,7 +24373,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -24675,7 +24675,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -25102,12 +25102,12 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -25458,7 +25458,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -25480,7 +25480,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -25534,7 +25534,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -25561,7 +25561,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -25728,7 +25728,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -26214,7 +26214,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -26376,7 +26376,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -26393,7 +26393,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -26420,7 +26420,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -26965,7 +26965,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -27041,7 +27041,7 @@
           "members": [
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -27235,7 +27235,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -27429,7 +27429,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -27753,7 +27753,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -28094,7 +28094,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -28175,7 +28175,7 @@
           "members": [
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -28585,7 +28585,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -28698,7 +28698,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -28887,7 +28887,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -28941,7 +28941,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -28968,7 +28968,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -29265,7 +29265,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -29589,7 +29589,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -29849,7 +29849,7 @@
           "members": [
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -29940,7 +29940,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -29994,7 +29994,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -30102,7 +30102,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -30146,7 +30146,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -30232,7 +30232,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -30367,7 +30367,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -30480,7 +30480,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -30588,7 +30588,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -30605,7 +30605,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -30885,7 +30885,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -30907,7 +30907,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -31533,7 +31533,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             }
           ],
@@ -31555,7 +31555,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -31641,7 +31641,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -31722,7 +31722,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -32073,7 +32073,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -32257,7 +32257,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -32343,7 +32343,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -32392,7 +32392,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -32640,7 +32640,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -33018,7 +33018,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -33175,7 +33175,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -33472,7 +33472,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             },
             {
@@ -33526,7 +33526,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -33558,7 +33558,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -33656,7 +33656,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -34255,7 +34255,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -34336,7 +34336,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -34449,7 +34449,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             }
           ],
@@ -34665,7 +34665,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -34822,7 +34822,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -34930,7 +34930,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -35124,7 +35124,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             }
           ],
@@ -35286,7 +35286,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -35389,7 +35389,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -35529,7 +35529,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -35880,7 +35880,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -35907,7 +35907,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -36280,7 +36280,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -36334,7 +36334,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -36528,7 +36528,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -36582,7 +36582,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -36631,7 +36631,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -36717,7 +36717,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -37230,7 +37230,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -37819,7 +37819,7 @@
             },
             {
               "brawler": "NANI",
-              "brawler_jp": "ナジア",
+              "brawler_jp": "ナーニ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png"
             },
             {
@@ -37873,7 +37873,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -37959,7 +37959,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -38008,7 +38008,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             },
             {
@@ -38796,7 +38796,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -38850,7 +38850,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -39034,12 +39034,12 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -39358,7 +39358,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             },
             {
@@ -39687,7 +39687,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -40114,7 +40114,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -40254,7 +40254,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -40681,7 +40681,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -41037,7 +41037,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -41135,7 +41135,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -41496,7 +41496,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -41658,7 +41658,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -41685,7 +41685,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -41874,7 +41874,7 @@
             },
             {
               "brawler": "LOU",
-              "brawler_jp": "ルウ",
+              "brawler_jp": "ルー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png"
             }
           ],
@@ -42009,7 +42009,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -42306,7 +42306,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -42377,7 +42377,7 @@
           "members": [
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             },
             {
@@ -42598,7 +42598,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -42846,7 +42846,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             }
           ],
@@ -43003,7 +43003,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             },
             {
@@ -43057,7 +43057,7 @@
             },
             {
               "brawler": "EL PRIMO",
-              "brawler_jp": "エルプリモ",
+              "brawler_jp": "エル・プリモ",
               "image_url": null
             },
             {
@@ -43170,7 +43170,7 @@
             },
             {
               "brawler": "PIPER",
-              "brawler_jp": "パイパー",
+              "brawler_jp": "エリザベス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png"
             }
           ],
@@ -44439,7 +44439,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 87,
@@ -44499,7 +44499,7 @@
         },
         {
           "brawler": "KAZE",
-          "brawler_jp": "ジェヨン",
+          "brawler_jp": "カゼ",
           "brawler_id": 16000094,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
           "picks": 27,
@@ -44819,7 +44819,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 21,
@@ -44859,7 +44859,7 @@
         },
         {
           "brawler": "GLOWY",
-          "brawler_jp": "",
+          "brawler_jp": "グローウィー",
           "brawler_id": null,
           "image_url": null,
           "picks": 36,
@@ -45019,7 +45019,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 33,
@@ -45039,7 +45039,7 @@
         },
         {
           "brawler": "LARRY & LAWRIE",
-          "brawler_jp": "",
+          "brawler_jp": "ラリー&ローリー",
           "brawler_id": null,
           "image_url": null,
           "picks": 9,
@@ -45219,7 +45219,7 @@
         },
         {
           "brawler": "OLLIE",
-          "brawler_jp": "オリー",
+          "brawler_jp": "オーリー",
           "brawler_id": 16000090,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
           "picks": 11,
@@ -45299,7 +45299,7 @@
         },
         {
           "brawler": "CHARLIE",
-          "brawler_jp": "シャーリー",
+          "brawler_jp": "チャーリー",
           "brawler_id": 16000074,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
           "picks": 24,
@@ -45419,7 +45419,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 4,
@@ -45479,7 +45479,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 45,
@@ -45599,7 +45599,7 @@
         },
         {
           "brawler": "MAX",
-          "brawler_jp": "マックス",
+          "brawler_jp": "MAX",
           "brawler_id": 16000032,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
           "picks": 42,
@@ -46008,7 +46008,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -46226,7 +46226,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -46302,7 +46302,7 @@
             },
             {
               "brawler": "KAZE",
-              "brawler_jp": "ジェヨン",
+              "brawler_jp": "カゼ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png"
             },
             {
@@ -46361,7 +46361,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             }
           ],
@@ -46523,7 +46523,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -46594,7 +46594,7 @@
           "members": [
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -46658,7 +46658,7 @@
             },
             {
               "brawler": "MAX",
-              "brawler_jp": "マックス",
+              "brawler_jp": "MAX",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png"
             }
           ],
@@ -46766,7 +46766,7 @@
             },
             {
               "brawler": "NAJIA",
-              "brawler_jp": "",
+              "brawler_jp": "ナジア",
               "image_url": null
             }
           ],
@@ -46950,7 +46950,7 @@
             },
             {
               "brawler": "GLOWY",
-              "brawler_jp": "",
+              "brawler_jp": "グローウィー",
               "image_url": null
             },
             {
@@ -47110,7 +47110,7 @@
         },
         {
           "brawler": "GLOWY",
-          "brawler_jp": "",
+          "brawler_jp": "グローウィー",
           "brawler_id": null,
           "image_url": null,
           "picks": 12,
@@ -47470,7 +47470,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 9,
@@ -47510,7 +47510,7 @@
         },
         {
           "brawler": "LARRY & LAWRIE",
-          "brawler_jp": "",
+          "brawler_jp": "ラリー&ローリー",
           "brawler_id": null,
           "image_url": null,
           "picks": 15,
@@ -47530,7 +47530,7 @@
         },
         {
           "brawler": "MAX",
-          "brawler_jp": "マックス",
+          "brawler_jp": "MAX",
           "brawler_id": 16000032,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
           "picks": 18,
@@ -47650,7 +47650,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 12,
@@ -47690,7 +47690,7 @@
         },
         {
           "brawler": "CHARLIE",
-          "brawler_jp": "シャーリー",
+          "brawler_jp": "チャーリー",
           "brawler_id": 16000074,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
           "picks": 19,
@@ -48070,7 +48070,7 @@
         },
         {
           "brawler": "KAZE",
-          "brawler_jp": "ジェヨン",
+          "brawler_jp": "カゼ",
           "brawler_id": 16000094,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
           "picks": 6,
@@ -48490,7 +48490,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 14,
@@ -48550,7 +48550,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 3,
@@ -48710,7 +48710,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 7,
@@ -48910,7 +48910,7 @@
         },
         {
           "brawler": "OLLIE",
-          "brawler_jp": "オリー",
+          "brawler_jp": "オーリー",
           "brawler_id": 16000090,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
           "picks": 1,
@@ -49060,7 +49060,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -49278,7 +49278,7 @@
             },
             {
               "brawler": "LARRY & LAWRIE",
-              "brawler_jp": "",
+              "brawler_jp": "ラリー&ローリー",
               "image_url": null
             },
             {
@@ -49526,7 +49526,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 3,
@@ -49806,7 +49806,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 1,
@@ -49946,7 +49946,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 7,
@@ -50206,7 +50206,7 @@
         },
         {
           "brawler": "LARRY & LAWRIE",
-          "brawler_jp": "",
+          "brawler_jp": "ラリー&ローリー",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -50306,7 +50306,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 2,
@@ -51899,7 +51899,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 6,
@@ -51939,7 +51939,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 1,
@@ -51959,7 +51959,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 6,
@@ -51979,7 +51979,7 @@
         },
         {
           "brawler": "KAZE",
-          "brawler_jp": "ジェヨン",
+          "brawler_jp": "カゼ",
           "brawler_id": 16000094,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
           "picks": 1,
@@ -52818,7 +52818,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 2,
@@ -52898,7 +52898,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 9,
@@ -53018,7 +53018,7 @@
         },
         {
           "brawler": "GLOWY",
-          "brawler_jp": "",
+          "brawler_jp": "グローウィー",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -53391,7 +53391,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -53511,7 +53511,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 1,
@@ -53631,7 +53631,7 @@
         },
         {
           "brawler": "CHARLIE",
-          "brawler_jp": "シャーリー",
+          "brawler_jp": "チャーリー",
           "brawler_id": 16000074,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
           "picks": 8,
@@ -53651,7 +53651,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -53851,7 +53851,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 14,
@@ -53891,7 +53891,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 4,
@@ -54222,7 +54222,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -54305,7 +54305,7 @@
           "members": [
             {
               "brawler": "CHARLIE",
-              "brawler_jp": "シャーリー",
+              "brawler_jp": "チャーリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png"
             },
             {
@@ -54410,7 +54410,7 @@
         },
         {
           "brawler": "OLLIE",
-          "brawler_jp": "オリー",
+          "brawler_jp": "オーリー",
           "brawler_id": 16000090,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
           "picks": 4,
@@ -54830,7 +54830,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 2,
@@ -54950,7 +54950,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -55030,7 +55030,7 @@
         },
         {
           "brawler": "LOU",
-          "brawler_jp": "ルウ",
+          "brawler_jp": "ルー",
           "brawler_id": 16000041,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
           "picks": 1,
@@ -55395,7 +55395,7 @@
         },
         {
           "brawler": "KAZE",
-          "brawler_jp": "ジェヨン",
+          "brawler_jp": "カゼ",
           "brawler_id": 16000094,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
           "picks": 1,
@@ -55415,7 +55415,7 @@
         },
         {
           "brawler": "GLOWY",
-          "brawler_jp": "",
+          "brawler_jp": "グローウィー",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -55935,7 +55935,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 2,
@@ -56366,7 +56366,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -56586,7 +56586,7 @@
         },
         {
           "brawler": "MAX",
-          "brawler_jp": "マックス",
+          "brawler_jp": "MAX",
           "brawler_id": 16000032,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
           "picks": 1,
@@ -56746,7 +56746,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 5,
@@ -57281,7 +57281,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 1,
@@ -57636,7 +57636,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 2,
@@ -58036,7 +58036,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 5,
@@ -58347,7 +58347,7 @@
         },
         {
           "brawler": "NANI",
-          "brawler_jp": "ナジア",
+          "brawler_jp": "ナーニ",
           "brawler_id": 16000036,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
           "picks": 1,
@@ -58498,7 +58498,7 @@
         },
         {
           "brawler": "EL PRIMO",
-          "brawler_jp": "エルプリモ",
+          "brawler_jp": "エル・プリモ",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -58753,7 +58753,7 @@
         },
         {
           "brawler": "NAJIA",
-          "brawler_jp": "",
+          "brawler_jp": "ナジア",
           "brawler_id": null,
           "image_url": null,
           "picks": 1,
@@ -59028,7 +59028,7 @@
         },
         {
           "brawler": "PIPER",
-          "brawler_jp": "パイパー",
+          "brawler_jp": "エリザベス",
           "brawler_id": 16000015,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
           "picks": 1,
@@ -59970,7 +59970,7 @@
     {
       "id": 16000015,
       "name": "PIPER",
-      "name_jp": "パイパー",
+      "name_jp": "エリザベス",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
       "rarity": "Epic",
       "total_picks": 2166,
@@ -62010,7 +62010,7 @@
     {
       "id": 16000032,
       "name": "MAX",
-      "name_jp": "マックス",
+      "name_jp": "MAX",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
       "rarity": "Mythic",
       "total_picks": 788,
@@ -62184,7 +62184,7 @@
     {
       "id": null,
       "name": "EL PRIMO",
-      "name_jp": "エルプリモ",
+      "name_jp": "エル・プリモ",
       "image_url": null,
       "rarity": null,
       "total_picks": 763,
@@ -62364,7 +62364,7 @@
     {
       "id": null,
       "name": "NAJIA",
-      "name_jp": "",
+      "name_jp": "ナジア",
       "image_url": null,
       "rarity": null,
       "total_picks": 731,
@@ -62724,7 +62724,7 @@
     {
       "id": 16000094,
       "name": "KAZE",
-      "name_jp": "ジェヨン",
+      "name_jp": "カゼ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
       "rarity": "Ultra Legendary",
       "total_picks": 652,
@@ -62844,7 +62844,7 @@
     {
       "id": 16000036,
       "name": "NANI",
-      "name_jp": "ナジア",
+      "name_jp": "ナーニ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
       "rarity": "Epic",
       "total_picks": 622,
@@ -63378,7 +63378,7 @@
     {
       "id": null,
       "name": "GLOWY",
-      "name_jp": "",
+      "name_jp": "グローウィー",
       "image_url": null,
       "rarity": null,
       "total_picks": 563,
@@ -63498,7 +63498,7 @@
     {
       "id": 16000041,
       "name": "LOU",
-      "name_jp": "ルウ",
+      "name_jp": "ルー",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
       "rarity": "Mythic",
       "total_picks": 537,
@@ -63972,7 +63972,7 @@
     {
       "id": 16000074,
       "name": "CHARLIE",
-      "name_jp": "シャーリー",
+      "name_jp": "チャーリー",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
       "rarity": "Mythic",
       "total_picks": 419,
@@ -64026,7 +64026,7 @@
     {
       "id": null,
       "name": "LARRY & LAWRIE",
-      "name_jp": "",
+      "name_jp": "ラリー&ローリー",
       "image_url": null,
       "rarity": null,
       "total_picks": 411,
@@ -64248,7 +64248,7 @@
     {
       "id": 16000090,
       "name": "OLLIE",
-      "name_jp": "オリー",
+      "name_jp": "オーリー",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000090.png",
       "rarity": "Mythic",
       "total_picks": 356,
