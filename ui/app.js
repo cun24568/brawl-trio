@@ -76,39 +76,55 @@ function selectMap(m) {
         </div>
         <div class="text-xs text-gray-500 mt-1">ソート: 強さスコア降順 (1位+5/2位+1/3位-1/4位-5 の対称重み / ベイズ平均化 / マップ平均との相対delta)</div>
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト</h3>
-        <div class="overflow-x-auto -mx-2 sm:mx-0">
-        <table class="w-full">
-          <thead>
-            <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
-              <th class="pb-2 w-12 px-2">Tier</th>
-              <th class="pb-2 px-2">ブロウラー</th>
-              <th class="pb-2 text-right w-12 px-2">picks</th>
-              <th class="pb-2 text-right w-14 px-2">1位率</th>
-              <th class="pb-2 text-right w-14 px-2">2位率</th>
-              <th class="pb-2 text-right w-12 px-2 hidden sm:table-cell">TOP2</th>
-              <th class="pb-2 text-right w-14 px-2 hidden md:table-cell">平均順位</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${m.tier_list.map(t => `
-              <tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
-                <td class="py-2 px-2"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span></td>
-                <td class="py-2 px-2">
-                  <div class="flex items-center">
-                    ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
-                    <span class="truncate">${escapeHtml(t.brawler)}</span>
-                  </div>
+        ${(() => {
+          // ティア毎の人数カウント
+          const counts = {};
+          for (const t of m.tier_list) counts[t.tier] = (counts[t.tier] || 0) + 1;
+          let lastTier = null;
+          const rowsHtml = m.tier_list.map(t => {
+            let header = "";
+            if (t.tier !== lastTier) {
+              header = `<tr class="bg-gray-700/70">
+                <td colspan="7" class="py-2 px-2 font-bold">
+                  <span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span>
+                  <span class="ml-2 text-gray-200 text-sm">${counts[t.tier]}体</span>
                 </td>
-                <td class="py-2 px-2 text-right">${t.picks}</td>
-                <td class="py-2 px-2 text-right font-mono text-green-300">${((t.rank1_rate || 0) * 100).toFixed(1)}%</td>
-                <td class="py-2 px-2 text-right font-mono text-blue-300">${((t.rank2_rate || 0) * 100).toFixed(1)}%</td>
-                <td class="py-2 px-2 text-right font-mono hidden sm:table-cell">${(t.win_rate * 100).toFixed(1)}%</td>
-                <td class="py-2 px-2 text-right font-mono hidden md:table-cell">${t.avg_rank.toFixed(2)}</td>
+              </tr>`;
+              lastTier = t.tier;
+            }
+            return header + `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
+              <td class="py-2 px-2 w-12"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t.tier] || "bg-gray-500"}">${t.tier}</span></td>
+              <td class="py-2 px-2">
+                <div class="flex items-center">
+                  ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
+                  <span class="truncate">${escapeHtml(t.brawler)}</span>
+                </div>
+              </td>
+              <td class="py-2 px-2 text-right w-12">${t.picks}</td>
+              <td class="py-2 px-2 text-right font-mono text-green-300 w-14">${((t.rank1_rate || 0) * 100).toFixed(1)}%</td>
+              <td class="py-2 px-2 text-right font-mono text-blue-300 w-14">${((t.rank2_rate || 0) * 100).toFixed(1)}%</td>
+              <td class="py-2 px-2 text-right font-mono w-12 hidden sm:table-cell">${(t.win_rate * 100).toFixed(1)}%</td>
+              <td class="py-2 px-2 text-right font-mono w-14 hidden md:table-cell">${t.avg_rank.toFixed(2)}</td>
+            </tr>`;
+          }).join("");
+          return `
+          <div class="overflow-x-auto -mx-2 sm:mx-0">
+          <table class="w-full">
+            <thead>
+              <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+                <th class="pb-2 w-12 px-2">Tier</th>
+                <th class="pb-2 px-2">ブロウラー</th>
+                <th class="pb-2 text-right w-12 px-2">picks</th>
+                <th class="pb-2 text-right w-14 px-2">1位率</th>
+                <th class="pb-2 text-right w-14 px-2">2位率</th>
+                <th class="pb-2 text-right w-12 px-2 hidden sm:table-cell">TOP2</th>
+                <th class="pb-2 text-right w-14 px-2 hidden md:table-cell">平均順位</th>
               </tr>
-            `).join("")}
-          </tbody>
-        </table>
-        </div>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+          </div>`;
+        })()}
 
         ${m.recommended_trios && m.recommended_trios.length > 0 ? `
           <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">推奨トリオ編成</h3>

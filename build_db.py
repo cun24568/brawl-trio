@@ -39,13 +39,13 @@ BRAWLERS = DATA / "brawlers.json"
 MAPS_POOL = DATA / "maps_pool.json"
 OUT = DATA / "db.json"
 
-MIN_PICKS_ABS = 5  # 絶対最小pick数
-MIN_PICK_RATE = 0.005  # マップ内ピック率最小値 (0.5%)
-BAYES_PRIOR = 10  # ベイズ事前分布の強さ
+MIN_PICKS_ABS = 1  # 絶対最小pick数 (すべてのプレイされたブロウラーを表示)
+MIN_PICK_RATE = 0  # マップ内ピック率フィルタ無効
+BAYES_PRIOR = 10  # ベイズ事前分布の強さ (少サンプルはマップ平均寄り)
 RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
-MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数 (信頼性UP、2→5)
+MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
 TOP_N_TRIOS = 8
-TOP_N_TIER = 25
+TOP_N_TIER = 200  # 全102体収まる
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
 TIER_PCT_S = 0.25
