@@ -37,9 +37,10 @@ SAVE_EVERY = 20
 
 # トロフィー閾値で qualifying プールを永続蓄積
 TROPHY_THRESHOLD = 50000
-TROPHY_CHECK_LIMIT = 200  # 1cycleで新規にチェックする数 (10kまで早く到達)
-MAX_QUALIFYING = 10000  # qualifyingプール上限 (上位trophy順で保持)
-MAX_DISCOVERED = 100000  # discovered キャッシュ上限
+TROPHY_CHECK_LIMIT = 500  # 1cycleで新規にチェックする数
+MAX_QUALIFYING = 1_000_000  # qualifyingプール上限 (実質上限なし)
+MAX_DISCOVERED = 1_000_000  # discovered キャッシュ上限
+CRAWL_SAMPLE_SIZE = 5000  # 1cycleでqualifyingから sample してクロールする数
 
 DISCOVERED_FILE = OUT / "discovered_tags.json"
 QUALIFYING_FILE = OUT / "qualifying_tags.json"
@@ -135,12 +136,14 @@ def collect_tags():
         except (HTTPError, URLError) as e:
             print(f"  {country} FAIL: {e}")
 
-    # 高トロフィー(50k+) qualifying プールを追加
+    # 高トロフィー(50k+) qualifying プールから sampling
     qualifying = load_qualifying()
     if qualifying:
-        for q in qualifying:
+        sample_size = min(CRAWL_SAMPLE_SIZE, len(qualifying))
+        sampled = random.sample(qualifying, sample_size)
+        for q in sampled:
             tags.add(q["tag"])
-        print(f"  qualifying ({TROPHY_THRESHOLD}+): +{len(qualifying)} (total {len(tags)})")
+        print(f"  qualifying ({TROPHY_THRESHOLD}+): sampled {sample_size}/{len(qualifying)} (total {len(tags)})")
 
     return sorted(tags)
 
