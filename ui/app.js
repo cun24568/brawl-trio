@@ -140,7 +140,7 @@ function renderMapDetail() {
       <td class="py-2 px-2">
         <div class="flex items-center">
           ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
-          <span class="truncate">${escapeHtml(t.brawler)}</span>
+          <span class="truncate">${escapeHtml(t.brawler_jp || t.brawler)}</span>
         </div>
       </td>
       <td class="py-2 px-2 text-right w-12">${t.picks}</td>
@@ -197,13 +197,15 @@ function renderMapDetail() {
                     ${i > 0 ? '<span class="text-gray-500">+</span>' : ''}
                     <div class="flex items-center gap-1 px-2 py-1 bg-gray-700 rounded">
                       ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ''}
-                      <span class="text-sm">${escapeHtml(mem.brawler)}</span>
+                      <span class="text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
                     </div>
                   `).join("")}
                 </div>
-                <div class="text-sm whitespace-nowrap ml-2">
+                <div class="text-sm whitespace-nowrap ml-2 flex items-center gap-2">
                   <span class="font-mono font-bold ${t.win_rate >= 0.75 ? 'text-green-400' : t.win_rate >= 0.5 ? 'text-yellow-400' : 'text-red-400'}">${(t.win_rate * 100).toFixed(0)}%</span>
-                  <span class="text-gray-400 ml-2 font-mono">${t.wins}/${t.picks}</span>
+                  <span class="text-green-300 font-mono text-xs">1位${t.rank1_count || 0}</span>
+                  <span class="text-blue-300 font-mono text-xs">2位${t.rank2_count || 0}</span>
+                  <span class="text-gray-400 font-mono text-xs">/${t.picks}戦</span>
                 </div>
               </div>
             `).join("")}
@@ -216,17 +218,22 @@ function renderMapDetail() {
 function renderSynergySection(m) {
   if (!m.all_trios || m.all_trios.length === 0) return "";
 
-  // 出現する全ブロウラー (sorted)
-  const brawlerSet = new Set();
+  // 出現する全ブロウラー (sorted) + JP名マップ
+  const brawlerJp = {};  // EN → JP
   for (const t of m.all_trios) {
-    for (const mem of t.members) brawlerSet.add(mem.brawler);
+    for (const mem of t.members) brawlerJp[mem.brawler] = mem.brawler_jp || mem.brawler;
   }
-  const brawlers = [...brawlerSet].sort();
+  const brawlers = Object.keys(brawlerJp).sort((a, b) =>
+    brawlerJp[a].localeCompare(brawlerJp[b], "ja")
+  );
 
-  const opt = (val, sel) =>
-    `<option value="${escapeHtml(val)}" ${val === sel ? "selected" : ""}>${escapeHtml(val)}</option>`;
+  const opt = (val, sel) => {
+    const jp = brawlerJp[val] || val;
+    const display = (jp !== val) ? `${jp} (${val})` : val;
+    return `<option value="${escapeHtml(val)}" ${val === sel ? "selected" : ""}>${escapeHtml(display)}</option>`;
+  };
   const dropdown = (slot, selected) => `
-    <select onchange="setSynergyPick(${slot}, this.value)" class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm">
+    <select onchange="setSynergyPick(${slot}, this.value)" class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm max-w-full">
       <option value="">-- ${slot}人目 --</option>
       ${brawlers.map(b => opt(b, selected)).join("")}
     </select>`;
@@ -258,13 +265,15 @@ function renderSynergySection(m) {
               ${i > 0 ? '<span class="text-gray-500">+</span>' : ""}
               <div class="flex items-center gap-1 px-2 py-1 ${selectedSet.has(mem.brawler) ? 'bg-blue-700/50 ring-1 ring-blue-500' : 'bg-gray-700'} rounded">
                 ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ""}
-                <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler)}</span>
+                <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
               </div>
             `).join("")}
           </div>
-          <div class="text-sm whitespace-nowrap ml-2">
+          <div class="text-sm whitespace-nowrap ml-2 flex items-center gap-2">
             <span class="font-mono font-bold ${wrColor}">${(t.win_rate * 100).toFixed(0)}%</span>
-            <span class="text-gray-400 ml-1 font-mono text-xs">${t.wins}/${t.picks}</span>
+            <span class="text-green-300 font-mono text-xs">1位${t.rank1_count || 0}</span>
+            <span class="text-blue-300 font-mono text-xs">2位${t.rank2_count || 0}</span>
+            <span class="text-gray-400 font-mono text-xs">/${t.picks}戦</span>
           </div>
         </div>`;
       }).join("");

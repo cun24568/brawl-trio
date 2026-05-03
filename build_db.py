@@ -66,7 +66,7 @@ TIER_PCT_A = 0.55
 TIER_PCT_B = 0.80
 
 
-def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
+def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, brawler_jp=None):
     """
     マップ別ティアリストを生成。
     - 「重み付き擬似勝率」 (1位×5 + 2位×1) / (picks×5) を主指標に
@@ -156,9 +156,11 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         delta = bayes_weighted - map_avg_weighted
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
+        br_jp = (brawler_jp or {}).get((master.get("hash") or "").lower(), "")
         insufficient = picks < MIN_PICKS_FOR_RELIABLE_TIER
         scored.append({
             "brawler": r["brawler"],
+            "brawler_jp": br_jp,
             "brawler_id": master.get("id"),
             "image_url": master.get("image_url"),
             "picks": picks,
@@ -327,7 +329,7 @@ def main():
 
         total = sum(r["picks"] for r in brawler_rows)
         tier_list, map_avg_wr, map_avg_rank = build_map_tier_list(
-            brawler_rows, brawler_by_name, rank_dist.get(map_name)
+            brawler_rows, brawler_by_name, rank_dist.get(map_name), brawler_jp
         )
 
         # 推奨編成 + 全trios (シナジー検索用)
@@ -339,13 +341,20 @@ def main():
             picks = s["picks"]
             wins = s["wins"]
             wr = wins / picks
-            avg_r = sum(s["ranks"]) / len(s["ranks"])
+            ranks = s["ranks"]
+            avg_r = sum(ranks) / len(ranks) if ranks else 0
+            r1c = sum(1 for x in ranks if x == 1)
+            r2c = sum(1 for x in ranks if x == 2)
+            r3c = sum(1 for x in ranks if x == 3)
+            r4c = sum(1 for x in ranks if x >= 4)
             members = []
             for br in trio_key:
                 bm = brawler_by_name.get(br.upper(), {})
+                bm_jp = brawler_jp.get((bm.get("hash") or "").lower(), "")
                 members.append(
                     {
                         "brawler": br,
+                        "brawler_jp": bm_jp,
                         "image_url": bm.get("image_url"),
                     }
                 )
@@ -356,6 +365,10 @@ def main():
                     "wins": wins,
                     "win_rate": round(wr, 3),
                     "avg_rank": round(avg_r, 2),
+                    "rank1_count": r1c,
+                    "rank2_count": r2c,
+                    "rank3_count": r3c,
+                    "rank4_count": r4c,
                 }
             )
         all_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
