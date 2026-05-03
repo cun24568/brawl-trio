@@ -774,6 +774,15 @@
     "image_url": "https://cdn.brawlify.com/brawlers/borders/16000087.png"
   },
   {
+    "id": 16000088,
+    "name": "BUZZ-LIGHTYEAR",
+    "name_jp": "",
+    "hash": "buzz-lightyear",
+    "rarity": "Legendary",
+    "class": "Unknown",
+    "image_url": "https://cdn.brawlify.com/brawlers/borders/16000088.png"
+  },
+  {
     "id": 16000089,
     "name": "MEEPLE",
     "name_jp": "",
