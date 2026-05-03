@@ -14,8 +14,8 @@ echo "===================="
 # 最新コードに更新 (push後の自分のcommitもfast-forward可能)
 git pull --rebase --autostash || echo "git pull failed, continue with current code"
 
-python3 crawl_full.py
-python3 build_db.py
+python3 -u crawl_full.py
+python3 -u build_db.py
 
 # db.json に変更があるときだけ commit & push
 git add data/db.json
