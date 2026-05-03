@@ -44,7 +44,7 @@ BRAWLIFY_CDN = "https://cdn.brawlify.com/brawlers/borders"
 
 MIN_PICKS_ABS = 1  # 絶対最小pick数 (すべてのプレイされたブロウラーを表示)
 MIN_PICK_RATE = 0  # マップ内ピック率フィルタ無効
-BAYES_PRIOR = 10  # ベイズ事前分布の強さ (少サンプルはマップ平均寄り)
+BAYES_PRIOR = 100  # ベイズ事前分布の強さ (少サンプルはマップ平均寄り、強めに)
 RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
 MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
 TOP_N_TRIOS = 8
