@@ -81,9 +81,11 @@ function selectMap(m) {
             <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
               <th class="pb-2 w-14">Tier</th>
               <th class="pb-2">ブロウラー</th>
-              <th class="pb-2 text-right w-16">picks</th>
-              <th class="pb-2 text-right w-16">WR</th>
-              <th class="pb-2 text-right w-16">avgRk</th>
+              <th class="pb-2 text-right w-14">picks</th>
+              <th class="pb-2 text-right w-16">1位率</th>
+              <th class="pb-2 text-right w-16">2位率</th>
+              <th class="pb-2 text-right w-14">TOP2</th>
+              <th class="pb-2 text-right w-14">平均順位</th>
             </tr>
           </thead>
           <tbody>
@@ -97,6 +99,8 @@ function selectMap(m) {
                   </div>
                 </td>
                 <td class="py-2 text-right">${t.picks}</td>
+                <td class="py-2 text-right font-mono text-green-300">${((t.rank1_rate || 0) * 100).toFixed(1)}%</td>
+                <td class="py-2 text-right font-mono text-blue-300">${((t.rank2_rate || 0) * 100).toFixed(1)}%</td>
                 <td class="py-2 text-right font-mono">${(t.win_rate * 100).toFixed(1)}%</td>
                 <td class="py-2 text-right font-mono">${t.avg_rank.toFixed(2)}</td>
               </tr>

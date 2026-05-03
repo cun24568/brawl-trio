@@ -47,7 +47,7 @@ TOP_N_TRIOS = 8
 TOP_N_TIER = 25
 
 
-def build_map_tier_list(brawler_rows, brawler_by_name):
+def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
     """
     マップ別ティアリストを生成。
     - ベイズ平均でWRを縮小 (少サンプルがS+にならない)
@@ -97,6 +97,12 @@ def build_map_tier_list(brawler_rows, brawler_by_name):
             tier = "C"
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
+        # 順位分布
+        rd = (rank_dist_for_map or {}).get(r["brawler"], {"r1": 0, "r2": 0, "r3": 0, "r4": 0})
+        rd_total = rd["r1"] + rd["r2"] + rd["r3"] + rd["r4"]
+        rank1_rate = round(rd["r1"] / rd_total, 3) if rd_total else 0
+        rank2_rate = round(rd["r2"] / rd_total, 3) if rd_total else 0
+
         scored.append({
             "brawler": r["brawler"],
             "brawler_id": master.get("id"),
@@ -106,6 +112,8 @@ def build_map_tier_list(brawler_rows, brawler_by_name):
             "win_rate": r["win_rate"],
             "bayes_wr": round(bayes_wr, 3),
             "avg_rank": r["avg_rank"],
+            "rank1_rate": rank1_rate,
+            "rank2_rate": rank2_rate,
             "pick_rate": round(pick_rate, 3),
             "score": round(score, 2),
             "tier": tier,
@@ -116,9 +124,15 @@ def build_map_tier_list(brawler_rows, brawler_by_name):
     return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
 
 
-def extract_trios(battles):
-    """各バトルからリクエスターのチーム3人を抽出して trio key で集計"""
+def extract_trios_and_rank_dist(battles):
+    """
+    raw battles から
+    - trio 編成統計 (map → trio_key → 集計)
+    - ブロウラー別順位分布 (map → brawler → 1位/2位/3位/4位 count)
+    の両方を返す。
+    """
     trio_stats = defaultdict(lambda: defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []}))
+    rank_dist = defaultdict(lambda: defaultdict(lambda: {"r1": 0, "r2": 0, "r3": 0, "r4": 0}))
     seen = set()
     for b in battles:
         key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
@@ -140,13 +154,27 @@ def extract_trios(battles):
         rank = bt.get("rank") or 5
         is_win = rank <= 2
         map_name = ev.get("map", "?")
+
+        # trio 統計
         trio_key = tuple(brawlers)
         s = trio_stats[map_name][trio_key]
         s["picks"] += 1
         if is_win:
             s["wins"] += 1
         s["ranks"].append(rank)
-    return trio_stats
+
+        # 各ブロウラーの順位分布
+        for br in brawlers:
+            rd = rank_dist[map_name][br]
+            if rank == 1:
+                rd["r1"] += 1
+            elif rank == 2:
+                rd["r2"] += 1
+            elif rank == 3:
+                rd["r3"] += 1
+            else:
+                rd["r4"] += 1
+    return trio_stats, rank_dist
 
 
 def main():
@@ -174,10 +202,10 @@ def main():
     for r in rows:
         by_map_name[r["map"]].append(r)
 
-    # 推奨編成抽出
+    # 推奨編成 + 順位分布抽出
     battles = json.loads(BATTLES_JSON.read_text(encoding="utf-8"))
-    trio_stats = extract_trios(battles)
-    print(f"Extracted trio stats for {len(trio_stats)} maps")
+    trio_stats, rank_dist = extract_trios_and_rank_dist(battles)
+    print(f"Extracted trio + rank dist for {len(trio_stats)} maps")
 
     # マップDB生成
     maps_out = []
@@ -189,7 +217,7 @@ def main():
 
         total = sum(r["picks"] for r in brawler_rows)
         tier_list, map_avg_wr, map_avg_rank = build_map_tier_list(
-            brawler_rows, brawler_by_name
+            brawler_rows, brawler_by_name, rank_dist.get(map_name)
         )
 
         # 推奨編成: WR降順 + picks降順
