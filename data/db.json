@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:47:52.057109+00:00",
+  "generated_at": "2026-05-03T18:55:22.247279+00:00",
   "stats": {
     "total_maps": 16,
     "maps_in_pool": 12,
@@ -35,26 +35,6 @@
           "pick_rate": 0.016,
           "score": 71.32,
           "delta": 0.068,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
-          "brawler": "EDGAR",
-          "brawler_jp": "エドガー",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 5259,
-          "wins": 3458,
-          "win_rate": 0.658,
-          "bayes_wr": 0.658,
-          "weighted_wr": 0.643,
-          "bayes_weighted": 0.643,
-          "avg_rank": 2.08,
-          "rank1_rate": 0.416,
-          "rank2_rate": 0.242,
-          "pick_rate": 0.064,
-          "score": 70.85,
-          "delta": 0.007,
           "insufficient": false,
           "tier": "S+"
         },
@@ -155,6 +135,26 @@
           "pick_rate": 0.007,
           "score": 67.88,
           "delta": 0.037,
+          "insufficient": false,
+          "tier": "S+"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_jp": "エドガー",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 5259,
+          "wins": 3458,
+          "win_rate": 0.658,
+          "bayes_wr": 0.658,
+          "weighted_wr": 0.643,
+          "bayes_weighted": 0.643,
+          "avg_rank": 2.08,
+          "rank1_rate": 0.416,
+          "rank2_rate": 0.242,
+          "pick_rate": 0.064,
+          "score": 67.63,
+          "delta": 0.007,
           "insufficient": false,
           "tier": "S+"
         },
@@ -1120,7 +1120,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1799,
@@ -2123,7 +2123,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2204,7 +2204,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2341,7 +2341,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2422,7 +2422,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2805,7 +2805,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -2827,7 +2827,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -3718,7 +3718,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -3902,7 +3902,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -4096,7 +4096,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -4209,7 +4209,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -4901,7 +4901,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -5068,7 +5068,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -6202,7 +6202,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -6899,7 +6899,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -6985,7 +6985,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -7417,7 +7417,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -9933,7 +9933,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -10495,7 +10495,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -11283,7 +11283,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -12309,7 +12309,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -13406,7 +13406,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -13794,7 +13794,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -15269,7 +15269,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -15652,7 +15652,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -15679,7 +15679,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -16035,7 +16035,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -16273,7 +16273,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17272,7 +17272,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17304,7 +17304,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -17321,7 +17321,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17407,7 +17407,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17488,7 +17488,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18050,7 +18050,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18217,7 +18217,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18298,7 +18298,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -19248,7 +19248,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -19945,7 +19945,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20004,7 +20004,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -20291,7 +20291,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20512,7 +20512,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20620,7 +20620,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20917,7 +20917,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21538,7 +21538,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21673,7 +21673,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21889,7 +21889,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -22353,7 +22353,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -22542,7 +22542,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -22559,7 +22559,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23374,7 +23374,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23428,7 +23428,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23504,7 +23504,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23828,7 +23828,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -24022,7 +24022,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -24098,7 +24098,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -24481,7 +24481,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -26749,7 +26749,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -26960,7 +26960,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27100,7 +27100,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27122,7 +27122,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27424,7 +27424,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27478,7 +27478,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -28180,7 +28180,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -28887,7 +28887,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -29098,7 +29098,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -29535,7 +29535,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -30048,7 +30048,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -30691,7 +30691,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -31121,26 +31121,6 @@
           "tier": "S+"
         },
         {
-          "brawler": "EDGAR",
-          "brawler_jp": "エドガー",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 250,
-          "wins": 175,
-          "win_rate": 0.7,
-          "bayes_wr": 0.698,
-          "weighted_wr": 0.674,
-          "bayes_weighted": 0.672,
-          "avg_rank": 2.0,
-          "rank1_rate": 0.424,
-          "rank2_rate": 0.278,
-          "pick_rate": 0.064,
-          "score": 67.03,
-          "delta": 0.034,
-          "insufficient": false,
-          "tier": "S+"
-        },
-        {
           "brawler": "JAE-YONG",
           "brawler_jp": "カゼ",
           "brawler_id": 16000093,
@@ -31178,7 +31158,7 @@
           "score": 65.42,
           "delta": 0.075,
           "insufficient": false,
-          "tier": "S"
+          "tier": "S+"
         },
         {
           "brawler": "COLETTE",
@@ -31197,6 +31177,26 @@
           "pick_rate": 0.034,
           "score": 64.55,
           "delta": 0.068,
+          "insufficient": false,
+          "tier": "S"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_jp": "エドガー",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 250,
+          "wins": 175,
+          "win_rate": 0.7,
+          "bayes_wr": 0.698,
+          "weighted_wr": 0.674,
+          "bayes_weighted": 0.672,
+          "avg_rank": 2.0,
+          "rank1_rate": 0.424,
+          "rank2_rate": 0.278,
+          "pick_rate": 0.064,
+          "score": 63.98,
+          "delta": 0.034,
           "insufficient": false,
           "tier": "S"
         },
@@ -31362,7 +31362,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 91,
@@ -33178,7 +33178,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33396,7 +33396,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33661,7 +33661,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33904,7 +33904,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -34171,7 +34171,7 @@
           "rank1_rate": 0.473,
           "rank2_rate": 0.203,
           "pick_rate": 0.063,
-          "score": 65.14,
+          "score": 62.18,
           "delta": 0.028,
           "insufficient": false,
           "tier": "S+"
@@ -34191,7 +34191,7 @@
           "rank1_rate": 0.464,
           "rank2_rate": 0.167,
           "pick_rate": 0.062,
-          "score": 63.66,
+          "score": 60.76,
           "delta": 0.017,
           "insufficient": false,
           "tier": "A"
@@ -34211,7 +34211,7 @@
           "rank1_rate": 0.433,
           "rank2_rate": 0.222,
           "pick_rate": 0.076,
-          "score": 63.13,
+          "score": 60.26,
           "delta": 0.011,
           "insufficient": false,
           "tier": "A"
@@ -35958,7 +35958,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 21,
@@ -36526,7 +36526,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "エメル",
+              "brawler_jp": "EMZ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -36567,7 +36567,7 @@
           "rank1_rate": 0.559,
           "rank2_rate": 0.103,
           "pick_rate": 0.164,
-          "score": 66.5,
+          "score": 63.47,
           "delta": 0.031,
           "insufficient": false,
           "tier": "S+"
@@ -37354,7 +37354,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 6,
@@ -38120,7 +38120,7 @@
           "rank1_rate": 0.792,
           "rank2_rate": 0.167,
           "pick_rate": 0.086,
-          "score": 89.04,
+          "score": 84.99,
           "delta": 0.061,
           "insufficient": true,
           "tier": "?"
@@ -38140,7 +38140,7 @@
           "rank1_rate": 0.842,
           "rank2_rate": 0.0,
           "pick_rate": 0.068,
-          "score": 86.76,
+          "score": 82.82,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -38160,7 +38160,7 @@
           "rank1_rate": 0.842,
           "rank2_rate": 0.0,
           "pick_rate": 0.068,
-          "score": 86.76,
+          "score": 82.82,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -38180,7 +38180,7 @@
           "rank1_rate": 0.708,
           "rank2_rate": 0.208,
           "pick_rate": 0.086,
-          "score": 86.49,
+          "score": 82.56,
           "delta": 0.04,
           "insufficient": true,
           "tier": "?"
@@ -38200,7 +38200,7 @@
           "rank1_rate": 0.8,
           "rank2_rate": 0.05,
           "pick_rate": 0.072,
-          "score": 86.14,
+          "score": 82.23,
           "delta": 0.035,
           "insufficient": true,
           "tier": "?"
@@ -38999,48 +38999,8 @@
           "rank1_rate": 0.519,
           "rank2_rate": 0.333,
           "pick_rate": 0.123,
-          "score": 76.41,
+          "score": 72.94,
           "delta": 0.045,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "DAMIAN",
-          "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 26,
-          "wins": 22,
-          "win_rate": 0.846,
-          "bayes_wr": 0.824,
-          "weighted_wr": 0.771,
-          "bayes_weighted": 0.756,
-          "avg_rank": 1.73,
-          "rank1_rate": 0.5,
-          "rank2_rate": 0.346,
-          "pick_rate": 0.119,
-          "score": 75.61,
-          "delta": 0.039,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "BROCK",
-          "brawler_jp": "ブロック",
-          "brawler_id": 16000003,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
-          "picks": 26,
-          "wins": 22,
-          "win_rate": 0.846,
-          "bayes_wr": 0.824,
-          "weighted_wr": 0.771,
-          "bayes_weighted": 0.756,
-          "avg_rank": 1.73,
-          "rank1_rate": 0.5,
-          "rank2_rate": 0.346,
-          "pick_rate": 0.119,
-          "score": 75.61,
-          "delta": 0.039,
           "insufficient": true,
           "tier": "?"
         },
@@ -39061,6 +39021,46 @@
           "pick_rate": 0.009,
           "score": 72.77,
           "delta": 0.047,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "DAMIAN",
+          "brawler_jp": "",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 26,
+          "wins": 22,
+          "win_rate": 0.846,
+          "bayes_wr": 0.824,
+          "weighted_wr": 0.771,
+          "bayes_weighted": 0.756,
+          "avg_rank": 1.73,
+          "rank1_rate": 0.5,
+          "rank2_rate": 0.346,
+          "pick_rate": 0.119,
+          "score": 72.17,
+          "delta": 0.039,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BROCK",
+          "brawler_jp": "ブロック",
+          "brawler_id": 16000003,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
+          "picks": 26,
+          "wins": 22,
+          "win_rate": 0.846,
+          "bayes_wr": 0.824,
+          "weighted_wr": 0.771,
+          "bayes_weighted": 0.756,
+          "avg_rank": 1.73,
+          "rank1_rate": 0.5,
+          "rank2_rate": 0.346,
+          "pick_rate": 0.119,
+          "score": 72.17,
+          "delta": 0.039,
           "insufficient": true,
           "tier": "?"
         },
@@ -39566,7 +39566,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 5,
@@ -39932,7 +39932,7 @@
           "rank1_rate": 0.889,
           "rank2_rate": 0.0,
           "pick_rate": 0.055,
-          "score": 81.77,
+          "score": 78.05,
           "delta": 0.12,
           "insufficient": true,
           "tier": "?"
@@ -40971,7 +40971,7 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.125,
           "pick_rate": 0.054,
-          "score": 77.98,
+          "score": 74.43,
           "delta": 0.058,
           "insufficient": true,
           "tier": "?"
@@ -40991,28 +40991,8 @@
           "rank1_rate": 0.75,
           "rank2_rate": 0.125,
           "pick_rate": 0.054,
-          "score": 77.98,
+          "score": 74.43,
           "delta": 0.058,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "SHADE",
-          "brawler_jp": "シェイド",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 9,
-          "wins": 7,
-          "win_rate": 0.778,
-          "bayes_wr": 0.766,
-          "weighted_wr": 0.747,
-          "bayes_weighted": 0.727,
-          "avg_rank": 1.78,
-          "rank1_rate": 0.667,
-          "rank2_rate": 0.111,
-          "pick_rate": 0.061,
-          "score": 72.59,
-          "delta": 0.018,
           "insufficient": true,
           "tier": "?"
         },
@@ -41073,66 +41053,6 @@
           "pick_rate": 0.014,
           "score": 72.27,
           "delta": 0.048,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "KIT",
-          "brawler_jp": "キット",
-          "brawler_id": 16000076,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
-          "picks": 20,
-          "wins": 16,
-          "win_rate": 0.8,
-          "bayes_wr": 0.785,
-          "weighted_wr": 0.731,
-          "bayes_weighted": 0.724,
-          "avg_rank": 1.85,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.136,
-          "score": 71.87,
-          "delta": 0.014,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "DOUG",
-          "brawler_jp": "ダグ",
-          "brawler_id": 16000071,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
-          "picks": 20,
-          "wins": 16,
-          "win_rate": 0.8,
-          "bayes_wr": 0.785,
-          "weighted_wr": 0.731,
-          "bayes_weighted": 0.724,
-          "avg_rank": 1.85,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.136,
-          "score": 71.87,
-          "delta": 0.014,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "JAE-YONG",
-          "brawler_jp": "カゼ",
-          "brawler_id": 16000093,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
-          "picks": 20,
-          "wins": 16,
-          "win_rate": 0.8,
-          "bayes_wr": 0.785,
-          "weighted_wr": 0.731,
-          "bayes_weighted": 0.724,
-          "avg_rank": 1.85,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.136,
-          "score": 71.87,
-          "delta": 0.014,
           "insufficient": true,
           "tier": "?"
         },
@@ -41218,7 +41138,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -41253,6 +41173,86 @@
           "pick_rate": 0.007,
           "score": 70.29,
           "delta": 0.026,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "SHADE",
+          "brawler_jp": "シェイド",
+          "brawler_id": 16000086,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
+          "picks": 9,
+          "wins": 7,
+          "win_rate": 0.778,
+          "bayes_wr": 0.766,
+          "weighted_wr": 0.747,
+          "bayes_weighted": 0.727,
+          "avg_rank": 1.78,
+          "rank1_rate": 0.667,
+          "rank2_rate": 0.111,
+          "pick_rate": 0.061,
+          "score": 69.29,
+          "delta": 0.018,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "KIT",
+          "brawler_jp": "キット",
+          "brawler_id": 16000076,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
+          "picks": 20,
+          "wins": 16,
+          "win_rate": 0.8,
+          "bayes_wr": 0.785,
+          "weighted_wr": 0.731,
+          "bayes_weighted": 0.724,
+          "avg_rank": 1.85,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.136,
+          "score": 68.61,
+          "delta": 0.014,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "DOUG",
+          "brawler_jp": "ダグ",
+          "brawler_id": 16000071,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
+          "picks": 20,
+          "wins": 16,
+          "win_rate": 0.8,
+          "bayes_wr": 0.785,
+          "weighted_wr": 0.731,
+          "bayes_weighted": 0.724,
+          "avg_rank": 1.85,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.136,
+          "score": 68.61,
+          "delta": 0.014,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "JAE-YONG",
+          "brawler_jp": "カゼ",
+          "brawler_id": 16000093,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
+          "picks": 20,
+          "wins": 16,
+          "win_rate": 0.8,
+          "bayes_wr": 0.785,
+          "weighted_wr": 0.731,
+          "bayes_weighted": 0.724,
+          "avg_rank": 1.85,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.136,
+          "score": 68.61,
+          "delta": 0.014,
           "insufficient": true,
           "tier": "?"
         },
@@ -41836,7 +41836,7 @@
           "rank1_rate": 0.636,
           "rank2_rate": 0.273,
           "pick_rate": 0.089,
-          "score": 78.79,
+          "score": 75.21,
           "delta": 0.101,
           "insufficient": true,
           "tier": "?"
@@ -41856,7 +41856,7 @@
           "rank1_rate": 0.636,
           "rank2_rate": 0.273,
           "pick_rate": 0.089,
-          "score": 78.79,
+          "score": 75.21,
           "delta": 0.101,
           "insufficient": true,
           "tier": "?"
@@ -41876,7 +41876,7 @@
           "rank1_rate": 0.625,
           "rank2_rate": 0.25,
           "pick_rate": 0.065,
-          "score": 76.23,
+          "score": 72.77,
           "delta": 0.077,
           "insufficient": true,
           "tier": "?"
@@ -42653,46 +42653,6 @@
       "map_avg_rank": 2.03,
       "tier_list": [
         {
-          "brawler": "PIERCE",
-          "brawler_jp": "ピアス",
-          "brawler_id": 16000099,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.721,
-          "weighted_wr": 0.8,
-          "bayes_weighted": 0.706,
-          "avg_rank": 1.6,
-          "rank1_rate": 0.6,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.053,
-          "score": 72.07,
-          "delta": 0.047,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "BROCK",
-          "brawler_jp": "ブロック",
-          "brawler_id": 16000003,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.721,
-          "weighted_wr": 0.744,
-          "bayes_weighted": 0.688,
-          "avg_rank": 1.8,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.053,
-          "score": 69.24,
-          "delta": 0.028,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "GIGI",
           "brawler_jp": "ジジ",
           "brawler_id": 16000100,
@@ -42713,22 +42673,22 @@
           "tier": "?"
         },
         {
-          "brawler": "BYRON",
-          "brawler_jp": "バイロン",
-          "brawler_id": 16000042,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
-          "picks": 8,
-          "wins": 6,
-          "win_rate": 0.75,
-          "bayes_wr": 0.712,
-          "weighted_wr": 0.715,
-          "bayes_weighted": 0.684,
-          "avg_rank": 1.88,
-          "rank1_rate": 0.375,
-          "rank2_rate": 0.375,
-          "pick_rate": 0.085,
-          "score": 68.5,
-          "delta": 0.025,
+          "brawler": "PIERCE",
+          "brawler_jp": "ピアス",
+          "brawler_id": 16000099,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.721,
+          "weighted_wr": 0.8,
+          "bayes_weighted": 0.706,
+          "avg_rank": 1.6,
+          "rank1_rate": 0.6,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.053,
+          "score": 68.79,
+          "delta": 0.047,
           "insufficient": true,
           "tier": "?"
         },
@@ -42909,6 +42869,46 @@
           "pick_rate": 0.011,
           "score": 66.79,
           "delta": 0.031,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BROCK",
+          "brawler_jp": "ブロック",
+          "brawler_id": 16000003,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.721,
+          "weighted_wr": 0.744,
+          "bayes_weighted": 0.688,
+          "avg_rank": 1.8,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.053,
+          "score": 66.1,
+          "delta": 0.028,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BYRON",
+          "brawler_jp": "バイロン",
+          "brawler_id": 16000042,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
+          "picks": 8,
+          "wins": 6,
+          "win_rate": 0.75,
+          "bayes_wr": 0.712,
+          "weighted_wr": 0.715,
+          "bayes_weighted": 0.684,
+          "avg_rank": 1.88,
+          "rank1_rate": 0.375,
+          "rank2_rate": 0.375,
+          "pick_rate": 0.085,
+          "score": 65.38,
+          "delta": 0.025,
           "insufficient": true,
           "tier": "?"
         },
@@ -43468,26 +43468,6 @@
           "tier": "?"
         },
         {
-          "brawler": "BIBI",
-          "brawler_jp": "ビビ",
-          "brawler_id": 16000026,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.719,
-          "weighted_wr": 0.8,
-          "bayes_weighted": 0.721,
-          "avg_rank": 1.6,
-          "rank1_rate": 0.6,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.06,
-          "score": 73.18,
-          "delta": 0.04,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "FANG",
           "brawler_jp": "ファング",
           "brawler_id": 16000054,
@@ -43504,26 +43484,6 @@
           "pick_rate": 0.036,
           "score": 72.28,
           "delta": 0.074,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "DAMIAN",
-          "brawler_jp": "",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 8,
-          "wins": 6,
-          "win_rate": 0.75,
-          "bayes_wr": 0.71,
-          "weighted_wr": 0.75,
-          "bayes_weighted": 0.712,
-          "avg_rank": 1.75,
-          "rank1_rate": 0.625,
-          "rank2_rate": 0.125,
-          "pick_rate": 0.095,
-          "score": 71.54,
-          "delta": 0.03,
           "insufficient": true,
           "tier": "?"
         },
@@ -43548,6 +43508,26 @@
           "tier": "?"
         },
         {
+          "brawler": "BIBI",
+          "brawler_jp": "ビビ",
+          "brawler_id": 16000026,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.719,
+          "weighted_wr": 0.8,
+          "bayes_weighted": 0.721,
+          "avg_rank": 1.6,
+          "rank1_rate": 0.6,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.06,
+          "score": 69.85,
+          "delta": 0.04,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "MORTIS",
           "brawler_jp": "モーティス",
           "brawler_id": 16000011,
@@ -43564,6 +43544,26 @@
           "pick_rate": 0.036,
           "score": 68.8,
           "delta": 0.051,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "DAMIAN",
+          "brawler_jp": "",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 8,
+          "wins": 6,
+          "win_rate": 0.75,
+          "bayes_wr": 0.71,
+          "weighted_wr": 0.75,
+          "bayes_weighted": 0.712,
+          "avg_rank": 1.75,
+          "rank1_rate": 0.625,
+          "rank2_rate": 0.125,
+          "pick_rate": 0.095,
+          "score": 68.29,
+          "delta": 0.03,
           "insufficient": true,
           "tier": "?"
         },
@@ -43889,7 +43889,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 15,
@@ -44057,7 +44057,7 @@
           "rank1_rate": 0.714,
           "rank2_rate": 0.143,
           "pick_rate": 0.097,
-          "score": 76.49,
+          "score": 73.01,
           "delta": 0.042,
           "insufficient": true,
           "tier": "?"
@@ -44077,7 +44077,7 @@
           "rank1_rate": 0.571,
           "rank2_rate": 0.286,
           "pick_rate": 0.097,
-          "score": 76.49,
+          "score": 73.01,
           "delta": 0.042,
           "insufficient": true,
           "tier": "?"
@@ -44143,66 +44143,6 @@
           "tier": "?"
         },
         {
-          "brawler": "BO",
-          "brawler_jp": "ボウ",
-          "brawler_id": 16000014,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000014.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.767,
-          "weighted_wr": 0.744,
-          "bayes_weighted": 0.725,
-          "avg_rank": 1.8,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.069,
-          "score": 72.14,
-          "delta": 0.01,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "JAE-YONG",
-          "brawler_jp": "カゼ",
-          "brawler_id": 16000093,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.767,
-          "weighted_wr": 0.744,
-          "bayes_weighted": 0.725,
-          "avg_rank": 1.8,
-          "rank1_rate": 0.6,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.069,
-          "score": 72.14,
-          "delta": 0.01,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "POCO",
-          "brawler_jp": "ポコ",
-          "brawler_id": 16000013,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "bayes_wr": 0.767,
-          "weighted_wr": 0.744,
-          "bayes_weighted": 0.725,
-          "avg_rank": 1.8,
-          "rank1_rate": 0.6,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.069,
-          "score": 72.14,
-          "delta": 0.01,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "MICO",
           "brawler_jp": "ミコ",
           "brawler_id": 16000075,
@@ -44224,7 +44164,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -44259,6 +44199,66 @@
           "pick_rate": 0.014,
           "score": 70.64,
           "delta": 0.026,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BO",
+          "brawler_jp": "ボウ",
+          "brawler_id": 16000014,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000014.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.767,
+          "weighted_wr": 0.744,
+          "bayes_weighted": 0.725,
+          "avg_rank": 1.8,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.069,
+          "score": 68.87,
+          "delta": 0.01,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "JAE-YONG",
+          "brawler_jp": "カゼ",
+          "brawler_id": 16000093,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.767,
+          "weighted_wr": 0.744,
+          "bayes_weighted": 0.725,
+          "avg_rank": 1.8,
+          "rank1_rate": 0.6,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.069,
+          "score": 68.87,
+          "delta": 0.01,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "POCO",
+          "brawler_jp": "ポコ",
+          "brawler_id": 16000013,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
+          "picks": 5,
+          "wins": 4,
+          "win_rate": 0.8,
+          "bayes_wr": 0.767,
+          "weighted_wr": 0.744,
+          "bayes_weighted": 0.725,
+          "avg_rank": 1.8,
+          "rank1_rate": 0.6,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.069,
+          "score": 68.87,
+          "delta": 0.01,
           "insufficient": true,
           "tier": "?"
         },
@@ -44668,7 +44668,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.056,
-          "score": 62.0,
+          "score": 59.18,
           "delta": 0.09,
           "insufficient": true,
           "tier": "?"
@@ -44728,7 +44728,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.222,
-          "score": 47.38,
+          "score": 45.23,
           "delta": 0.017,
           "insufficient": true,
           "tier": "?"
@@ -44748,7 +44748,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.167,
-          "score": 47.12,
+          "score": 44.98,
           "delta": 0.014,
           "insufficient": true,
           "tier": "?"
@@ -44768,7 +44768,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.056,
-          "score": 46.33,
+          "score": 44.22,
           "delta": 0.006,
           "insufficient": true,
           "tier": "?"
@@ -44959,7 +44959,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.2,
-          "score": 60.91,
+          "score": 58.14,
           "delta": 0.19,
           "insufficient": true,
           "tier": "?"
@@ -44999,7 +44999,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.0,
           "pick_rate": 0.133,
-          "score": 44.47,
+          "score": 42.45,
           "delta": 0.061,
           "insufficient": true,
           "tier": "?"
@@ -45066,7 +45066,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -45154,7 +45154,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.19,
-          "score": 74.54,
+          "score": 71.15,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -45174,7 +45174,7 @@
           "rank1_rate": 0.5,
           "rank2_rate": 0.5,
           "pick_rate": 0.19,
-          "score": 74.54,
+          "score": 71.15,
           "delta": 0.053,
           "insufficient": true,
           "tier": "?"
@@ -45194,7 +45194,7 @@
           "rank1_rate": 0.333,
           "rank2_rate": 0.667,
           "pick_rate": 0.143,
-          "score": 71.63,
+          "score": 68.37,
           "delta": 0.032,
           "insufficient": true,
           "tier": "?"
@@ -45349,7 +45349,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.182,
-          "score": 94.51,
+          "score": 90.22,
           "delta": 0.015,
           "insufficient": true,
           "tier": "?"
@@ -45369,7 +45369,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 93.82,
+          "score": 89.55,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -45389,7 +45389,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 93.82,
+          "score": 89.55,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -45409,7 +45409,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 93.82,
+          "score": 89.55,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -45429,7 +45429,7 @@
           "rank1_rate": 1.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.091,
-          "score": 93.82,
+          "score": 89.55,
           "delta": 0.008,
           "insufficient": true,
           "tier": "?"
@@ -45456,7 +45456,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "エメル",
+          "brawler_jp": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -45530,26 +45530,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.857,
           "picks": 28
         }
@@ -45557,16 +45562,19 @@
       "worst_maps": [
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 3
         },
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -45582,26 +45590,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 8
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.857,
           "picks": 7
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.833,
           "picks": 6
         }
@@ -45609,16 +45622,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.602,
           "picks": 161
         }
@@ -45634,26 +45650,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 5
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.889,
           "picks": 9
         }
@@ -45661,16 +45682,19 @@
       "worst_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.645,
           "picks": 3652
         }
@@ -45686,26 +45710,31 @@
       "best_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.917,
           "picks": 24
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.684,
           "picks": 19
         }
@@ -45713,16 +45742,19 @@
       "worst_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 4
         }
@@ -45738,26 +45770,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.852,
           "picks": 27
         }
@@ -45765,16 +45802,19 @@
       "worst_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.531,
           "picks": 32
         }
@@ -45790,26 +45830,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.8,
           "picks": 20
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.67,
           "picks": 2734
         }
@@ -45817,16 +45862,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.412,
           "picks": 17
         }
@@ -45842,26 +45890,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.661,
           "picks": 2131
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.607,
           "picks": 89
         }
@@ -45869,16 +45922,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.333,
           "picks": 6
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.333,
           "picks": 3
         }
@@ -45887,33 +45943,38 @@
     {
       "id": 16000030,
       "name": "EMZ",
-      "name_jp": "エメル",
+      "name_jp": "EMZ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
       "rarity": "Epic",
       "total_picks": 1941,
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.634,
           "picks": 1799
         }
@@ -45921,16 +45982,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.4,
           "picks": 5
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.524,
           "picks": 21
         }
@@ -45946,26 +46010,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.846,
           "picks": 26
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.833,
           "picks": 12
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.646,
           "picks": 1669
         }
@@ -45973,16 +46042,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.595,
           "picks": 37
         }
@@ -45998,26 +46070,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.628,
           "picks": 1604
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.626,
           "picks": 91
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.579,
           "picks": 19
         }
@@ -46025,16 +46102,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 4
         }
@@ -46050,26 +46130,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.61,
           "picks": 77
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.602,
           "picks": 1529
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.6,
           "picks": 15
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.571,
           "picks": 14
         }
@@ -46077,16 +46162,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -46102,26 +46190,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 3
         }
@@ -46129,16 +46222,19 @@
       "worst_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 3
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.421,
           "picks": 19
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.652,
           "picks": 1477
         }
@@ -46154,26 +46250,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 27
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.587,
           "picks": 1522
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.586,
           "picks": 70
         }
@@ -46181,16 +46282,19 @@
       "worst_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 6
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -46206,26 +46310,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.636,
           "picks": 11
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.581,
           "picks": 1452
         }
@@ -46233,16 +46342,19 @@
       "worst_maps": [
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.5,
           "picks": 6
         }
@@ -46258,26 +46370,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.75,
           "picks": 4
         }
@@ -46285,16 +46402,19 @@
       "worst_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.333,
           "picks": 3
         }
@@ -46310,26 +46430,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.778,
           "picks": 9
         }
@@ -46337,16 +46462,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.6,
           "picks": 10
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.631,
           "picks": 1448
         }
@@ -46362,26 +46490,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.846,
           "picks": 26
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.795,
           "picks": 88
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.75,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.717,
           "picks": 1340
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.68,
           "picks": 25
         }
@@ -46389,16 +46522,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.68,
           "picks": 25
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.717,
           "picks": 1340
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.75,
           "picks": 8
         }
@@ -46414,26 +46550,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.905,
           "picks": 21
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.691,
           "picks": 1311
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.672,
           "picks": 61
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 6
         }
@@ -46441,16 +46582,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 6
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.672,
           "picks": 61
         }
@@ -46466,26 +46610,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.651,
           "picks": 43
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.64,
           "picks": 1289
         }
@@ -46493,16 +46642,19 @@
       "worst_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.4,
           "picks": 5
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.48,
           "picks": 25
         }
@@ -46518,26 +46670,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.778,
           "picks": 9
         }
@@ -46545,16 +46702,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 9
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.364,
           "picks": 22
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -46570,26 +46730,31 @@
       "best_maps": [
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.75,
           "picks": 4
         }
@@ -46597,16 +46762,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.571,
           "picks": 56
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.593,
           "picks": 27
         }
@@ -46622,26 +46790,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.958,
           "picks": 24
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.75,
           "picks": 8
         }
@@ -46649,16 +46822,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.629,
           "picks": 1174
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.641,
           "picks": 39
         }
@@ -46674,26 +46850,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.641,
           "picks": 1197
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.525,
           "picks": 40
         }
@@ -46701,16 +46882,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -46726,26 +46910,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 12
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.659,
           "picks": 1110
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.582,
           "picks": 55
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 2
         }
@@ -46753,16 +46942,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.582,
           "picks": 55
         }
@@ -46778,26 +46970,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.679,
           "picks": 53
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.673,
           "picks": 1087
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 28
         }
@@ -46805,16 +47002,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 28
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.673,
           "picks": 1087
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.679,
           "picks": 53
         }
@@ -46830,26 +47030,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.8,
           "picks": 5
         }
@@ -46857,16 +47062,19 @@
       "worst_maps": [
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.5,
           "picks": 12
         }
@@ -46882,26 +47090,31 @@
       "best_maps": [
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -46909,16 +47122,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.662,
           "picks": 1032
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 36
         }
@@ -46934,26 +47150,31 @@
       "best_maps": [
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.75,
           "picks": 12
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.75,
           "picks": 8
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.677,
           "picks": 31
         }
@@ -46961,16 +47182,19 @@
       "worst_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.613,
           "picks": 1030
         }
@@ -46986,26 +47210,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.786,
           "picks": 14
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.722,
           "picks": 18
         }
@@ -47013,16 +47242,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.25,
           "picks": 8
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.55,
           "picks": 60
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.64,
           "picks": 903
         }
@@ -47038,26 +47270,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.643,
           "picks": 14
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.641,
           "picks": 934
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.623,
           "picks": 53
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47065,16 +47302,19 @@
       "worst_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.25,
           "picks": 4
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47090,26 +47330,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.634,
           "picks": 920
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.604,
           "picks": 53
         }
@@ -47117,16 +47362,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.4,
           "picks": 10
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.604,
           "picks": 53
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.634,
           "picks": 920
         }
@@ -47142,26 +47390,31 @@
       "best_maps": [
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 20
         }
@@ -47169,16 +47422,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.167,
           "picks": 6
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 6
         }
@@ -47194,26 +47450,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.714,
           "picks": 7
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.628,
           "picks": 888
         }
@@ -47221,16 +47482,19 @@
       "worst_maps": [
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 18
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47246,26 +47510,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.679,
           "picks": 829
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.615,
           "picks": 13
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.611,
           "picks": 18
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 2
         }
@@ -47273,16 +47542,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.611,
           "picks": 18
         }
@@ -47298,26 +47570,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.75,
           "picks": 12
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.677,
           "picks": 756
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.636,
           "picks": 22
         }
@@ -47325,16 +47602,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.25,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.429,
           "picks": 21
         }
@@ -47350,26 +47630,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.857,
           "picks": 7
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.686,
           "picks": 35
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.664,
           "picks": 706
         }
@@ -47377,16 +47662,19 @@
       "worst_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.5,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.664,
           "picks": 706
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.686,
           "picks": 35
         }
@@ -47402,26 +47690,31 @@
       "best_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.671,
           "picks": 70
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         }
@@ -47429,16 +47722,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.625,
           "picks": 666
         }
@@ -47454,26 +47750,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.598,
           "picks": 711
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.536,
           "picks": 28
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47481,16 +47782,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.4,
           "picks": 5
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47506,26 +47810,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.8,
           "picks": 20
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.669,
           "picks": 677
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.524,
           "picks": 21
         }
@@ -47533,16 +47842,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 5
         },
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -47558,21 +47870,25 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.775,
           "picks": 40
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.678,
           "picks": 681
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.667,
           "picks": 3
         }
@@ -47580,16 +47896,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.678,
           "picks": 681
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.775,
           "picks": 40
         }
@@ -47605,26 +47924,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.8,
           "picks": 20
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.755,
           "picks": 53
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.694,
           "picks": 614
         }
@@ -47632,16 +47956,19 @@
       "worst_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.571,
           "picks": 7
         }
@@ -47657,26 +47984,31 @@
       "best_maps": [
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.625,
           "picks": 16
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.596,
           "picks": 649
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.593,
           "picks": 27
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.571,
           "picks": 7
         }
@@ -47684,16 +48016,19 @@
       "worst_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.571,
           "picks": 7
         }
@@ -47709,26 +48044,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.644,
           "picks": 598
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.629,
           "picks": 62
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 0.333,
           "picks": 3
         }
@@ -47736,16 +48076,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.629,
           "picks": 62
         }
@@ -47761,26 +48104,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.676,
           "picks": 612
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.655,
           "picks": 29
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.625,
           "picks": 16
         }
@@ -47788,16 +48136,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.625,
           "picks": 16
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.655,
           "picks": 29
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.676,
           "picks": 612
         }
@@ -47813,26 +48164,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.85,
           "picks": 20
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.688,
           "picks": 16
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 6
         }
@@ -47840,16 +48196,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.614,
           "picks": 591
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 6
         }
@@ -47865,26 +48224,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 39
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.628,
           "picks": 584
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.333,
           "picks": 3
         }
@@ -47892,16 +48256,19 @@
       "worst_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.628,
           "picks": 584
         }
@@ -47917,26 +48284,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.833,
           "picks": 18
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.648,
           "picks": 549
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.393,
           "picks": 28
         },
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 2
         }
@@ -47944,16 +48316,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -47969,26 +48344,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.812,
           "picks": 16
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.8,
           "picks": 20
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.653,
           "picks": 519
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.636,
           "picks": 33
         }
@@ -47996,16 +48376,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.636,
           "picks": 33
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.653,
           "picks": 519
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.8,
           "picks": 20
         }
@@ -48021,26 +48404,31 @@
       "best_maps": [
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.909,
           "picks": 11
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.762,
           "picks": 21
         }
@@ -48048,16 +48436,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.666,
           "picks": 524
         }
@@ -48073,26 +48464,31 @@
       "best_maps": [
         {
           "map": "Core of Orbit",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.8,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.7,
           "picks": 10
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.635,
           "picks": 551
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48100,16 +48496,19 @@
       "worst_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.635,
           "picks": 551
         }
@@ -48125,26 +48524,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 12
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.655,
           "picks": 531
         }
@@ -48152,16 +48556,19 @@
       "worst_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.4,
           "picks": 5
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.655,
           "picks": 531
         }
@@ -48177,21 +48584,25 @@
       "best_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.623,
           "picks": 523
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.615,
           "picks": 13
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 16
         }
@@ -48199,16 +48610,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 16
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.615,
           "picks": 13
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.623,
           "picks": 523
         }
@@ -48224,26 +48638,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.857,
           "picks": 7
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.778,
           "picks": 9
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.694,
           "picks": 49
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.686,
           "picks": 481
         }
@@ -48251,16 +48670,19 @@
       "worst_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.686,
           "picks": 481
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.694,
           "picks": 49
         }
@@ -48276,26 +48698,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.651,
           "picks": 507
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.375,
           "picks": 16
         }
@@ -48303,16 +48730,19 @@
       "worst_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.375,
           "picks": 16
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.375,
           "picks": 8
         }
@@ -48328,26 +48758,31 @@
       "best_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.642,
           "picks": 481
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.639,
           "picks": 36
         }
@@ -48355,16 +48790,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 10
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.639,
           "picks": 36
         }
@@ -48380,26 +48818,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.818,
           "picks": 22
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.64,
           "picks": 495
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -48407,16 +48850,19 @@
       "worst_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.64,
           "picks": 495
         }
@@ -48432,26 +48878,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Gated Community",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.778,
           "picks": 9
         }
@@ -48459,16 +48910,19 @@
       "worst_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.677,
           "picks": 31
         }
@@ -48484,26 +48938,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.606,
           "picks": 480
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.6,
           "picks": 30
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.571,
           "picks": 7
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -48511,16 +48970,19 @@
       "worst_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.571,
           "picks": 7
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.6,
           "picks": 30
         }
@@ -48536,26 +48998,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.692,
           "picks": 26
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.651,
           "picks": 467
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.529,
           "picks": 17
         }
@@ -48563,16 +49030,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.529,
           "picks": 17
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.651,
           "picks": 467
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.692,
           "picks": 26
         }
@@ -48588,26 +49058,31 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 21
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.65,
           "picks": 434
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.556,
           "picks": 9
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48615,16 +49090,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48640,26 +49118,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.842,
           "picks": 19
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.638,
           "picks": 442
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48667,16 +49150,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.638,
           "picks": 442
         }
@@ -48692,26 +49178,31 @@
       "best_maps": [
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.722,
           "picks": 18
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.642,
           "picks": 424
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48719,16 +49210,19 @@
       "worst_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -48744,26 +49238,31 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -48771,16 +49270,19 @@
       "worst_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 8
         }
@@ -48796,26 +49298,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.765,
           "picks": 17
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         }
@@ -48823,16 +49330,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.571,
           "picks": 7
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.618,
           "picks": 398
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         }
@@ -48848,26 +49358,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.729,
           "picks": 70
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.656,
           "picks": 349
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.333,
           "picks": 3
         }
@@ -48875,16 +49390,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.333,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.656,
           "picks": 349
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.729,
           "picks": 70
         }
@@ -48900,21 +49418,25 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.646,
           "picks": 376
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.625,
           "picks": 32
         }
@@ -48922,16 +49444,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.625,
           "picks": 32
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.646,
           "picks": 376
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -48947,26 +49472,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.7,
           "picks": 10
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.616,
           "picks": 378
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.583,
           "picks": 12
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.222,
           "picks": 9
         }
@@ -48974,16 +49504,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.222,
           "picks": 9
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.583,
           "picks": 12
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.616,
           "picks": 378
         }
@@ -48999,26 +49532,31 @@
       "best_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.616,
           "picks": 388
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.556,
           "picks": 9
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.286,
           "picks": 7
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 2
         }
@@ -49026,16 +49564,19 @@
       "worst_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.0,
           "picks": 2
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.286,
           "picks": 7
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.556,
           "picks": 9
         }
@@ -49051,26 +49592,31 @@
       "best_maps": [
         {
           "map": "Double Trouble",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.842,
           "picks": 19
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.714,
           "picks": 7
         }
@@ -49078,16 +49624,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.609,
           "picks": 366
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.714,
           "picks": 7
         }
@@ -49103,26 +49652,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.65,
           "picks": 371
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.591,
           "picks": 22
         }
@@ -49130,16 +49684,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.591,
           "picks": 22
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.65,
           "picks": 371
         }
@@ -49155,21 +49712,25 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 5
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.955,
           "picks": 22
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.7,
           "picks": 373
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -49177,16 +49738,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.7,
           "picks": 373
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.955,
           "picks": 22
         }
@@ -49202,26 +49766,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.857,
           "picks": 7
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.75,
           "picks": 8
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.722,
           "picks": 18
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.644,
           "picks": 357
         }
@@ -49229,16 +49798,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.644,
           "picks": 357
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.722,
           "picks": 18
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.75,
           "picks": 8
         }
@@ -49254,26 +49826,31 @@
       "best_maps": [
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 1.0,
           "picks": 7
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.714,
           "picks": 14
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.706,
           "picks": 344
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.6,
           "picks": 5
         }
@@ -49281,16 +49858,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.4,
           "picks": 5
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.667,
           "picks": 6
         }
@@ -49306,26 +49886,31 @@
       "best_maps": [
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.889,
           "picks": 9
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.765,
           "picks": 17
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.672,
           "picks": 345
         }
@@ -49333,16 +49918,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.672,
           "picks": 345
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.765,
           "picks": 17
         }
@@ -49358,26 +49946,31 @@
       "best_maps": [
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.762,
           "picks": 21
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.608,
           "picks": 342
         }
@@ -49385,16 +49978,19 @@
       "worst_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Cavern Churn",
+          "map_jp": "激動の洞窟",
           "win_rate": 0.5,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.608,
           "picks": 342
         }
@@ -49410,26 +50006,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.691,
           "picks": 356
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.429,
           "picks": 7
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -49437,16 +50038,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.429,
           "picks": 7
         }
@@ -49462,21 +50066,25 @@
       "best_maps": [
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.718,
           "picks": 39
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.655,
           "picks": 325
         },
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -49484,16 +50092,19 @@
       "worst_maps": [
         {
           "map": "Safety Center",
+          "map_jp": "安全センター",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.655,
           "picks": 325
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.718,
           "picks": 39
         }
@@ -49509,21 +50120,25 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.653,
           "picks": 337
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.429,
           "picks": 7
         }
@@ -49531,16 +50146,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.429,
           "picks": 7
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.653,
           "picks": 337
         }
@@ -49556,26 +50174,31 @@
       "best_maps": [
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 42
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.778,
           "picks": 9
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.778,
           "picks": 9
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.724,
           "picks": 275
         }
@@ -49583,16 +50206,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.724,
           "picks": 275
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.778,
           "picks": 9
         }
@@ -49608,21 +50234,25 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.75,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.651,
           "picks": 275
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.562,
           "picks": 16
         }
@@ -49630,16 +50260,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.562,
           "picks": 16
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.651,
           "picks": 275
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.75,
           "picks": 8
         }
@@ -49655,26 +50288,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 8
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.909,
           "picks": 11
         }
@@ -49682,16 +50320,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.4,
           "picks": 20
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.506,
           "picks": 249
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.909,
           "picks": 11
         }
@@ -49707,21 +50348,25 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.615,
           "picks": 273
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.333,
           "picks": 6
         }
@@ -49729,16 +50374,19 @@
       "worst_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.333,
           "picks": 6
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.615,
           "picks": 273
         }
@@ -49754,26 +50402,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.722,
           "picks": 270
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.688,
           "picks": 16
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -49781,16 +50434,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.688,
           "picks": 16
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.722,
           "picks": 270
         }
@@ -49806,26 +50462,31 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 1.0,
           "picks": 3
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.608,
           "picks": 268
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -49833,16 +50494,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Feast or Famine",
+          "map_jp": "天国と地獄",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.5,
           "picks": 2
         }
@@ -49858,21 +50522,25 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.733,
           "picks": 15
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.567,
           "picks": 261
         }
@@ -49880,16 +50548,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.567,
           "picks": 261
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.733,
           "picks": 15
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 6
         }
@@ -49905,21 +50576,25 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.778,
           "picks": 9
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.558,
           "picks": 242
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -49927,16 +50602,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.558,
           "picks": 242
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.778,
           "picks": 9
         }
@@ -49952,16 +50630,19 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.571,
           "picks": 7
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.566,
           "picks": 242
         }
@@ -49969,16 +50650,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.566,
           "picks": 242
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.571,
           "picks": 7
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -49994,26 +50678,31 @@
       "best_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.66,
           "picks": 215
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -50021,16 +50710,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 0.6,
           "picks": 5
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.66,
           "picks": 215
         }
@@ -50046,16 +50738,19 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.68,
           "picks": 50
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.665,
           "picks": 167
         }
@@ -50063,16 +50758,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.665,
           "picks": 167
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.68,
           "picks": 50
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -50088,26 +50786,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.857,
           "picks": 7
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.72,
           "picks": 200
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -50115,16 +50818,19 @@
       "worst_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.72,
           "picks": 200
         }
@@ -50140,26 +50846,31 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.713,
           "picks": 202
         }
@@ -50167,16 +50878,19 @@
       "worst_maps": [
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.713,
           "picks": 202
         },
         {
           "map": "Lilypond Grove",
+          "map_jp": "リリーラグーン",
           "win_rate": 0.75,
           "picks": 4
         }
@@ -50192,26 +50906,31 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 0.875,
           "picks": 8
         },
         {
           "map": "Kroket",
+          "map_jp": "クロケット",
           "win_rate": 0.786,
           "picks": 14
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.658,
           "picks": 184
         }
@@ -50219,16 +50938,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.658,
           "picks": 184
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 4
         }
@@ -50244,11 +50966,13 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 1.0,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.579,
           "picks": 209
         }
@@ -50256,11 +50980,13 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.579,
           "picks": 209
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 1.0,
           "picks": 2
         }
@@ -50276,11 +51002,13 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.647,
           "picks": 204
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 4
         }
@@ -50288,11 +51016,13 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.647,
           "picks": 204
         }
@@ -50308,26 +51038,31 @@
       "best_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.657,
           "picks": 178
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.333,
           "picks": 9
         }
@@ -50335,16 +51070,19 @@
       "worst_maps": [
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.333,
           "picks": 9
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.657,
           "picks": 178
         }
@@ -50360,21 +51098,25 @@
       "best_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.62,
           "picks": 158
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.556,
           "picks": 9
         },
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -50382,16 +51124,19 @@
       "worst_maps": [
         {
           "map": "Acid Lakes",
+          "map_jp": "酸性湖",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.556,
           "picks": 9
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.62,
           "picks": 158
         }
@@ -50407,21 +51152,25 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.592,
           "picks": 157
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         }
@@ -50429,16 +51178,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.0,
           "picks": 1
         },
         {
           "map": "Truth",
+          "map_jp": "真実",
           "win_rate": 0.5,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.592,
           "picks": 157
         }
@@ -50454,21 +51206,25 @@
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.75,
           "picks": 4
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 3
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.643,
           "picks": 154
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.25,
           "picks": 4
         }
@@ -50476,16 +51232,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.25,
           "picks": 4
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.643,
           "picks": 154
         },
         {
           "map": "Rockwall Brawl",
+          "map_jp": "岩壁の決戦",
           "win_rate": 0.667,
           "picks": 3
         }
@@ -50501,16 +51260,19 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.685,
           "picks": 111
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.25,
           "picks": 4
         }
@@ -50518,16 +51280,19 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.25,
           "picks": 4
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 2
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.685,
           "picks": 111
         }
@@ -50543,16 +51308,19 @@
       "best_maps": [
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.654,
           "picks": 104
         }
@@ -50560,16 +51328,19 @@
       "worst_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.654,
           "picks": 104
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.833,
           "picks": 6
         },
         {
           "map": "Twisting Vines",
+          "map_jp": "",
           "win_rate": 1.0,
           "picks": 1
         }
@@ -50585,11 +51356,13 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.562,
           "picks": 96
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.375,
           "picks": 8
         }
@@ -50597,11 +51370,13 @@
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.375,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.562,
           "picks": 96
         }
@@ -50617,21 +51392,25 @@
       "best_maps": [
         {
           "map": "Flying Fantasies",
+          "map_jp": "空飛ぶ絨毯",
           "win_rate": 1.0,
           "picks": 6
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 6
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.532,
           "picks": 79
         },
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 8
         }
@@ -50639,16 +51418,19 @@
       "worst_maps": [
         {
           "map": "Skull Creek",
+          "map_jp": "ガイコツ川",
           "win_rate": 0.5,
           "picks": 8
         },
         {
           "map": "Molten to the Core",
+          "map_jp": "マグマの心臓",
           "win_rate": 0.532,
           "picks": 79
         },
         {
           "map": "Makeshift Scaffolding",
+          "map_jp": "即席足場",
           "win_rate": 0.667,
           "picks": 6
         }
