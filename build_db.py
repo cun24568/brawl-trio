@@ -21,6 +21,7 @@ trio_meta_full.csv + manual_mappings.json + brawlers.json + maps_pool.json
 """
 import csv
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -214,7 +215,11 @@ HIGH_TROPHY_WEIGHT = 2.0
 
 def name_to_hash(name):
     """EN名からBrawlify hash推定 (Brawlify未収録ブロウラー用)"""
-    return (name or "").lower().replace(" ", "-").replace("_", "-")
+    s = (name or "").lower()
+    s = re.sub(r"\s*&\s*", "-", s)  # & を - に (LARRY & LAWRIE → larry-lawrie)
+    s = re.sub(r"[\s_]+", "-", s)
+    s = re.sub(r"-+", "-", s)
+    return s.strip("-")
 
 
 def get_brawler_jp(brawler_name, brawler_by_name, brawler_jp):
