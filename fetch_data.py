@@ -64,7 +64,7 @@ def main():
                 "image_url": b.get("imageUrl", ""),
             }
             for b in brawlers_raw["list"]
-            if b.get("released")
+            # released フィルタ無し: Brawlifyが released=false にしてる新キャラも含める
         ],
         key=lambda x: x["id"],
     )
