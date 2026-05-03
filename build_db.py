@@ -56,6 +56,9 @@ MIN_PICKS_FOR_RELIABLE_TIER = 50
 # 人気ボーナス: pick_rate >= 5% で score を 1.1倍
 POPULAR_PICK_RATE = 0.05
 POPULARITY_BONUS = 1.10
+# サンプル少penalty: picks <= 300 で 0.9倍
+LOW_PICKS_THRESHOLD = 300
+LOW_PICKS_PENALTY = 0.9
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
 TIER_PCT_S = 0.25
@@ -144,6 +147,9 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         rank_adv = map_avg_rank - r["avg_rank"]
         # スコアは weighted ベース
         score = bayes_weighted * 100 + rank_adv * RANK_WEIGHT
+        # サンプル少penalty (picks <= 300 で 0.9倍)
+        if picks <= LOW_PICKS_THRESHOLD:
+            score *= LOW_PICKS_PENALTY
         # 人気ボーナス (pick_rate >= 5% で1.1倍)
         if pick_rate >= POPULAR_PICK_RATE:
             score *= POPULARITY_BONUS
