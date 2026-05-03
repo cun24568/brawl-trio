@@ -53,6 +53,9 @@ SCORE_MAX = SCORE_R1  # 9
 SCORE_RANGE = SCORE_MAX - SCORE_MIN  # 18
 # ティア判定に必要な最小サンプル数 (これ未満は「?」)
 MIN_PICKS_FOR_RELIABLE_TIER = 50
+# 人気ボーナス: pick_rate >= 5% で score を 1.1倍
+POPULAR_PICK_RATE = 0.05
+POPULARITY_BONUS = 1.10
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
 TIER_PCT_S = 0.25
@@ -141,6 +144,9 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         rank_adv = map_avg_rank - r["avg_rank"]
         # スコアは weighted ベース
         score = bayes_weighted * 100 + rank_adv * RANK_WEIGHT
+        # 人気ボーナス (pick_rate >= 5% で1.1倍)
+        if pick_rate >= POPULAR_PICK_RATE:
+            score *= POPULARITY_BONUS
         delta = bayes_weighted - map_avg_weighted
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
