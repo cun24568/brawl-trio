@@ -228,8 +228,7 @@ function renderSynergySection(m) {
   );
 
   const opt = (val, sel) => {
-    const jp = brawlerJp[val] || val;
-    const display = (jp !== val) ? `${jp} (${val})` : val;
+    const display = brawlerJp[val] || val;
     return `<option value="${escapeHtml(val)}" ${val === sel ? "selected" : ""}>${escapeHtml(display)}</option>`;
   };
   const dropdown = (slot, selected) => `
