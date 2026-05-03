@@ -1,0 +1,392 @@
+[
+  {
+    "id": 15000751,
+    "name": "Skull-Creek",
+    "name_jp": "ガイコツ川",
+    "hash": "skull-creek",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000751.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000794,
+    "name": "Burger-Bay",
+    "name_jp": "",
+    "hash": "burger-bay",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000794.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000795,
+    "name": "Thousand-Jellies",
+    "name_jp": "",
+    "hash": "thousand-jellies",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000795.png",
+    "environment": "Default",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000796,
+    "name": "Ring-o-Brawlin",
+    "name_jp": "",
+    "hash": "ring-o-brawlin",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000796.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000797,
+    "name": "Bullseye",
+    "name_jp": "",
+    "hash": "bullseye",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000797.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000798,
+    "name": "Starr-Fish",
+    "name_jp": "",
+    "hash": "starr-fish",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000798.png",
+    "environment": "Default",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000799,
+    "name": "Splashing-Rivers",
+    "name_jp": "",
+    "hash": "splashing-rivers",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000799.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000800,
+    "name": "Squad-Out",
+    "name_jp": "",
+    "hash": "squad-out",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000800.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000848,
+    "name": "Feast-or-Famine",
+    "name_jp": "天国と地獄",
+    "hash": "feast-or-famine",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000848.png",
+    "environment": "Default",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000849,
+    "name": "Dark-Passage",
+    "name_jp": "",
+    "hash": "dark-passage",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000849.png",
+    "environment": "Default",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000937,
+    "name": "Rockwall-Brawl",
+    "name_jp": "岩壁の決戦",
+    "hash": "rockwall-brawl",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000937.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000938,
+    "name": "Cavern-Churn",
+    "name_jp": "激動の洞窟",
+    "hash": "cavern-churn",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000938.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000939,
+    "name": "Acid-Lakes",
+    "name_jp": "酸性湖",
+    "hash": "acid-lakes",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000939.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000940,
+    "name": "Flying-Fantasies",
+    "name_jp": "空飛ぶ絨毯",
+    "hash": "flying-fantasies",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000940.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000941,
+    "name": "Island-Invasion",
+    "name_jp": "",
+    "hash": "island-invasion",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000941.png",
+    "environment": "IslandShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000942,
+    "name": "Double-Trouble",
+    "name_jp": "",
+    "hash": "double-trouble",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000942.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000943,
+    "name": "Safety-Center",
+    "name_jp": "安全センター",
+    "hash": "safety-center",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000943.png",
+    "environment": "ArcadeShowdown",
+    "disabled": true,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000946,
+    "name": "Skull-Creek",
+    "name_jp": "ガイコツ川",
+    "hash": "skull-creek",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000946.png",
+    "environment": "ArcadeShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000949,
+    "name": "Rockwall-Brawl",
+    "name_jp": "岩壁の決戦",
+    "hash": "rockwall-brawl",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000949.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000952,
+    "name": "Feast-or-Famine",
+    "name_jp": "天国と地獄",
+    "hash": "feast-or-famine",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000952.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000955,
+    "name": "Cavern-Churn",
+    "name_jp": "激動の洞窟",
+    "hash": "cavern-churn",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000955.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000958,
+    "name": "Acid-Lakes",
+    "name_jp": "酸性湖",
+    "hash": "acid-lakes",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000958.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000961,
+    "name": "Flying-Fantasies",
+    "name_jp": "空飛ぶ絨毯",
+    "hash": "flying-fantasies",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000961.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000964,
+    "name": "Island-Invasion",
+    "name_jp": "",
+    "hash": "island-invasion",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000964.png",
+    "environment": "DefaultShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000967,
+    "name": "Double-Trouble",
+    "name_jp": "",
+    "hash": "double-trouble",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000967.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000970,
+    "name": "Safety-Center",
+    "name_jp": "安全センター",
+    "hash": "safety-center",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000970.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000983,
+    "name": "Mystical-Thirty-Three",
+    "name_jp": "",
+    "hash": "mystical-thirty-three",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000983.png",
+    "environment": "MortuaryShowdown",
+    "disabled": true,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000986,
+    "name": "Waveform",
+    "name_jp": "",
+    "hash": "waveform",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000986.png",
+    "environment": "ArcadeShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000989,
+    "name": "Core-of-Orbit",
+    "name_jp": "",
+    "hash": "core-of-orbit",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000989.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15000992,
+    "name": "Lilypond-Grove",
+    "name_jp": "リリーラグーン",
+    "hash": "lilypond-grove",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000992.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001014,
+    "name": "Crystal-Eye-Castle",
+    "name_jp": "",
+    "hash": "crystal-eye-castle",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001014.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15001017,
+    "name": "Seeker",
+    "name_jp": "",
+    "hash": "seeker",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001017.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15001109,
+    "name": "Truth",
+    "name_jp": "真実",
+    "hash": "truth",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001109.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001110,
+    "name": "Twisting-Vines",
+    "name_jp": "",
+    "hash": "twisting-vines",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001110.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15001142,
+    "name": "Kroket",
+    "name_jp": "クロケット",
+    "hash": "kroket",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001142.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001143,
+    "name": "Lotus",
+    "name_jp": "",
+    "hash": "lotus",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001143.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15001144,
+    "name": "Gated-Community",
+    "name_jp": "",
+    "hash": "gated-community",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001144.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  },
+  {
+    "id": 15001145,
+    "name": "Makeshift-Scaffolding",
+    "name_jp": "即席足場",
+    "hash": "makeshift-scaffolding",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001145.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001182,
+    "name": "North-Park-Station",
+    "name_jp": "",
+    "hash": "north-park-station",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001182.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": false
+  }
+]

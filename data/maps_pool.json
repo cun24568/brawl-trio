@@ -1,0 +1,134 @@
+[
+  {
+    "id": 15000751,
+    "name": "Skull-Creek",
+    "name_jp": "ガイコツ川",
+    "hash": "skull-creek",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000751.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000949,
+    "name": "Rockwall-Brawl",
+    "name_jp": "岩壁の決戦",
+    "hash": "rockwall-brawl",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000949.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000952,
+    "name": "Feast-or-Famine",
+    "name_jp": "天国と地獄",
+    "hash": "feast-or-famine",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000952.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000955,
+    "name": "Cavern-Churn",
+    "name_jp": "激動の洞窟",
+    "hash": "cavern-churn",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000955.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000958,
+    "name": "Acid-Lakes",
+    "name_jp": "酸性湖",
+    "hash": "acid-lakes",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000958.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000961,
+    "name": "Flying-Fantasies",
+    "name_jp": "空飛ぶ絨毯",
+    "hash": "flying-fantasies",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000961.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000970,
+    "name": "Safety-Center",
+    "name_jp": "安全センター",
+    "hash": "safety-center",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000970.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15000992,
+    "name": "Lilypond-Grove",
+    "name_jp": "リリーラグーン",
+    "hash": "lilypond-grove",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15000992.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001109,
+    "name": "Truth",
+    "name_jp": "真実",
+    "hash": "truth",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001109.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001142,
+    "name": "Kroket",
+    "name_jp": "クロケット",
+    "hash": "kroket",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001142.png",
+    "environment": "MortuaryShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": 15001145,
+    "name": "Makeshift-Scaffolding",
+    "name_jp": "即席足場",
+    "hash": "makeshift-scaffolding",
+    "image_url": "https://cdn.brawlify.com/maps/regular/15001145.png",
+    "environment": "DefaultShowdown",
+    "disabled": false,
+    "in_rotation_pool": true
+  },
+  {
+    "id": null,
+    "name": "Molten-to-the-Core",
+    "name_jp": "マグマの心臓",
+    "hash": "molten-to-the-core",
+    "image_url": null,
+    "environment": null,
+    "disabled": false,
+    "in_rotation_pool": true,
+    "_source": "manual"
+  },
+  {
+    "id": null,
+    "name": "Starfruit-Supernova",
+    "name_jp": "スターフルーツ超新星",
+    "hash": "starfruit-supernova",
+    "image_url": null,
+    "environment": null,
+    "disabled": false,
+    "in_rotation_pool": true,
+    "_source": "manual"
+  }
+]

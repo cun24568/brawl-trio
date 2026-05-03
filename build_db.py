@@ -1,0 +1,258 @@
+"""
+trio_meta_full.csv + manual_mappings.json + brawlers.json + maps_pool.json
+を統合して UI 用の単一 db.json を出力する。
+
+スキーマ:
+{
+  "generated_at": "...",
+  "maps": [
+    {
+      "id", "name", "name_jp", "image_url", "in_pool",
+      "total_picks", "tier_list": [{"brawler","picks","wins","win_rate","tier"}, ...]
+    }
+  ],
+  "brawlers": [
+    {
+      "id", "name", "name_jp", "image_url", "rarity",
+      "best_maps": [{"map","win_rate","picks"}, ...],
+    }
+  ]
+}
+"""
+import csv
+import json
+import sys
+from collections import defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+ROOT = Path(__file__).parent
+DATA = ROOT / "data"
+
+META_CSV = DATA / "trio_meta_full.csv"
+BATTLES_JSON = DATA / "trio_battles_full.json"
+MANUAL = DATA / "manual_mappings.json"
+BRAWLERS = DATA / "brawlers.json"
+MAPS_POOL = DATA / "maps_pool.json"
+OUT = DATA / "db.json"
+
+MIN_PICKS_FOR_TIER = 5  # ティア掲載最小pick数
+MIN_PICKS_FOR_TRIO = 2  # 推奨編成掲載最小pick数
+TOP_N_TRIOS = 8
+
+
+def tier_of(wr: float, picks: int) -> str:
+    """簡易ティアリング。pick少ないやつは1段下げる。"""
+    base = (
+        "S+" if wr >= 0.85 else "S" if wr >= 0.75 else "A" if wr >= 0.65 else "B" if wr >= 0.55 else "C"
+    )
+    if picks < 10:  # サンプル少ないなら1段下げ
+        rank = ["S+", "S", "A", "B", "C"]
+        i = rank.index(base)
+        return rank[min(i + 1, len(rank) - 1)]
+    return base
+
+
+def extract_trios(battles):
+    """各バトルからリクエスターのチーム3人を抽出して trio key で集計"""
+    trio_stats = defaultdict(lambda: defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []}))
+    seen = set()
+    for b in battles:
+        key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        ev = b.get("event", {})
+        bt = b.get("battle", {})
+        teams = bt.get("teams", [])
+        ti = b.get("_requester_team_idx")
+        if ti is None or ti >= len(teams):
+            continue
+        team = teams[ti]
+        brawlers = sorted(
+            [(p.get("brawler") or {}).get("name", "?") for p in team]
+        )
+        if len(brawlers) != 3:
+            continue
+        rank = bt.get("rank") or 5
+        is_win = rank <= 2
+        map_name = ev.get("map", "?")
+        trio_key = tuple(brawlers)
+        s = trio_stats[map_name][trio_key]
+        s["picks"] += 1
+        if is_win:
+            s["wins"] += 1
+        s["ranks"].append(rank)
+    return trio_stats
+
+
+def main():
+    # マスタ読み込み
+    manual = json.loads(MANUAL.read_text(encoding="utf-8"))
+    map_jp = manual.get("map_jp_names", {})
+    brawler_jp = manual.get("brawler_jp_names", {})
+
+    brawlers_raw = json.loads(BRAWLERS.read_text(encoding="utf-8"))
+    brawler_by_name = {b["name"].upper(): b for b in brawlers_raw}
+
+    pool_maps = json.loads(MAPS_POOL.read_text(encoding="utf-8"))
+    pool_by_hash = {m["hash"]: m for m in pool_maps}
+
+    # メタCSV読み込み
+    rows = list(csv.DictReader(META_CSV.open(encoding="utf-8-sig")))
+    for r in rows:
+        r["picks"] = int(r["picks"])
+        r["wins"] = int(r["wins"])
+        r["win_rate"] = float(r["win_rate"])
+        r["avg_rank"] = float(r["avg_rank"])
+
+    # マップ別グループ
+    by_map_name = defaultdict(list)
+    for r in rows:
+        by_map_name[r["map"]].append(r)
+
+    # 推奨編成抽出
+    battles = json.loads(BATTLES_JSON.read_text(encoding="utf-8"))
+    trio_stats = extract_trios(battles)
+    print(f"Extracted trio stats for {len(trio_stats)} maps")
+
+    # マップDB生成
+    maps_out = []
+    for map_name, brawler_rows in by_map_name.items():
+        # hash 推定: 名前を kebab-case に
+        hash_guess = map_name.lower().replace(" ", "-")
+        in_pool = hash_guess in pool_by_hash
+        pool_map = pool_by_hash.get(hash_guess, {})
+
+        total = sum(r["picks"] for r in brawler_rows)
+        # ティア順: WR降順, picks降順
+        sorted_rows = sorted(
+            [r for r in brawler_rows if r["picks"] >= MIN_PICKS_FOR_TIER],
+            key=lambda x: (-x["win_rate"], -x["picks"]),
+        )
+        tier_list = []
+        for r in sorted_rows[:20]:
+            br_master = brawler_by_name.get(r["brawler"].upper(), {})
+            tier_list.append(
+                {
+                    "brawler": r["brawler"],
+                    "brawler_id": br_master.get("id"),
+                    "image_url": br_master.get("image_url"),
+                    "picks": r["picks"],
+                    "wins": r["wins"],
+                    "win_rate": r["win_rate"],
+                    "avg_rank": r["avg_rank"],
+                    "tier": tier_of(r["win_rate"], r["picks"]),
+                }
+            )
+
+        # 推奨編成: WR降順 + picks降順
+        m_trios = trio_stats.get(map_name, {})
+        rec_trios = []
+        for trio_key, s in m_trios.items():
+            if s["picks"] < MIN_PICKS_FOR_TRIO:
+                continue
+            picks = s["picks"]
+            wins = s["wins"]
+            wr = wins / picks
+            avg_r = sum(s["ranks"]) / len(s["ranks"])
+            # 各メンバーの画像URL付き
+            members = []
+            for br in trio_key:
+                bm = brawler_by_name.get(br.upper(), {})
+                members.append(
+                    {
+                        "brawler": br,
+                        "image_url": bm.get("image_url"),
+                    }
+                )
+            rec_trios.append(
+                {
+                    "members": members,
+                    "picks": picks,
+                    "wins": wins,
+                    "win_rate": round(wr, 3),
+                    "avg_rank": round(avg_r, 2),
+                }
+            )
+        rec_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
+        rec_trios = rec_trios[:TOP_N_TRIOS]
+
+        maps_out.append(
+            {
+                "id": pool_map.get("id"),
+                "hash": hash_guess,
+                "name": map_name,
+                "name_jp": map_jp.get(hash_guess, ""),
+                "image_url": pool_map.get("image_url"),
+                "in_pool": in_pool,
+                "total_picks": total,
+                "tier_list": tier_list,
+                "recommended_trios": rec_trios,
+            }
+        )
+    maps_out.sort(key=lambda m: -m["total_picks"])
+
+    # ブロウラーDB生成 (各ブロウラーが強いマップ TOP5)
+    by_brawler = defaultdict(list)
+    for r in rows:
+        by_brawler[r["brawler"]].append(r)
+
+    brawlers_out = []
+    for br_name, br_rows in by_brawler.items():
+        master = brawler_by_name.get(br_name.upper(), {})
+        # 強いマップ: WR降順 (5pick以上)
+        valid = [r for r in br_rows if r["picks"] >= MIN_PICKS_FOR_TIER]
+        best = sorted(valid, key=lambda x: -x["win_rate"])[:5]
+        worst = sorted(valid, key=lambda x: x["win_rate"])[:3]
+        brawlers_out.append(
+            {
+                "id": master.get("id"),
+                "name": br_name,
+                "name_jp": brawler_jp.get((master.get("hash") or "").lower(), ""),
+                "image_url": master.get("image_url"),
+                "rarity": master.get("rarity"),
+                "total_picks": sum(r["picks"] for r in br_rows),
+                "best_maps": [
+                    {
+                        "map": r["map"],
+                        "win_rate": r["win_rate"],
+                        "picks": r["picks"],
+                    }
+                    for r in best
+                ],
+                "worst_maps": [
+                    {
+                        "map": r["map"],
+                        "win_rate": r["win_rate"],
+                        "picks": r["picks"],
+                    }
+                    for r in worst
+                ],
+            }
+        )
+    brawlers_out.sort(key=lambda b: -b["total_picks"])
+
+    db = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "stats": {
+            "total_maps": len(maps_out),
+            "maps_in_pool": sum(1 for m in maps_out if m["in_pool"]),
+            "total_brawlers": len(brawlers_out),
+            "total_picks": sum(m["total_picks"] for m in maps_out),
+        },
+        "maps": maps_out,
+        "brawlers": brawlers_out,
+    }
+
+    OUT.write_text(json.dumps(db, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Saved: {OUT}")
+    print(f"  maps: {db['stats']['total_maps']} ({db['stats']['maps_in_pool']} in pool)")
+    print(f"  brawlers: {db['stats']['total_brawlers']}")
+    print(f"  total picks: {db['stats']['total_picks']}")
+
+
+if __name__ == "__main__":
+    main()

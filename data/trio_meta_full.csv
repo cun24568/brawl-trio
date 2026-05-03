@@ -1,0 +1,337 @@
+﻿map,brawler,picks,wins,win_rate,avg_rank
+Cavern Churn,BUZZ,1,0,0.0,4.0
+Cavern Churn,BO,1,0,0.0,4.0
+Cavern Churn,GROM,1,0,0.0,4.0
+Core of Orbit,GRIFF,2,2,1.0,1.0
+Core of Orbit,DYNAMIKE,1,1,1.0,1.0
+Core of Orbit,BEA,1,1,1.0,1.0
+Core of Orbit,CORDELIUS,1,1,1.0,1.0
+Core of Orbit,PIERCE,1,1,1.0,1.0
+Core of Orbit,EDGAR,1,0,0.0,3.0
+Core of Orbit,PIPER,1,0,0.0,3.0
+Double Trouble,MORTIS,32,10,0.312,2.97
+Double Trouble,8-BIT,6,6,1.0,1.5
+Double Trouble,MELODIE,3,0,0.0,3.67
+Double Trouble,DRACO,3,0,0.0,3.67
+Double Trouble,COLETTE,2,1,0.5,2.5
+Double Trouble,MINA,2,0,0.0,3.5
+Double Trouble,FANG,1,0,0.0,4.0
+Double Trouble,DOUG,1,0,0.0,3.0
+Double Trouble,GRIFF,1,0,0.0,4.0
+Double Trouble,MAISIE,1,0,0.0,4.0
+Double Trouble,SHELLY,1,1,1.0,2.0
+Double Trouble,EL PRIMO,1,0,0.0,4.0
+Feast or Famine,DYNAMIKE,6,6,1.0,1.0
+Feast or Famine,FANG,6,6,1.0,1.0
+Feast or Famine,DAMIAN,6,6,1.0,1.0
+Flying Fantasies,ALLI,6,6,1.0,1.0
+Flying Fantasies,BROCK,6,6,1.0,1.0
+Flying Fantasies,CROW,6,6,1.0,1.0
+Flying Fantasies,EDGAR,5,4,0.8,1.4
+Flying Fantasies,SPIKE,5,4,0.8,1.4
+Flying Fantasies,BELLE,5,4,0.8,1.4
+Kroket,COLT,20,18,0.9,1.4
+Kroket,RUFFS,19,16,0.842,1.32
+Kroket,8-BIT,19,16,0.842,1.32
+Kroket,GENE,19,16,0.842,1.32
+Kroket,BYRON,17,17,1.0,1.24
+Kroket,EDGAR,16,16,1.0,1.31
+Kroket,ZIGGY,8,8,1.0,1.38
+Kroket,LEON,7,6,0.857,1.43
+Kroket,JANET,6,6,1.0,1.33
+Kroket,SHELLY,5,3,0.6,1.8
+Kroket,FANG,4,3,0.75,1.5
+Kroket,CROW,3,3,1.0,1.33
+Kroket,BROCK,3,2,0.667,2.0
+Kroket,KIT,2,2,1.0,2.0
+Kroket,COLETTE,2,2,1.0,1.0
+Kroket,CORDELIUS,1,1,1.0,2.0
+Kroket,BEA,1,0,0.0,3.0
+Kroket,NAJIA,1,0,0.0,3.0
+Lilypond Grove,PIERCE,2,2,1.0,2.0
+Lilypond Grove,CROW,2,2,1.0,2.0
+Lilypond Grove,RICO,1,1,1.0,2.0
+Lilypond Grove,GALE,1,1,1.0,2.0
+Makeshift Scaffolding,EDGAR,87,63,0.724,1.87
+Makeshift Scaffolding,HANK,78,55,0.705,1.81
+Makeshift Scaffolding,COLT,59,38,0.644,2.0
+Makeshift Scaffolding,COLETTE,53,46,0.868,1.4
+Makeshift Scaffolding,EMZ,50,40,0.8,1.56
+Makeshift Scaffolding,JAE-YONG,49,36,0.735,1.82
+Makeshift Scaffolding,GRIFF,48,42,0.875,1.42
+Makeshift Scaffolding,STU,45,34,0.756,1.69
+Makeshift Scaffolding,BROCK,43,26,0.605,2.0
+Makeshift Scaffolding,KIT,40,27,0.675,1.98
+Makeshift Scaffolding,MORTIS,38,25,0.658,2.03
+Makeshift Scaffolding,CARL,38,33,0.868,1.66
+Makeshift Scaffolding,LOLA,37,30,0.811,1.7
+Makeshift Scaffolding,CROW,36,33,0.917,1.44
+Makeshift Scaffolding,DAMIAN,35,30,0.857,1.4
+Makeshift Scaffolding,KENJI,34,28,0.824,1.65
+Makeshift Scaffolding,RICO,32,20,0.625,1.97
+Makeshift Scaffolding,SHADE,30,28,0.933,1.47
+Makeshift Scaffolding,FANG,29,21,0.724,1.86
+Makeshift Scaffolding,GUS,28,20,0.714,1.79
+Makeshift Scaffolding,CHUCK,23,16,0.696,1.91
+Makeshift Scaffolding,CORDELIUS,21,13,0.619,2.0
+Makeshift Scaffolding,NAJIA,20,13,0.65,2.05
+Makeshift Scaffolding,SIRIUS,20,11,0.55,2.3
+Makeshift Scaffolding,NITA,19,12,0.632,2.16
+Makeshift Scaffolding,LEON,18,12,0.667,2.06
+Makeshift Scaffolding,POCO,18,10,0.556,2.22
+Makeshift Scaffolding,SPIKE,17,16,0.941,1.35
+Makeshift Scaffolding,JANET,17,11,0.647,2.24
+Makeshift Scaffolding,MICO,16,7,0.438,2.56
+Makeshift Scaffolding,BUSTER,15,8,0.533,2.13
+Makeshift Scaffolding,BULL,15,9,0.6,2.4
+Makeshift Scaffolding,SURGE,15,10,0.667,1.93
+Makeshift Scaffolding,DOUG,14,5,0.357,2.71
+Makeshift Scaffolding,MR. P,14,6,0.429,2.5
+Makeshift Scaffolding,SANDY,14,9,0.643,2.0
+Makeshift Scaffolding,PEARL,14,14,1.0,1.14
+Makeshift Scaffolding,GLOWY,13,8,0.615,1.92
+Makeshift Scaffolding,BIBI,13,9,0.692,1.85
+Makeshift Scaffolding,MANDY,13,6,0.462,2.62
+Makeshift Scaffolding,BYRON,13,9,0.692,1.85
+Makeshift Scaffolding,CHESTER,11,8,0.727,2.18
+Makeshift Scaffolding,LILY,11,4,0.364,3.0
+Makeshift Scaffolding,MAISIE,11,7,0.636,1.91
+Makeshift Scaffolding,BERRY,10,4,0.4,2.6
+Makeshift Scaffolding,EL PRIMO,10,7,0.7,2.0
+Makeshift Scaffolding,BEA,9,4,0.444,2.44
+Makeshift Scaffolding,MEG,9,8,0.889,1.44
+Makeshift Scaffolding,MINA,9,4,0.444,2.56
+Makeshift Scaffolding,MEEPLE,8,6,0.75,1.75
+Makeshift Scaffolding,AMBER,8,5,0.625,1.88
+Makeshift Scaffolding,RUFFS,7,3,0.429,2.57
+Makeshift Scaffolding,PAM,6,4,0.667,2.5
+Makeshift Scaffolding,TICK,6,4,0.667,2.0
+Makeshift Scaffolding,PIERCE,5,4,0.8,1.8
+Makeshift Scaffolding,SQUEAK,5,3,0.6,2.2
+Makeshift Scaffolding,MELODIE,5,5,1.0,1.2
+Makeshift Scaffolding,KAZE,5,4,0.8,1.6
+Makeshift Scaffolding,PENNY,5,4,0.8,1.6
+Makeshift Scaffolding,DYNAMIKE,5,3,0.6,2.6
+Makeshift Scaffolding,MOE,5,1,0.2,3.4
+Makeshift Scaffolding,PIPER,5,3,0.6,2.0
+Makeshift Scaffolding,ALLI,4,3,0.75,1.5
+Makeshift Scaffolding,ZIGGY,4,4,1.0,1.0
+Makeshift Scaffolding,SAM,4,4,1.0,1.25
+Makeshift Scaffolding,BO,4,3,0.75,1.75
+Makeshift Scaffolding,TRUNK,4,2,0.5,2.5
+Makeshift Scaffolding,NANI,3,2,0.667,2.33
+Makeshift Scaffolding,ANGELO,3,1,0.333,3.0
+Makeshift Scaffolding,DARRYL,2,2,1.0,1.5
+Makeshift Scaffolding,EVE,2,1,0.5,3.0
+Makeshift Scaffolding,ASH,2,0,0.0,3.5
+Makeshift Scaffolding,OTIS,2,2,1.0,1.5
+Makeshift Scaffolding,SHELLY,2,2,1.0,1.0
+Makeshift Scaffolding,ROSA,2,1,0.5,2.0
+Makeshift Scaffolding,JESSIE,2,2,1.0,1.5
+Makeshift Scaffolding,R-T,2,2,1.0,1.5
+Makeshift Scaffolding,CLANCY,2,2,1.0,1.0
+Makeshift Scaffolding,BUZZ,1,1,1.0,1.0
+Makeshift Scaffolding,BELLE,1,1,1.0,1.0
+Makeshift Scaffolding,TARA,1,1,1.0,1.0
+Makeshift Scaffolding,GROM,1,1,1.0,2.0
+Makeshift Scaffolding,MAX,1,1,1.0,1.0
+Makeshift Scaffolding,JACKY,1,0,0.0,4.0
+Makeshift Scaffolding,8-BIT,1,1,1.0,2.0
+Molten to the Core,EDGAR,246,175,0.711,1.91
+Molten to the Core,KIT,222,169,0.761,1.75
+Molten to the Core,MORTIS,190,146,0.768,1.73
+Molten to the Core,JAE-YONG,155,132,0.852,1.52
+Molten to the Core,HANK,149,129,0.866,1.48
+Molten to the Core,JANET,136,96,0.706,1.8
+Molten to the Core,BROCK,102,71,0.696,1.85
+Molten to the Core,RUFFS,99,59,0.596,2.14
+Molten to the Core,BYRON,94,66,0.702,1.97
+Molten to the Core,PENNY,91,61,0.67,2.09
+Molten to the Core,BUSTER,86,61,0.709,1.84
+Molten to the Core,COLETTE,82,59,0.72,1.77
+Molten to the Core,LEON,80,59,0.738,1.88
+Molten to the Core,CHESTER,78,71,0.91,1.37
+Molten to the Core,COLT,75,53,0.707,1.91
+Molten to the Core,MINA,65,39,0.6,2.23
+Molten to the Core,GRIFF,60,41,0.683,2.03
+Molten to the Core,SPIKE,58,42,0.724,1.84
+Molten to the Core,PIERCE,56,47,0.839,1.61
+Molten to the Core,SIRIUS,56,40,0.714,1.84
+Molten to the Core,RICO,55,39,0.709,1.91
+Molten to the Core,LOLA,54,37,0.685,1.87
+Molten to the Core,EMZ,53,39,0.736,1.91
+Molten to the Core,MANDY,52,36,0.692,2.12
+Molten to the Core,LILY,52,35,0.673,2.12
+Molten to the Core,POCO,42,27,0.643,2.26
+Molten to the Core,DAMIAN,42,35,0.833,1.52
+Molten to the Core,8-BIT,42,31,0.738,1.88
+Molten to the Core,CLANCY,42,29,0.69,1.81
+Molten to the Core,MAISIE,41,22,0.537,2.22
+Molten to the Core,FANG,39,31,0.795,1.82
+Molten to the Core,TICK,39,25,0.641,2.08
+Molten to the Core,MICO,38,29,0.763,2.0
+Molten to the Core,KAZE,35,28,0.8,1.74
+Molten to the Core,STU,34,24,0.706,1.88
+Molten to the Core,MEG,34,22,0.647,1.94
+Molten to the Core,LUMI,33,22,0.667,2.06
+Molten to the Core,NITA,30,21,0.7,1.9
+Molten to the Core,PIPER,29,18,0.621,2.17
+Molten to the Core,CROW,29,17,0.586,2.31
+Molten to the Core,EL PRIMO,29,21,0.724,1.86
+Molten to the Core,NANI,29,20,0.69,2.03
+Molten to the Core,MELODIE,29,22,0.759,1.9
+Molten to the Core,BONNIE,27,19,0.704,1.74
+Molten to the Core,DYNAMIKE,26,21,0.808,1.62
+Molten to the Core,MEEPLE,26,19,0.731,1.69
+Molten to the Core,BELLE,24,20,0.833,1.5
+Molten to the Core,SPROUT,24,16,0.667,2.0
+Molten to the Core,ANGELO,23,14,0.609,2.04
+Molten to the Core,CORDELIUS,22,16,0.727,1.86
+Molten to the Core,KENJI,20,18,0.9,1.7
+Molten to the Core,CARL,18,14,0.778,1.83
+Molten to the Core,BIBI,18,14,0.778,1.94
+Molten to the Core,FRANK,16,12,0.75,1.94
+Molten to the Core,DOUG,16,11,0.688,2.06
+Molten to the Core,BULL,15,12,0.8,1.87
+Molten to the Core,ZIGGY,15,6,0.4,2.93
+Molten to the Core,BO,14,9,0.643,2.14
+Molten to the Core,JESSIE,14,10,0.714,1.64
+Molten to the Core,MR. P,14,10,0.714,2.07
+Molten to the Core,PEARL,13,11,0.846,1.77
+Molten to the Core,GALE,13,11,0.846,1.46
+Molten to the Core,SHADE,12,9,0.75,1.83
+Molten to the Core,BARLEY,12,8,0.667,2.08
+Molten to the Core,SQUEAK,12,10,0.833,1.83
+Molten to the Core,MAX,11,8,0.727,1.82
+Molten to the Core,GUS,11,7,0.636,2.27
+Molten to the Core,BEA,10,5,0.5,2.4
+Molten to the Core,GENE,10,4,0.4,2.6
+Molten to the Core,MOE,9,7,0.778,1.56
+Molten to the Core,SURGE,9,4,0.444,2.56
+Molten to the Core,NAJIA,9,5,0.556,2.33
+Molten to the Core,FINX,9,7,0.778,1.44
+Molten to the Core,SHELLY,8,6,0.75,1.88
+Molten to the Core,AMBER,7,2,0.286,2.71
+Molten to the Core,LOU,7,5,0.714,2.29
+Molten to the Core,WILLOW,7,5,0.714,1.86
+Molten to the Core,SAM,7,4,0.571,2.14
+Molten to the Core,R-T,7,6,0.857,1.86
+Molten to the Core,DARRYL,6,4,0.667,1.83
+Molten to the Core,PAM,5,3,0.6,2.2
+Molten to the Core,CHARLIE,5,4,0.8,1.8
+Molten to the Core,GIGI,5,3,0.6,2.2
+Molten to the Core,TARA,4,3,0.75,2.25
+Molten to the Core,GRAY,4,2,0.5,2.25
+Molten to the Core,BUZZ,4,3,0.75,1.75
+Molten to the Core,BERRY,4,4,1.0,1.5
+Molten to the Core,GLOWY,4,3,0.75,1.75
+Molten to the Core,ROSA,3,2,0.667,2.33
+Molten to the Core,LARRY & LAWRIE,3,3,1.0,1.33
+Molten to the Core,EVE,2,2,1.0,1.0
+Molten to the Core,JACKY,2,2,1.0,1.5
+Molten to the Core,TRUNK,2,1,0.5,2.5
+Molten to the Core,JUJU,1,1,1.0,1.0
+Molten to the Core,GROM,1,1,1.0,2.0
+Molten to the Core,ALLI,1,1,1.0,1.0
+Molten to the Core,CHUCK,1,0,0.0,4.0
+Molten to the Core,OTIS,1,1,1.0,1.0
+Molten to the Core,SANDY,1,1,1.0,1.0
+Molten to the Core,DRACO,1,0,0.0,3.0
+Rockwall Brawl,EDGAR,24,13,0.542,2.29
+Rockwall Brawl,GRIFF,9,7,0.778,1.78
+Rockwall Brawl,CLANCY,8,6,0.75,1.75
+Rockwall Brawl,EMZ,4,2,0.5,2.5
+Rockwall Brawl,TICK,4,3,0.75,2.25
+Rockwall Brawl,BROCK,4,1,0.25,2.75
+Rockwall Brawl,MANDY,3,2,0.667,1.67
+Rockwall Brawl,KIT,3,1,0.333,2.67
+Rockwall Brawl,NITA,3,1,0.333,2.67
+Rockwall Brawl,GUS,3,3,1.0,1.0
+Rockwall Brawl,LILY,3,3,1.0,1.67
+Rockwall Brawl,MR. P,2,1,0.5,2.5
+Rockwall Brawl,RICO,2,0,0.0,3.0
+Rockwall Brawl,CROW,1,0,0.0,4.0
+Rockwall Brawl,GALE,1,0,0.0,4.0
+Rockwall Brawl,LOU,1,0,0.0,3.0
+Rockwall Brawl,COLT,1,1,1.0,2.0
+Rockwall Brawl,BELLE,1,1,1.0,2.0
+Rockwall Brawl,DYNAMIKE,1,1,1.0,2.0
+Rockwall Brawl,SIRIUS,1,0,0.0,3.0
+Rockwall Brawl,BULL,1,0,0.0,3.0
+Rockwall Brawl,SHADE,1,1,1.0,1.0
+Rockwall Brawl,DOUG,1,1,1.0,1.0
+Rockwall Brawl,GROM,1,0,0.0,4.0
+Rockwall Brawl,EL PRIMO,1,1,1.0,1.0
+Rockwall Brawl,ALLI,1,0,0.0,3.0
+Rockwall Brawl,MAISIE,1,1,1.0,2.0
+Rockwall Brawl,STU,1,1,1.0,2.0
+Safety Center,EDGAR,3,2,0.667,1.67
+Safety Center,GUS,3,2,0.667,1.67
+Safety Center,DYNAMIKE,3,2,0.667,1.67
+Safety Center,COLT,2,1,0.5,2.0
+Safety Center,BROCK,2,1,0.5,2.0
+Safety Center,CROW,1,1,1.0,1.0
+Safety Center,JANET,1,0,0.0,3.0
+Skull Creek,BROCK,33,20,0.606,2.24
+Skull Creek,EDGAR,26,18,0.692,1.96
+Skull Creek,DYNAMIKE,17,13,0.765,1.76
+Skull Creek,KIT,16,13,0.812,1.75
+Skull Creek,TICK,16,12,0.75,1.88
+Skull Creek,DAMIAN,16,12,0.75,1.81
+Skull Creek,RUFFS,15,11,0.733,1.87
+Skull Creek,COLT,13,7,0.538,2.38
+Skull Creek,BERRY,13,9,0.692,2.0
+Skull Creek,SHADE,13,9,0.692,2.0
+Skull Creek,MORTIS,12,10,0.833,1.5
+Skull Creek,BUSTER,12,8,0.667,2.08
+Skull Creek,JANET,11,10,0.909,1.36
+Skull Creek,MICO,11,6,0.545,2.36
+Skull Creek,MINA,10,9,0.9,1.4
+Skull Creek,LEON,10,7,0.7,1.7
+Skull Creek,MEG,9,6,0.667,1.78
+Skull Creek,MANDY,8,7,0.875,1.25
+Skull Creek,GRIFF,8,5,0.625,2.12
+Skull Creek,LARRY & LAWRIE,7,7,1.0,1.14
+Skull Creek,STU,7,7,1.0,1.14
+Skull Creek,CROW,6,2,0.333,3.0
+Skull Creek,BULL,5,4,0.8,1.6
+Skull Creek,RICO,4,3,0.75,2.0
+Skull Creek,KENJI,4,3,0.75,2.0
+Skull Creek,FANG,4,3,0.75,2.0
+Skull Creek,OTIS,2,1,0.5,3.0
+Skull Creek,ZIGGY,2,1,0.5,2.0
+Skull Creek,EMZ,2,1,0.5,3.0
+Skull Creek,FRANK,2,1,0.5,3.0
+Skull Creek,NITA,1,0,0.0,4.0
+Skull Creek,SIRIUS,1,1,1.0,1.0
+Skull Creek,JAE-YONG,1,1,1.0,1.0
+Skull Creek,MEEPLE,1,0,0.0,3.0
+Skull Creek,SPIKE,1,0,0.0,4.0
+Skull Creek,BUZZ,1,1,1.0,1.0
+Skull Creek,ALLI,1,0,0.0,3.0
+Skull Creek,LOU,1,0,0.0,4.0
+Skull Creek,HANK,1,0,0.0,4.0
+Skull Creek,BELLE,1,1,1.0,1.0
+Skull Creek,MR. P,1,1,1.0,1.0
+Skull Creek,PIPER,1,1,1.0,1.0
+Skull Creek,PENNY,1,1,1.0,1.0
+Skull Creek,SQUEAK,1,0,0.0,3.0
+Skull Creek,JACKY,1,0,0.0,3.0
+Skull Creek,BYRON,1,1,1.0,1.0
+Skull Creek,SPROUT,1,0,0.0,3.0
+Skull Creek,PIERCE,1,0,0.0,3.0
+Skull Creek,EL PRIMO,1,0,0.0,3.0
+Skull Creek,COLETTE,1,0,0.0,4.0
+Skull Creek,GROM,1,0,0.0,4.0
+Skull Creek,WILLOW,1,1,1.0,2.0
+Truth,8-BIT,3,2,0.667,2.33
+Truth,COLETTE,3,3,1.0,1.67
+Truth,PIERCE,2,1,0.5,2.5
+Truth,BYRON,1,1,1.0,2.0
+Truth,JAE-YONG,1,0,0.0,3.0
+Truth,BROCK,1,1,1.0,2.0
+Truth,EDGAR,1,1,1.0,1.0
+Truth,PIPER,1,1,1.0,1.0
+Twisting Vines,MEG,1,1,1.0,1.0
+Twisting Vines,LEON,1,1,1.0,1.0
+Twisting Vines,FANG,1,1,1.0,1.0

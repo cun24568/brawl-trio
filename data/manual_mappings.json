@@ -1,0 +1,51 @@
+{
+  "_comment": "API取得後に手動で重ねるオーバーレイ。fetch_data.py が読み込んで適用する。",
+  "map_jp_names": {
+    "skull-creek": "ガイコツ川",
+    "rockwall-brawl": "岩壁の決戦",
+    "feast-or-famine": "天国と地獄",
+    "cavern-churn": "激動の洞窟",
+    "acid-lakes": "酸性湖",
+    "safety-center": "安全センター",
+    "truth": "真実",
+    "flying-fantasies": "空飛ぶ絨毯",
+    "lilypond-grove": "リリーラグーン",
+    "kroket": "クロケット",
+    "makeshift-scaffolding": "即席足場",
+    "molten-to-the-core": "マグマの心臓",
+    "starfruit-supernova": "スターフルーツ超新星"
+  },
+  "brawler_jp_names": {},
+  "current_rotation_hashes": [
+    "skull-creek",
+    "rockwall-brawl",
+    "feast-or-famine",
+    "cavern-churn",
+    "acid-lakes",
+    "safety-center",
+    "truth",
+    "flying-fantasies",
+    "lilypond-grove",
+    "kroket",
+    "makeshift-scaffolding",
+    "molten-to-the-core",
+    "starfruit-supernova"
+  ],
+  "_manual_maps_comment": "Brawlify 未収録マップを手動定義。idはBrawlify反映後に差し替え",
+  "manual_maps": [
+    {
+      "id": null,
+      "name": "Molten-to-the-Core",
+      "hash": "molten-to-the-core",
+      "image_url": null,
+      "environment": null
+    },
+    {
+      "id": null,
+      "name": "Starfruit-Supernova",
+      "hash": "starfruit-supernova",
+      "image_url": null,
+      "environment": null
+    }
+  ]
+}

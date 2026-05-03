@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ブロスタ トリオサバイバル メタDB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+  <header class="bg-gray-800 border-b border-gray-700 p-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-2xl font-bold">ブロスタ トリオサバイバル メタDB</h1>
+      <div id="meta-info" class="text-sm text-gray-400 mt-1">読込中...</div>
+    </div>
+  </header>
+
+  <nav class="bg-gray-800 border-b border-gray-700 px-4">
+    <div class="max-w-7xl mx-auto flex gap-2 pb-2">
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-blue-600" data-tab="maps">マップ別ティア</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700" data-tab="brawlers">ブロウラー別</button>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto p-4">
+    <div id="tab-maps" class="tab-content">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div class="md:col-span-4">
+          <h2 class="text-sm text-gray-400 mb-2 uppercase tracking-wide">マップ一覧</h2>
+          <div id="map-list" class="space-y-1"></div>
+        </div>
+        <div class="md:col-span-8">
+          <div id="map-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-brawlers" class="tab-content hidden">
+      <input type="text" id="brawler-search" placeholder="ブロウラー名で検索"
+        class="w-full p-2 bg-gray-800 border border-gray-700 rounded mb-4 focus:outline-none focus:border-blue-500">
+      <div id="brawler-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2"></div>
+      <div id="brawler-detail" class="mt-6"></div>
+    </div>
+  </main>
+
+  <footer class="text-center text-xs text-gray-500 p-4">
+    Brawl Stars 公式API + Brawlify API データ / Fan Made
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

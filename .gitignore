@@ -1,0 +1,21 @@
+# 機密情報
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 大きい生データ(派生物のdb.jsonだけpushすればよい)
+data/trio_battles_full.json
+data/trio_battles_partial.json
+data/trio_battles_club.json
+data/trio_meta.csv
+
+# バイナリ
+cloudflared.exe
+*.zip
