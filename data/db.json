@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:20:52.638345+00:00",
+  "generated_at": "2026-05-03T15:15:57.638621+00:00",
   "stats": {
     "total_maps": 15,
     "maps_in_pool": 12,
@@ -15,17 +15,9 @@
       "image_url": null,
       "in_pool": true,
       "total_picks": 11478,
+      "map_avg_wr": 0.69,
+      "map_avg_rank": 1.98,
       "tier_list": [
-        {
-          "brawler": "ASH",
-          "brawler_id": 16000051,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
-          "picks": 37,
-          "wins": 32,
-          "win_rate": 0.865,
-          "avg_rank": 1.62,
-          "tier": "S+"
-        },
         {
           "brawler": "DAMIAN",
           "brawler_id": null,
@@ -33,8 +25,11 @@
           "picks": 236,
           "wins": 196,
           "win_rate": 0.831,
+          "bayes_wr": 0.825,
           "avg_rank": 1.64,
-          "tier": "S"
+          "pick_rate": 0.021,
+          "score": 84.16,
+          "tier": "S+"
         },
         {
           "brawler": "BERRY",
@@ -43,7 +38,23 @@
           "picks": 69,
           "wins": 57,
           "win_rate": 0.826,
+          "bayes_wr": 0.809,
           "avg_rank": 1.55,
+          "pick_rate": 0.006,
+          "score": 83.02,
+          "tier": "S+"
+        },
+        {
+          "brawler": "HANK",
+          "brawler_id": 16000069,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
+          "picks": 123,
+          "wins": 96,
+          "win_rate": 0.78,
+          "bayes_wr": 0.774,
+          "avg_rank": 1.67,
+          "pick_rate": 0.011,
+          "score": 78.9,
           "tier": "S"
         },
         {
@@ -53,48 +64,11 @@
           "picks": 86,
           "wins": 68,
           "win_rate": 0.791,
+          "bayes_wr": 0.78,
           "avg_rank": 1.92,
+          "pick_rate": 0.007,
+          "score": 78.3,
           "tier": "S"
-        },
-        {
-          "brawler": "WILLOW",
-          "brawler_id": 16000067,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000067.png",
-          "picks": 47,
-          "wins": 37,
-          "win_rate": 0.787,
-          "avg_rank": 1.77,
-          "tier": "S"
-        },
-        {
-          "brawler": "HANK",
-          "brawler_id": 16000069,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
-          "picks": 123,
-          "wins": 96,
-          "win_rate": 0.78,
-          "avg_rank": 1.67,
-          "tier": "S"
-        },
-        {
-          "brawler": "CHARLIE",
-          "brawler_id": 16000074,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
-          "picks": 50,
-          "wins": 39,
-          "win_rate": 0.78,
-          "avg_rank": 1.78,
-          "tier": "S"
-        },
-        {
-          "brawler": "MOE",
-          "brawler_id": 16000084,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000084.png",
-          "picks": 9,
-          "wins": 7,
-          "win_rate": 0.778,
-          "avg_rank": 1.78,
-          "tier": "A"
         },
         {
           "brawler": "PEARL",
@@ -103,7 +77,10 @@
           "picks": 66,
           "wins": 51,
           "win_rate": 0.773,
+          "bayes_wr": 0.762,
           "avg_rank": 1.8,
+          "pick_rate": 0.006,
+          "score": 77.07,
           "tier": "S"
         },
         {
@@ -113,17 +90,10 @@
           "picks": 168,
           "wins": 128,
           "win_rate": 0.762,
+          "bayes_wr": 0.758,
           "avg_rank": 1.8,
-          "tier": "S"
-        },
-        {
-          "brawler": "LARRY & LAWRIE",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 21,
-          "wins": 16,
-          "win_rate": 0.762,
-          "avg_rank": 1.95,
+          "pick_rate": 0.015,
+          "score": 76.67,
           "tier": "S"
         },
         {
@@ -133,27 +103,10 @@
           "picks": 191,
           "wins": 145,
           "win_rate": 0.759,
+          "bayes_wr": 0.756,
           "avg_rank": 1.86,
-          "tier": "S"
-        },
-        {
-          "brawler": "FRANK",
-          "brawler_id": 16000020,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
-          "picks": 60,
-          "wins": 45,
-          "win_rate": 0.75,
-          "avg_rank": 1.8,
-          "tier": "S"
-        },
-        {
-          "brawler": "MICO",
-          "brawler_id": 16000075,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000075.png",
-          "picks": 36,
-          "wins": 27,
-          "win_rate": 0.75,
-          "avg_rank": 1.97,
+          "pick_rate": 0.017,
+          "score": 76.15,
           "tier": "S"
         },
         {
@@ -163,27 +116,36 @@
           "picks": 243,
           "wins": 182,
           "win_rate": 0.749,
+          "bayes_wr": 0.747,
           "avg_rank": 1.81,
-          "tier": "A"
+          "pick_rate": 0.021,
+          "score": 75.5,
+          "tier": "S"
         },
         {
-          "brawler": "SHADE",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 31,
-          "wins": 23,
-          "win_rate": 0.742,
-          "avg_rank": 1.97,
-          "tier": "A"
+          "brawler": "FRANK",
+          "brawler_id": 16000020,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
+          "picks": 60,
+          "wins": 45,
+          "win_rate": 0.75,
+          "bayes_wr": 0.741,
+          "avg_rank": 1.8,
+          "pick_rate": 0.005,
+          "score": 75.03,
+          "tier": "S"
         },
         {
-          "brawler": "JESSIE",
-          "brawler_id": 16000007,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
-          "picks": 54,
-          "wins": 40,
-          "win_rate": 0.741,
-          "avg_rank": 1.98,
+          "brawler": "SIRIUS",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 156,
+          "wins": 115,
+          "win_rate": 0.737,
+          "bayes_wr": 0.734,
+          "avg_rank": 1.74,
+          "pick_rate": 0.014,
+          "score": 74.62,
           "tier": "A"
         },
         {
@@ -193,17 +155,23 @@
           "picks": 175,
           "wins": 129,
           "win_rate": 0.737,
+          "bayes_wr": 0.735,
           "avg_rank": 1.82,
+          "pick_rate": 0.015,
+          "score": 74.24,
           "tier": "A"
         },
         {
-          "brawler": "SIRIUS",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 156,
-          "wins": 115,
-          "win_rate": 0.737,
-          "avg_rank": 1.74,
+          "brawler": "MEG",
+          "brawler_id": 16000052,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
+          "picks": 158,
+          "wins": 116,
+          "win_rate": 0.734,
+          "bayes_wr": 0.732,
+          "avg_rank": 1.82,
+          "pick_rate": 0.014,
+          "score": 73.94,
           "tier": "A"
         },
         {
@@ -213,7 +181,166 @@
           "picks": 188,
           "wins": 138,
           "win_rate": 0.734,
+          "bayes_wr": 0.732,
           "avg_rank": 1.86,
+          "pick_rate": 0.016,
+          "score": 73.76,
+          "tier": "A"
+        },
+        {
+          "brawler": "COLT",
+          "brawler_id": 16000001,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
+          "picks": 317,
+          "wins": 231,
+          "win_rate": 0.729,
+          "bayes_wr": 0.728,
+          "avg_rank": 1.92,
+          "pick_rate": 0.028,
+          "score": 73.03,
+          "tier": "A"
+        },
+        {
+          "brawler": "CARL",
+          "brawler_id": 16000025,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
+          "picks": 169,
+          "wins": 123,
+          "win_rate": 0.728,
+          "bayes_wr": 0.726,
+          "avg_rank": 1.91,
+          "pick_rate": 0.015,
+          "score": 72.9,
+          "tier": "A"
+        },
+        {
+          "brawler": "CORDELIUS",
+          "brawler_id": 16000070,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
+          "picks": 171,
+          "wins": 124,
+          "win_rate": 0.725,
+          "bayes_wr": 0.723,
+          "avg_rank": 1.94,
+          "pick_rate": 0.015,
+          "score": 72.5,
+          "tier": "A"
+        },
+        {
+          "brawler": "MR. P",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 93,
+          "wins": 67,
+          "win_rate": 0.72,
+          "bayes_wr": 0.718,
+          "avg_rank": 1.9,
+          "pick_rate": 0.008,
+          "score": 72.13,
+          "tier": "A"
+        },
+        {
+          "brawler": "JAE-YONG",
+          "brawler_id": 16000093,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
+          "picks": 322,
+          "wins": 229,
+          "win_rate": 0.711,
+          "bayes_wr": 0.711,
+          "avg_rank": 1.85,
+          "pick_rate": 0.028,
+          "score": 71.69,
+          "tier": "A"
+        },
+        {
+          "brawler": "CROW",
+          "brawler_id": 16000012,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
+          "picks": 337,
+          "wins": 240,
+          "win_rate": 0.712,
+          "bayes_wr": 0.712,
+          "avg_rank": 1.91,
+          "pick_rate": 0.029,
+          "score": 71.48,
+          "tier": "A"
+        },
+        {
+          "brawler": "LILY",
+          "brawler_id": 16000081,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000081.png",
+          "picks": 167,
+          "wins": 119,
+          "win_rate": 0.713,
+          "bayes_wr": 0.711,
+          "avg_rank": 1.95,
+          "pick_rate": 0.015,
+          "score": 71.26,
+          "tier": "A"
+        },
+        {
+          "brawler": "COLETTE",
+          "brawler_id": 16000039,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000039.png",
+          "picks": 333,
+          "wins": 233,
+          "win_rate": 0.7,
+          "bayes_wr": 0.699,
+          "avg_rank": 1.86,
+          "pick_rate": 0.029,
+          "score": 70.52,
+          "tier": "A"
+        },
+        {
+          "brawler": "BROCK",
+          "brawler_id": 16000003,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
+          "picks": 169,
+          "wins": 119,
+          "win_rate": 0.704,
+          "bayes_wr": 0.703,
+          "avg_rank": 1.95,
+          "pick_rate": 0.015,
+          "score": 70.47,
+          "tier": "A"
+        },
+        {
+          "brawler": "MORTIS",
+          "brawler_id": 16000011,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000011.png",
+          "picks": 362,
+          "wins": 254,
+          "win_rate": 0.702,
+          "bayes_wr": 0.701,
+          "avg_rank": 1.95,
+          "pick_rate": 0.032,
+          "score": 70.27,
+          "tier": "A"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 889,
+          "wins": 624,
+          "win_rate": 0.702,
+          "bayes_wr": 0.702,
+          "avg_rank": 1.96,
+          "pick_rate": 0.077,
+          "score": 70.26,
+          "tier": "A"
+        },
+        {
+          "brawler": "BEA",
+          "brawler_id": 16000029,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png",
+          "picks": 141,
+          "wins": 98,
+          "win_rate": 0.695,
+          "bayes_wr": 0.695,
+          "avg_rank": 1.9,
+          "pick_rate": 0.012,
+          "score": 69.85,
           "tier": "A"
         }
       ],
@@ -388,6 +515,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15001145.png",
       "in_pool": true,
       "total_picks": 1584,
+      "map_avg_wr": 0.712,
+      "map_avg_rank": 1.93,
       "tier_list": [
         {
           "brawler": "PEARL",
@@ -396,27 +525,10 @@
           "picks": 15,
           "wins": 15,
           "win_rate": 1.0,
+          "bayes_wr": 0.885,
           "avg_rank": 1.2,
-          "tier": "S+"
-        },
-        {
-          "brawler": "PIPER",
-          "brawler_id": 16000015,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
-          "picks": 6,
-          "wins": 6,
-          "win_rate": 1.0,
-          "avg_rank": 1.67,
-          "tier": "S"
-        },
-        {
-          "brawler": "SHADE",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 16,
-          "wins": 15,
-          "win_rate": 0.938,
-          "avg_rank": 1.44,
+          "pick_rate": 0.009,
+          "score": 92.12,
           "tier": "S+"
         },
         {
@@ -426,7 +538,36 @@
           "picks": 45,
           "wins": 41,
           "win_rate": 0.911,
+          "bayes_wr": 0.875,
           "avg_rank": 1.31,
+          "pick_rate": 0.028,
+          "score": 90.58,
+          "tier": "S+"
+        },
+        {
+          "brawler": "SHADE",
+          "brawler_id": 16000086,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
+          "picks": 16,
+          "wins": 15,
+          "win_rate": 0.938,
+          "bayes_wr": 0.851,
+          "avg_rank": 1.44,
+          "pick_rate": 0.01,
+          "score": 87.52,
+          "tier": "S+"
+        },
+        {
+          "brawler": "GRIFF",
+          "brawler_id": 16000050,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
+          "picks": 46,
+          "wins": 40,
+          "win_rate": 0.87,
+          "bayes_wr": 0.841,
+          "avg_rank": 1.41,
+          "pick_rate": 0.029,
+          "score": 86.73,
           "tier": "S+"
         },
         {
@@ -436,7 +577,10 @@
           "picks": 16,
           "wins": 14,
           "win_rate": 0.875,
+          "bayes_wr": 0.812,
           "avg_rank": 1.62,
+          "pick_rate": 0.01,
+          "score": 82.77,
           "tier": "S+"
         },
         {
@@ -446,47 +590,10 @@
           "picks": 8,
           "wins": 7,
           "win_rate": 0.875,
+          "bayes_wr": 0.785,
           "avg_rank": 1.88,
-          "tier": "S"
-        },
-        {
-          "brawler": "GRIFF",
-          "brawler_id": 16000050,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
-          "picks": 46,
-          "wins": 40,
-          "win_rate": 0.87,
-          "avg_rank": 1.41,
-          "tier": "S+"
-        },
-        {
-          "brawler": "PIERCE",
-          "brawler_id": 16000099,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
-          "picks": 6,
-          "wins": 5,
-          "win_rate": 0.833,
-          "avg_rank": 1.67,
-          "tier": "A"
-        },
-        {
-          "brawler": "SHELLY",
-          "brawler_id": 16000000,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000000.png",
-          "picks": 5,
-          "wins": 4,
-          "win_rate": 0.8,
-          "avg_rank": 1.8,
-          "tier": "A"
-        },
-        {
-          "brawler": "LEON",
-          "brawler_id": 16000023,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png",
-          "picks": 39,
-          "wins": 31,
-          "win_rate": 0.795,
-          "avg_rank": 1.9,
+          "pick_rate": 0.005,
+          "score": 78.69,
           "tier": "S"
         },
         {
@@ -496,7 +603,36 @@
           "picks": 51,
           "wins": 40,
           "win_rate": 0.784,
+          "bayes_wr": 0.772,
           "avg_rank": 1.73,
+          "pick_rate": 0.032,
+          "score": 78.24,
+          "tier": "S"
+        },
+        {
+          "brawler": "DAMIAN",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 76,
+          "wins": 59,
+          "win_rate": 0.776,
+          "bayes_wr": 0.769,
+          "avg_rank": 1.68,
+          "pick_rate": 0.048,
+          "score": 78.12,
+          "tier": "S"
+        },
+        {
+          "brawler": "LEON",
+          "brawler_id": 16000023,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png",
+          "picks": 39,
+          "wins": 31,
+          "win_rate": 0.795,
+          "bayes_wr": 0.778,
+          "avg_rank": 1.9,
+          "pick_rate": 0.025,
+          "score": 77.94,
           "tier": "S"
         },
         {
@@ -506,47 +642,10 @@
           "picks": 99,
           "wins": 77,
           "win_rate": 0.778,
+          "bayes_wr": 0.772,
           "avg_rank": 1.85,
-          "tier": "S"
-        },
-        {
-          "brawler": "TICK",
-          "brawler_id": 16000022,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
-          "picks": 9,
-          "wins": 7,
-          "win_rate": 0.778,
-          "avg_rank": 1.78,
-          "tier": "A"
-        },
-        {
-          "brawler": "TARA",
-          "brawler_id": 16000017,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000017.png",
-          "picks": 9,
-          "wins": 7,
-          "win_rate": 0.778,
-          "avg_rank": 1.56,
-          "tier": "A"
-        },
-        {
-          "brawler": "DAMIAN",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 76,
-          "wins": 59,
-          "win_rate": 0.776,
-          "avg_rank": 1.68,
-          "tier": "S"
-        },
-        {
-          "brawler": "SPIKE",
-          "brawler_id": 16000005,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
-          "picks": 22,
-          "wins": 17,
-          "win_rate": 0.773,
-          "avg_rank": 1.95,
+          "pick_rate": 0.062,
+          "score": 77.56,
           "tier": "S"
         },
         {
@@ -556,8 +655,50 @@
           "picks": 56,
           "wins": 43,
           "win_rate": 0.768,
+          "bayes_wr": 0.759,
           "avg_rank": 1.62,
-          "tier": "S"
+          "pick_rate": 0.035,
+          "score": 77.48,
+          "tier": "A"
+        },
+        {
+          "brawler": "TARA",
+          "brawler_id": 16000017,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000017.png",
+          "picks": 9,
+          "wins": 7,
+          "win_rate": 0.778,
+          "bayes_wr": 0.743,
+          "avg_rank": 1.56,
+          "pick_rate": 0.006,
+          "score": 76.16,
+          "tier": "A"
+        },
+        {
+          "brawler": "COLT",
+          "brawler_id": 16000001,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
+          "picks": 37,
+          "wins": 28,
+          "win_rate": 0.757,
+          "bayes_wr": 0.747,
+          "avg_rank": 1.81,
+          "pick_rate": 0.023,
+          "score": 75.31,
+          "tier": "A"
+        },
+        {
+          "brawler": "SPIKE",
+          "brawler_id": 16000005,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
+          "picks": 22,
+          "wins": 17,
+          "win_rate": 0.773,
+          "bayes_wr": 0.754,
+          "avg_rank": 1.95,
+          "pick_rate": 0.014,
+          "score": 75.27,
+          "tier": "A"
         },
         {
           "brawler": "KENJI",
@@ -566,18 +707,24 @@
           "picks": 17,
           "wins": 13,
           "win_rate": 0.765,
+          "bayes_wr": 0.745,
           "avg_rank": 1.82,
-          "tier": "S"
+          "pick_rate": 0.011,
+          "score": 75.06,
+          "tier": "A"
         },
         {
-          "brawler": "BIBI",
-          "brawler_id": 16000026,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
-          "picks": 21,
-          "wins": 16,
-          "win_rate": 0.762,
-          "avg_rank": 2.0,
-          "tier": "S"
+          "brawler": "TICK",
+          "brawler_id": 16000022,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
+          "picks": 9,
+          "wins": 7,
+          "win_rate": 0.778,
+          "bayes_wr": 0.743,
+          "avg_rank": 1.78,
+          "pick_rate": 0.006,
+          "score": 75.06,
+          "tier": "A"
         },
         {
           "brawler": "CROW",
@@ -586,8 +733,115 @@
           "picks": 37,
           "wins": 28,
           "win_rate": 0.757,
+          "bayes_wr": 0.747,
           "avg_rank": 1.92,
-          "tier": "S"
+          "pick_rate": 0.023,
+          "score": 74.76,
+          "tier": "A"
+        },
+        {
+          "brawler": "BIBI",
+          "brawler_id": 16000026,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
+          "picks": 21,
+          "wins": 16,
+          "win_rate": 0.762,
+          "bayes_wr": 0.746,
+          "avg_rank": 2.0,
+          "pick_rate": 0.013,
+          "score": 74.22,
+          "tier": "A"
+        },
+        {
+          "brawler": "JAE-YONG",
+          "brawler_id": 16000093,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
+          "picks": 50,
+          "wins": 37,
+          "win_rate": 0.74,
+          "bayes_wr": 0.735,
+          "avg_rank": 1.82,
+          "pick_rate": 0.032,
+          "score": 74.07,
+          "tier": "A"
+        },
+        {
+          "brawler": "HANK",
+          "brawler_id": 16000069,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
+          "picks": 67,
+          "wins": 49,
+          "win_rate": 0.731,
+          "bayes_wr": 0.729,
+          "avg_rank": 1.81,
+          "pick_rate": 0.042,
+          "score": 73.47,
+          "tier": "A"
+        },
+        {
+          "brawler": "BUSTER",
+          "brawler_id": 16000062,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
+          "picks": 19,
+          "wins": 14,
+          "win_rate": 0.737,
+          "bayes_wr": 0.728,
+          "avg_rank": 1.89,
+          "pick_rate": 0.012,
+          "score": 73.02,
+          "tier": "A"
+        },
+        {
+          "brawler": "KIT",
+          "brawler_id": 16000076,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
+          "picks": 59,
+          "wins": 43,
+          "win_rate": 0.729,
+          "bayes_wr": 0.726,
+          "avg_rank": 1.9,
+          "pick_rate": 0.037,
+          "score": 72.78,
+          "tier": "A"
+        },
+        {
+          "brawler": "SANDY",
+          "brawler_id": 16000028,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000028.png",
+          "picks": 14,
+          "wins": 10,
+          "win_rate": 0.714,
+          "bayes_wr": 0.713,
+          "avg_rank": 1.86,
+          "pick_rate": 0.009,
+          "score": 71.68,
+          "tier": "A"
+        },
+        {
+          "brawler": "NANI",
+          "brawler_id": 16000036,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
+          "picks": 11,
+          "wins": 8,
+          "win_rate": 0.727,
+          "bayes_wr": 0.72,
+          "avg_rank": 2.0,
+          "pick_rate": 0.007,
+          "score": 71.64,
+          "tier": "A"
+        },
+        {
+          "brawler": "GLOWY",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 16,
+          "wins": 11,
+          "win_rate": 0.688,
+          "bayes_wr": 0.697,
+          "avg_rank": 1.75,
+          "pick_rate": 0.01,
+          "score": 70.59,
+          "tier": "A"
         }
       ],
       "recommended_trios": [
@@ -761,6 +1015,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000751.png",
       "in_pool": true,
       "total_picks": 414,
+      "map_avg_wr": 0.652,
+      "map_avg_rank": 2.09,
       "tier_list": [
         {
           "brawler": "LILY",
@@ -769,8 +1025,11 @@
           "picks": 6,
           "wins": 6,
           "win_rate": 1.0,
+          "bayes_wr": 0.783,
           "avg_rank": 1.5,
-          "tier": "S"
+          "pick_rate": 0.014,
+          "score": 81.2,
+          "tier": "S+"
         },
         {
           "brawler": "CORDELIUS",
@@ -779,7 +1038,10 @@
           "picks": 10,
           "wins": 9,
           "win_rate": 0.9,
+          "bayes_wr": 0.776,
           "avg_rank": 1.7,
+          "pick_rate": 0.024,
+          "score": 79.55,
           "tier": "S+"
         },
         {
@@ -789,7 +1051,23 @@
           "picks": 15,
           "wins": 12,
           "win_rate": 0.8,
+          "bayes_wr": 0.741,
           "avg_rank": 1.73,
+          "pick_rate": 0.036,
+          "score": 75.87,
+          "tier": "S"
+        },
+        {
+          "brawler": "KIT",
+          "brawler_id": 16000076,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
+          "picks": 19,
+          "wins": 15,
+          "win_rate": 0.789,
+          "bayes_wr": 0.742,
+          "avg_rank": 1.84,
+          "pick_rate": 0.046,
+          "score": 75.45,
           "tier": "S"
         },
         {
@@ -799,18 +1077,11 @@
           "picks": 5,
           "wins": 4,
           "win_rate": 0.8,
+          "bayes_wr": 0.701,
           "avg_rank": 1.6,
+          "pick_rate": 0.012,
+          "score": 72.58,
           "tier": "A"
-        },
-        {
-          "brawler": "KIT",
-          "brawler_id": 16000076,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
-          "picks": 19,
-          "wins": 15,
-          "win_rate": 0.789,
-          "avg_rank": 1.84,
-          "tier": "S"
         },
         {
           "brawler": "MINA",
@@ -819,18 +1090,11 @@
           "picks": 12,
           "wins": 9,
           "win_rate": 0.75,
+          "bayes_wr": 0.706,
           "avg_rank": 1.83,
+          "pick_rate": 0.029,
+          "score": 71.84,
           "tier": "S"
-        },
-        {
-          "brawler": "RUFFS",
-          "brawler_id": 16000044,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000044.png",
-          "picks": 15,
-          "wins": 11,
-          "win_rate": 0.733,
-          "avg_rank": 1.87,
-          "tier": "A"
         },
         {
           "brawler": "MANDY",
@@ -839,7 +1103,23 @@
           "picks": 18,
           "wins": 13,
           "win_rate": 0.722,
+          "bayes_wr": 0.697,
           "avg_rank": 1.78,
+          "pick_rate": 0.043,
+          "score": 71.26,
+          "tier": "A"
+        },
+        {
+          "brawler": "RUFFS",
+          "brawler_id": 16000044,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000044.png",
+          "picks": 15,
+          "wins": 11,
+          "win_rate": 0.733,
+          "bayes_wr": 0.701,
+          "avg_rank": 1.87,
+          "pick_rate": 0.036,
+          "score": 71.17,
           "tier": "A"
         },
         {
@@ -849,7 +1129,10 @@
           "picks": 45,
           "wins": 32,
           "win_rate": 0.711,
+          "bayes_wr": 0.7,
           "avg_rank": 1.96,
+          "pick_rate": 0.109,
+          "score": 70.68,
           "tier": "A"
         },
         {
@@ -859,7 +1142,10 @@
           "picks": 20,
           "wins": 14,
           "win_rate": 0.7,
+          "bayes_wr": 0.684,
           "avg_rank": 1.95,
+          "pick_rate": 0.048,
+          "score": 69.09,
           "tier": "A"
         },
         {
@@ -869,7 +1155,10 @@
           "picks": 13,
           "wins": 9,
           "win_rate": 0.692,
+          "bayes_wr": 0.675,
           "avg_rank": 2.0,
+          "pick_rate": 0.031,
+          "score": 67.92,
           "tier": "A"
         },
         {
@@ -879,7 +1168,10 @@
           "picks": 13,
           "wins": 9,
           "win_rate": 0.692,
+          "bayes_wr": 0.675,
           "avg_rank": 2.0,
+          "pick_rate": 0.031,
+          "score": 67.92,
           "tier": "A"
         },
         {
@@ -889,27 +1181,10 @@
           "picks": 28,
           "wins": 19,
           "win_rate": 0.679,
+          "bayes_wr": 0.672,
           "avg_rank": 2.0,
-          "tier": "A"
-        },
-        {
-          "brawler": "TICK",
-          "brawler_id": 16000022,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
-          "picks": 21,
-          "wins": 14,
-          "win_rate": 0.667,
-          "avg_rank": 2.1,
-          "tier": "A"
-        },
-        {
-          "brawler": "BUSTER",
-          "brawler_id": 16000062,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
-          "picks": 12,
-          "wins": 8,
-          "win_rate": 0.667,
-          "avg_rank": 2.08,
+          "pick_rate": 0.068,
+          "score": 67.6,
           "tier": "A"
         },
         {
@@ -919,18 +1194,37 @@
           "picks": 9,
           "wins": 6,
           "win_rate": 0.667,
+          "bayes_wr": 0.659,
           "avg_rank": 1.78,
-          "tier": "B"
+          "pick_rate": 0.022,
+          "score": 67.44,
+          "tier": "A"
         },
         {
-          "brawler": "MICO",
-          "brawler_id": 16000075,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000075.png",
-          "picks": 6,
-          "wins": 4,
+          "brawler": "TICK",
+          "brawler_id": 16000022,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
+          "picks": 21,
+          "wins": 14,
           "win_rate": 0.667,
-          "avg_rank": 2.33,
-          "tier": "B"
+          "bayes_wr": 0.662,
+          "avg_rank": 2.1,
+          "pick_rate": 0.051,
+          "score": 66.14,
+          "tier": "A"
+        },
+        {
+          "brawler": "BUSTER",
+          "brawler_id": 16000062,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
+          "picks": 12,
+          "wins": 8,
+          "win_rate": 0.667,
+          "bayes_wr": 0.66,
+          "avg_rank": 2.08,
+          "pick_rate": 0.029,
+          "score": 66.04,
+          "tier": "A"
         },
         {
           "brawler": "LEON",
@@ -939,17 +1233,36 @@
           "picks": 11,
           "wins": 7,
           "win_rate": 0.636,
+          "bayes_wr": 0.644,
           "avg_rank": 1.82,
-          "tier": "B"
+          "pick_rate": 0.027,
+          "score": 65.73,
+          "tier": "A"
         },
         {
-          "brawler": "BROCK",
-          "brawler_id": 16000003,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
-          "picks": 27,
-          "wins": 16,
-          "win_rate": 0.593,
-          "avg_rank": 2.26,
+          "brawler": "MICO",
+          "brawler_id": 16000075,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000075.png",
+          "picks": 6,
+          "wins": 4,
+          "win_rate": 0.667,
+          "bayes_wr": 0.658,
+          "avg_rank": 2.33,
+          "pick_rate": 0.014,
+          "score": 64.55,
+          "tier": "A"
+        },
+        {
+          "brawler": "JANET",
+          "brawler_id": 16000057,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
+          "picks": 7,
+          "wins": 4,
+          "win_rate": 0.571,
+          "bayes_wr": 0.619,
+          "avg_rank": 2.14,
+          "pick_rate": 0.017,
+          "score": 61.63,
           "tier": "B"
         },
         {
@@ -959,8 +1272,63 @@
           "picks": 12,
           "wins": 7,
           "win_rate": 0.583,
+          "bayes_wr": 0.615,
           "avg_rank": 2.25,
+          "pick_rate": 0.029,
+          "score": 60.65,
           "tier": "B"
+        },
+        {
+          "brawler": "BROCK",
+          "brawler_id": 16000003,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
+          "picks": 27,
+          "wins": 16,
+          "win_rate": 0.593,
+          "bayes_wr": 0.609,
+          "avg_rank": 2.26,
+          "pick_rate": 0.065,
+          "score": 60.01,
+          "tier": "B"
+        },
+        {
+          "brawler": "CROW",
+          "brawler_id": 16000012,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
+          "picks": 7,
+          "wins": 4,
+          "win_rate": 0.571,
+          "bayes_wr": 0.619,
+          "avg_rank": 2.57,
+          "pick_rate": 0.017,
+          "score": 59.48,
+          "tier": "B"
+        },
+        {
+          "brawler": "COLT",
+          "brawler_id": 16000001,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
+          "picks": 8,
+          "wins": 4,
+          "win_rate": 0.5,
+          "bayes_wr": 0.585,
+          "avg_rank": 2.62,
+          "pick_rate": 0.019,
+          "score": 55.79,
+          "tier": "B"
+        },
+        {
+          "brawler": "GRIFF",
+          "brawler_id": 16000050,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
+          "picks": 14,
+          "wins": 6,
+          "win_rate": 0.429,
+          "bayes_wr": 0.522,
+          "avg_rank": 2.57,
+          "pick_rate": 0.034,
+          "score": 49.76,
+          "tier": "C"
         }
       ],
       "recommended_trios": [
@@ -1134,6 +1502,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000970.png",
       "in_pool": true,
       "total_picks": 183,
+      "map_avg_wr": 0.77,
+      "map_avg_rank": 1.87,
       "tier_list": [
         {
           "brawler": "LEON",
@@ -1142,8 +1512,11 @@
           "picks": 27,
           "wins": 23,
           "win_rate": 0.852,
+          "bayes_wr": 0.83,
           "avg_rank": 1.7,
-          "tier": "S+"
+          "pick_rate": 0.148,
+          "score": 83.83,
+          "tier": "S"
         },
         {
           "brawler": "DAMIAN",
@@ -1152,7 +1525,10 @@
           "picks": 26,
           "wins": 22,
           "win_rate": 0.846,
+          "bayes_wr": 0.825,
           "avg_rank": 1.73,
+          "pick_rate": 0.142,
+          "score": 83.21,
           "tier": "S"
         },
         {
@@ -1162,18 +1538,11 @@
           "picks": 26,
           "wins": 22,
           "win_rate": 0.846,
+          "bayes_wr": 0.825,
           "avg_rank": 1.73,
+          "pick_rate": 0.142,
+          "score": 83.21,
           "tier": "S"
-        },
-        {
-          "brawler": "MEG",
-          "brawler_id": 16000052,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
-          "picks": 6,
-          "wins": 5,
-          "win_rate": 0.833,
-          "avg_rank": 2.0,
-          "tier": "A"
         },
         {
           "brawler": "DARRYL",
@@ -1182,8 +1551,24 @@
           "picks": 20,
           "wins": 16,
           "win_rate": 0.8,
+          "bayes_wr": 0.79,
           "avg_rank": 1.9,
-          "tier": "S"
+          "pick_rate": 0.109,
+          "score": 78.86,
+          "tier": "A"
+        },
+        {
+          "brawler": "MEG",
+          "brawler_id": 16000052,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
+          "picks": 6,
+          "wins": 5,
+          "win_rate": 0.833,
+          "bayes_wr": 0.794,
+          "avg_rank": 2.0,
+          "pick_rate": 0.033,
+          "score": 78.75,
+          "tier": "A"
         },
         {
           "brawler": "TICK",
@@ -1192,17 +1577,10 @@
           "picks": 13,
           "wins": 10,
           "win_rate": 0.769,
+          "bayes_wr": 0.77,
           "avg_rank": 2.0,
-          "tier": "S"
-        },
-        {
-          "brawler": "EDGAR",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 13,
-          "wins": 9,
-          "win_rate": 0.692,
-          "avg_rank": 2.0,
+          "pick_rate": 0.071,
+          "score": 76.32,
           "tier": "A"
         },
         {
@@ -1212,7 +1590,23 @@
           "picks": 6,
           "wins": 4,
           "win_rate": 0.667,
+          "bayes_wr": 0.732,
           "avg_rank": 2.0,
+          "pick_rate": 0.033,
+          "score": 72.5,
+          "tier": "B"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 13,
+          "wins": 9,
+          "win_rate": 0.692,
+          "bayes_wr": 0.726,
+          "avg_rank": 2.0,
+          "pick_rate": 0.071,
+          "score": 71.97,
           "tier": "B"
         },
         {
@@ -1222,7 +1616,10 @@
           "picks": 7,
           "wins": 4,
           "win_rate": 0.571,
+          "bayes_wr": 0.689,
           "avg_rank": 2.29,
+          "pick_rate": 0.038,
+          "score": 66.74,
           "tier": "C"
         },
         {
@@ -1232,7 +1629,10 @@
           "picks": 8,
           "wins": 4,
           "win_rate": 0.5,
+          "bayes_wr": 0.65,
           "avg_rank": 2.38,
+          "pick_rate": 0.044,
+          "score": 62.47,
           "tier": "C"
         },
         {
@@ -1242,7 +1642,10 @@
           "picks": 5,
           "wins": 2,
           "win_rate": 0.4,
+          "bayes_wr": 0.647,
           "avg_rank": 2.4,
+          "pick_rate": 0.027,
+          "score": 62.04,
           "tier": "C"
         }
       ],
@@ -1377,6 +1780,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000949.png",
       "in_pool": true,
       "total_picks": 162,
+      "map_avg_wr": 0.667,
+      "map_avg_rank": 1.96,
       "tier_list": [
         {
           "brawler": "GUS",
@@ -1385,7 +1790,23 @@
           "picks": 5,
           "wins": 5,
           "win_rate": 1.0,
+          "bayes_wr": 0.778,
           "avg_rank": 1.0,
+          "pick_rate": 0.031,
+          "score": 82.59,
+          "tier": "S+"
+        },
+        {
+          "brawler": "TICK",
+          "brawler_id": 16000022,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
+          "picks": 13,
+          "wins": 10,
+          "win_rate": 0.769,
+          "bayes_wr": 0.725,
+          "avg_rank": 1.77,
+          "pick_rate": 0.08,
+          "score": 73.43,
           "tier": "S"
         },
         {
@@ -1395,17 +1816,10 @@
           "picks": 9,
           "wins": 7,
           "win_rate": 0.778,
+          "bayes_wr": 0.719,
           "avg_rank": 1.78,
-          "tier": "A"
-        },
-        {
-          "brawler": "TICK",
-          "brawler_id": 16000022,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
-          "picks": 13,
-          "wins": 10,
-          "win_rate": 0.769,
-          "avg_rank": 1.77,
+          "pick_rate": 0.056,
+          "score": 72.85,
           "tier": "S"
         },
         {
@@ -1415,7 +1829,10 @@
           "picks": 8,
           "wins": 6,
           "win_rate": 0.75,
+          "bayes_wr": 0.704,
           "avg_rank": 1.75,
+          "pick_rate": 0.049,
+          "score": 71.44,
           "tier": "A"
         },
         {
@@ -1425,7 +1842,10 @@
           "picks": 11,
           "wins": 8,
           "win_rate": 0.727,
+          "bayes_wr": 0.698,
           "avg_rank": 1.73,
+          "pick_rate": 0.068,
+          "score": 71.01,
           "tier": "A"
         },
         {
@@ -1435,7 +1855,10 @@
           "picks": 11,
           "wins": 8,
           "win_rate": 0.727,
+          "bayes_wr": 0.698,
           "avg_rank": 1.73,
+          "pick_rate": 0.068,
+          "score": 71.01,
           "tier": "A"
         },
         {
@@ -1445,28 +1868,11 @@
           "picks": 35,
           "wins": 23,
           "win_rate": 0.657,
+          "bayes_wr": 0.659,
           "avg_rank": 1.97,
+          "pick_rate": 0.216,
+          "score": 65.89,
           "tier": "A"
-        },
-        {
-          "brawler": "EMZ",
-          "brawler_id": 16000030,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
-          "picks": 5,
-          "wins": 3,
-          "win_rate": 0.6,
-          "avg_rank": 2.2,
-          "tier": "C"
-        },
-        {
-          "brawler": "DYNAMIKE",
-          "brawler_id": 16000009,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000009.png",
-          "picks": 5,
-          "wins": 3,
-          "win_rate": 0.6,
-          "avg_rank": 2.2,
-          "tier": "C"
         },
         {
           "brawler": "ZIGGY",
@@ -1475,8 +1881,37 @@
           "picks": 5,
           "wins": 3,
           "win_rate": 0.6,
+          "bayes_wr": 0.644,
           "avg_rank": 2.0,
-          "tier": "C"
+          "pick_rate": 0.031,
+          "score": 64.26,
+          "tier": "B"
+        },
+        {
+          "brawler": "EMZ",
+          "brawler_id": 16000030,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
+          "picks": 5,
+          "wins": 3,
+          "win_rate": 0.6,
+          "bayes_wr": 0.644,
+          "avg_rank": 2.2,
+          "pick_rate": 0.031,
+          "score": 63.26,
+          "tier": "B"
+        },
+        {
+          "brawler": "DYNAMIKE",
+          "brawler_id": 16000009,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000009.png",
+          "picks": 5,
+          "wins": 3,
+          "win_rate": 0.6,
+          "bayes_wr": 0.644,
+          "avg_rank": 2.2,
+          "pick_rate": 0.031,
+          "score": 63.26,
+          "tier": "B"
         },
         {
           "brawler": "KIT",
@@ -1485,7 +1920,10 @@
           "picks": 7,
           "wins": 2,
           "win_rate": 0.286,
+          "bayes_wr": 0.51,
           "avg_rank": 3.0,
+          "pick_rate": 0.043,
+          "score": 45.8,
           "tier": "C"
         }
       ],
@@ -1580,6 +2018,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15001142.png",
       "in_pool": true,
       "total_picks": 159,
+      "map_avg_wr": 0.849,
+      "map_avg_rank": 1.45,
       "tier_list": [
         {
           "brawler": "BYRON",
@@ -1588,27 +2028,10 @@
           "picks": 17,
           "wins": 17,
           "win_rate": 1.0,
+          "bayes_wr": 0.944,
           "avg_rank": 1.24,
-          "tier": "S+"
-        },
-        {
-          "brawler": "ZIGGY",
-          "brawler_id": 16000098,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
-          "picks": 7,
-          "wins": 7,
-          "win_rate": 1.0,
-          "avg_rank": 1.43,
-          "tier": "S"
-        },
-        {
-          "brawler": "JANET",
-          "brawler_id": 16000057,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
-          "picks": 6,
-          "wins": 6,
-          "win_rate": 1.0,
-          "avg_rank": 1.33,
+          "pick_rate": 0.107,
+          "score": 95.48,
           "tier": "S"
         },
         {
@@ -1618,8 +2041,37 @@
           "picks": 18,
           "wins": 17,
           "win_rate": 0.944,
+          "bayes_wr": 0.91,
           "avg_rank": 1.39,
-          "tier": "S+"
+          "pick_rate": 0.113,
+          "score": 91.36,
+          "tier": "S"
+        },
+        {
+          "brawler": "ZIGGY",
+          "brawler_id": 16000098,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
+          "picks": 7,
+          "wins": 7,
+          "win_rate": 1.0,
+          "bayes_wr": 0.911,
+          "avg_rank": 1.43,
+          "pick_rate": 0.044,
+          "score": 91.25,
+          "tier": "S"
+        },
+        {
+          "brawler": "JANET",
+          "brawler_id": 16000057,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
+          "picks": 6,
+          "wins": 6,
+          "win_rate": 1.0,
+          "bayes_wr": 0.906,
+          "avg_rank": 1.33,
+          "pick_rate": 0.038,
+          "score": 91.19,
+          "tier": "S"
         },
         {
           "brawler": "COLT",
@@ -1628,8 +2080,11 @@
           "picks": 20,
           "wins": 18,
           "win_rate": 0.9,
+          "bayes_wr": 0.883,
           "avg_rank": 1.4,
-          "tier": "S+"
+          "pick_rate": 0.126,
+          "score": 88.58,
+          "tier": "A"
         },
         {
           "brawler": "RUFFS",
@@ -1638,8 +2093,11 @@
           "picks": 19,
           "wins": 16,
           "win_rate": 0.842,
+          "bayes_wr": 0.845,
           "avg_rank": 1.32,
-          "tier": "S"
+          "pick_rate": 0.119,
+          "score": 85.12,
+          "tier": "A"
         },
         {
           "brawler": "8-BIT",
@@ -1648,8 +2106,11 @@
           "picks": 19,
           "wins": 16,
           "win_rate": 0.842,
+          "bayes_wr": 0.845,
           "avg_rank": 1.32,
-          "tier": "S"
+          "pick_rate": 0.119,
+          "score": 85.12,
+          "tier": "A"
         },
         {
           "brawler": "GENE",
@@ -1658,8 +2119,11 @@
           "picks": 19,
           "wins": 16,
           "win_rate": 0.842,
+          "bayes_wr": 0.845,
           "avg_rank": 1.32,
-          "tier": "S"
+          "pick_rate": 0.119,
+          "score": 85.12,
+          "tier": "A"
         },
         {
           "brawler": "LEON",
@@ -1668,7 +2132,10 @@
           "picks": 6,
           "wins": 5,
           "win_rate": 0.833,
+          "bayes_wr": 0.843,
           "avg_rank": 1.5,
+          "pick_rate": 0.038,
+          "score": 84.09,
           "tier": "A"
         },
         {
@@ -1678,7 +2145,10 @@
           "picks": 5,
           "wins": 3,
           "win_rate": 0.6,
+          "bayes_wr": 0.766,
           "avg_rank": 1.8,
+          "pick_rate": 0.031,
+          "score": 74.88,
           "tier": "C"
         }
       ],
@@ -1813,6 +2283,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000961.png",
       "in_pool": true,
       "total_picks": 78,
+      "map_avg_wr": 0.654,
+      "map_avg_rank": 1.96,
       "tier_list": [
         {
           "brawler": "CROW",
@@ -1821,8 +2293,11 @@
           "picks": 7,
           "wins": 7,
           "win_rate": 1.0,
+          "bayes_wr": 0.796,
           "avg_rank": 1.0,
-          "tier": "S"
+          "pick_rate": 0.09,
+          "score": 84.44,
+          "tier": "S+"
         },
         {
           "brawler": "ALLI",
@@ -1831,8 +2306,11 @@
           "picks": 6,
           "wins": 6,
           "win_rate": 1.0,
+          "bayes_wr": 0.784,
           "avg_rank": 1.0,
-          "tier": "S"
+          "pick_rate": 0.077,
+          "score": 83.17,
+          "tier": "S+"
         },
         {
           "brawler": "BROCK",
@@ -1841,7 +2319,10 @@
           "picks": 8,
           "wins": 7,
           "win_rate": 0.875,
+          "bayes_wr": 0.752,
           "avg_rank": 1.25,
+          "pick_rate": 0.103,
+          "score": 78.77,
           "tier": "S"
         },
         {
@@ -1851,7 +2332,10 @@
           "picks": 5,
           "wins": 4,
           "win_rate": 0.8,
+          "bayes_wr": 0.703,
           "avg_rank": 1.4,
+          "pick_rate": 0.064,
+          "score": 73.06,
           "tier": "A"
         },
         {
@@ -1861,8 +2345,11 @@
           "picks": 7,
           "wins": 5,
           "win_rate": 0.714,
+          "bayes_wr": 0.679,
           "avg_rank": 1.71,
-          "tier": "B"
+          "pick_rate": 0.09,
+          "score": 69.13,
+          "tier": "A"
         },
         {
           "brawler": "EDGAR",
@@ -1871,8 +2358,11 @@
           "picks": 8,
           "wins": 5,
           "win_rate": 0.625,
+          "bayes_wr": 0.641,
           "avg_rank": 2.12,
-          "tier": "C"
+          "pick_rate": 0.103,
+          "score": 63.3,
+          "tier": "A"
         },
         {
           "brawler": "PIPER",
@@ -1881,8 +2371,11 @@
           "picks": 11,
           "wins": 6,
           "win_rate": 0.545,
+          "bayes_wr": 0.597,
           "avg_rank": 2.27,
-          "tier": "C"
+          "pick_rate": 0.141,
+          "score": 58.16,
+          "tier": "B"
         }
       ],
       "recommended_trios": [
@@ -1936,6 +2429,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000958.png",
       "in_pool": true,
       "total_picks": 75,
+      "map_avg_wr": 0.8,
+      "map_avg_rank": 1.84,
       "tier_list": [
         {
           "brawler": "KIT",
@@ -1944,8 +2439,11 @@
           "picks": 20,
           "wins": 16,
           "win_rate": 0.8,
+          "bayes_wr": 0.8,
           "avg_rank": 1.85,
-          "tier": "S"
+          "pick_rate": 0.267,
+          "score": 79.95,
+          "tier": "A"
         },
         {
           "brawler": "DOUG",
@@ -1954,8 +2452,11 @@
           "picks": 20,
           "wins": 16,
           "win_rate": 0.8,
+          "bayes_wr": 0.8,
           "avg_rank": 1.85,
-          "tier": "S"
+          "pick_rate": 0.267,
+          "score": 79.95,
+          "tier": "A"
         },
         {
           "brawler": "JAE-YONG",
@@ -1964,8 +2465,11 @@
           "picks": 20,
           "wins": 16,
           "win_rate": 0.8,
+          "bayes_wr": 0.8,
           "avg_rank": 1.85,
-          "tier": "S"
+          "pick_rate": 0.267,
+          "score": 79.95,
+          "tier": "A"
         }
       ],
       "recommended_trios": [
@@ -1999,6 +2503,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15001109.png",
       "in_pool": true,
       "total_picks": 37,
+      "map_avg_wr": 0.676,
+      "map_avg_rank": 2.08,
       "tier_list": [
         {
           "brawler": "BROCK",
@@ -2007,7 +2513,10 @@
           "picks": 5,
           "wins": 4,
           "win_rate": 0.8,
+          "bayes_wr": 0.717,
           "avg_rank": 1.8,
+          "pick_rate": 0.135,
+          "score": 73.12,
           "tier": "A"
         }
       ],
@@ -2042,6 +2551,8 @@
       "image_url": null,
       "in_pool": false,
       "total_picks": 24,
+      "map_avg_wr": 0.25,
+      "map_avg_rank": 3.0,
       "tier_list": [
         {
           "brawler": "8-BIT",
@@ -2050,18 +2561,11 @@
           "picks": 6,
           "wins": 6,
           "win_rate": 1.0,
+          "bayes_wr": 0.531,
           "avg_rank": 1.5,
-          "tier": "S"
-        },
-        {
-          "brawler": "GRIFF",
-          "brawler_id": 16000050,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
-          "picks": 9,
-          "wins": 0,
-          "win_rate": 0.0,
-          "avg_rank": 3.56,
-          "tier": "C"
+          "pick_rate": 0.25,
+          "score": 60.63,
+          "tier": "S+"
         },
         {
           "brawler": "DOUG",
@@ -2070,7 +2574,23 @@
           "picks": 5,
           "wins": 0,
           "win_rate": 0.0,
+          "bayes_wr": 0.167,
           "avg_rank": 3.4,
+          "pick_rate": 0.208,
+          "score": 14.67,
+          "tier": "C"
+        },
+        {
+          "brawler": "GRIFF",
+          "brawler_id": 16000050,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
+          "picks": 9,
+          "wins": 0,
+          "win_rate": 0.0,
+          "bayes_wr": 0.132,
+          "avg_rank": 3.56,
+          "pick_rate": 0.375,
+          "score": 10.37,
           "tier": "C"
         }
       ],
@@ -2125,6 +2645,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000952.png",
       "in_pool": true,
       "total_picks": 15,
+      "map_avg_wr": 1.0,
+      "map_avg_rank": 1.2,
       "tier_list": [],
       "recommended_trios": [
         {
@@ -2157,6 +2679,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000992.png",
       "in_pool": true,
       "total_picks": 15,
+      "map_avg_wr": 0.8,
+      "map_avg_rank": 2.2,
       "tier_list": [],
       "recommended_trios": []
     },
@@ -2168,6 +2692,8 @@
       "image_url": null,
       "in_pool": false,
       "total_picks": 12,
+      "map_avg_wr": 1.0,
+      "map_avg_rank": 1.5,
       "tier_list": [],
       "recommended_trios": [
         {
@@ -2200,6 +2726,8 @@
       "image_url": null,
       "in_pool": false,
       "total_picks": 8,
+      "map_avg_wr": 0.75,
+      "map_avg_rank": 1.5,
       "tier_list": [],
       "recommended_trios": []
     },
@@ -2211,6 +2739,8 @@
       "image_url": "https://cdn.brawlify.com/maps/regular/15000955.png",
       "in_pool": true,
       "total_picks": 3,
+      "map_avg_wr": 0.0,
+      "map_avg_rank": 4.0,
       "tier_list": [],
       "recommended_trios": []
     }
