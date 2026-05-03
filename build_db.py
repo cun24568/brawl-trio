@@ -150,8 +150,9 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
         # サンプル少penalty (picks <= 300 で 0.9倍)
         if picks <= LOW_PICKS_THRESHOLD:
             score *= LOW_PICKS_PENALTY
-        # 人気ボーナス (pick_rate >= 5% で1.1倍)
-        if pick_rate >= POPULAR_PICK_RATE:
+        # 人気ボーナス (pick_rate >= 5% かつ マップ平均より勝ってる場合のみ1.1倍)
+        # 「弱いのに人気」キャラを救わない
+        if pick_rate >= POPULAR_PICK_RATE and bayes_weighted > map_avg_weighted:
             score *= POPULARITY_BONUS
         delta = bayes_weighted - map_avg_weighted
 
