@@ -34,7 +34,8 @@ EXTRA_CLUBS = [
 ]
 COUNTRIES = ["global", "JP", "KR", "US", "TW", "DE", "BR", "MX", "GB", "FR", "ES", "RU"]
 DELAY = 0.15
-TIMEOUT = 8
+TIMEOUT = 15
+RETRIES = 3  # API timeoutやネットワークエラー時のリトライ回数
 SAVE_EVERY = 100  # 並列化で件数が早く流れるので頻度下げる
 PARALLEL_WORKERS = 8
 
@@ -62,16 +63,28 @@ TOKEN = load_token()
 
 
 def fetch(path):
-    req = Request(
-        f"{API}{path}",
-        headers={
-            "Authorization": f"Bearer {TOKEN}",
-            "Accept": "application/json",
-            "User-Agent": "brawl-trio/0.1",
-        },
-    )
-    with urlopen(req, timeout=TIMEOUT) as r:
-        return json.loads(r.read().decode("utf-8"))
+    """timeout / 一時的エラーは自動リトライ。HTTPError(429,4xx,5xx)はそのまま投げる。"""
+    last_err = None
+    for attempt in range(RETRIES):
+        req = Request(
+            f"{API}{path}",
+            headers={
+                "Authorization": f"Bearer {TOKEN}",
+                "Accept": "application/json",
+                "User-Agent": "brawl-trio/0.1",
+            },
+        )
+        try:
+            with urlopen(req, timeout=TIMEOUT) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except HTTPError:
+            raise  # 4xx/5xxはリトライしない
+        except (TimeoutError, URLError, OSError) as e:
+            last_err = e
+            if attempt < RETRIES - 1:
+                time.sleep(1 + attempt)  # 1, 2, 3秒の指数バックオフ風
+                continue
+            raise
 
 
 def load_discovered():
@@ -178,8 +191,8 @@ def collect_tags():
             for m in cdata.get("members", []):
                 tags.add(m["tag"])
             print(f"  {cname}: +{len(cdata.get('members', []))} (total {len(tags)})")
-    except (HTTPError, URLError) as e:
-        print(f"  seed club FAIL: {e}")
+    except Exception as e:
+        print(f"  seed club FAIL: {type(e).__name__}: {e}")
     time.sleep(DELAY)
 
     # 追加クラブ
@@ -191,8 +204,8 @@ def collect_tags():
                 tags.add(m["tag"])
             print(f"  {cname}: +{len(members)} (total {len(tags)})")
             time.sleep(DELAY)
-        except (HTTPError, URLError) as e:
-            print(f"  {cname} FAIL: {e}")
+        except Exception as e:
+            print(f"  {cname} FAIL: {type(e).__name__}: {e}")
 
     # 各国
     for country in COUNTRIES:
@@ -203,8 +216,8 @@ def collect_tags():
                 tags.add(p["tag"])
             print(f"  {country}: +{len(items)} (total {len(tags)})")
             time.sleep(DELAY)
-        except (HTTPError, URLError) as e:
-            print(f"  {country} FAIL: {e}")
+        except Exception as e:
+            print(f"  {country} FAIL: {type(e).__name__}: {e}")
 
     # 高トロフィー(50k+) qualifying プールから sampling
     qualifying = load_qualifying()
