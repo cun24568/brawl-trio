@@ -180,7 +180,7 @@ function renderMapDetail() {
           <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
-        <div class="text-xs text-gray-500 mt-1">スコア: 1位+9 / 2位+4 / 3位-4 / 4位-9。高トロ帯(2000+)バトル2倍重み。ピック率5%以上 かつ WR>マップ平均なら1.1倍ボーナス。300戦以下は0.9倍ペナルティ。ベイズ平均化。50戦以上の信頼サンプルでpercentileティア (50戦未満は「?」)</div>
+        <div class="text-xs text-gray-500 mt-1">スコア: 1位+9 / 2位+4 / 3位-4 / 4位-9。高トロ帯(2000+)バトル2倍。ピック率1%以上で1.02倍、5%以上 かつ WR>マップ平均で1.05倍。300戦以下は0.9倍。ベイズ平均化。50戦以上の信頼サンプルでpercentileティア</div>
         ${filterButtons}
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
         ${tableHtml}
