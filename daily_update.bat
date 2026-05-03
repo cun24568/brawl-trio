@@ -1,9 +1,6 @@
 @echo off
-REM 毎日実行用: クロール + DB再ビルド
-REM Windows Task Scheduler に登録すれば自動化可能
-REM 「コンピュータの管理」→「タスクスケジューラ」→ 基本タスク作成
-REM   トリガー: 毎日 / 開始時刻 (例 06:00)
-REM   操作: プログラム = この .bat ファイル
+REM 1時間ごと実行用: クロール + DB再ビルド + git push
+REM register_schedule.ps1 でタスクスケジューラに登録
 
 cd /d "%~dp0"
 echo ====================================
@@ -13,6 +10,18 @@ py crawl_full.py
 if errorlevel 1 goto :error
 py build_db.py
 if errorlevel 1 goto :error
+
+REM Vercel 自動デプロイ用に db.json だけ push
+git add data/db.json
+git diff --cached --quiet
+if errorlevel 1 (
+    git commit -m "auto: data update %DATE% %TIME%"
+    git push
+    echo === Pushed to remote ===
+) else (
+    echo === No data changes, skip push ===
+)
+
 echo.
 echo === Done ===
 exit /b 0

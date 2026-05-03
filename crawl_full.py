@@ -26,7 +26,7 @@ EXTRA_CLUBS = [
     ("#2CGLLR98V", "祝杯をあげよう"),
     ("#2QG9UVUUY", "バトロワオンリー"),
 ]
-COUNTRIES = ["global", "JP"]
+COUNTRIES = ["global", "JP", "KR", "US", "TW", "DE"]
 DELAY = 0.15
 TIMEOUT = 8
 SAVE_EVERY = 20

@@ -20,10 +20,10 @@ if ($existing) {
 # アクション: .bat 実行
 $action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$batPath`""
 
-# トリガー: 1分後から3時間ごと(無期限)
+# トリガー: 1分後から1時間ごと(無期限)
 $startTime = (Get-Date).AddMinutes(1)
 $trigger = New-ScheduledTaskTrigger -Once -At $startTime `
-    -RepetitionInterval (New-TimeSpan -Hours 3) `
+    -RepetitionInterval (New-TimeSpan -Hours 1) `
     -RepetitionDuration ([TimeSpan]::MaxValue)
 
 # 設定: バッテリー駆動でも実行、隠して実行
@@ -45,7 +45,7 @@ Register-ScheduledTask `
 Write-Host ""
 Write-Host "✓ タスク登録完了: $taskName"
 Write-Host "  開始: $startTime"
-Write-Host "  間隔: 3時間ごと"
+Write-Host "  間隔: 1時間ごと"
 Write-Host ""
 Write-Host "確認: タスクスケジューラを開いて 'BrawlTrioCrawl' を探す"
 Write-Host "削除: powershell -Command `"Unregister-ScheduledTask -TaskName 'BrawlTrioCrawl' -Confirm:`$false`""
