@@ -74,7 +74,7 @@ function selectMap(m) {
           <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
-        <div class="text-xs text-gray-500 mt-1">ソート: 強さスコア降順 (1位+5/2位+1/3位-1/4位-5 の対称重み / ベイズ平均化 / マップ平均との相対delta)</div>
+        <div class="text-xs text-gray-500 mt-1">スコア重み: 1位+9 / 2位+4 / 3位-5 / 4位-11 (ゲーム内2000帯トロ変動準拠)。ベイズ平均化 + percentileティア</div>
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト</h3>
         ${(() => {
           // ティア毎の人数カウント

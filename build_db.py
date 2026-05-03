@@ -46,6 +46,11 @@ RANK_WEIGHT = 5.0  # 順位優位の重み (composite score 内)
 MIN_PICKS_FOR_TRIO = 5  # 推奨編成最小pick数
 TOP_N_TRIOS = 8
 TOP_N_TIER = 200  # 全102体収まる
+# 順位スコア重み (Brawl Stars 2000-2199トロ帯のトロフィー変動準拠)
+SCORE_R1, SCORE_R2, SCORE_R3, SCORE_R4 = 9, 4, -5, -11
+SCORE_MIN = SCORE_R4  # -11
+SCORE_MAX = SCORE_R1  # 9
+SCORE_RANGE = SCORE_MAX - SCORE_MIN  # 20
 # ティア percentile-based 閾値 (上位から %)
 TIER_PCT_S_PLUS = 0.10
 TIER_PCT_S = 0.25
@@ -72,10 +77,11 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         sum(r["avg_rank"] * r["picks"] for r in brawler_rows) / total_picks
     )
 
-    # マップ全体の対称重み付きスコア (1位=+5, 2位=+1, 3位=-1, 4位=-5)
+    # マップ全体の重み付きスコア (Brawl Stars トロフィー変動準拠)
     if rank_dist_for_map:
         map_points = sum(
-            rd["r1"] * 5 + rd["r2"] - rd["r3"] - rd["r4"] * 5
+            rd["r1"] * SCORE_R1 + rd["r2"] * SCORE_R2
+            + rd["r3"] * SCORE_R3 + rd["r4"] * SCORE_R4
             for rd in rank_dist_for_map.values()
         )
         map_dist_total = sum(
@@ -85,10 +91,10 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
     else:
         map_points = 0
         map_dist_total = 0
-    # マップ平均(per pick)、範囲 [-5, +5]
+    # マップ平均(per pick)、範囲 [SCORE_MIN, SCORE_MAX]
     map_avg_score = map_points / map_dist_total if map_dist_total else 0
-    # 0-1正規化用 ([-5,+5] → [0,1])
-    map_avg_weighted = (map_avg_score + 5) / 10
+    # 0-1正規化
+    map_avg_weighted = (map_avg_score - SCORE_MIN) / SCORE_RANGE
 
     # 互換のため top2 rate も計算
     total_wins = sum(r["wins"] for r in brawler_rows)
@@ -111,18 +117,21 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         rank1_rate = round(rd["r1"] / rd_total, 3) if rd_total else 0
         rank2_rate = round(rd["r2"] / rd_total, 3) if rd_total else 0
 
-        # 対称ポイント合計 (1位×5 + 2位×1 - 3位×1 - 4位×5)
-        points = rd["r1"] * 5 + rd["r2"] - rd["r3"] - rd["r4"] * 5
-        # per pick avg ([-5, +5])
+        # 重み付きポイント合計 (1位×9 + 2位×4 + 3位×-5 + 4位×-11)
+        points = (
+            rd["r1"] * SCORE_R1 + rd["r2"] * SCORE_R2
+            + rd["r3"] * SCORE_R3 + rd["r4"] * SCORE_R4
+        )
+        # per pick avg
         avg_score = points / rd_total if rd_total else 0
         # 0-1 正規化
-        weighted_wr = (avg_score + 5) / 10
+        weighted_wr = (avg_score - SCORE_MIN) / SCORE_RANGE
 
         # ベイズ平均: マップ平均score を事前分布に
         bayes_score = (
             (points + map_avg_score * BAYES_PRIOR) / (rd_total + BAYES_PRIOR)
         )
-        bayes_weighted = (bayes_score + 5) / 10
+        bayes_weighted = (bayes_score - SCORE_MIN) / SCORE_RANGE
 
         # 旧bayes_wr (top2ベース) も互換で残す
         bayes_wr = (r["wins"] + map_avg_wr * BAYES_PRIOR) / (picks + BAYES_PRIOR)
