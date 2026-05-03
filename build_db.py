@@ -51,11 +51,10 @@ TOP_N_TIER = 25
 def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
     """
     マップ別ティアリストを生成。
-    - ベイズ平均でWRを縮小 (少サンプルがS+にならない)
-    - マップ平均WRを基準に相対評価 (マップ間公平)
-    - avg_rank を強さスコアに反映 (1位率重視)
-    - 使用率フィルタ (メタ外を除外)
-    - 強さスコア降順でソート (強い順)
+    - 「重み付き擬似勝率」 (1位×5 + 2位×1) / (picks×5) を主指標に
+    - ベイズ平均で少サンプル抑制
+    - マップ平均からの相対deltaでティア判定
+    - 強さスコア降順でソート
     """
     if not brawler_rows:
         return [], 0.0, 0.0
@@ -64,11 +63,29 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
     if total_picks == 0:
         return [], 0.0, 0.0
 
-    total_wins = sum(r["wins"] for r in brawler_rows)
-    map_avg_wr = total_wins / total_picks
     map_avg_rank = (
         sum(r["avg_rank"] * r["picks"] for r in brawler_rows) / total_picks
     )
+
+    # マップ全体の重み付き勝率 (1位=5pt, 2位=1pt)
+    if rank_dist_for_map:
+        map_pseudo_sum = sum(
+            rd["r1"] * 5 + rd["r2"] for rd in rank_dist_for_map.values()
+        )
+        map_dist_total = sum(
+            rd["r1"] + rd["r2"] + rd["r3"] + rd["r4"]
+            for rd in rank_dist_for_map.values()
+        )
+    else:
+        map_pseudo_sum = 0
+        map_dist_total = 0
+    map_avg_weighted = (
+        map_pseudo_sum / (map_dist_total * 5) if map_dist_total else 0
+    )
+
+    # 互換のため top2 rate も計算
+    total_wins = sum(r["wins"] for r in brawler_rows)
+    map_avg_wr = total_wins / total_picks
 
     scored = []
     for r in brawler_rows:
@@ -79,31 +96,46 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
         if pick_rate < MIN_PICK_RATE:
             continue
 
-        # ベイズ平均: マップ平均を事前分布に
-        bayes_wr = (r["wins"] + map_avg_wr * BAYES_PRIOR) / (picks + BAYES_PRIOR)
-        rank_adv = map_avg_rank - r["avg_rank"]  # 正なら強い (低順位=好)
-        score = bayes_wr * 100 + rank_adv * RANK_WEIGHT
-        wr_delta = bayes_wr - map_avg_wr  # マップ平均からの差
+        # 順位分布
+        rd = (rank_dist_for_map or {}).get(
+            r["brawler"], {"r1": 0, "r2": 0, "r3": 0, "r4": 0}
+        )
+        rd_total = rd["r1"] + rd["r2"] + rd["r3"] + rd["r4"]
+        rank1_rate = round(rd["r1"] / rd_total, 3) if rd_total else 0
+        rank2_rate = round(rd["r2"] / rd_total, 3) if rd_total else 0
 
-        # ティア = マップ平均からの相対deltaで決定
-        if wr_delta >= 0.10:
+        # 重み付き擬似勝率 (1位×5 + 2位×1) / (picks×5)
+        pseudo_wins = rd["r1"] * 5 + rd["r2"]
+        max_pseudo = rd_total * 5
+        weighted_wr = pseudo_wins / max_pseudo if max_pseudo else 0
+
+        # ベイズ平均: マップ平均weighted を事前分布に
+        bayes_weighted = (
+            (pseudo_wins + map_avg_weighted * BAYES_PRIOR * 5)
+            / ((rd_total + BAYES_PRIOR) * 5)
+        )
+
+        # 旧bayes_wr (top2ベース) も互換で残す
+        bayes_wr = (r["wins"] + map_avg_wr * BAYES_PRIOR) / (picks + BAYES_PRIOR)
+
+        rank_adv = map_avg_rank - r["avg_rank"]
+        # スコアは weighted ベース
+        score = bayes_weighted * 100 + rank_adv * RANK_WEIGHT
+        delta = bayes_weighted - map_avg_weighted
+
+        # ティア = マップ平均weightedからの相対delta (1位重視のため閾値は控えめ)
+        if delta >= 0.08:
             tier = "S+"
-        elif wr_delta >= 0.05:
+        elif delta >= 0.04:
             tier = "S"
-        elif wr_delta >= -0.02:
+        elif delta >= -0.02:
             tier = "A"
-        elif wr_delta >= -0.08:
+        elif delta >= -0.06:
             tier = "B"
         else:
             tier = "C"
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
-        # 順位分布
-        rd = (rank_dist_for_map or {}).get(r["brawler"], {"r1": 0, "r2": 0, "r3": 0, "r4": 0})
-        rd_total = rd["r1"] + rd["r2"] + rd["r3"] + rd["r4"]
-        rank1_rate = round(rd["r1"] / rd_total, 3) if rd_total else 0
-        rank2_rate = round(rd["r2"] / rd_total, 3) if rd_total else 0
-
         scored.append({
             "brawler": r["brawler"],
             "brawler_id": master.get("id"),
@@ -112,6 +144,8 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
             "wins": r["wins"],
             "win_rate": r["win_rate"],
             "bayes_wr": round(bayes_wr, 3),
+            "weighted_wr": round(weighted_wr, 3),
+            "bayes_weighted": round(bayes_weighted, 3),
             "avg_rank": r["avg_rank"],
             "rank1_rate": rank1_rate,
             "rank2_rate": rank2_rate,
@@ -120,7 +154,6 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None):
             "tier": tier,
         })
 
-    # 強さスコア降順 (= 強いキャラほど上)
     scored.sort(key=lambda x: -x["score"])
     return scored[:TOP_N_TIER], map_avg_wr, map_avg_rank
 

@@ -74,7 +74,7 @@ function selectMap(m) {
           <span class="text-gray-300">マップ平均 WR ${(m.map_avg_wr * 100).toFixed(1)}%, 平均順位 ${m.map_avg_rank.toFixed(2)}</span>
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
-        <div class="text-xs text-gray-500 mt-1">ティアはマップ平均からの相対deltaで判定。スコア順にソート (ベイズ平均WR+順位優位)</div>
+        <div class="text-xs text-gray-500 mt-1">ソート: 強さスコア降順 (1位×5+2位×1の重み付き擬似勝率 / ベイズ平均化 / マップ平均との相対delta)</div>
         <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト</h3>
         <table class="w-full">
           <thead>
