@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:37:51.234412+00:00",
+  "generated_at": "2026-05-03T18:47:52.057109+00:00",
   "stats": {
     "total_maps": 16,
     "maps_in_pool": 12,
@@ -640,7 +640,7 @@
         },
         {
           "brawler": "ALLI",
-          "brawler_jp": "",
+          "brawler_jp": "アリー",
           "brawler_id": 16000095,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
           "picks": 200,
@@ -660,7 +660,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 434,
@@ -680,7 +680,7 @@
         },
         {
           "brawler": "LUMI",
-          "brawler_jp": "",
+          "brawler_jp": "ルミ",
           "brawler_id": 16000091,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
           "picks": 337,
@@ -840,7 +840,7 @@
         },
         {
           "brawler": "GRAY",
-          "brawler_jp": "",
+          "brawler_jp": "グレイ",
           "brawler_id": 16000064,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
           "picks": 270,
@@ -860,7 +860,7 @@
         },
         {
           "brawler": "GENE",
-          "brawler_jp": "",
+          "brawler_jp": "ジーン",
           "brawler_id": 16000021,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
           "picks": 442,
@@ -1120,7 +1120,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1799,
@@ -1620,7 +1620,7 @@
         },
         {
           "brawler": "TRUNK",
-          "brawler_jp": "",
+          "brawler_jp": "トランク",
           "brawler_id": 16000096,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
           "picks": 167,
@@ -1760,7 +1760,7 @@
         },
         {
           "brawler": "EVE",
-          "brawler_jp": "",
+          "brawler_jp": "イヴ",
           "brawler_id": 16000056,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
           "picks": 184,
@@ -1820,7 +1820,7 @@
         },
         {
           "brawler": "SPROUT",
-          "brawler_jp": "",
+          "brawler_jp": "スプラウト",
           "brawler_id": 16000037,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
           "picks": 154,
@@ -2000,7 +2000,7 @@
         },
         {
           "brawler": "CHUCK",
-          "brawler_jp": "",
+          "brawler_jp": "チャック",
           "brawler_id": 16000073,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000073.png",
           "picks": 96,
@@ -2123,7 +2123,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2204,7 +2204,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2341,7 +2341,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2422,7 +2422,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -2714,7 +2714,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -2805,7 +2805,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -2827,7 +2827,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -3021,7 +3021,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             }
           ],
@@ -3254,7 +3254,7 @@
           "members": [
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -3394,7 +3394,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -3718,7 +3718,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -3885,7 +3885,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -3902,7 +3902,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -4020,7 +4020,7 @@
             },
             {
               "brawler": "SPROUT",
-              "brawler_jp": "",
+              "brawler_jp": "スプラウト",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png"
             }
           ],
@@ -4096,7 +4096,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -4182,7 +4182,7 @@
             },
             {
               "brawler": "TRUNK",
-              "brawler_jp": "",
+              "brawler_jp": "トランク",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png"
             }
           ],
@@ -4209,7 +4209,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -4663,7 +4663,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -4901,7 +4901,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -5068,7 +5068,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -5149,7 +5149,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -5397,7 +5397,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             }
           ],
@@ -5981,7 +5981,7 @@
           "members": [
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -6148,7 +6148,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -6170,7 +6170,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -6202,7 +6202,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -6585,7 +6585,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             }
           ],
@@ -6899,7 +6899,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -6985,7 +6985,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -7174,12 +7174,12 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -7233,7 +7233,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             }
           ],
@@ -7417,7 +7417,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -7503,7 +7503,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -8961,7 +8961,7 @@
             },
             {
               "brawler": "TRUNK",
-              "brawler_jp": "",
+              "brawler_jp": "トランク",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png"
             }
           ],
@@ -9204,7 +9204,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -9258,7 +9258,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             }
           ],
@@ -9577,7 +9577,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -9604,7 +9604,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -9933,7 +9933,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -10495,7 +10495,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -10679,7 +10679,7 @@
           "members": [
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -11283,7 +11283,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -12309,7 +12309,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -12488,7 +12488,7 @@
           "members": [
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -12525,7 +12525,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             }
           ],
@@ -12655,7 +12655,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -13028,7 +13028,7 @@
           "members": [
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -13195,7 +13195,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -13406,7 +13406,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -13416,7 +13416,7 @@
             },
             {
               "brawler": "SPROUT",
-              "brawler_jp": "",
+              "brawler_jp": "スプラウト",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png"
             }
           ],
@@ -13600,7 +13600,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -13794,7 +13794,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -15269,7 +15269,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -15652,7 +15652,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -15679,7 +15679,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -16035,7 +16035,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -16273,7 +16273,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -16813,7 +16813,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -17169,7 +17169,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             }
           ],
@@ -17272,12 +17272,12 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -17304,7 +17304,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -17321,7 +17321,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17407,7 +17407,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17434,7 +17434,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -17488,7 +17488,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -17510,7 +17510,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -17655,7 +17655,7 @@
             },
             {
               "brawler": "TRUNK",
-              "brawler_jp": "",
+              "brawler_jp": "トランク",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png"
             }
           ],
@@ -17920,7 +17920,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -18050,7 +18050,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18217,7 +18217,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18298,7 +18298,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -18730,7 +18730,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -18833,7 +18833,7 @@
           "members": [
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -18968,7 +18968,7 @@
           "members": [
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -19248,7 +19248,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -19410,7 +19410,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -19599,7 +19599,7 @@
             },
             {
               "brawler": "TRUNK",
-              "brawler_jp": "",
+              "brawler_jp": "トランク",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png"
             }
           ],
@@ -19810,7 +19810,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -19945,7 +19945,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20004,7 +20004,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -20183,7 +20183,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -20291,7 +20291,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20453,7 +20453,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -20512,7 +20512,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20620,7 +20620,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -20652,7 +20652,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             }
           ],
@@ -20782,7 +20782,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -20836,7 +20836,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             },
             {
@@ -20917,7 +20917,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21349,7 +21349,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -21403,7 +21403,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -21538,7 +21538,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21673,7 +21673,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -21889,7 +21889,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -22299,7 +22299,7 @@
             },
             {
               "brawler": "SPROUT",
-              "brawler_jp": "",
+              "brawler_jp": "スプラウト",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png"
             }
           ],
@@ -22353,7 +22353,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -22542,7 +22542,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -22559,7 +22559,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23374,7 +23374,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23428,12 +23428,12 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -23504,7 +23504,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -23828,7 +23828,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -24022,7 +24022,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -24076,7 +24076,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -24098,12 +24098,12 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -24243,7 +24243,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             }
           ],
@@ -24405,7 +24405,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             }
           ],
@@ -24481,12 +24481,12 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -25377,7 +25377,7 @@
             },
             {
               "brawler": "LUMI",
-              "brawler_jp": "",
+              "brawler_jp": "ルミ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
             }
           ],
@@ -26749,7 +26749,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -26884,7 +26884,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -26960,7 +26960,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27100,7 +27100,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27122,7 +27122,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27424,7 +27424,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27478,7 +27478,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -27802,7 +27802,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -28180,7 +28180,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -28477,7 +28477,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -28774,7 +28774,7 @@
             },
             {
               "brawler": "FINX",
-              "brawler_jp": "",
+              "brawler_jp": "フィンクス",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png"
             },
             {
@@ -28887,7 +28887,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -28909,7 +28909,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -29098,7 +29098,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -29206,7 +29206,7 @@
             },
             {
               "brawler": "GRAY",
-              "brawler_jp": "",
+              "brawler_jp": "グレイ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png"
             },
             {
@@ -29535,7 +29535,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -30048,7 +30048,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -30691,7 +30691,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -31242,7 +31242,7 @@
         },
         {
           "brawler": "TRUNK",
-          "brawler_jp": "",
+          "brawler_jp": "トランク",
           "brawler_id": 16000096,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
           "picks": 50,
@@ -31362,7 +31362,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 91,
@@ -31762,7 +31762,7 @@
         },
         {
           "brawler": "ALLI",
-          "brawler_jp": "",
+          "brawler_jp": "アリー",
           "brawler_id": 16000095,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
           "picks": 7,
@@ -32082,7 +32082,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 21,
@@ -32282,7 +32282,7 @@
         },
         {
           "brawler": "GRAY",
-          "brawler_jp": "",
+          "brawler_jp": "グレイ",
           "brawler_id": 16000064,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
           "picks": 16,
@@ -32342,7 +32342,7 @@
         },
         {
           "brawler": "EVE",
-          "brawler_jp": "",
+          "brawler_jp": "イヴ",
           "brawler_id": 16000056,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
           "picks": 4,
@@ -32362,7 +32362,7 @@
         },
         {
           "brawler": "SPROUT",
-          "brawler_jp": "",
+          "brawler_jp": "スプラウト",
           "brawler_id": 16000037,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
           "picks": 4,
@@ -32762,7 +32762,7 @@
         },
         {
           "brawler": "GENE",
-          "brawler_jp": "",
+          "brawler_jp": "ジーン",
           "brawler_id": 16000021,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
           "picks": 2,
@@ -32922,7 +32922,7 @@
         },
         {
           "brawler": "CHUCK",
-          "brawler_jp": "",
+          "brawler_jp": "チャック",
           "brawler_id": 16000073,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000073.png",
           "picks": 8,
@@ -32982,7 +32982,7 @@
         },
         {
           "brawler": "LUMI",
-          "brawler_jp": "",
+          "brawler_jp": "ルミ",
           "brawler_id": 16000091,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
           "picks": 7,
@@ -33178,7 +33178,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33396,7 +33396,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33661,7 +33661,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -33833,7 +33833,7 @@
             },
             {
               "brawler": "TRUNK",
-              "brawler_jp": "",
+              "brawler_jp": "トランク",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png"
             }
           ],
@@ -33904,7 +33904,7 @@
           "members": [
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             },
             {
@@ -34358,7 +34358,7 @@
         },
         {
           "brawler": "LUMI",
-          "brawler_jp": "",
+          "brawler_jp": "ルミ",
           "brawler_id": 16000091,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
           "picks": 2,
@@ -34538,7 +34538,7 @@
         },
         {
           "brawler": "GENE",
-          "brawler_jp": "",
+          "brawler_jp": "ジーン",
           "brawler_id": 16000021,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
           "picks": 2,
@@ -34998,7 +34998,7 @@
         },
         {
           "brawler": "TRUNK",
-          "brawler_jp": "",
+          "brawler_jp": "トランク",
           "brawler_id": 16000096,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
           "picks": 1,
@@ -35238,7 +35238,7 @@
         },
         {
           "brawler": "ALLI",
-          "brawler_jp": "",
+          "brawler_jp": "アリー",
           "brawler_id": 16000095,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
           "picks": 3,
@@ -35258,7 +35258,7 @@
         },
         {
           "brawler": "EVE",
-          "brawler_jp": "",
+          "brawler_jp": "イヴ",
           "brawler_id": 16000056,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
           "picks": 3,
@@ -35418,7 +35418,7 @@
         },
         {
           "brawler": "GRAY",
-          "brawler_jp": "",
+          "brawler_jp": "グレイ",
           "brawler_id": 16000064,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
           "picks": 2,
@@ -35738,7 +35738,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 1,
@@ -35898,7 +35898,7 @@
         },
         {
           "brawler": "SPROUT",
-          "brawler_jp": "",
+          "brawler_jp": "スプラウト",
           "brawler_id": 16000037,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
           "picks": 4,
@@ -35958,7 +35958,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 21,
@@ -36526,7 +36526,7 @@
             },
             {
               "brawler": "EMZ",
-              "brawler_jp": "",
+              "brawler_jp": "エメル",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
             }
           ],
@@ -37053,26 +37053,6 @@
           "tier": "?"
         },
         {
-          "brawler": "DYNAMIKE",
-          "brawler_jp": "ダイナマイク",
-          "brawler_id": 16000009,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000009.png",
-          "picks": 27,
-          "wins": 16,
-          "win_rate": 0.593,
-          "bayes_wr": 0.603,
-          "weighted_wr": 0.607,
-          "bayes_weighted": 0.614,
-          "avg_rank": 2.22,
-          "rank1_rate": 0.429,
-          "rank2_rate": 0.179,
-          "pick_rate": 0.066,
-          "score": 60.21,
-          "delta": -0.02,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "DOUG",
           "brawler_jp": "ダグ",
           "brawler_id": 16000071,
@@ -37254,7 +37234,7 @@
         },
         {
           "brawler": "SPROUT",
-          "brawler_jp": "",
+          "brawler_jp": "スプラウト",
           "brawler_id": 16000037,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
           "picks": 3,
@@ -37354,7 +37334,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 9,
@@ -37374,7 +37354,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 6,
@@ -37409,6 +37389,26 @@
           "pick_rate": 0.007,
           "score": 54.8,
           "delta": -0.014,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "DYNAMIKE",
+          "brawler_jp": "ダイナマイク",
+          "brawler_id": 16000009,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000009.png",
+          "picks": 27,
+          "wins": 16,
+          "win_rate": 0.593,
+          "bayes_wr": 0.603,
+          "weighted_wr": 0.607,
+          "bayes_weighted": 0.614,
+          "avg_rank": 2.22,
+          "rank1_rate": 0.429,
+          "rank2_rate": 0.179,
+          "pick_rate": 0.066,
+          "score": 54.73,
+          "delta": -0.02,
           "insufficient": true,
           "tier": "?"
         },
@@ -37554,7 +37554,7 @@
         },
         {
           "brawler": "ALLI",
-          "brawler_jp": "",
+          "brawler_jp": "アリー",
           "brawler_id": 16000095,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
           "picks": 1,
@@ -38147,7 +38147,7 @@
         },
         {
           "brawler": "GENE",
-          "brawler_jp": "",
+          "brawler_jp": "ジーン",
           "brawler_id": 16000021,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
           "picks": 19,
@@ -38206,26 +38206,6 @@
           "tier": "?"
         },
         {
-          "brawler": "EDGAR",
-          "brawler_jp": "エドガー",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 28,
-          "wins": 24,
-          "win_rate": 0.857,
-          "bayes_wr": 0.852,
-          "weighted_wr": 0.817,
-          "bayes_weighted": 0.819,
-          "avg_rank": 1.57,
-          "rank1_rate": 0.643,
-          "rank2_rate": 0.214,
-          "pick_rate": 0.1,
-          "score": 81.02,
-          "delta": -0.006,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "COLETTE",
           "brawler_jp": "コレット",
           "brawler_id": 16000039,
@@ -38262,46 +38242,6 @@
           "pick_rate": 0.022,
           "score": 79.28,
           "delta": 0.045,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "EVE",
-          "brawler_jp": "",
-          "brawler_id": 16000056,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
-          "picks": 14,
-          "wins": 11,
-          "win_rate": 0.786,
-          "bayes_wr": 0.808,
-          "weighted_wr": 0.786,
-          "bayes_weighted": 0.802,
-          "avg_rank": 1.64,
-          "rank1_rate": 0.643,
-          "rank2_rate": 0.143,
-          "pick_rate": 0.05,
-          "score": 78.96,
-          "delta": -0.023,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "CROW",
-          "brawler_jp": "クロウ",
-          "brawler_id": 16000012,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
-          "picks": 15,
-          "wins": 12,
-          "win_rate": 0.8,
-          "bayes_wr": 0.815,
-          "weighted_wr": 0.781,
-          "bayes_weighted": 0.799,
-          "avg_rank": 1.67,
-          "rank1_rate": 0.6,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.054,
-          "score": 78.49,
-          "delta": -0.026,
           "insufficient": true,
           "tier": "?"
         },
@@ -38526,6 +38466,26 @@
           "tier": "?"
         },
         {
+          "brawler": "EDGAR",
+          "brawler_jp": "エドガー",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 28,
+          "wins": 24,
+          "win_rate": 0.857,
+          "bayes_wr": 0.852,
+          "weighted_wr": 0.817,
+          "bayes_weighted": 0.819,
+          "avg_rank": 1.57,
+          "rank1_rate": 0.643,
+          "rank2_rate": 0.214,
+          "pick_rate": 0.1,
+          "score": 73.66,
+          "delta": -0.006,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "FANG",
           "brawler_jp": "ファング",
           "brawler_id": 16000054,
@@ -38566,6 +38526,26 @@
           "tier": "?"
         },
         {
+          "brawler": "EVE",
+          "brawler_jp": "イヴ",
+          "brawler_id": 16000056,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
+          "picks": 14,
+          "wins": 11,
+          "win_rate": 0.786,
+          "bayes_wr": 0.808,
+          "weighted_wr": 0.786,
+          "bayes_weighted": 0.802,
+          "avg_rank": 1.64,
+          "rank1_rate": 0.643,
+          "rank2_rate": 0.143,
+          "pick_rate": 0.05,
+          "score": 71.78,
+          "delta": -0.023,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "CORDELIUS",
           "brawler_jp": "コーデリアス",
           "brawler_id": 16000070,
@@ -38582,6 +38562,26 @@
           "pick_rate": 0.004,
           "score": 71.38,
           "delta": -0.009,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "CROW",
+          "brawler_jp": "クロウ",
+          "brawler_id": 16000012,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
+          "picks": 15,
+          "wins": 12,
+          "win_rate": 0.8,
+          "bayes_wr": 0.815,
+          "weighted_wr": 0.781,
+          "bayes_weighted": 0.799,
+          "avg_rank": 1.67,
+          "rank1_rate": 0.6,
+          "rank2_rate": 0.2,
+          "pick_rate": 0.054,
+          "score": 71.36,
+          "delta": -0.026,
           "insufficient": true,
           "tier": "?"
         },
@@ -38843,7 +38843,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -38870,7 +38870,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -38926,7 +38926,7 @@
             },
             {
               "brawler": "GENE",
-              "brawler_jp": "",
+              "brawler_jp": "ジーン",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png"
             },
             {
@@ -38953,7 +38953,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -39085,26 +39085,6 @@
           "tier": "?"
         },
         {
-          "brawler": "DARRYL",
-          "brawler_jp": "ダリル",
-          "brawler_id": 16000018,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000018.png",
-          "picks": 20,
-          "wins": 16,
-          "win_rate": 0.8,
-          "bayes_wr": 0.789,
-          "weighted_wr": 0.717,
-          "bayes_weighted": 0.717,
-          "avg_rank": 1.9,
-          "rank1_rate": 0.45,
-          "rank2_rate": 0.35,
-          "pick_rate": 0.091,
-          "score": 70.86,
-          "delta": -0.001,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "CROW",
           "brawler_jp": "クロウ",
           "brawler_id": 16000012,
@@ -39201,26 +39181,6 @@
           "pick_rate": 0.018,
           "score": 68.9,
           "delta": 0.029,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "TICK",
-          "brawler_jp": "ティック",
-          "brawler_id": 16000022,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
-          "picks": 14,
-          "wins": 11,
-          "win_rate": 0.786,
-          "bayes_wr": 0.778,
-          "weighted_wr": 0.687,
-          "bayes_weighted": 0.699,
-          "avg_rank": 2.0,
-          "rank1_rate": 0.357,
-          "rank2_rate": 0.429,
-          "pick_rate": 0.064,
-          "score": 68.64,
-          "delta": -0.018,
           "insufficient": true,
           "tier": "?"
         },
@@ -39385,22 +39345,22 @@
           "tier": "?"
         },
         {
-          "brawler": "EDGAR",
-          "brawler_jp": "エドガー",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 18,
-          "wins": 12,
-          "win_rate": 0.667,
-          "bayes_wr": 0.703,
-          "weighted_wr": 0.636,
-          "bayes_weighted": 0.665,
-          "avg_rank": 2.11,
-          "rank1_rate": 0.444,
-          "rank2_rate": 0.222,
-          "pick_rate": 0.082,
-          "score": 64.68,
-          "delta": -0.053,
+          "brawler": "DARRYL",
+          "brawler_jp": "ダリル",
+          "brawler_id": 16000018,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000018.png",
+          "picks": 20,
+          "wins": 16,
+          "win_rate": 0.8,
+          "bayes_wr": 0.789,
+          "weighted_wr": 0.717,
+          "bayes_weighted": 0.717,
+          "avg_rank": 1.9,
+          "rank1_rate": 0.45,
+          "rank2_rate": 0.35,
+          "pick_rate": 0.091,
+          "score": 64.42,
+          "delta": -0.001,
           "insufficient": true,
           "tier": "?"
         },
@@ -39465,6 +39425,26 @@
           "tier": "?"
         },
         {
+          "brawler": "TICK",
+          "brawler_jp": "ティック",
+          "brawler_id": 16000022,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
+          "picks": 14,
+          "wins": 11,
+          "win_rate": 0.786,
+          "bayes_wr": 0.778,
+          "weighted_wr": 0.687,
+          "bayes_weighted": 0.699,
+          "avg_rank": 2.0,
+          "rank1_rate": 0.357,
+          "rank2_rate": 0.429,
+          "pick_rate": 0.064,
+          "score": 62.4,
+          "delta": -0.018,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "ZIGGY",
           "brawler_jp": "ジギー",
           "brawler_id": 16000098,
@@ -39481,6 +39461,26 @@
           "pick_rate": 0.027,
           "score": 62.31,
           "delta": -0.019,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_jp": "エドガー",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 18,
+          "wins": 12,
+          "win_rate": 0.667,
+          "bayes_wr": 0.703,
+          "weighted_wr": 0.636,
+          "bayes_weighted": 0.665,
+          "avg_rank": 2.11,
+          "rank1_rate": 0.444,
+          "rank2_rate": 0.222,
+          "pick_rate": 0.082,
+          "score": 58.8,
+          "delta": -0.053,
           "insufficient": true,
           "tier": "?"
         },
@@ -39566,7 +39566,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 5,
@@ -39939,7 +39939,7 @@
         },
         {
           "brawler": "ALLI",
-          "brawler_jp": "",
+          "brawler_jp": "アリー",
           "brawler_id": 16000095,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
           "picks": 6,
@@ -40059,7 +40059,7 @@
         },
         {
           "brawler": "EVE",
-          "brawler_jp": "",
+          "brawler_jp": "イヴ",
           "brawler_id": 16000056,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
           "picks": 8,
@@ -40258,46 +40258,6 @@
           "tier": "?"
         },
         {
-          "brawler": "EDGAR",
-          "brawler_jp": "エドガー",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 9,
-          "wins": 5,
-          "win_rate": 0.556,
-          "bayes_wr": 0.608,
-          "weighted_wr": 0.586,
-          "bayes_weighted": 0.628,
-          "avg_rank": 2.22,
-          "rank1_rate": 0.444,
-          "rank2_rate": 0.111,
-          "pick_rate": 0.055,
-          "score": 61.19,
-          "delta": -0.038,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "SPIKE",
-          "brawler_jp": "スパイク",
-          "brawler_id": 16000005,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
-          "picks": 9,
-          "wins": 5,
-          "win_rate": 0.556,
-          "bayes_wr": 0.608,
-          "weighted_wr": 0.586,
-          "bayes_weighted": 0.628,
-          "avg_rank": 2.22,
-          "rank1_rate": 0.556,
-          "rank2_rate": 0.0,
-          "pick_rate": 0.055,
-          "score": 61.19,
-          "delta": -0.038,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "NITA",
           "brawler_jp": "ニタ",
           "brawler_id": 16000008,
@@ -40438,22 +40398,42 @@
           "tier": "?"
         },
         {
-          "brawler": "PIPER",
-          "brawler_jp": "パイパー",
-          "brawler_id": 16000015,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
-          "picks": 14,
-          "wins": 8,
-          "win_rate": 0.571,
-          "bayes_wr": 0.606,
-          "weighted_wr": 0.571,
-          "bayes_weighted": 0.611,
-          "avg_rank": 2.29,
-          "rank1_rate": 0.357,
-          "rank2_rate": 0.214,
-          "pick_rate": 0.085,
-          "score": 59.11,
-          "delta": -0.055,
+          "brawler": "EDGAR",
+          "brawler_jp": "エドガー",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 9,
+          "wins": 5,
+          "win_rate": 0.556,
+          "bayes_wr": 0.608,
+          "weighted_wr": 0.586,
+          "bayes_weighted": 0.628,
+          "avg_rank": 2.22,
+          "rank1_rate": 0.444,
+          "rank2_rate": 0.111,
+          "pick_rate": 0.055,
+          "score": 55.62,
+          "delta": -0.038,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "SPIKE",
+          "brawler_jp": "スパイク",
+          "brawler_id": 16000005,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
+          "picks": 9,
+          "wins": 5,
+          "win_rate": 0.556,
+          "bayes_wr": 0.608,
+          "weighted_wr": 0.586,
+          "bayes_weighted": 0.628,
+          "avg_rank": 2.22,
+          "rank1_rate": 0.556,
+          "rank2_rate": 0.0,
+          "pick_rate": 0.055,
+          "score": 55.62,
+          "delta": -0.038,
           "insufficient": true,
           "tier": "?"
         },
@@ -40479,7 +40459,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 2,
@@ -40499,7 +40479,7 @@
         },
         {
           "brawler": "GENE",
-          "brawler_jp": "",
+          "brawler_jp": "ジーン",
           "brawler_id": 16000021,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
           "picks": 2,
@@ -40514,6 +40494,26 @@
           "pick_rate": 0.012,
           "score": 55.26,
           "delta": -0.028,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "PIPER",
+          "brawler_jp": "パイパー",
+          "brawler_id": 16000015,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
+          "picks": 14,
+          "wins": 8,
+          "win_rate": 0.571,
+          "bayes_wr": 0.606,
+          "weighted_wr": 0.571,
+          "bayes_weighted": 0.611,
+          "avg_rank": 2.29,
+          "rank1_rate": 0.357,
+          "rank2_rate": 0.214,
+          "pick_rate": 0.085,
+          "score": 53.74,
+          "delta": -0.055,
           "insufficient": true,
           "tier": "?"
         },
@@ -40783,7 +40783,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -40815,7 +40815,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -40866,7 +40866,7 @@
           "members": [
             {
               "brawler": "ALLI",
-              "brawler_jp": "",
+              "brawler_jp": "アリー",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
             {
@@ -40898,7 +40898,7 @@
             },
             {
               "brawler": "EVE",
-              "brawler_jp": "",
+              "brawler_jp": "イヴ",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png"
             },
             {
@@ -41218,7 +41218,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -41271,7 +41271,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.308,
           "pick_rate": 0.088,
-          "score": 69.9,
+          "score": 63.54,
           "delta": -0.003,
           "insufficient": true,
           "tier": "?"
@@ -41318,7 +41318,7 @@
         },
         {
           "brawler": "GRAY",
-          "brawler_jp": "",
+          "brawler_jp": "グレイ",
           "brawler_id": 16000064,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
           "picks": 1,
@@ -42082,26 +42082,6 @@
           "tier": "?"
         },
         {
-          "brawler": "JESSIE",
-          "brawler_jp": "ジェシー",
-          "brawler_id": 16000007,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
-          "picks": 10,
-          "wins": 7,
-          "win_rate": 0.7,
-          "bayes_wr": 0.704,
-          "weighted_wr": 0.617,
-          "bayes_weighted": 0.642,
-          "avg_rank": 2.2,
-          "rank1_rate": 0.3,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.081,
-          "score": 62.65,
-          "delta": -0.025,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "MORTIS",
           "brawler_jp": "モーティス",
           "brawler_id": 16000011,
@@ -42282,26 +42262,6 @@
           "tier": "?"
         },
         {
-          "brawler": "PIERCE",
-          "brawler_jp": "ピアス",
-          "brawler_id": 16000099,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
-          "picks": 8,
-          "wins": 5,
-          "win_rate": 0.625,
-          "bayes_wr": 0.671,
-          "weighted_wr": 0.556,
-          "bayes_weighted": 0.617,
-          "avg_rank": 2.38,
-          "rank1_rate": 0.125,
-          "rank2_rate": 0.5,
-          "pick_rate": 0.065,
-          "score": 59.35,
-          "delta": -0.049,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "GIGI",
           "brawler_jp": "ジジ",
           "brawler_id": 16000100,
@@ -42342,6 +42302,26 @@
           "tier": "?"
         },
         {
+          "brawler": "JESSIE",
+          "brawler_jp": "ジェシー",
+          "brawler_id": 16000007,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
+          "picks": 10,
+          "wins": 7,
+          "win_rate": 0.7,
+          "bayes_wr": 0.704,
+          "weighted_wr": 0.617,
+          "bayes_weighted": 0.642,
+          "avg_rank": 2.2,
+          "rank1_rate": 0.3,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.081,
+          "score": 56.96,
+          "delta": -0.025,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "CHESTER",
           "brawler_jp": "チェスター",
           "brawler_id": 16000063,
@@ -42358,6 +42338,26 @@
           "pick_rate": 0.016,
           "score": 55.36,
           "delta": -0.028,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "PIERCE",
+          "brawler_jp": "ピアス",
+          "brawler_id": 16000099,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
+          "picks": 8,
+          "wins": 5,
+          "win_rate": 0.625,
+          "bayes_wr": 0.671,
+          "weighted_wr": 0.556,
+          "bayes_weighted": 0.617,
+          "avg_rank": 2.38,
+          "rank1_rate": 0.125,
+          "rank2_rate": 0.5,
+          "pick_rate": 0.065,
+          "score": 53.95,
+          "delta": -0.049,
           "insufficient": true,
           "tier": "?"
         },
@@ -42993,26 +42993,6 @@
           "tier": "?"
         },
         {
-          "brawler": "COLT",
-          "brawler_jp": "コルト",
-          "brawler_id": 16000001,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
-          "picks": 9,
-          "wins": 6,
-          "win_rate": 0.667,
-          "bayes_wr": 0.674,
-          "weighted_wr": 0.636,
-          "bayes_weighted": 0.648,
-          "avg_rank": 2.11,
-          "rank1_rate": 0.444,
-          "rank2_rate": 0.222,
-          "pick_rate": 0.096,
-          "score": 63.79,
-          "delta": -0.011,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "MANDY",
           "brawler_jp": "マンディ",
           "brawler_id": 16000065,
@@ -43133,22 +43113,22 @@
           "tier": "?"
         },
         {
-          "brawler": "PIPER",
-          "brawler_jp": "パイパー",
-          "brawler_id": 16000015,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
-          "picks": 5,
-          "wins": 3,
-          "win_rate": 0.6,
-          "bayes_wr": 0.654,
-          "weighted_wr": 0.544,
-          "bayes_weighted": 0.621,
-          "avg_rank": 2.4,
-          "rank1_rate": 0.2,
-          "rank2_rate": 0.4,
-          "pick_rate": 0.053,
-          "score": 59.67,
-          "delta": -0.038,
+          "brawler": "COLT",
+          "brawler_jp": "コルト",
+          "brawler_id": 16000001,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
+          "picks": 9,
+          "wins": 6,
+          "win_rate": 0.667,
+          "bayes_wr": 0.674,
+          "weighted_wr": 0.636,
+          "bayes_weighted": 0.648,
+          "avg_rank": 2.11,
+          "rank1_rate": 0.444,
+          "rank2_rate": 0.222,
+          "pick_rate": 0.096,
+          "score": 57.99,
+          "delta": -0.011,
           "insufficient": true,
           "tier": "?"
         },
@@ -43214,7 +43194,7 @@
         },
         {
           "brawler": "FINX",
-          "brawler_jp": "",
+          "brawler_jp": "フィンクス",
           "brawler_id": 16000092,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
           "picks": 2,
@@ -43229,6 +43209,26 @@
           "pick_rate": 0.021,
           "score": 54.86,
           "delta": -0.027,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "PIPER",
+          "brawler_jp": "パイパー",
+          "brawler_id": 16000015,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
+          "picks": 5,
+          "wins": 3,
+          "win_rate": 0.6,
+          "bayes_wr": 0.654,
+          "weighted_wr": 0.544,
+          "bayes_weighted": 0.621,
+          "avg_rank": 2.4,
+          "rank1_rate": 0.2,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.053,
+          "score": 54.25,
+          "delta": -0.038,
           "insufficient": true,
           "tier": "?"
         },
@@ -43688,26 +43688,6 @@
           "tier": "?"
         },
         {
-          "brawler": "BUZZ",
-          "brawler_jp": "バズ",
-          "brawler_id": 16000049,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000049.png",
-          "picks": 7,
-          "wins": 4,
-          "win_rate": 0.571,
-          "bayes_wr": 0.634,
-          "weighted_wr": 0.651,
-          "bayes_weighted": 0.669,
-          "avg_rank": 2.0,
-          "rank1_rate": 0.571,
-          "rank2_rate": 0.0,
-          "pick_rate": 0.083,
-          "score": 66.04,
-          "delta": -0.013,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "DYNAMIKE",
           "brawler_jp": "ダイナマイク",
           "brawler_id": 16000009,
@@ -43828,22 +43808,22 @@
           "tier": "?"
         },
         {
-          "brawler": "EMZ",
-          "brawler_jp": "",
-          "brawler_id": 16000030,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
-          "picks": 15,
-          "wins": 9,
-          "win_rate": 0.6,
-          "bayes_wr": 0.631,
-          "weighted_wr": 0.582,
-          "bayes_weighted": 0.619,
-          "avg_rank": 2.33,
-          "rank1_rate": 0.176,
-          "rank2_rate": 0.471,
-          "pick_rate": 0.179,
-          "score": 59.43,
-          "delta": -0.063,
+          "brawler": "BUZZ",
+          "brawler_jp": "バズ",
+          "brawler_id": 16000049,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000049.png",
+          "picks": 7,
+          "wins": 4,
+          "win_rate": 0.571,
+          "bayes_wr": 0.634,
+          "weighted_wr": 0.651,
+          "bayes_weighted": 0.669,
+          "avg_rank": 2.0,
+          "rank1_rate": 0.571,
+          "rank2_rate": 0.0,
+          "pick_rate": 0.083,
+          "score": 60.03,
+          "delta": -0.013,
           "insufficient": true,
           "tier": "?"
         },
@@ -43904,6 +43884,26 @@
           "pick_rate": 0.048,
           "score": 54.25,
           "delta": -0.052,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "EMZ",
+          "brawler_jp": "エメル",
+          "brawler_id": 16000030,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
+          "picks": 15,
+          "wins": 9,
+          "win_rate": 0.6,
+          "bayes_wr": 0.631,
+          "weighted_wr": 0.582,
+          "bayes_weighted": 0.619,
+          "avg_rank": 2.33,
+          "rank1_rate": 0.176,
+          "rank2_rate": 0.471,
+          "pick_rate": 0.179,
+          "score": 54.03,
+          "delta": -0.063,
           "insufficient": true,
           "tier": "?"
         },
@@ -44224,7 +44224,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -44283,26 +44283,6 @@
           "tier": "?"
         },
         {
-          "brawler": "ROSA",
-          "brawler_jp": "ローサ",
-          "brawler_id": 16000024,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000024.png",
-          "picks": 5,
-          "wins": 3,
-          "win_rate": 0.6,
-          "bayes_wr": 0.7,
-          "weighted_wr": 0.6,
-          "bayes_weighted": 0.677,
-          "avg_rank": 2.2,
-          "rank1_rate": 0.4,
-          "rank2_rate": 0.2,
-          "pick_rate": 0.069,
-          "score": 65.4,
-          "delta": -0.038,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "EDGAR",
           "brawler_jp": "エドガー",
           "brawler_id": 16000043,
@@ -44344,7 +44324,7 @@
         },
         {
           "brawler": "GRAY",
-          "brawler_jp": "",
+          "brawler_jp": "グレイ",
           "brawler_id": 16000064,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
           "picks": 1,
@@ -44483,28 +44463,28 @@
           "tier": "?"
         },
         {
-          "brawler": "PIPER",
-          "brawler_jp": "パイパー",
-          "brawler_id": 16000015,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
+          "brawler": "ROSA",
+          "brawler_jp": "ローサ",
+          "brawler_id": 16000024,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000024.png",
           "picks": 5,
           "wins": 3,
           "win_rate": 0.6,
           "bayes_wr": 0.7,
-          "weighted_wr": 0.544,
-          "bayes_weighted": 0.658,
-          "avg_rank": 2.4,
-          "rank1_rate": 0.2,
-          "rank2_rate": 0.4,
+          "weighted_wr": 0.6,
+          "bayes_weighted": 0.677,
+          "avg_rank": 2.2,
+          "rank1_rate": 0.4,
+          "rank2_rate": 0.2,
           "pick_rate": 0.069,
-          "score": 62.57,
-          "delta": -0.057,
+          "score": 59.45,
+          "delta": -0.038,
           "insufficient": true,
           "tier": "?"
         },
         {
           "brawler": "LUMI",
-          "brawler_jp": "",
+          "brawler_jp": "ルミ",
           "brawler_id": 16000091,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
           "picks": 2,
@@ -44519,6 +44499,26 @@
           "pick_rate": 0.028,
           "score": 58.33,
           "delta": -0.036,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "PIPER",
+          "brawler_jp": "パイパー",
+          "brawler_id": 16000015,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
+          "picks": 5,
+          "wins": 3,
+          "win_rate": 0.6,
+          "bayes_wr": 0.7,
+          "weighted_wr": 0.544,
+          "bayes_weighted": 0.658,
+          "avg_rank": 2.4,
+          "rank1_rate": 0.2,
+          "rank2_rate": 0.4,
+          "pick_rate": 0.069,
+          "score": 56.89,
+          "delta": -0.057,
           "insufficient": true,
           "tier": "?"
         },
@@ -44788,7 +44788,7 @@
           "rank1_rate": 0.462,
           "rank2_rate": 0.0,
           "pick_rate": 0.333,
-          "score": 45.69,
+          "score": 41.54,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -45019,28 +45019,8 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.067,
-          "score": 28.66,
+          "score": 26.06,
           "delta": -0.036,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "DOUG",
-          "brawler_jp": "ダグ",
-          "brawler_id": 16000071,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
-          "picks": 5,
-          "wins": 0,
-          "win_rate": 0.0,
-          "bayes_wr": 0.2,
-          "weighted_wr": 0.167,
-          "bayes_weighted": 0.293,
-          "avg_rank": 3.4,
-          "rank1_rate": 0.0,
-          "rank2_rate": 0.0,
-          "pick_rate": 0.167,
-          "score": 26.5,
-          "delta": -0.063,
           "insufficient": true,
           "tier": "?"
         },
@@ -45086,7 +45066,7 @@
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -45105,6 +45085,26 @@
           "tier": "?"
         },
         {
+          "brawler": "DOUG",
+          "brawler_jp": "ダグ",
+          "brawler_id": 16000071,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
+          "picks": 5,
+          "wins": 0,
+          "win_rate": 0.0,
+          "bayes_wr": 0.2,
+          "weighted_wr": 0.167,
+          "bayes_weighted": 0.293,
+          "avg_rank": 3.4,
+          "rank1_rate": 0.0,
+          "rank2_rate": 0.0,
+          "pick_rate": 0.167,
+          "score": 24.09,
+          "delta": -0.063,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
           "brawler": "GRIFF",
           "brawler_jp": "グリフ",
           "brawler_id": 16000050,
@@ -45119,7 +45119,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 0.0,
           "pick_rate": 0.3,
-          "score": 21.06,
+          "score": 19.14,
           "delta": -0.11,
           "insufficient": true,
           "tier": "?"
@@ -45240,46 +45240,6 @@
           "tier": "?"
         },
         {
-          "brawler": "BERRY",
-          "brawler_jp": "ベリー",
-          "brawler_id": 16000082,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png",
-          "picks": 3,
-          "wins": 1,
-          "win_rate": 0.333,
-          "bayes_wr": 0.626,
-          "weighted_wr": 0.426,
-          "bayes_weighted": 0.617,
-          "avg_rank": 2.67,
-          "rank1_rate": 0.0,
-          "rank2_rate": 0.333,
-          "pick_rate": 0.143,
-          "score": 57.79,
-          "delta": -0.057,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
-          "brawler": "BROCK",
-          "brawler_jp": "ブロック",
-          "brawler_id": 16000003,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
-          "picks": 3,
-          "wins": 1,
-          "win_rate": 0.333,
-          "bayes_wr": 0.626,
-          "weighted_wr": 0.426,
-          "bayes_weighted": 0.617,
-          "avg_rank": 2.67,
-          "rank1_rate": 0.0,
-          "rank2_rate": 0.333,
-          "pick_rate": 0.143,
-          "score": 57.79,
-          "delta": -0.057,
-          "insufficient": true,
-          "tier": "?"
-        },
-        {
           "brawler": "BO",
           "brawler_jp": "ボウ",
           "brawler_id": 16000014,
@@ -45316,6 +45276,46 @@
           "pick_rate": 0.048,
           "score": 52.97,
           "delta": -0.036,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BERRY",
+          "brawler_jp": "ベリー",
+          "brawler_id": 16000082,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png",
+          "picks": 3,
+          "wins": 1,
+          "win_rate": 0.333,
+          "bayes_wr": 0.626,
+          "weighted_wr": 0.426,
+          "bayes_weighted": 0.617,
+          "avg_rank": 2.67,
+          "rank1_rate": 0.0,
+          "rank2_rate": 0.333,
+          "pick_rate": 0.143,
+          "score": 52.54,
+          "delta": -0.057,
+          "insufficient": true,
+          "tier": "?"
+        },
+        {
+          "brawler": "BROCK",
+          "brawler_jp": "ブロック",
+          "brawler_id": 16000003,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
+          "picks": 3,
+          "wins": 1,
+          "win_rate": 0.333,
+          "bayes_wr": 0.626,
+          "weighted_wr": 0.426,
+          "bayes_weighted": 0.617,
+          "avg_rank": 2.67,
+          "rank1_rate": 0.0,
+          "rank2_rate": 0.333,
+          "pick_rate": 0.143,
+          "score": 52.54,
+          "delta": -0.057,
           "insufficient": true,
           "tier": "?"
         }
@@ -45449,14 +45449,14 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.091,
-          "score": 86.37,
+          "score": 78.52,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
         },
         {
           "brawler": "EMZ",
-          "brawler_jp": "",
+          "brawler_jp": "エメル",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
           "picks": 1,
@@ -45469,7 +45469,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.091,
-          "score": 86.37,
+          "score": 78.52,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -45489,7 +45489,7 @@
           "rank1_rate": 0.0,
           "rank2_rate": 1.0,
           "pick_rate": 0.182,
-          "score": 83.89,
+          "score": 76.27,
           "delta": -0.017,
           "insufficient": true,
           "tier": "?"
@@ -45509,7 +45509,7 @@
           "rank1_rate": 0,
           "rank2_rate": 0,
           "pick_rate": 0.091,
-          "score": 83.08,
+          "score": 75.53,
           "delta": 0.0,
           "insufficient": true,
           "tier": "?"
@@ -45887,7 +45887,7 @@
     {
       "id": 16000030,
       "name": "EMZ",
-      "name_jp": "",
+      "name_jp": "エメル",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
       "rarity": "Epic",
       "total_picks": 1941,
@@ -48581,7 +48581,7 @@
     {
       "id": 16000092,
       "name": "FINX",
-      "name_jp": "",
+      "name_jp": "フィンクス",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
       "rarity": "Mythic",
       "total_picks": 469,
@@ -48633,7 +48633,7 @@
     {
       "id": 16000021,
       "name": "GENE",
-      "name_jp": "",
+      "name_jp": "ジーン",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
       "rarity": "Mythic",
       "total_picks": 467,
@@ -49502,7 +49502,7 @@
     {
       "id": 16000091,
       "name": "LUMI",
-      "name_jp": "",
+      "name_jp": "ルミ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
       "rarity": "Mythic",
       "total_picks": 348,
@@ -49747,7 +49747,7 @@
     {
       "id": 16000064,
       "name": "GRAY",
-      "name_jp": "",
+      "name_jp": "グレイ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
       "rarity": "Mythic",
       "total_picks": 290,
@@ -50039,7 +50039,7 @@
     {
       "id": 16000096,
       "name": "TRUNK",
-      "name_jp": "",
+      "name_jp": "トランク",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
       "rarity": "Epic",
       "total_picks": 218,
@@ -50081,7 +50081,7 @@
     {
       "id": 16000095,
       "name": "ALLI",
-      "name_jp": "",
+      "name_jp": "アリー",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
       "rarity": "Mythic",
       "total_picks": 217,
@@ -50185,7 +50185,7 @@
     {
       "id": 16000056,
       "name": "EVE",
-      "name_jp": "",
+      "name_jp": "イヴ",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
       "rarity": "Mythic",
       "total_picks": 213,
@@ -50447,7 +50447,7 @@
     {
       "id": 16000037,
       "name": "SPROUT",
-      "name_jp": "",
+      "name_jp": "スプラウト",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
       "rarity": "Mythic",
       "total_picks": 165,
@@ -50578,7 +50578,7 @@
     {
       "id": 16000073,
       "name": "CHUCK",
-      "name_jp": "",
+      "name_jp": "チャック",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000073.png",
       "rarity": "Mythic",
       "total_picks": 104,
