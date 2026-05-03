@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-03T15:15:57.638621+00:00",
+  "generated_at": "2026-05-03T15:18:29.851537+00:00",
   "stats": {
     "total_maps": 15,
     "maps_in_pool": 12,
     "total_brawlers": 102,
-    "total_picks": 14247
+    "total_picks": 14004
   },
   "maps": [
     {
@@ -14,333 +14,333 @@
       "name_jp": "マグマの心臓",
       "image_url": null,
       "in_pool": true,
-      "total_picks": 11478,
-      "map_avg_wr": 0.69,
-      "map_avg_rank": 1.98,
+      "total_picks": 11388,
+      "map_avg_wr": 0.688,
+      "map_avg_rank": 2.0,
       "tier_list": [
-        {
-          "brawler": "DAMIAN",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 236,
-          "wins": 196,
-          "win_rate": 0.831,
-          "bayes_wr": 0.825,
-          "avg_rank": 1.64,
-          "pick_rate": 0.021,
-          "score": 84.16,
-          "tier": "S+"
-        },
         {
           "brawler": "BERRY",
           "brawler_id": 16000082,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png",
-          "picks": 69,
-          "wins": 57,
-          "win_rate": 0.826,
-          "bayes_wr": 0.809,
-          "avg_rank": 1.55,
-          "pick_rate": 0.006,
-          "score": 83.02,
+          "picks": 79,
+          "wins": 66,
+          "win_rate": 0.835,
+          "bayes_wr": 0.819,
+          "avg_rank": 1.56,
+          "pick_rate": 0.007,
+          "score": 84.07,
           "tier": "S+"
+        },
+        {
+          "brawler": "MEG",
+          "brawler_id": 16000052,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
+          "picks": 145,
+          "wins": 116,
+          "win_rate": 0.8,
+          "bayes_wr": 0.793,
+          "avg_rank": 1.66,
+          "pick_rate": 0.013,
+          "score": 80.96,
+          "tier": "S+"
+        },
+        {
+          "brawler": "DAMIAN",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 237,
+          "wins": 188,
+          "win_rate": 0.793,
+          "bayes_wr": 0.789,
+          "avg_rank": 1.72,
+          "pick_rate": 0.021,
+          "score": 80.28,
+          "tier": "S+"
+        },
+        {
+          "brawler": "BIBI",
+          "brawler_id": 16000026,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
+          "picks": 139,
+          "wins": 109,
+          "win_rate": 0.784,
+          "bayes_wr": 0.778,
+          "avg_rank": 1.8,
+          "pick_rate": 0.012,
+          "score": 78.75,
+          "tier": "S"
         },
         {
           "brawler": "HANK",
           "brawler_id": 16000069,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
-          "picks": 123,
-          "wins": 96,
-          "win_rate": 0.78,
-          "bayes_wr": 0.774,
-          "avg_rank": 1.67,
-          "pick_rate": 0.011,
-          "score": 78.9,
+          "picks": 131,
+          "wins": 100,
+          "win_rate": 0.763,
+          "bayes_wr": 0.758,
+          "avg_rank": 1.76,
+          "pick_rate": 0.012,
+          "score": 76.98,
           "tier": "S"
         },
         {
-          "brawler": "BULL",
-          "brawler_id": 16000002,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
-          "picks": 86,
-          "wins": 68,
-          "win_rate": 0.791,
-          "bayes_wr": 0.78,
-          "avg_rank": 1.92,
-          "pick_rate": 0.007,
-          "score": 78.3,
+          "brawler": "LILY",
+          "brawler_id": 16000081,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000081.png",
+          "picks": 159,
+          "wins": 122,
+          "win_rate": 0.767,
+          "bayes_wr": 0.763,
+          "avg_rank": 1.87,
+          "pick_rate": 0.014,
+          "score": 76.89,
           "tier": "S"
         },
         {
           "brawler": "PEARL",
           "brawler_id": 16000072,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000072.png",
-          "picks": 66,
-          "wins": 51,
-          "win_rate": 0.773,
-          "bayes_wr": 0.762,
-          "avg_rank": 1.8,
-          "pick_rate": 0.006,
-          "score": 77.07,
+          "picks": 78,
+          "wins": 59,
+          "win_rate": 0.756,
+          "bayes_wr": 0.749,
+          "avg_rank": 1.88,
+          "pick_rate": 0.007,
+          "score": 75.44,
           "tier": "S"
-        },
-        {
-          "brawler": "BIBI",
-          "brawler_id": 16000026,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
-          "picks": 168,
-          "wins": 128,
-          "win_rate": 0.762,
-          "bayes_wr": 0.758,
-          "avg_rank": 1.8,
-          "pick_rate": 0.015,
-          "score": 76.67,
-          "tier": "S"
-        },
-        {
-          "brawler": "JANET",
-          "brawler_id": 16000057,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
-          "picks": 191,
-          "wins": 145,
-          "win_rate": 0.759,
-          "bayes_wr": 0.756,
-          "avg_rank": 1.86,
-          "pick_rate": 0.017,
-          "score": 76.15,
-          "tier": "S"
-        },
-        {
-          "brawler": "BYRON",
-          "brawler_id": 16000042,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
-          "picks": 243,
-          "wins": 182,
-          "win_rate": 0.749,
-          "bayes_wr": 0.747,
-          "avg_rank": 1.81,
-          "pick_rate": 0.021,
-          "score": 75.5,
-          "tier": "S"
-        },
-        {
-          "brawler": "FRANK",
-          "brawler_id": 16000020,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
-          "picks": 60,
-          "wins": 45,
-          "win_rate": 0.75,
-          "bayes_wr": 0.741,
-          "avg_rank": 1.8,
-          "pick_rate": 0.005,
-          "score": 75.03,
-          "tier": "S"
-        },
-        {
-          "brawler": "SIRIUS",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 156,
-          "wins": 115,
-          "win_rate": 0.737,
-          "bayes_wr": 0.734,
-          "avg_rank": 1.74,
-          "pick_rate": 0.014,
-          "score": 74.62,
-          "tier": "A"
         },
         {
           "brawler": "PIERCE",
           "brawler_id": 16000099,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
           "picks": 175,
-          "wins": 129,
-          "win_rate": 0.737,
-          "bayes_wr": 0.735,
-          "avg_rank": 1.82,
+          "wins": 130,
+          "win_rate": 0.743,
+          "bayes_wr": 0.74,
+          "avg_rank": 1.8,
           "pick_rate": 0.015,
-          "score": 74.24,
+          "score": 74.97,
+          "tier": "S"
+        },
+        {
+          "brawler": "FRANK",
+          "brawler_id": 16000020,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
+          "picks": 70,
+          "wins": 52,
+          "win_rate": 0.743,
+          "bayes_wr": 0.736,
+          "avg_rank": 1.81,
+          "pick_rate": 0.006,
+          "score": 74.53,
           "tier": "A"
         },
         {
-          "brawler": "MEG",
-          "brawler_id": 16000052,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
-          "picks": 158,
-          "wins": 116,
-          "win_rate": 0.734,
-          "bayes_wr": 0.732,
-          "avg_rank": 1.82,
-          "pick_rate": 0.014,
-          "score": 73.94,
-          "tier": "A"
-        },
-        {
-          "brawler": "BUSTER",
-          "brawler_id": 16000062,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
-          "picks": 188,
-          "wins": 138,
+          "brawler": "BYRON",
+          "brawler_id": 16000042,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
+          "picks": 237,
+          "wins": 174,
           "win_rate": 0.734,
           "bayes_wr": 0.732,
           "avg_rank": 1.86,
-          "pick_rate": 0.016,
-          "score": 73.76,
+          "pick_rate": 0.021,
+          "score": 73.91,
+          "tier": "A"
+        },
+        {
+          "brawler": "MAISIE",
+          "brawler_id": 16000068,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000068.png",
+          "picks": 112,
+          "wins": 82,
+          "win_rate": 0.732,
+          "bayes_wr": 0.728,
+          "avg_rank": 1.81,
+          "pick_rate": 0.01,
+          "score": 73.78,
+          "tier": "A"
+        },
+        {
+          "brawler": "BULL",
+          "brawler_id": 16000002,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
+          "picks": 93,
+          "wins": 69,
+          "win_rate": 0.742,
+          "bayes_wr": 0.737,
+          "avg_rank": 2.02,
+          "pick_rate": 0.008,
+          "score": 73.55,
+          "tier": "A"
+        },
+        {
+          "brawler": "SIRIUS",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 155,
+          "wins": 113,
+          "win_rate": 0.729,
+          "bayes_wr": 0.727,
+          "avg_rank": 1.83,
+          "pick_rate": 0.014,
+          "score": 73.49,
           "tier": "A"
         },
         {
           "brawler": "COLT",
           "brawler_id": 16000001,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
-          "picks": 317,
-          "wins": 231,
-          "win_rate": 0.729,
-          "bayes_wr": 0.728,
-          "avg_rank": 1.92,
-          "pick_rate": 0.028,
-          "score": 73.03,
+          "picks": 328,
+          "wins": 240,
+          "win_rate": 0.732,
+          "bayes_wr": 0.73,
+          "avg_rank": 1.94,
+          "pick_rate": 0.029,
+          "score": 73.32,
           "tier": "A"
         },
         {
           "brawler": "CARL",
           "brawler_id": 16000025,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
-          "picks": 169,
-          "wins": 123,
-          "win_rate": 0.728,
-          "bayes_wr": 0.726,
-          "avg_rank": 1.91,
+          "picks": 175,
+          "wins": 127,
+          "win_rate": 0.726,
+          "bayes_wr": 0.724,
+          "avg_rank": 1.88,
           "pick_rate": 0.015,
-          "score": 72.9,
+          "score": 72.95,
           "tier": "A"
         },
         {
-          "brawler": "CORDELIUS",
-          "brawler_id": 16000070,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
-          "picks": 171,
-          "wins": 124,
-          "win_rate": 0.725,
-          "bayes_wr": 0.723,
-          "avg_rank": 1.94,
-          "pick_rate": 0.015,
-          "score": 72.5,
+          "brawler": "JANET",
+          "brawler_id": 16000057,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
+          "picks": 227,
+          "wins": 164,
+          "win_rate": 0.722,
+          "bayes_wr": 0.721,
+          "avg_rank": 1.89,
+          "pick_rate": 0.02,
+          "score": 72.63,
           "tier": "A"
         },
         {
-          "brawler": "MR. P",
+          "brawler": "BUSTER",
+          "brawler_id": 16000062,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
+          "picks": 184,
+          "wins": 132,
+          "win_rate": 0.717,
+          "bayes_wr": 0.716,
+          "avg_rank": 1.9,
+          "pick_rate": 0.016,
+          "score": 72.07,
+          "tier": "A"
+        },
+        {
+          "brawler": "GLOWY",
           "brawler_id": null,
           "image_url": null,
-          "picks": 93,
-          "wins": 67,
+          "picks": 82,
+          "wins": 59,
           "win_rate": 0.72,
-          "bayes_wr": 0.718,
-          "avg_rank": 1.9,
-          "pick_rate": 0.008,
-          "score": 72.13,
+          "bayes_wr": 0.716,
+          "avg_rank": 1.93,
+          "pick_rate": 0.007,
+          "score": 71.94,
           "tier": "A"
         },
         {
-          "brawler": "JAE-YONG",
-          "brawler_id": 16000093,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
-          "picks": 322,
-          "wins": 229,
-          "win_rate": 0.711,
-          "bayes_wr": 0.711,
-          "avg_rank": 1.85,
-          "pick_rate": 0.028,
-          "score": 71.69,
-          "tier": "A"
-        },
-        {
-          "brawler": "CROW",
-          "brawler_id": 16000012,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
-          "picks": 337,
-          "wins": 240,
-          "win_rate": 0.712,
-          "bayes_wr": 0.712,
-          "avg_rank": 1.91,
-          "pick_rate": 0.029,
-          "score": 71.48,
-          "tier": "A"
-        },
-        {
-          "brawler": "LILY",
-          "brawler_id": 16000081,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000081.png",
-          "picks": 167,
-          "wins": 119,
-          "win_rate": 0.713,
-          "bayes_wr": 0.711,
-          "avg_rank": 1.95,
-          "pick_rate": 0.015,
-          "score": 71.26,
-          "tier": "A"
-        },
-        {
-          "brawler": "COLETTE",
-          "brawler_id": 16000039,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000039.png",
-          "picks": 333,
-          "wins": 233,
-          "win_rate": 0.7,
-          "bayes_wr": 0.699,
-          "avg_rank": 1.86,
-          "pick_rate": 0.029,
-          "score": 70.52,
-          "tier": "A"
-        },
-        {
-          "brawler": "BROCK",
-          "brawler_id": 16000003,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
-          "picks": 169,
-          "wins": 119,
-          "win_rate": 0.704,
-          "bayes_wr": 0.703,
-          "avg_rank": 1.95,
-          "pick_rate": 0.015,
-          "score": 70.47,
+          "brawler": "MINA",
+          "brawler_id": 16000097,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000097.png",
+          "picks": 137,
+          "wins": 98,
+          "win_rate": 0.715,
+          "bayes_wr": 0.713,
+          "avg_rank": 1.93,
+          "pick_rate": 0.012,
+          "score": 71.68,
           "tier": "A"
         },
         {
           "brawler": "MORTIS",
           "brawler_id": 16000011,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000011.png",
-          "picks": 362,
-          "wins": 254,
-          "win_rate": 0.702,
-          "bayes_wr": 0.701,
-          "avg_rank": 1.95,
-          "pick_rate": 0.032,
-          "score": 70.27,
+          "picks": 374,
+          "wins": 267,
+          "win_rate": 0.714,
+          "bayes_wr": 0.713,
+          "avg_rank": 1.94,
+          "pick_rate": 0.033,
+          "score": 71.61,
+          "tier": "A"
+        },
+        {
+          "brawler": "AMBER",
+          "brawler_id": 16000040,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000040.png",
+          "picks": 98,
+          "wins": 70,
+          "win_rate": 0.714,
+          "bayes_wr": 0.712,
+          "avg_rank": 1.92,
+          "pick_rate": 0.009,
+          "score": 71.56,
+          "tier": "A"
+        },
+        {
+          "brawler": "MANDY",
+          "brawler_id": 16000065,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000065.png",
+          "picks": 118,
+          "wins": 84,
+          "win_rate": 0.712,
+          "bayes_wr": 0.71,
+          "avg_rank": 1.98,
+          "pick_rate": 0.01,
+          "score": 71.08,
           "tier": "A"
         },
         {
           "brawler": "EDGAR",
           "brawler_id": 16000043,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 889,
-          "wins": 624,
-          "win_rate": 0.702,
-          "bayes_wr": 0.702,
-          "avg_rank": 1.96,
-          "pick_rate": 0.077,
-          "score": 70.26,
+          "picks": 869,
+          "wins": 615,
+          "win_rate": 0.708,
+          "bayes_wr": 0.707,
+          "avg_rank": 1.95,
+          "pick_rate": 0.076,
+          "score": 70.98,
           "tier": "A"
         },
         {
-          "brawler": "BEA",
-          "brawler_id": 16000029,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png",
-          "picks": 141,
-          "wins": 98,
-          "win_rate": 0.695,
-          "bayes_wr": 0.695,
-          "avg_rank": 1.9,
-          "pick_rate": 0.012,
-          "score": 69.85,
+          "brawler": "CHARLIE",
+          "brawler_id": 16000074,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
+          "picks": 59,
+          "wins": 42,
+          "win_rate": 0.712,
+          "bayes_wr": 0.708,
+          "avg_rank": 2.03,
+          "pick_rate": 0.005,
+          "score": 70.67,
+          "tier": "A"
+        },
+        {
+          "brawler": "CROW",
+          "brawler_id": 16000012,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
+          "picks": 374,
+          "wins": 263,
+          "win_rate": 0.703,
+          "bayes_wr": 0.703,
+          "avg_rank": 1.94,
+          "pick_rate": 0.033,
+          "score": 70.56,
           "tier": "A"
         }
       ],
@@ -384,26 +384,6 @@
           "wins": 16,
           "win_rate": 1.0,
           "avg_rank": 1.0
-        },
-        {
-          "members": [
-            {
-              "brawler": "KIT",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png"
-            },
-            {
-              "brawler": "MANDY",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000065.png"
-            },
-            {
-              "brawler": "RUFFS",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000044.png"
-            }
-          ],
-          "picks": 14,
-          "wins": 14,
-          "win_rate": 1.0,
-          "avg_rank": 1.14
         },
         {
           "members": [
@@ -468,26 +448,6 @@
         {
           "members": [
             {
-              "brawler": "BEA",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png"
-            },
-            {
-              "brawler": "BELLE",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000046.png"
-            },
-            {
-              "brawler": "BIBI",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png"
-            }
-          ],
-          "picks": 9,
-          "wins": 9,
-          "win_rate": 1.0,
-          "avg_rank": 1.0
-        },
-        {
-          "members": [
-            {
               "brawler": "ALLI",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png"
             },
@@ -504,6 +464,46 @@
           "wins": 9,
           "win_rate": 1.0,
           "avg_rank": 1.44
+        },
+        {
+          "members": [
+            {
+              "brawler": "EDGAR",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png"
+            },
+            {
+              "brawler": "STU",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png"
+            },
+            {
+              "brawler": "ZIGGY",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png"
+            }
+          ],
+          "picks": 9,
+          "wins": 9,
+          "win_rate": 1.0,
+          "avg_rank": 1.33
+        },
+        {
+          "members": [
+            {
+              "brawler": "CROW",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png"
+            },
+            {
+              "brawler": "EDGAR",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png"
+            },
+            {
+              "brawler": "LUMI",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png"
+            }
+          ],
+          "picks": 8,
+          "wins": 8,
+          "win_rate": 1.0,
+          "avg_rank": 1.12
         }
       ]
     },
@@ -514,9 +514,9 @@
       "name_jp": "即席足場",
       "image_url": "https://cdn.brawlify.com/maps/regular/15001145.png",
       "in_pool": true,
-      "total_picks": 1584,
-      "map_avg_wr": 0.712,
-      "map_avg_rank": 1.93,
+      "total_picks": 1470,
+      "map_avg_wr": 0.708,
+      "map_avg_rank": 1.94,
       "tier_list": [
         {
           "brawler": "PEARL",
@@ -525,10 +525,10 @@
           "picks": 15,
           "wins": 15,
           "win_rate": 1.0,
-          "bayes_wr": 0.885,
+          "bayes_wr": 0.883,
           "avg_rank": 1.2,
-          "pick_rate": 0.009,
-          "score": 92.12,
+          "pick_rate": 0.01,
+          "score": 92.02,
           "tier": "S+"
         },
         {
@@ -538,10 +538,10 @@
           "picks": 45,
           "wins": 41,
           "win_rate": 0.911,
-          "bayes_wr": 0.875,
+          "bayes_wr": 0.874,
           "avg_rank": 1.31,
-          "pick_rate": 0.028,
-          "score": 90.58,
+          "pick_rate": 0.031,
+          "score": 90.57,
           "tier": "S+"
         },
         {
@@ -551,10 +551,10 @@
           "picks": 16,
           "wins": 15,
           "win_rate": 0.938,
-          "bayes_wr": 0.851,
+          "bayes_wr": 0.849,
           "avg_rank": 1.44,
-          "pick_rate": 0.01,
-          "score": 87.52,
+          "pick_rate": 0.011,
+          "score": 87.42,
           "tier": "S+"
         },
         {
@@ -566,22 +566,48 @@
           "win_rate": 0.87,
           "bayes_wr": 0.841,
           "avg_rank": 1.41,
-          "pick_rate": 0.029,
-          "score": 86.73,
+          "pick_rate": 0.031,
+          "score": 86.72,
           "tier": "S+"
         },
         {
           "brawler": "CORDELIUS",
           "brawler_id": 16000070,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
-          "picks": 16,
-          "wins": 14,
-          "win_rate": 0.875,
-          "bayes_wr": 0.812,
-          "avg_rank": 1.62,
+          "picks": 15,
+          "wins": 13,
+          "win_rate": 0.867,
+          "bayes_wr": 0.803,
+          "avg_rank": 1.6,
           "pick_rate": 0.01,
-          "score": 82.77,
-          "tier": "S+"
+          "score": 82.02,
+          "tier": "S"
+        },
+        {
+          "brawler": "LEON",
+          "brawler_id": 16000023,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png",
+          "picks": 37,
+          "wins": 30,
+          "win_rate": 0.811,
+          "bayes_wr": 0.789,
+          "avg_rank": 1.86,
+          "pick_rate": 0.025,
+          "score": 79.29,
+          "tier": "S"
+        },
+        {
+          "brawler": "EDGAR",
+          "brawler_id": 16000043,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
+          "picks": 89,
+          "wins": 70,
+          "win_rate": 0.787,
+          "bayes_wr": 0.779,
+          "avg_rank": 1.8,
+          "pick_rate": 0.061,
+          "score": 78.55,
+          "tier": "S"
         },
         {
           "brawler": "BYRON",
@@ -590,75 +616,36 @@
           "picks": 8,
           "wins": 7,
           "win_rate": 0.875,
-          "bayes_wr": 0.785,
+          "bayes_wr": 0.782,
           "avg_rank": 1.88,
           "pick_rate": 0.005,
-          "score": 78.69,
-          "tier": "S"
-        },
-        {
-          "brawler": "STU",
-          "brawler_id": 16000045,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png",
-          "picks": 51,
-          "wins": 40,
-          "win_rate": 0.784,
-          "bayes_wr": 0.772,
-          "avg_rank": 1.73,
-          "pick_rate": 0.032,
-          "score": 78.24,
-          "tier": "S"
-        },
-        {
-          "brawler": "DAMIAN",
-          "brawler_id": null,
-          "image_url": null,
-          "picks": 76,
-          "wins": 59,
-          "win_rate": 0.776,
-          "bayes_wr": 0.769,
-          "avg_rank": 1.68,
-          "pick_rate": 0.048,
-          "score": 78.12,
-          "tier": "S"
-        },
-        {
-          "brawler": "LEON",
-          "brawler_id": 16000023,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png",
-          "picks": 39,
-          "wins": 31,
-          "win_rate": 0.795,
-          "bayes_wr": 0.778,
-          "avg_rank": 1.9,
-          "pick_rate": 0.025,
-          "score": 77.94,
-          "tier": "S"
-        },
-        {
-          "brawler": "EDGAR",
-          "brawler_id": 16000043,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
-          "picks": 99,
-          "wins": 77,
-          "win_rate": 0.778,
-          "bayes_wr": 0.772,
-          "avg_rank": 1.85,
-          "pick_rate": 0.062,
-          "score": 77.56,
+          "score": 78.53,
           "tier": "S"
         },
         {
           "brawler": "EMZ",
           "brawler_id": 16000030,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
-          "picks": 56,
-          "wins": 43,
-          "win_rate": 0.768,
-          "bayes_wr": 0.759,
-          "avg_rank": 1.62,
-          "pick_rate": 0.035,
-          "score": 77.48,
+          "picks": 53,
+          "wins": 40,
+          "win_rate": 0.755,
+          "bayes_wr": 0.747,
+          "avg_rank": 1.66,
+          "pick_rate": 0.036,
+          "score": 76.13,
+          "tier": "A"
+        },
+        {
+          "brawler": "DAMIAN",
+          "brawler_id": null,
+          "image_url": null,
+          "picks": 58,
+          "wins": 44,
+          "win_rate": 0.759,
+          "bayes_wr": 0.751,
+          "avg_rank": 1.74,
+          "pick_rate": 0.039,
+          "score": 76.11,
           "tier": "A"
         },
         {
@@ -668,49 +655,23 @@
           "picks": 9,
           "wins": 7,
           "win_rate": 0.778,
-          "bayes_wr": 0.743,
+          "bayes_wr": 0.741,
           "avg_rank": 1.56,
           "pick_rate": 0.006,
-          "score": 76.16,
+          "score": 76.01,
           "tier": "A"
         },
         {
-          "brawler": "COLT",
-          "brawler_id": 16000001,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
-          "picks": 37,
-          "wins": 28,
-          "win_rate": 0.757,
-          "bayes_wr": 0.747,
-          "avg_rank": 1.81,
-          "pick_rate": 0.023,
-          "score": 75.31,
-          "tier": "A"
-        },
-        {
-          "brawler": "SPIKE",
-          "brawler_id": 16000005,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
-          "picks": 22,
-          "wins": 17,
-          "win_rate": 0.773,
-          "bayes_wr": 0.754,
-          "avg_rank": 1.95,
-          "pick_rate": 0.014,
-          "score": 75.27,
-          "tier": "A"
-        },
-        {
-          "brawler": "KENJI",
-          "brawler_id": 16000085,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000085.png",
-          "picks": 17,
-          "wins": 13,
-          "win_rate": 0.765,
-          "bayes_wr": 0.745,
-          "avg_rank": 1.82,
-          "pick_rate": 0.011,
-          "score": 75.06,
+          "brawler": "STU",
+          "brawler_id": 16000045,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png",
+          "picks": 33,
+          "wins": 25,
+          "win_rate": 0.758,
+          "bayes_wr": 0.746,
+          "avg_rank": 1.85,
+          "pick_rate": 0.022,
+          "score": 75.05,
           "tier": "A"
         },
         {
@@ -720,23 +681,36 @@
           "picks": 9,
           "wins": 7,
           "win_rate": 0.778,
-          "bayes_wr": 0.743,
+          "bayes_wr": 0.741,
           "avg_rank": 1.78,
           "pick_rate": 0.006,
-          "score": 75.06,
+          "score": 74.91,
+          "tier": "A"
+        },
+        {
+          "brawler": "COLT",
+          "brawler_id": 16000001,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
+          "picks": 36,
+          "wins": 27,
+          "win_rate": 0.75,
+          "bayes_wr": 0.741,
+          "avg_rank": 1.81,
+          "pick_rate": 0.024,
+          "score": 74.74,
           "tier": "A"
         },
         {
           "brawler": "CROW",
           "brawler_id": 16000012,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
-          "picks": 37,
-          "wins": 28,
-          "win_rate": 0.757,
-          "bayes_wr": 0.747,
-          "avg_rank": 1.92,
-          "pick_rate": 0.023,
-          "score": 74.76,
+          "picks": 32,
+          "wins": 24,
+          "win_rate": 0.75,
+          "bayes_wr": 0.74,
+          "avg_rank": 1.91,
+          "pick_rate": 0.022,
+          "score": 74.15,
           "tier": "A"
         },
         {
@@ -746,23 +720,62 @@
           "picks": 21,
           "wins": 16,
           "win_rate": 0.762,
-          "bayes_wr": 0.746,
+          "bayes_wr": 0.745,
           "avg_rank": 2.0,
-          "pick_rate": 0.013,
-          "score": 74.22,
+          "pick_rate": 0.014,
+          "score": 74.15,
+          "tier": "A"
+        },
+        {
+          "brawler": "SPIKE",
+          "brawler_id": 16000005,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
+          "picks": 21,
+          "wins": 16,
+          "win_rate": 0.762,
+          "bayes_wr": 0.745,
+          "avg_rank": 2.0,
+          "pick_rate": 0.014,
+          "score": 74.15,
+          "tier": "A"
+        },
+        {
+          "brawler": "KIT",
+          "brawler_id": 16000076,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
+          "picks": 54,
+          "wins": 40,
+          "win_rate": 0.741,
+          "bayes_wr": 0.736,
+          "avg_rank": 1.83,
+          "pick_rate": 0.037,
+          "score": 74.11,
+          "tier": "A"
+        },
+        {
+          "brawler": "KENJI",
+          "brawler_id": 16000085,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000085.png",
+          "picks": 16,
+          "wins": 12,
+          "win_rate": 0.75,
+          "bayes_wr": 0.734,
+          "avg_rank": 1.88,
+          "pick_rate": 0.011,
+          "score": 73.69,
           "tier": "A"
         },
         {
           "brawler": "JAE-YONG",
           "brawler_id": 16000093,
           "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
-          "picks": 50,
-          "wins": 37,
-          "win_rate": 0.74,
-          "bayes_wr": 0.735,
+          "picks": 49,
+          "wins": 36,
+          "win_rate": 0.735,
+          "bayes_wr": 0.73,
           "avg_rank": 1.82,
-          "pick_rate": 0.032,
-          "score": 74.07,
+          "pick_rate": 0.033,
+          "score": 73.61,
           "tier": "A"
         },
         {
@@ -772,10 +785,10 @@
           "picks": 67,
           "wins": 49,
           "win_rate": 0.731,
-          "bayes_wr": 0.729,
+          "bayes_wr": 0.728,
           "avg_rank": 1.81,
-          "pick_rate": 0.042,
-          "score": 73.47,
+          "pick_rate": 0.046,
+          "score": 73.48,
           "tier": "A"
         },
         {
@@ -785,23 +798,10 @@
           "picks": 19,
           "wins": 14,
           "win_rate": 0.737,
-          "bayes_wr": 0.728,
+          "bayes_wr": 0.727,
           "avg_rank": 1.89,
-          "pick_rate": 0.012,
-          "score": 73.02,
-          "tier": "A"
-        },
-        {
-          "brawler": "KIT",
-          "brawler_id": 16000076,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
-          "picks": 59,
-          "wins": 43,
-          "win_rate": 0.729,
-          "bayes_wr": 0.726,
-          "avg_rank": 1.9,
-          "pick_rate": 0.037,
-          "score": 72.78,
+          "pick_rate": 0.013,
+          "score": 72.94,
           "tier": "A"
         },
         {
@@ -811,23 +811,10 @@
           "picks": 14,
           "wins": 10,
           "win_rate": 0.714,
-          "bayes_wr": 0.713,
+          "bayes_wr": 0.712,
           "avg_rank": 1.86,
-          "pick_rate": 0.009,
-          "score": 71.68,
-          "tier": "A"
-        },
-        {
-          "brawler": "NANI",
-          "brawler_id": 16000036,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
-          "picks": 11,
-          "wins": 8,
-          "win_rate": 0.727,
-          "bayes_wr": 0.72,
-          "avg_rank": 2.0,
-          "pick_rate": 0.007,
-          "score": 71.64,
+          "pick_rate": 0.01,
+          "score": 71.57,
           "tier": "A"
         },
         {
@@ -837,10 +824,23 @@
           "picks": 16,
           "wins": 11,
           "win_rate": 0.688,
-          "bayes_wr": 0.697,
+          "bayes_wr": 0.695,
           "avg_rank": 1.75,
-          "pick_rate": 0.01,
-          "score": 70.59,
+          "pick_rate": 0.011,
+          "score": 70.49,
+          "tier": "A"
+        },
+        {
+          "brawler": "NANI",
+          "brawler_id": 16000036,
+          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
+          "picks": 10,
+          "wins": 7,
+          "win_rate": 0.7,
+          "bayes_wr": 0.704,
+          "avg_rank": 2.0,
+          "pick_rate": 0.007,
+          "score": 70.1,
           "tier": "A"
         }
       ],
@@ -928,26 +928,6 @@
         {
           "members": [
             {
-              "brawler": "DAMIAN",
-              "image_url": null
-            },
-            {
-              "brawler": "EMZ",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
-            },
-            {
-              "brawler": "STU",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png"
-            }
-          ],
-          "picks": 6,
-          "wins": 6,
-          "win_rate": 1.0,
-          "avg_rank": 1.0
-        },
-        {
-          "members": [
-            {
               "brawler": "EDGAR",
               "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png"
             },
@@ -1004,6 +984,26 @@
           "wins": 4,
           "win_rate": 1.0,
           "avg_rank": 1.0
+        },
+        {
+          "members": [
+            {
+              "brawler": "DAMIAN",
+              "image_url": null
+            },
+            {
+              "brawler": "EMZ",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png"
+            },
+            {
+              "brawler": "STU",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png"
+            }
+          ],
+          "picks": 4,
+          "wins": 4,
+          "win_rate": 1.0,
+          "avg_rank": 1.0
         }
       ]
     },
@@ -1014,9 +1014,9 @@
       "name_jp": "ガイコツ川",
       "image_url": "https://cdn.brawlify.com/maps/regular/15000751.png",
       "in_pool": true,
-      "total_picks": 414,
-      "map_avg_wr": 0.652,
-      "map_avg_rank": 2.09,
+      "total_picks": 375,
+      "map_avg_wr": 0.648,
+      "map_avg_rank": 2.1,
       "tier_list": [
         {
           "brawler": "LILY",
@@ -1025,10 +1025,10 @@
           "picks": 6,
           "wins": 6,
           "win_rate": 1.0,
-          "bayes_wr": 0.783,
+          "bayes_wr": 0.78,
           "avg_rank": 1.5,
-          "pick_rate": 0.014,
-          "score": 81.2,
+          "pick_rate": 0.016,
+          "score": 80.98,
           "tier": "S+"
         },
         {
@@ -1038,10 +1038,10 @@
           "picks": 10,
           "wins": 9,
           "win_rate": 0.9,
-          "bayes_wr": 0.776,
+          "bayes_wr": 0.774,
           "avg_rank": 1.7,
-          "pick_rate": 0.024,
-          "score": 79.55,
+          "pick_rate": 0.027,
+          "score": 79.38,
           "tier": "S+"
         },
         {
@@ -1051,10 +1051,10 @@
           "picks": 15,
           "wins": 12,
           "win_rate": 0.8,
-          "bayes_wr": 0.741,
+          "bayes_wr": 0.739,
           "avg_rank": 1.73,
-          "pick_rate": 0.036,
-          "score": 75.87,
+          "pick_rate": 0.04,
+          "score": 75.75,
           "tier": "S"
         },
         {
@@ -1064,10 +1064,10 @@
           "picks": 19,
           "wins": 15,
           "win_rate": 0.789,
-          "bayes_wr": 0.742,
+          "bayes_wr": 0.741,
           "avg_rank": 1.84,
-          "pick_rate": 0.046,
-          "score": 75.45,
+          "pick_rate": 0.051,
+          "score": 75.35,
           "tier": "S"
         },
         {
@@ -1077,11 +1077,11 @@
           "picks": 5,
           "wins": 4,
           "win_rate": 0.8,
-          "bayes_wr": 0.701,
+          "bayes_wr": 0.699,
           "avg_rank": 1.6,
-          "pick_rate": 0.012,
-          "score": 72.58,
-          "tier": "A"
+          "pick_rate": 0.013,
+          "score": 72.35,
+          "tier": "S"
         },
         {
           "brawler": "MINA",
@@ -1090,10 +1090,10 @@
           "picks": 12,
           "wins": 9,
           "win_rate": 0.75,
-          "bayes_wr": 0.706,
+          "bayes_wr": 0.704,
           "avg_rank": 1.83,
-          "pick_rate": 0.029,
-          "score": 71.84,
+          "pick_rate": 0.032,
+          "score": 71.7,
           "tier": "S"
         },
         {
@@ -1103,10 +1103,10 @@
           "picks": 18,
           "wins": 13,
           "win_rate": 0.722,
-          "bayes_wr": 0.697,
+          "bayes_wr": 0.696,
           "avg_rank": 1.78,
-          "pick_rate": 0.043,
-          "score": 71.26,
+          "pick_rate": 0.048,
+          "score": 71.15,
           "tier": "A"
         },
         {
@@ -1116,11 +1116,11 @@
           "picks": 15,
           "wins": 11,
           "win_rate": 0.733,
-          "bayes_wr": 0.701,
+          "bayes_wr": 0.699,
           "avg_rank": 1.87,
-          "pick_rate": 0.036,
-          "score": 71.17,
-          "tier": "A"
+          "pick_rate": 0.04,
+          "score": 71.05,
+          "tier": "S"
         },
         {
           "brawler": "EDGAR",
@@ -1131,9 +1131,9 @@
           "win_rate": 0.711,
           "bayes_wr": 0.7,
           "avg_rank": 1.96,
-          "pick_rate": 0.109,
-          "score": 70.68,
-          "tier": "A"
+          "pick_rate": 0.12,
+          "score": 70.65,
+          "tier": "S"
         },
         {
           "brawler": "DAMIAN",
@@ -1142,36 +1142,10 @@
           "picks": 20,
           "wins": 14,
           "win_rate": 0.7,
-          "bayes_wr": 0.684,
+          "bayes_wr": 0.683,
           "avg_rank": 1.95,
-          "pick_rate": 0.048,
-          "score": 69.09,
-          "tier": "A"
-        },
-        {
-          "brawler": "BERRY",
-          "brawler_id": 16000082,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png",
-          "picks": 13,
-          "wins": 9,
-          "win_rate": 0.692,
-          "bayes_wr": 0.675,
-          "avg_rank": 2.0,
-          "pick_rate": 0.031,
-          "score": 67.92,
-          "tier": "A"
-        },
-        {
-          "brawler": "SHADE",
-          "brawler_id": 16000086,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-          "picks": 13,
-          "wins": 9,
-          "win_rate": 0.692,
-          "bayes_wr": 0.675,
-          "avg_rank": 2.0,
-          "pick_rate": 0.031,
-          "score": 67.92,
+          "pick_rate": 0.053,
+          "score": 69.0,
           "tier": "A"
         },
         {
@@ -1181,10 +1155,10 @@
           "picks": 28,
           "wins": 19,
           "win_rate": 0.679,
-          "bayes_wr": 0.672,
+          "bayes_wr": 0.671,
           "avg_rank": 2.0,
-          "pick_rate": 0.068,
-          "score": 67.6,
+          "pick_rate": 0.075,
+          "score": 67.54,
           "tier": "A"
         },
         {
@@ -1194,10 +1168,10 @@
           "picks": 9,
           "wins": 6,
           "win_rate": 0.667,
-          "bayes_wr": 0.659,
+          "bayes_wr": 0.657,
           "avg_rank": 1.78,
-          "pick_rate": 0.022,
-          "score": 67.44,
+          "pick_rate": 0.024,
+          "score": 67.27,
           "tier": "A"
         },
         {
@@ -1207,23 +1181,10 @@
           "picks": 21,
           "wins": 14,
           "win_rate": 0.667,
-          "bayes_wr": 0.662,
+          "bayes_wr": 0.661,
           "avg_rank": 2.1,
-          "pick_rate": 0.051,
-          "score": 66.14,
-          "tier": "A"
-        },
-        {
-          "brawler": "BUSTER",
-          "brawler_id": 16000062,
-          "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
-          "picks": 12,
-          "wins": 8,
-          "win_rate": 0.667,
-          "bayes_wr": 0.66,
-          "avg_rank": 2.08,
-          "pick_rate": 0.029,
-          "score": 66.04,
+          "pick_rate": 0.056,
+          "score": 66.05,
           "tier": "A"
         },
         {
@@ -1233,10 +1194,10 @@
           "picks": 11,
           "wins": 7,
           "win_rate": 0.636,
-          "bayes_wr": 0.644,
+          "bayes_wr": 0.642,
           "avg_rank": 1.82,
-          "pick_rate": 0.027,
-          "score": 65.73,
+          "pick_rate": 0.029,
+          "score": 65.57,
           "tier": "A"
         },
         {
@@ -1246,10 +1207,10 @@
           "picks": 6,
           "wins": 4,
           "win_rate": 0.667,
-          "bayes_wr": 0.658,
+          "bayes_wr": 0.655,
           "avg_rank": 2.33,
-          "pick_rate": 0.014,
-          "score": 64.55,
+          "pick_rate": 0.016,
+          "score": 64.33,
           "tier": "A"
         },
         {
@@ -1259,10 +1220,10 @@
           "picks": 7,
           "wins": 4,
           "win_rate": 0.571,
-          "bayes_wr": 0.619,
+          "bayes_wr": 0.616,
           "avg_rank": 2.14,
-          "pick_rate": 0.017,
-          "score": 61.63,
+          "pick_rate": 0.019,
+          "score": 61.43,
           "tier": "B"
         },
         {
@@ -1272,10 +1233,10 @@
           "picks": 12,
           "wins": 7,
           "win_rate": 0.583,
-          "bayes_wr": 0.615,
+          "bayes_wr": 0.613,
           "avg_rank": 2.25,
-          "pick_rate": 0.029,
-          "score": 60.65,
+          "pick_rate": 0.032,
+          "score": 60.51,
           "tier": "B"
         },
         {
@@ -1285,10 +1246,10 @@
           "picks": 27,
           "wins": 16,
           "win_rate": 0.593,
-          "bayes_wr": 0.609,
+          "bayes_wr": 0.608,
           "avg_rank": 2.26,
-          "pick_rate": 0.065,
-          "score": 60.01,
+          "pick_rate": 0.072,
+          "score": 59.94,
           "tier": "B"
         },
         {
@@ -1298,10 +1259,10 @@
           "picks": 7,
           "wins": 4,
           "win_rate": 0.571,
-          "bayes_wr": 0.619,
+          "bayes_wr": 0.616,
           "avg_rank": 2.57,
-          "pick_rate": 0.017,
-          "score": 59.48,
+          "pick_rate": 0.019,
+          "score": 59.28,
           "tier": "B"
         },
         {
@@ -1311,10 +1272,10 @@
           "picks": 8,
           "wins": 4,
           "win_rate": 0.5,
-          "bayes_wr": 0.585,
+          "bayes_wr": 0.582,
           "avg_rank": 2.62,
-          "pick_rate": 0.019,
-          "score": 55.79,
+          "pick_rate": 0.021,
+          "score": 55.61,
           "tier": "B"
         },
         {
@@ -1324,10 +1285,10 @@
           "picks": 14,
           "wins": 6,
           "win_rate": 0.429,
-          "bayes_wr": 0.522,
+          "bayes_wr": 0.52,
           "avg_rank": 2.57,
-          "pick_rate": 0.034,
-          "score": 49.76,
+          "pick_rate": 0.037,
+          "score": 49.63,
           "tier": "C"
         }
       ],
@@ -1455,26 +1416,6 @@
         {
           "members": [
             {
-              "brawler": "BERRY",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png"
-            },
-            {
-              "brawler": "BUSTER",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png"
-            },
-            {
-              "brawler": "SHADE",
-              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png"
-            }
-          ],
-          "picks": 12,
-          "wins": 8,
-          "win_rate": 0.667,
-          "avg_rank": 2.08
-        },
-        {
-          "members": [
-            {
               "brawler": "DAMIAN",
               "image_url": null
             },
@@ -1490,6 +1431,26 @@
           "picks": 3,
           "wins": 2,
           "win_rate": 0.667,
+          "avg_rank": 2.0
+        },
+        {
+          "members": [
+            {
+              "brawler": "EDGAR",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png"
+            },
+            {
+              "brawler": "LEON",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png"
+            },
+            {
+              "brawler": "MEG",
+              "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png"
+            }
+          ],
+          "picks": 4,
+          "wins": 2,
+          "win_rate": 0.5,
           "avg_rank": 2.0
         }
       ]
@@ -2752,7 +2713,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000043.png",
       "rarity": "Epic",
-      "total_picks": 1111,
+      "total_picks": 1081,
       "best_maps": [
         {
           "map": "Kroket",
@@ -2761,8 +2722,8 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.778,
-          "picks": 99
+          "win_rate": 0.787,
+          "picks": 89
         },
         {
           "map": "Skull Creek",
@@ -2771,8 +2732,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.702,
-          "picks": 889
+          "win_rate": 0.708,
+          "picks": 869
         },
         {
           "map": "Safety Center",
@@ -2804,7 +2765,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000076.png",
       "rarity": "Legendary",
-      "total_picks": 482,
+      "total_picks": 513,
       "best_maps": [
         {
           "map": "Acid Lakes",
@@ -2818,13 +2779,13 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.729,
-          "picks": 59
+          "win_rate": 0.741,
+          "picks": 54
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.691,
-          "picks": 375
+          "win_rate": 0.686,
+          "picks": 411
         },
         {
           "map": "Rockwall Brawl",
@@ -2840,13 +2801,13 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.691,
-          "picks": 375
+          "win_rate": 0.686,
+          "picks": 411
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.729,
-          "picks": 59
+          "win_rate": 0.741,
+          "picks": 54
         }
       ]
     },
@@ -2856,7 +2817,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000011.png",
       "rarity": "Mythic",
-      "total_picks": 436,
+      "total_picks": 445,
       "best_maps": [
         {
           "map": "Skull Creek",
@@ -2865,25 +2826,25 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.702,
-          "picks": 362
+          "win_rate": 0.714,
+          "picks": 374
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.633,
-          "picks": 49
+          "win_rate": 0.652,
+          "picks": 46
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.633,
-          "picks": 49
+          "win_rate": 0.652,
+          "picks": 46
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.702,
-          "picks": 362
+          "win_rate": 0.714,
+          "picks": 374
         },
         {
           "map": "Skull Creek",
@@ -2898,7 +2859,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000012.png",
       "rarity": "Legendary",
-      "total_picks": 396,
+      "total_picks": 428,
       "best_maps": [
         {
           "map": "Flying Fantasies",
@@ -2907,13 +2868,13 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.757,
-          "picks": 37
+          "win_rate": 0.75,
+          "picks": 32
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.712,
-          "picks": 337
+          "win_rate": 0.703,
+          "picks": 374
         },
         {
           "map": "Skull Creek",
@@ -2929,55 +2890,13 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.712,
-          "picks": 337
+          "win_rate": 0.703,
+          "picks": 374
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.757,
-          "picks": 37
-        }
-      ]
-    },
-    {
-      "id": 16000093,
-      "name": "JAE-YONG",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
-      "rarity": "Mythic",
-      "total_picks": 395,
-      "best_maps": [
-        {
-          "map": "Acid Lakes",
-          "win_rate": 0.8,
-          "picks": 20
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.74,
-          "picks": 50
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.711,
-          "picks": 322
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.711,
-          "picks": 322
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.74,
-          "picks": 50
-        },
-        {
-          "map": "Acid Lakes",
-          "win_rate": 0.8,
-          "picks": 20
+          "win_rate": 0.75,
+          "picks": 32
         }
       ]
     },
@@ -2987,7 +2906,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000001.png",
       "rarity": "Rare",
-      "total_picks": 387,
+      "total_picks": 397,
       "best_maps": [
         {
           "map": "Kroket",
@@ -2996,13 +2915,13 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.757,
-          "picks": 37
+          "win_rate": 0.75,
+          "picks": 36
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.729,
-          "picks": 317
+          "win_rate": 0.732,
+          "picks": 328
         },
         {
           "map": "Skull Creek",
@@ -3018,13 +2937,55 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.729,
-          "picks": 317
+          "win_rate": 0.732,
+          "picks": 328
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.757,
-          "picks": 37
+          "win_rate": 0.75,
+          "picks": 36
+        }
+      ]
+    },
+    {
+      "id": 16000093,
+      "name": "JAE-YONG",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000093.png",
+      "rarity": "Mythic",
+      "total_picks": 364,
+      "best_maps": [
+        {
+          "map": "Acid Lakes",
+          "win_rate": 0.8,
+          "picks": 20
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.735,
+          "picks": 49
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.695,
+          "picks": 292
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.695,
+          "picks": 292
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.735,
+          "picks": 49
+        },
+        {
+          "map": "Acid Lakes",
+          "win_rate": 0.8,
+          "picks": 20
         }
       ]
     },
@@ -3034,7 +2995,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000039.png",
       "rarity": "Epic",
-      "total_picks": 385,
+      "total_picks": 363,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
@@ -3043,15 +3004,15 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 333
+          "win_rate": 0.691,
+          "picks": 311
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 333
+          "win_rate": 0.691,
+          "picks": 311
         },
         {
           "map": "Makeshift Scaffolding",
@@ -3066,7 +3027,7 @@
       "name_jp": "",
       "image_url": null,
       "rarity": null,
-      "total_picks": 362,
+      "total_picks": 345,
       "best_maps": [
         {
           "map": "Safety Center",
@@ -3075,13 +3036,13 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.831,
-          "picks": 236
+          "win_rate": 0.793,
+          "picks": 237
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.776,
-          "picks": 76
+          "win_rate": 0.759,
+          "picks": 58
         },
         {
           "map": "Skull Creek",
@@ -3097,13 +3058,60 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.776,
-          "picks": 76
+          "win_rate": 0.759,
+          "picks": 58
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.831,
-          "picks": 236
+          "win_rate": 0.793,
+          "picks": 237
+        }
+      ]
+    },
+    {
+      "id": 16000030,
+      "name": "EMZ",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
+      "rarity": "Epic",
+      "total_picks": 297,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.755,
+          "picks": 53
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.654,
+          "picks": 231
+        },
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Safety Center",
+          "win_rate": 0.4,
+          "picks": 5
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Safety Center",
+          "win_rate": 0.4,
+          "picks": 5
+        },
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.654,
+          "picks": 231
         }
       ]
     },
@@ -3113,7 +3121,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000023.png",
       "rarity": "Legendary",
-      "total_picks": 293,
+      "total_picks": 289,
       "best_maps": [
         {
           "map": "Safety Center",
@@ -3127,8 +3135,8 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.795,
-          "picks": 39
+          "win_rate": 0.811,
+          "picks": 37
         },
         {
           "map": "Skull Creek",
@@ -3137,15 +3145,15 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.629,
-          "picks": 210
+          "win_rate": 0.63,
+          "picks": 208
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.629,
-          "picks": 210
+          "win_rate": 0.63,
+          "picks": 208
         },
         {
           "map": "Skull Creek",
@@ -3154,55 +3162,8 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.795,
-          "picks": 39
-        }
-      ]
-    },
-    {
-      "id": 16000030,
-      "name": "EMZ",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000030.png",
-      "rarity": "Epic",
-      "total_picks": 292,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.768,
-          "picks": 56
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.695,
-          "picks": 223
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Safety Center",
-          "win_rate": 0.4,
-          "picks": 5
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Safety Center",
-          "win_rate": 0.4,
-          "picks": 5
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.695,
-          "picks": 223
+          "win_rate": 0.811,
+          "picks": 37
         }
       ]
     },
@@ -3212,7 +3173,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000003.png",
       "rarity": "Rare",
-      "total_picks": 279,
+      "total_picks": 276,
       "best_maps": [
         {
           "map": "Flying Fantasies",
@@ -3231,13 +3192,13 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.704,
-          "picks": 169
+          "win_rate": 0.665,
+          "picks": 167
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.643,
-          "picks": 42
+          "win_rate": 0.659,
+          "picks": 41
         }
       ],
       "worst_maps": [
@@ -3248,55 +3209,13 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.643,
-          "picks": 42
+          "win_rate": 0.659,
+          "picks": 41
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.704,
-          "picks": 169
-        }
-      ]
-    },
-    {
-      "id": 16000042,
-      "name": "BYRON",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
-      "rarity": "Mythic",
-      "total_picks": 272,
-      "best_maps": [
-        {
-          "map": "Kroket",
-          "win_rate": 1.0,
-          "picks": 17
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.875,
-          "picks": 8
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.749,
-          "picks": 243
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.749,
-          "picks": 243
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.875,
-          "picks": 8
-        },
-        {
-          "map": "Kroket",
-          "win_rate": 1.0,
-          "picks": 17
+          "win_rate": 0.665,
+          "picks": 167
         }
       ]
     },
@@ -3306,29 +3225,118 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000054.png",
       "rarity": "Mythic",
-      "total_picks": 261,
+      "total_picks": 275,
       "best_maps": [
         {
-          "map": "Molten to the Core",
-          "win_rate": 0.656,
-          "picks": 221
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 30
         },
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.645,
-          "picks": 31
+          "map": "Molten to the Core",
+          "win_rate": 0.665,
+          "picks": 236
         }
       ],
       "worst_maps": [
         {
+          "map": "Molten to the Core",
+          "win_rate": 0.665,
+          "picks": 236
+        },
+        {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.645,
-          "picks": 31
+          "win_rate": 0.667,
+          "picks": 30
+        }
+      ]
+    },
+    {
+      "id": 16000042,
+      "name": "BYRON",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
+      "rarity": "Mythic",
+      "total_picks": 266,
+      "best_maps": [
+        {
+          "map": "Kroket",
+          "win_rate": 1.0,
+          "picks": 17
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.875,
+          "picks": 8
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.656,
-          "picks": 221
+          "win_rate": 0.734,
+          "picks": 237
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.734,
+          "picks": 237
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.875,
+          "picks": 8
+        },
+        {
+          "map": "Kroket",
+          "win_rate": 1.0,
+          "picks": 17
+        }
+      ]
+    },
+    {
+      "id": 16000057,
+      "name": "JANET",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
+      "rarity": "Mythic",
+      "total_picks": 255,
+      "best_maps": [
+        {
+          "map": "Kroket",
+          "win_rate": 1.0,
+          "picks": 6
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.722,
+          "picks": 227
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.625,
+          "picks": 8
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.571,
+          "picks": 7
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.571,
+          "picks": 7
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.625,
+          "picks": 8
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.722,
+          "picks": 227
         }
       ]
     },
@@ -3338,7 +3346,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000050.png",
       "rarity": "Epic",
-      "total_picks": 238,
+      "total_picks": 229,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
@@ -3352,8 +3360,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.596,
-          "picks": 156
+          "win_rate": 0.626,
+          "picks": 147
         },
         {
           "map": "Skull Creek",
@@ -3379,8 +3387,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.596,
-          "picks": 156
+          "win_rate": 0.626,
+          "picks": 147
         }
       ]
     },
@@ -3390,7 +3398,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000019.png",
       "rarity": "Super Rare",
-      "total_picks": 224,
+      "total_picks": 223,
       "best_maps": [
         {
           "map": "Rockwall Brawl",
@@ -3399,8 +3407,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.677,
-          "picks": 192
+          "win_rate": 0.665,
+          "picks": 191
         },
         {
           "map": "Makeshift Scaffolding",
@@ -3416,60 +3424,13 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.677,
-          "picks": 192
+          "win_rate": 0.665,
+          "picks": 191
         },
         {
           "map": "Rockwall Brawl",
           "win_rate": 0.727,
           "picks": 11
-        }
-      ]
-    },
-    {
-      "id": 16000057,
-      "name": "JANET",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000057.png",
-      "rarity": "Mythic",
-      "total_picks": 219,
-      "best_maps": [
-        {
-          "map": "Kroket",
-          "win_rate": 1.0,
-          "picks": 6
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.759,
-          "picks": 191
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.625,
-          "picks": 8
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.571,
-          "picks": 7
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.571,
-          "picks": 7
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.625,
-          "picks": 8
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.759,
-          "picks": 191
         }
       ]
     },
@@ -3479,7 +3440,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000062.png",
       "rarity": "Mythic",
-      "total_picks": 219,
+      "total_picks": 203,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
@@ -3488,25 +3449,15 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.734,
-          "picks": 188
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 12
+          "win_rate": 0.717,
+          "picks": 184
         }
       ],
       "worst_maps": [
         {
-          "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 12
-        },
-        {
           "map": "Molten to the Core",
-          "win_rate": 0.734,
-          "picks": 188
+          "win_rate": 0.717,
+          "picks": 184
         },
         {
           "map": "Makeshift Scaffolding",
@@ -3516,138 +3467,81 @@
       ]
     },
     {
-      "id": 16000022,
-      "name": "TICK",
+      "id": 16000071,
+      "name": "DOUG",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
-      "rarity": "Super Rare",
-      "total_picks": 207,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.778,
-          "picks": 9
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.769,
-          "picks": 13
-        },
-        {
-          "map": "Safety Center",
-          "win_rate": 0.769,
-          "picks": 13
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 21
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.603,
-          "picks": 146
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.603,
-          "picks": 146
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 21
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.769,
-          "picks": 13
-        }
-      ]
-    },
-    {
-      "id": 16000070,
-      "name": "CORDELIUS",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
-      "rarity": "Legendary",
-      "total_picks": 201,
-      "best_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.9,
-          "picks": 10
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.875,
-          "picks": 16
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.725,
-          "picks": 171
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.725,
-          "picks": 171
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.875,
-          "picks": 16
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.9,
-          "picks": 10
-        }
-      ]
-    },
-    {
-      "id": 16000044,
-      "name": "RUFFS",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000044.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
       "rarity": "Mythic",
-      "total_picks": 200,
+      "total_picks": 202,
       "best_maps": [
         {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.733,
-          "picks": 15
+          "map": "Acid Lakes",
+          "win_rate": 0.8,
+          "picks": 20
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.675,
-          "picks": 166
+          "win_rate": 0.681,
+          "picks": 163
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.385,
+          "picks": 13
+        },
+        {
+          "map": "Double Trouble",
+          "win_rate": 0.0,
+          "picks": 5
         }
       ],
       "worst_maps": [
         {
+          "map": "Double Trouble",
+          "win_rate": 0.0,
+          "picks": 5
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.385,
+          "picks": 13
+        },
+        {
           "map": "Molten to the Core",
-          "win_rate": 0.675,
-          "picks": 166
+          "win_rate": 0.681,
+          "picks": 163
+        }
+      ]
+    },
+    {
+      "id": 16000069,
+      "name": "HANK",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
+      "rarity": "Epic",
+      "total_picks": 199,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.763,
+          "picks": 131
         },
         {
-          "map": "Skull Creek",
-          "win_rate": 0.733,
-          "picks": 15
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.731,
+          "picks": 67
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.731,
+          "picks": 67
         },
         {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
+          "map": "Molten to the Core",
+          "win_rate": 0.763,
+          "picks": 131
         }
       ]
     },
@@ -3666,14 +3560,14 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.737,
+          "win_rate": 0.743,
           "picks": 175
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.737,
+          "win_rate": 0.743,
           "picks": 175
         },
         {
@@ -3684,239 +3578,54 @@
       ]
     },
     {
-      "id": 16000026,
-      "name": "BIBI",
+      "id": 16000022,
+      "name": "TICK",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
-      "rarity": "Epic",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000022.png",
+      "rarity": "Super Rare",
       "total_picks": 193,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.762,
+          "win_rate": 0.778,
+          "picks": 9
+        },
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.769,
+          "picks": 13
+        },
+        {
+          "map": "Safety Center",
+          "win_rate": 0.769,
+          "picks": 13
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.667,
           "picks": 21
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.762,
-          "picks": 168
+          "win_rate": 0.598,
+          "picks": 132
         }
       ],
       "worst_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.762,
+          "map": "Molten to the Core",
+          "win_rate": 0.598,
+          "picks": 132
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.667,
           "picks": 21
         },
         {
-          "map": "Molten to the Core",
-          "win_rate": 0.762,
-          "picks": 168
-        }
-      ]
-    },
-    {
-      "id": 16000069,
-      "name": "HANK",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000069.png",
-      "rarity": "Epic",
-      "total_picks": 191,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.78,
-          "picks": 123
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.731,
-          "picks": 67
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.731,
-          "picks": 67
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.78,
-          "picks": 123
-        }
-      ]
-    },
-    {
-      "id": 16000081,
-      "name": "LILY",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000081.png",
-      "rarity": "Mythic",
-      "total_picks": 191,
-      "best_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 1.0,
-          "picks": 6
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.713,
-          "picks": 167
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.588,
-          "picks": 17
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.588,
-          "picks": 17
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.713,
-          "picks": 167
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 1.0,
-          "picks": 6
-        }
-      ]
-    },
-    {
-      "id": 16000065,
-      "name": "MANDY",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000065.png",
-      "rarity": "Epic",
-      "total_picks": 190,
-      "best_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.722,
-          "picks": 18
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.69,
-          "picks": 142
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.55,
-          "picks": 20
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.55,
-          "picks": 20
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.69,
-          "picks": 142
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.722,
-          "picks": 18
-        }
-      ]
-    },
-    {
-      "id": 16000045,
-      "name": "STU",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png",
-      "rarity": "Epic",
-      "total_picks": 186,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.784,
-          "picks": 51
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.669,
-          "picks": 121
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.583,
-          "picks": 12
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.583,
-          "picks": 12
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.669,
-          "picks": 121
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.784,
-          "picks": 51
-        }
-      ]
-    },
-    {
-      "id": 16000071,
-      "name": "DOUG",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000071.png",
-      "rarity": "Mythic",
-      "total_picks": 181,
-      "best_maps": [
-        {
-          "map": "Acid Lakes",
-          "win_rate": 0.8,
-          "picks": 20
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.669,
-          "picks": 142
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.385,
+          "map": "Rockwall Brawl",
+          "win_rate": 0.769,
           "picks": 13
-        },
-        {
-          "map": "Double Trouble",
-          "win_rate": 0.0,
-          "picks": 5
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Double Trouble",
-          "win_rate": 0.0,
-          "picks": 5
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.385,
-          "picks": 13
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.669,
-          "picks": 142
         }
       ]
     },
@@ -3926,123 +3635,165 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000005.png",
       "rarity": "Legendary",
+      "total_picks": 188,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.762,
+          "picks": 21
+        },
+        {
+          "map": "Flying Fantasies",
+          "win_rate": 0.714,
+          "picks": 7
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.623,
+          "picks": 154
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.623,
+          "picks": 154
+        },
+        {
+          "map": "Flying Fantasies",
+          "win_rate": 0.714,
+          "picks": 7
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.762,
+          "picks": 21
+        }
+      ]
+    },
+    {
+      "id": 16000081,
+      "name": "LILY",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000081.png",
+      "rarity": "Mythic",
+      "total_picks": 182,
+      "best_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 1.0,
+          "picks": 6
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.767,
+          "picks": 159
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.562,
+          "picks": 16
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.562,
+          "picks": 16
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.767,
+          "picks": 159
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 1.0,
+          "picks": 6
+        }
+      ]
+    },
+    {
+      "id": 16000044,
+      "name": "RUFFS",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000044.png",
+      "rarity": "Mythic",
       "total_picks": 181,
       "best_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.773,
-          "picks": 22
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
         },
         {
-          "map": "Flying Fantasies",
-          "win_rate": 0.714,
-          "picks": 7
+          "map": "Skull Creek",
+          "win_rate": 0.733,
+          "picks": 15
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.644,
-          "picks": 146
+          "win_rate": 0.66,
+          "picks": 147
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.644,
-          "picks": 146
+          "win_rate": 0.66,
+          "picks": 147
         },
         {
-          "map": "Flying Fantasies",
-          "win_rate": 0.714,
-          "picks": 7
+          "map": "Skull Creek",
+          "win_rate": 0.733,
+          "picks": 15
         },
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.773,
-          "picks": 22
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
         }
       ]
     },
     {
-      "id": 16000097,
-      "name": "MINA",
+      "id": 16000045,
+      "name": "STU",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000097.png",
-      "rarity": "Mythic",
-      "total_picks": 176,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000045.png",
+      "rarity": "Epic",
+      "total_picks": 180,
       "best_maps": [
         {
-          "map": "Skull Creek",
-          "win_rate": 0.75,
-          "picks": 12
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.691,
-          "picks": 152
-        },
-        {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.4,
-          "picks": 10
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.4,
-          "picks": 10
+          "win_rate": 0.758,
+          "picks": 33
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.691,
-          "picks": 152
+          "win_rate": 0.692,
+          "picks": 133
         },
         {
           "map": "Skull Creek",
-          "win_rate": 0.75,
+          "win_rate": 0.583,
           "picks": 12
-        }
-      ]
-    },
-    {
-      "id": 16000052,
-      "name": "MEG",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
-      "rarity": "Legendary",
-      "total_picks": 175,
-      "best_maps": [
-        {
-          "map": "Safety Center",
-          "win_rate": 0.833,
-          "picks": 6
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.734,
-          "picks": 158
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 9
         }
       ],
       "worst_maps": [
         {
           "map": "Skull Creek",
-          "win_rate": 0.667,
-          "picks": 9
+          "win_rate": 0.583,
+          "picks": 12
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.734,
-          "picks": 158
+          "win_rate": 0.692,
+          "picks": 133
         },
         {
-          "map": "Safety Center",
-          "win_rate": 0.833,
-          "picks": 6
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.758,
+          "picks": 33
         }
       ]
     },
@@ -4052,83 +3803,19 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
       "rarity": "Super Rare",
-      "total_picks": 174,
+      "total_picks": 178,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.728,
-          "picks": 169
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.4,
-          "picks": 5
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.4,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.728,
-          "picks": 169
-        }
-      ]
-    },
-    {
-      "id": 16000059,
-      "name": "OTIS",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000059.png",
-      "rarity": "Mythic",
-      "total_picks": 174,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.639,
-          "picks": 169
+          "win_rate": 0.726,
+          "picks": 175
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.639,
-          "picks": 169
-        }
-      ]
-    },
-    {
-      "id": null,
-      "name": "SIRIUS",
-      "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 168,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.737,
-          "picks": 156
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 10
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 10
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.737,
-          "picks": 156
+          "win_rate": 0.726,
+          "picks": 175
         }
       ]
     },
@@ -4138,135 +3825,261 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000063.png",
       "rarity": "Legendary",
-      "total_picks": 158,
+      "total_picks": 168,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.682,
-          "picks": 148
+          "win_rate": 0.673,
+          "picks": 159
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 8
+          "win_rate": 0.429,
+          "picks": 7
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 8
+          "win_rate": 0.429,
+          "picks": 7
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.682,
-          "picks": 148
+          "win_rate": 0.673,
+          "picks": 159
         }
       ]
     },
     {
-      "id": 16000004,
-      "name": "RICO",
+      "id": null,
+      "name": "SIRIUS",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000004.png",
-      "rarity": "Super Rare",
-      "total_picks": 151,
-      "best_maps": [
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.727,
-          "picks": 11
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.657,
-          "picks": 35
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.64,
-          "picks": 100
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.64,
-          "picks": 100
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.657,
-          "picks": 35
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.727,
-          "picks": 11
-        }
-      ]
-    },
-    {
-      "id": 16000029,
-      "name": "BEA",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png",
-      "rarity": "Epic",
-      "total_picks": 148,
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 167,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.695,
-          "picks": 141
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.695,
-          "picks": 141
-        }
-      ]
-    },
-    {
-      "id": 16000046,
-      "name": "BELLE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000046.png",
-      "rarity": "Epic",
-      "total_picks": 142,
-      "best_maps": [
-        {
-          "map": "Flying Fantasies",
-          "win_rate": 0.8,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.651,
-          "picks": 129
+          "win_rate": 0.729,
+          "picks": 155
         },
         {
           "map": "Makeshift Scaffolding",
           "win_rate": 0.6,
-          "picks": 5
+          "picks": 10
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
           "win_rate": 0.6,
-          "picks": 5
+          "picks": 10
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.651,
-          "picks": 129
+          "win_rate": 0.729,
+          "picks": 155
+        }
+      ]
+    },
+    {
+      "id": 16000065,
+      "name": "MANDY",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000065.png",
+      "rarity": "Epic",
+      "total_picks": 166,
+      "best_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.722,
+          "picks": 18
         },
         {
-          "map": "Flying Fantasies",
+          "map": "Molten to the Core",
+          "win_rate": 0.712,
+          "picks": 118
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.55,
+          "picks": 20
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.55,
+          "picks": 20
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.712,
+          "picks": 118
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.722,
+          "picks": 18
+        }
+      ]
+    },
+    {
+      "id": 16000026,
+      "name": "BIBI",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000026.png",
+      "rarity": "Epic",
+      "total_picks": 164,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.784,
+          "picks": 139
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.762,
+          "picks": 21
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.762,
+          "picks": 21
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.784,
+          "picks": 139
+        }
+      ]
+    },
+    {
+      "id": 16000070,
+      "name": "CORDELIUS",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000070.png",
+      "rarity": "Legendary",
+      "total_picks": 163,
+      "best_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.9,
+          "picks": 10
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.867,
+          "picks": 15
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.701,
+          "picks": 134
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.701,
+          "picks": 134
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.867,
+          "picks": 15
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.9,
+          "picks": 10
+        }
+      ]
+    },
+    {
+      "id": 16000052,
+      "name": "MEG",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000052.png",
+      "rarity": "Legendary",
+      "total_picks": 162,
+      "best_maps": [
+        {
+          "map": "Safety Center",
+          "win_rate": 0.833,
+          "picks": 6
+        },
+        {
+          "map": "Molten to the Core",
           "win_rate": 0.8,
-          "picks": 5
+          "picks": 145
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.667,
+          "picks": 9
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.667,
+          "picks": 9
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.8,
+          "picks": 145
+        },
+        {
+          "map": "Safety Center",
+          "win_rate": 0.833,
+          "picks": 6
+        }
+      ]
+    },
+    {
+      "id": 16000097,
+      "name": "MINA",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000097.png",
+      "rarity": "Mythic",
+      "total_picks": 161,
+      "best_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.75,
+          "picks": 12
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.715,
+          "picks": 137
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.4,
+          "picks": 10
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.4,
+          "picks": 10
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.715,
+          "picks": 137
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.75,
+          "picks": 12
         }
       ]
     },
@@ -4276,22 +4089,22 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000009.png",
       "rarity": "Super Rare",
-      "total_picks": 138,
+      "total_picks": 149,
       "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.7,
-          "picks": 10
-        },
         {
           "map": "Skull Creek",
           "win_rate": 0.679,
           "picks": 28
         },
         {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 9
+        },
+        {
           "map": "Molten to the Core",
-          "win_rate": 0.659,
-          "picks": 85
+          "win_rate": 0.639,
+          "picks": 97
         },
         {
           "map": "Rockwall Brawl",
@@ -4307,13 +4120,97 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.659,
-          "picks": 85
+          "win_rate": 0.639,
+          "picks": 97
         },
         {
-          "map": "Skull Creek",
-          "win_rate": 0.679,
-          "picks": 28
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 9
+        }
+      ]
+    },
+    {
+      "id": 16000046,
+      "name": "BELLE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000046.png",
+      "rarity": "Epic",
+      "total_picks": 141,
+      "best_maps": [
+        {
+          "map": "Flying Fantasies",
+          "win_rate": 0.8,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.633,
+          "picks": 128
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.6,
+          "picks": 5
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.633,
+          "picks": 128
+        },
+        {
+          "map": "Flying Fantasies",
+          "win_rate": 0.8,
+          "picks": 5
+        }
+      ]
+    },
+    {
+      "id": 16000004,
+      "name": "RICO",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000004.png",
+      "rarity": "Super Rare",
+      "total_picks": 139,
+      "best_maps": [
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.727,
+          "picks": 11
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.623,
+          "picks": 106
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.529,
+          "picks": 17
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.529,
+          "picks": 17
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.623,
+          "picks": 106
+        },
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.727,
+          "picks": 11
         }
       ]
     },
@@ -4323,17 +4220,17 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000015.png",
       "rarity": "Epic",
-      "total_picks": 137,
+      "total_picks": 135,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
           "win_rate": 1.0,
-          "picks": 6
+          "picks": 5
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.703,
-          "picks": 101
+          "win_rate": 0.64,
+          "picks": 100
         },
         {
           "map": "Flying Fantasies",
@@ -4359,30 +4256,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.703,
-          "picks": 101
-        }
-      ]
-    },
-    {
-      "id": 16000068,
-      "name": "MAISIE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000068.png",
-      "rarity": "Epic",
-      "total_picks": 137,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.654,
-          "picks": 130
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.654,
-          "picks": 130
+          "win_rate": 0.64,
+          "picks": 100
         }
       ]
     },
@@ -4392,17 +4267,12 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000082.png",
       "rarity": "Epic",
-      "total_picks": 137,
+      "total_picks": 134,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.826,
-          "picks": 69
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.692,
-          "picks": 13
+          "win_rate": 0.835,
+          "picks": 79
         },
         {
           "map": "Makeshift Scaffolding",
@@ -4417,68 +4287,9 @@
           "picks": 54
         },
         {
-          "map": "Skull Creek",
-          "win_rate": 0.692,
-          "picks": 13
-        },
-        {
           "map": "Molten to the Core",
-          "win_rate": 0.826,
-          "picks": 69
-        }
-      ]
-    },
-    {
-      "id": 16000032,
-      "name": "MAX",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
-      "rarity": "Mythic",
-      "total_picks": 132,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.617,
-          "picks": 128
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.617,
-          "picks": 128
-        }
-      ]
-    },
-    {
-      "id": 16000013,
-      "name": "POCO",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
-      "rarity": "Rare",
-      "total_picks": 131,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.664,
-          "picks": 116
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.643,
-          "picks": 14
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.643,
-          "picks": 14
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.664,
-          "picks": 116
+          "win_rate": 0.835,
+          "picks": 79
         }
       ]
     },
@@ -4488,199 +4299,51 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000038.png",
       "rarity": "Legendary",
-      "total_picks": 131,
+      "total_picks": 130,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.664,
-          "picks": 107
+          "win_rate": 0.684,
+          "picks": 114
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.579,
-          "picks": 19
+          "win_rate": 0.455,
+          "picks": 11
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.579,
-          "picks": 19
+          "win_rate": 0.455,
+          "picks": 11
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.664,
-          "picks": 107
+          "win_rate": 0.684,
+          "picks": 114
         }
       ]
     },
     {
-      "id": 16000014,
-      "name": "BO",
+      "id": 16000068,
+      "name": "MAISIE",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000014.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000068.png",
       "rarity": "Epic",
-      "total_picks": 124,
+      "total_picks": 119,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.615,
-          "picks": 117
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 5
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.615,
-          "picks": 117
-        }
-      ]
-    },
-    {
-      "id": 16000061,
-      "name": "GUS",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000061.png",
-      "rarity": "Super Rare",
-      "total_picks": 116,
-      "best_maps": [
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 1.0,
-          "picks": 5
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.7,
-          "picks": 50
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.673,
-          "picks": 55
+          "win_rate": 0.732,
+          "picks": 112
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.673,
-          "picks": 55
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.7,
-          "picks": 50
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 1.0,
-          "picks": 5
-        }
-      ]
-    },
-    {
-      "id": 16000092,
-      "name": "FINX",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
-      "rarity": "Mythic",
-      "total_picks": 116,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.681,
-          "picks": 113
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.681,
-          "picks": 113
-        }
-      ]
-    },
-    {
-      "id": null,
-      "name": "MR. P",
-      "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 112,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.72,
-          "picks": 93
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.636,
-          "picks": 11
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.636,
-          "picks": 11
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.72,
-          "picks": 93
-        }
-      ]
-    },
-    {
-      "id": 16000002,
-      "name": "BULL",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
-      "rarity": "Rare",
-      "total_picks": 108,
-      "best_maps": [
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.8,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.791,
-          "picks": 86
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.615,
-          "picks": 13
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.615,
-          "picks": 13
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.791,
-          "picks": 86
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.8,
-          "picks": 5
+          "win_rate": 0.732,
+          "picks": 112
         }
       ]
     },
@@ -4690,8 +4353,20 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
       "rarity": "Epic",
-      "total_picks": 105,
+      "total_picks": 118,
       "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.671,
+          "picks": 70
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 48
+        }
+      ],
+      "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
           "win_rate": 0.667,
@@ -4699,212 +4374,180 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.667,
-          "picks": 57
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.667,
-          "picks": 48
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.667,
-          "picks": 57
+          "win_rate": 0.671,
+          "picks": 70
         }
       ]
     },
     {
-      "id": 16000036,
-      "name": "NANI",
+      "id": 16000014,
+      "name": "BO",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000014.png",
       "rarity": "Epic",
-      "total_picks": 99,
+      "total_picks": 116,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.727,
-          "picks": 11
+          "win_rate": 0.6,
+          "picks": 5
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.659,
-          "picks": 85
+          "win_rate": 0.596,
+          "picks": 109
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.659,
-          "picks": 85
+          "win_rate": 0.596,
+          "picks": 109
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.727,
-          "picks": 11
+          "win_rate": 0.6,
+          "picks": 5
         }
       ]
     },
     {
-      "id": null,
-      "name": "GLOWY",
+      "id": 16000029,
+      "name": "BEA",
       "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 99,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.688,
-          "picks": 16
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.651,
-          "picks": 83
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.651,
-          "picks": 83
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.688,
-          "picks": 16
-        }
-      ]
-    },
-    {
-      "id": 16000095,
-      "name": "ALLI",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
-      "rarity": "Mythic",
-      "total_picks": 92,
-      "best_maps": [
-        {
-          "map": "Flying Fantasies",
-          "win_rate": 1.0,
-          "picks": 6
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 80
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 80
-        },
-        {
-          "map": "Flying Fantasies",
-          "win_rate": 1.0,
-          "picks": 6
-        }
-      ]
-    },
-    {
-      "id": 16000089,
-      "name": "MEEPLE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000089.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000029.png",
       "rarity": "Epic",
-      "total_picks": 92,
+      "total_picks": 116,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.639,
-          "picks": 83
+          "win_rate": 0.645,
+          "picks": 110
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.645,
+          "picks": 110
+        }
+      ]
+    },
+    {
+      "id": 16000002,
+      "name": "BULL",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
+      "rarity": "Rare",
+      "total_picks": 114,
+      "best_maps": [
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.8,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.742,
+          "picks": 93
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.571,
-          "picks": 7
+          "win_rate": 0.583,
+          "picks": 12
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.571,
-          "picks": 7
+          "win_rate": 0.583,
+          "picks": 12
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.639,
-          "picks": 83
+          "win_rate": 0.742,
+          "picks": 93
+        },
+        {
+          "map": "Skull Creek",
+          "win_rate": 0.8,
+          "picks": 5
         }
       ]
     },
     {
-      "id": 16000047,
-      "name": "SQUEAK",
+      "id": 16000059,
+      "name": "OTIS",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000047.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000059.png",
       "rarity": "Mythic",
-      "total_picks": 91,
+      "total_picks": 110,
       "best_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.714,
-          "picks": 7
-        },
-        {
           "map": "Molten to the Core",
-          "win_rate": 0.633,
-          "picks": 79
+          "win_rate": 0.695,
+          "picks": 105
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.633,
-          "picks": 79
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.714,
-          "picks": 7
+          "win_rate": 0.695,
+          "picks": 105
         }
       ]
     },
     {
-      "id": null,
-      "name": "EL PRIMO",
+      "id": 16000040,
+      "name": "AMBER",
       "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 89,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000040.png",
+      "rarity": "Legendary",
+      "total_picks": 108,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.629,
-          "picks": 62
+          "win_rate": 0.714,
+          "picks": 98
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.619,
-          "picks": 21
+          "win_rate": 0.6,
+          "picks": 10
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.619,
-          "picks": 21
+          "win_rate": 0.6,
+          "picks": 10
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.629,
-          "picks": 62
+          "win_rate": 0.714,
+          "picks": 98
+        }
+      ]
+    },
+    {
+      "id": 16000092,
+      "name": "FINX",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000092.png",
+      "rarity": "Mythic",
+      "total_picks": 108,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.667,
+          "picks": 105
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.667,
+          "picks": 105
         }
       ]
     },
@@ -4914,7 +4557,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000000.png",
       "rarity": "Common",
-      "total_picks": 88,
+      "total_picks": 107,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
@@ -4923,8 +4566,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.623,
-          "picks": 77
+          "win_rate": 0.708,
+          "picks": 96
         },
         {
           "map": "Kroket",
@@ -4940,8 +4583,8 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.623,
-          "picks": 77
+          "win_rate": 0.708,
+          "picks": 96
         },
         {
           "map": "Makeshift Scaffolding",
@@ -4951,194 +4594,194 @@
       ]
     },
     {
-      "id": 16000094,
-      "name": "KAZE",
+      "id": 16000061,
+      "name": "GUS",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
-      "rarity": "Ultra Legendary",
-      "total_picks": 87,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.605,
-          "picks": 81
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 6
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 6
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.605,
-          "picks": 81
-        }
-      ]
-    },
-    {
-      "id": 16000021,
-      "name": "GENE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
-      "rarity": "Mythic",
-      "total_picks": 83,
-      "best_maps": [
-        {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.635,
-          "picks": 63
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.635,
-          "picks": 63
-        },
-        {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
-        }
-      ]
-    },
-    {
-      "id": 16000078,
-      "name": "MELODIE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000078.png",
-      "rarity": "Mythic",
-      "total_picks": 82,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.682,
-          "picks": 22
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.661,
-          "picks": 59
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.661,
-          "picks": 59
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.682,
-          "picks": 22
-        }
-      ]
-    },
-    {
-      "id": 16000085,
-      "name": "KENJI",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000085.png",
-      "rarity": "Legendary",
-      "total_picks": 82,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.765,
-          "picks": 17
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.689,
-          "picks": 61
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.689,
-          "picks": 61
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.765,
-          "picks": 17
-        }
-      ]
-    },
-    {
-      "id": 16000053,
-      "name": "LOLA",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
-      "rarity": "Epic",
-      "total_picks": 82,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.667,
-          "picks": 81
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.667,
-          "picks": 81
-        }
-      ]
-    },
-    {
-      "id": 16000027,
-      "name": "8-BIT",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000027.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000061.png",
       "rarity": "Super Rare",
-      "total_picks": 81,
+      "total_picks": 104,
       "best_maps": [
         {
-          "map": "Double Trouble",
+          "map": "Rockwall Brawl",
           "win_rate": 1.0,
-          "picks": 6
+          "picks": 5
         },
         {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.694,
+          "picks": 49
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.653,
-          "picks": 49
+          "win_rate": 0.682,
+          "picks": 44
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.653,
+          "win_rate": 0.682,
+          "picks": 44
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.694,
           "picks": 49
         },
         {
-          "map": "Kroket",
-          "win_rate": 0.842,
-          "picks": 19
+          "map": "Rockwall Brawl",
+          "win_rate": 1.0,
+          "picks": 5
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "MR. P",
+      "name_jp": "",
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 104,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.636,
+          "picks": 11
         },
         {
-          "map": "Double Trouble",
-          "win_rate": 1.0,
-          "picks": 6
+          "map": "Molten to the Core",
+          "win_rate": 0.635,
+          "picks": 85
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.635,
+          "picks": 85
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.636,
+          "picks": 11
+        }
+      ]
+    },
+    {
+      "id": 16000013,
+      "name": "POCO",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
+      "rarity": "Rare",
+      "total_picks": 101,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.69,
+          "picks": 87
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.615,
+          "picks": 13
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.615,
+          "picks": 13
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.69,
+          "picks": 87
+        }
+      ]
+    },
+    {
+      "id": 16000036,
+      "name": "NANI",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000036.png",
+      "rarity": "Epic",
+      "total_picks": 101,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.7,
+          "picks": 10
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.693,
+          "picks": 88
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.693,
+          "picks": 88
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.7,
+          "picks": 10
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "GLOWY",
+      "name_jp": "",
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 98,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.72,
+          "picks": 82
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.688,
+          "picks": 16
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.688,
+          "picks": 16
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.72,
+          "picks": 82
+        }
+      ]
+    },
+    {
+      "id": 16000032,
+      "name": "MAX",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000032.png",
+      "rarity": "Mythic",
+      "total_picks": 95,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.67,
+          "picks": 91
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.67,
+          "picks": 91
         }
       ]
     },
@@ -5148,7 +4791,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000072.png",
       "rarity": "Epic",
-      "total_picks": 81,
+      "total_picks": 93,
       "best_maps": [
         {
           "map": "Makeshift Scaffolding",
@@ -5157,15 +4800,15 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.773,
-          "picks": 66
+          "win_rate": 0.756,
+          "picks": 78
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.773,
-          "picks": 66
+          "win_rate": 0.756,
+          "picks": 78
         },
         {
           "map": "Makeshift Scaffolding",
@@ -5175,24 +4818,216 @@
       ]
     },
     {
-      "id": 16000049,
-      "name": "BUZZ",
+      "id": 16000053,
+      "name": "LOLA",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000049.png",
-      "rarity": "Mythic",
-      "total_picks": 80,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
+      "rarity": "Epic",
+      "total_picks": 92,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.589,
-          "picks": 73
+          "win_rate": 0.659,
+          "picks": 91
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.589,
-          "picks": 73
+          "win_rate": 0.659,
+          "picks": 91
+        }
+      ]
+    },
+    {
+      "id": 16000049,
+      "name": "BUZZ",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000049.png",
+      "rarity": "Mythic",
+      "total_picks": 91,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.576,
+          "picks": 85
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.576,
+          "picks": 85
+        }
+      ]
+    },
+    {
+      "id": 16000078,
+      "name": "MELODIE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000078.png",
+      "rarity": "Mythic",
+      "total_picks": 88,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.682,
+          "picks": 22
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.646,
+          "picks": 65
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.646,
+          "picks": 65
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.682,
+          "picks": 22
+        }
+      ]
+    },
+    {
+      "id": 16000021,
+      "name": "GENE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000021.png",
+      "rarity": "Mythic",
+      "total_picks": 86,
+      "best_maps": [
+        {
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.636,
+          "picks": 66
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.636,
+          "picks": 66
+        },
+        {
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
+        }
+      ]
+    },
+    {
+      "id": 16000027,
+      "name": "8-BIT",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000027.png",
+      "rarity": "Super Rare",
+      "total_picks": 84,
+      "best_maps": [
+        {
+          "map": "Double Trouble",
+          "win_rate": 1.0,
+          "picks": 6
+        },
+        {
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.635,
+          "picks": 52
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.635,
+          "picks": 52
+        },
+        {
+          "map": "Kroket",
+          "win_rate": 0.842,
+          "picks": 19
+        },
+        {
+          "map": "Double Trouble",
+          "win_rate": 1.0,
+          "picks": 6
+        }
+      ]
+    },
+    {
+      "id": 16000047,
+      "name": "SQUEAK",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000047.png",
+      "rarity": "Mythic",
+      "total_picks": 80,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.714,
+          "picks": 7
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.647,
+          "picks": 68
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.647,
+          "picks": 68
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.714,
+          "picks": 7
+        }
+      ]
+    },
+    {
+      "id": 16000085,
+      "name": "KENJI",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000085.png",
+      "rarity": "Legendary",
+      "total_picks": 80,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.75,
+          "picks": 16
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.683,
+          "picks": 60
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.683,
+          "picks": 60
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.75,
+          "picks": 16
         }
       ]
     },
@@ -5211,7 +5046,7 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.576,
+          "win_rate": 0.593,
           "picks": 59
         },
         {
@@ -5228,7 +5063,7 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.576,
+          "win_rate": 0.593,
           "picks": 59
         },
         {
@@ -5239,24 +5074,34 @@
       ]
     },
     {
-      "id": 16000091,
-      "name": "LUMI",
+      "id": null,
+      "name": "EL PRIMO",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
-      "rarity": "Mythic",
-      "total_picks": 71,
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 79,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.614,
-          "picks": 70
+          "win_rate": 0.63,
+          "picks": 54
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.579,
+          "picks": 19
         }
       ],
       "worst_maps": [
         {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.579,
+          "picks": 19
+        },
+        {
           "map": "Molten to the Core",
-          "win_rate": 0.614,
-          "picks": 70
+          "win_rate": 0.63,
+          "picks": 54
         }
       ]
     },
@@ -5266,7 +5111,7 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000018.png",
       "rarity": "Super Rare",
-      "total_picks": 70,
+      "total_picks": 77,
       "best_maps": [
         {
           "map": "Safety Center",
@@ -5275,15 +5120,15 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.6,
-          "picks": 45
+          "win_rate": 0.558,
+          "picks": 52
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.6,
-          "picks": 45
+          "win_rate": 0.558,
+          "picks": 52
         },
         {
           "map": "Safety Center",
@@ -5293,34 +5138,56 @@
       ]
     },
     {
-      "id": null,
-      "name": "NAJIA",
+      "id": 16000091,
+      "name": "LUMI",
       "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 67,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000091.png",
+      "rarity": "Mythic",
+      "total_picks": 75,
       "best_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.682,
-          "picks": 22
-        },
-        {
           "map": "Molten to the Core",
-          "win_rate": 0.591,
-          "picks": 44
+          "win_rate": 0.622,
+          "picks": 74
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.591,
-          "picks": 44
+          "win_rate": 0.622,
+          "picks": 74
+        }
+      ]
+    },
+    {
+      "id": 16000089,
+      "name": "MEEPLE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000089.png",
+      "rarity": "Epic",
+      "total_picks": 74,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.662,
+          "picks": 65
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.682,
-          "picks": 22
+          "win_rate": 0.571,
+          "picks": 7
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.571,
+          "picks": 7
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.662,
+          "picks": 65
         }
       ]
     },
@@ -5330,115 +5197,152 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
       "rarity": "Epic",
-      "total_picks": 64,
+      "total_picks": 74,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.75,
-          "picks": 60
+          "win_rate": 0.743,
+          "picks": 70
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.75,
-          "picks": 60
+          "win_rate": 0.743,
+          "picks": 70
         }
       ]
     },
     {
-      "id": 16000040,
-      "name": "AMBER",
+      "id": null,
+      "name": "NAJIA",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000040.png",
-      "rarity": "Legendary",
-      "total_picks": 64,
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 73,
       "best_maps": [
         {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 21
+        },
+        {
           "map": "Molten to the Core",
-          "win_rate": 0.704,
-          "picks": 54
+          "win_rate": 0.588,
+          "picks": 51
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.588,
+          "picks": 51
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.667,
+          "picks": 21
+        }
+      ]
+    },
+    {
+      "id": 16000094,
+      "name": "KAZE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
+      "rarity": "Ultra Legendary",
+      "total_picks": 71,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.576,
+          "picks": 66
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.576,
+          "picks": 66
         },
         {
           "map": "Makeshift Scaffolding",
           "win_rate": 0.6,
-          "picks": 10
+          "picks": 5
         }
-      ],
-      "worst_maps": [
+      ]
+    },
+    {
+      "id": 16000098,
+      "name": "ZIGGY",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
+      "rarity": "Mythic",
+      "total_picks": 68,
+      "best_maps": [
         {
-          "map": "Makeshift Scaffolding",
+          "map": "Kroket",
+          "win_rate": 1.0,
+          "picks": 7
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.721,
+          "picks": 43
+        },
+        {
+          "map": "Safety Center",
+          "win_rate": 0.667,
+          "picks": 6
+        },
+        {
+          "map": "Rockwall Brawl",
           "win_rate": 0.6,
-          "picks": 10
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.704,
-          "picks": 54
-        }
-      ]
-    },
-    {
-      "id": 16000086,
-      "name": "SHADE",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
-      "rarity": "Epic",
-      "total_picks": 62,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.938,
-          "picks": 16
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.742,
-          "picks": 31
-        },
-        {
-          "map": "Skull Creek",
-          "win_rate": 0.692,
-          "picks": 13
+          "picks": 5
         }
       ],
       "worst_maps": [
         {
-          "map": "Skull Creek",
-          "win_rate": 0.692,
-          "picks": 13
+          "map": "Rockwall Brawl",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Safety Center",
+          "win_rate": 0.667,
+          "picks": 6
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.742,
-          "picks": 31
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.938,
-          "picks": 16
+          "win_rate": 0.721,
+          "picks": 43
         }
       ]
     },
     {
-      "id": 16000007,
-      "name": "JESSIE",
+      "id": 16000067,
+      "name": "WILLOW",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
-      "rarity": "Super Rare",
-      "total_picks": 57,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000067.png",
+      "rarity": "Mythic",
+      "total_picks": 66,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.741,
-          "picks": 54
+          "win_rate": 0.619,
+          "picks": 63
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.741,
-          "picks": 54
+          "win_rate": 0.619,
+          "picks": 63
         }
       ]
     },
@@ -5448,19 +5352,41 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000074.png",
       "rarity": "Mythic",
-      "total_picks": 55,
+      "total_picks": 64,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.78,
-          "picks": 50
+          "win_rate": 0.712,
+          "picks": 59
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.78,
-          "picks": 50
+          "win_rate": 0.712,
+          "picks": 59
+        }
+      ]
+    },
+    {
+      "id": 16000041,
+      "name": "LOU",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
+      "rarity": "Mythic",
+      "total_picks": 56,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.673,
+          "picks": 52
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.673,
+          "picks": 52
         }
       ]
     },
@@ -5474,8 +5400,8 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.75,
-          "picks": 36
+          "win_rate": 0.676,
+          "picks": 37
         },
         {
           "map": "Skull Creek",
@@ -5484,15 +5410,15 @@
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 12
+          "win_rate": 0.455,
+          "picks": 11
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 12
+          "win_rate": 0.455,
+          "picks": 11
         },
         {
           "map": "Skull Creek",
@@ -5501,40 +5427,84 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.75,
-          "picks": 36
+          "win_rate": 0.676,
+          "picks": 37
         }
       ]
     },
     {
-      "id": 16000008,
-      "name": "NITA",
+      "id": 16000086,
+      "name": "SHADE",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000008.png",
-      "rarity": "Rare",
-      "total_picks": 52,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000086.png",
+      "rarity": "Epic",
+      "total_picks": 53,
       "best_maps": [
         {
-          "map": "Molten to the Core",
-          "win_rate": 0.625,
-          "picks": 32
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.938,
+          "picks": 16
         },
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.562,
-          "picks": 16
+          "map": "Molten to the Core",
+          "win_rate": 0.743,
+          "picks": 35
         }
       ],
       "worst_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.562,
-          "picks": 16
+          "map": "Molten to the Core",
+          "win_rate": 0.743,
+          "picks": 35
         },
         {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.938,
+          "picks": 16
+        }
+      ]
+    },
+    {
+      "id": 16000066,
+      "name": "R-T",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
+      "rarity": "Mythic",
+      "total_picks": 53,
+      "best_maps": [
+        {
           "map": "Molten to the Core",
-          "win_rate": 0.625,
-          "picks": 32
+          "win_rate": 0.49,
+          "picks": 49
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.49,
+          "picks": 49
+        }
+      ]
+    },
+    {
+      "id": 16000006,
+      "name": "BARLEY",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
+      "rarity": "Rare",
+      "total_picks": 51,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.614,
+          "picks": 44
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.614,
+          "picks": 44
         }
       ]
     },
@@ -5548,128 +5518,15 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.419,
+          "win_rate": 0.488,
           "picks": 43
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.419,
+          "win_rate": 0.488,
           "picks": 43
-        }
-      ]
-    },
-    {
-      "id": 16000067,
-      "name": "WILLOW",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000067.png",
-      "rarity": "Mythic",
-      "total_picks": 50,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.787,
-          "picks": 47
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.787,
-          "picks": 47
-        }
-      ]
-    },
-    {
-      "id": 16000041,
-      "name": "LOU",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000041.png",
-      "rarity": "Mythic",
-      "total_picks": 49,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.689,
-          "picks": 45
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.689,
-          "picks": 45
-        }
-      ]
-    },
-    {
-      "id": 16000006,
-      "name": "BARLEY",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000006.png",
-      "rarity": "Rare",
-      "total_picks": 49,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.643,
-          "picks": 42
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.643,
-          "picks": 42
-        }
-      ]
-    },
-    {
-      "id": 16000098,
-      "name": "ZIGGY",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
-      "rarity": "Mythic",
-      "total_picks": 48,
-      "best_maps": [
-        {
-          "map": "Kroket",
-          "win_rate": 1.0,
-          "picks": 7
-        },
-        {
-          "map": "Safety Center",
-          "win_rate": 0.667,
-          "picks": 6
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.522,
-          "picks": 23
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.522,
-          "picks": 23
-        },
-        {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Safety Center",
-          "win_rate": 0.667,
-          "picks": 6
         }
       ]
     },
@@ -5679,83 +5536,51 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000048.png",
       "rarity": "Epic",
-      "total_picks": 46,
+      "total_picks": 48,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.675,
-          "picks": 40
+          "win_rate": 0.643,
+          "picks": 42
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.675,
-          "picks": 40
+          "win_rate": 0.643,
+          "picks": 42
         }
       ]
     },
     {
-      "id": 16000035,
-      "name": "GALE",
+      "id": 16000008,
+      "name": "NITA",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000035.png",
-      "rarity": "Epic",
-      "total_picks": 45,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000008.png",
+      "rarity": "Rare",
+      "total_picks": 47,
       "best_maps": [
         {
-          "map": "Molten to the Core",
-          "win_rate": 0.649,
-          "picks": 37
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.562,
+          "picks": 16
         },
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 6
+          "map": "Molten to the Core",
+          "win_rate": 0.556,
+          "picks": 27
         }
       ],
       "worst_maps": [
         {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.5,
-          "picks": 6
-        },
-        {
           "map": "Molten to the Core",
-          "win_rate": 0.649,
-          "picks": 37
-        }
-      ]
-    },
-    {
-      "id": 16000051,
-      "name": "ASH",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
-      "rarity": "Epic",
-      "total_picks": 42,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.865,
-          "picks": 37
+          "win_rate": 0.556,
+          "picks": 27
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 5
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.6,
-          "picks": 5
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.865,
-          "picks": 37
+          "win_rate": 0.562,
+          "picks": 16
         }
       ]
     },
@@ -5765,279 +5590,105 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000064.png",
       "rarity": "Mythic",
-      "total_picks": 42,
+      "total_picks": 46,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.625,
-          "picks": 40
+          "win_rate": 0.705,
+          "picks": 44
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.625,
-          "picks": 40
+          "win_rate": 0.705,
+          "picks": 44
         }
       ]
     },
     {
-      "id": 16000083,
-      "name": "CLANCY",
+      "id": 16000007,
+      "name": "JESSIE",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000083.png",
-      "rarity": "Mythic",
-      "total_picks": 34,
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
+      "rarity": "Super Rare",
+      "total_picks": 44,
       "best_maps": [
         {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.75,
-          "picks": 8
+          "map": "Molten to the Core",
+          "win_rate": 0.707,
+          "picks": 41
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.707,
+          "picks": 41
+        }
+      ]
+    },
+    {
+      "id": 16000095,
+      "name": "ALLI",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
+      "rarity": "Mythic",
+      "total_picks": 40,
+      "best_maps": [
+        {
+          "map": "Flying Fantasies",
+          "win_rate": 1.0,
+          "picks": 6
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.652,
-          "picks": 23
+          "win_rate": 0.759,
+          "picks": 29
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.652,
-          "picks": 23
+          "win_rate": 0.759,
+          "picks": 29
         },
         {
-          "map": "Rockwall Brawl",
-          "win_rate": 0.75,
-          "picks": 8
+          "map": "Flying Fantasies",
+          "win_rate": 1.0,
+          "picks": 6
         }
       ]
     },
     {
-      "id": 16000056,
-      "name": "EVE",
+      "id": 16000035,
+      "name": "GALE",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
-      "rarity": "Mythic",
-      "total_picks": 33,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.533,
-          "picks": 30
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.533,
-          "picks": 30
-        }
-      ]
-    },
-    {
-      "id": 16000017,
-      "name": "TARA",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000017.png",
-      "rarity": "Mythic",
-      "total_picks": 31,
-      "best_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.778,
-          "picks": 9
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.591,
-          "picks": 22
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.591,
-          "picks": 22
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.778,
-          "picks": 9
-        }
-      ]
-    },
-    {
-      "id": 16000087,
-      "name": "JUJU",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000087.png",
-      "rarity": "Mythic",
-      "total_picks": 26,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.615,
-          "picks": 26
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.615,
-          "picks": 26
-        }
-      ]
-    },
-    {
-      "id": 16000066,
-      "name": "R-T",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
-      "rarity": "Mythic",
-      "total_picks": 25,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.619,
-          "picks": 21
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.619,
-          "picks": 21
-        }
-      ]
-    },
-    {
-      "id": 16000037,
-      "name": "SPROUT",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
-      "rarity": "Mythic",
-      "total_picks": 24,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.682,
-          "picks": 22
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.682,
-          "picks": 22
-        }
-      ]
-    },
-    {
-      "id": 16000079,
-      "name": "ANGELO",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000079.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000035.png",
       "rarity": "Epic",
-      "total_picks": 23,
+      "total_picks": 40,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.562,
-          "picks": 16
+          "win_rate": 0.719,
+          "picks": 32
         },
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.2,
-          "picks": 5
+          "win_rate": 0.5,
+          "picks": 6
         }
       ],
       "worst_maps": [
         {
           "map": "Makeshift Scaffolding",
-          "win_rate": 0.2,
-          "picks": 5
+          "win_rate": 0.5,
+          "picks": 6
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.562,
-          "picks": 16
-        }
-      ]
-    },
-    {
-      "id": null,
-      "name": "LARRY & LAWRIE",
-      "name_jp": "",
-      "image_url": null,
-      "rarity": null,
-      "total_picks": 23,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.762,
-          "picks": 21
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.762,
-          "picks": 21
-        }
-      ]
-    },
-    {
-      "id": 16000080,
-      "name": "DRACO",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000080.png",
-      "rarity": "Legendary",
-      "total_picks": 21,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.714,
-          "picks": 21
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.714,
-          "picks": 21
-        }
-      ]
-    },
-    {
-      "id": 16000016,
-      "name": "PAM",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
-      "rarity": "Epic",
-      "total_picks": 20,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.692,
-          "picks": 13
-        },
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.571,
-          "picks": 7
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Makeshift Scaffolding",
-          "win_rate": 0.571,
-          "picks": 7
-        },
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.692,
-          "picks": 13
+          "win_rate": 0.719,
+          "picks": 32
         }
       ]
     },
@@ -6047,34 +5698,152 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000058.png",
       "rarity": "Epic",
-      "total_picks": 19,
+      "total_picks": 38,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.471,
-          "picks": 17
+          "win_rate": 0.5,
+          "picks": 36
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.471,
-          "picks": 17
+          "win_rate": 0.5,
+          "picks": 36
         }
       ]
     },
     {
-      "id": 16000084,
-      "name": "MOE",
+      "id": 16000083,
+      "name": "CLANCY",
       "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000084.png",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000083.png",
       "rarity": "Mythic",
-      "total_picks": 17,
+      "total_picks": 36,
+      "best_maps": [
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.75,
+          "picks": 8
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.52,
+          "picks": 25
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.52,
+          "picks": 25
+        },
+        {
+          "map": "Rockwall Brawl",
+          "win_rate": 0.75,
+          "picks": 8
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "LARRY & LAWRIE",
+      "name_jp": "",
+      "image_url": null,
+      "rarity": null,
+      "total_picks": 36,
       "best_maps": [
         {
           "map": "Molten to the Core",
+          "win_rate": 0.588,
+          "picks": 34
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.588,
+          "picks": 34
+        }
+      ]
+    },
+    {
+      "id": 16000051,
+      "name": "ASH",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
+      "rarity": "Epic",
+      "total_picks": 34,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.793,
+          "picks": 29
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.6,
+          "picks": 5
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.6,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.793,
+          "picks": 29
+        }
+      ]
+    },
+    {
+      "id": 16000017,
+      "name": "TARA",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000017.png",
+      "rarity": "Mythic",
+      "total_picks": 33,
+      "best_maps": [
+        {
+          "map": "Makeshift Scaffolding",
           "win_rate": 0.778,
           "picks": 9
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.583,
+          "picks": 24
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.583,
+          "picks": 24
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.778,
+          "picks": 9
+        }
+      ]
+    },
+    {
+      "id": 16000079,
+      "name": "ANGELO",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000079.png",
+      "rarity": "Epic",
+      "total_picks": 26,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.526,
+          "picks": 19
         },
         {
           "map": "Makeshift Scaffolding",
@@ -6090,8 +5859,40 @@
         },
         {
           "map": "Molten to the Core",
-          "win_rate": 0.778,
-          "picks": 9
+          "win_rate": 0.526,
+          "picks": 19
+        }
+      ]
+    },
+    {
+      "id": 16000016,
+      "name": "PAM",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
+      "rarity": "Epic",
+      "total_picks": 21,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.714,
+          "picks": 14
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.571,
+          "picks": 7
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.571,
+          "picks": 7
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.714,
+          "picks": 14
         }
       ]
     },
@@ -6101,19 +5902,139 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000024.png",
       "rarity": "Rare",
-      "total_picks": 17,
+      "total_picks": 21,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.375,
-          "picks": 16
+          "win_rate": 0.45,
+          "picks": 20
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.375,
-          "picks": 16
+          "win_rate": 0.45,
+          "picks": 20
+        }
+      ]
+    },
+    {
+      "id": 16000037,
+      "name": "SPROUT",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000037.png",
+      "rarity": "Mythic",
+      "total_picks": 21,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.579,
+          "picks": 19
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.579,
+          "picks": 19
+        }
+      ]
+    },
+    {
+      "id": 16000084,
+      "name": "MOE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000084.png",
+      "rarity": "Mythic",
+      "total_picks": 20,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.75,
+          "picks": 12
+        },
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.2,
+          "picks": 5
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Makeshift Scaffolding",
+          "win_rate": 0.2,
+          "picks": 5
+        },
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.75,
+          "picks": 12
+        }
+      ]
+    },
+    {
+      "id": 16000080,
+      "name": "DRACO",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000080.png",
+      "rarity": "Legendary",
+      "total_picks": 19,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.684,
+          "picks": 19
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.684,
+          "picks": 19
+        }
+      ]
+    },
+    {
+      "id": 16000060,
+      "name": "SAM",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000060.png",
+      "rarity": "Epic",
+      "total_picks": 18,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.714,
+          "picks": 14
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.714,
+          "picks": 14
+        }
+      ]
+    },
+    {
+      "id": 16000056,
+      "name": "EVE",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000056.png",
+      "rarity": "Mythic",
+      "total_picks": 17,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.643,
+          "picks": 14
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.643,
+          "picks": 14
         }
       ]
     },
@@ -6127,37 +6048,15 @@
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.643,
+          "win_rate": 0.714,
           "picks": 14
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.643,
+          "win_rate": 0.714,
           "picks": 14
-        }
-      ]
-    },
-    {
-      "id": 16000060,
-      "name": "SAM",
-      "name_jp": "",
-      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000060.png",
-      "rarity": "Epic",
-      "total_picks": 14,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 10
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.7,
-          "picks": 10
         }
       ]
     },
@@ -6167,19 +6066,41 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000034.png",
       "rarity": "Super Rare",
-      "total_picks": 11,
+      "total_picks": 12,
       "best_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.556,
-          "picks": 9
+          "win_rate": 0.6,
+          "picks": 10
         }
       ],
       "worst_maps": [
         {
           "map": "Molten to the Core",
-          "win_rate": 0.556,
-          "picks": 9
+          "win_rate": 0.6,
+          "picks": 10
+        }
+      ]
+    },
+    {
+      "id": 16000087,
+      "name": "JUJU",
+      "name_jp": "",
+      "image_url": "https://cdn.brawlify.com/brawlers/borders/16000087.png",
+      "rarity": "Mythic",
+      "total_picks": 7,
+      "best_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.571,
+          "picks": 7
+        }
+      ],
+      "worst_maps": [
+        {
+          "map": "Molten to the Core",
+          "win_rate": 0.571,
+          "picks": 7
         }
       ]
     },
@@ -6189,21 +6110,9 @@
       "name_jp": "",
       "image_url": "https://cdn.brawlify.com/brawlers/borders/16000073.png",
       "rarity": "Mythic",
-      "total_picks": 9,
-      "best_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.714,
-          "picks": 7
-        }
-      ],
-      "worst_maps": [
-        {
-          "map": "Molten to the Core",
-          "win_rate": 0.714,
-          "picks": 7
-        }
-      ]
+      "total_picks": 5,
+      "best_maps": [],
+      "worst_maps": []
     }
   ]
 }
