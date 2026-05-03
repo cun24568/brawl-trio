@@ -20,6 +20,7 @@ data/trio_meta.csv
 # 永続キャッシュ (VPS固有のstate、gitに入れる必要なし)
 data/discovered_tags.json
 data/qualifying_tags.json
+data/official_brawlers.json
 
 # バイナリ
 cloudflared.exe

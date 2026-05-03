@@ -37,8 +37,10 @@ BATTLES_JSON = DATA / "trio_battles_full.json"  # 旧形式 (互換)
 BATTLES_JSONL = DATA / "trio_battles.jsonl"  # 新形式 (蓄積型)
 MANUAL = DATA / "manual_mappings.json"
 BRAWLERS = DATA / "brawlers.json"
+OFFICIAL_BRAWLERS = DATA / "official_brawlers.json"  # 公式API IDマップ (Brawlify未収録対応)
 MAPS_POOL = DATA / "maps_pool.json"
 OUT = DATA / "db.json"
+BRAWLIFY_CDN = "https://cdn.brawlify.com/brawlers/borders"
 
 MIN_PICKS_ABS = 1  # 絶対最小pick数 (すべてのプレイされたブロウラーを表示)
 MIN_PICK_RATE = 0  # マップ内ピック率フィルタ無効
@@ -67,7 +69,7 @@ TIER_PCT_A = 0.55
 TIER_PCT_B = 0.80
 
 
-def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, brawler_jp=None):
+def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, brawler_jp=None, official_id_map=None):
     """
     マップ別ティアリストを生成。
     - 「重み付き擬似勝率」 (1位×5 + 2位×1) / (picks×5) を主指標に
@@ -159,12 +161,13 @@ def build_map_tier_list(brawler_rows, brawler_by_name, rank_dist_for_map=None, b
 
         master = brawler_by_name.get(r["brawler"].upper(), {})
         br_jp = get_brawler_jp(r["brawler"], brawler_by_name, brawler_jp)
+        img = get_brawler_image(r["brawler"], brawler_by_name, official_id_map or {})
         insufficient = picks < MIN_PICKS_FOR_RELIABLE_TIER
         scored.append({
             "brawler": r["brawler"],
             "brawler_jp": br_jp,
-            "brawler_id": master.get("id"),
-            "image_url": master.get("image_url"),
+            "brawler_id": master.get("id") or (official_id_map or {}).get(r["brawler"].upper()),
+            "image_url": img,
             "picks": picks,
             "wins": r["wins"],
             "win_rate": r["win_rate"],
@@ -229,6 +232,18 @@ def get_brawler_jp(brawler_name, brawler_by_name, brawler_jp):
     master = brawler_by_name.get((brawler_name or "").upper(), {})
     h = master.get("hash") or name_to_hash(brawler_name)
     return brawler_jp.get(h, "")
+
+
+def get_brawler_image(brawler_name, brawler_by_name, official_id_map):
+    """Brawlify masterから取得、無ければ公式API IDからCDN URL構築"""
+    master = brawler_by_name.get((brawler_name or "").upper(), {})
+    if master.get("image_url"):
+        return master["image_url"]
+    # fallback: 公式API IDから Brawlify CDN
+    bid = official_id_map.get((brawler_name or "").upper())
+    if bid:
+        return f"{BRAWLIFY_CDN}/{bid}.png"
+    return None
 
 
 def extract_trios_and_rank_dist(battles):
@@ -303,6 +318,13 @@ def main():
     brawlers_raw = json.loads(BRAWLERS.read_text(encoding="utf-8"))
     brawler_by_name = {b["name"].upper(): b for b in brawlers_raw}
 
+    # 公式API ID マップ (Brawlify未収録キャラの画像URL構築用)
+    official_id_map = {}
+    if OFFICIAL_BRAWLERS.exists():
+        official_list = json.loads(OFFICIAL_BRAWLERS.read_text(encoding="utf-8"))
+        official_id_map = {o["name"].upper(): o["id"] for o in official_list}
+        print(f"Official brawler IDs loaded: {len(official_id_map)}")
+
     pool_maps = json.loads(MAPS_POOL.read_text(encoding="utf-8"))
     pool_by_hash = {m["hash"]: m for m in pool_maps}
 
@@ -349,7 +371,7 @@ def main():
 
         total = sum(r["picks"] for r in brawler_rows)
         tier_list, map_avg_wr, map_avg_rank = build_map_tier_list(
-            brawler_rows, brawler_by_name, rank_dist.get(map_name), brawler_jp
+            brawler_rows, brawler_by_name, rank_dist.get(map_name), brawler_jp, official_id_map
         )
 
         # 推奨編成 + 全trios (シナジー検索用)
@@ -369,13 +391,13 @@ def main():
             r4c = sum(1 for x in ranks if x >= 4)
             members = []
             for br in trio_key:
-                bm = brawler_by_name.get(br.upper(), {})
                 bm_jp = get_brawler_jp(br, brawler_by_name, brawler_jp)
+                bm_img = get_brawler_image(br, brawler_by_name, official_id_map)
                 members.append(
                     {
                         "brawler": br,
                         "brawler_jp": bm_jp,
-                        "image_url": bm.get("image_url"),
+                        "image_url": bm_img,
                     }
                 )
             all_trios.append(
@@ -426,10 +448,10 @@ def main():
         worst = sorted(valid, key=lambda x: x["win_rate"])[:3]
         brawlers_out.append(
             {
-                "id": master.get("id"),
+                "id": master.get("id") or official_id_map.get(br_name.upper()),
                 "name": br_name,
                 "name_jp": get_brawler_jp(br_name, brawler_by_name, brawler_jp),
-                "image_url": master.get("image_url"),
+                "image_url": get_brawler_image(br_name, brawler_by_name, official_id_map),
                 "rarity": master.get("rarity"),
                 "total_picks": sum(r["picks"] for r in br_rows),
                 "best_maps": [

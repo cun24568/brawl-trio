@@ -26,6 +26,7 @@ git pull --rebase --autostash || echo "git pull failed, continue with current co
 # 旧形式ファイル(JSONL移行後不要)を削除
 rm -f data/trio_battles_full.json data/trio_battles_partial.json
 
+python3 -u fetch_official_brawlers.py || echo "official brawlers fetch failed (non-fatal)"
 python3 -u crawl_full.py
 python3 -u build_db.py
 
