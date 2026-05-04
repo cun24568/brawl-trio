@@ -61,6 +61,10 @@ function renderMapList() {
 function selectMap(m) {
   currentMap = m;
   renderMapDetail();
+  // モバイル(縦積み): 詳細が画面外なら自動スクロール
+  if (window.innerWidth < 768) {
+    document.getElementById("map-detail").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function setTierFilter(tier) {
@@ -322,6 +326,10 @@ function renderBrawlerGrid(filter = "") {
 function selectBrawler(b) {
   const el = document.getElementById("brawler-detail");
   const dispName = b.name_jp || b.name;
+  // モバイル: 詳細にスクロール
+  if (window.innerWidth < 768) {
+    setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  }
   el.innerHTML = `
     <div class="bg-gray-800 p-6 rounded">
       <div class="flex items-center mb-6">
