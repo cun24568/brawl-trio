@@ -41,9 +41,10 @@
   </header>
 
   <nav class="bg-gray-800 border-b border-gray-700 px-4">
-    <div class="max-w-7xl mx-auto flex gap-2 pb-2">
-      <button class="tab-btn px-4 py-2 rounded font-semibold bg-blue-600" data-tab="maps">マップ別ティア</button>
-      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700" data-tab="brawlers">ブロウラー別</button>
+    <div class="max-w-7xl mx-auto flex gap-2 pb-2 overflow-x-auto">
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-blue-600 whitespace-nowrap" data-tab="maps">マップ別ティア</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="brawlers">ブロウラー別</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="mypage">マイページ</button>
     </div>
   </nav>
 
@@ -61,6 +62,28 @@
         class="w-full p-2 bg-gray-800 border border-gray-700 rounded mb-4 focus:outline-none focus:border-blue-500">
       <div id="brawler-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2"></div>
       <div id="brawler-detail" class="mt-6"></div>
+    </div>
+
+    <div id="tab-mypage" class="tab-content hidden">
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <label class="text-sm text-gray-400 block mb-2">プレイヤータグ (例: #YQ8YY09R)</label>
+        <div class="flex gap-2">
+          <input type="text" id="mypage-tag" placeholder="#XXXXXXXX"
+            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono uppercase focus:outline-none focus:border-blue-500">
+          <button id="mypage-search" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded font-semibold whitespace-nowrap">
+            検索
+          </button>
+          <button id="mypage-refresh" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded font-semibold whitespace-nowrap hidden">
+            更新
+          </button>
+        </div>
+        <div class="text-xs text-gray-500 mt-2">
+          初回登録すると30分ごとに自動でバトルログが蓄積されます。<br>
+          公式APIの仕様で過去の試合は遡れません (登録時点〜未来分のみ)。<br>
+          ウォッチリスト上限50タグ、満杯時は最古登録のタグから退役します。
+        </div>
+      </div>
+      <div id="mypage-detail"></div>
     </div>
   </main>
 

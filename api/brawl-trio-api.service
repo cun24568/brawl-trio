@@ -1,0 +1,15 @@
+[Unit]
+Description=brawl-trio user API (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+User=soya
+WorkingDirectory=/home/soya/brawl-trio/api
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/home/soya/brawl-trio/api/venv/bin/uvicorn server:app --host 127.0.0.1 --port 8001 --workers 1
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

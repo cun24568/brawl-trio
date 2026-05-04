@@ -4,6 +4,12 @@ let currentTierFilter = "all";  // all / S+ / S / A / B / C
 let synergyPick1 = "";  // シナジー検索: 1人目
 let synergyPick2 = "";  // シナジー検索: 2人目
 
+// マイページAPI のホスト (Cloudflare Tunnel の HTTPS URL)
+// ローカル開発時は localStorage に "api_host" を入れれば上書きできる
+const API_HOST = localStorage.getItem("api_host") || "https://api.brawl-showdown.com";
+let MYPAGE_DATA = null;
+let MYPAGE_COOLDOWN_TIMER = null;
+
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
   "S":  "bg-orange-500 text-white",
@@ -385,5 +391,399 @@ function setupSearch() {
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 }
+
+// ============================================================
+// マイページ機能
+// ============================================================
+
+// EN→JP マッピングを DB から構築
+function buildBrawlerJpMap() {
+  const map = {};
+  if (!DB || !DB.brawlers) return map;
+  for (const b of DB.brawlers) {
+    map[b.name] = b.name_jp || b.name;
+  }
+  return map;
+}
+
+function buildBrawlerImgMap() {
+  const map = {};
+  if (!DB || !DB.brawlers) return map;
+  for (const b of DB.brawlers) {
+    if (b.image_url) map[b.name] = b.image_url;
+  }
+  return map;
+}
+
+// マップ EN → JP マッピング
+function buildMapJpMap() {
+  const map = {};
+  if (!DB || !DB.maps) return map;
+  for (const m of DB.maps) {
+    map[m.name] = m.name_jp || m.name;
+  }
+  return map;
+}
+
+function setupMypage() {
+  const tagInput = document.getElementById("mypage-tag");
+  const searchBtn = document.getElementById("mypage-search");
+  const refreshBtn = document.getElementById("mypage-refresh");
+
+  // localStorage から復元
+  const saved = localStorage.getItem("mypage_tag");
+  if (saved) tagInput.value = saved;
+
+  searchBtn.addEventListener("click", () => fetchMypage(tagInput.value));
+  tagInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") fetchMypage(tagInput.value);
+  });
+  refreshBtn.addEventListener("click", () => refreshMypage(tagInput.value));
+}
+
+function normalizeTag(t) {
+  t = (t || "").trim().toUpperCase().replace(/\s/g, "");
+  if (!t) return "";
+  if (!t.startsWith("#")) t = "#" + t;
+  return t;
+}
+
+async function fetchMypage(rawTag, options = {}) {
+  const tag = normalizeTag(rawTag);
+  if (!tag || tag.length < 4) {
+    renderMypageError("タグを入力してください (例: #YQ8YY09R)");
+    return;
+  }
+  localStorage.setItem("mypage_tag", tag);
+  document.getElementById("mypage-tag").value = tag;
+  renderMypageLoading(options.refresh ? "更新中..." : "読込中...");
+  try {
+    // タグの # を encode
+    const url = `${API_HOST}/api/player/${encodeURIComponent(tag)}`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(body.detail || `HTTP ${res.status}`);
+    }
+    MYPAGE_DATA = await res.json();
+    renderMypage();
+  } catch (e) {
+    renderMypageError(`取得失敗: ${e.message}`);
+  }
+}
+
+async function refreshMypage(rawTag) {
+  const tag = normalizeTag(rawTag);
+  if (!tag) return;
+  const refreshBtn = document.getElementById("mypage-refresh");
+  refreshBtn.disabled = true;
+  refreshBtn.textContent = "更新中...";
+  try {
+    const url = `${API_HOST}/api/player/${encodeURIComponent(tag)}/refresh`;
+    const res = await fetch(url, { method: "POST" });
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(body.detail || `HTTP ${res.status}`);
+    }
+    // 更新後はGETで再取得
+    await fetchMypage(tag);
+  } catch (e) {
+    renderMypageError(`更新失敗: ${e.message}`);
+    refreshBtn.disabled = false;
+    refreshBtn.textContent = "更新";
+  }
+}
+
+function renderMypageLoading(msg) {
+  document.getElementById("mypage-detail").innerHTML = `
+    <div class="bg-gray-800 p-6 rounded text-center text-gray-400">
+      ${escapeHtml(msg)}
+    </div>`;
+  document.getElementById("mypage-refresh").classList.add("hidden");
+}
+
+function renderMypageError(msg) {
+  document.getElementById("mypage-detail").innerHTML = `
+    <div class="bg-red-900/30 border border-red-700 p-4 rounded text-red-200">
+      ${escapeHtml(msg)}
+    </div>`;
+}
+
+function renderMypage() {
+  if (!MYPAGE_DATA) return;
+  const el = document.getElementById("mypage-detail");
+  const d = MYPAGE_DATA;
+  const stats = d.stats || {};
+  const summary = stats.summary || {};
+  const profile = d.profile || {};
+  const brawlerJp = buildBrawlerJpMap();
+  const brawlerImg = buildBrawlerImgMap();
+  const mapJp = buildMapJpMap();
+
+  const total = summary.total || 0;
+  const top2 = summary.top2 || 0;
+  const rank1 = summary.rank1 || 0;
+  const top2Rate = total ? (top2 / total * 100) : 0;
+  const rank1Rate = total ? (rank1 / total * 100) : 0;
+  const avgRank = summary.avg_rank || 0;
+
+  // 期間
+  let period = "—";
+  if (summary.first_battle && summary.last_battle) {
+    const f = new Date(summary.first_battle.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2}).*/, "$1-$2-$3T$4:$5:$6Z"));
+    const l = new Date(summary.last_battle.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2}).*/, "$1-$2-$3T$4:$5:$6Z"));
+    const days = Math.max(1, Math.round((l - f) / 86400000));
+    period = `${f.toLocaleDateString("ja-JP")} 〜 ${l.toLocaleDateString("ja-JP")} (${days}日間)`;
+  }
+
+  // 全体メタ参照: ブロウラー名 → 全マップ平均勝率 (DB.brawlers の集計から)
+  const globalBrawlerStats = {};
+  if (DB && DB.brawlers) {
+    for (const b of DB.brawlers) {
+      let wPick = 0, wWin = 0;
+      for (const m of [...(b.best_maps || []), ...(b.worst_maps || [])]) {
+        wPick += m.picks || 0;
+        wWin += (m.win_rate || 0) * (m.picks || 0);
+      }
+      globalBrawlerStats[b.name] = {
+        win_rate: wPick > 0 ? wWin / wPick : null,
+        total_picks: b.total_picks || 0,
+      };
+    }
+  }
+
+  // クールダウンUI
+  document.getElementById("mypage-refresh").classList.remove("hidden");
+  startCooldownTimer(d.cooldown_seconds || 0);
+
+  el.innerHTML = `
+    ${renderMypageHeader(d, profile, period)}
+    ${total === 0 ? renderEmptyState() : `
+      ${renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank)}
+      ${renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total)}
+      ${renderMypageMaps(stats.maps || [], mapJp)}
+      ${renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats)}
+    `}
+    <div class="text-xs text-gray-500 mt-4 text-center">
+      ウォッチリスト ${d.watchlist_count}/${d.watchlist_max} ・
+      ${d.last_fetched_at ? `最終取得: ${new Date(d.last_fetched_at * 1000).toLocaleString("ja-JP")}` : "未取得"}
+    </div>`;
+}
+
+function renderMypageHeader(d, profile, period) {
+  const regAt = profile.registered_at
+    ? new Date(profile.registered_at * 1000).toLocaleDateString("ja-JP")
+    : "—";
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        <h2 class="text-xl font-bold">${escapeHtml(profile.name || d.tag)}</h2>
+        <span class="text-sm text-gray-400 font-mono">${escapeHtml(d.tag)}</span>
+        ${profile.trophies ? `<span class="text-sm text-yellow-400">🏆 ${profile.trophies.toLocaleString()}</span>` : ""}
+      </div>
+      <div class="text-xs text-gray-500 mt-1">
+        登録: ${regAt} ・ 集計期間: ${period}
+      </div>
+    </div>`;
+}
+
+function renderEmptyState() {
+  return `
+    <div class="bg-yellow-900/30 border border-yellow-700 p-4 rounded text-yellow-200">
+      まだトリオサバイバルの試合データがありません。<br>
+      <span class="text-sm text-yellow-300">プレイ後、30分ごとに自動取得されます。「更新」ボタンで即時取得もできます。</span>
+    </div>`;
+}
+
+function renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank) {
+  return `
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="bg-gray-800 p-3 rounded text-center">
+        <div class="text-2xl font-bold">${total.toLocaleString()}</div>
+        <div class="text-xs text-gray-400">総試合数</div>
+      </div>
+      <div class="bg-gray-800 p-3 rounded text-center">
+        <div class="text-2xl font-bold text-green-400">${rank1Rate.toFixed(1)}%</div>
+        <div class="text-xs text-gray-400">1位率 (${rank1})</div>
+      </div>
+      <div class="bg-gray-800 p-3 rounded text-center">
+        <div class="text-2xl font-bold text-blue-400">${top2Rate.toFixed(1)}%</div>
+        <div class="text-xs text-gray-400">TOP2率 (${top2})</div>
+      </div>
+      <div class="bg-gray-800 p-3 rounded text-center">
+        <div class="text-2xl font-bold">${avgRank.toFixed(2)}</div>
+        <div class="text-xs text-gray-400">平均順位</div>
+      </div>
+    </div>`;
+}
+
+function renderMypageBrawlers(brawlers, brawlerJp, brawlerImg, globalStats, totalPicks) {
+  if (brawlers.length === 0) return "";
+  const rows = brawlers.map(b => {
+    const myWr = b.picks ? (b.top2 / b.picks) : 0;
+    const gs = globalStats[b.brawler];
+    let diffHtml = '<span class="text-gray-500">—</span>';
+    if (gs && gs.win_rate != null) {
+      const diff = (myWr - gs.win_rate) * 100;
+      const color = diff > 5 ? "text-green-400" : diff < -5 ? "text-red-400" : "text-gray-300";
+      const sign = diff >= 0 ? "+" : "";
+      diffHtml = `<span class="${color} font-mono">${sign}${diff.toFixed(1)}pt</span>`;
+    }
+    const pickRate = totalPicks ? (b.picks / totalPicks * 100) : 0;
+    return `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
+      <td class="py-2 px-2">
+        <div class="flex items-center">
+          ${brawlerImg[b.brawler] ? `<img src="${brawlerImg[b.brawler]}" class="w-7 h-7 mr-2 rounded">` : ""}
+          <span>${escapeHtml(brawlerJp[b.brawler] || b.brawler)}</span>
+        </div>
+      </td>
+      <td class="py-2 px-2 text-right font-mono">${b.picks}</td>
+      <td class="py-2 px-2 text-right font-mono text-gray-400 text-xs hidden sm:table-cell">${pickRate.toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono text-green-300">${(b.rank1 / b.picks * 100).toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono text-blue-300">${(b.top2 / b.picks * 100).toFixed(1)}%</td>
+      <td class="py-2 px-2 text-right font-mono">${b.avg_rank.toFixed(2)}</td>
+      <td class="py-2 px-2 text-right hidden md:table-cell">${diffHtml}</td>
+    </tr>`;
+  }).join("");
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">ブロウラー別 (試合数順)</h3>
+      <div class="overflow-x-auto -mx-2">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+            <th class="pb-2 px-2">ブロウラー</th>
+            <th class="pb-2 px-2 text-right">picks</th>
+            <th class="pb-2 px-2 text-right hidden sm:table-cell">pick率</th>
+            <th class="pb-2 px-2 text-right">1位率</th>
+            <th class="pb-2 px-2 text-right">TOP2率</th>
+            <th class="pb-2 px-2 text-right">平均順位</th>
+            <th class="pb-2 px-2 text-right hidden md:table-cell">vs全体WR</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      </div>
+    </div>`;
+}
+
+function renderMypageMaps(maps, mapJp) {
+  if (maps.length === 0) return "";
+  // ベスト3 / ワースト3 を抽出 (最低3戦以上で)
+  const eligible = maps.filter(m => m.picks >= 3);
+  const sorted = [...eligible].sort((a, b) => (b.top2 / b.picks) - (a.top2 / a.picks));
+  const best = sorted.slice(0, 3);
+  const worst = sorted.slice(-3).reverse();
+
+  const renderRow = m => {
+    const wr = (m.top2 / m.picks * 100);
+    return `<div class="flex justify-between p-2 hover:bg-gray-700/50 rounded">
+      <span class="truncate">${escapeHtml(mapJp[m.map] || m.map)}</span>
+      <span class="text-sm font-mono whitespace-nowrap ml-2">${wr.toFixed(1)}% <span class="text-gray-500 text-xs">(${m.picks}戦)</span></span>
+    </div>`;
+  };
+
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">マップ別 TOP2率</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="text-green-400 font-bold text-sm mb-1">強いマップ TOP3</h4>
+          ${best.length ? best.map(renderRow).join("") : '<div class="text-gray-500 text-sm p-2">サンプル不足 (3戦以上必要)</div>'}
+        </div>
+        <div>
+          <h4 class="text-red-400 font-bold text-sm mb-1">苦手なマップ TOP3</h4>
+          ${worst.length ? worst.map(renderRow).join("") : '<div class="text-gray-500 text-sm p-2">サンプル不足</div>'}
+        </div>
+      </div>
+      ${maps.length > 6 ? `
+        <details class="mt-4">
+          <summary class="cursor-pointer text-xs text-gray-400 hover:text-gray-200">全マップ ${maps.length}件を表示</summary>
+          <div class="mt-2 space-y-1">${maps.map(renderRow).join("")}</div>
+        </details>` : ""}
+    </div>`;
+}
+
+function renderMypageRecommendations(myBrawlers, brawlerJp, brawlerImg, globalStats) {
+  if (!DB || !DB.maps) return "";
+  // 自分が使った全ブロウラー
+  const usedSet = new Set(myBrawlers.map(b => b.brawler));
+  // 全体メタで強いブロウラー (S+ / S) で、自分が一度も使ってないもの
+  const sTierUnused = [];
+  for (const m of DB.maps) {
+    if (!m.in_pool || !m.tier_list) continue;
+    for (const t of m.tier_list) {
+      if (t.tier === "S+" || t.tier === "S") {
+        if (!usedSet.has(t.brawler)) sTierUnused.push({
+          brawler: t.brawler,
+          map: m.name,
+          map_jp: m.name_jp,
+          tier: t.tier,
+          win_rate: t.win_rate || 0,
+        });
+      }
+    }
+  }
+  // ブロウラー単位で集約 (出現回数=どれだけ広く強いか)
+  const agg = {};
+  for (const x of sTierUnused) {
+    if (!agg[x.brawler]) agg[x.brawler] = { count: 0, maps: [] };
+    agg[x.brawler].count++;
+    agg[x.brawler].maps.push({ map: x.map_jp || x.map, tier: x.tier, wr: x.win_rate });
+  }
+  const recos = Object.entries(agg)
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 10);
+
+  if (recos.length === 0) return "";
+
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">レコメンド: 未使用の強キャラ</h3>
+      <div class="text-xs text-gray-400 mb-2">あなたが一度も使っていない、現プールマップでS/S+ティアのブロウラー</div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+        ${recos.map(([name, info]) => `
+          <div class="bg-gray-700/40 p-2 rounded text-center">
+            ${brawlerImg[name] ? `<img src="${brawlerImg[name]}" class="w-12 h-12 mx-auto rounded">` : ""}
+            <div class="text-sm font-semibold mt-1 truncate">${escapeHtml(brawlerJp[name] || name)}</div>
+            <div class="text-xs text-gray-400">${info.count}マップで強い</div>
+          </div>
+        `).join("")}
+      </div>
+    </div>`;
+}
+
+function startCooldownTimer(initial) {
+  if (MYPAGE_COOLDOWN_TIMER) {
+    clearInterval(MYPAGE_COOLDOWN_TIMER);
+    MYPAGE_COOLDOWN_TIMER = null;
+  }
+  const btn = document.getElementById("mypage-refresh");
+  let remaining = initial;
+  const update = () => {
+    if (remaining <= 0) {
+      btn.disabled = false;
+      btn.textContent = "更新";
+      btn.classList.remove("opacity-50", "cursor-not-allowed");
+      if (MYPAGE_COOLDOWN_TIMER) {
+        clearInterval(MYPAGE_COOLDOWN_TIMER);
+        MYPAGE_COOLDOWN_TIMER = null;
+      }
+      return;
+    }
+    const m = Math.floor(remaining / 60);
+    const s = remaining % 60;
+    btn.disabled = true;
+    btn.classList.add("opacity-50", "cursor-not-allowed");
+    btn.textContent = `${m}:${String(s).padStart(2, "0")}後`;
+    remaining--;
+  };
+  update();
+  if (initial > 0) {
+    MYPAGE_COOLDOWN_TIMER = setInterval(update, 1000);
+  }
+}
+
+setupMypage();
 
 load();

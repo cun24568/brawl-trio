@@ -21,6 +21,13 @@ data/trio_meta.csv
 data/discovered_tags.json
 data/qualifying_tags.json
 data/official_brawlers.json
+data/users.db
+data/users.db-wal
+data/users.db-shm
+
+# API venv (VPS only)
+api/venv/
+api/__pycache__/
 
 # バイナリ
 cloudflared.exe

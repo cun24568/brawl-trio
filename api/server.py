@@ -1,0 +1,155 @@
+"""FastAPI サーバ: ユーザータグ単位のトリオサバイバル戦績API。
+
+エンドポイント:
+  GET  /api/player/{tag}        集計結果を返す (キャッシュ済データ)
+  POST /api/player/{tag}/refresh 強制更新 (30分クールダウン)
+  GET  /api/watchlist           現在のウォッチリスト一覧 (デバッグ/管理)
+  GET  /api/health              ヘルスチェック
+"""
+import sys
+import time
+from pathlib import Path
+from urllib.error import HTTPError
+
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
+
+# ローカルimport
+sys.path.insert(0, str(Path(__file__).parent))
+import brawl_api  # noqa: E402
+import db  # noqa: E402
+
+ALLOWED_ORIGINS = [
+    "https://brawl-trio.vercel.app",
+    "http://localhost:8000",
+    "http://localhost:5173",
+    "http://127.0.0.1:8000",
+]
+
+limiter = Limiter(key_func=get_remote_address, default_limits=["30/minute"])
+app = FastAPI(title="brawl-trio user API", version="1.0")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+    allow_credentials=False,
+)
+
+
+@app.on_event("startup")
+def _startup():
+    db.init_db()
+
+
+@app.get("/api/health")
+def health():
+    return {"ok": True, "ts": int(time.time())}
+
+
+@app.get("/api/watchlist")
+@limiter.limit("10/minute")
+def watchlist(request: Request):
+    return {"watchlist": db.get_watchlist(), "max": db.MAX_WATCHLIST}
+
+
+def _normalize_or_400(tag: str) -> str:
+    tag = db.normalize_tag(tag)
+    # ブロウラータグは英数字のみ、長さ ~3-15
+    body = tag[1:] if tag.startswith("#") else tag
+    if not body or not body.isalnum() or len(body) > 15:
+        raise HTTPException(status_code=400, detail="invalid tag format")
+    return tag
+
+
+def _fetch_and_save(tag: str) -> tuple[int, int]:
+    """battlelog 取得 → トリオ抽出 → SQLite保存。
+    返値: (新規保存数, 取得した総battle数)
+    """
+    try:
+        battles = brawl_api.get_battlelog(tag)
+    except HTTPError as e:
+        db.log_fetch(tag, 0, error=f"HTTP {e.code}")
+        if e.code == 404:
+            raise HTTPException(status_code=404, detail="player tag not found")
+        if e.code == 429:
+            raise HTTPException(status_code=503, detail="upstream rate limited, retry later")
+        raise HTTPException(status_code=502, detail=f"upstream error HTTP {e.code}")
+    except Exception as e:
+        db.log_fetch(tag, 0, error=str(e))
+        raise HTTPException(status_code=502, detail=f"upstream error: {type(e).__name__}")
+
+    trio = [b for b in battles if brawl_api.is_trio_battle(b)]
+    inserted = db.upsert_battles(tag, trio) if trio else 0
+    db.log_fetch(tag, inserted)
+    return inserted, len(battles)
+
+
+@app.get("/api/player/{tag}")
+@limiter.limit("20/minute")
+def get_player(tag: str, request: Request):
+    tag = _normalize_or_400(tag)
+    # 初回(未登録 または 試合データなし) → 自動で取得+登録
+    wl = db.get_watchlist()
+    is_registered = any(w["tag"] == tag for w in wl)
+    if not is_registered:
+        # プロフィールも取得して登録
+        try:
+            player = brawl_api.get_player(tag)
+            db.add_to_watchlist(tag, name=player.get("name"), trophies=player.get("trophies"))
+        except HTTPError as e:
+            if e.code == 404:
+                raise HTTPException(status_code=404, detail="player tag not found")
+            raise HTTPException(status_code=502, detail=f"upstream error HTTP {e.code}")
+        # 初回フェッチ
+        _fetch_and_save(tag)
+
+    stats = db.get_player_stats(tag)
+    cooldown = db.cooldown_remaining(tag)
+    last_fetched = db.last_fetch_time(tag)
+
+    # プロフィール情報
+    with db.conn() as c:
+        prof = c.execute(
+            "SELECT name, trophies, registered_at FROM watchlist WHERE tag=?", (tag,)
+        ).fetchone()
+
+    return {
+        "tag": tag,
+        "profile": dict(prof) if prof else {},
+        "stats": stats,
+        "cooldown_seconds": cooldown,
+        "last_fetched_at": last_fetched,
+        "watchlist_count": len(db.get_watchlist()),
+        "watchlist_max": db.MAX_WATCHLIST,
+    }
+
+
+@app.post("/api/player/{tag}/refresh")
+@limiter.limit("10/minute")
+def refresh_player(tag: str, request: Request):
+    tag = _normalize_or_400(tag)
+    cooldown = db.cooldown_remaining(tag)
+    if cooldown > 0:
+        raise HTTPException(
+            status_code=429,
+            detail=f"cooldown active, retry in {cooldown}s",
+            headers={"Retry-After": str(cooldown)},
+        )
+    inserted, total = _fetch_and_save(tag)
+    return {
+        "tag": tag,
+        "fetched_battles": total,
+        "new_trio_battles": inserted,
+        "next_cooldown_seconds": db.COOLDOWN_SECONDS,
+    }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("server:app", host="0.0.0.0", port=8001, reload=False)
