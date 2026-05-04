@@ -244,6 +244,58 @@ def get_player_stats(tag: str) -> dict:
     }
 
 
+def get_player_battles(tag: str, limit: int = 60, offset: int = 0) -> list[dict]:
+    """そのタグの試合履歴を新しい順に返す。raw_jsonをparseして表示用に整形。"""
+    tag = normalize_tag(tag)
+    with conn() as c:
+        rows = c.execute(
+            """SELECT battle_time, mode, map, brawler, rank, raw_json
+               FROM battles WHERE tag=?
+               ORDER BY battle_time DESC LIMIT ? OFFSET ?""",
+            (tag, limit, offset),
+        ).fetchall()
+
+    result = []
+    for r in rows:
+        raw = json.loads(r["raw_json"])
+        battle = raw.get("battle") or {}
+        teams = battle.get("teams") or []
+        # 自分のチーム index を特定
+        my_idx = None
+        for i, team in enumerate(teams):
+            if any(p.get("tag") == tag for p in team):
+                my_idx = i
+                break
+        my_team = []
+        enemy_teams = []
+        for i, team in enumerate(teams):
+            members = [
+                {
+                    "tag": p.get("tag", ""),
+                    "name": p.get("name", ""),
+                    "brawler": (p.get("brawler") or {}).get("name", ""),
+                    "trophies": (p.get("brawler") or {}).get("trophies", 0),
+                }
+                for p in team
+            ]
+            if i == my_idx:
+                my_team = members
+            else:
+                enemy_teams.append(members)
+        result.append({
+            "battle_time": r["battle_time"],
+            "mode": r["mode"],
+            "map": r["map"],
+            "rank": r["rank"],
+            "trophy_change": battle.get("trophyChange", 0),
+            "duration": battle.get("duration", 0),
+            "type": battle.get("type", ""),
+            "my_team": my_team,
+            "enemy_teams": enemy_teams,
+        })
+    return result
+
+
 if __name__ == "__main__":
     init_db()
     print(f"DB initialized at {DB_PATH}")

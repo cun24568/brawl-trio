@@ -130,6 +130,24 @@ def get_player(tag: str, request: Request):
     }
 
 
+@app.get("/api/player/{tag}/battles")
+@limiter.limit("30/minute")
+def get_battles(tag: str, request: Request, limit: int = 60, offset: int = 0):
+    tag = _normalize_or_400(tag)
+    if limit > 200:
+        limit = 200
+    if limit < 1:
+        limit = 1
+    if offset < 0:
+        offset = 0
+    return {
+        "tag": tag,
+        "limit": limit,
+        "offset": offset,
+        "battles": db.get_player_battles(tag, limit=limit, offset=offset),
+    }
+
+
 @app.post("/api/player/{tag}/refresh")
 @limiter.limit("10/minute")
 def refresh_player(tag: str, request: Request):

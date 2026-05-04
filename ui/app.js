@@ -458,14 +458,17 @@ async function fetchMypage(rawTag, options = {}) {
   document.getElementById("mypage-tag").value = tag;
   renderMypageLoading(options.refresh ? "更新中..." : "読込中...");
   try {
-    // タグの # を encode
-    const url = `${API_HOST}/api/player/${encodeURIComponent(tag)}`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      const body = await res.json().catch(() => ({ detail: res.statusText }));
-      throw new Error(body.detail || `HTTP ${res.status}`);
+    const encTag = encodeURIComponent(tag);
+    const [statsRes, battlesRes] = await Promise.all([
+      fetch(`${API_HOST}/api/player/${encTag}`),
+      fetch(`${API_HOST}/api/player/${encTag}/battles?limit=60`),
+    ]);
+    if (!statsRes.ok) {
+      const body = await statsRes.json().catch(() => ({ detail: statsRes.statusText }));
+      throw new Error(body.detail || `HTTP ${statsRes.status}`);
     }
-    MYPAGE_DATA = await res.json();
+    MYPAGE_DATA = await statsRes.json();
+    MYPAGE_DATA.battles = battlesRes.ok ? (await battlesRes.json()).battles : [];
     renderMypage();
   } catch (e) {
     renderMypageError(`取得失敗: ${e.message}`);
@@ -560,6 +563,8 @@ function renderMypage() {
     ${renderMypageHeader(d, profile, period)}
     ${total === 0 ? renderEmptyState() : `
       ${renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank)}
+      ${renderMypageHeatmap(d.battles || [], brawlerImg)}
+      ${renderMypageBattleList(d.battles || [], brawlerImg, brawlerJp, mapJp)}
       ${renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total)}
       ${renderMypageMaps(stats.maps || [], mapJp)}
       ${renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats)}
@@ -614,6 +619,148 @@ function renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank) {
         <div class="text-2xl font-bold">${avgRank.toFixed(2)}</div>
         <div class="text-xs text-gray-400">平均順位</div>
       </div>
+    </div>`;
+}
+
+// ティア帯ごとの色 (Brawl Insights の薄い色帯ほぼ準拠)
+function rankBorderClass(rank) {
+  if (rank === 1) return "ring-2 ring-green-500 bg-green-900/20";
+  if (rank === 2) return "ring-2 ring-blue-400 bg-blue-900/20";
+  if (rank === 3) return "ring-2 ring-gray-500 bg-gray-700/30";
+  return "ring-2 ring-red-500 bg-red-900/20";  // rank 4
+}
+
+function rankLabel(rank) {
+  if (rank === 1) return { text: "1位", color: "text-green-400" };
+  if (rank === 2) return { text: "2位", color: "text-blue-300" };
+  if (rank === 3) return { text: "3位", color: "text-gray-300" };
+  return { text: "4位", color: "text-red-400" };
+}
+
+function formatBattleTime(bt) {
+  // "20260503T154812.000Z" → Date
+  const m = bt.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})/);
+  if (!m) return { abs: bt, rel: "" };
+  const d = new Date(`${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}Z`);
+  const now = Date.now();
+  const diffMin = Math.floor((now - d.getTime()) / 60000);
+  let rel = "";
+  if (diffMin < 1) rel = "たった今";
+  else if (diffMin < 60) rel = `${diffMin}分前`;
+  else if (diffMin < 1440) rel = `${Math.floor(diffMin / 60)}時間前`;
+  else rel = `${Math.floor(diffMin / 1440)}日前`;
+  const today = new Date();
+  const isToday = d.toDateString() === today.toDateString();
+  const yest = new Date(today.getTime() - 86400000);
+  const isYest = d.toDateString() === yest.toDateString();
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  let abs = "";
+  if (isToday) abs = `今日 ${hh}:${mm}`;
+  else if (isYest) abs = `昨日 ${hh}:${mm}`;
+  else abs = `${d.getMonth() + 1}/${d.getDate()} ${hh}:${mm}`;
+  return { abs, rel };
+}
+
+function renderMypageHeatmap(battles, brawlerImg) {
+  if (battles.length === 0) return "";
+  // 勝/分/敗カウント (1-2位=勝、3位=分、4位=敗)
+  let win = 0, draw = 0, lose = 0;
+  for (const b of battles) {
+    if (b.rank <= 2) win++;
+    else if (b.rank === 3) draw++;
+    else lose++;
+  }
+  const winRate = battles.length ? (win / battles.length * 100) : 0;
+
+  const cells = battles.map(b => {
+    const cls = rankBorderClass(b.rank);
+    const img = brawlerImg[b.brawler];
+    return `<div class="aspect-square rounded ${cls} flex items-center justify-center" title="${escapeHtml(b.brawler)} ${b.rank}位 (${b.trophy_change >= 0 ? '+' : ''}${b.trophy_change})">
+      ${img ? `<img src="${img}" class="w-full h-full rounded object-cover" loading="lazy">` : `<span class="text-[10px]">${escapeHtml(b.brawler.slice(0, 3))}</span>`}
+    </div>`;
+  }).join("");
+
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+        <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wide">直近${battles.length}試合</h3>
+        <span class="text-sm">
+          <span class="text-green-400 font-bold">${win}勝</span>
+          <span class="text-gray-400 mx-1">${draw}分</span>
+          <span class="text-red-400 font-bold">${lose}敗</span>
+          <span class="ml-2 font-mono text-yellow-300">勝率 ${winRate.toFixed(1)}%</span>
+        </span>
+      </div>
+      <div class="grid grid-cols-10 sm:grid-cols-12 md:grid-cols-15 lg:grid-cols-20 gap-1">
+        ${cells}
+      </div>
+      <div class="text-xs text-gray-500 mt-2 flex flex-wrap gap-3">
+        <span><span class="inline-block w-3 h-3 rounded ring-2 ring-green-500"></span> 1位</span>
+        <span><span class="inline-block w-3 h-3 rounded ring-2 ring-blue-400"></span> 2位</span>
+        <span><span class="inline-block w-3 h-3 rounded ring-2 ring-gray-500"></span> 3位</span>
+        <span><span class="inline-block w-3 h-3 rounded ring-2 ring-red-500"></span> 4位</span>
+      </div>
+    </div>`;
+}
+
+function renderTeam(members, brawlerImg, brawlerJp, highlightTag) {
+  return `<div class="flex items-center gap-1">
+    ${members.map(m => {
+      const img = brawlerImg[m.brawler];
+      const isMe = m.tag === highlightTag;
+      return `<div class="flex items-center gap-1 px-1 py-0.5 rounded ${isMe ? 'bg-yellow-700/30 ring-1 ring-yellow-500' : 'bg-gray-700/40'}">
+        ${img ? `<img src="${img}" class="w-6 h-6 rounded" loading="lazy">` : ""}
+        <div class="text-xs leading-tight">
+          <div class="truncate max-w-[70px]">${escapeHtml(m.name || m.brawler)}</div>
+          <div class="text-[10px] text-gray-400">🏆${m.trophies}</div>
+        </div>
+      </div>`;
+    }).join("")}
+  </div>`;
+}
+
+function renderMypageBattleList(battles, brawlerImg, brawlerJp, mapJp) {
+  if (battles.length === 0) return "";
+  const myTag = MYPAGE_DATA?.tag || "";
+  const cards = battles.map(b => {
+    const lbl = rankLabel(b.rank);
+    const t = formatBattleTime(b.battle_time);
+    const tc = b.trophy_change;
+    const tcStr = tc > 0 ? `+${tc}` : tc < 0 ? `${tc}` : "±0";
+    const tcColor = tc > 0 ? "text-green-400" : tc < 0 ? "text-red-400" : "text-gray-400";
+    const cardBg = b.rank === 1 ? "bg-green-900/15 border-green-700/50"
+      : b.rank === 2 ? "bg-blue-900/10 border-blue-700/40"
+      : b.rank === 3 ? "bg-gray-700/20 border-gray-600/40"
+      : "bg-red-900/15 border-red-700/50";
+
+    return `<div class="border rounded p-2 ${cardBg}">
+      <div class="flex items-center justify-between mb-2 text-sm">
+        <div class="flex items-center gap-2">
+          <span class="font-bold ${lbl.color}">${lbl.text}</span>
+          <span class="font-mono ${tcColor} text-xs">${tcStr}</span>
+        </div>
+        <div class="text-xs text-gray-400 truncate ml-2">
+          ${escapeHtml(mapJp[b.map] || b.map || b.mode)} · ${t.abs} <span class="text-gray-600">(${t.rel})</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="text-xs text-gray-400 w-10">味方</div>
+        ${renderTeam(b.my_team, brawlerImg, brawlerJp, myTag)}
+      </div>
+      <div class="flex flex-wrap items-start gap-2 mt-1">
+        <div class="text-xs text-gray-400 w-10">vs</div>
+        <div class="flex flex-wrap gap-2">
+          ${b.enemy_teams.map(t => renderTeam(t, brawlerImg, brawlerJp, myTag)).join('<span class="text-gray-600 text-xs self-center">/</span>')}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-3 text-gray-300 uppercase tracking-wide">試合履歴</h3>
+      <div class="space-y-2">${cards}</div>
     </div>`;
 }
 
