@@ -37,34 +37,28 @@ async function load() {
 }
 
 function renderMapList() {
-  const el = document.getElementById("map-list");
-  el.innerHTML = DB.maps.map(m => `
-    <div class="map-item p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded border border-transparent hover:border-blue-500 ${!m.in_pool ? "opacity-60" : ""}" data-hash="${m.hash}">
-      <div class="flex justify-between items-center">
-        <span class="font-semibold">${escapeHtml(m.name_jp || m.name)}</span>
-        <span class="text-xs text-gray-400 ml-2">${m.total_picks}</span>
-      </div>
-      ${m.name_jp ? `<div class="text-xs text-gray-500">${escapeHtml(m.name)}</div>` : ""}
-      ${!m.in_pool ? `<div class="text-xs text-yellow-500 mt-1">プール外</div>` : ""}
-    </div>
-  `).join("");
-  el.querySelectorAll(".map-item").forEach(node => {
-    node.addEventListener("click", () => {
-      const m = DB.maps.find(x => x.hash === node.dataset.hash);
-      selectMap(m);
-      el.querySelectorAll(".map-item").forEach(n => n.classList.remove("border-blue-500"));
-      node.classList.add("border-blue-500");
-    });
+  const sel = document.getElementById("map-select");
+  // プール内 → プール外 の順で並べ、プール内優先
+  const sorted = [...DB.maps].sort((a, b) => {
+    if (a.in_pool !== b.in_pool) return a.in_pool ? -1 : 1;
+    return b.total_picks - a.total_picks;
+  });
+  sel.innerHTML = sorted.map(m => {
+    const label = `${m.name_jp || m.name} (${m.total_picks})${!m.in_pool ? " ★プール外" : ""}`;
+    return `<option value="${escapeHtml(m.hash)}">${escapeHtml(label)}</option>`;
+  }).join("");
+  sel.addEventListener("change", () => {
+    const m = DB.maps.find(x => x.hash === sel.value);
+    if (m) selectMap(m);
   });
 }
 
 function selectMap(m) {
   currentMap = m;
+  // dropdown と同期
+  const sel = document.getElementById("map-select");
+  if (sel && sel.value !== m.hash) sel.value = m.hash;
   renderMapDetail();
-  // モバイル(縦積み): 詳細が画面外なら自動スクロール
-  if (window.innerWidth < 768) {
-    document.getElementById("map-detail").scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 }
 
 function setTierFilter(tier) {

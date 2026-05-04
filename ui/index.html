@@ -49,15 +49,11 @@
 
   <main class="max-w-7xl mx-auto p-4">
     <div id="tab-maps" class="tab-content">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div class="md:col-span-4">
-          <h2 class="text-sm text-gray-400 mb-2 uppercase tracking-wide">マップ一覧</h2>
-          <div id="map-list" class="space-y-1"></div>
-        </div>
-        <div class="md:col-span-8">
-          <div id="map-detail"></div>
-        </div>
+      <div class="mb-4">
+        <label class="text-sm text-gray-400 block mb-1">マップ選択</label>
+        <select id="map-select" class="w-full p-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500 text-base"></select>
       </div>
+      <div id="map-detail"></div>
     </div>
 
     <div id="tab-brawlers" class="tab-content hidden">
