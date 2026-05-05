@@ -1150,6 +1150,7 @@ function renderMypageHeader(d, profile, period) {
         <h2 class="text-xl font-bold">${escapeHtml(profile.name || d.tag)}</h2>
         <span class="text-sm text-gray-400 font-mono">${escapeHtml(d.tag)}</span>
         ${profile.trophies ? `<span class="text-sm text-yellow-400">🏆 ${profile.trophies.toLocaleString()}</span>` : ""}
+        ${profile.highest_trophies ? `<span class="text-sm text-orange-400">最高 ${profile.highest_trophies.toLocaleString()}</span>` : ""}
       </div>
       <div class="text-xs text-gray-500 mt-1">
         登録: ${regAt} ・ データ期間: ${period}

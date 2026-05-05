@@ -47,7 +47,8 @@ def init_db():
                 registered_at INTEGER NOT NULL,
                 last_fetched_at INTEGER,
                 name TEXT,
-                trophies INTEGER
+                trophies INTEGER,
+                highest_trophies INTEGER
             );
             CREATE TABLE IF NOT EXISTS battles (
                 tag TEXT NOT NULL,
@@ -71,36 +72,36 @@ def init_db():
             );
             CREATE INDEX IF NOT EXISTS idx_fetch_log_tag_time ON fetch_log(tag, fetched_at DESC);
         """)
+        # 既存DBへのカラム追加 (一度きり)
+        try:
+            c.execute("ALTER TABLE watchlist ADD COLUMN highest_trophies INTEGER")
+        except sqlite3.OperationalError:
+            pass
 
 
-def add_to_watchlist(tag: str, name: str = None, trophies: int = None) -> tuple[bool, str]:
-    """ウォッチリストに追加。満杯時は最古を退役。
-    返値: (success, message)
-    """
+def add_to_watchlist(tag: str, name: str = None, trophies: int = None, highest_trophies: int = None) -> tuple[bool, str]:
+    """ウォッチリストに追加 / 既登録なら名前・トロフィー更新。"""
     tag = normalize_tag(tag)
     now = int(time.time())
     with conn() as c:
         existing = c.execute("SELECT tag FROM watchlist WHERE tag=?", (tag,)).fetchone()
         if existing:
-            # メタ情報を更新
-            if name or trophies is not None:
+            if name or trophies is not None or highest_trophies is not None:
                 c.execute(
-                    "UPDATE watchlist SET name=COALESCE(?,name), trophies=COALESCE(?,trophies) WHERE tag=?",
-                    (name, trophies, tag),
+                    "UPDATE watchlist SET name=COALESCE(?,name), trophies=COALESCE(?,trophies), highest_trophies=COALESCE(?,highest_trophies) WHERE tag=?",
+                    (name, trophies, highest_trophies, tag),
                 )
             return True, "既に登録済み"
         count = c.execute("SELECT COUNT(*) FROM watchlist").fetchone()[0]
         if count >= MAX_WATCHLIST:
-            # 最古(last_fetched_at が古い、なければ registered_at が古い)を退役
             victim = c.execute(
                 "SELECT tag FROM watchlist ORDER BY COALESCE(last_fetched_at, registered_at) ASC LIMIT 1"
             ).fetchone()
             if victim:
                 c.execute("DELETE FROM watchlist WHERE tag=?", (victim["tag"],))
-                # battles はあえて消さない (容量に余裕あるので、再登録した時に過去データ使える)
         c.execute(
-            "INSERT INTO watchlist (tag, registered_at, name, trophies) VALUES (?, ?, ?, ?)",
-            (tag, now, name, trophies),
+            "INSERT INTO watchlist (tag, registered_at, name, trophies, highest_trophies) VALUES (?, ?, ?, ?, ?)",
+            (tag, now, name, trophies, highest_trophies),
         )
         return True, "登録完了"
 

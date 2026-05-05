@@ -296,15 +296,23 @@ def get_player(tag: str, request: Request, period: str = "all"):
     # 初回(未登録 または 試合データなし) → 自動で取得+登録
     wl = db.get_watchlist()
     is_registered = any(w["tag"] == tag for w in wl)
-    if not is_registered:
-        try:
-            player = brawl_api.get_player(tag)
-            db.add_to_watchlist(tag, name=player.get("name"), trophies=player.get("trophies"))
-        except HTTPError as e:
+    # 公式 player profile を毎回取得して watchlist 更新 (現在トロ・最高トロ追従)
+    try:
+        player = brawl_api.get_player(tag)
+        db.add_to_watchlist(
+            tag,
+            name=player.get("name"),
+            trophies=player.get("trophies"),
+            highest_trophies=player.get("highestTrophies"),
+        )
+    except HTTPError as e:
+        if not is_registered:
             if e.code == 404:
                 raise HTTPException(status_code=404, detail="player tag not found")
             raise HTTPException(status_code=502, detail=f"upstream error HTTP {e.code}")
-        # 初回フェッチ (公式API)
+        # 既登録なら profile 取得失敗は無視して続行 (battlelog や DB 集計は使える)
+    if not is_registered:
+        # 初回フェッチ (公式API battlelog)
         _fetch_and_save(tag)
 
     # historical import は非同期実行 (jsonl 745MB+ で 5-10秒かかるため UI ブロックしない)
@@ -320,7 +328,7 @@ def get_player(tag: str, request: Request, period: str = "all"):
     # プロフィール情報
     with db.conn() as c:
         prof = c.execute(
-            "SELECT name, trophies, registered_at FROM watchlist WHERE tag=?", (tag,)
+            "SELECT name, trophies, highest_trophies, registered_at FROM watchlist WHERE tag=?", (tag,)
         ).fetchone()
 
     return {
