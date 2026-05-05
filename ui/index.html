@@ -47,6 +47,7 @@
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="brawlers">ブロウラー別</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="mypage">マイページ</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="club">クラブ</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="roulette">ルーレット</button>
     </div>
   </nav>
 
@@ -123,6 +124,31 @@
         </div>
       </div>
       <div id="club-detail"></div>
+    </div>
+
+    <div id="tab-roulette" class="tab-content hidden">
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <div class="flex flex-wrap gap-2 mb-3">
+          <div class="flex-1 min-w-[180px]">
+            <label class="text-xs text-gray-400 block mb-1">マップ</label>
+            <select id="roulette-map" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-base"></select>
+          </div>
+          <div class="flex-1 min-w-[140px]">
+            <label class="text-xs text-gray-400 block mb-1">対象</label>
+            <select id="roulette-tier" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-base">
+              <option value="all">全ブロウラー</option>
+              <option value="pool" selected>現プール掲載</option>
+              <option value="A+">A以上</option>
+              <option value="S+S">S/S+のみ</option>
+              <option value="Sp">S+のみ</option>
+            </select>
+          </div>
+        </div>
+        <button id="roulette-spin" class="w-full py-3 bg-yellow-600 hover:bg-yellow-500 rounded font-bold text-lg">
+          🎰 ルーレット回す
+        </button>
+      </div>
+      <div id="roulette-result"></div>
     </div>
 
   </main>

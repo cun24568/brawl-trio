@@ -1500,6 +1500,165 @@ function startCooldownTimer(initial) {
 
 setupMypage();
 setupClub();
+setupRoulette();
+
+// ============================================================
+// ルーレット (ランダム編成)
+// ============================================================
+
+function setupRoulette() {
+  const mapSel = document.getElementById("roulette-map");
+  const tierSel = document.getElementById("roulette-tier");
+  const spinBtn = document.getElementById("roulette-spin");
+  if (!mapSel || !spinBtn) return;
+  // タブ切替時にマップを最新化
+  const tabBtn = document.querySelector('.tab-btn[data-tab="roulette"]');
+  if (tabBtn) tabBtn.addEventListener("click", () => setTimeout(populateRouletteMaps, 50));
+  spinBtn.addEventListener("click", () => spinRoulette());
+}
+
+function populateRouletteMaps() {
+  const sel = document.getElementById("roulette-map");
+  if (!sel || !DB) return;
+  if (sel.options.length > 0) return;  // 既に投入済
+  const opts = ['<option value="">マップ指定なし</option>'];
+  if (ROTATION) {
+    const todayJp = rotationMapForDate(new Date());
+    const dbByJp = new Map();
+    for (const m of DB.maps) dbByJp.set(m.name_jp || m.name, m);
+    for (const jp of ROTATION.rotation) {
+      const m = dbByJp.get(jp);
+      if (!m) continue;
+      const isToday = jp === todayJp;
+      opts.push(`<option value="${escapeHtml(m.hash)}" ${isToday ? "selected" : ""}>${escapeHtml(jp)}${isToday ? " 【今日】" : ""}</option>`);
+    }
+  }
+  sel.innerHTML = opts.join("");
+}
+
+function _rouletteCandidates() {
+  // 対象ブロウラーリストを返す: [{name, name_jp, image_url, tier?, win_rate?}]
+  if (!DB || !DB.brawlers) return [];
+  const tierFilter = document.getElementById("roulette-tier")?.value || "all";
+  const mapHash = document.getElementById("roulette-map")?.value || "";
+  const mapObj = mapHash ? DB.maps.find(m => m.hash === mapHash) : null;
+
+  const TIER_RANK = { "S+": 5, "S": 4, "A": 3, "B": 2, "C": 1, "?": 0 };
+  let pool = DB.brawlers.map(b => ({
+    name: b.name,
+    name_jp: b.name_jp,
+    image_url: b.image_url,
+  }));
+  // tier_list (マップ指定があればそのマップで、 なければプール全体平均で _avgTier 使用)
+  if (mapObj && mapObj.tier_list) {
+    const tierByName = {};
+    for (const t of mapObj.tier_list) tierByName[t.brawler] = t;
+    pool = pool.map(b => ({
+      ...b,
+      tier: tierByName[b.name]?.tier || null,
+      win_rate: tierByName[b.name]?.win_rate || null,
+      picks: tierByName[b.name]?.picks || 0,
+    }));
+  } else {
+    // 全マップ加重平均から _avgTier を取り出し
+    computeBrawlerExtras();
+    pool = pool.map(b => {
+      const src = DB.brawlers.find(x => x.name === b.name);
+      return { ...b, tier: src?._avgTier || null, win_rate: src?._weightedWr || null };
+    });
+  }
+  // フィルタ
+  if (tierFilter === "pool") pool = pool.filter(b => b.tier);
+  else if (tierFilter === "A+") pool = pool.filter(b => b.tier && TIER_RANK[b.tier] >= 3);
+  else if (tierFilter === "S+S") pool = pool.filter(b => b.tier === "S+" || b.tier === "S");
+  else if (tierFilter === "Sp") pool = pool.filter(b => b.tier === "S+");
+  return pool;
+}
+
+function spinRoulette() {
+  const pool = _rouletteCandidates();
+  const result = document.getElementById("roulette-result");
+  if (!result) return;
+  if (pool.length < 3) {
+    result.innerHTML = `<div class="bg-yellow-900/30 border border-yellow-700 p-4 rounded text-yellow-200">候補が3人未満です。 対象を緩めてください (現在 ${pool.length}人)</div>`;
+    return;
+  }
+  // 確定する3人を先に決定 (重複なし)
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  const finals = shuffled.slice(0, 3);
+
+  // アニメーション: 3スロットを 50ms ごとにランダム表示、 順番に止める
+  const totalDuration = 1800;  // ms
+  const stopAt = [800, 1200, 1800];
+  const intervals = [];
+
+  function makeSlot(i, b) {
+    return `<div data-slot="${i}" class="bg-gray-700 rounded p-3 text-center">
+      ${b.image_url ? `<img src="${b.image_url}" class="w-full max-w-[120px] mx-auto rounded mb-2">` : '<div class="w-full aspect-square max-w-[120px] mx-auto bg-gray-600 rounded mb-2"></div>'}
+      <div class="font-bold truncate" data-name>${escapeHtml(b.name_jp || b.name)}</div>
+      ${b.tier ? `<div class="mt-1"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[b.tier] || ''}">${b.tier}</span> ${b.win_rate != null ? `<span class="text-xs text-gray-400 ml-1">${(b.win_rate*100).toFixed(0)}%</span>` : ""}</div>` : ""}
+    </div>`;
+  }
+
+  // 初期描画 (ランダム)
+  const init = [
+    pool[Math.floor(Math.random() * pool.length)],
+    pool[Math.floor(Math.random() * pool.length)],
+    pool[Math.floor(Math.random() * pool.length)],
+  ];
+  result.innerHTML = `
+    <div class="bg-gray-800 p-4 rounded">
+      <div class="grid grid-cols-3 gap-2" id="roulette-slots">
+        ${init.map((b, i) => makeSlot(i, b)).join("")}
+      </div>
+    </div>`;
+
+  const t0 = Date.now();
+  for (let i = 0; i < 3; i++) {
+    intervals[i] = setInterval(() => {
+      const elapsed = Date.now() - t0;
+      const slotEl = result.querySelector(`[data-slot="${i}"]`);
+      if (!slotEl) return;
+      if (elapsed >= stopAt[i]) {
+        clearInterval(intervals[i]);
+        slotEl.outerHTML = makeSlot(i, finals[i]);
+        if (i === 2) onRouletteFinish(finals);
+        return;
+      }
+      const random = pool[Math.floor(Math.random() * pool.length)];
+      slotEl.outerHTML = makeSlot(i, random);
+    }, 60);
+  }
+}
+
+function onRouletteFinish(finals) {
+  // 最終確定の演出 + 補足情報 (もし マップ指定あれば トリオ全体勝率を表示)
+  const mapHash = document.getElementById("roulette-map")?.value || "";
+  const mapObj = mapHash ? DB.maps.find(m => m.hash === mapHash) : null;
+  let trioInfo = "";
+  if (mapObj && mapObj.all_trios) {
+    const targetSet = new Set(finals.map(b => b.name));
+    const match = mapObj.all_trios.find(t => {
+      if (t.members.length !== 3) return false;
+      const ts = new Set(t.members.map(m => m.brawler));
+      if (ts.size !== 3) return false;
+      for (const x of targetSet) if (!ts.has(x)) return false;
+      return true;
+    });
+    if (match) {
+      trioInfo = `<div class="mt-3 p-3 bg-green-900/30 border border-green-700 rounded text-sm">
+        🎯 この3人組のデータあり: <span class="font-bold text-green-300">${(match.win_rate * 100).toFixed(0)}%</span> TOP2 (${match.picks}戦, 1位${match.rank1_count || 0} / 2位${match.rank2_count || 0})
+      </div>`;
+    } else {
+      trioInfo = `<div class="mt-3 p-3 bg-gray-700/30 rounded text-xs text-gray-400">この3人組の過去データなし (5戦未満 or 未試行)</div>`;
+    }
+  }
+  const result = document.getElementById("roulette-result");
+  if (result && trioInfo) {
+    result.querySelector(".bg-gray-800")?.insertAdjacentHTML("beforeend", trioInfo);
+  }
+}
+
 
 // ============================================================
 // クラブ集計
