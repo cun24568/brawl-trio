@@ -567,10 +567,8 @@ function renderBrawlerGrid(filter = "") {
 function selectBrawler(b) {
   const el = document.getElementById("brawler-detail");
   const dispName = b.name_jp || b.name;
-  // モバイル: 詳細にスクロール
-  if (window.innerWidth < 768) {
-    setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
-  }
+  // PC・モバイルとも詳細にスクロール
+  setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
   el.innerHTML = `
     <div class="bg-gray-800 p-6 rounded">
       <div class="flex items-center mb-6">
@@ -1247,5 +1245,22 @@ function startCooldownTimer(initial) {
 }
 
 setupMypage();
+
+// 上に戻るボタン
+const scrollTopBtn = document.getElementById("scroll-top-btn");
+if (scrollTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.remove("opacity-0", "pointer-events-none");
+      scrollTopBtn.classList.add("opacity-100");
+    } else {
+      scrollTopBtn.classList.add("opacity-0", "pointer-events-none");
+      scrollTopBtn.classList.remove("opacity-100");
+    }
+  }, { passive: true });
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 load();
