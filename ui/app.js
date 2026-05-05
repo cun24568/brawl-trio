@@ -342,13 +342,12 @@ function setMapSection(s) {
   renderMapDetail();
 }
 
-// シナジー検索の名前検索 (ひらがな対応)
+// シナジー検索の名前検索 (ひらがな対応)。 入力中は setSynergyPick を呼ばない (再描画で入力が消えるため)
 function onSynergySearchInput(slot, val) {
   const sug = document.getElementById(`synergy-suggest-${slot}`);
   if (!sug) return;
   if (!val) {
     sug.classList.add("hidden");
-    setSynergyPick(slot, "");
     return;
   }
   const m = currentMap;
