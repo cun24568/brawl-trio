@@ -15,6 +15,7 @@ let MYPAGE_COOLDOWN_TIMER = null;
 let MYPAGE_BATTLES_PAGE = 1;
 let MYPAGE_BATTLES_TOTAL = 0;
 let MYPAGE_PERIOD = localStorage.getItem("mypage_period") || "all";  // "all" | "30d" | "7d" | "1d"
+let MYPAGE_SECTION = localStorage.getItem("mypage_section") || "history";  // history | brawlers | maps | recommend
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -1027,11 +1028,14 @@ function renderMypage() {
     ${renderMypageHeader(d, profile, period)}
     ${total === 0 ? renderEmptyState() : `
       ${renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank)}
-      ${renderMypageHeatmap(d.battles || [], brawlerImg)}
-      ${renderMypageBattleList(d.battles || [], brawlerImg, brawlerJp, mapJp)}
-      ${renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total)}
-      ${renderMypageMaps(stats.maps || [], mapJp)}
-      ${renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats)}
+      ${renderMypageSectionSelector()}
+      ${MYPAGE_SECTION === "history" ? `
+        ${renderMypageHeatmap(d.battles || [], brawlerImg)}
+        ${renderMypageBattleList(d.battles || [], brawlerImg, brawlerJp, mapJp)}
+      ` : ""}
+      ${MYPAGE_SECTION === "brawlers" ? renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total) : ""}
+      ${MYPAGE_SECTION === "maps" ? renderMypageMaps(stats.maps || [], mapJp) : ""}
+      ${MYPAGE_SECTION === "recommend" ? renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats) : ""}
     `}
     <div class="text-xs text-gray-500 mt-4 text-center">
       ウォッチリスト ${d.watchlist_count}/${d.watchlist_max} ・
@@ -1077,6 +1081,27 @@ function changeMypagePeriod(p) {
   if (MYPAGE_DATA && MYPAGE_DATA.tag) {
     fetchMypage(MYPAGE_DATA.tag);
   }
+}
+
+function renderMypageSectionSelector() {
+  const sections = [
+    { val: "history", label: "試合履歴" },
+    { val: "brawlers", label: "ブロウラー別" },
+    { val: "maps", label: "マップ別" },
+    { val: "recommend", label: "レコメンド" },
+  ];
+  return `
+    <div class="mb-3">
+      <select onchange="setMypageSection(this.value)" class="w-full sm:w-auto p-2 bg-gray-900 border border-gray-700 rounded text-base">
+        ${sections.map(s => `<option value="${s.val}" ${MYPAGE_SECTION === s.val ? "selected" : ""}>${s.label}</option>`).join("")}
+      </select>
+    </div>`;
+}
+
+function setMypageSection(s) {
+  MYPAGE_SECTION = s;
+  localStorage.setItem("mypage_section", s);
+  renderMypage();
 }
 
 function renderEmptyState() {
