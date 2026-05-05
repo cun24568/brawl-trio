@@ -65,10 +65,15 @@ async function load() {
 }
 
 // ローテーション計算: 指定日付 (Date) のマップ名(JP)を返す
+// マップ切替は毎日 JST 5:00 のため、 5時前は前日扱い
 function rotationMapForDate(date) {
   if (!ROTATION) return null;
+  const d = new Date(date);
+  if (d.getHours() < 5) {
+    d.setDate(d.getDate() - 1);
+  }
+  const target = new Date(d.getFullYear(), d.getMonth(), d.getDate());
   const anchor = new Date(ROTATION.anchor_date + "T00:00:00");
-  const target = new Date(date.getFullYear(), date.getMonth(), date.getDate());
   const diffDays = Math.floor((target - anchor) / 86400000);
   const idx = ((diffDays % ROTATION.cycle_days) + ROTATION.cycle_days) % ROTATION.cycle_days;
   return ROTATION.rotation[idx];
@@ -88,10 +93,15 @@ function nextAppearance(mapJp) {
 function renderRotationBanner() {
   const el = document.getElementById("rotation-banner");
   if (!el || !ROTATION) return;
-  const today = new Date();
+  const now = new Date();
+  // 5時境界基準の「今日」 = 5時前なら前日、それ以降なら当日
+  const baseToday = new Date(now);
+  if (baseToday.getHours() < 5) baseToday.setDate(baseToday.getDate() - 1);
+  baseToday.setHours(12, 0, 0, 0);  // 12時固定にして5時跨ぎ計算ノイズを避ける
   const items = [];
   for (let d = 0; d < 2; d++) {
-    const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    const t = new Date(baseToday.getFullYear(), baseToday.getMonth(), baseToday.getDate() + d);
+    t.setHours(12, 0, 0, 0);
     const map = rotationMapForDate(t);
     const label = d === 0 ? "今日" : "明日";
     const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
