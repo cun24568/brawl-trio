@@ -1209,7 +1209,8 @@ function renderTeam(members, brawlerImg, brawlerJp, highlightTag) {
     ${members.map(m => {
       const img = brawlerImg[m.brawler];
       const isMe = m.tag === highlightTag;
-      return `<div class="flex items-center gap-1 px-1 py-0.5 rounded ${isMe ? 'bg-yellow-700/30 ring-1 ring-yellow-500' : 'bg-gray-700/40'}">
+      const clickable = m.tag ? `onclick="event.stopPropagation(); openMypage('${escapeHtml(m.tag)}')"` : '';
+      return `<div ${clickable} class="flex items-center gap-1 px-1 py-0.5 rounded ${isMe ? 'bg-yellow-700/30 ring-1 ring-yellow-500' : 'bg-gray-700/40 hover:bg-blue-700/40'} ${m.tag ? 'cursor-pointer' : ''}" title="${m.tag ? 'クリックでマイページへ' : ''}">
         ${img ? `<img src="${img}" class="w-6 h-6 rounded" loading="lazy">` : ""}
         <div class="text-xs leading-tight">
           <div class="truncate max-w-[70px]">${escapeHtml(m.name || m.brawler)}</div>
@@ -1218,6 +1219,15 @@ function renderTeam(members, brawlerImg, brawlerJp, highlightTag) {
       </div>`;
     }).join("")}
   </div>`;
+}
+
+// 汎用: 任意のタグでマイページに移動
+function openMypage(tag) {
+  if (!tag) return;
+  document.getElementById("mypage-tag").value = tag;
+  document.querySelector('.tab-btn[data-tab="mypage"]').click();
+  fetchMypage(tag);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function renderMypageBattleList(battles, brawlerImg, brawlerJp, mapJp) {
@@ -1594,10 +1604,7 @@ function renderClub(c) {
 }
 
 function openMypageFromClub(tag) {
-  // タグをマイページに入れて、 マイページタブに切替 + 検索
-  document.getElementById("mypage-tag").value = tag;
-  document.querySelector('.tab-btn[data-tab="mypage"]').click();
-  fetchMypage(tag);
+  openMypage(tag);
 }
 
 // ============================================================
