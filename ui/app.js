@@ -1273,6 +1273,281 @@ function startCooldownTimer(initial) {
 }
 
 setupMypage();
+setupClub();
+setupCallSheet();
+
+// ============================================================
+// クラブ集計
+// ============================================================
+
+function setupClub() {
+  const tagInput = document.getElementById("club-tag");
+  const btn = document.getElementById("club-search");
+  if (!tagInput || !btn) return;
+  const saved = localStorage.getItem("club_tag");
+  if (saved) tagInput.value = saved;
+  btn.addEventListener("click", () => fetchClub(tagInput.value));
+  tagInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") fetchClub(tagInput.value);
+  });
+}
+
+async function fetchClub(rawTag) {
+  const tag = normalizeTag(rawTag);
+  if (!tag || tag.length < 4) {
+    document.getElementById("club-detail").innerHTML =
+      '<div class="bg-red-900/30 border border-red-700 p-4 rounded text-red-200">クラブタグを入力してください</div>';
+    return;
+  }
+  localStorage.setItem("club_tag", tag);
+  document.getElementById("club-tag").value = tag;
+  document.getElementById("club-detail").innerHTML =
+    '<div class="bg-gray-800 p-6 rounded text-center text-gray-400">読込中...</div>';
+  try {
+    const res = await fetch(`${API_HOST}/api/club/${encodeURIComponent(tag)}`);
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(body.detail || `HTTP ${res.status}`);
+    }
+    const data = await res.json();
+    renderClub(data);
+  } catch (e) {
+    document.getElementById("club-detail").innerHTML =
+      `<div class="bg-red-900/30 border border-red-700 p-4 rounded text-red-200">取得失敗: ${escapeHtml(e.message)}</div>`;
+  }
+}
+
+function renderClub(c) {
+  const trackedMembers = c.members.filter(m => m.tracked);
+  const untrackedMembers = c.members.filter(m => !m.tracked);
+  // tracked を勝率順にソート
+  trackedMembers.sort((a, b) => {
+    const aWr = a.summary.total ? a.summary.top2 / a.summary.total : 0;
+    const bWr = b.summary.total ? b.summary.top2 / b.summary.total : 0;
+    return bWr - aWr;
+  });
+  untrackedMembers.sort((a, b) => (b.trophies || 0) - (a.trophies || 0));
+
+  const renderRow = (m, idx) => {
+    const s = m.summary;
+    const wr = s.total ? (s.top2 / s.total * 100).toFixed(1) + "%" : "—";
+    const r1 = s.total ? (s.rank1 / s.total * 100).toFixed(1) + "%" : "—";
+    const ar = s.avg_rank ? s.avg_rank.toFixed(2) : "—";
+    const wrColor = s.total
+      ? (s.top2 / s.total >= 0.6 ? "text-green-300 font-bold"
+        : s.top2 / s.total >= 0.5 ? "text-yellow-300"
+        : "text-gray-300")
+      : "text-gray-500";
+    return `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30 cursor-pointer" onclick="openMypageFromClub('${escapeHtml(m.tag)}')">
+      <td class="py-2 px-2 text-gray-500 text-xs">${idx + 1}</td>
+      <td class="py-2 px-2 truncate max-w-[120px]" title="${escapeHtml(m.name)}">${escapeHtml(m.name)}</td>
+      <td class="py-2 px-2 text-xs text-gray-400 hidden sm:table-cell">${escapeHtml(m.role)}</td>
+      <td class="py-2 px-2 text-right text-yellow-400 font-mono text-xs">🏆${m.trophies.toLocaleString()}</td>
+      <td class="py-2 px-2 text-right font-mono text-xs">${s.total || "—"}</td>
+      <td class="py-2 px-2 text-right font-mono text-xs ${wrColor}">${wr}</td>
+      <td class="py-2 px-2 text-right font-mono text-xs hidden sm:table-cell">${r1}</td>
+      <td class="py-2 px-2 text-right font-mono text-xs hidden md:table-cell">${ar}</td>
+    </tr>`;
+  };
+
+  document.getElementById("club-detail").innerHTML = `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h2 class="text-xl font-bold">${escapeHtml(c.name)}</h2>
+      <div class="text-sm text-gray-400 font-mono mt-1">${escapeHtml(c.tag)} · 🏆${c.trophies.toLocaleString()} · ${c.member_count}人 · ${escapeHtml(c.type)}</div>
+      ${c.description ? `<div class="text-xs text-gray-500 mt-2">${escapeHtml(c.description)}</div>` : ""}
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">取得済メンバー (${trackedMembers.length}人) - 勝率順</h3>
+      ${trackedMembers.length === 0 ? '<div class="text-gray-500 text-sm">まだ誰もマイページで検索されていません。 各メンバーのタグをマイページで検索すると、 ここに統計が出ます。</div>' :
+        `<div class="overflow-x-auto -mx-2"><table class="w-full text-sm">
+          <thead><tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+            <th class="pb-2 px-2">#</th>
+            <th class="pb-2 px-2">名前</th>
+            <th class="pb-2 px-2 hidden sm:table-cell">役職</th>
+            <th class="pb-2 px-2 text-right">トロ</th>
+            <th class="pb-2 px-2 text-right">試合</th>
+            <th class="pb-2 px-2 text-right">TOP2率</th>
+            <th class="pb-2 px-2 text-right hidden sm:table-cell">1位率</th>
+            <th class="pb-2 px-2 text-right hidden md:table-cell">平均順</th>
+          </tr></thead>
+          <tbody>${trackedMembers.map(renderRow).join("")}</tbody>
+        </table></div>`}
+    </div>
+
+    ${untrackedMembers.length > 0 ? `
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <details>
+          <summary class="cursor-pointer text-sm text-gray-400 hover:text-gray-200">未取得メンバー ${untrackedMembers.length}人 (クリックで展開)</summary>
+          <table class="w-full text-sm mt-2">
+            <tbody>${untrackedMembers.map((m, i) => `
+              <tr class="border-b border-gray-700/50 hover:bg-gray-700/30 cursor-pointer" onclick="openMypageFromClub('${escapeHtml(m.tag)}')">
+                <td class="py-2 px-2 text-gray-500 text-xs">${i + 1}</td>
+                <td class="py-2 px-2">${escapeHtml(m.name)}</td>
+                <td class="py-2 px-2 text-xs text-gray-400">${escapeHtml(m.role)}</td>
+                <td class="py-2 px-2 text-right text-yellow-400 font-mono text-xs">🏆${m.trophies.toLocaleString()}</td>
+              </tr>`).join("")}</tbody>
+          </table>
+          <div class="text-xs text-gray-500 mt-2">行をクリック → マイページで自動検索 (= ウォッチリスト追加 + 過去履歴import)</div>
+        </details>
+      </div>` : ""}`;
+}
+
+function openMypageFromClub(tag) {
+  // タグをマイページに入れて、 マイページタブに切替 + 検索
+  document.getElementById("mypage-tag").value = tag;
+  document.querySelector('.tab-btn[data-tab="mypage"]').click();
+  fetchMypage(tag);
+}
+
+// ============================================================
+// コール表モード (試合中の即決ツール)
+// ============================================================
+
+function setupCallSheet() {
+  // タブ切替時にレンダ
+  const tabBtn = document.querySelector('.tab-btn[data-tab="call"]');
+  if (tabBtn) tabBtn.addEventListener("click", () => setTimeout(renderCallSheet, 50));
+}
+
+let CALLSHEET_PICK1 = "";
+let CALLSHEET_PICK2 = "";
+let CALLSHEET_MAP_OVERRIDE = null;  // null = 今日のマップ自動
+
+function setCallSheetPick(slot, name) {
+  if (slot === 1) { CALLSHEET_PICK1 = name; CALLSHEET_PICK2 = ""; }
+  else if (slot === 2) { CALLSHEET_PICK2 = name; }
+  renderCallSheet();
+}
+
+function resetCallSheet() {
+  CALLSHEET_PICK1 = "";
+  CALLSHEET_PICK2 = "";
+  renderCallSheet();
+}
+
+function setCallSheetMap(hash) {
+  CALLSHEET_MAP_OVERRIDE = hash || null;
+  CALLSHEET_PICK1 = "";
+  CALLSHEET_PICK2 = "";
+  renderCallSheet();
+}
+
+function renderCallSheet() {
+  const el = document.getElementById("call-sheet");
+  if (!el || !DB || !ROTATION) return;
+
+  // マップ決定: override or 今日のマップ
+  const todayJp = rotationMapForDate(new Date());
+  let mapJpName = todayJp;
+  let mapObj = null;
+  const dbByJp = new Map();
+  for (const m of DB.maps) dbByJp.set(m.name_jp || m.name, m);
+  if (CALLSHEET_MAP_OVERRIDE) {
+    mapObj = DB.maps.find(m => m.hash === CALLSHEET_MAP_OVERRIDE);
+    if (mapObj) mapJpName = mapObj.name_jp || mapObj.name;
+  } else {
+    mapObj = dbByJp.get(todayJp);
+  }
+
+  // マップ選択ドロップダウン (ローテ14マップ)
+  const mapOpts = ROTATION.rotation.map(jp => {
+    const m = dbByJp.get(jp);
+    const hash = m ? m.hash : "__missing__" + jp;
+    const next = nextAppearance(jp);
+    const tag = next?.daysAhead === 0 ? "【今日】" : next?.daysAhead === 1 ? "【明日】" : `【${next?.daysAhead}日後】`;
+    const sel = (CALLSHEET_MAP_OVERRIDE === hash || (!CALLSHEET_MAP_OVERRIDE && jp === todayJp)) ? "selected" : "";
+    return `<option value="${escapeHtml(hash)}" ${sel}>${escapeHtml(jp)} ${tag}</option>`;
+  }).join("");
+
+  const brawlerJp = buildBrawlerJpMap();
+  const brawlerImg = buildBrawlerImgMap();
+
+  let mainHtml = "";
+  if (!mapObj || !mapObj.all_trios || mapObj.all_trios.length === 0) {
+    mainHtml = `<div class="bg-yellow-900/30 border border-yellow-700 p-4 rounded text-yellow-200">
+      ${escapeHtml(mapJpName)} のデータがまだ不足しています。 ローテで戻ってきてからクロールされる見込みです。
+    </div>`;
+  } else {
+    // ピック決定済の3人組から候補を絞る
+    let trios = mapObj.all_trios;
+    const picked = new Set([CALLSHEET_PICK1, CALLSHEET_PICK2].filter(Boolean));
+    if (CALLSHEET_PICK1) trios = trios.filter(t => t.members.some(m => m.brawler === CALLSHEET_PICK1));
+    if (CALLSHEET_PICK2) trios = trios.filter(t => t.members.some(m => m.brawler === CALLSHEET_PICK2));
+
+    if (!CALLSHEET_PICK1) {
+      // 1人目: tier_list TOP15 を大ボタン
+      const sorted = [...mapObj.tier_list].slice(0, 15);
+      mainHtml = `
+        <div class="text-sm text-gray-400 mb-3">1人目: マップで強いブロウラーから選択</div>
+        <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+          ${sorted.map(t => {
+            const img = brawlerImg[t.brawler];
+            const wr = (t.win_rate * 100).toFixed(0);
+            const wrColor = t.win_rate >= 0.6 ? "text-green-300" : t.win_rate >= 0.5 ? "text-yellow-300" : "text-gray-300";
+            return `<button onclick="setCallSheetPick(1, '${escapeHtml(t.brawler)}')" class="p-2 bg-gray-700 hover:bg-gray-600 rounded text-center">
+              ${img ? `<img src="${img}" class="w-full rounded mb-1">` : ""}
+              <div class="text-xs font-bold truncate">${escapeHtml(brawlerJp[t.brawler] || t.brawler)}</div>
+              <div class="text-[10px] ${wrColor} font-mono">${wr}% <span class="text-gray-400">/${t.tier}</span></div>
+            </button>`;
+          }).join("")}
+        </div>`;
+    } else {
+      // 2人目or3人目: trios から相方候補を集計
+      const partnerScore = {};  // brawler → {picks, top2, win_rate}
+      for (const t of trios) {
+        for (const m of t.members) {
+          if (picked.has(m.brawler)) continue;
+          const ps = partnerScore[m.brawler] || (partnerScore[m.brawler] = { picks: 0, top2: 0, w_sum: 0 });
+          ps.picks += t.picks;
+          ps.top2 += (t.win_rate || 0) * t.picks;
+        }
+      }
+      const partners = Object.entries(partnerScore)
+        .filter(([_, ps]) => ps.picks >= 5)
+        .map(([name, ps]) => ({ name, picks: ps.picks, win_rate: ps.top2 / ps.picks }))
+        .sort((a, b) => b.win_rate - a.win_rate)
+        .slice(0, 15);
+
+      const slot = CALLSHEET_PICK2 ? 3 : 2;
+      mainHtml = `
+        <div class="flex items-center gap-2 mb-3 flex-wrap text-sm">
+          <span class="text-gray-400">${slot}人目選択</span>
+          <span class="px-2 py-1 bg-blue-700 rounded text-xs">${escapeHtml(brawlerJp[CALLSHEET_PICK1] || CALLSHEET_PICK1)}</span>
+          ${CALLSHEET_PICK2 ? `<span class="text-gray-500">+</span><span class="px-2 py-1 bg-blue-700 rounded text-xs">${escapeHtml(brawlerJp[CALLSHEET_PICK2] || CALLSHEET_PICK2)}</span>` : ""}
+          <button onclick="resetCallSheet()" class="ml-auto px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs">リセット</button>
+        </div>
+        ${partners.length === 0 ? '<div class="text-gray-500">相方候補のデータが足りません (5戦以上の組み合わせのみ表示)</div>' :
+          `<div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+            ${partners.map(p => {
+              const img = brawlerImg[p.name];
+              const wr = (p.win_rate * 100).toFixed(0);
+              const wrColor = p.win_rate >= 0.6 ? "text-green-300" : p.win_rate >= 0.5 ? "text-yellow-300" : "text-gray-300";
+              return `<button ${slot === 3 ? "" : `onclick="setCallSheetPick(2, '${escapeHtml(p.name)}')"`} class="p-2 bg-gray-700 ${slot === 3 ? "" : "hover:bg-gray-600"} rounded text-center">
+                ${img ? `<img src="${img}" class="w-full rounded mb-1">` : ""}
+                <div class="text-xs font-bold truncate">${escapeHtml(brawlerJp[p.name] || p.name)}</div>
+                <div class="text-[10px] ${wrColor} font-mono">${wr}% <span class="text-gray-400">/${p.picks}</span></div>
+              </button>`;
+            }).join("")}
+          </div>`
+        }`;
+    }
+  }
+
+  el.innerHTML = `
+    <div class="bg-gray-800 p-4 rounded mb-3">
+      <label class="text-xs text-gray-400 block mb-1">マップ</label>
+      <select onchange="setCallSheetMap(this.value)" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-base">
+        ${mapOpts}
+      </select>
+      <div class="text-xs text-gray-500 mt-1">トリオ集まった時の即決ツール。 マップに合わせて1人目→2人目→3人目を選ぶ。</div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded">
+      ${mainHtml}
+    </div>`;
+}
+
+
 
 // 上に戻るボタン
 const scrollTopBtn = document.getElementById("scroll-top-btn");

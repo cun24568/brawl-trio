@@ -46,6 +46,8 @@
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-blue-600 whitespace-nowrap" data-tab="maps">マップ別ティア</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="brawlers">ブロウラー別</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="mypage">マイページ</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="club">クラブ</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="call">コール表</button>
     </div>
   </nav>
 
@@ -99,6 +101,28 @@
         </div>
       </div>
       <div id="mypage-detail"></div>
+    </div>
+
+    <div id="tab-club" class="tab-content hidden">
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <label class="text-sm text-gray-400 block mb-2">クラブタグ (例: #2QG9UVUUY)</label>
+        <div class="flex gap-2">
+          <input type="text" id="club-tag" placeholder="#XXXXXXXX"
+            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono uppercase focus:outline-none focus:border-blue-500">
+          <button id="club-search" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded font-semibold whitespace-nowrap">
+            検索
+          </button>
+        </div>
+        <div class="text-xs text-gray-500 mt-2">
+          クラブメンバー全員のトリオ戦績を一覧表示。<br>
+          各メンバーのデータは「マイページ」で先に検索しておくと出てきます (未検索のメンバーは "未取得" 表示)。
+        </div>
+      </div>
+      <div id="club-detail"></div>
+    </div>
+
+    <div id="tab-call" class="tab-content hidden">
+      <div id="call-sheet"></div>
     </div>
   </main>
 

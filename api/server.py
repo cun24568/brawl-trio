@@ -179,6 +179,43 @@ def get_battles(tag: str, request: Request, limit: int = 100, offset: int = 0):
     }
 
 
+@app.get("/api/club/{tag}")
+@limiter.limit("10/minute")
+def get_club(tag: str, request: Request):
+    tag = _normalize_or_400(tag)
+    from urllib.parse import quote
+    try:
+        club = brawl_api.fetch(f"/clubs/{quote(tag, safe='')}")
+    except HTTPError as e:
+        if e.code == 404:
+            raise HTTPException(status_code=404, detail="club not found")
+        raise HTTPException(status_code=502, detail=f"upstream HTTP {e.code}")
+    members_raw = club.get("members", [])
+    members = []
+    for m in members_raw:
+        mtag = m.get("tag")
+        if not mtag:
+            continue
+        stats = db.get_player_stats(mtag)
+        members.append({
+            "tag": mtag,
+            "name": m.get("name", ""),
+            "role": m.get("role", ""),
+            "trophies": m.get("trophies", 0),
+            "summary": stats["summary"],
+            "tracked": bool(stats["summary"].get("total", 0)),
+        })
+    return {
+        "tag": tag,
+        "name": club.get("name", ""),
+        "description": club.get("description", ""),
+        "trophies": club.get("trophies", 0),
+        "type": club.get("type", ""),
+        "member_count": len(members),
+        "members": members,
+    }
+
+
 @app.post("/api/player/{tag}/refresh")
 @limiter.limit("10/minute")
 def refresh_player(tag: str, request: Request):
