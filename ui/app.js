@@ -356,14 +356,7 @@ function onSynergySearchInput(slot, val) {
   for (const t of m.all_trios) {
     for (const mem of t.members) brawlerJpMap[mem.brawler] = mem.brawler_jp || mem.brawler;
   }
-  const fLow = val.toLowerCase();
-  const fHira = kanaToHira(fLow);
-  const matches = Object.entries(brawlerJpMap).filter(([en, jp]) => {
-    if (en.toLowerCase().includes(fLow)) return true;
-    if ((jp || "").includes(val)) return true;
-    if (kanaToHira((jp || "").toLowerCase()).includes(fHira)) return true;
-    return false;
-  });
+  const matches = Object.entries(brawlerJpMap).filter(([en, jp]) => brawlerNameMatches(en, jp, val));
   if (matches.length === 0) {
     sug.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">該当なし</div>';
     sug.classList.remove("hidden");
@@ -574,14 +567,7 @@ function renderBrawlerGrid(filter = "") {
   const sort = document.getElementById("brawler-sort")?.value || "best_tier";
   const strongOnly = document.getElementById("brawler-filter-strong")?.checked || false;
 
-  let list = DB.brawlers.filter(b => {
-    if (!f) return true;
-    if (b.name.toLowerCase().includes(f)) return true;
-    const jp = b.name_jp || "";
-    if (jp.includes(filter)) return true;
-    if (kanaToHira(jp).includes(fHira)) return true;  // ひらがな入力対応
-    return false;
-  });
+  let list = DB.brawlers.filter(b => brawlerNameMatches(b.name, b.name_jp, filter));
   if (strongOnly) {
     list = list.filter(b => b._avgTier === "S+" || b._avgTier === "S");
   }
@@ -734,6 +720,36 @@ function escapeHtml(s) {
 // カタカナ→ひらがな変換 (ブロウラー名検索でひらがな入力にも対応するため)
 function kanaToHira(s) {
   return String(s ?? "").replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+}
+
+// ブロウラー名検索エイリアス (英語表記のまま日本語名になってるキャラを 日本語読みでも検索可に)
+const BRAWLER_ALIASES = {
+  "MAX": ["マックス"],
+  "EMZ": ["イーエムジー", "えむず", "エムズ"],
+  "8-BIT": ["エイトビット", "8ビット"],
+  "8BIT": ["エイトビット", "8ビット"],
+  "R-T": ["アールティー", "アール"],
+  "RT": ["アールティー", "アール"],
+  "MR.P": ["ミスターP", "みすたーぴー"],
+  "MR-P": ["ミスターP"],
+  "MRP": ["ミスターP"],
+};
+
+function brawlerNameMatches(enName, jpName, query) {
+  if (!query) return true;
+  const q = query.toLowerCase();
+  const qHira = kanaToHira(q);
+  if (enName && enName.toLowerCase().includes(q)) return true;
+  if (jpName) {
+    if (jpName.includes(query)) return true;
+    if (kanaToHira(jpName.toLowerCase()).includes(qHira)) return true;
+  }
+  const aliases = BRAWLER_ALIASES[(enName || "").toUpperCase()] || [];
+  for (const a of aliases) {
+    if (a.toLowerCase().includes(q)) return true;
+    if (kanaToHira(a.toLowerCase()).includes(qHira)) return true;
+  }
+  return false;
 }
 
 // ============================================================
