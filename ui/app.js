@@ -49,7 +49,15 @@ async function load() {
     `最終更新: ${ts.toLocaleString("ja-JP")} / 集計 ${DB.stats.total_picks.toLocaleString()}戦 / マップ ${DB.stats.total_maps} / ブロウラー ${DB.stats.total_brawlers}`;
   renderRotationBanner();
   renderMapList();
-  if (DB.maps.length) selectMap(DB.maps[0]);
+  // 今日のマップを自動選択 (ローテ情報あれば)
+  let initialMap = null;
+  const candidates = DB._mapCandidates || DB.maps;
+  if (ROTATION) {
+    const todayJp = rotationMapForDate(new Date());
+    initialMap = candidates.find(m => (m.name_jp || m.name) === todayJp);
+  }
+  if (!initialMap) initialMap = candidates[0];
+  if (initialMap) selectMap(initialMap);
   renderBrawlerGrid();
   setupTabs();
   setupSearch();
@@ -696,6 +704,7 @@ function setupMypage() {
   const tagInput = document.getElementById("mypage-tag");
   const searchBtn = document.getElementById("mypage-search");
   const refreshBtn = document.getElementById("mypage-refresh");
+  const bookmarkBtn = document.getElementById("mypage-bookmark");
   const suggest = document.getElementById("mypage-suggest");
 
   // localStorage から復元
@@ -714,13 +723,99 @@ function setupMypage() {
       hideSuggest(suggest);
     }
   });
-  // 名前サジェスト (debounce 250ms)
   attachNameSuggest(tagInput, suggest, "players", item => {
     tagInput.value = item.tag;
     hideSuggest(suggest);
     fetchMypage(item.tag);
   });
   refreshBtn.addEventListener("click", () => refreshMypage(tagInput.value));
+  bookmarkBtn.addEventListener("click", () => toggleCurrentBookmark());
+  renderBookmarks();
+}
+
+// ============================================================
+// ブックマーク機能 (localStorage、 最大50件)
+// ============================================================
+
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem("mypage_bookmarks") || "[]"); }
+  catch { return []; }
+}
+function setBookmarksAndRender(bms) {
+  localStorage.setItem("mypage_bookmarks", JSON.stringify(bms.slice(0, 50)));
+  renderBookmarks();
+}
+function isBookmarked(tag) {
+  return getBookmarks().some(b => b.tag === tag);
+}
+function addOrUpdateBookmark(tag, name, trophies) {
+  const bms = getBookmarks().filter(b => b.tag !== tag);
+  bms.unshift({ tag, name: name || "", trophies: trophies || 0 });
+  setBookmarksAndRender(bms);
+}
+function removeBookmark(tag) {
+  setBookmarksAndRender(getBookmarks().filter(b => b.tag !== tag));
+}
+
+function toggleCurrentBookmark() {
+  const tag = MYPAGE_DATA?.tag || normalizeTag(document.getElementById("mypage-tag").value);
+  if (!tag || tag.length < 4) return;
+  if (isBookmarked(tag)) {
+    removeBookmark(tag);
+  } else {
+    const profile = MYPAGE_DATA?.profile || {};
+    addOrUpdateBookmark(tag, profile.name, profile.trophies);
+  }
+  updateBookmarkButtonState();
+}
+
+function updateBookmarkButtonState() {
+  const btn = document.getElementById("mypage-bookmark");
+  if (!btn) return;
+  const tag = MYPAGE_DATA?.tag || normalizeTag(document.getElementById("mypage-tag").value);
+  const marked = tag && isBookmarked(tag);
+  btn.textContent = marked ? "★" : "☆";
+  btn.classList.toggle("bg-yellow-600", marked);
+  btn.classList.toggle("bg-gray-700", !marked);
+  btn.title = marked ? "ブックマーク解除" : "ブックマーク追加";
+}
+
+function renderBookmarks() {
+  const el = document.getElementById("mypage-bookmarks");
+  if (!el) return;
+  const bms = getBookmarks();
+  if (bms.length === 0) {
+    el.innerHTML = "";
+    return;
+  }
+  el.innerHTML = `
+    <div class="bg-gray-800 p-3 rounded">
+      <div class="text-xs text-gray-400 mb-2">ブックマーク (${bms.length}/50)</div>
+      <div class="flex flex-wrap gap-2">
+        ${bms.map((b, i) => `
+          <div class="flex items-center bg-gray-700 hover:bg-gray-600 rounded overflow-hidden text-sm">
+            <button onclick="openBookmark(${i})" class="px-3 py-1.5 flex items-center gap-1.5">
+              <span class="font-semibold truncate max-w-[120px]">${escapeHtml(b.name || b.tag)}</span>
+              ${b.trophies ? `<span class="text-xs text-yellow-400">🏆${b.trophies.toLocaleString()}</span>` : ""}
+            </button>
+            <button onclick="removeBookmarkAt(${i})" class="px-2 py-1.5 text-gray-400 hover:text-red-400 hover:bg-gray-800" title="削除">×</button>
+          </div>
+        `).join("")}
+      </div>
+    </div>`;
+  updateBookmarkButtonState();
+}
+
+function openBookmark(idx) {
+  const b = getBookmarks()[idx];
+  if (!b) return;
+  document.getElementById("mypage-tag").value = b.tag;
+  fetchMypage(b.tag);
+}
+
+function removeBookmarkAt(idx) {
+  const b = getBookmarks()[idx];
+  if (b) removeBookmark(b.tag);
 }
 
 // 共通: 検索ボックスに名前サジェストを取り付ける
@@ -920,9 +1015,15 @@ function renderMypage() {
     }
   }
 
-  // クールダウンUI
+  // クールダウンUI + ブックマークボタン状態
   document.getElementById("mypage-refresh").classList.remove("hidden");
   startCooldownTimer(d.cooldown_seconds || 0);
+  updateBookmarkButtonState();
+  // 既にブックマーク済みなら最新の name/trophies で更新
+  if (d.tag && isBookmarked(d.tag)) {
+    const p = d.profile || {};
+    addOrUpdateBookmark(d.tag, p.name, p.trophies);
+  }
 
   el.innerHTML = `
     ${renderMypageHeader(d, profile, period)}
