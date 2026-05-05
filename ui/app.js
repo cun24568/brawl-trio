@@ -392,24 +392,38 @@ function renderSynergySection(m) {
     </div>`;
 }
 
-// 各ブロウラーに「現プールでの最高ティア / 重み付き勝率 / 重み付き平均順位 / 出現マップ数」を付与
+// 各ブロウラーに 現プールでの統計値を付与
+//   _bestTier: 全マップ中の最高ティア (1マップでも取れれば反映)
+//   _avgTier:  全マップを picks 重み付け平均したティア (ソート/グルーピング用、これがメイン指標)
+//   _weightedWr / _weightedAvgRank: 加重平均勝率/平均順位
+//   _poolMapsCount: 現プールで掲載されているマップ数
 function computeBrawlerExtras() {
   if (!DB || !DB.brawlers || !DB.maps) return;
   if (DB._brawlerExtrasComputed) return;
-  const stats = {};  // name → {tiers, picks, top2_sum, rank_sum}
+  const tierScore = { "S+": 5, "S": 4, "A": 3, "B": 2, "C": 1, "?": 0 };
+  const stats = {};
   for (const m of DB.maps) {
     if (!m.in_pool || !m.tier_list) continue;
     for (const t of m.tier_list) {
-      const s = stats[t.brawler] || (stats[t.brawler] = { tiers: [], picks: 0, top2_sum: 0, rank_sum: 0 });
+      const s = stats[t.brawler] || (stats[t.brawler] = {
+        tiers: [], picks: 0, top2_sum: 0, rank_sum: 0,
+        score_weighted: 0, score_pick_total: 0,
+      });
       s.tiers.push(t.tier);
-      s.picks += t.picks || 0;
-      // tier_list の win_rate は TOP2率 (= rank<=2) として保存されている
-      s.top2_sum += (t.win_rate || 0) * (t.picks || 0);
-      s.rank_sum += (t.avg_rank || 0) * (t.picks || 0);
+      const pk = t.picks || 0;
+      const ts = tierScore[t.tier] ?? 0;
+      s.picks += pk;
+      s.top2_sum += (t.win_rate || 0) * pk;
+      s.rank_sum += (t.avg_rank || 0) * pk;
+      s.score_weighted += ts * pk;
+      s.score_pick_total += pk;
     }
   }
   for (const b of DB.brawlers) {
-    const s = stats[b.name] || { tiers: [], picks: 0, top2_sum: 0, rank_sum: 0 };
+    const s = stats[b.name] || {
+      tiers: [], picks: 0, top2_sum: 0, rank_sum: 0,
+      score_weighted: 0, score_pick_total: 0,
+    };
     let bestTier = null;
     for (const t of s.tiers) {
       if (bestTier == null || (TIER_ORDER.indexOf(t) >= 0 && TIER_ORDER.indexOf(t) < TIER_ORDER.indexOf(bestTier))) {
@@ -417,6 +431,19 @@ function computeBrawlerExtras() {
       }
     }
     b._bestTier = bestTier;
+
+    // 加重平均ティア (継続的な強さ)
+    let avgTier = null;
+    if (s.score_pick_total > 0) {
+      const avgScore = s.score_weighted / s.score_pick_total;
+      if (avgScore >= 4.5) avgTier = "S+";
+      else if (avgScore >= 3.5) avgTier = "S";
+      else if (avgScore >= 2.5) avgTier = "A";
+      else if (avgScore >= 1.5) avgTier = "B";
+      else avgTier = "C";
+    }
+    b._avgTier = avgTier;
+
     b._weightedWr = s.picks ? (s.top2_sum / s.picks) : null;
     b._weightedAvgRank = s.picks ? (s.rank_sum / s.picks) : null;
     b._poolPicks = s.picks;
@@ -426,9 +453,11 @@ function computeBrawlerExtras() {
 }
 
 function renderBrawlerCard(b) {
+  // ピンポイント強キャラの目印として best と avg が違う場合のみ best を小さく表示
   const tier = b._bestTier;
-  const tierBadge = tier
-    ? `<span class="absolute top-0.5 left-0.5 px-1 py-0 rounded text-[9px] font-bold ${TIER_COLORS[tier] || ''}">${tier}</span>`
+  const showPeak = tier && tier !== b._avgTier;
+  const tierBadge = showPeak
+    ? `<span class="absolute top-0 left-0 px-1 rounded-br text-[8px] font-bold ${TIER_COLORS[tier] || ''}" title="ピーク: ${tier}">${tier}</span>`
     : '';
   const wr = b._weightedWr;
   const wrColor = wr == null ? "text-gray-500"
@@ -439,11 +468,11 @@ function renderBrawlerCard(b) {
   const wrText = wr == null ? "—" : `${(wr * 100).toFixed(0)}%`;
   const dim = wr == null ? "opacity-60" : "";
   return `
-    <div class="brawler-card relative p-1 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500 ${dim}" data-name="${escapeHtml(b.name)}">
+    <div class="brawler-card relative p-0.5 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500 ${dim}" data-name="${escapeHtml(b.name)}">
       ${tierBadge}
       ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
-      <div class="text-[11px] mt-0.5 truncate font-semibold leading-tight">${escapeHtml(b.name_jp || b.name)}</div>
-      <div class="text-[10px] ${wrColor} leading-tight">${wrText}</div>
+      <div class="text-[10px] mt-0.5 truncate font-semibold leading-tight px-0.5">${escapeHtml(b.name_jp || b.name)}</div>
+      <div class="text-[9px] ${wrColor} leading-tight">${wrText}</div>
     </div>`;
 }
 
@@ -458,7 +487,7 @@ function renderBrawlerGrid(filter = "") {
     !f || b.name.toLowerCase().includes(f) || (b.name_jp || "").includes(filter)
   );
   if (strongOnly) {
-    list = list.filter(b => b._bestTier === "S+" || b._bestTier === "S");
+    list = list.filter(b => b._avgTier === "S+" || b._avgTier === "S");
   }
 
   const tierIdx = t => {
@@ -467,7 +496,7 @@ function renderBrawlerGrid(filter = "") {
   };
   list.sort((a, b) => {
     if (sort === "best_tier") {
-      const d = tierIdx(a._bestTier) - tierIdx(b._bestTier);
+      const d = tierIdx(a._avgTier) - tierIdx(b._avgTier);
       if (d !== 0) return d;
       return (b._poolPicks || 0) - (a._poolPicks || 0);
     }
@@ -481,19 +510,19 @@ function renderBrawlerGrid(filter = "") {
   document.getElementById("brawler-count").textContent =
     `${list.length}体表示中 (全${DB.brawlers.length}体)`;
 
-  // 現プール内 (_bestTier !== null) と プール外を分離
-  const inPool = list.filter(b => b._bestTier);
-  const outPool = list.filter(b => !b._bestTier);
+  // 現プール内 (_avgTier !== null) と プール外を分離
+  const inPool = list.filter(b => b._avgTier);
+  const outPool = list.filter(b => !b._avgTier);
 
-  const gridCls = "grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-1";
+  const gridCls = "grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 xl:grid-cols-16 gap-1";
 
   let html = "";
 
   if (sort === "best_tier" && !filter) {
-    // ティア別セクション分け
+    // ティア別セクション分け (加重平均ティアでグループ化)
     const groups = {};
     for (const b of inPool) {
-      const t = b._bestTier;
+      const t = b._avgTier;
       (groups[t] ||= []).push(b);
     }
     for (const t of TIER_ORDER) {
