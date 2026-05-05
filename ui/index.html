@@ -47,6 +47,7 @@
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="brawlers">ブロウラー別</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="mypage">マイページ</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="club">クラブ</button>
+      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="ranking">ランキング</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="roulette">ルーレット</button>
     </div>
   </nav>
@@ -124,6 +125,49 @@
         </div>
       </div>
       <div id="club-detail"></div>
+    </div>
+
+    <div id="tab-ranking" class="tab-content hidden">
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <div class="flex flex-wrap gap-2">
+          <div>
+            <label class="text-xs text-gray-400 block mb-1">指標</label>
+            <select id="ranking-order" class="p-2 bg-gray-900 border border-gray-700 rounded text-sm">
+              <option value="rank1_rate">1位率</option>
+              <option value="top2_rate">TOP2率</option>
+              <option value="avg_rank">平均順位</option>
+              <option value="battles">試合数</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 block mb-1">最低試合数</label>
+            <select id="ranking-min" class="p-2 bg-gray-900 border border-gray-700 rounded text-sm">
+              <option value="10">10戦以上</option>
+              <option value="30">30戦以上</option>
+              <option value="50" selected>50戦以上</option>
+              <option value="100">100戦以上</option>
+              <option value="300">300戦以上</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 block mb-1">期間</label>
+            <select id="ranking-period" class="p-2 bg-gray-900 border border-gray-700 rounded text-sm">
+              <option value="all">全期間</option>
+              <option value="30d">直近30日</option>
+              <option value="7d">直近7日</option>
+              <option value="1d">直近1日</option>
+            </select>
+          </div>
+          <div class="self-end">
+            <button id="ranking-refresh" class="p-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-semibold">更新</button>
+          </div>
+        </div>
+        <div class="text-xs text-gray-500 mt-2">
+          マイページに登録された (= 一度でも検索された) プレイヤーの中からランキング。<br>
+          行クリックでそのプレイヤーのマイページへ。
+        </div>
+      </div>
+      <div id="ranking-result"></div>
     </div>
 
     <div id="tab-roulette" class="tab-content hidden">

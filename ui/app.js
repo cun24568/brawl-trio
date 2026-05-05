@@ -1588,6 +1588,102 @@ function startCooldownTimer(initial) {
 setupMypage();
 setupClub();
 setupRoulette();
+setupRanking();
+
+// ============================================================
+// ランキング (全ウォッチリストプレイヤーの戦績)
+// ============================================================
+
+function setupRanking() {
+  const orderSel = document.getElementById("ranking-order");
+  const minSel = document.getElementById("ranking-min");
+  const periodSel = document.getElementById("ranking-period");
+  const refresh = document.getElementById("ranking-refresh");
+  if (!orderSel || !refresh) return;
+  const fetchAndRender = () => fetchRanking();
+  refresh.addEventListener("click", fetchAndRender);
+  orderSel.addEventListener("change", fetchAndRender);
+  minSel.addEventListener("change", fetchAndRender);
+  periodSel.addEventListener("change", fetchAndRender);
+  // タブ切替時に初回ロード
+  const tabBtn = document.querySelector('.tab-btn[data-tab="ranking"]');
+  if (tabBtn) {
+    tabBtn.addEventListener("click", () => {
+      const result = document.getElementById("ranking-result");
+      if (result && !result.dataset.loaded) fetchAndRender();
+    });
+  }
+}
+
+async function fetchRanking() {
+  const result = document.getElementById("ranking-result");
+  if (!result) return;
+  const order = document.getElementById("ranking-order").value;
+  const minBattles = document.getElementById("ranking-min").value;
+  const period = document.getElementById("ranking-period").value;
+  result.innerHTML = '<div class="bg-gray-800 p-6 rounded text-center text-gray-400">読込中...</div>';
+  try {
+    const url = `${API_HOST}/api/leaderboard?order=${order}&min_battles=${minBattles}&period=${period}&limit=200`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(body.detail || `HTTP ${res.status}`);
+    }
+    const data = await res.json();
+    renderRanking(data, order);
+    result.dataset.loaded = "1";
+  } catch (e) {
+    result.innerHTML = `<div class="bg-red-900/30 border border-red-700 p-4 rounded text-red-200">取得失敗: ${escapeHtml(e.message)}</div>`;
+  }
+}
+
+function renderRanking(data, order) {
+  const result = document.getElementById("ranking-result");
+  const rows = data.results || [];
+  if (rows.length === 0) {
+    result.innerHTML = '<div class="bg-yellow-900/30 border border-yellow-700 p-4 rounded text-yellow-200">条件に該当するプレイヤーがいません。 最低試合数を下げるか、 もっと多くのプレイヤーを「マイページ」 で検索してください。</div>';
+    return;
+  }
+  const renderRow = (r, i) => {
+    const rank1pct = (r.rank1_rate * 100).toFixed(1);
+    const top2pct = (r.top2_rate * 100).toFixed(1);
+    const avg = r.avg_rank.toFixed(2);
+    const highlight =
+      order === "rank1_rate" ? rank1pct + "%" :
+      order === "top2_rate" ? top2pct + "%" :
+      order === "avg_rank" ? avg :
+      r.battles.toLocaleString();
+    return `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30 cursor-pointer" onclick="openMypage('${escapeHtml(r.tag)}')">
+      <td class="py-2 px-2 text-gray-500 text-xs w-10">${i + 1}</td>
+      <td class="py-2 px-2 truncate max-w-[150px]" title="${escapeHtml(r.name || r.tag)}">${escapeHtml(r.name || r.tag)}</td>
+      <td class="py-2 px-2 text-xs text-gray-400 font-mono hidden sm:table-cell">${escapeHtml(r.tag)}</td>
+      <td class="py-2 px-2 text-right text-yellow-400 font-mono text-xs hidden md:table-cell">🏆${(r.trophies || 0).toLocaleString()}</td>
+      <td class="py-2 px-2 text-right font-mono text-xs">${r.battles.toLocaleString()}</td>
+      <td class="py-2 px-2 text-right font-mono ${order === "rank1_rate" ? "text-green-300 font-bold" : "text-green-300"} text-xs">${rank1pct}%</td>
+      <td class="py-2 px-2 text-right font-mono ${order === "top2_rate" ? "text-blue-300 font-bold" : "text-blue-300"} text-xs hidden sm:table-cell">${top2pct}%</td>
+      <td class="py-2 px-2 text-right font-mono ${order === "avg_rank" ? "font-bold" : ""} text-xs">${avg}</td>
+    </tr>`;
+  };
+  result.innerHTML = `
+    <div class="bg-gray-800 p-4 rounded">
+      <div class="text-xs text-gray-400 mb-2">${rows.length}人 (${data.params.min_battles}戦以上 / ${data.params.period === "all" ? "全期間" : "直近" + data.params.period.replace("d", "日")})</div>
+      <div class="overflow-x-auto -mx-2">
+      <table class="w-full text-sm">
+        <thead><tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+          <th class="pb-2 px-2">#</th>
+          <th class="pb-2 px-2">名前</th>
+          <th class="pb-2 px-2 hidden sm:table-cell">タグ</th>
+          <th class="pb-2 px-2 text-right hidden md:table-cell">トロ</th>
+          <th class="pb-2 px-2 text-right">試合</th>
+          <th class="pb-2 px-2 text-right">1位率</th>
+          <th class="pb-2 px-2 text-right hidden sm:table-cell">TOP2率</th>
+          <th class="pb-2 px-2 text-right">平均順</th>
+        </tr></thead>
+        <tbody>${rows.map(renderRow).join("")}</tbody>
+      </table>
+      </div>
+    </div>`;
+}
 
 // ============================================================
 // ルーレット (ランダム編成)

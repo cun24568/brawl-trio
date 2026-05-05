@@ -332,6 +332,58 @@ def get_battles(tag: str, request: Request, limit: int = 100, offset: int = 0):
     }
 
 
+@app.get("/api/leaderboard")
+@limiter.limit("30/minute")
+def leaderboard(
+    request: Request,
+    min_battles: int = 50,
+    order: str = "rank1_rate",
+    period: str = "all",
+    limit: int = 100,
+):
+    """全ウォッチリストタグから戦績ランキング。
+    order: rank1_rate / top2_rate / avg_rank / battles
+    period: all / 30d / 7d / 1d
+    """
+    if limit > 300:
+        limit = 300
+    since = _since_for_period(period)
+    extra = ""
+    base_params: list = []
+    if since:
+        extra = " AND b.battle_time >= ?"
+        base_params.append(since)
+    order_sql = {
+        "rank1_rate": "rank1_rate DESC, battles DESC",
+        "top2_rate": "top2_rate DESC, battles DESC",
+        "avg_rank": "avg_rank ASC, battles DESC",
+        "battles": "battles DESC, rank1_rate DESC",
+    }.get(order, "rank1_rate DESC, battles DESC")
+    with db.conn() as c:
+        rows = c.execute(
+            f"""SELECT
+                  b.tag,
+                  COUNT(*) AS battles,
+                  SUM(CASE WHEN b.rank<=2 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS top2_rate,
+                  SUM(CASE WHEN b.rank=1 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS rank1_rate,
+                  AVG(CAST(b.rank AS REAL)) AS avg_rank,
+                  w.name AS name,
+                  w.trophies AS trophies
+                FROM battles b
+                LEFT JOIN watchlist w ON b.tag = w.tag
+                WHERE 1=1{extra}
+                GROUP BY b.tag
+                HAVING battles >= ?
+                ORDER BY {order_sql}
+                LIMIT ?""",
+            base_params + [min_battles, limit],
+        ).fetchall()
+    return {
+        "results": [dict(r) for r in rows],
+        "params": {"min_battles": min_battles, "order": order, "period": period, "limit": limit},
+    }
+
+
 @app.get("/api/club/{tag}")
 @limiter.limit("10/minute")
 def get_club(tag: str, request: Request):
