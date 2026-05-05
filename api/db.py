@@ -12,7 +12,8 @@ from contextlib import contextmanager
 from pathlib import Path
 
 DB_PATH = Path(__file__).parent.parent / "data" / "users.db"
-MAX_WATCHLIST = 50
+MAX_WATCHLIST = 50000  # 受付枠 (実際にcronで回るのはアクティブタグのみ、下記参照)
+ACTIVE_WINDOW_DAYS = 28  # cron対象: 過去28日以内に取得実績のあるタグだけ
 COOLDOWN_SECONDS = 30 * 60  # 30分
 
 
@@ -108,6 +109,22 @@ def get_watchlist() -> list[dict]:
     with conn() as c:
         rows = c.execute(
             "SELECT tag, registered_at, last_fetched_at, name, trophies FROM watchlist ORDER BY registered_at ASC"
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+
+def get_active_watchlist() -> list[dict]:
+    """cronで回す対象: 過去ACTIVE_WINDOW_DAYS日以内に取得実績ありのタグ。
+    新規登録 (last_fetched_at IS NULL) も含める (初回クロール猶予)。
+    """
+    cutoff = int(time.time()) - ACTIVE_WINDOW_DAYS * 86400
+    with conn() as c:
+        rows = c.execute(
+            """SELECT tag, registered_at, last_fetched_at, name, trophies
+               FROM watchlist
+               WHERE last_fetched_at IS NULL OR last_fetched_at >= ?
+               ORDER BY COALESCE(last_fetched_at, registered_at) ASC""",
+            (cutoff,),
         ).fetchall()
         return [dict(r) for r in rows]
 

@@ -35,11 +35,12 @@ def _fetch_one(tag: str) -> tuple[str, int, str | None]:
 
 def main():
     db.init_db()
-    wl = db.get_watchlist()
+    wl = db.get_active_watchlist()
+    total = len(db.get_watchlist())
     if not wl:
-        print(f"[{time.strftime('%F %T')}] watchlist empty, nothing to do")
+        print(f"[{time.strftime('%F %T')}] active watchlist empty (total {total}), nothing to do")
         return
-    print(f"[{time.strftime('%F %T')}] crawling {len(wl)} tags ({PARALLEL} parallel)")
+    print(f"[{time.strftime('%F %T')}] crawling {len(wl)} active / {total} total tags ({PARALLEL} parallel)")
     t0 = time.time()
     total_new = 0
     fails = 0
