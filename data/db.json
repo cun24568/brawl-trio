@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T01:28:01.645841+00:00",
+  "generated_at": "2026-05-05T01:54:44.323241+00:00",
   "stats": {
     "total_maps": 20,
     "maps_in_pool": 13,
@@ -445494,7 +445494,7 @@
       "id": null,
       "hash": "gated-community",
       "name": "Gated Community",
-      "name_jp": "",
+      "name_jp": "よそ者お断り",
       "image_url": null,
       "in_pool": false,
       "total_picks": 125681,
@@ -497803,7 +497803,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.57,
           "picks": 2577
         }
@@ -497863,7 +497863,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.617,
           "picks": 2524
         }
@@ -498043,7 +498043,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.566,
           "picks": 2037
         }
@@ -498343,7 +498343,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.593,
           "picks": 2126
         }
@@ -498517,7 +498517,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.598,
           "picks": 918
         },
@@ -498577,7 +498577,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.586,
           "picks": 1618
         },
@@ -498631,7 +498631,7 @@
       "worst_maps": [
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.627,
           "picks": 2597
         },
@@ -499057,7 +499057,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.591,
           "picks": 707
         },
@@ -499423,7 +499423,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.579,
           "picks": 731
         }
@@ -499537,7 +499537,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.622,
           "picks": 1353
         },
@@ -499843,7 +499843,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.599,
           "picks": 1138
         }
@@ -499891,7 +499891,7 @@
       "worst_maps": [
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.575,
           "picks": 391
         },
@@ -500023,7 +500023,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.575,
           "picks": 943
         }
@@ -500317,7 +500317,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.599,
           "picks": 865
         },
@@ -500497,7 +500497,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.591,
           "picks": 1099
         },
@@ -500743,7 +500743,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.561,
           "picks": 797
         }
@@ -500803,7 +500803,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.575,
           "picks": 977
         }
@@ -501017,7 +501017,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.621,
           "picks": 936
         },
@@ -501091,7 +501091,7 @@
       "worst_maps": [
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.565,
           "picks": 942
         },
@@ -501163,7 +501163,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.564,
           "picks": 786
         }
@@ -501217,7 +501217,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.598,
           "picks": 781
         },
@@ -501463,7 +501463,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.586,
           "picks": 695
         }
@@ -501517,7 +501517,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.595,
           "picks": 709
         },
@@ -501763,7 +501763,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.578,
           "picks": 780
         }
@@ -501823,7 +501823,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.624,
           "picks": 739
         }
@@ -501943,7 +501943,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.574,
           "picks": 782
         }
@@ -501997,7 +501997,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.59,
           "picks": 770
         },
@@ -502057,7 +502057,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.575,
           "picks": 576
         },
@@ -502183,7 +502183,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.555,
           "picks": 885
         }
@@ -502303,7 +502303,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.551,
           "picks": 459
         }
@@ -502423,7 +502423,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.582,
           "picks": 651
         }
@@ -502477,7 +502477,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.522,
           "picks": 707
         },
@@ -502543,7 +502543,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.596,
           "picks": 537
         }
@@ -502591,7 +502591,7 @@
       "worst_maps": [
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.599,
           "picks": 670
         },
@@ -502663,7 +502663,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.572,
           "picks": 645
         }
@@ -502703,7 +502703,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.577,
           "picks": 607
         }
@@ -502777,7 +502777,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.6,
           "picks": 575
         },
@@ -502823,7 +502823,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.643,
           "picks": 485
         }
@@ -502963,7 +502963,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.537,
           "picks": 492
         }
@@ -503017,7 +503017,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.549,
           "picks": 397
         },
@@ -503077,7 +503077,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.558,
           "picks": 430
         },
@@ -503137,7 +503137,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.564,
           "picks": 436
         },
@@ -503183,7 +503183,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.588,
           "picks": 311
         }
@@ -503251,7 +503251,7 @@
       "worst_maps": [
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.58,
           "picks": 421
         },
@@ -503323,7 +503323,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.563,
           "picks": 268
         }
@@ -503383,7 +503383,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.57,
           "picks": 596
         }
@@ -503437,7 +503437,7 @@
         },
         {
           "map": "Gated Community",
-          "map_jp": "",
+          "map_jp": "よそ者お断り",
           "win_rate": 0.512,
           "picks": 322
         },
