@@ -75,7 +75,7 @@ _CLUB_INDEX_REFRESH_SEC = 12 * 3600  # 12h
 
 
 import re as _re
-_INVISIBLE_RE = _re.compile(r'[\s　⠀​‌‍ ﻿]')
+_INVISIBLE_RE = _re.compile('[\s ᅠ　⠀​‌‍⁠﻿]')
 
 
 def _is_valid_name(s: str) -> bool:
