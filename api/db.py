@@ -286,6 +286,7 @@ def get_player_battles(tag: str, limit: int = 60, offset: int = 0) -> list[dict]
             "battle_time": r["battle_time"],
             "mode": r["mode"],
             "map": r["map"],
+            "brawler": r["brawler"] or "",
             "rank": r["rank"],
             "trophy_change": battle.get("trophyChange", 0),
             "duration": battle.get("duration", 0),

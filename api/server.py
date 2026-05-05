@@ -132,18 +132,21 @@ def get_player(tag: str, request: Request):
 
 @app.get("/api/player/{tag}/battles")
 @limiter.limit("30/minute")
-def get_battles(tag: str, request: Request, limit: int = 60, offset: int = 0):
+def get_battles(tag: str, request: Request, limit: int = 100, offset: int = 0):
     tag = _normalize_or_400(tag)
-    if limit > 200:
-        limit = 200
+    if limit > 500:
+        limit = 500
     if limit < 1:
         limit = 1
     if offset < 0:
         offset = 0
+    with db.conn() as c:
+        total = c.execute("SELECT COUNT(*) FROM battles WHERE tag=?", (tag,)).fetchone()[0]
     return {
         "tag": tag,
         "limit": limit,
         "offset": offset,
+        "total": total,
         "battles": db.get_player_battles(tag, limit=limit, offset=offset),
     }
 

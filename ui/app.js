@@ -7,8 +7,11 @@ let synergyPick2 = "";  // シナジー検索: 2人目
 // マイページAPI のホスト (Cloudflare Tunnel の HTTPS URL)
 // ローカル開発時は localStorage に "api_host" を入れれば上書きできる
 const API_HOST = localStorage.getItem("api_host") || "https://api.brawl-showdown.com";
+const MYPAGE_BATTLES_PER_PAGE = 100;
 let MYPAGE_DATA = null;
 let MYPAGE_COOLDOWN_TIMER = null;
+let MYPAGE_BATTLES_PAGE = 1;
+let MYPAGE_BATTLES_TOTAL = 0;
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -456,23 +459,51 @@ async function fetchMypage(rawTag, options = {}) {
   }
   localStorage.setItem("mypage_tag", tag);
   document.getElementById("mypage-tag").value = tag;
-  renderMypageLoading(options.refresh ? "更新中..." : "読込中...");
+  if (!options.pageOnly) {
+    MYPAGE_BATTLES_PAGE = 1;  // 新規検索/更新時は1ページ目に戻す
+  }
+  renderMypageLoading(options.refresh ? "更新中..." : options.pageOnly ? "ページ切替中..." : "読込中...");
   try {
     const encTag = encodeURIComponent(tag);
-    const [statsRes, battlesRes] = await Promise.all([
-      fetch(`${API_HOST}/api/player/${encTag}`),
-      fetch(`${API_HOST}/api/player/${encTag}/battles?limit=60`),
-    ]);
-    if (!statsRes.ok) {
-      const body = await statsRes.json().catch(() => ({ detail: statsRes.statusText }));
-      throw new Error(body.detail || `HTTP ${statsRes.status}`);
+    const offset = (MYPAGE_BATTLES_PAGE - 1) * MYPAGE_BATTLES_PER_PAGE;
+    const battlesUrl = `${API_HOST}/api/player/${encTag}/battles?limit=${MYPAGE_BATTLES_PER_PAGE}&offset=${offset}`;
+    const requests = options.pageOnly
+      ? [Promise.resolve(null), fetch(battlesUrl)]
+      : [fetch(`${API_HOST}/api/player/${encTag}`), fetch(battlesUrl)];
+    const [statsRes, battlesRes] = await Promise.all(requests);
+    if (!options.pageOnly) {
+      if (!statsRes.ok) {
+        const body = await statsRes.json().catch(() => ({ detail: statsRes.statusText }));
+        throw new Error(body.detail || `HTTP ${statsRes.status}`);
+      }
+      MYPAGE_DATA = await statsRes.json();
     }
-    MYPAGE_DATA = await statsRes.json();
-    MYPAGE_DATA.battles = battlesRes.ok ? (await battlesRes.json()).battles : [];
+    if (battlesRes && battlesRes.ok) {
+      const bj = await battlesRes.json();
+      MYPAGE_DATA.battles = bj.battles || [];
+      MYPAGE_BATTLES_TOTAL = bj.total || 0;
+    } else {
+      MYPAGE_DATA.battles = [];
+      MYPAGE_BATTLES_TOTAL = 0;
+    }
     renderMypage();
   } catch (e) {
     renderMypageError(`取得失敗: ${e.message}`);
   }
+}
+
+function changeBattlesPage(page) {
+  const totalPages = Math.max(1, Math.ceil(MYPAGE_BATTLES_TOTAL / MYPAGE_BATTLES_PER_PAGE));
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  if (page === MYPAGE_BATTLES_PAGE) return;
+  MYPAGE_BATTLES_PAGE = page;
+  fetchMypage(MYPAGE_DATA.tag, { pageOnly: true });
+  // スクロールで履歴セクションへ
+  setTimeout(() => {
+    const el = document.getElementById("mypage-battle-list");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 100);
 }
 
 async function refreshMypage(rawTag) {
@@ -675,16 +706,24 @@ function renderMypageHeatmap(battles, brawlerImg) {
 
   const cells = battles.map(b => {
     const cls = rankBorderClass(b.rank);
-    const img = brawlerImg[b.brawler];
-    return `<div class="aspect-square rounded ${cls} flex items-center justify-center" title="${escapeHtml(b.brawler)} ${b.rank}位 (${b.trophy_change >= 0 ? '+' : ''}${b.trophy_change})">
-      ${img ? `<img src="${img}" class="w-full h-full rounded object-cover" loading="lazy">` : `<span class="text-[10px]">${escapeHtml(b.brawler.slice(0, 3))}</span>`}
+    const brawler = b.brawler || "";
+    const img = brawlerImg[brawler];
+    const tcSign = b.trophy_change >= 0 ? '+' : '';
+    return `<div class="aspect-square rounded ${cls} flex items-center justify-center" title="${escapeHtml(brawler)} ${b.rank}位 (${tcSign}${b.trophy_change})">
+      ${img ? `<img src="${img}" class="w-full h-full rounded object-cover" loading="lazy">` : `<span class="text-[10px]">${escapeHtml(brawler.slice(0, 3))}</span>`}
     </div>`;
   }).join("");
+
+  const showingFrom = (MYPAGE_BATTLES_PAGE - 1) * MYPAGE_BATTLES_PER_PAGE + 1;
+  const showingTo = showingFrom + battles.length - 1;
+  const headerLabel = MYPAGE_BATTLES_TOTAL > MYPAGE_BATTLES_PER_PAGE
+    ? `試合 ${showingFrom}-${showingTo}`
+    : `直近${battles.length}試合`;
 
   return `
     <div class="bg-gray-800 p-4 rounded mb-4">
       <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
-        <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wide">直近${battles.length}試合</h3>
+        <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wide">${escapeHtml(headerLabel)}</h3>
         <span class="text-sm">
           <span class="text-green-400 font-bold">${win}勝</span>
           <span class="text-gray-400 mx-1">${draw}分</span>
@@ -692,7 +731,7 @@ function renderMypageHeatmap(battles, brawlerImg) {
           <span class="ml-2 font-mono text-yellow-300">勝率 ${winRate.toFixed(1)}%</span>
         </span>
       </div>
-      <div class="grid grid-cols-10 sm:grid-cols-12 md:grid-cols-15 lg:grid-cols-20 gap-1">
+      <div class="grid grid-cols-10 sm:grid-cols-12 md:grid-cols-16 lg:grid-cols-20 gap-1">
         ${cells}
       </div>
       <div class="text-xs text-gray-500 mt-2 flex flex-wrap gap-3">
@@ -721,7 +760,7 @@ function renderTeam(members, brawlerImg, brawlerJp, highlightTag) {
 }
 
 function renderMypageBattleList(battles, brawlerImg, brawlerJp, mapJp) {
-  if (battles.length === 0) return "";
+  if (battles.length === 0 && MYPAGE_BATTLES_TOTAL === 0) return "";
   const myTag = MYPAGE_DATA?.tag || "";
   const cards = battles.map(b => {
     const lbl = rankLabel(b.rank);
@@ -758,10 +797,44 @@ function renderMypageBattleList(battles, brawlerImg, brawlerJp, mapJp) {
   }).join("");
 
   return `
-    <div class="bg-gray-800 p-4 rounded mb-4">
-      <h3 class="text-sm font-bold mb-3 text-gray-300 uppercase tracking-wide">試合履歴</h3>
-      <div class="space-y-2">${cards}</div>
+    <div id="mypage-battle-list" class="bg-gray-800 p-4 rounded mb-4">
+      <div class="flex items-baseline justify-between mb-3 flex-wrap gap-2">
+        <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wide">試合履歴</h3>
+        <span class="text-xs text-gray-400">累計 ${MYPAGE_BATTLES_TOTAL.toLocaleString()}戦</span>
+      </div>
+      ${renderBattlesPagination()}
+      <div class="space-y-2 mt-3">${cards}</div>
+      <div class="mt-3">${renderBattlesPagination()}</div>
     </div>`;
+}
+
+function renderBattlesPagination() {
+  const total = MYPAGE_BATTLES_TOTAL;
+  const per = MYPAGE_BATTLES_PER_PAGE;
+  const totalPages = Math.max(1, Math.ceil(total / per));
+  if (totalPages <= 1) return "";
+  const cur = MYPAGE_BATTLES_PAGE;
+
+  // ページ番号ボタンの可視範囲: 現在±2 + 先頭/末尾
+  const visible = new Set([1, totalPages, cur, cur - 1, cur + 1, cur - 2, cur + 2]);
+  const pages = [...visible].filter(p => p >= 1 && p <= totalPages).sort((a, b) => a - b);
+
+  let html = "";
+  let prev = 0;
+  for (const p of pages) {
+    if (prev && p - prev > 1) html += `<span class="px-2 text-gray-500">…</span>`;
+    const active = p === cur;
+    html += `<button onclick="changeBattlesPage(${p})" class="px-3 py-1 rounded text-sm ${active ? 'bg-blue-600 text-white font-bold' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}">${p}</button>`;
+    prev = p;
+  }
+  const showingFrom = (cur - 1) * per + 1;
+  const showingTo = Math.min(cur * per, total);
+  return `<div class="flex flex-wrap items-center gap-1 text-sm">
+    <button onclick="changeBattlesPage(${cur - 1})" class="px-2 py-1 rounded ${cur === 1 ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}" ${cur === 1 ? 'disabled' : ''}>‹</button>
+    ${html}
+    <button onclick="changeBattlesPage(${cur + 1})" class="px-2 py-1 rounded ${cur === totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}" ${cur === totalPages ? 'disabled' : ''}>›</button>
+    <span class="text-xs text-gray-500 ml-2">${showingFrom}-${showingTo} / ${total.toLocaleString()}</span>
+  </div>`;
 }
 
 function renderMypageBrawlers(brawlers, brawlerJp, brawlerImg, globalStats, totalPicks) {
