@@ -1,4 +1,5 @@
 let DB = null;
+let ROTATION = null;  // {cycle_days, anchor_date, rotation: [...]}
 let currentMap = null;
 let currentTierFilter = "all";  // all / S+ / S / A / B / C
 let synergyPick1 = "";  // シナジー検索: 1人目
@@ -35,9 +36,16 @@ async function load() {
       "db.json の読込失敗。HTTPサーバ経由で開いてください: py -m http.server 8000";
     return;
   }
+  // ローテーション情報 (失敗しても致命的ではない)
+  try {
+    const r = await fetch("/data/map_rotation.json");
+    if (r.ok) ROTATION = await r.json();
+  } catch (e) { /* skip */ }
+
   const ts = new Date(DB.generated_at);
   document.getElementById("meta-info").textContent =
     `最終更新: ${ts.toLocaleString("ja-JP")} / 集計 ${DB.stats.total_picks.toLocaleString()}戦 / マップ ${DB.stats.total_maps} / ブロウラー ${DB.stats.total_brawlers}`;
+  renderRotationBanner();
   renderMapList();
   if (DB.maps.length) selectMap(DB.maps[0]);
   renderBrawlerGrid();
@@ -45,15 +53,78 @@ async function load() {
   setupSearch();
 }
 
+// ローテーション計算: 指定日付 (Date) のマップ名(JP)を返す
+function rotationMapForDate(date) {
+  if (!ROTATION) return null;
+  const anchor = new Date(ROTATION.anchor_date + "T00:00:00");
+  const target = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const diffDays = Math.floor((target - anchor) / 86400000);
+  const idx = ((diffDays % ROTATION.cycle_days) + ROTATION.cycle_days) % ROTATION.cycle_days;
+  return ROTATION.rotation[idx];
+}
+
+// 指定マップ(JP名)の次回出現日を返す: {date: Date, daysAhead: number} or null
+function nextAppearance(mapJp) {
+  if (!ROTATION) return null;
+  const today = new Date();
+  for (let d = 0; d < ROTATION.cycle_days; d++) {
+    const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    if (rotationMapForDate(t) === mapJp) return { date: t, daysAhead: d };
+  }
+  return null;
+}
+
+function renderRotationBanner() {
+  const el = document.getElementById("rotation-banner");
+  if (!el || !ROTATION) return;
+  const today = new Date();
+  const items = [];
+  for (let d = 0; d < 3; d++) {
+    const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    const map = rotationMapForDate(t);
+    const label = d === 0 ? "今日" : d === 1 ? "明日" : `${t.getMonth() + 1}/${t.getDate()}`;
+    const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
+    items.push(`<span class="${color}">${label}</span>: <span class="text-white font-semibold">${escapeHtml(map || "?")}</span>`);
+  }
+  el.innerHTML = `
+    <div class="text-xs sm:text-sm text-gray-400 flex flex-wrap items-center gap-x-3 gap-y-1">
+      <span class="text-gray-500">📅 ローテ</span>
+      ${items.join('<span class="text-gray-600">·</span>')}
+      <span class="text-gray-600 hidden sm:inline">·</span>
+      <span class="text-gray-500 text-xs">2週間周期</span>
+    </div>`;
+}
+
 function renderMapList() {
   const sel = document.getElementById("map-select");
-  // プール内 → プール外 の順で並べ、プール内優先
-  const sorted = [...DB.maps].sort((a, b) => {
-    if (a.in_pool !== b.in_pool) return a.in_pool ? -1 : 1;
-    return b.total_picks - a.total_picks;
-  });
-  sel.innerHTML = sorted.map(m => {
-    const label = `${m.name_jp || m.name} (${m.total_picks})${!m.in_pool ? " ★プール外" : ""}`;
+  let candidates;
+  if (ROTATION) {
+    // 周期(14マップ)内のマップだけ表示し、次回出現日が近い順にソート
+    const rotationSet = new Set(ROTATION.rotation);
+    candidates = DB.maps.filter(m => rotationSet.has(m.name_jp || m.name));
+    candidates.sort((a, b) => {
+      const aN = nextAppearance(a.name_jp || a.name);
+      const bN = nextAppearance(b.name_jp || b.name);
+      return (aN ? aN.daysAhead : 999) - (bN ? bN.daysAhead : 999);
+    });
+  } else {
+    // ローテ情報なければ従来挙動 (プール内→プール外)
+    candidates = [...DB.maps].sort((a, b) => {
+      if (a.in_pool !== b.in_pool) return a.in_pool ? -1 : 1;
+      return b.total_picks - a.total_picks;
+    });
+  }
+  sel.innerHTML = candidates.map(m => {
+    const next = nextAppearance(m.name_jp || m.name);
+    let badge = "";
+    if (next) {
+      if (next.daysAhead === 0) badge = " 【今日】";
+      else if (next.daysAhead === 1) badge = " 【明日】";
+      else badge = ` 【${next.daysAhead}日後】`;
+    } else if (!ROTATION && !m.in_pool) {
+      badge = " ★プール外";
+    }
+    const label = `${m.name_jp || m.name} (${m.total_picks})${badge}`;
     return `<option value="${escapeHtml(m.hash)}">${escapeHtml(label)}</option>`;
   }).join("");
   sel.addEventListener("change", () => {
