@@ -36,15 +36,15 @@ COUNTRIES = ["global", "JP", "KR", "US", "TW", "DE", "BR", "MX", "GB", "FR", "ES
 DELAY = 0.15
 TIMEOUT = 15
 RETRIES = 3  # API timeoutやネットワークエラー時のリトライ回数
-SAVE_EVERY = 100  # 並列化で件数が早く流れるので頻度下げる
-PARALLEL_WORKERS = 8
+SAVE_EVERY = 200  # 並列化で件数が早く流れるので頻度下げる
+PARALLEL_WORKERS = 16
 
 # トロフィー閾値で qualifying プールを永続蓄積
 TROPHY_THRESHOLD = 50000
-TROPHY_CHECK_LIMIT = 2000  # 1cycleで新規にチェックする数 (qualifying 早期成長)
-MAX_QUALIFYING = 15000  # qualifyingプール上限 (上位trophy順で保持)
-MAX_DISCOVERED = 1_000_000  # discovered キャッシュ上限
-CRAWL_SAMPLE_SIZE = 15000  # 1cycleでqualifyingから sample してクロールする数 (= MAXなら全員)
+TROPHY_CHECK_LIMIT = 5000  # 1cycleで新規にチェックする数 (qualifying 早期成長)
+MAX_QUALIFYING = 50000  # qualifyingプール上限 (上位trophy順で保持)
+MAX_DISCOVERED = 2_000_000  # discovered キャッシュ上限
+CRAWL_SAMPLE_SIZE = 50000  # 1cycleでqualifyingから sample してクロールする数 (= MAXなら全員)
 
 DISCOVERED_FILE = OUT / "discovered_tags.json"
 QUALIFYING_FILE = OUT / "qualifying_tags.json"
