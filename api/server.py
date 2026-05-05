@@ -75,7 +75,7 @@ _CLUB_INDEX_REFRESH_SEC = 12 * 3600  # 12h
 
 
 import re as _re
-_INVISIBLE_RE = _re.compile('[\s ᅠ　⠀​‌‍⁠﻿]')
+_INVISIBLE_RE = _re.compile(r'[\s ᅠ　⠀​‌‍⁠﻿]')
 
 
 def _is_valid_name(s: str) -> bool:
@@ -122,20 +122,31 @@ def _build_player_index():
 @app.get("/api/search/players")
 @limiter.limit("30/minute")
 def search_players(request: Request, q: str = "", limit: int = 30):
-    """プレイヤー名で部分一致検索 (case insensitive)。"""
+    """プレイヤー名で部分一致検索 (case insensitive)。
+    完全一致 → 開始一致 → 部分一致 の順 (各群はトロフィー降順)。"""
     if _PLAYER_INDEX is None:
         _build_player_index()
     q = (q or "").strip().lower()
-    if not q or len(q) < 1:
+    if not q:
         return {"results": [], "total": 0, "query": q}
     if limit > 100:
         limit = 100
-    matches = []
+    exact = []
+    starts = []
+    contains = []
     for name_lower, name, tag, tro in _PLAYER_INDEX:
-        if q in name_lower:
-            matches.append({"tag": tag, "name": name, "trophies": tro})
-    matches.sort(key=lambda x: -x["trophies"])
-    return {"results": matches[:limit], "total": len(matches), "query": q}
+        item = {"tag": tag, "name": name, "trophies": tro}
+        if name_lower == q:
+            exact.append(item)
+        elif name_lower.startswith(q):
+            starts.append(item)
+        elif q in name_lower:
+            contains.append(item)
+    exact.sort(key=lambda x: -x["trophies"])
+    starts.sort(key=lambda x: -x["trophies"])
+    contains.sort(key=lambda x: -x["trophies"])
+    merged = exact + starts + contains
+    return {"results": merged[:limit], "total": len(merged), "query": q}
 
 
 @app.post("/api/search/players/rebuild")
