@@ -59,8 +59,22 @@
     </div>
 
     <div id="tab-brawlers" class="tab-content hidden">
-      <input type="text" id="brawler-search" placeholder="ブロウラー名で検索"
-        class="w-full p-2 bg-gray-800 border border-gray-700 rounded mb-4 focus:outline-none focus:border-blue-500">
+      <div class="flex flex-wrap gap-2 mb-3 items-center">
+        <input type="text" id="brawler-search" placeholder="ブロウラー名で検索"
+          class="flex-1 min-w-[160px] p-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500">
+        <select id="brawler-sort" class="p-2 bg-gray-800 border border-gray-700 rounded text-sm">
+          <option value="best_tier">最高ティア順</option>
+          <option value="weighted_wr">勝率順</option>
+          <option value="weighted_avg_rank">平均順位順</option>
+          <option value="picks">ピック数順</option>
+          <option value="name">名前順</option>
+        </select>
+        <label class="text-sm text-gray-300 flex items-center gap-1 px-2 py-2 bg-gray-800 border border-gray-700 rounded cursor-pointer hover:bg-gray-700">
+          <input type="checkbox" id="brawler-filter-strong" class="cursor-pointer">
+          <span>S+/Sのみ</span>
+        </label>
+      </div>
+      <div id="brawler-count" class="text-xs text-gray-500 mb-2"></div>
       <div id="brawler-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2"></div>
       <div id="brawler-detail" class="mt-6"></div>
     </div>

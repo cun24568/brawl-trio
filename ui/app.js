@@ -392,19 +392,95 @@ function renderSynergySection(m) {
     </div>`;
 }
 
+// 各ブロウラーに「現プールでの最高ティア / 重み付き勝率 / 重み付き平均順位 / 出現マップ数」を付与
+function computeBrawlerExtras() {
+  if (!DB || !DB.brawlers || !DB.maps) return;
+  if (DB._brawlerExtrasComputed) return;
+  const stats = {};  // name → {tiers, picks, top2_sum, rank_sum}
+  for (const m of DB.maps) {
+    if (!m.in_pool || !m.tier_list) continue;
+    for (const t of m.tier_list) {
+      const s = stats[t.brawler] || (stats[t.brawler] = { tiers: [], picks: 0, top2_sum: 0, rank_sum: 0 });
+      s.tiers.push(t.tier);
+      s.picks += t.picks || 0;
+      // tier_list の win_rate は TOP2率 (= rank<=2) として保存されている
+      s.top2_sum += (t.win_rate || 0) * (t.picks || 0);
+      s.rank_sum += (t.avg_rank || 0) * (t.picks || 0);
+    }
+  }
+  for (const b of DB.brawlers) {
+    const s = stats[b.name] || { tiers: [], picks: 0, top2_sum: 0, rank_sum: 0 };
+    let bestTier = null;
+    for (const t of s.tiers) {
+      if (bestTier == null || (TIER_ORDER.indexOf(t) >= 0 && TIER_ORDER.indexOf(t) < TIER_ORDER.indexOf(bestTier))) {
+        bestTier = t;
+      }
+    }
+    b._bestTier = bestTier;
+    b._weightedWr = s.picks ? (s.top2_sum / s.picks) : null;
+    b._weightedAvgRank = s.picks ? (s.rank_sum / s.picks) : null;
+    b._poolPicks = s.picks;
+    b._poolMapsCount = s.tiers.length;
+  }
+  DB._brawlerExtrasComputed = true;
+}
+
 function renderBrawlerGrid(filter = "") {
+  computeBrawlerExtras();
   const el = document.getElementById("brawler-grid");
-  const f = filter.toLowerCase();
-  const list = DB.brawlers.filter(b =>
+  const f = (filter || "").toLowerCase();
+  const sort = document.getElementById("brawler-sort")?.value || "best_tier";
+  const strongOnly = document.getElementById("brawler-filter-strong")?.checked || false;
+
+  let list = DB.brawlers.filter(b =>
     !f || b.name.toLowerCase().includes(f) || (b.name_jp || "").includes(filter)
   );
-  el.innerHTML = list.map(b => `
-    <div class="brawler-card p-2 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500" data-name="${escapeHtml(b.name)}">
+  if (strongOnly) {
+    list = list.filter(b => b._bestTier === "S+" || b._bestTier === "S");
+  }
+
+  const tierIdx = t => {
+    const i = TIER_ORDER.indexOf(t);
+    return i < 0 ? 99 : i;
+  };
+  list.sort((a, b) => {
+    if (sort === "best_tier") {
+      const d = tierIdx(a._bestTier) - tierIdx(b._bestTier);
+      if (d !== 0) return d;
+      return (b._poolPicks || 0) - (a._poolPicks || 0);
+    }
+    if (sort === "weighted_wr") return (b._weightedWr || 0) - (a._weightedWr || 0);
+    if (sort === "weighted_avg_rank") return (a._weightedAvgRank ?? 99) - (b._weightedAvgRank ?? 99);
+    if (sort === "picks") return (b.total_picks || 0) - (a.total_picks || 0);
+    if (sort === "name") return (a.name_jp || a.name).localeCompare(b.name_jp || b.name, "ja");
+    return 0;
+  });
+
+  document.getElementById("brawler-count").textContent =
+    `${list.length}体表示中 (全${DB.brawlers.length}体)`;
+
+  el.innerHTML = list.map(b => {
+    const tier = b._bestTier;
+    const tierBadge = tier
+      ? `<span class="absolute top-1 left-1 px-1.5 py-0 rounded text-[10px] font-bold ${TIER_COLORS[tier] || ''}">${tier}</span>`
+      : '';
+    const wr = b._weightedWr;
+    const wrColor = wr == null ? "text-gray-500"
+      : wr >= 0.6 ? "text-green-300 font-bold"
+      : wr >= 0.5 ? "text-yellow-300"
+      : wr >= 0.4 ? "text-gray-300"
+      : "text-red-300";
+    const wrText = wr == null ? "—" : `${(wr * 100).toFixed(0)}%`;
+    const mapCount = b._poolMapsCount || 0;
+    return `
+    <div class="brawler-card relative p-2 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500" data-name="${escapeHtml(b.name)}">
+      ${tierBadge}
       ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
       <div class="text-xs mt-1 truncate font-semibold">${escapeHtml(b.name_jp || b.name)}</div>
-      <div class="text-xs text-gray-500">${b.total_picks}p</div>
+      <div class="text-xs ${wrColor}">${wrText} <span class="text-gray-500 text-[10px]">${mapCount}M</span></div>
     </div>
-  `).join("");
+  `;
+  }).join("");
   el.querySelectorAll(".brawler-card").forEach(node => {
     node.addEventListener("click", () => {
       const b = DB.brawlers.find(x => x.name === node.dataset.name);
@@ -475,9 +551,13 @@ function setupTabs() {
 }
 
 function setupSearch() {
-  document.getElementById("brawler-search").addEventListener("input", e => {
-    renderBrawlerGrid(e.target.value);
-  });
+  const search = document.getElementById("brawler-search");
+  const sort = document.getElementById("brawler-sort");
+  const strong = document.getElementById("brawler-filter-strong");
+  const trigger = () => renderBrawlerGrid(search.value);
+  search.addEventListener("input", trigger);
+  sort.addEventListener("change", trigger);
+  strong.addEventListener("change", trigger);
 }
 
 function escapeHtml(s) {
