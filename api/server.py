@@ -74,9 +74,22 @@ _CLUB_INDEX_BUILT_AT = 0
 _CLUB_INDEX_REFRESH_SEC = 12 * 3600  # 12h
 
 
+import re as _re
+_INVISIBLE_RE = _re.compile(r'[\s　⠀​‌‍ ﻿]')
+
+
+def _is_valid_name(s: str) -> bool:
+    """空文字 / 全角スペース / ブレイル空白等の不可視文字だけのnameを除外"""
+    if not s:
+        return False
+    cleaned = _INVISIBLE_RE.sub("", s)
+    return len(cleaned) > 0
+
+
 def _build_player_index():
     """jsonl 全件 streaming で (name → tag) を収集。
-    各タグは「最新の trophies」と「最新の name」で1エントリ。"""
+    各タグは「最新の trophies」と「最新の name」で1エントリ。
+    名前が空白系のみのプレイヤーは除外。"""
     global _PLAYER_INDEX, _PLAYER_INDEX_BUILT_AT
     with _PLAYER_INDEX_LOCK:
         if not _JSONL_PATH.exists():
@@ -96,7 +109,7 @@ def _build_player_index():
                         ptag = p.get("tag")
                         pname = p.get("name", "")
                         ptro = (p.get("brawler") or {}).get("trophies", 0)
-                        if not ptag or not pname:
+                        if not ptag or not _is_valid_name(pname):
                             continue
                         latest[ptag] = (pname, ptro)
         index = []
