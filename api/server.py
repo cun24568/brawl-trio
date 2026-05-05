@@ -98,7 +98,6 @@ def get_player(tag: str, request: Request):
     wl = db.get_watchlist()
     is_registered = any(w["tag"] == tag for w in wl)
     if not is_registered:
-        # プロフィールも取得して登録
         try:
             player = brawl_api.get_player(tag)
             db.add_to_watchlist(tag, name=player.get("name"), trophies=player.get("trophies"))
@@ -106,15 +105,17 @@ def get_player(tag: str, request: Request):
             if e.code == 404:
                 raise HTTPException(status_code=404, detail="player tag not found")
             raise HTTPException(status_code=502, detail=f"upstream error HTTP {e.code}")
-        # 過去履歴インポート: 全体クロールが既に蓄積している試合から該当タグの分を抽出
-        historical_jsonl = Path(__file__).parent.parent / "data" / "trio_battles.jsonl"
-        try:
-            n_hist = db.import_historical_battles(tag, historical_jsonl)
-            print(f"[{tag}] historical import: +{n_hist} battles")
-        except Exception as e:
-            print(f"[{tag}] historical import failed: {type(e).__name__}: {e}")
-        # 最新 battlelog (公式API) も取得
+        # 初回フェッチ (公式API)
         _fetch_and_save(tag)
+
+    # ページ表示のたびに jsonl からの差分も取り込む (重複は INSERT OR IGNORE で無視)
+    historical_jsonl = Path(__file__).parent.parent / "data" / "trio_battles.jsonl"
+    try:
+        n_hist = db.import_historical_battles(tag, historical_jsonl)
+        if n_hist:
+            print(f"[{tag}] historical import: +{n_hist} battles")
+    except Exception as e:
+        print(f"[{tag}] historical import failed: {type(e).__name__}: {e}")
 
     stats = db.get_player_stats(tag)
     cooldown = db.cooldown_remaining(tag)
