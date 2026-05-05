@@ -425,6 +425,28 @@ function computeBrawlerExtras() {
   DB._brawlerExtrasComputed = true;
 }
 
+function renderBrawlerCard(b) {
+  const tier = b._bestTier;
+  const tierBadge = tier
+    ? `<span class="absolute top-0.5 left-0.5 px-1 py-0 rounded text-[9px] font-bold ${TIER_COLORS[tier] || ''}">${tier}</span>`
+    : '';
+  const wr = b._weightedWr;
+  const wrColor = wr == null ? "text-gray-500"
+    : wr >= 0.6 ? "text-green-300 font-bold"
+    : wr >= 0.5 ? "text-yellow-300"
+    : wr >= 0.4 ? "text-gray-300"
+    : "text-red-300";
+  const wrText = wr == null ? "—" : `${(wr * 100).toFixed(0)}%`;
+  const dim = wr == null ? "opacity-60" : "";
+  return `
+    <div class="brawler-card relative p-1 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500 ${dim}" data-name="${escapeHtml(b.name)}">
+      ${tierBadge}
+      ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
+      <div class="text-[11px] mt-0.5 truncate font-semibold leading-tight">${escapeHtml(b.name_jp || b.name)}</div>
+      <div class="text-[10px] ${wrColor} leading-tight">${wrText}</div>
+    </div>`;
+}
+
 function renderBrawlerGrid(filter = "") {
   computeBrawlerExtras();
   const el = document.getElementById("brawler-grid");
@@ -459,28 +481,50 @@ function renderBrawlerGrid(filter = "") {
   document.getElementById("brawler-count").textContent =
     `${list.length}体表示中 (全${DB.brawlers.length}体)`;
 
-  el.innerHTML = list.map(b => {
-    const tier = b._bestTier;
-    const tierBadge = tier
-      ? `<span class="absolute top-1 left-1 px-1.5 py-0 rounded text-[10px] font-bold ${TIER_COLORS[tier] || ''}">${tier}</span>`
-      : '';
-    const wr = b._weightedWr;
-    const wrColor = wr == null ? "text-gray-500"
-      : wr >= 0.6 ? "text-green-300 font-bold"
-      : wr >= 0.5 ? "text-yellow-300"
-      : wr >= 0.4 ? "text-gray-300"
-      : "text-red-300";
-    const wrText = wr == null ? "—" : `${(wr * 100).toFixed(0)}%`;
-    const mapCount = b._poolMapsCount || 0;
-    return `
-    <div class="brawler-card relative p-2 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500" data-name="${escapeHtml(b.name)}">
-      ${tierBadge}
-      ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
-      <div class="text-xs mt-1 truncate font-semibold">${escapeHtml(b.name_jp || b.name)}</div>
-      <div class="text-xs ${wrColor}">${wrText} <span class="text-gray-500 text-[10px]">${mapCount}M</span></div>
-    </div>
-  `;
-  }).join("");
+  // 現プール内 (_bestTier !== null) と プール外を分離
+  const inPool = list.filter(b => b._bestTier);
+  const outPool = list.filter(b => !b._bestTier);
+
+  const gridCls = "grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-1";
+
+  let html = "";
+
+  if (sort === "best_tier" && !filter) {
+    // ティア別セクション分け
+    const groups = {};
+    for (const b of inPool) {
+      const t = b._bestTier;
+      (groups[t] ||= []).push(b);
+    }
+    for (const t of TIER_ORDER) {
+      const g = groups[t];
+      if (!g || g.length === 0) continue;
+      html += `
+        <div class="mb-3">
+          <div class="flex items-baseline gap-2 mb-1.5 sticky top-0 bg-gray-900 py-1 z-[5]">
+            <span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[t] || ''}">${t}</span>
+            <span class="text-xs text-gray-400">${g.length}体</span>
+          </div>
+          <div class="${gridCls}">${g.map(renderBrawlerCard).join("")}</div>
+        </div>`;
+    }
+  } else {
+    html += `<div class="${gridCls}">${inPool.map(renderBrawlerCard).join("")}</div>`;
+  }
+
+  // プール外セクション (折りたたみ、デフォルト閉じる)
+  if (outPool.length > 0 && !strongOnly) {
+    html += `
+      <details class="mt-4">
+        <summary class="cursor-pointer text-sm text-gray-400 hover:text-gray-200 py-2 select-none">
+          現プール未収録 ${outPool.length}体 (クリックで展開)
+        </summary>
+        <div class="${gridCls} mt-2">${outPool.map(renderBrawlerCard).join("")}</div>
+      </details>`;
+  }
+
+  el.innerHTML = html;
+
   el.querySelectorAll(".brawler-card").forEach(node => {
     node.addEventListener("click", () => {
       const b = DB.brawlers.find(x => x.name === node.dataset.name);
