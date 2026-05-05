@@ -90,9 +90,27 @@ def _fetch_and_save(tag: str) -> tuple[int, int]:
     return inserted, len(battles)
 
 
+def _since_for_period(period: str | None) -> str | None:
+    """period 'all' / '7d' / '30d' を battle_time フォーマットの since に変換"""
+    if not period or period == "all":
+        return None
+    days = None
+    if period == "7d":
+        days = 7
+    elif period == "30d":
+        days = 30
+    elif period == "1d":
+        days = 1
+    else:
+        return None
+    from datetime import datetime, timedelta, timezone
+    dt = datetime.now(timezone.utc) - timedelta(days=days)
+    return dt.strftime("%Y%m%dT%H%M%S.000Z")
+
+
 @app.get("/api/player/{tag}")
 @limiter.limit("20/minute")
-def get_player(tag: str, request: Request):
+def get_player(tag: str, request: Request, period: str = "all"):
     tag = _normalize_or_400(tag)
     # 初回(未登録 または 試合データなし) → 自動で取得+登録
     wl = db.get_watchlist()
@@ -117,7 +135,8 @@ def get_player(tag: str, request: Request):
     except Exception as e:
         print(f"[{tag}] historical import failed: {type(e).__name__}: {e}")
 
-    stats = db.get_player_stats(tag)
+    since = _since_for_period(period)
+    stats = db.get_player_stats(tag, since=since)
     cooldown = db.cooldown_remaining(tag)
     last_fetched = db.last_fetch_time(tag)
 
@@ -131,6 +150,7 @@ def get_player(tag: str, request: Request):
         "tag": tag,
         "profile": dict(prof) if prof else {},
         "stats": stats,
+        "period": period,
         "cooldown_seconds": cooldown,
         "last_fetched_at": last_fetched,
         "watchlist_count": len(db.get_watchlist()),

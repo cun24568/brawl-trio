@@ -202,55 +202,56 @@ def cooldown_remaining(tag: str) -> int:
     return max(0, COOLDOWN_SECONDS - elapsed)
 
 
-def get_player_stats(tag: str) -> dict:
-    """そのタグのトリオサバイバル集計データを返す
-    (保存時点でトリオのみフィルタ済 → ここでは全件集計)。"""
+def get_player_stats(tag: str, since: str | None = None) -> dict:
+    """そのタグのトリオサバイバル集計データを返す。
+    since: battle_time の下限 (YYYYMMDDTHHMMSS.000Z 形式)、 None なら全期間。"""
     tag = normalize_tag(tag)
+    extra = ""
+    base_params = [tag]
+    if since:
+        extra = " AND battle_time >= ?"
+        base_params.append(since)
 
     with conn() as c:
-        # サマリ
         summary = c.execute(
-            """SELECT
+            f"""SELECT
                   COUNT(*) AS total,
                   SUM(CASE WHEN rank<=2 THEN 1 ELSE 0 END) AS top2,
                   SUM(CASE WHEN rank=1 THEN 1 ELSE 0 END) AS rank1,
                   AVG(CAST(rank AS REAL)) AS avg_rank,
                   MIN(battle_time) AS first_battle,
                   MAX(battle_time) AS last_battle
-                FROM battles WHERE tag=?""",
-            (tag,),
+                FROM battles WHERE tag=?{extra}""",
+            base_params,
         ).fetchone()
 
-        # ブロウラー別 (上位50)
         brawlers = c.execute(
-            """SELECT brawler, COUNT(*) AS picks,
+            f"""SELECT brawler, COUNT(*) AS picks,
                        SUM(CASE WHEN rank<=2 THEN 1 ELSE 0 END) AS top2,
                        SUM(CASE WHEN rank=1 THEN 1 ELSE 0 END) AS rank1,
                        AVG(CAST(rank AS REAL)) AS avg_rank
-                FROM battles WHERE tag=? AND brawler != ''
+                FROM battles WHERE tag=?{extra} AND brawler != ''
                 GROUP BY brawler ORDER BY picks DESC LIMIT 50""",
-            (tag,),
+            base_params,
         ).fetchall()
 
-        # マップ別
         maps = c.execute(
-            """SELECT map, COUNT(*) AS picks,
+            f"""SELECT map, COUNT(*) AS picks,
                        SUM(CASE WHEN rank<=2 THEN 1 ELSE 0 END) AS top2,
                        SUM(CASE WHEN rank=1 THEN 1 ELSE 0 END) AS rank1,
                        AVG(CAST(rank AS REAL)) AS avg_rank
-                FROM battles WHERE tag=? AND map != ''
+                FROM battles WHERE tag=?{extra} AND map != ''
                 GROUP BY map ORDER BY picks DESC""",
-            (tag,),
+            base_params,
         ).fetchall()
 
-        # ブロウラー × マップ (3戦以上)
         brawler_map = c.execute(
-            """SELECT brawler, map, COUNT(*) AS picks,
+            f"""SELECT brawler, map, COUNT(*) AS picks,
                        SUM(CASE WHEN rank<=2 THEN 1 ELSE 0 END) AS top2,
                        AVG(CAST(rank AS REAL)) AS avg_rank
-                FROM battles WHERE tag=? AND brawler != '' AND map != ''
+                FROM battles WHERE tag=?{extra} AND brawler != '' AND map != ''
                 GROUP BY brawler, map HAVING picks >= 3""",
-            (tag,),
+            base_params,
         ).fetchall()
 
     return {

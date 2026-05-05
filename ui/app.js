@@ -13,6 +13,7 @@ let MYPAGE_DATA = null;
 let MYPAGE_COOLDOWN_TIMER = null;
 let MYPAGE_BATTLES_PAGE = 1;
 let MYPAGE_BATTLES_TOTAL = 0;
+let MYPAGE_PERIOD = localStorage.getItem("mypage_period") || "all";  // "all" | "30d" | "7d" | "1d"
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -707,9 +708,10 @@ async function fetchMypage(rawTag, options = {}) {
     const encTag = encodeURIComponent(tag);
     const offset = (MYPAGE_BATTLES_PAGE - 1) * MYPAGE_BATTLES_PER_PAGE;
     const battlesUrl = `${API_HOST}/api/player/${encTag}/battles?limit=${MYPAGE_BATTLES_PER_PAGE}&offset=${offset}`;
+    const statsUrl = `${API_HOST}/api/player/${encTag}?period=${encodeURIComponent(MYPAGE_PERIOD)}`;
     const requests = options.pageOnly
       ? [Promise.resolve(null), fetch(battlesUrl)]
-      : [fetch(`${API_HOST}/api/player/${encTag}`), fetch(battlesUrl)];
+      : [fetch(statsUrl), fetch(battlesUrl)];
     const [statsRes, battlesRes] = await Promise.all(requests);
     if (!options.pageOnly) {
       if (!statsRes.ok) {
@@ -850,6 +852,16 @@ function renderMypageHeader(d, profile, period) {
   const regAt = profile.registered_at
     ? new Date(profile.registered_at * 1000).toLocaleDateString("ja-JP")
     : "—";
+  const periods = [
+    { val: "1d", label: "1日" },
+    { val: "7d", label: "7日" },
+    { val: "30d", label: "30日" },
+    { val: "all", label: "全期間" },
+  ];
+  const periodBtns = periods.map(p => {
+    const active = MYPAGE_PERIOD === p.val;
+    return `<button onclick="changeMypagePeriod('${p.val}')" class="px-3 py-1 rounded text-xs font-bold ${active ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}">${p.label}</button>`;
+  }).join("");
   return `
     <div class="bg-gray-800 p-4 rounded mb-4">
       <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -858,9 +870,22 @@ function renderMypageHeader(d, profile, period) {
         ${profile.trophies ? `<span class="text-sm text-yellow-400">🏆 ${profile.trophies.toLocaleString()}</span>` : ""}
       </div>
       <div class="text-xs text-gray-500 mt-1">
-        登録: ${regAt} ・ 集計期間: ${period}
+        登録: ${regAt} ・ データ期間: ${period}
+      </div>
+      <div class="flex flex-wrap gap-1 mt-3">
+        <span class="text-xs text-gray-400 mr-1 self-center">集計期間:</span>
+        ${periodBtns}
       </div>
     </div>`;
+}
+
+function changeMypagePeriod(p) {
+  if (MYPAGE_PERIOD === p) return;
+  MYPAGE_PERIOD = p;
+  localStorage.setItem("mypage_period", p);
+  if (MYPAGE_DATA && MYPAGE_DATA.tag) {
+    fetchMypage(MYPAGE_DATA.tag);
+  }
 }
 
 function renderEmptyState() {
