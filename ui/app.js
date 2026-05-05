@@ -99,21 +99,38 @@ function renderMapList() {
   const sel = document.getElementById("map-select");
   let candidates;
   if (ROTATION) {
-    // 周期(14マップ)内のマップだけ表示し、次回出現日が近い順にソート
-    const rotationSet = new Set(ROTATION.rotation);
-    candidates = DB.maps.filter(m => rotationSet.has(m.name_jp || m.name));
+    // 周期14マップを基準に並べる (DBに居ないマップもプレースホルダ生成)
+    const dbByJp = new Map();
+    for (const m of DB.maps) dbByJp.set(m.name_jp || m.name, m);
+    candidates = ROTATION.rotation.map(jp => {
+      const m = dbByJp.get(jp);
+      if (m) return m;
+      // データ未蓄積マップのプレースホルダ (hash プレフィックスで識別)
+      return {
+        hash: "__missing__" + jp,
+        name: jp,
+        name_jp: jp,
+        total_picks: 0,
+        in_pool: true,
+        tier_list: [],
+        recommended_trios: [],
+        all_trios: [],
+        _placeholder: true,
+      };
+    });
     candidates.sort((a, b) => {
       const aN = nextAppearance(a.name_jp || a.name);
       const bN = nextAppearance(b.name_jp || b.name);
       return (aN ? aN.daysAhead : 999) - (bN ? bN.daysAhead : 999);
     });
   } else {
-    // ローテ情報なければ従来挙動 (プール内→プール外)
     candidates = [...DB.maps].sort((a, b) => {
       if (a.in_pool !== b.in_pool) return a.in_pool ? -1 : 1;
       return b.total_picks - a.total_picks;
     });
   }
+  // candidates をグローバルに保持しておく (selectMap 用)
+  DB._mapCandidates = candidates;
   sel.innerHTML = candidates.map(m => {
     const next = nextAppearance(m.name_jp || m.name);
     let badge = "";
@@ -124,11 +141,12 @@ function renderMapList() {
     } else if (!ROTATION && !m.in_pool) {
       badge = " ★プール外";
     }
-    const label = `${m.name_jp || m.name} (${m.total_picks})${badge}`;
+    const dataMark = m._placeholder ? " ⏳" : "";
+    const label = `${m.name_jp || m.name} (${m.total_picks})${badge}${dataMark}`;
     return `<option value="${escapeHtml(m.hash)}">${escapeHtml(label)}</option>`;
   }).join("");
   sel.addEventListener("change", () => {
-    const m = DB.maps.find(x => x.hash === sel.value);
+    const m = (DB._mapCandidates || DB.maps).find(x => x.hash === sel.value);
     if (m) selectMap(m);
   });
 }
