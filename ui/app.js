@@ -944,13 +944,16 @@ function renderMypageHeatmap(battles, brawlerImg) {
   }
   const winRate = battles.length ? (win / battles.length * 100) : 0;
 
+  const rankBadgeBg = { 1: "bg-green-600", 2: "bg-blue-500", 3: "bg-gray-500", 4: "bg-red-600" };
   const cells = battles.map(b => {
     const cls = rankBorderClass(b.rank);
     const brawler = b.brawler || "";
     const img = brawlerImg[brawler];
     const tcSign = b.trophy_change >= 0 ? '+' : '';
-    return `<div class="aspect-square rounded ${cls} flex items-center justify-center" title="${escapeHtml(brawler)} ${b.rank}位 (${tcSign}${b.trophy_change})">
+    const rankBg = rankBadgeBg[b.rank] || "bg-gray-700";
+    return `<div class="aspect-square rounded ${cls} relative flex items-center justify-center" title="${escapeHtml(brawler)} ${b.rank}位 (${tcSign}${b.trophy_change})">
       ${img ? `<img src="${img}" class="w-full h-full rounded object-cover" loading="lazy">` : `<span class="text-[10px]">${escapeHtml(brawler.slice(0, 3))}</span>`}
+      <span class="absolute bottom-0 right-0 ${rankBg} text-white text-[10px] font-bold leading-none px-1 py-0.5 rounded-tl rounded-br">${b.rank}</span>
     </div>`;
   }).join("");
 
