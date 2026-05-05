@@ -723,17 +723,18 @@ function kanaToHira(s) {
 }
 
 // ブロウラー名検索エイリアス (英語表記のまま日本語名になってるキャラを 日本語読みでも検索可に)
+// キーは大文字 + 記号/空白除去で正規化したもの
 const BRAWLER_ALIASES = {
-  "MAX": ["マックス"],
+  "MAX": ["マックス", "まっくす"],
   "EMZ": ["イーエムジー", "えむず", "エムズ", "イーエム", "え", "エ"],
-  "8-BIT": ["エイトビット", "8ビット"],
-  "8BIT": ["エイトビット", "8ビット"],
-  "R-T": ["アールティー", "アール"],
-  "RT": ["アールティー", "アール"],
-  "MR.P": ["ミスターP", "みすたーぴー"],
-  "MR-P": ["ミスターP"],
-  "MRP": ["ミスターP"],
+  "8BIT": ["エイトビット", "8ビット", "えいとびっと"],
+  "RT": ["アールティー", "アール", "あーるてぃー"],
+  "MRP": ["ミスターP", "ミスターピー", "みすたーぴー", "ぴー", "ピー", "p"],
 };
+
+function _aliasKey(s) {
+  return (s || "").toUpperCase().replace(/[\s.\-]/g, "");
+}
 
 function brawlerNameMatches(enName, jpName, query) {
   if (!query) return true;
@@ -744,7 +745,7 @@ function brawlerNameMatches(enName, jpName, query) {
     if (jpName.includes(query)) return true;
     if (kanaToHira(jpName.toLowerCase()).includes(qHira)) return true;
   }
-  const aliases = BRAWLER_ALIASES[(enName || "").toUpperCase()] || [];
+  const aliases = BRAWLER_ALIASES[_aliasKey(enName)] || [];
   for (const a of aliases) {
     if (a.toLowerCase().includes(q)) return true;
     if (kanaToHira(a.toLowerCase()).includes(qHira)) return true;
