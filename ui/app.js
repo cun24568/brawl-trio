@@ -46,7 +46,7 @@ async function load() {
 
   const ts = new Date(DB.generated_at);
   document.getElementById("meta-info").textContent =
-    `最終更新: ${ts.toLocaleString("ja-JP")} / 集計 ${DB.stats.total_picks.toLocaleString()}戦 / マップ ${DB.stats.total_maps} / ブロウラー ${DB.stats.total_brawlers}`;
+    `最終更新: ${ts.toLocaleString("ja-JP")} / 集計 ${DB.stats.total_picks.toLocaleString()}戦`;
   renderRotationBanner();
   renderMapList();
   // 今日のマップを自動選択 (ローテ情報あれば)
@@ -89,10 +89,10 @@ function renderRotationBanner() {
   if (!el || !ROTATION) return;
   const today = new Date();
   const items = [];
-  for (let d = 0; d < 3; d++) {
+  for (let d = 0; d < 2; d++) {
     const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
     const map = rotationMapForDate(t);
-    const label = d === 0 ? "今日" : d === 1 ? "明日" : `${t.getMonth() + 1}/${t.getDate()}`;
+    const label = d === 0 ? "今日" : "明日";
     const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
     items.push(`<span class="${color}">${label}</span>: <span class="text-white font-semibold">${escapeHtml(map || "?")}</span>`);
   }
