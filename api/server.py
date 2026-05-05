@@ -216,6 +216,37 @@ def _fetch_and_save(tag: str) -> tuple[int, int]:
     return inserted, len(battles)
 
 
+# 非同期 historical import: 同タグの重複起動を防ぐためのロック (in-progress set)
+_HISTORICAL_IN_PROGRESS = set()
+_HISTORICAL_LOCK = threading.Lock()
+_HISTORICAL_LAST_RUN = {}  # tag → unix ts
+
+
+def _historical_worker(tag: str, jsonl_path):
+    try:
+        n = db.import_historical_battles(tag, jsonl_path)
+        if n:
+            print(f"[{tag}] historical import (async): +{n} battles")
+    except Exception as e:
+        print(f"[{tag}] historical async failed: {type(e).__name__}: {e}")
+    finally:
+        with _HISTORICAL_LOCK:
+            _HISTORICAL_IN_PROGRESS.discard(tag)
+            _HISTORICAL_LAST_RUN[tag] = int(time.time())
+
+
+def _trigger_historical_import_async(tag: str, jsonl_path, min_interval: int = 600):
+    """非同期で historical import を起動。 同タグ進行中 or 直近10分以内に実行済ならskip。"""
+    with _HISTORICAL_LOCK:
+        if tag in _HISTORICAL_IN_PROGRESS:
+            return
+        last = _HISTORICAL_LAST_RUN.get(tag, 0)
+        if int(time.time()) - last < min_interval:
+            return
+        _HISTORICAL_IN_PROGRESS.add(tag)
+    threading.Thread(target=_historical_worker, args=(tag, jsonl_path), daemon=True).start()
+
+
 def _since_for_period(period: str | None) -> str | None:
     """period 'all' / '7d' / '30d' を battle_time フォーマットの since に変換"""
     if not period or period == "all":
@@ -252,14 +283,10 @@ def get_player(tag: str, request: Request, period: str = "all"):
         # 初回フェッチ (公式API)
         _fetch_and_save(tag)
 
-    # ページ表示のたびに jsonl からの差分も取り込む (重複は INSERT OR IGNORE で無視)
+    # historical import は非同期実行 (jsonl 745MB+ で 5-10秒かかるため UI ブロックしない)
+    # 次回ページアクセス時には反映される
     historical_jsonl = Path(__file__).parent.parent / "data" / "trio_battles.jsonl"
-    try:
-        n_hist = db.import_historical_battles(tag, historical_jsonl)
-        if n_hist:
-            print(f"[{tag}] historical import: +{n_hist} battles")
-    except Exception as e:
-        print(f"[{tag}] historical import failed: {type(e).__name__}: {e}")
+    _trigger_historical_import_async(tag, historical_jsonl)
 
     since = _since_for_period(period)
     stats = db.get_player_stats(tag, since=since)
