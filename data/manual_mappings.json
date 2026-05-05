@@ -13,7 +13,8 @@
     "kroket": "クロケット",
     "makeshift-scaffolding": "即席足場",
     "molten-to-the-core": "マグマの心臓",
-    "starfruit-supernova": "スターフルーツ超新星"
+    "starfruit-supernova": "スターフルーツ超新星",
+    "gated-community": "よそ者お断り"
   },
   "brawler_jp_names": {
     "shelly": "シェリー",
@@ -140,7 +141,8 @@
     "kroket",
     "makeshift-scaffolding",
     "molten-to-the-core",
-    "starfruit-supernova"
+    "starfruit-supernova",
+    "gated-community"
   ],
   "_manual_maps_comment": "Brawlify 未収録マップを手動定義。idはBrawlify反映後に差し替え",
   "manual_maps": [
