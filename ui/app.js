@@ -342,6 +342,62 @@ function setMapSection(s) {
   renderMapDetail();
 }
 
+// シナジー検索の名前検索 (ひらがな対応)
+function onSynergySearchInput(slot, val) {
+  const sug = document.getElementById(`synergy-suggest-${slot}`);
+  if (!sug) return;
+  if (!val) {
+    sug.classList.add("hidden");
+    setSynergyPick(slot, "");
+    return;
+  }
+  const m = currentMap;
+  if (!m || !m.all_trios) { sug.classList.add("hidden"); return; }
+  const brawlerJpMap = {};
+  for (const t of m.all_trios) {
+    for (const mem of t.members) brawlerJpMap[mem.brawler] = mem.brawler_jp || mem.brawler;
+  }
+  const fLow = val.toLowerCase();
+  const fHira = kanaToHira(fLow);
+  const matches = Object.entries(brawlerJpMap).filter(([en, jp]) => {
+    if (en.toLowerCase().includes(fLow)) return true;
+    if ((jp || "").includes(val)) return true;
+    if (kanaToHira((jp || "").toLowerCase()).includes(fHira)) return true;
+    return false;
+  });
+  if (matches.length === 0) {
+    sug.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">該当なし</div>';
+    sug.classList.remove("hidden");
+    return;
+  }
+  matches.sort((a, b) => (a[1] || "").localeCompare(b[1] || "", "ja"));
+  sug.innerHTML = matches.slice(0, 30).map(([en, jp]) => `
+    <div onclick="selectSynergyMember(${slot}, '${escapeHtml(en)}')" class="px-3 py-2 text-sm cursor-pointer hover:bg-gray-700">
+      ${escapeHtml(jp || en)} <span class="text-gray-500 text-xs">${escapeHtml(en)}</span>
+    </div>`).join("");
+  sug.classList.remove("hidden");
+}
+
+function selectSynergyMember(slot, en) {
+  const sug = document.getElementById(`synergy-suggest-${slot}`);
+  if (sug) sug.classList.add("hidden");
+  setSynergyPick(slot, en);
+}
+
+// クリック外で synergy サジェスト閉じる (1度だけ登録)
+if (typeof window._synergyCloseAttached === "undefined") {
+  window._synergyCloseAttached = true;
+  document.addEventListener("click", e => {
+    for (const slot of [1, 2]) {
+      const sug = document.getElementById(`synergy-suggest-${slot}`);
+      const inp = document.getElementById(`synergy-input-${slot}`);
+      if (sug && inp && !sug.contains(e.target) && e.target !== inp) {
+        sug.classList.add("hidden");
+      }
+    }
+  });
+}
+
 function renderSynergySection(m) {
   if (!m.all_trios || m.all_trios.length === 0) return "";
 
@@ -354,15 +410,19 @@ function renderSynergySection(m) {
     brawlerJp[a].localeCompare(brawlerJp[b], "ja")
   );
 
-  const opt = (val, sel) => {
-    const display = brawlerJp[val] || val;
-    return `<option value="${escapeHtml(val)}" ${val === sel ? "selected" : ""}>${escapeHtml(display)}</option>`;
+  const dropdown = (slot, selected) => {
+    const display = brawlerJp[selected] || selected || "";
+    return `<div class="relative">
+      <input type="text" id="synergy-input-${slot}"
+             value="${escapeHtml(display)}"
+             placeholder="${slot}人目検索 (ひらがな可)"
+             oninput="onSynergySearchInput(${slot}, this.value)"
+             onfocus="onSynergySearchInput(${slot}, this.value)"
+             autocomplete="off"
+             class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm w-44">
+      <div id="synergy-suggest-${slot}" class="absolute top-full left-0 mt-1 bg-gray-800 border border-gray-700 rounded shadow-lg max-h-72 overflow-y-auto z-30 hidden min-w-[200px]"></div>
+    </div>`;
   };
-  const dropdown = (slot, selected) => `
-    <select onchange="setSynergyPick(${slot}, this.value)" class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm max-w-full">
-      <option value="">-- ${slot}人目 --</option>
-      ${brawlers.map(b => opt(b, selected)).join("")}
-    </select>`;
 
   // フィルタ: 選択されたブロウラーを含むtrios
   let filtered = m.all_trios;
@@ -511,12 +571,18 @@ function renderBrawlerGrid(filter = "") {
   computeBrawlerExtras();
   const el = document.getElementById("brawler-grid");
   const f = (filter || "").toLowerCase();
+  const fHira = kanaToHira(f);
   const sort = document.getElementById("brawler-sort")?.value || "best_tier";
   const strongOnly = document.getElementById("brawler-filter-strong")?.checked || false;
 
-  let list = DB.brawlers.filter(b =>
-    !f || b.name.toLowerCase().includes(f) || (b.name_jp || "").includes(filter)
-  );
+  let list = DB.brawlers.filter(b => {
+    if (!f) return true;
+    if (b.name.toLowerCase().includes(f)) return true;
+    const jp = b.name_jp || "";
+    if (jp.includes(filter)) return true;
+    if (kanaToHira(jp).includes(fHira)) return true;  // ひらがな入力対応
+    return false;
+  });
   if (strongOnly) {
     list = list.filter(b => b._avgTier === "S+" || b._avgTier === "S");
   }
@@ -664,6 +730,11 @@ function setupSearch() {
 
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+// カタカナ→ひらがな変換 (ブロウラー名検索でひらがな入力にも対応するため)
+function kanaToHira(s) {
+  return String(s ?? "").replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
 }
 
 // ============================================================
