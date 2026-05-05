@@ -261,6 +261,35 @@ def get_player_stats(tag: str) -> dict:
     }
 
 
+def import_historical_battles(tag: str, jsonl_path) -> int:
+    """全体クロールが蓄積している trio_battles.jsonl から該当タグの試合を抽出 → battles テーブルに upsert。
+    INSERT OR IGNORE なので既存と重複しない。返値: 新規挿入数。
+    """
+    tag = normalize_tag(tag)
+    jsonl_path = Path(jsonl_path)
+    if not jsonl_path.exists():
+        return 0
+    tag_marker = f'"{tag}"'  # 文字列 pre-filter で高速化
+    matches = []
+    with open(jsonl_path, encoding="utf-8") as f:
+        for line in f:
+            if tag_marker not in line:
+                continue
+            try:
+                b = json.loads(line)
+            except Exception:
+                continue
+            teams = (b.get("battle") or {}).get("teams") or []
+            in_teams = any(
+                p.get("tag") == tag for team in teams for p in team
+            )
+            if in_teams:
+                matches.append(b)
+    if not matches:
+        return 0
+    return upsert_battles(tag, matches)
+
+
 def get_player_battles(tag: str, limit: int = 60, offset: int = 0) -> list[dict]:
     """そのタグの試合履歴を新しい順に返す。raw_jsonをparseして表示用に整形。"""
     tag = normalize_tag(tag)
