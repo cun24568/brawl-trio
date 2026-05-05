@@ -45,11 +45,137 @@ app.add_middleware(
 @app.on_event("startup")
 def _startup():
     db.init_db()
+    # 名前検索インデックスを background で構築 (jsonl 40万行で数秒〜10秒)
+    import threading as _t
+    _t.Thread(target=_build_player_index, daemon=True).start()
+    _t.Thread(target=_build_club_index, daemon=True).start()
 
 
 @app.get("/api/health")
 def health():
     return {"ok": True, "ts": int(time.time())}
+
+
+# ============================================================
+# 名前検索インデックス
+# ============================================================
+import json
+import os
+import threading
+from urllib.parse import quote
+
+_PLAYER_INDEX = None  # list[(name_lower, name, tag, trophies)]
+_PLAYER_INDEX_LOCK = threading.Lock()
+_PLAYER_INDEX_BUILT_AT = 0
+_JSONL_PATH = Path(__file__).parent.parent / "data" / "trio_battles.jsonl"
+
+_CLUB_INDEX = []  # list of dict {tag, name, trophies, country}
+_CLUB_INDEX_BUILT_AT = 0
+_CLUB_INDEX_REFRESH_SEC = 12 * 3600  # 12h
+
+
+def _build_player_index():
+    """jsonl 全件 streaming で (name → tag) を収集。
+    各タグは「最新の trophies」と「最新の name」で1エントリ。"""
+    global _PLAYER_INDEX, _PLAYER_INDEX_BUILT_AT
+    with _PLAYER_INDEX_LOCK:
+        if not _JSONL_PATH.exists():
+            _PLAYER_INDEX = []
+            _PLAYER_INDEX_BUILT_AT = int(time.time())
+            return
+        latest = {}  # tag → (name, trophies)
+        with open(_JSONL_PATH, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    b = json.loads(line)
+                except Exception:
+                    continue
+                teams = (b.get("battle") or {}).get("teams") or []
+                for team in teams:
+                    for p in team:
+                        ptag = p.get("tag")
+                        pname = p.get("name", "")
+                        ptro = (p.get("brawler") or {}).get("trophies", 0)
+                        if not ptag or not pname:
+                            continue
+                        latest[ptag] = (pname, ptro)
+        index = []
+        for tag, (name, tro) in latest.items():
+            index.append((name.lower(), name, tag, tro))
+        _PLAYER_INDEX = index
+        _PLAYER_INDEX_BUILT_AT = int(time.time())
+
+
+@app.get("/api/search/players")
+@limiter.limit("30/minute")
+def search_players(request: Request, q: str = "", limit: int = 30):
+    """プレイヤー名で部分一致検索 (case insensitive)。"""
+    if _PLAYER_INDEX is None:
+        _build_player_index()
+    q = (q or "").strip().lower()
+    if not q or len(q) < 1:
+        return {"results": [], "total": 0, "query": q}
+    if limit > 100:
+        limit = 100
+    matches = []
+    for name_lower, name, tag, tro in _PLAYER_INDEX:
+        if q in name_lower:
+            matches.append({"tag": tag, "name": name, "trophies": tro})
+    matches.sort(key=lambda x: -x["trophies"])
+    return {"results": matches[:limit], "total": len(matches), "query": q}
+
+
+@app.post("/api/search/players/rebuild")
+@limiter.limit("2/minute")
+def rebuild_player_index(request: Request):
+    _build_player_index()
+    return {
+        "ok": True,
+        "size": len(_PLAYER_INDEX) if _PLAYER_INDEX else 0,
+        "built_at": _PLAYER_INDEX_BUILT_AT,
+    }
+
+
+def _build_club_index():
+    """各国クラブランキングからクラブ名インデックスを作成。"""
+    global _CLUB_INDEX, _CLUB_INDEX_BUILT_AT
+    countries = ["global", "JP", "KR", "US", "TW", "DE", "BR", "MX", "GB"]
+    seen = {}
+    for country in countries:
+        try:
+            data = brawl_api.fetch(f"/rankings/{country}/clubs")
+        except Exception:
+            continue
+        for c in data.get("items", []):
+            ctag = c.get("tag")
+            if not ctag:
+                continue
+            existing = seen.get(ctag)
+            if not existing or c.get("trophies", 0) > existing.get("trophies", 0):
+                seen[ctag] = {
+                    "tag": ctag,
+                    "name": c.get("name", ""),
+                    "trophies": c.get("trophies", 0),
+                    "country": country,
+                }
+    _CLUB_INDEX = list(seen.values())
+    _CLUB_INDEX_BUILT_AT = int(time.time())
+
+
+@app.get("/api/search/clubs")
+@limiter.limit("30/minute")
+def search_clubs(request: Request, q: str = "", limit: int = 30):
+    """クラブ名で部分一致検索。 各国TOP200クラブのみ対象 (公式API制限)。"""
+    global _CLUB_INDEX_BUILT_AT
+    now = int(time.time())
+    if not _CLUB_INDEX or now - _CLUB_INDEX_BUILT_AT > _CLUB_INDEX_REFRESH_SEC:
+        _build_club_index()
+    q = (q or "").strip().lower()
+    if not q:
+        return {"results": [], "total": 0, "query": q}
+    matches = [c for c in _CLUB_INDEX if q in c["name"].lower()]
+    matches.sort(key=lambda x: -x["trophies"])
+    return {"results": matches[:limit], "total": len(matches), "query": q, "index_size": len(_CLUB_INDEX)}
 
 
 @app.get("/api/watchlist")

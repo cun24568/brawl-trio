@@ -2,6 +2,7 @@ let DB = null;
 let ROTATION = null;  // {cycle_days, anchor_date, rotation: [...]}
 let currentMap = null;
 let currentTierFilter = "all";  // all / S+ / S / A / B / C
+let currentMapSection = localStorage.getItem("map_section") || "tier";  // tier | recommended | synergy
 let synergyPick1 = "";  // シナジー検索: 1人目
 let synergyPick2 = "";  // シナジー検索: 2人目
 
@@ -278,14 +279,15 @@ function renderMapDetail() {
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
         <div class="text-xs text-gray-500 mt-1">スコア: 1位+9 / 2位+4 / 3位-4 / 4位-9。高トロ帯(2000+)バトル2倍。500戦以下は0.9倍ペナルティ。ベイズ平均化。50戦以上でpercentileティア</div>
-        ${filterButtons}
-        <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
-        ${tableHtml}
-
-        ${renderSynergySection(m)}
-
-        ${m.recommended_trios && m.recommended_trios.length > 0 ? `
-          <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">推奨トリオ編成</h3>
+        ${renderMapSectionSelector()}
+        ${currentMapSection === "tier" ? `
+          ${filterButtons}
+          <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>
+          ${tableHtml}
+        ` : ""}
+        ${currentMapSection === "synergy" ? renderSynergySection(m) : ""}
+        ${currentMapSection === "recommended" && m.recommended_trios && m.recommended_trios.length > 0 ? `
+          <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">推奨トリオ編成</h3>
           <div class="space-y-2">
             ${m.recommended_trios.map(t => `
               <div class="flex items-center justify-between p-3 bg-gray-700/30 hover:bg-gray-700/50 rounded">
@@ -308,8 +310,29 @@ function renderMapDetail() {
             `).join("")}
           </div>
         ` : ""}
+        ${currentMapSection === "recommended" && (!m.recommended_trios || m.recommended_trios.length === 0) ? '<div class="text-gray-500 text-sm mt-4">推奨編成のデータが不足しています (3戦以上の組合せが必要)</div>' : ""}
       </div>
     </div>`;
+}
+
+function renderMapSectionSelector() {
+  const sections = [
+    { val: "tier", label: "ティア表" },
+    { val: "recommended", label: "推奨編成" },
+    { val: "synergy", label: "シナジー検索" },
+  ];
+  return `
+    <div class="mt-3 mb-2">
+      <select onchange="setMapSection(this.value)" class="w-full sm:w-auto p-2 bg-gray-900 border border-gray-700 rounded text-base">
+        ${sections.map(s => `<option value="${s.val}" ${currentMapSection === s.val ? "selected" : ""}>${s.label}</option>`).join("")}
+      </select>
+    </div>`;
+}
+
+function setMapSection(s) {
+  currentMapSection = s;
+  localStorage.setItem("map_section", s);
+  renderMapDetail();
 }
 
 function renderSynergySection(m) {
@@ -673,16 +696,85 @@ function setupMypage() {
   const tagInput = document.getElementById("mypage-tag");
   const searchBtn = document.getElementById("mypage-search");
   const refreshBtn = document.getElementById("mypage-refresh");
+  const suggest = document.getElementById("mypage-suggest");
 
   // localStorage から復元
   const saved = localStorage.getItem("mypage_tag");
   if (saved) tagInput.value = saved;
 
-  searchBtn.addEventListener("click", () => fetchMypage(tagInput.value));
+  searchBtn.addEventListener("click", () => {
+    hideSuggest(suggest);
+    fetchMypage(tagInput.value);
+  });
   tagInput.addEventListener("keydown", e => {
-    if (e.key === "Enter") fetchMypage(tagInput.value);
+    if (e.key === "Enter") {
+      hideSuggest(suggest);
+      fetchMypage(tagInput.value);
+    } else if (e.key === "Escape") {
+      hideSuggest(suggest);
+    }
+  });
+  // 名前サジェスト (debounce 250ms)
+  attachNameSuggest(tagInput, suggest, "players", item => {
+    tagInput.value = item.tag;
+    hideSuggest(suggest);
+    fetchMypage(item.tag);
   });
   refreshBtn.addEventListener("click", () => refreshMypage(tagInput.value));
+}
+
+// 共通: 検索ボックスに名前サジェストを取り付ける
+function attachNameSuggest(input, suggestEl, kind, onSelect) {
+  let timer = null;
+  let lastQuery = "";
+  input.addEventListener("input", () => {
+    const v = input.value.trim();
+    // タグ (# で始まる) はサジェスト対象外
+    if (!v || v.startsWith("#") || v.length < 1) {
+      hideSuggest(suggestEl);
+      return;
+    }
+    if (v === lastQuery) return;
+    lastQuery = v;
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(async () => {
+      try {
+        const url = `${API_HOST}/api/search/${kind}?q=${encodeURIComponent(v)}&limit=20`;
+        const res = await fetch(url);
+        if (!res.ok) { hideSuggest(suggestEl); return; }
+        const data = await res.json();
+        renderSuggest(suggestEl, data.results || [], onSelect);
+      } catch (e) { hideSuggest(suggestEl); }
+    }, 250);
+  });
+  // クリック外で閉じる
+  document.addEventListener("click", e => {
+    if (!suggestEl.contains(e.target) && e.target !== input) hideSuggest(suggestEl);
+  });
+}
+
+function hideSuggest(el) { if (el) el.classList.add("hidden"); }
+
+function renderSuggest(el, results, onSelect) {
+  if (!el) return;
+  if (results.length === 0) {
+    el.innerHTML = '<div class="px-3 py-2 text-sm text-gray-500">該当なし</div>';
+    el.classList.remove("hidden");
+    return;
+  }
+  el.innerHTML = results.map((r, i) => `
+    <div data-idx="${i}" class="px-3 py-2 text-sm cursor-pointer hover:bg-gray-700 flex items-center justify-between border-b border-gray-700/50 last:border-0">
+      <span class="truncate flex-1">${escapeHtml(r.name)}</span>
+      <span class="ml-2 text-xs text-gray-400 font-mono">${escapeHtml(r.tag)}</span>
+      <span class="ml-2 text-xs text-yellow-400">🏆${r.trophies.toLocaleString()}</span>
+    </div>`).join("");
+  el.classList.remove("hidden");
+  el.querySelectorAll("[data-idx]").forEach(node => {
+    node.addEventListener("click", () => {
+      const idx = parseInt(node.dataset.idx, 10);
+      onSelect(results[idx]);
+    });
+  });
 }
 
 function normalizeTag(t) {
@@ -1283,12 +1375,19 @@ setupCallSheet();
 function setupClub() {
   const tagInput = document.getElementById("club-tag");
   const btn = document.getElementById("club-search");
+  const suggest = document.getElementById("club-suggest");
   if (!tagInput || !btn) return;
   const saved = localStorage.getItem("club_tag");
   if (saved) tagInput.value = saved;
-  btn.addEventListener("click", () => fetchClub(tagInput.value));
+  btn.addEventListener("click", () => { hideSuggest(suggest); fetchClub(tagInput.value); });
   tagInput.addEventListener("keydown", e => {
-    if (e.key === "Enter") fetchClub(tagInput.value);
+    if (e.key === "Enter") { hideSuggest(suggest); fetchClub(tagInput.value); }
+    else if (e.key === "Escape") hideSuggest(suggest);
+  });
+  attachNameSuggest(tagInput, suggest, "clubs", item => {
+    tagInput.value = item.tag;
+    hideSuggest(suggest);
+    fetchClub(item.tag);
   });
 }
 

@@ -83,21 +83,21 @@
 
     <div id="tab-mypage" class="tab-content hidden">
       <div class="bg-gray-800 p-4 rounded mb-4">
-        <label class="text-sm text-gray-400 block mb-2">プレイヤータグ (例: #YQ8YY09R)</label>
-        <div class="flex gap-2">
-          <input type="text" id="mypage-tag" placeholder="#XXXXXXXX"
-            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono uppercase focus:outline-none focus:border-blue-500">
+        <label class="text-sm text-gray-400 block mb-2">プレイヤータグ (例: #YQ8YY09R) または 名前 (例: 🍣)</label>
+        <div class="flex gap-2 relative">
+          <input type="text" id="mypage-tag" placeholder="#XXXXXXXX または プレイヤー名"
+            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono focus:outline-none focus:border-blue-500" autocomplete="off">
           <button id="mypage-search" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded font-semibold whitespace-nowrap">
             検索
           </button>
           <button id="mypage-refresh" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded font-semibold whitespace-nowrap hidden">
             更新
           </button>
+          <div id="mypage-suggest" class="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-700 rounded shadow-lg max-h-72 overflow-y-auto z-30 hidden"></div>
         </div>
         <div class="text-xs text-gray-500 mt-2">
           初回登録すると30分ごとに自動でバトルログが蓄積されます。<br>
-          公式APIの仕様で過去の試合は遡れません (登録時点〜未来分のみ)。<br>
-          ウォッチリスト上限50,000タグ、4週間アクセス無いタグはクロール対象外になります。
+          名前検索は過去のクロールで観測されたプレイヤー (~数十万人) から部分一致。
         </div>
       </div>
       <div id="mypage-detail"></div>
@@ -105,17 +105,18 @@
 
     <div id="tab-club" class="tab-content hidden">
       <div class="bg-gray-800 p-4 rounded mb-4">
-        <label class="text-sm text-gray-400 block mb-2">クラブタグ (例: #2QG9UVUUY)</label>
-        <div class="flex gap-2">
-          <input type="text" id="club-tag" placeholder="#XXXXXXXX"
-            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono uppercase focus:outline-none focus:border-blue-500">
+        <label class="text-sm text-gray-400 block mb-2">クラブタグ (例: #2QG9UVUUY) または 名前</label>
+        <div class="flex gap-2 relative">
+          <input type="text" id="club-tag" placeholder="#XXXXXXXX または クラブ名"
+            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono focus:outline-none focus:border-blue-500" autocomplete="off">
           <button id="club-search" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded font-semibold whitespace-nowrap">
             検索
           </button>
+          <div id="club-suggest" class="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-700 rounded shadow-lg max-h-72 overflow-y-auto z-30 hidden"></div>
         </div>
         <div class="text-xs text-gray-500 mt-2">
           クラブメンバー全員のトリオ戦績を一覧表示。<br>
-          各メンバーのデータは「マイページ」で先に検索しておくと出てきます (未検索のメンバーは "未取得" 表示)。
+          名前検索は各国TOP200クラブのみ対象 (公式APIの制限)。
         </div>
       </div>
       <div id="club-detail"></div>
