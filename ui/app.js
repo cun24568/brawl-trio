@@ -100,8 +100,6 @@ function renderRotationBanner() {
     <div class="text-xs sm:text-sm text-gray-400 flex flex-wrap items-center gap-x-3 gap-y-1">
       <span class="text-gray-500">📅 ローテ</span>
       ${items.join('<span class="text-gray-600">·</span>')}
-      <span class="text-gray-600 hidden sm:inline">·</span>
-      <span class="text-gray-500 text-xs">2週間周期</span>
     </div>`;
 }
 
