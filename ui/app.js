@@ -8,7 +8,7 @@ let synergyPick2 = "";  // シナジー検索: 2人目
 // マイページAPI のホスト (Cloudflare Tunnel の HTTPS URL)
 // ローカル開発時は localStorage に "api_host" を入れれば上書きできる
 const API_HOST = localStorage.getItem("api_host") || "https://api.brawl-showdown.com";
-const MYPAGE_BATTLES_PER_PAGE = 100;
+const MYPAGE_BATTLES_PER_PAGE = 40;  // ヒートマップ: 横10列×4行 = 40試合/ページ
 let MYPAGE_DATA = null;
 let MYPAGE_COOLDOWN_TIMER = null;
 let MYPAGE_BATTLES_PAGE = 1;
@@ -974,7 +974,7 @@ function renderMypageHeatmap(battles, brawlerImg) {
           <span class="ml-2 font-mono text-yellow-300">勝率 ${winRate.toFixed(1)}%</span>
         </span>
       </div>
-      <div class="grid grid-cols-10 sm:grid-cols-12 md:grid-cols-16 lg:grid-cols-20 gap-1">
+      <div class="grid grid-cols-10 gap-1">
         ${cells}
       </div>
       <div class="text-xs text-gray-500 mt-2 flex flex-wrap gap-3">
