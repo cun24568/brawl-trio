@@ -388,6 +388,7 @@ def leaderboard(
     order_sql = {
         "rank1_rate": "rank1_rate DESC, battles DESC",
         "top2_rate": "top2_rate DESC, battles DESC",
+        "rank4_rate_low": "rank4_rate ASC, battles DESC",
         "avg_rank": "avg_rank ASC, battles DESC",
         "battles": "battles DESC, rank1_rate DESC",
     }.get(order, "rank1_rate DESC, battles DESC")
@@ -398,6 +399,7 @@ def leaderboard(
                   COUNT(*) AS battles,
                   SUM(CASE WHEN b.rank<=2 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS top2_rate,
                   SUM(CASE WHEN b.rank=1 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS rank1_rate,
+                  SUM(CASE WHEN b.rank=4 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS rank4_rate,
                   AVG(CAST(b.rank AS REAL)) AS avg_rank,
                   w.name AS name,
                   w.trophies AS trophies

@@ -64,10 +64,13 @@ async function load() {
   setupSearch();
 }
 
-// ローテーション計算: 指定日付 (Date) のマップ名(JP)を返す (カレンダー日付ベース)
+// ローテーション計算: 指定日付 (Date) のマップ名(JP)を返す
+// マップ切替は毎日 5:00 のため、 5時前は前日扱い (5/6 04:59 → 5/5扱い、 5/6 05:00 → 5/6)
 function rotationMapForDate(date) {
   if (!ROTATION) return null;
-  const target = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const d = new Date(date);
+  if (d.getHours() < 5) d.setDate(d.getDate() - 1);
+  const target = new Date(d.getFullYear(), d.getMonth(), d.getDate());
   const anchor = new Date(ROTATION.anchor_date + "T00:00:00");
   const diffDays = Math.floor((target - anchor) / 86400000);
   const idx = ((diffDays % ROTATION.cycle_days) + ROTATION.cycle_days) % ROTATION.cycle_days;
@@ -88,10 +91,14 @@ function nextAppearance(mapJp) {
 function renderRotationBanner() {
   const el = document.getElementById("rotation-banner");
   if (!el || !ROTATION) return;
-  const today = new Date();
+  const now = new Date();
+  // 5時境界: 5時前は前日扱い
+  const baseToday = new Date(now);
+  if (baseToday.getHours() < 5) baseToday.setDate(baseToday.getDate() - 1);
+  baseToday.setHours(12, 0, 0, 0);
   const items = [];
   for (let d = 0; d < 2; d++) {
-    const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    const t = new Date(baseToday.getFullYear(), baseToday.getMonth(), baseToday.getDate() + d, 12);
     const map = rotationMapForDate(t);
     const label = d === 0 ? "今日" : "明日";
     const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
@@ -1648,12 +1655,8 @@ function renderRanking(data, order) {
   const renderRow = (r, i) => {
     const rank1pct = (r.rank1_rate * 100).toFixed(1);
     const top2pct = (r.top2_rate * 100).toFixed(1);
+    const rank4pct = ((r.rank4_rate || 0) * 100).toFixed(1);
     const avg = r.avg_rank.toFixed(2);
-    const highlight =
-      order === "rank1_rate" ? rank1pct + "%" :
-      order === "top2_rate" ? top2pct + "%" :
-      order === "avg_rank" ? avg :
-      r.battles.toLocaleString();
     return `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30 cursor-pointer" onclick="openMypage('${escapeHtml(r.tag)}')">
       <td class="py-2 px-2 text-gray-500 text-xs w-10">${i + 1}</td>
       <td class="py-2 px-2 truncate max-w-[150px]" title="${escapeHtml(r.name || r.tag)}">${escapeHtml(r.name || r.tag)}</td>
@@ -1662,6 +1665,7 @@ function renderRanking(data, order) {
       <td class="py-2 px-2 text-right font-mono text-xs">${r.battles.toLocaleString()}</td>
       <td class="py-2 px-2 text-right font-mono ${order === "rank1_rate" ? "text-green-300 font-bold" : "text-green-300"} text-xs">${rank1pct}%</td>
       <td class="py-2 px-2 text-right font-mono ${order === "top2_rate" ? "text-blue-300 font-bold" : "text-blue-300"} text-xs hidden sm:table-cell">${top2pct}%</td>
+      <td class="py-2 px-2 text-right font-mono ${order === "rank4_rate_low" ? "text-red-300 font-bold" : "text-red-300"} text-xs hidden md:table-cell">${rank4pct}%</td>
       <td class="py-2 px-2 text-right font-mono ${order === "avg_rank" ? "font-bold" : ""} text-xs">${avg}</td>
     </tr>`;
   };
@@ -1678,6 +1682,7 @@ function renderRanking(data, order) {
           <th class="pb-2 px-2 text-right">試合</th>
           <th class="pb-2 px-2 text-right">1位率</th>
           <th class="pb-2 px-2 text-right hidden sm:table-cell">TOP2率</th>
+          <th class="pb-2 px-2 text-right hidden md:table-cell">4位率</th>
           <th class="pb-2 px-2 text-right">平均順</th>
         </tr></thead>
         <tbody>${rows.map(renderRow).join("")}</tbody>
