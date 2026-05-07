@@ -54,7 +54,11 @@ async function load() {
   let initialMap = null;
   const candidates = DB._mapCandidates || DB.maps;
   if (ROTATION) {
-    const todayJp = rotationMapForDate(new Date());
+    // 5時境界の影響を避けるため正午基準で評価
+    const baseToday = new Date();
+    if (baseToday.getHours() < 5) baseToday.setDate(baseToday.getDate() - 1);
+    baseToday.setHours(12, 0, 0, 0);
+    const todayJp = rotationMapForDate(baseToday);
     initialMap = candidates.find(m => (m.name_jp || m.name) === todayJp);
   }
   if (!initialMap) initialMap = candidates[0];
@@ -78,11 +82,15 @@ function rotationMapForDate(date) {
 }
 
 // 指定マップ(JP名)の次回出現日を返す: {date: Date, daysAhead: number} or null
+// 5時境界の影響を避けるため日付は 12時 で生成
 function nextAppearance(mapJp) {
   if (!ROTATION) return null;
-  const today = new Date();
+  const now = new Date();
+  // 「今日」の起点も5時境界考慮: 5時前なら前日基準
+  let baseDay = new Date(now);
+  if (baseDay.getHours() < 5) baseDay.setDate(baseDay.getDate() - 1);
   for (let d = 0; d < ROTATION.cycle_days; d++) {
-    const t = new Date(today.getFullYear(), today.getMonth(), today.getDate() + d);
+    const t = new Date(baseDay.getFullYear(), baseDay.getMonth(), baseDay.getDate() + d, 12);
     if (rotationMapForDate(t) === mapJp) return { date: t, daysAhead: d };
   }
   return null;
