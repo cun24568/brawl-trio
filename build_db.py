@@ -386,6 +386,9 @@ def main():
         for trio_key, s in m_trios.items():
             if s["picks"] < MIN_PICKS_FOR_TRIO:
                 continue
+            # 同じブロウラーが複数いる編成は除外 (3人とも別キャラの場合のみ採用)
+            if len(set(trio_key)) != 3:
+                continue
             picks = s["picks"]
             wins = s["wins"]
             wr = wins / picks
