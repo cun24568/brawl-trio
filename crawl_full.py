@@ -37,7 +37,7 @@ DELAY = 0.15
 TIMEOUT = 15
 RETRIES = 3  # API timeoutやネットワークエラー時のリトライ回数
 SAVE_EVERY = 200  # 並列化で件数が早く流れるので頻度下げる
-PARALLEL_WORKERS = 16
+PARALLEL_WORKERS = 8  # ulimit -u=200 のため抑制 (crawl_users と uvicorn と共存)
 
 # トロフィー閾値で qualifying プールを永続蓄積
 TROPHY_THRESHOLD = 50000
