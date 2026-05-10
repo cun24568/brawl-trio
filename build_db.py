@@ -424,6 +424,8 @@ def main():
             )
         all_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
         rec_trios = all_trios[:TOP_N_TRIOS]
+        # シナジー検索用は picks降順で TOP1500 に絞り (db.json サイズ抑制、 GitHub 100MB制限対策)
+        synergy_trios = sorted(all_trios, key=lambda x: -x["picks"])[:1500]
 
         maps_out.append(
             {
@@ -438,7 +440,7 @@ def main():
                 "map_avg_rank": round(map_avg_rank, 2),
                 "tier_list": tier_list,
                 "recommended_trios": rec_trios,
-                "all_trios": all_trios,  # シナジー検索用 (min picks 5以上)
+                "all_trios": synergy_trios,  # シナジー検索用 (picks上位1500のみ)
             }
         )
     maps_out.sort(key=lambda m: -m["total_picks"])
