@@ -343,9 +343,26 @@ def get_player(tag: str, request: Request, period: str = "all"):
     }
 
 
+@app.get("/api/player/{tag}/matchups")
+@limiter.limit("10/minute")
+def get_matchups(tag: str, request: Request, period: str = "all", min_seen: int = 5):
+    """対面相性分析: 敵に居たブロウラー別の自分の成績。"""
+    tag = _normalize_or_400(tag)
+    since = _since_for_period(period)
+    return {"tag": tag, "period": period, **db.get_player_matchups(tag, since=since, min_seen=min_seen)}
+
+
 @app.get("/api/player/{tag}/battles")
 @limiter.limit("30/minute")
-def get_battles(tag: str, request: Request, limit: int = 100, offset: int = 0):
+def get_battles(
+    tag: str,
+    request: Request,
+    limit: int = 100,
+    offset: int = 0,
+    brawler: str | None = None,
+    map: str | None = None,
+    rank: int | None = None,
+):
     tag = _normalize_or_400(tag)
     if limit > 500:
         limit = 500
@@ -353,14 +370,27 @@ def get_battles(tag: str, request: Request, limit: int = 100, offset: int = 0):
         limit = 1
     if offset < 0:
         offset = 0
+    # filter conditions for total count
+    where = ["tag = ?"]
+    params: list = [tag]
+    if brawler:
+        where.append("brawler = ?"); params.append(brawler)
+    if map:
+        where.append("map = ?"); params.append(map)
+    if rank is not None:
+        where.append("rank = ?"); params.append(int(rank))
+    where_sql = " AND ".join(where)
     with db.conn() as c:
-        total = c.execute("SELECT COUNT(*) FROM battles WHERE tag=?", (tag,)).fetchone()[0]
+        total = c.execute(f"SELECT COUNT(*) FROM battles WHERE {where_sql}", params).fetchone()[0]
     return {
         "tag": tag,
         "limit": limit,
         "offset": offset,
         "total": total,
-        "battles": db.get_player_battles(tag, limit=limit, offset=offset),
+        "filters": {"brawler": brawler, "map": map, "rank": rank},
+        "battles": db.get_player_battles(
+            tag, limit=limit, offset=offset, brawler=brawler, map_name=map, rank=rank
+        ),
     }
 
 

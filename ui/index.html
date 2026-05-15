@@ -35,7 +35,13 @@
 <body class="bg-gray-900 text-gray-100 min-h-screen">
   <header class="bg-gray-800 border-b border-gray-700 p-4 sticky top-0 z-10">
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-2xl font-bold">ブロスタ トリオデータベース</h1>
+      <div class="flex items-start justify-between">
+        <h1 class="text-2xl font-bold">ブロスタ トリオデータベース</h1>
+        <div class="flex gap-1 text-xs">
+          <button onclick="setLang('ja')" id="lang-ja" class="px-2 py-1 rounded bg-blue-600 text-white">日本語</button>
+          <button onclick="setLang('en')" id="lang-en" class="px-2 py-1 rounded bg-gray-700 text-gray-300">English</button>
+        </div>
+      </div>
       <div id="meta-info" class="text-sm text-gray-400 mt-1">読込中...</div>
       <div id="rotation-banner" class="mt-2"></div>
     </div>

@@ -15,7 +15,163 @@ let MYPAGE_COOLDOWN_TIMER = null;
 let MYPAGE_BATTLES_PAGE = 1;
 let MYPAGE_BATTLES_TOTAL = 0;
 let MYPAGE_PERIOD = localStorage.getItem("mypage_period") || "all";  // "all" | "30d" | "7d" | "1d"
-let MYPAGE_SECTION = localStorage.getItem("mypage_section") || "history";  // history | brawlers | maps | recommend
+let MYPAGE_SECTION = localStorage.getItem("mypage_section") || "history";  // history | brawlers | maps | recommend | matchups
+let MYPAGE_RECENT_STATS = null;  // 直近 vs 全期間 比較用 (7d snapshot)
+let MYPAGE_BATTLES_FILTER = { brawler: "", map: "", rank: "" };  // 試合履歴フィルタ
+let MYPAGE_MATCHUPS = null;  // マッチアップ分析データ
+
+// ============================================================
+// i18n (ja デフォルト、 en切替対応)
+// ============================================================
+let LANG = localStorage.getItem("lang") || "ja";
+const I18N = {
+  ja: {
+    site_title: "ブロスタ トリオデータベース",
+    nav_maps: "マップ別ティア",
+    nav_brawlers: "ブロウラー別",
+    nav_mypage: "マイページ",
+    nav_club: "クラブ",
+    nav_ranking: "ランキング",
+    nav_roulette: "ルーレット",
+    today: "今日",
+    tomorrow: "明日",
+    rot_label: "ローテ",
+    last_update: "最終更新",
+    total_battles: "集計",
+    battles_unit: "戦",
+    section_tier: "ティア表",
+    section_recommended: "推奨編成",
+    section_synergy: "シナジー検索",
+    section_history: "試合履歴",
+    section_brawlers: "ブロウラー別",
+    section_maps: "マップ別",
+    section_recommend: "レコメンド",
+    section_matchups: "マッチアップ",
+    period_1d: "1日",
+    period_7d: "7日",
+    period_30d: "30日",
+    period_all: "全期間",
+    period_label: "集計期間",
+    summary_total: "総試合数",
+    summary_rank1: "1位率",
+    summary_top2: "TOP2率",
+    summary_avg: "平均順位",
+    filter_brawler: "ブロウラー",
+    filter_map: "マップ",
+    filter_rank: "順位",
+    filter_all: "全部",
+    filter_reset: "リセット",
+    compare_period_recent: "直近7日",
+    compare_period_all: "全期間",
+    diff: "差分",
+    win: "勝",
+    draw: "分",
+    lose: "敗",
+    win_rate: "勝率",
+    no_data: "データなし",
+    loading: "読込中...",
+    search: "検索",
+    update: "更新",
+    bookmark_count: "ブックマーク",
+    matchup_my: "自分のブロウラー",
+    matchup_enemy: "敵に居たブロウラー",
+    matchup_seen: "対戦数",
+    matchup_avg_rank: "平均順位",
+    matchup_global: "全体: 苦手な敵 (avg_rank高)",
+  },
+  en: {
+    site_title: "Brawl Trio Database",
+    nav_maps: "Maps",
+    nav_brawlers: "Brawlers",
+    nav_mypage: "My Page",
+    nav_club: "Club",
+    nav_ranking: "Ranking",
+    nav_roulette: "Roulette",
+    today: "Today",
+    tomorrow: "Tomorrow",
+    rot_label: "Rotation",
+    last_update: "Last update",
+    total_battles: "Total",
+    battles_unit: "battles",
+    section_tier: "Tier list",
+    section_recommended: "Recommended trios",
+    section_synergy: "Synergy search",
+    section_history: "Battle history",
+    section_brawlers: "By brawler",
+    section_maps: "By map",
+    section_recommend: "Recommendations",
+    section_matchups: "Matchups",
+    period_1d: "1d",
+    period_7d: "7d",
+    period_30d: "30d",
+    period_all: "All",
+    period_label: "Period",
+    summary_total: "Battles",
+    summary_rank1: "1st rate",
+    summary_top2: "Top2 rate",
+    summary_avg: "Avg rank",
+    filter_brawler: "Brawler",
+    filter_map: "Map",
+    filter_rank: "Rank",
+    filter_all: "All",
+    filter_reset: "Reset",
+    compare_period_recent: "Recent 7d",
+    compare_period_all: "All time",
+    diff: "Diff",
+    win: "W",
+    draw: "D",
+    lose: "L",
+    win_rate: "Win rate",
+    no_data: "No data",
+    loading: "Loading...",
+    search: "Search",
+    update: "Refresh",
+    bookmark_count: "Bookmarks",
+    matchup_my: "Your brawler",
+    matchup_enemy: "Enemy brawler",
+    matchup_seen: "Seen",
+    matchup_avg_rank: "Avg rank",
+    matchup_global: "Overall: tough enemies (high avg_rank)",
+  },
+};
+function t(key) {
+  return (I18N[LANG] || I18N.ja)[key] || I18N.ja[key] || key;
+}
+function setLang(lang) {
+  LANG = lang;
+  localStorage.setItem("lang", lang);
+  applyI18nStatic();
+  // 動的レンダの再描画
+  if (DB) {
+    renderRotationBanner();
+    renderMapList();
+    if (currentMap) renderMapDetail();
+    renderBrawlerGrid(document.getElementById("brawler-search")?.value || "");
+  }
+  if (MYPAGE_DATA) renderMypage();
+}
+function applyI18nStatic() {
+  // <title>
+  document.title = t("site_title");
+  // h1
+  const h1 = document.querySelector("header h1");
+  if (h1) h1.textContent = t("site_title");
+  // タブボタン (data-tab → label)
+  const tabMap = {maps:"nav_maps", brawlers:"nav_brawlers", mypage:"nav_mypage", club:"nav_club", ranking:"nav_ranking", roulette:"nav_roulette"};
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    const k = tabMap[btn.dataset.tab];
+    if (k) btn.textContent = t(k);
+  });
+  // 言語ボタンのactive状態
+  const ja = document.getElementById("lang-ja");
+  const en = document.getElementById("lang-en");
+  if (ja && en) {
+    ja.className = "px-2 py-1 rounded text-xs " + (LANG === "ja" ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-300");
+    en.className = "px-2 py-1 rounded text-xs " + (LANG === "en" ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-300");
+  }
+}
+// 初回適用
+setTimeout(applyI18nStatic, 0);
 
 const TIER_COLORS = {
   "S+": "bg-red-600 text-white",
@@ -47,7 +203,7 @@ async function load() {
 
   const ts = new Date(DB.generated_at);
   document.getElementById("meta-info").textContent =
-    `最終更新: ${ts.toLocaleString("ja-JP")} / 集計 ${DB.stats.total_picks.toLocaleString()}戦`;
+    `${t("last_update")}: ${ts.toLocaleString(LANG === "en" ? "en-US" : "ja-JP")} / ${t("total_battles")} ${DB.stats.total_picks.toLocaleString()}${t("battles_unit")}`;
   renderRotationBanner();
   renderMapList();
   // 今日のマップを自動選択 (ローテ情報あれば)
@@ -108,13 +264,13 @@ function renderRotationBanner() {
   for (let d = 0; d < 2; d++) {
     const t = new Date(baseToday.getFullYear(), baseToday.getMonth(), baseToday.getDate() + d, 12);
     const map = rotationMapForDate(t);
-    const label = d === 0 ? "今日" : "明日";
+    const label = d === 0 ? t("today") : t("tomorrow");
     const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
     items.push(`<span class="${color}">${label}</span>: <span class="text-white font-semibold">${escapeHtml(map || "?")}</span>`);
   }
   el.innerHTML = `
     <div class="text-xs sm:text-sm text-gray-400 flex flex-wrap items-center gap-x-3 gap-y-1">
-      <span class="text-gray-500">📅 ローテ</span>
+      <span class="text-gray-500">📅 ${t("rot_label")}</span>
       ${items.join('<span class="text-gray-600">·</span>')}
     </div>`;
 }
@@ -995,18 +1151,26 @@ async function fetchMypage(rawTag, options = {}) {
   try {
     const encTag = encodeURIComponent(tag);
     const offset = (MYPAGE_BATTLES_PAGE - 1) * MYPAGE_BATTLES_PER_PAGE;
-    const battlesUrl = `${API_HOST}/api/player/${encTag}/battles?limit=${MYPAGE_BATTLES_PER_PAGE}&offset=${offset}`;
+    const f = MYPAGE_BATTLES_FILTER;
+    const filterQs = [
+      f.brawler ? `&brawler=${encodeURIComponent(f.brawler)}` : "",
+      f.map ? `&map=${encodeURIComponent(f.map)}` : "",
+      f.rank ? `&rank=${encodeURIComponent(f.rank)}` : "",
+    ].join("");
+    const battlesUrl = `${API_HOST}/api/player/${encTag}/battles?limit=${MYPAGE_BATTLES_PER_PAGE}&offset=${offset}${filterQs}`;
     const statsUrl = `${API_HOST}/api/player/${encTag}?period=${encodeURIComponent(MYPAGE_PERIOD)}`;
+    const recentUrl = `${API_HOST}/api/player/${encTag}?period=7d`;
     const requests = options.pageOnly
-      ? [Promise.resolve(null), fetch(battlesUrl)]
-      : [fetch(statsUrl), fetch(battlesUrl)];
-    const [statsRes, battlesRes] = await Promise.all(requests);
+      ? [Promise.resolve(null), fetch(battlesUrl), Promise.resolve(null)]
+      : [fetch(statsUrl), fetch(battlesUrl), fetch(recentUrl)];
+    const [statsRes, battlesRes, recentRes] = await Promise.all(requests);
     if (!options.pageOnly) {
       if (!statsRes.ok) {
         const body = await statsRes.json().catch(() => ({ detail: statsRes.statusText }));
         throw new Error(body.detail || `HTTP ${statsRes.status}`);
       }
       MYPAGE_DATA = await statsRes.json();
+      MYPAGE_RECENT_STATS = recentRes && recentRes.ok ? (await recentRes.json()).stats?.summary : null;
     }
     if (battlesRes && battlesRes.ok) {
       const bj = await battlesRes.json();
@@ -1016,6 +1180,7 @@ async function fetchMypage(rawTag, options = {}) {
       MYPAGE_DATA.battles = [];
       MYPAGE_BATTLES_TOTAL = 0;
     }
+    // matchupsはセクション開いた時に遅延fetch
     renderMypage();
   } catch (e) {
     renderMypageError(`取得失敗: ${e.message}`);
@@ -1132,9 +1297,11 @@ function renderMypage() {
       ${renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank)}
       ${renderMypageSectionSelector()}
       ${MYPAGE_SECTION === "history" ? `
+        ${renderMypageBattleFilters(stats.brawlers || [], stats.maps || [], brawlerJp, mapJp)}
         ${renderMypageHeatmap(d.battles || [], brawlerImg)}
         ${renderMypageBattleList(d.battles || [], brawlerImg, brawlerJp, mapJp)}
       ` : ""}
+      ${MYPAGE_SECTION === "matchups" ? renderMypageMatchups(brawlerJp, brawlerImg) : ""}
       ${MYPAGE_SECTION === "brawlers" ? renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total) : ""}
       ${MYPAGE_SECTION === "maps" ? renderMypageMaps(stats.maps || [], mapJp) : ""}
       ${MYPAGE_SECTION === "recommend" ? renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats) : ""}
@@ -1188,15 +1355,16 @@ function changeMypagePeriod(p) {
 
 function renderMypageSectionSelector() {
   const sections = [
-    { val: "history", label: "試合履歴" },
-    { val: "brawlers", label: "ブロウラー別" },
-    { val: "maps", label: "マップ別" },
-    { val: "recommend", label: "レコメンド" },
+    { val: "history", label: t("section_history") },
+    { val: "matchups", label: t("section_matchups") },
+    { val: "brawlers", label: t("section_brawlers") },
+    { val: "maps", label: t("section_maps") },
+    { val: "recommend", label: t("section_recommend") },
   ];
   return `
     <div class="mb-3">
       <select onchange="setMypageSection(this.value)" class="w-full sm:w-auto p-2 bg-gray-900 border border-gray-700 rounded text-base">
-        ${sections.map(s => `<option value="${s.val}" ${MYPAGE_SECTION === s.val ? "selected" : ""}>${s.label}</option>`).join("")}
+        ${sections.map(s => `<option value="${s.val}" ${MYPAGE_SECTION === s.val ? "selected" : ""}>${escapeHtml(s.label)}</option>`).join("")}
       </select>
     </div>`;
 }
@@ -1216,23 +1384,164 @@ function renderEmptyState() {
 }
 
 function renderMypageSummary(total, top2, top2Rate, rank1, rank1Rate, avgRank) {
+  // 直近7日との比較 (MYPAGE_RECENT_STATS)
+  const r = MYPAGE_RECENT_STATS;
+  const cmp = (cur, prev, fmt, color) => {
+    if (!r || prev == null || prev === undefined) return "";
+    const diff = cur - prev;
+    if (Math.abs(diff) < 0.01) return `<span class="text-[10px] text-gray-500"> ±0</span>`;
+    const sign = diff > 0 ? "▲+" : "▼";
+    const cl = (color === "rev" ? (diff < 0 ? "text-green-400" : "text-red-400") : (diff > 0 ? "text-green-400" : "text-red-400"));
+    return `<span class="text-[10px] ${cl} ml-1">${sign}${fmt(Math.abs(diff))}</span>`;
+  };
+  const r7_total = r?.total || 0;
+  const r7_rank1Rate = r && r.total ? (r.rank1 / r.total * 100) : null;
+  const r7_top2Rate = r && r.total ? (r.top2 / r.total * 100) : null;
+  const r7_avgRank = r?.avg_rank || null;
+  const pctFmt = v => v.toFixed(1) + "%";
+  const numFmt = v => v.toFixed(2);
   return `
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
       <div class="bg-gray-800 p-3 rounded text-center">
         <div class="text-2xl font-bold">${total.toLocaleString()}</div>
-        <div class="text-xs text-gray-400">総試合数</div>
+        <div class="text-xs text-gray-400">${t("summary_total")}</div>
+        ${r ? `<div class="text-[10px] text-gray-500 mt-1">7d: ${r7_total.toLocaleString()}</div>` : ""}
       </div>
       <div class="bg-gray-800 p-3 rounded text-center">
         <div class="text-2xl font-bold text-green-400">${rank1Rate.toFixed(1)}%</div>
-        <div class="text-xs text-gray-400">1位率 (${rank1})</div>
+        <div class="text-xs text-gray-400">${t("summary_rank1")} (${rank1})</div>
+        ${r7_rank1Rate != null ? `<div class="text-[10px] text-gray-500 mt-1">7d: ${r7_rank1Rate.toFixed(1)}%${cmp(rank1Rate, r7_rank1Rate, pctFmt)}</div>` : ""}
       </div>
       <div class="bg-gray-800 p-3 rounded text-center">
         <div class="text-2xl font-bold text-blue-400">${top2Rate.toFixed(1)}%</div>
-        <div class="text-xs text-gray-400">TOP2率 (${top2})</div>
+        <div class="text-xs text-gray-400">${t("summary_top2")} (${top2})</div>
+        ${r7_top2Rate != null ? `<div class="text-[10px] text-gray-500 mt-1">7d: ${r7_top2Rate.toFixed(1)}%${cmp(top2Rate, r7_top2Rate, pctFmt)}</div>` : ""}
       </div>
       <div class="bg-gray-800 p-3 rounded text-center">
         <div class="text-2xl font-bold">${avgRank.toFixed(2)}</div>
-        <div class="text-xs text-gray-400">平均順位</div>
+        <div class="text-xs text-gray-400">${t("summary_avg")}</div>
+        ${r7_avgRank != null ? `<div class="text-[10px] text-gray-500 mt-1">7d: ${r7_avgRank.toFixed(2)}${cmp(avgRank, r7_avgRank, numFmt, "rev")}</div>` : ""}
+      </div>
+    </div>`;
+}
+
+// 試合履歴フィルタUI
+function renderMypageBattleFilters(brawlers, maps, brawlerJp, mapJp) {
+  const f = MYPAGE_BATTLES_FILTER;
+  const brOpts = ['<option value="">' + t("filter_all") + '</option>'].concat(
+    brawlers.map(b => `<option value="${escapeHtml(b.brawler)}" ${f.brawler === b.brawler ? "selected" : ""}>${escapeHtml(brawlerJp[b.brawler] || b.brawler)} (${b.picks})</option>`)
+  ).join("");
+  const mpOpts = ['<option value="">' + t("filter_all") + '</option>'].concat(
+    maps.map(m => `<option value="${escapeHtml(m.map)}" ${f.map === m.map ? "selected" : ""}>${escapeHtml(mapJp[m.map] || m.map)} (${m.picks})</option>`)
+  ).join("");
+  const rkOpts = [
+    `<option value="">${t("filter_all")}</option>`,
+    `<option value="1" ${f.rank==="1"?"selected":""}>1</option>`,
+    `<option value="2" ${f.rank==="2"?"selected":""}>2</option>`,
+    `<option value="3" ${f.rank==="3"?"selected":""}>3</option>`,
+    `<option value="4" ${f.rank==="4"?"selected":""}>4</option>`,
+  ].join("");
+  const hasFilter = f.brawler || f.map || f.rank;
+  return `
+    <div class="bg-gray-800 p-3 rounded mb-3 flex flex-wrap gap-2 items-center">
+      <span class="text-xs text-gray-400 mr-1">フィルタ:</span>
+      <select onchange="setBattlesFilter('brawler', this.value)" class="p-1.5 bg-gray-900 border border-gray-700 rounded text-sm">${brOpts}</select>
+      <select onchange="setBattlesFilter('map', this.value)" class="p-1.5 bg-gray-900 border border-gray-700 rounded text-sm">${mpOpts}</select>
+      <select onchange="setBattlesFilter('rank', this.value)" class="p-1.5 bg-gray-900 border border-gray-700 rounded text-sm">${rkOpts}</select>
+      ${hasFilter ? `<button onclick="resetBattlesFilter()" class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs">${t("filter_reset")}</button>` : ""}
+    </div>`;
+}
+
+function setBattlesFilter(key, val) {
+  MYPAGE_BATTLES_FILTER[key] = val || "";
+  MYPAGE_BATTLES_PAGE = 1;
+  if (MYPAGE_DATA && MYPAGE_DATA.tag) fetchMypage(MYPAGE_DATA.tag, { pageOnly: true });
+}
+
+function resetBattlesFilter() {
+  MYPAGE_BATTLES_FILTER = { brawler: "", map: "", rank: "" };
+  MYPAGE_BATTLES_PAGE = 1;
+  if (MYPAGE_DATA && MYPAGE_DATA.tag) fetchMypage(MYPAGE_DATA.tag, { pageOnly: true });
+}
+
+// マッチアップ分析 (遅延 fetch)
+async function fetchMatchupsIfNeeded() {
+  if (!MYPAGE_DATA || !MYPAGE_DATA.tag) return;
+  if (MYPAGE_MATCHUPS && MYPAGE_MATCHUPS._tag === MYPAGE_DATA.tag && MYPAGE_MATCHUPS._period === MYPAGE_PERIOD) return;
+  const tag = MYPAGE_DATA.tag;
+  const period = MYPAGE_PERIOD;
+  try {
+    const res = await fetch(`${API_HOST}/api/player/${encodeURIComponent(tag)}/matchups?period=${period}&min_seen=5`);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const j = await res.json();
+    j._tag = tag; j._period = period;
+    MYPAGE_MATCHUPS = j;
+    renderMypage();
+  } catch (e) {
+    document.getElementById("mypage-detail").querySelector("#matchup-area")?.replaceChildren();
+  }
+}
+
+function renderMypageMatchups(brawlerJp, brawlerImg) {
+  const m = MYPAGE_MATCHUPS;
+  if (!m || m._tag !== MYPAGE_DATA?.tag || m._period !== MYPAGE_PERIOD) {
+    setTimeout(fetchMatchupsIfNeeded, 50);
+    return `<div id="matchup-area" class="bg-gray-800 p-6 rounded text-center text-gray-400">${t("loading")}</div>`;
+  }
+  if ((!m.global || m.global.length === 0) && (!m.by_my_brawler || m.by_my_brawler.length === 0)) {
+    return `<div class="bg-yellow-900/30 border border-yellow-700 p-4 rounded text-yellow-200">${t("no_data")} (5戦以上必要)</div>`;
+  }
+  // 全体: avg_rank 高い (苦手) TOP10
+  const globalTough = (m.global || []).slice(0, 10);
+  // 自分のブロウラーごとの相性 (avg_rank 高い = 苦手) TOP15
+  const byMyTough = [...(m.by_my_brawler || [])].sort((a,b)=>-a.avg_rank + b.avg_rank).reverse().slice(0, 15);
+  // wait, sort by avg_rank DESC
+  const byMyToughSorted = [...(m.by_my_brawler || [])].sort((a,b)=>b.avg_rank - a.avg_rank).slice(0, 15);
+
+  const renderEnemyRow = (r, idx, showMy = false) => {
+    const ebJp = brawlerJp[r.enemy_brawler] || r.enemy_brawler;
+    const myJp = showMy ? (brawlerJp[r.my_brawler] || r.my_brawler) : "";
+    const eImg = brawlerImg[r.enemy_brawler];
+    const mImg = showMy ? brawlerImg[r.my_brawler] : "";
+    const wrColor = r.avg_rank >= 3 ? "text-red-300" : r.avg_rank >= 2.5 ? "text-yellow-300" : "text-green-300";
+    return `<tr class="border-b border-gray-700/50 hover:bg-gray-700/30">
+      <td class="py-2 px-2 text-gray-500 text-xs w-8">${idx + 1}</td>
+      ${showMy ? `<td class="py-2 px-2"><div class="flex items-center gap-1">${mImg?`<img src="${mImg}" class="w-6 h-6 rounded">`:''}<span class="text-sm truncate max-w-[80px]">${escapeHtml(myJp)}</span></div></td>` : ""}
+      <td class="py-2 px-2"><div class="flex items-center gap-1">${eImg?`<img src="${eImg}" class="w-6 h-6 rounded">`:''}<span class="text-sm truncate max-w-[80px]">${escapeHtml(ebJp)}</span></div></td>
+      <td class="py-2 px-2 text-right font-mono text-xs">${r.seen}</td>
+      <td class="py-2 px-2 text-right font-mono ${wrColor} text-xs">${r.avg_rank.toFixed(2)}</td>
+      <td class="py-2 px-2 text-right font-mono text-blue-300 text-xs">${(r.top2_rate*100).toFixed(0)}%</td>
+    </tr>`;
+  };
+
+  return `
+    <div id="matchup-area" class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">${t("matchup_global")}</h3>
+      <div class="overflow-x-auto -mx-2">
+      <table class="w-full text-sm">
+        <thead><tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+          <th class="pb-2 px-2">#</th>
+          <th class="pb-2 px-2">${t("matchup_enemy")}</th>
+          <th class="pb-2 px-2 text-right">${t("matchup_seen")}</th>
+          <th class="pb-2 px-2 text-right">${t("matchup_avg_rank")}</th>
+          <th class="pb-2 px-2 text-right">${t("summary_top2")}</th>
+        </tr></thead>
+        <tbody>${globalTough.map((r,i)=>renderEnemyRow(r,i,false)).join("")}</tbody>
+      </table>
+      </div>
+      <h3 class="text-sm font-bold mt-6 mb-2 text-gray-300 uppercase tracking-wide">自分のブロウラー × 敵 (苦手TOP15)</h3>
+      <div class="overflow-x-auto -mx-2">
+      <table class="w-full text-sm">
+        <thead><tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+          <th class="pb-2 px-2">#</th>
+          <th class="pb-2 px-2">${t("matchup_my")}</th>
+          <th class="pb-2 px-2">${t("matchup_enemy")}</th>
+          <th class="pb-2 px-2 text-right">${t("matchup_seen")}</th>
+          <th class="pb-2 px-2 text-right">${t("matchup_avg_rank")}</th>
+          <th class="pb-2 px-2 text-right">${t("summary_top2")}</th>
+        </tr></thead>
+        <tbody>${byMyToughSorted.map((r,i)=>renderEnemyRow(r,i,true)).join("")}</tbody>
+      </table>
       </div>
     </div>`;
 }

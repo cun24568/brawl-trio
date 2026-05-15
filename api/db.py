@@ -203,6 +203,96 @@ def cooldown_remaining(tag: str) -> int:
     return max(0, COOLDOWN_SECONDS - elapsed)
 
 
+def get_player_matchups(tag: str, since: str | None = None, min_seen: int = 5) -> dict:
+    """対面相性分析: 自分が使ったブロウラー別に「敵チームに居たブロウラー」 を集計。
+    返値: {
+      "by_my_brawler": [{my_brawler, enemy_brawler, seen, top2, top2_rate, avg_rank}, ...],
+      "global": [{enemy_brawler, seen, top2_rate, avg_rank}, ...]  // 自ブロウラー無視の総合
+    }
+    """
+    tag = normalize_tag(tag)
+    extra = ""
+    params: list = [tag]
+    if since:
+        extra = " AND battle_time >= ?"
+        params.append(since)
+    with conn() as c:
+        rows = c.execute(
+            f"SELECT brawler AS my_brawler, rank, raw_json FROM battles WHERE tag=?{extra}",
+            params,
+        ).fetchall()
+
+    # 集計: (my_brawler, enemy_brawler) → {seen, top2, rank_sum}
+    by_pair = {}
+    by_enemy = {}
+    for r in rows:
+        my = r["my_brawler"] or ""
+        rk = r["rank"] or 0
+        try:
+            raw = json.loads(r["raw_json"])
+        except Exception:
+            continue
+        teams = (raw.get("battle") or {}).get("teams") or []
+        # 自分のチームを特定
+        my_idx = None
+        for i, team in enumerate(teams):
+            if any(p.get("tag") == tag for p in team):
+                my_idx = i
+                break
+        if my_idx is None:
+            continue
+        # 敵チームのbrawlersを抽出 (重複除外: 同じbrawlerが複数チームに居たら1回扱い)
+        enemy_brawlers = set()
+        for i, team in enumerate(teams):
+            if i == my_idx:
+                continue
+            for p in team:
+                br = (p.get("brawler") or {}).get("name", "")
+                if br:
+                    enemy_brawlers.add(br)
+        for eb in enemy_brawlers:
+            k = (my, eb)
+            s = by_pair.get(k) or {"seen": 0, "top2": 0, "rank_sum": 0}
+            s["seen"] += 1
+            if rk <= 2:
+                s["top2"] += 1
+            s["rank_sum"] += rk
+            by_pair[k] = s
+
+            ge = by_enemy.get(eb) or {"seen": 0, "top2": 0, "rank_sum": 0}
+            ge["seen"] += 1
+            if rk <= 2:
+                ge["top2"] += 1
+            ge["rank_sum"] += rk
+            by_enemy[eb] = ge
+
+    by_my = []
+    for (my, eb), s in by_pair.items():
+        if s["seen"] < min_seen:
+            continue
+        by_my.append({
+            "my_brawler": my,
+            "enemy_brawler": eb,
+            "seen": s["seen"],
+            "top2": s["top2"],
+            "top2_rate": s["top2"] / s["seen"],
+            "avg_rank": s["rank_sum"] / s["seen"],
+        })
+    by_my.sort(key=lambda x: x["avg_rank"])
+    glob = []
+    for eb, s in by_enemy.items():
+        if s["seen"] < min_seen:
+            continue
+        glob.append({
+            "enemy_brawler": eb,
+            "seen": s["seen"],
+            "top2_rate": s["top2"] / s["seen"],
+            "avg_rank": s["rank_sum"] / s["seen"],
+        })
+    glob.sort(key=lambda x: -x["avg_rank"])  # 苦手 (avg_rank高い) が上
+    return {"by_my_brawler": by_my, "global": glob}
+
+
 def get_player_stats(tag: str, since: str | None = None) -> dict:
     """そのタグのトリオサバイバル集計データを返す。
     since: battle_time の下限 (YYYYMMDDTHHMMSS.000Z 形式)、 None なら全期間。"""
@@ -292,15 +382,35 @@ def import_historical_battles(tag: str, jsonl_path) -> int:
     return upsert_battles(tag, matches)
 
 
-def get_player_battles(tag: str, limit: int = 60, offset: int = 0) -> list[dict]:
-    """そのタグの試合履歴を新しい順に返す。raw_jsonをparseして表示用に整形。"""
+def get_player_battles(
+    tag: str,
+    limit: int = 60,
+    offset: int = 0,
+    brawler: str | None = None,
+    map_name: str | None = None,
+    rank: int | None = None,
+) -> list[dict]:
+    """そのタグの試合履歴を新しい順に返す。任意のフィルタ (brawler/map/rank) 対応。"""
     tag = normalize_tag(tag)
+    where = ["tag = ?"]
+    params: list = [tag]
+    if brawler:
+        where.append("brawler = ?")
+        params.append(brawler)
+    if map_name:
+        where.append("map = ?")
+        params.append(map_name)
+    if rank is not None:
+        where.append("rank = ?")
+        params.append(int(rank))
+    params.extend([limit, offset])
+    where_sql = " AND ".join(where)
     with conn() as c:
         rows = c.execute(
-            """SELECT battle_time, mode, map, brawler, rank, raw_json
-               FROM battles WHERE tag=?
+            f"""SELECT battle_time, mode, map, brawler, rank, raw_json
+               FROM battles WHERE {where_sql}
                ORDER BY battle_time DESC LIMIT ? OFFSET ?""",
-            (tag, limit, offset),
+            params,
         ).fetchall()
 
     result = []
