@@ -73,23 +73,33 @@ def init_db():
             CREATE INDEX IF NOT EXISTS idx_fetch_log_tag_time ON fetch_log(tag, fetched_at DESC);
         """)
         # 既存DBへのカラム追加 (一度きり)
-        try:
-            c.execute("ALTER TABLE watchlist ADD COLUMN highest_trophies INTEGER")
-        except sqlite3.OperationalError:
-            pass
+        for col_sql in [
+            "ALTER TABLE watchlist ADD COLUMN highest_trophies INTEGER",
+            "ALTER TABLE watchlist ADD COLUMN profile_json TEXT",
+        ]:
+            try:
+                c.execute(col_sql)
+            except sqlite3.OperationalError:
+                pass
 
 
-def add_to_watchlist(tag: str, name: str = None, trophies: int = None, highest_trophies: int = None) -> tuple[bool, str]:
-    """ウォッチリストに追加 / 既登録なら名前・トロフィー更新。"""
+def add_to_watchlist(
+    tag: str,
+    name: str = None,
+    trophies: int = None,
+    highest_trophies: int = None,
+    profile_json: str = None,
+) -> tuple[bool, str]:
+    """ウォッチリストに追加 / 既登録なら名前・トロフィー・プロフィール更新。"""
     tag = normalize_tag(tag)
     now = int(time.time())
     with conn() as c:
         existing = c.execute("SELECT tag FROM watchlist WHERE tag=?", (tag,)).fetchone()
         if existing:
-            if name or trophies is not None or highest_trophies is not None:
+            if name or trophies is not None or highest_trophies is not None or profile_json is not None:
                 c.execute(
-                    "UPDATE watchlist SET name=COALESCE(?,name), trophies=COALESCE(?,trophies), highest_trophies=COALESCE(?,highest_trophies) WHERE tag=?",
-                    (name, trophies, highest_trophies, tag),
+                    "UPDATE watchlist SET name=COALESCE(?,name), trophies=COALESCE(?,trophies), highest_trophies=COALESCE(?,highest_trophies), profile_json=COALESCE(?,profile_json) WHERE tag=?",
+                    (name, trophies, highest_trophies, profile_json, tag),
                 )
             return True, "既に登録済み"
         count = c.execute("SELECT COUNT(*) FROM watchlist").fetchone()[0]
@@ -100,8 +110,8 @@ def add_to_watchlist(tag: str, name: str = None, trophies: int = None, highest_t
             if victim:
                 c.execute("DELETE FROM watchlist WHERE tag=?", (victim["tag"],))
         c.execute(
-            "INSERT INTO watchlist (tag, registered_at, name, trophies, highest_trophies) VALUES (?, ?, ?, ?, ?)",
-            (tag, now, name, trophies, highest_trophies),
+            "INSERT INTO watchlist (tag, registered_at, name, trophies, highest_trophies, profile_json) VALUES (?, ?, ?, ?, ?, ?)",
+            (tag, now, name, trophies, highest_trophies, profile_json),
         )
         return True, "登録完了"
 

@@ -1313,6 +1313,7 @@ function renderMypage() {
       ${MYPAGE_SECTION === "brawlers" ? renderMypageBrawlers(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats, total) : ""}
       ${MYPAGE_SECTION === "maps" ? renderMypageMaps(stats.maps || [], mapJp) : ""}
       ${MYPAGE_SECTION === "recommend" ? renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats) : ""}
+      ${MYPAGE_SECTION === "collection" ? renderMypageCollection(profile, brawlerJp, brawlerImg) : ""}
     `}
     <div class="text-xs text-gray-500 mt-4 text-center">
       ウォッチリスト ${d.watchlist_count}/${d.watchlist_max} ・
@@ -1322,34 +1323,56 @@ function renderMypage() {
 
 function renderMypageHeader(d, profile, period) {
   const regAt = profile.registered_at
-    ? new Date(profile.registered_at * 1000).toLocaleDateString("ja-JP")
+    ? new Date(profile.registered_at * 1000).toLocaleDateString(LANG === "en" ? "en-US" : "ja-JP")
     : "—";
   const periods = [
-    { val: "1d", label: "1日" },
-    { val: "7d", label: "7日" },
-    { val: "30d", label: "30日" },
-    { val: "all", label: "全期間" },
+    { val: "1d", label: t("period_1d") },
+    { val: "7d", label: t("period_7d") },
+    { val: "30d", label: t("period_30d") },
+    { val: "all", label: t("period_all") },
   ];
   const periodBtns = periods.map(p => {
     const active = MYPAGE_PERIOD === p.val;
     return `<button onclick="changeMypagePeriod('${p.val}')" class="px-3 py-1 rounded text-xs font-bold ${active ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}">${p.label}</button>`;
   }).join("");
+  // 公式API由来の追加プロフィール
+  const iconId = profile.icon;
+  const iconUrl = iconId ? `https://cdn.brawlify.com/profile-icons/regular/${iconId}.png` : null;
+  const nameColor = profile.nameColor ? "#" + (profile.nameColor.toString(16) || "").slice(-6) : null;
+  const club = profile.club || {};
+  const stats = [
+    profile.expLevel ? `<span class="text-purple-300">Lv.${profile.expLevel}</span>` : "",
+    profile.victories_3v3 ? `<span class="text-cyan-300">3v3勝利 ${profile.victories_3v3.toLocaleString()}</span>` : "",
+    profile.victories_solo ? `<span class="text-amber-300">ソロ勝利 ${profile.victories_solo.toLocaleString()}</span>` : "",
+    profile.victories_duo ? `<span class="text-pink-300">デュオ勝利 ${profile.victories_duo.toLocaleString()}</span>` : "",
+  ].filter(Boolean).join('<span class="text-gray-600 mx-1">·</span>');
   return `
     <div class="bg-gray-800 p-4 rounded mb-4">
-      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-        <h2 class="text-xl font-bold">${escapeHtml(profile.name || d.tag)}</h2>
-        <span class="text-sm text-gray-400 font-mono">${escapeHtml(d.tag)}</span>
-        ${profile.trophies ? `<span class="text-sm text-yellow-400">🏆 ${profile.trophies.toLocaleString()}</span>` : ""}
-        ${profile.highest_trophies ? `<span class="text-sm text-orange-400">最高 ${profile.highest_trophies.toLocaleString()}</span>` : ""}
-      </div>
-      <div class="text-xs text-gray-500 mt-1">
-        登録: ${regAt} ・ データ期間: ${period}
+      <div class="flex items-start gap-3">
+        ${iconUrl ? `<img src="${iconUrl}" class="w-16 h-16 rounded shrink-0" onerror="this.style.display='none'">` : ""}
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h2 class="text-xl font-bold" ${nameColor ? `style="color:${nameColor}"` : ""}>${escapeHtml(profile.name || d.tag)}</h2>
+            <span class="text-sm text-gray-400 font-mono">${escapeHtml(d.tag)}</span>
+            ${profile.trophies ? `<span class="text-sm text-yellow-400">🏆 ${profile.trophies.toLocaleString()}</span>` : ""}
+            ${profile.highest_trophies ? `<span class="text-sm text-orange-400">最高 ${profile.highest_trophies.toLocaleString()}</span>` : ""}
+          </div>
+          ${stats ? `<div class="text-xs mt-1.5 flex flex-wrap gap-x-1">${stats}</div>` : ""}
+          ${club.tag ? `<div class="text-xs text-gray-400 mt-1">🛡️ <button onclick="openClubFromMypage('${escapeHtml(club.tag)}')" class="text-blue-300 hover:underline">${escapeHtml(club.name || club.tag)}</button></div>` : ""}
+          <div class="text-xs text-gray-500 mt-1">登録: ${regAt} ・ ${t("period_label")}: ${period}</div>
+        </div>
       </div>
       <div class="flex flex-wrap gap-1 mt-3">
-        <span class="text-xs text-gray-400 mr-1 self-center">集計期間:</span>
+        <span class="text-xs text-gray-400 mr-1 self-center">${t("period_label")}:</span>
         ${periodBtns}
       </div>
     </div>`;
+}
+
+function openClubFromMypage(tag) {
+  document.getElementById("club-tag").value = tag;
+  document.querySelector('.tab-btn[data-tab="club"]').click();
+  fetchClub(tag);
 }
 
 function changeMypagePeriod(p) {
@@ -1368,6 +1391,7 @@ function renderMypageSectionSelector() {
     { val: "brawlers", label: t("section_brawlers") },
     { val: "maps", label: t("section_maps") },
     { val: "recommend", label: t("section_recommend") },
+    { val: "collection", label: LANG === "en" ? "Collection" : "コレクション" },
   ];
   return `
     <div class="mb-3">
@@ -1834,6 +1858,78 @@ function renderMypageMaps(maps, mapJp) {
         <details class="mt-4">
           <summary class="cursor-pointer text-xs text-gray-400 hover:text-gray-200">全マップ ${maps.length}件を表示</summary>
           <div class="mt-2 space-y-1">${maps.map(renderRow).join("")}</div>
+        </details>` : ""}
+    </div>`;
+}
+
+// ブロウラーコレクション (公式APIから取得した所持データ)
+function renderMypageCollection(profile, brawlerJp, brawlerImg) {
+  const owned = profile.brawlers || [];
+  if (owned.length === 0) {
+    return `<div class="bg-gray-800 p-6 rounded text-center text-gray-400">${t("no_data")}</div>`;
+  }
+  // 全ブロウラー (102体) を所持/未所持で分類 (DB.brawlers を参照)
+  const ownedByName = {};
+  for (const b of owned) ownedByName[b.name] = b;
+  const allBrawlers = (DB?.brawlers || []).slice();
+
+  // 統計: 所持率、 マスタリー
+  const totalBr = allBrawlers.length || owned.length;
+  const ownedCount = owned.length;
+  const ownedRate = totalBr ? (ownedCount / totalBr * 100) : 0;
+  const totalGears = owned.reduce((s, b) => s + (b.gears || 0), 0);
+  const totalSP = owned.reduce((s, b) => s + (b.starPowers || 0), 0);
+  const totalGad = owned.reduce((s, b) => s + (b.gadgets || 0), 0);
+  const totalHC = owned.reduce((s, b) => s + (b.hyperCharge || 0), 0);
+
+  // 並び: ランク降順 → 各ブロウラートロフィー降順
+  owned.sort((a, b) => (b.rank || 0) - (a.rank || 0) || (b.trophies || 0) - (a.trophies || 0));
+
+  // 未所持ブロウラー
+  const ownedSet = new Set(owned.map(b => b.name));
+  const unowned = allBrawlers.filter(b => !ownedSet.has(b.name));
+
+  const renderCard = (b) => {
+    const img = brawlerImg[b.name];
+    const jp = brawlerJp[b.name] || b.name;
+    const rk = b.rank || 0;
+    const rkColor = rk >= 35 ? "text-yellow-300" : rk >= 25 ? "text-orange-300" : rk >= 15 ? "text-blue-300" : "text-gray-400";
+    return `<div class="relative p-1 bg-gray-700/30 rounded text-center">
+      ${b.hyperCharge ? `<span class="absolute top-0 right-0 text-[10px] bg-purple-600 text-white rounded-bl px-0.5">HC</span>` : ""}
+      ${img ? `<img src="${img}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
+      <div class="text-[10px] mt-0.5 truncate font-semibold">${escapeHtml(jp)}</div>
+      <div class="text-[10px] ${rkColor}">R${rk} <span class="text-yellow-400">🏆${b.trophies||0}</span></div>
+      <div class="text-[9px] text-gray-400">P${b.power||0} <span class="text-gray-500">${b.starPowers||0}sp ${b.gadgets||0}g</span></div>
+    </div>`;
+  };
+
+  const renderUnownedCard = (b) => {
+    const img = brawlerImg[b.name];
+    const jp = brawlerJp[b.name] || b.name;
+    return `<div class="p-1 bg-gray-800 rounded text-center opacity-40">
+      ${img ? `<img src="${img}" class="w-full rounded grayscale">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
+      <div class="text-[10px] mt-0.5 truncate text-gray-500">${escapeHtml(jp)}</div>
+    </div>`;
+  };
+
+  const gridCls = "grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 xl:grid-cols-15 gap-1";
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+        <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wide">${LANG === "en" ? "Collection" : "コレクション"}</h3>
+        <span class="text-sm text-gray-400">${ownedCount}/${totalBr} (${ownedRate.toFixed(1)}%)</span>
+      </div>
+      <div class="flex flex-wrap gap-3 text-xs mb-3">
+        <span class="text-yellow-300">🎁 ${totalGears} ${LANG === "en" ? "gears" : "ギア"}</span>
+        <span class="text-orange-300">⭐ ${totalSP} ${LANG === "en" ? "star powers" : "スタパ"}</span>
+        <span class="text-cyan-300">⚙️ ${totalGad} ${LANG === "en" ? "gadgets" : "ガジェット"}</span>
+        <span class="text-purple-300">🔋 ${totalHC} ${LANG === "en" ? "hyper charges" : "ハイチャ"}</span>
+      </div>
+      <div class="${gridCls}">${owned.map(renderCard).join("")}</div>
+      ${unowned.length > 0 ? `
+        <details class="mt-4">
+          <summary class="cursor-pointer text-xs text-gray-400 hover:text-gray-200">${LANG === "en" ? "Unowned" : "未所持"} ${unowned.length}${LANG === "en" ? "" : "体"}</summary>
+          <div class="${gridCls} mt-2">${unowned.map(renderUnownedCard).join("")}</div>
         </details>` : ""}
     </div>`;
 }

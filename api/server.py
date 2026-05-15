@@ -296,7 +296,7 @@ def get_player(tag: str, request: Request, period: str = "all"):
     # 初回(未登録 または 試合データなし) → 自動で取得+登録
     wl = db.get_watchlist()
     is_registered = any(w["tag"] == tag for w in wl)
-    # 公式 player profile を毎回取得して watchlist 更新 (現在トロ・最高トロ追従)
+    # 公式 player profile を毎回取得して watchlist 更新 (現在トロ・最高トロ・プロフィール JSON)
     try:
         player = brawl_api.get_player(tag)
         db.add_to_watchlist(
@@ -304,6 +304,7 @@ def get_player(tag: str, request: Request, period: str = "all"):
             name=player.get("name"),
             trophies=player.get("trophies"),
             highest_trophies=player.get("highestTrophies"),
+            profile_json=json.dumps(player, ensure_ascii=False),
         )
     except HTTPError as e:
         if not is_registered:
@@ -325,15 +326,48 @@ def get_player(tag: str, request: Request, period: str = "all"):
     cooldown = db.cooldown_remaining(tag)
     last_fetched = db.last_fetch_time(tag)
 
-    # プロフィール情報
+    # プロフィール情報 (DB の watchlist + 保存済 profile_json をparse)
     with db.conn() as c:
-        prof = c.execute(
-            "SELECT name, trophies, highest_trophies, registered_at FROM watchlist WHERE tag=?", (tag,)
+        prof_row = c.execute(
+            "SELECT name, trophies, highest_trophies, registered_at, profile_json FROM watchlist WHERE tag=?",
+            (tag,),
         ).fetchone()
+    prof = dict(prof_row) if prof_row else {}
+    raw_profile = None
+    if prof.get("profile_json"):
+        try:
+            raw_profile = json.loads(prof.pop("profile_json"))
+        except Exception:
+            raw_profile = None
+    if raw_profile:
+        # 公式API から軽量化したフィールドを追加
+        prof["expLevel"] = raw_profile.get("expLevel")
+        prof["icon"] = raw_profile.get("icon", {}).get("id")
+        prof["nameColor"] = raw_profile.get("nameColor")
+        prof["club"] = raw_profile.get("club") or {}
+        prof["victories_3v3"] = raw_profile.get("3vs3Victories")
+        prof["victories_solo"] = raw_profile.get("soloVictories")
+        prof["victories_duo"] = raw_profile.get("duoVictories")
+        # ブロウラー (軽量化: 必要フィールドだけ)
+        brawlers = []
+        for b in raw_profile.get("brawlers", []):
+            brawlers.append({
+                "id": b.get("id"),
+                "name": b.get("name"),
+                "power": b.get("power"),
+                "rank": b.get("rank"),
+                "trophies": b.get("trophies"),
+                "highestTrophies": b.get("highestTrophies"),
+                "gears": len(b.get("gears") or []),
+                "starPowers": len(b.get("starPowers") or []),
+                "gadgets": len(b.get("gadgets") or []),
+                "hyperCharge": 1 if b.get("hyperCharge") else 0,
+            })
+        prof["brawlers"] = brawlers
 
     return {
         "tag": tag,
-        "profile": dict(prof) if prof else {},
+        "profile": prof or {},
         "stats": stats,
         "period": period,
         "cooldown_seconds": cooldown,
