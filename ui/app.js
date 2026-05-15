@@ -23,7 +23,15 @@ let MYPAGE_MATCHUPS = null;  // マッチアップ分析データ
 // ============================================================
 // i18n (ja デフォルト、 en切替対応)
 // ============================================================
-let LANG = localStorage.getItem("lang") || "ja";
+function detectLang() {
+  // ユーザーが明示的に選択した言語があればそれを優先
+  const saved = localStorage.getItem("lang");
+  if (saved === "ja" || saved === "en") return saved;
+  // ブラウザの言語設定で判定: ja* → ja, それ以外 → en
+  const browserLang = (navigator.language || "ja").toLowerCase();
+  return browserLang.startsWith("ja") ? "ja" : "en";
+}
+let LANG = detectLang();
 const I18N = {
   ja: {
     site_title: "ブロスタ トリオデータベース",
