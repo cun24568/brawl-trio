@@ -22,10 +22,9 @@ def _fetch_one(tag: str) -> tuple[str, int, int, str | None]:
     n_api = 0
     n_hist = 0
     try:
-        # 公式API: 直近25試合
+        # 公式API: 直近25試合 (全モード保存、 mode列で識別可能)
         battles = brawl_api.get_battlelog(tag)
-        trio = [b for b in battles if brawl_api.is_trio_battle(b)]
-        n_api = db.upsert_battles(tag, trio) if trio else 0
+        n_api = db.upsert_battles(tag, battles) if battles else 0
     except HTTPError as e:
         db.log_fetch(tag, 0, error=f"HTTP {e.code}")
         return tag, 0, 0, f"HTTP {e.code}"

@@ -175,13 +175,18 @@ def upsert_battles(tag: str, battles: list[dict]) -> int:
 
 
 def _extract_self(tag: str, battle: dict) -> tuple[str, int]:
-    """battle.teams (4チーム×3) から自分のブロウラーとチーム順位を取り出す。"""
+    """全モード対応: battle.teams (trio/duo/3v3) または battle.players (solo) から
+    自分のブロウラーと順位を取り出す。 3v3 のような順位なしモードは rank=0。"""
     rank = battle.get("rank") or 0
     teams = battle.get("teams") or []
     for team in teams:
         for p in team:
             if p.get("tag") == tag:
                 return (p.get("brawler") or {}).get("name", ""), rank
+    players = battle.get("players") or []
+    for p in players:
+        if p.get("tag") == tag:
+            return (p.get("brawler") or {}).get("name", ""), rank
     return "", rank
 
 
@@ -221,10 +226,10 @@ def get_player_matchups(tag: str, since: str | None = None, min_seen: int = 5) -
     }
     """
     tag = normalize_tag(tag)
-    extra = ""
+    extra = " AND mode = 'trioShowdown'"
     params: list = [tag]
     if since:
-        extra = " AND battle_time >= ?"
+        extra += " AND battle_time >= ?"
         params.append(since)
     with conn() as c:
         rows = c.execute(
@@ -304,13 +309,13 @@ def get_player_matchups(tag: str, since: str | None = None, min_seen: int = 5) -
 
 
 def get_player_stats(tag: str, since: str | None = None) -> dict:
-    """そのタグのトリオサバイバル集計データを返す。
+    """そのタグのトリオサバイバル集計データを返す (全モード保存後も既存挙動維持: trioShowdownフィルタ)。
     since: battle_time の下限 (YYYYMMDDTHHMMSS.000Z 形式)、 None なら全期間。"""
     tag = normalize_tag(tag)
-    extra = ""
+    extra = " AND mode = 'trioShowdown'"
     base_params = [tag]
     if since:
-        extra = " AND battle_time >= ?"
+        extra += " AND battle_time >= ?"
         base_params.append(since)
 
     with conn() as c:
@@ -402,7 +407,7 @@ def get_player_battles(
 ) -> list[dict]:
     """そのタグの試合履歴を新しい順に返す。任意のフィルタ (brawler/map/rank) 対応。"""
     tag = normalize_tag(tag)
-    where = ["tag = ?"]
+    where = ["tag = ?", "mode = 'trioShowdown'"]
     params: list = [tag]
     if brawler:
         where.append("brawler = ?")

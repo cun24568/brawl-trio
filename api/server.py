@@ -405,7 +405,7 @@ def get_battles(
     if offset < 0:
         offset = 0
     # filter conditions for total count
-    where = ["tag = ?"]
+    where = ["tag = ?", "mode = 'trioShowdown'"]
     params: list = [tag]
     if brawler:
         where.append("brawler = ?"); params.append(brawler)
@@ -469,7 +469,7 @@ def leaderboard(
                   w.trophies AS trophies
                 FROM battles b
                 LEFT JOIN watchlist w ON b.tag = w.tag
-                WHERE 1=1{extra}
+                WHERE b.mode = 'trioShowdown'{extra}
                 GROUP BY b.tag
                 HAVING battles >= ?
                 ORDER BY {order_sql}
