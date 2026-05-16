@@ -322,8 +322,8 @@ def main():
         sub = [e for e in enriched if lo <= e["gap"] < hi]
         if len(sub) < 20: continue
         med_var = statistics.median([e["trio_trophy_var"] for e in sub])
-        med_diff_tr = max(e["trio_trophies"][0] for e in sub) - min(e["trio_trophies"][-1] for e in sub) if sub else 0
-        print(f"    gap {lo:>4}-{hi:<5}s (N={len(sub):>4})  trio_tr_var_med={med_var:>10.0f}")
+        med_med = statistics.median([e["trio_trophy_med"] for e in sub])
+        print(f"    gap {lo:>4}-{hi:<5}s (N={len(sub):>4})  trio_tr_var_med={med_var:>10.0f}  trio_tr_med={med_med:>5.0f}")
 
     # ================================================================
     print("\n" + "="*72)
