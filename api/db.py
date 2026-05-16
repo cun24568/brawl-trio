@@ -71,6 +71,23 @@ def init_db():
                 error TEXT
             );
             CREATE INDEX IF NOT EXISTS idx_fetch_log_tag_time ON fetch_log(tag, fetched_at DESC);
+            -- マッチング時間計測 (B案): ユーザーが「キュー開始」を押した時刻と、 公式APIで検出した試合開始時刻
+            CREATE TABLE IF NOT EXISTS queue_measurements (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                tag TEXT NOT NULL,
+                queue_start_at INTEGER NOT NULL,  -- ユーザーがキュー開始ボタンを押したUnix秒
+                detected_at INTEGER,              -- 新試合が検出されたUnix秒 (pollingで観測)
+                battle_time TEXT,                 -- 検出された試合の battleTime
+                mode TEXT,
+                map TEXT,
+                brawler TEXT,
+                duration INTEGER,                 -- 試合の長さ (秒)
+                queue_seconds INTEGER,            -- battle開始時刻 - queue_start_at
+                status TEXT DEFAULT 'pending',    -- pending / matched / timeout / canceled
+                notes TEXT
+            );
+            CREATE INDEX IF NOT EXISTS idx_queue_tag_status ON queue_measurements(tag, status);
+            CREATE INDEX IF NOT EXISTS idx_queue_status_start ON queue_measurements(status, queue_start_at);
         """)
         # 既存DBへのカラム追加 (一度きり)
         for col_sql in [
@@ -468,6 +485,138 @@ def get_player_battles(
             "enemy_teams": enemy_teams,
         })
     return result
+
+
+# ============================================================
+# キュー計測 (B案): マッチング時間を battlelog ポーリングで間接観測
+# ============================================================
+
+def _parse_battle_time_unix(bt: str) -> int | None:
+    """'20260516T123045.000Z' → Unix秒"""
+    if not bt or len(bt) < 15:
+        return None
+    try:
+        from datetime import datetime, timezone
+        dt = datetime.strptime(bt[:15], "%Y%m%dT%H%M%S").replace(tzinfo=timezone.utc)
+        return int(dt.timestamp())
+    except Exception:
+        return None
+
+
+def create_queue_measurement(tag: str) -> int:
+    """キュー開始を記録。返値: measurement_id (DB行のid)。"""
+    tag = normalize_tag(tag)
+    now = int(time.time())
+    with conn() as c:
+        # 同じタグの pending を全て canceled に (誤って二重開始対策)
+        c.execute(
+            "UPDATE queue_measurements SET status='canceled', notes=COALESCE(notes,'')||' superseded' WHERE tag=? AND status='pending'",
+            (tag,),
+        )
+        cur = c.execute(
+            "INSERT INTO queue_measurements (tag, queue_start_at, status) VALUES (?, ?, 'pending')",
+            (tag, now),
+        )
+        return cur.lastrowid
+
+
+def get_queue_measurement(measurement_id: int) -> dict | None:
+    with conn() as c:
+        row = c.execute(
+            "SELECT * FROM queue_measurements WHERE id=?",
+            (measurement_id,),
+        ).fetchone()
+        return dict(row) if row else None
+
+
+def list_pending_queue_measurements(max_age_seconds: int = 3600) -> list[dict]:
+    """ポーリング対象 (status='pending' かつ max_age 以内)"""
+    cutoff = int(time.time()) - max_age_seconds
+    with conn() as c:
+        rows = c.execute(
+            "SELECT * FROM queue_measurements WHERE status='pending' AND queue_start_at >= ? ORDER BY queue_start_at ASC",
+            (cutoff,),
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+
+def mark_queue_timeout(measurement_id: int):
+    with conn() as c:
+        c.execute(
+            "UPDATE queue_measurements SET status='timeout' WHERE id=? AND status='pending'",
+            (measurement_id,),
+        )
+
+
+def complete_queue_measurement(
+    measurement_id: int,
+    battle: dict,
+) -> bool:
+    """検出した battle dict (公式APIフォーマット) で measurement を完成させる。"""
+    bt = battle.get("battleTime", "")
+    battle_inner = battle.get("battle") or {}
+    ev = battle.get("event") or {}
+    duration = battle_inner.get("duration", 0) or 0
+    battle_end_unix = _parse_battle_time_unix(bt)
+    if battle_end_unix is None:
+        return False
+    battle_start_unix = battle_end_unix - duration
+    now = int(time.time())
+    with conn() as c:
+        row = c.execute(
+            "SELECT queue_start_at, status FROM queue_measurements WHERE id=?",
+            (measurement_id,),
+        ).fetchone()
+        if not row or row["status"] != "pending":
+            return False
+        queue_seconds = battle_start_unix - row["queue_start_at"]
+        if queue_seconds < 0:
+            queue_seconds = 0
+        # 自分の brawler を抽出
+        tag_row = c.execute(
+            "SELECT tag FROM queue_measurements WHERE id=?", (measurement_id,)
+        ).fetchone()
+        my_brawler = ""
+        if tag_row:
+            t = tag_row["tag"]
+            for team in (battle_inner.get("teams") or []):
+                for p in team:
+                    if p.get("tag") == t:
+                        my_brawler = (p.get("brawler") or {}).get("name", "")
+            for p in (battle_inner.get("players") or []):
+                if p.get("tag") == t:
+                    my_brawler = (p.get("brawler") or {}).get("name", "")
+        c.execute(
+            """UPDATE queue_measurements SET
+                 detected_at=?,
+                 battle_time=?,
+                 mode=?,
+                 map=?,
+                 brawler=?,
+                 duration=?,
+                 queue_seconds=?,
+                 status='matched'
+               WHERE id=?""",
+            (now, bt, ev.get("mode", ""), ev.get("map", ""), my_brawler, duration, queue_seconds, measurement_id),
+        )
+    return True
+
+
+def recent_queue_measurements(tag: str | None = None, limit: int = 100) -> list[dict]:
+    """直近の計測履歴を返す (UI 表示用)。"""
+    with conn() as c:
+        if tag:
+            tag = normalize_tag(tag)
+            rows = c.execute(
+                "SELECT * FROM queue_measurements WHERE tag=? ORDER BY queue_start_at DESC LIMIT ?",
+                (tag, limit),
+            ).fetchall()
+        else:
+            rows = c.execute(
+                "SELECT * FROM queue_measurements ORDER BY queue_start_at DESC LIMIT ?",
+                (limit,),
+            ).fetchall()
+        return [dict(r) for r in rows]
 
 
 if __name__ == "__main__":
