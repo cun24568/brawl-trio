@@ -29,6 +29,12 @@ data/users.db-shm
 api/venv/
 api/__pycache__/
 
+# packet-analysis (C案、VPS only + 解析結果は秘匿)
+packet-analysis/venv/
+packet-analysis/queue_log.jsonl
+packet-analysis/queue_pairs.jsonl
+packet-analysis/capture.mitm
+
 # バイナリ
 cloudflared.exe
 *.zip
