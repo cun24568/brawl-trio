@@ -299,10 +299,13 @@ def main():
     for m, _, _, _ in rows_m[:8]:
         sub = [e for e in enriched if e["map"] == m]
         if len(sub) < 30: continue
-        xs = [e["my_brawler_highest"] for e in sub]
-        ys = [e["gap"] for e in sub]
-        rho, n = spearman(xs, ys)
+        xs_m = [e["my_brawler_highest"] for e in sub]
+        ys_m = [e["gap"] for e in sub]
+        rho, n = spearman(xs_m, ys_m)
         print(f"  {m:<30} N={n:>4}  rho(highest,gap)={rho:+.3f} {sig(rho)}")
+
+    # ys を全 enriched の gap に戻す (E 以降で使う)
+    ys = [e["gap"] for e in enriched]
 
     # ================================================================
     print("\n" + "="*72)
