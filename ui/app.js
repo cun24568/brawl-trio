@@ -1342,10 +1342,24 @@ function renderMypageHeader(d, profile, period) {
   const club = profile.club || {};
   const stats = [
     profile.expLevel ? `<span class="text-purple-300">Lv.${profile.expLevel}</span>` : "",
+    profile.totalPrestigeLevel ? `<span class="text-fuchsia-300">プレ${profile.totalPrestigeLevel}</span>` : "",
     profile.victories_3v3 ? `<span class="text-cyan-300">3v3勝利 ${profile.victories_3v3.toLocaleString()}</span>` : "",
     profile.victories_solo ? `<span class="text-amber-300">ソロ勝利 ${profile.victories_solo.toLocaleString()}</span>` : "",
     profile.victories_duo ? `<span class="text-pink-300">デュオ勝利 ${profile.victories_duo.toLocaleString()}</span>` : "",
   ].filter(Boolean).join('<span class="text-gray-600 mx-1">·</span>');
+  // ガチバトル段位
+  let rankedHtml = "";
+  if (profile.rankedRankName || profile.rankedElo) {
+    const cur = profile.rankedRankName ? `${profile.rankedRankName}` : "";
+    const elo = profile.rankedElo ? ` (Elo ${profile.rankedElo.toLocaleString()})` : "";
+    const best = profile.highestAllTimeRankedRankName && profile.highestAllTimeRankedElo
+      ? ` <span class="text-gray-500">最高 ${profile.highestAllTimeRankedRankName} (Elo ${profile.highestAllTimeRankedElo.toLocaleString()})</span>`
+      : "";
+    rankedHtml = `<div class="text-xs mt-1 flex items-center gap-1 flex-wrap">
+      <span class="text-red-400 font-bold">🏆 ガチ ${escapeHtml(cur)}${escapeHtml(elo)}</span>
+      ${best}
+    </div>`;
+  }
   return `
     <div class="bg-gray-800 p-4 rounded mb-4">
       <div class="flex items-start gap-3">
@@ -1358,6 +1372,7 @@ function renderMypageHeader(d, profile, period) {
             ${profile.highest_trophies ? `<span class="text-sm text-orange-400">最高 ${profile.highest_trophies.toLocaleString()}</span>` : ""}
           </div>
           ${stats ? `<div class="text-xs mt-1.5 flex flex-wrap gap-x-1">${stats}</div>` : ""}
+          ${rankedHtml}
           ${club.tag ? `<div class="text-xs text-gray-400 mt-1">🛡️ <button onclick="openClubFromMypage('${escapeHtml(club.tag)}')" class="text-blue-300 hover:underline">${escapeHtml(club.name || club.tag)}</button></div>` : ""}
           <div class="text-xs text-gray-500 mt-1">登録: ${regAt} ・ ${t("period_label")}: ${period}</div>
         </div>

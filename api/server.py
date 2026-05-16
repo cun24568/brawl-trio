@@ -348,6 +348,14 @@ def get_player(tag: str, request: Request, period: str = "all"):
         prof["victories_3v3"] = raw_profile.get("3vs3Victories")
         prof["victories_solo"] = raw_profile.get("soloVictories")
         prof["victories_duo"] = raw_profile.get("duoVictories")
+        # ガチバトル (Ranked Play) の段位 + Elo
+        prof["rankedRankName"] = raw_profile.get("rankedRankName")
+        prof["rankedElo"] = raw_profile.get("rankedElo")
+        prof["highestSeasonRankedRankName"] = raw_profile.get("highestSeasonRankedRankName")
+        prof["highestSeasonRankedElo"] = raw_profile.get("highestSeasonRankedElo")
+        prof["highestAllTimeRankedRankName"] = raw_profile.get("highestAllTimeRankedRankName")
+        prof["highestAllTimeRankedElo"] = raw_profile.get("highestAllTimeRankedElo")
+        prof["totalPrestigeLevel"] = raw_profile.get("totalPrestigeLevel")
         # ブロウラー (軽量化: 必要フィールドだけ)
         brawlers = []
         for b in raw_profile.get("brawlers", []):
