@@ -1314,6 +1314,7 @@ function renderMypage() {
       ${MYPAGE_SECTION === "maps" ? renderMypageMaps(stats.maps || [], mapJp) : ""}
       ${MYPAGE_SECTION === "recommend" ? renderMypageRecommendations(stats.brawlers || [], brawlerJp, brawlerImg, globalBrawlerStats) : ""}
       ${MYPAGE_SECTION === "collection" ? renderMypageCollection(profile, brawlerJp, brawlerImg) : ""}
+      ${MYPAGE_SECTION === "botobs" ? renderMypageBotObs(MYPAGE_DATA.tag, profile) : ""}
     `}
     <div class="text-xs text-gray-500 mt-4 text-center">
       ウォッチリスト ${d.watchlist_count}/${d.watchlist_max} ・
@@ -1407,6 +1408,7 @@ function renderMypageSectionSelector() {
     { val: "maps", label: t("section_maps") },
     { val: "recommend", label: t("section_recommend") },
     { val: "collection", label: LANG === "en" ? "Collection" : "コレクション" },
+    { val: "botobs", label: LANG === "en" ? "Practice bot card" : "練習試合 botカード" },
   ];
   return `
     <div class="mb-3">
@@ -2643,6 +2645,180 @@ async function queueLoadHistory(tag) {
           </table>
         </div>
       </div>`;
+  } catch (e) { /* ignore */ }
+}
+
+// ============================================================
+// 練習試合 bot バトルカード観察記録 (ユーザ手動入力 → MMR推定)
+// ============================================================
+const BOT_RANK_OPTIONS = [
+  "Bronze I", "Bronze II", "Bronze III",
+  "Silver I", "Silver II", "Silver III",
+  "Gold I", "Gold II", "Gold III",
+  "Diamond I", "Diamond II", "Diamond III",
+  "Mythic I", "Mythic II", "Mythic III",
+  "Legendary I", "Legendary II", "Legendary III",
+  "Masters",
+  "Pro",
+];
+
+let BOT_OBS_CACHE = {};  // tag → {observations, fetched_at}
+
+function renderMypageBotObs(tag, profile) {
+  // 自分の rankedRankName を表示 (比較基準)
+  const myRank = profile && profile.rankedRankName ? profile.rankedRankName : (LANG === "en" ? "(no ranked play)" : "(ガチ未プレイ)");
+  const myElo = profile && profile.rankedElo != null ? profile.rankedElo : 0;
+  // 自分の brawlers から prestige 一覧 (上位3個 表示)
+  const myBrawlers = profile && profile.brawlers ? profile.brawlers : [];
+  // ブロウラー候補 (リスト)
+  // 入力フォーム + 履歴一覧
+  const cache = BOT_OBS_CACHE[tag];
+  let listHtml = `<div class="text-sm text-gray-500">${LANG === "en" ? "Loading observations..." : "履歴を読み込み中..."}</div>`;
+  if (cache) {
+    if (cache.observations.length === 0) {
+      listHtml = `<div class="text-sm text-gray-500">${LANG === "en" ? "No bot observations yet." : "観察記録はまだありません。 練習試合で確認した bot のカード値を入力してください。"}</div>`;
+    } else {
+      // 統計
+      const obs = cache.observations;
+      const withRank = obs.filter(o => o.bot_ranked_rank_num);
+      const withPrestige = obs.filter(o => o.bot_prestige_level != null);
+      const myRankNum = BOT_RANK_OPTIONS.indexOf(myRank) + 1;  // 0なら未プレイ
+      let statHtml = "";
+      if (withRank.length > 0) {
+        const ranks = withRank.map(o => o.bot_ranked_rank_num).sort((a,b)=>a-b);
+        const medRank = ranks[Math.floor(ranks.length/2)];
+        const medRankName = BOT_RANK_OPTIONS[medRank - 1] || "?";
+        const diff = myRankNum ? (medRank - myRankNum) : null;
+        statHtml += `<div class="bg-gray-900 p-2 rounded text-sm">
+          <b>${LANG === "en" ? "Bot ranked rank median" : "bot rankedRank 中央値"}:</b> ${escapeHtml(medRankName)}
+          ${myRankNum ? ` <span class="text-gray-400">(${LANG === "en" ? "you" : "自分"}: ${escapeHtml(myRank)}, diff ${diff >= 0 ? "+" : ""}${diff})</span>` : ""}
+        </div>`;
+      }
+      if (withPrestige.length > 0) {
+        const pres = withPrestige.map(o => o.bot_prestige_level).sort((a,b)=>a-b);
+        const medP = pres[Math.floor(pres.length/2)];
+        statHtml += `<div class="bg-gray-900 p-2 rounded text-sm mt-1">
+          <b>${LANG === "en" ? "Bot prestige median" : "bot prestige 中央値"}:</b> ${medP}
+        </div>`;
+      }
+      listHtml = `${statHtml}
+        <table class="w-full text-sm mt-3">
+          <thead><tr class="text-left text-xs text-gray-400 border-b border-gray-700">
+            <th class="pb-1 px-1">${LANG === "en" ? "Time" : "日時"}</th>
+            <th class="pb-1 px-1">${LANG === "en" ? "Bot brawler" : "botキャラ"}</th>
+            <th class="pb-1 px-1 text-right">Prestige</th>
+            <th class="pb-1 px-1">Rank</th>
+            <th class="pb-1 px-1"></th>
+          </tr></thead>
+          <tbody>${obs.map(o => `
+            <tr class="border-b border-gray-700/50">
+              <td class="py-1 px-1 text-xs text-gray-400">${new Date(o.observed_at * 1000).toLocaleString("ja-JP", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })}</td>
+              <td class="py-1 px-1 text-xs">${escapeHtml(o.bot_brawler || "—")}</td>
+              <td class="py-1 px-1 text-right text-xs">${o.bot_prestige_level != null ? o.bot_prestige_level : "—"}</td>
+              <td class="py-1 px-1 text-xs">${escapeHtml(o.bot_ranked_rank_name || "—")}</td>
+              <td class="py-1 px-1 text-right">
+                <button onclick="deleteBotObs(${o.id}, '${escapeHtml(tag)}')" class="text-xs text-red-400 hover:text-red-300">×</button>
+              </td>
+            </tr>`).join("")}</tbody>
+        </table>`;
+    }
+  } else {
+    // fetch in background
+    fetchBotObs(tag);
+  }
+  return `
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">${LANG === "en" ? "Record practice match bot battle card" : "練習試合 bot バトルカード記録"}</h3>
+      <div class="text-xs text-gray-400 mb-3 leading-relaxed">
+        ${LANG === "en"
+          ? "Open a brawler's detail page → tap 'Practice Match' → observe the bot's battle card (prestige level + ranked rank) → enter here. Comparing across players estimates which MMR band the bot reflects."
+          : "ブロウラー詳細画面 → 「練習試合」 ボタン → 出てきた bot のバトルカードを目視確認 → prestigeLevel と rankedRank を入力。 観察値を蓄積すれば、 bot が反映している MMR帯が見えてきます。"}<br>
+        ${LANG === "en" ? "Your ranked rank:" : "あなたの現ガチランク:"} <b>${escapeHtml(myRank)}</b> ${myElo ? `(Elo ${myElo})` : ""}
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div>
+          <label class="text-xs text-gray-400 block mb-1">${LANG === "en" ? "Bot brawler" : "bot キャラ"}</label>
+          <input id="botobs-brawler" placeholder="${LANG === "en" ? "e.g. FRANK" : "例: FRANK"}" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-sm font-mono">
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 block mb-1">Prestige</label>
+          <input id="botobs-prestige" type="number" min="0" max="50" placeholder="0-50" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-sm font-mono">
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <label class="text-xs text-gray-400 block mb-1">Ranked rank</label>
+          <select id="botobs-rank" class="w-full p-2 bg-gray-900 border border-gray-700 rounded text-sm">
+            <option value="">—</option>
+            ${BOT_RANK_OPTIONS.map(r => `<option value="${r}">${r}</option>`).join("")}
+          </select>
+        </div>
+        <div class="col-span-2 sm:col-span-1 self-end">
+          <button onclick="submitBotObs('${escapeHtml(tag)}')" class="w-full py-2 bg-green-600 hover:bg-green-500 rounded text-sm font-semibold">
+            ${LANG === "en" ? "Save" : "保存"}
+          </button>
+        </div>
+      </div>
+      <div id="botobs-msg" class="mt-2 text-xs"></div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded mb-4">
+      <h3 class="text-sm font-bold mb-2 text-gray-300 uppercase tracking-wide">${LANG === "en" ? "Observation history" : "観察履歴"}</h3>
+      <div id="botobs-list">${listHtml}</div>
+    </div>`;
+}
+
+async function fetchBotObs(tag) {
+  try {
+    const res = await fetch(`${API_HOST}/api/bot-obs/${encodeURIComponent(tag)}?limit=200`);
+    if (!res.ok) return;
+    const data = await res.json();
+    BOT_OBS_CACHE[tag] = { observations: data.observations || [], fetched_at: Date.now() };
+    if (MYPAGE_SECTION === "botobs" && MYPAGE_DATA && MYPAGE_DATA.tag === tag) {
+      renderMypage();
+    }
+  } catch (e) { /* ignore */ }
+}
+
+async function submitBotObs(tag) {
+  const brawler = document.getElementById("botobs-brawler").value.trim().toUpperCase();
+  const prestige = document.getElementById("botobs-prestige").value.trim();
+  const rank = document.getElementById("botobs-rank").value.trim();
+  const msg = document.getElementById("botobs-msg");
+  if (!brawler && !prestige && !rank) {
+    msg.innerHTML = `<span class="text-red-400">${LANG === "en" ? "Enter at least one field" : "少なくとも1項目入力してください"}</span>`;
+    return;
+  }
+  const params = new URLSearchParams();
+  params.set("tag", tag);
+  if (brawler) params.set("bot_brawler", brawler);
+  if (prestige) params.set("bot_prestige_level", prestige);
+  if (rank) params.set("bot_ranked_rank_name", rank);
+  msg.innerHTML = `<span class="text-gray-400">${LANG === "en" ? "Saving..." : "保存中..."}</span>`;
+  try {
+    const res = await fetch(`${API_HOST}/api/bot-obs?${params.toString()}`, { method: "POST" });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({}));
+      msg.innerHTML = `<span class="text-red-400">Error: ${escapeHtml(errBody.detail || res.status)}</span>`;
+      return;
+    }
+    msg.innerHTML = `<span class="text-green-400">${LANG === "en" ? "Saved" : "保存しました"}</span>`;
+    document.getElementById("botobs-brawler").value = "";
+    document.getElementById("botobs-prestige").value = "";
+    document.getElementById("botobs-rank").value = "";
+    delete BOT_OBS_CACHE[tag];
+    await fetchBotObs(tag);
+  } catch (e) {
+    msg.innerHTML = `<span class="text-red-400">Network error</span>`;
+  }
+}
+
+async function deleteBotObs(obsId, tag) {
+  if (!confirm(LANG === "en" ? "Delete this observation?" : "この観察記録を削除しますか?")) return;
+  try {
+    const url = `${API_HOST}/api/bot-obs/${obsId}?tag=${encodeURIComponent(tag)}`;
+    const res = await fetch(url, { method: "DELETE" });
+    if (res.ok) {
+      delete BOT_OBS_CACHE[tag];
+      await fetchBotObs(tag);
+    }
   } catch (e) { /* ignore */ }
 }
 

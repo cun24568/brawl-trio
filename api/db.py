@@ -88,6 +88,23 @@ def init_db():
             );
             CREATE INDEX IF NOT EXISTS idx_queue_tag_status ON queue_measurements(tag, status);
             CREATE INDEX IF NOT EXISTS idx_queue_status_start ON queue_measurements(status, queue_start_at);
+            -- 練習試合 bot バトルカード観察記録 (ユーザー手動入力)
+            -- ユーザがブロウラー詳細画面の練習試合で目視確認した bot の prestigeLevel + rankedRank を記録。
+            -- これらは公式 battlelog API には出ないが、 ゲーム内バトルカードには表示される。
+            -- 観察者のプロフィール (rankedRank/Elo) と相関分析すれば、 「botのカード値 = MMR推定値」 が検証可能。
+            CREATE TABLE IF NOT EXISTS bot_observations (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                tag TEXT NOT NULL,                 -- 観察者プレイヤータグ
+                observed_at INTEGER NOT NULL,      -- 観察Unix秒
+                my_brawler TEXT,                   -- 観察者が選んだキャラ (練習試合の操作キャラ)
+                bot_brawler TEXT,                  -- bot のブロウラー名
+                bot_prestige_level INTEGER,        -- bot のバトルカード表示 prestigeLevel
+                bot_ranked_rank_name TEXT,         -- bot のバトルカード表示 rankedRank (例 "Diamond III")
+                bot_ranked_rank_num INTEGER,       -- 数値表記がある場合
+                mode TEXT,                         -- 練習試合のモード (brawlBall/gemGrab/showdown等)
+                notes TEXT
+            );
+            CREATE INDEX IF NOT EXISTS idx_botobs_tag_time ON bot_observations(tag, observed_at DESC);
         """)
         # 既存DBへのカラム追加 (一度きり)
         for col_sql in [
@@ -600,6 +617,58 @@ def complete_queue_measurement(
             (now, bt, ev.get("mode", ""), ev.get("map", ""), my_brawler, duration, queue_seconds, measurement_id),
         )
     return True
+
+
+# ============================================================
+# 練習試合 bot 観察記録 (ユーザー手動入力)
+# ============================================================
+
+def add_bot_observation(
+    tag: str,
+    bot_brawler: str | None = None,
+    bot_prestige_level: int | None = None,
+    bot_ranked_rank_name: str | None = None,
+    bot_ranked_rank_num: int | None = None,
+    my_brawler: str | None = None,
+    mode: str | None = None,
+    notes: str | None = None,
+) -> int:
+    tag = normalize_tag(tag)
+    now = int(time.time())
+    with conn() as c:
+        cur = c.execute(
+            """INSERT INTO bot_observations
+               (tag, observed_at, my_brawler, bot_brawler, bot_prestige_level,
+                bot_ranked_rank_name, bot_ranked_rank_num, mode, notes)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (tag, now, my_brawler, bot_brawler, bot_prestige_level,
+             bot_ranked_rank_name, bot_ranked_rank_num, mode, notes),
+        )
+        return cur.lastrowid
+
+
+def get_bot_observations(tag: str | None = None, limit: int = 200) -> list[dict]:
+    with conn() as c:
+        if tag:
+            tag = normalize_tag(tag)
+            rows = c.execute(
+                "SELECT * FROM bot_observations WHERE tag=? ORDER BY observed_at DESC LIMIT ?",
+                (tag, limit),
+            ).fetchall()
+        else:
+            rows = c.execute(
+                "SELECT * FROM bot_observations ORDER BY observed_at DESC LIMIT ?",
+                (limit,),
+            ).fetchall()
+        return [dict(r) for r in rows]
+
+
+def delete_bot_observation(obs_id: int, tag: str) -> bool:
+    """指定のobs を削除 (誤入力訂正用)。 tag一致 で security check"""
+    tag = normalize_tag(tag)
+    with conn() as c:
+        cur = c.execute("DELETE FROM bot_observations WHERE id=? AND tag=?", (obs_id, tag))
+        return cur.rowcount > 0
 
 
 def recent_queue_measurements(tag: str | None = None, limit: int = 100) -> list[dict]:

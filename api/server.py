@@ -684,6 +684,77 @@ def queue_recent(tag: str, request: Request, limit: int = 30):
     return {"tag": tag, "measurements": rows}
 
 
+# ============================================================
+# 練習試合 bot 観察記録 (バトルカード prestigeLevel + rankedRank)
+# ============================================================
+RANKED_RANK_ORDER = [
+    "Bronze I", "Bronze II", "Bronze III",
+    "Silver I", "Silver II", "Silver III",
+    "Gold I", "Gold II", "Gold III",
+    "Diamond I", "Diamond II", "Diamond III",
+    "Mythic I", "Mythic II", "Mythic III",
+    "Legendary I", "Legendary II", "Legendary III",
+    "Masters",
+    "Pro",
+]
+
+
+@app.post("/api/bot-obs")
+@limiter.limit("30/minute")
+def add_bot_obs(
+    request: Request,
+    tag: str,
+    bot_brawler: str | None = None,
+    bot_prestige_level: int | None = None,
+    bot_ranked_rank_name: str | None = None,
+    my_brawler: str | None = None,
+    mode: str | None = None,
+    notes: str | None = None,
+):
+    """練習試合で目視確認した bot のバトルカード情報を記録。
+    bot_ranked_rank_name は "Diamond III" 等の文字列。
+    """
+    tag = _normalize_or_400(tag)
+    if bot_prestige_level is not None:
+        if not (0 <= bot_prestige_level <= 50):
+            raise HTTPException(status_code=400, detail="bot_prestige_level out of range")
+    # bot_ranked_rank_name 正規化
+    rank_num = None
+    if bot_ranked_rank_name:
+        bot_ranked_rank_name = bot_ranked_rank_name.strip()
+        if bot_ranked_rank_name in RANKED_RANK_ORDER:
+            rank_num = RANKED_RANK_ORDER.index(bot_ranked_rank_name) + 1
+    obs_id = db.add_bot_observation(
+        tag=tag,
+        bot_brawler=bot_brawler.upper() if bot_brawler else None,
+        bot_prestige_level=bot_prestige_level,
+        bot_ranked_rank_name=bot_ranked_rank_name,
+        bot_ranked_rank_num=rank_num,
+        my_brawler=my_brawler.upper() if my_brawler else None,
+        mode=mode,
+        notes=notes,
+    )
+    return {"ok": True, "id": obs_id, "rank_num": rank_num}
+
+
+@app.get("/api/bot-obs/{tag}")
+@limiter.limit("30/minute")
+def get_bot_obs(tag: str, request: Request, limit: int = 50):
+    tag = _normalize_or_400(tag)
+    if limit > 200:
+        limit = 200
+    rows = db.get_bot_observations(tag=tag, limit=limit)
+    return {"tag": tag, "observations": rows, "rank_options": RANKED_RANK_ORDER}
+
+
+@app.delete("/api/bot-obs/{obs_id}")
+@limiter.limit("10/minute")
+def delete_bot_obs(obs_id: int, request: Request, tag: str):
+    tag = _normalize_or_400(tag)
+    ok = db.delete_bot_observation(obs_id, tag)
+    return {"ok": ok}
+
+
 @app.post("/api/player/{tag}/refresh")
 @limiter.limit("10/minute")
 def refresh_player(tag: str, request: Request):

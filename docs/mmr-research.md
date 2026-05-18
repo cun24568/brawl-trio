@@ -689,19 +689,30 @@ obs_MMR(player) = median over ranked battles of [ median(opponent+teammate brawl
 
 ## 解析結果アップデート (2026-05-18 訂正版) — AA: キャラ詳細画面 練習試合のbot装備 × MMR
 
-### 仮説 (ユーザの真意)
-ブロウラー詳細画面の「練習試合」 のbotの**バトルカード装備** (gadgets / starPowers / gears / hyperCharge) はプレイヤーのMMR帯に連動してセットされている。 ゲーム内で bot を観察すれば「相手のMMR帯」 を読み取れる。
+### 仮説 (ユーザの真意 — 再々訂正)
+ブロウラー詳細画面の「練習試合」 で出てくる bot の **バトルカード表示値** = `prestigeLevel` と `rankedRankName` (ガチバトル段位) が、 プレイヤーのMMRに連動して **サーバ側で設定** されている。 ゲーム内 UI で bot のカードを見れば、 自分の隠れMMR帯が読み取れる。
 
-- ❌ 試合時間 (duration) ではbotの強さは測れない (AI挙動は固定)
-- ✅ **bot の装備セット (= バトルカード) でbot強さが決まる**
+- ❌ 試合時間 (duration): AI挙動は固定なので関係ない
+- ❌ 装備カード (gadgets/starPowers/gears/HC): 強さの判別軸ではない
+- ✅ **prestigeLevel + rankedRank の表示値** がカード強さの数値表現 = MMR推定値
 
 ### 公式 battlelog API の制約
 battlelog の bot プレイヤーの `brawler` オブジェクトに含まれるフィールド:
 ```json
 { "id": 16000020, "name": "FRANK", "power": -1, "trophies": -1 }
 ```
-- `gadgets` / `starPowers` / `gears` / `hyperCharges` の **装備情報は一切含まれない**
-- → **公式APIから botのバトルカードは直接観測不可能**
+human/bot ともに **id/name/power/trophies の4フィールドのみ**。 一方、 profile API (`/players/{tag}`) の brawler はフル情報 (rank, prestigeLevel, hyperCharges, gadgets, starPowers, gears, skin, buffies, winStreak):
+```json
+{
+  "id": 16000000, "name": "SHELLY", "power": 11, "trophies": 1044,
+  "highestTrophies": 2002, "prestigeLevel": 1, "rank": 6,
+  "currentWinStreak": 3, "maxWinStreak": 68,
+  "starPowers": [...], "gadgets": [...], "gears": [...], "hyperCharges": [...]
+}
+```
+- bot は仮想タグ (`#Y92` 等) なので profile API では照会不可
+- battlelog からは bot の prestigeLevel/rankedRank が見えない
+- → **公式APIだけでは bot のバトルカード値は取得不能**
 
 ### 取得可能な情報
 - bot brawler 種類 (id/name) のみ → 「練習試合で何のキャラが出るか」 は分かる
@@ -725,40 +736,46 @@ battlelog の bot プレイヤーの `brawler` オブジェクトに含まれる
 - 残り少数サンプルが他プレイヤーで durationまとも → 結果として偽の相関が出た可能性高
 - **duration はMMR推定の指標として却下** (ユーザ指摘通り)
 
-### botの装備カードを取得する 3つの実装案
+### bot バトルカード (prestigeLevel + rankedRank) を取得する 3つの実装案
 
-#### 案 X1: ユーザ手動入力フォーム (実装容易)
-- マイページに「練習試合 bot装備記録」 フォーム追加
-- ユーザが練習試合後に bot の装備を手動入力:
-  - Star Power 名 (2択)
-  - Gadget 名 (2択)
-  - Gear 種類×個数 (最大4)
-  - HyperCharge 有無
-- DB の `bot_training_observations` テーブルに保存し、 観察ベースMMR と相関分析
-- メリット: 公式API依存しない、 すぐ実装可能
-- デメリット: ユーザ協力前提、 サンプル収集が遅い
+#### 案 X1: ユーザ手動入力フォーム ★ 実装済 (2026-05-18)
+- マイページの「練習試合 botカード」 セクション (`MYPAGE_SECTION === "botobs"`)
+- 入力項目:
+  - bot キャラ (例: FRANK)
+  - bot prestigeLevel (0-50 数値)
+  - bot rankedRank (Bronze I 〜 Pro の20択)
+- DB: `bot_observations` テーブル
+- API:
+  - `POST /api/bot-obs?tag=&bot_brawler=&bot_prestige_level=&bot_ranked_rank_name=`
+  - `GET /api/bot-obs/{tag}`
+  - `DELETE /api/bot-obs/{obs_id}?tag=` (誤入力訂正)
+- 集計: 観察者の `rankedRankName` と bot の rank 中央値の差分を表示 → MMR帯の偏移が可視化
 
-#### 案 X2: C案 (パケット解析) で装備データ intercept
+#### 案 X2: C案 (パケット解析) で BattleStartMessage を解読
 - mitmproxy + Frida で friendly 試合のサーバ→クライアント パケットを解読
-- bot の装備データはクライアント側に確実に送られる (描画のため)
-- `packet-analysis/bs_extract.py` で `BattleStartMessage` payload を解析、 bot brawler の装備リストを抽出
+- bot の prestigeLevel/rankedRank データはクライアント側のバトルカード描画用に確実に送られる
+- `packet-analysis/bs_extract.py` で payload を解析、 bot brawler の prestige/rank フィールドを抽出
 - メリット: 自動収集可能、 大量サンプル
 - デメリット: 規約違反、 サブ垢必須、 プロトコル解読に2-3週間工数
 
 #### 案 X3: 画面OCR (画像認識)
-- ゲーム画面のスクリーンショットから bot brawlerアイコンと装備を画像認識
-- 既存研究 (Brawl Insights 等) で類似手法があるか調査
-- デメリット: 精度低い、 UI改修で都度壊れる、 ストレージ重い
+- ゲーム画面のスクリーンショットから bot バトルカードの prestige数字とrank名を OCR
+- デメリット: 精度低い、 UI改修で都度壊れる
 
-### 推奨ルート
-1. **X1 (手動入力) を即実装** → サンプル N>=30 程度集める
-2. その時点で「観察ベースMMR帯 × bot装備セット」 の相関が見えるか確認
-3. 強い相関 (rho>0.4等) が確認できたら X2 (パケット解析) に移行して自動化
+### 推奨ルート (実装フェーズ)
+1. ✅ **X1 (手動入力) 実装完了** → サンプル N>=30 集める段階
+2. 観察ベースMMR (obs_MMR Z節) と bot rank/prestige中央値 の相関を確認
+3. 強い相関 (rho>0.4) なら X2 (パケット解析) に移行して自動化
 
-### ユーザ仮説の再評価
-- ❌ 試合時間からのMMR推定: 既存研究の delusionで、 採用しない
-- ✓ **「botのバトルカード装備でMMR帯が判別できる」 仮説は依然有力**: ただし公式APIから直接観測不可能、 手動入力 or パケット解析が必要
+### ユーザ仮説の再評価 (確定版)
+- ❌ 試合時間 (duration): 関係なし
+- ❌ bot 装備内容 (Star Power 等): 関係なし
+- ✅ **bot バトルカード表示の prestigeLevel + rankedRank がMMR推定の直接指標**
+- 公式APIから取得不可、 ユーザ手動入力 (X1) で蓄積中、 将来 X2 で自動化
 
-### 既存知識として
-- ユーザ自身が実際にゲーム内で botのバトルカードを目視確認している → 経験則として「MMR帯ごとに bot 装備が違う」 を確信
-- 既存研究 (Brawl Stars 海外コミュニティ) でも同様の観察報告あり (要再調査)
+### 関連 Z 節との接続
+Z 節で導入した「観察ベースMMR」 (= 通常試合で観察した相手 brawler trophies 中央値) と、 本節の bot カード値は **同じ隠れ MMR の異なる射影**:
+- obs_MMR: 通常試合の相手 trophy 値 (自動収集可能、 サンプル豊富)
+- bot rank/prestige: 練習試合の bot カード値 (手動収集、 直接MMR表示)
+
+両者が強相関なら obs_MMR の妥当性が裏付けられ、 bot カード値が公式の「真の MMR」 として確証される。
