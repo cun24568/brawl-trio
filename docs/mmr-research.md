@@ -684,3 +684,73 @@ obs_MMR(player) = median over ranked battles of [ median(opponent+teammate brawl
 **B案 + C案 の解析価値再評価**:
 - B案 (battlelog ポーリング): obs_MMR と組合せれば 「matchmaking 待ち × 観察MMR」 の直接対応関係が出る (現実装で十分)
 - C案 (パケット解析): friendly 試合の bot強さ/AI挙動が見える + 通常マッチでも 「サーバが見せてない hidden trophy / 内部スコア」 が見える可能性
+
+---
+
+## 解析結果アップデート (2026-05-18 追) — AA: キャラ詳細画面 練習試合のbot強さ × MMR
+
+### 仮説 (ユーザ提案)
+ブロウラー詳細画面の「練習試合」 ボタン → bot 相手の単独練習。 もしこの bot の難易度がプレイヤーの隠れMMRに連動するなら、 練習試合の **duration / 勝敗** から MMR を逆推定できる。
+
+### 検出方法
+- battlelog で `type='friendly' AND 試合内人数=1 AND mode IN ('brawlBall', 'gemGrab')` がキャラ別練習試合に該当
+- DB全体で 20試合 検出 (主タグ19 + こんてんらぁ1)
+
+### 公式APIで取れる/取れない情報
+| 項目 | 取得可否 |
+|---|---|
+| bot の brawler 種類 (name/id) | ✓ 取れる |
+| bot の trophies | ✗ **-1 マスク** |
+| bot の power | ✗ -1 マスク |
+| duration (試合時間) | ✓ **取れる** ← MMR推定のキー |
+| result (victory/defeat/draw) | ✓ 取れる |
+| 自分の brawler / map | ✓ 取れる |
+
+### 観察ベースMMR × 練習試合 duration
+
+**Spearman 相関 rho = +0.627** (N=20)
+
+| obs_MMR帯 | N | duration中央値 |
+|---|---|---|
+| 0-999 | 7 | **46s** |
+| 1000-1499 | 9 | 120s (**2.6倍**) |
+| 1800+ | 4 | 120s |
+
+→ **強い正の相関**: 観察ベースMMRが高いプレイヤーほど、 練習試合の duration が長い (= botが粘る = bot強い)。 ユーザ仮説の初期確認。
+
+### bot として出現した brawler 頻度
+(friendly/challenge 試合 全体 N=81 から)
+
+| bot brawler | 出現回数 |
+|---|---|
+| FRANK | 59 |
+| 8-BIT | 43 |
+| EDGAR | 31 |
+| EL PRIMO | 19 |
+| BROCK | 13 |
+| MORTIS | 12 |
+| DAMIAN | 11 |
+| PIPER | 11 |
+| STU | 11 |
+| COLETTE | 10 |
+
+→ FRANK/8-BIT/EDGAR が圧倒的多数。 「bot AI の作りやすい古参・代表キャラ」 が再利用されている可能性。
+
+### サブ発見: 主タグの「練習試合即抜け」
+主タグ #YQ8YY09R の練習試合 19戦は **全て duration が -4〜-7秒** = ロビーで即抜けた記録。 これは「キャラ切り替え時のテスト的接触」 として battlelog に残る (公式APIの記録挙動)。 → 真に練習しないと有意な duration は取れない。
+
+### 実用案
+1. **マイページに「練習試合MMR推定」 機能追加**: そのプレイヤーが直近で行った練習試合の duration中央値を「キャラ別MMR推定値」 として表示
+2. **MMR推定したいユーザは練習試合をN秒以上やる** ように促し、 duration が安定する閾値 (例: 60s 以上) を「真の MMR シグナル」 とする
+3. **既存指標 (obs_MMR, rankedElo, highest) との3軸比較** で MMR推定の精度向上
+
+### サンプル不足の改善案
+N=20 で rho=+0.627 は強い信号だが、 確証には N>=100 欲しい。
+- 既存ユーザに「練習試合を試して」 と促す
+- もしくは、 watchlist の各タグで `battlelog` 取得後 friendly+1人 を専用テーブルに集計する自動収集
+
+### 統計まとめ
+ユーザの「練習試合のbotの強さから内部レートを推定」 仮説は:
+- ❌ bot の trophies は -1 マスクで直接観測不可
+- ✅ **duration が観察者MMRと rho=+0.627 で連動** ← 仮説の初期実証
+- ⚠️ N=20 サンプルで小、 実用化には収集拡大が必要
