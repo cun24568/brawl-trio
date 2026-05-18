@@ -139,7 +139,8 @@ def main():
     for tag, arr in sorted(by_player.items(), key=lambda x: -len(x[1])):
         nm = profiles.get(tag, {}).get("name", "?")
         mmr = obs_mmr.get(tag, None)
-        dur_med = statistics.median([t["duration"] for t in arr if t["duration"] > 0]) if any(t["duration"] for t in arr) else 0
+        dur_list = [t["duration"] for t in arr if t["duration"] > 0]
+        dur_med = statistics.median(dur_list) if dur_list else 0
         results = Counter(t["result"] for t in arr)
         print(f"    [{nm[:18]:<18}] {tag} N={len(arr)}  obs_MMR={mmr!s:<7}  dur_med={dur_med:.0f}s  results={dict(results)}")
 
