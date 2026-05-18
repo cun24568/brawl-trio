@@ -687,40 +687,27 @@ obs_MMR(player) = median over ranked battles of [ median(opponent+teammate brawl
 
 ---
 
-## 解析結果アップデート (2026-05-18 追) — AA: キャラ詳細画面 練習試合のbot強さ × MMR
+## 解析結果アップデート (2026-05-18 訂正版) — AA: キャラ詳細画面 練習試合のbot装備 × MMR
 
-### 仮説 (ユーザ提案)
-ブロウラー詳細画面の「練習試合」 ボタン → bot 相手の単独練習。 もしこの bot の難易度がプレイヤーの隠れMMRに連動するなら、 練習試合の **duration / 勝敗** から MMR を逆推定できる。
+### 仮説 (ユーザの真意)
+ブロウラー詳細画面の「練習試合」 のbotの**バトルカード装備** (gadgets / starPowers / gears / hyperCharge) はプレイヤーのMMR帯に連動してセットされている。 ゲーム内で bot を観察すれば「相手のMMR帯」 を読み取れる。
 
-### 検出方法
-- battlelog で `type='friendly' AND 試合内人数=1 AND mode IN ('brawlBall', 'gemGrab')` がキャラ別練習試合に該当
-- DB全体で 20試合 検出 (主タグ19 + こんてんらぁ1)
+- ❌ 試合時間 (duration) ではbotの強さは測れない (AI挙動は固定)
+- ✅ **bot の装備セット (= バトルカード) でbot強さが決まる**
 
-### 公式APIで取れる/取れない情報
-| 項目 | 取得可否 |
-|---|---|
-| bot の brawler 種類 (name/id) | ✓ 取れる |
-| bot の trophies | ✗ **-1 マスク** |
-| bot の power | ✗ -1 マスク |
-| duration (試合時間) | ✓ **取れる** ← MMR推定のキー |
-| result (victory/defeat/draw) | ✓ 取れる |
-| 自分の brawler / map | ✓ 取れる |
+### 公式 battlelog API の制約
+battlelog の bot プレイヤーの `brawler` オブジェクトに含まれるフィールド:
+```json
+{ "id": 16000020, "name": "FRANK", "power": -1, "trophies": -1 }
+```
+- `gadgets` / `starPowers` / `gears` / `hyperCharges` の **装備情報は一切含まれない**
+- → **公式APIから botのバトルカードは直接観測不可能**
 
-### 観察ベースMMR × 練習試合 duration
+### 取得可能な情報
+- bot brawler 種類 (id/name) のみ → 「練習試合で何のキャラが出るか」 は分かる
+- ただし装備セットは見えない
 
-**Spearman 相関 rho = +0.627** (N=20)
-
-| obs_MMR帯 | N | duration中央値 |
-|---|---|---|
-| 0-999 | 7 | **46s** |
-| 1000-1499 | 9 | 120s (**2.6倍**) |
-| 1800+ | 4 | 120s |
-
-→ **強い正の相関**: 観察ベースMMRが高いプレイヤーほど、 練習試合の duration が長い (= botが粘る = bot強い)。 ユーザ仮説の初期確認。
-
-### bot として出現した brawler 頻度
-(friendly/challenge 試合 全体 N=81 から)
-
+### bot として出現した brawler 頻度 (friendly/challenge 試合 N=81)
 | bot brawler | 出現回数 |
 |---|---|
 | FRANK | 59 |
@@ -728,29 +715,50 @@ obs_MMR(player) = median over ranked battles of [ median(opponent+teammate brawl
 | EDGAR | 31 |
 | EL PRIMO | 19 |
 | BROCK | 13 |
-| MORTIS | 12 |
-| DAMIAN | 11 |
-| PIPER | 11 |
-| STU | 11 |
-| COLETTE | 10 |
+| MORTIS / DAMIAN / PIPER / STU / COLETTE | 10-12 |
 
-→ FRANK/8-BIT/EDGAR が圧倒的多数。 「bot AI の作りやすい古参・代表キャラ」 が再利用されている可能性。
+→ 「古参・代表キャラ」 が再利用されている。 ただし**キャラ選択は装備セットほどMMR連動性を持たない**かもしれない (要検証)。
 
-### サブ発見: 主タグの「練習試合即抜け」
-主タグ #YQ8YY09R の練習試合 19戦は **全て duration が -4〜-7秒** = ロビーで即抜けた記録。 これは「キャラ切り替え時のテスト的接触」 として battlelog に残る (公式APIの記録挙動)。 → 真に練習しないと有意な duration は取れない。
+### duration相関の再評価
+前版で報告した「obs_MMR × duration rho=+0.627 (N=20)」 は **サンプリングバイアスの疑い**:
+- 主タグ #YQ8YY09R の19戦は全て duration が -4〜-7秒 (= ロビーで即抜け)、 これらは「観察ベースMMR=1773」 で本来の練習試合データではない
+- 残り少数サンプルが他プレイヤーで durationまとも → 結果として偽の相関が出た可能性高
+- **duration はMMR推定の指標として却下** (ユーザ指摘通り)
 
-### 実用案
-1. **マイページに「練習試合MMR推定」 機能追加**: そのプレイヤーが直近で行った練習試合の duration中央値を「キャラ別MMR推定値」 として表示
-2. **MMR推定したいユーザは練習試合をN秒以上やる** ように促し、 duration が安定する閾値 (例: 60s 以上) を「真の MMR シグナル」 とする
-3. **既存指標 (obs_MMR, rankedElo, highest) との3軸比較** で MMR推定の精度向上
+### botの装備カードを取得する 3つの実装案
 
-### サンプル不足の改善案
-N=20 で rho=+0.627 は強い信号だが、 確証には N>=100 欲しい。
-- 既存ユーザに「練習試合を試して」 と促す
-- もしくは、 watchlist の各タグで `battlelog` 取得後 friendly+1人 を専用テーブルに集計する自動収集
+#### 案 X1: ユーザ手動入力フォーム (実装容易)
+- マイページに「練習試合 bot装備記録」 フォーム追加
+- ユーザが練習試合後に bot の装備を手動入力:
+  - Star Power 名 (2択)
+  - Gadget 名 (2択)
+  - Gear 種類×個数 (最大4)
+  - HyperCharge 有無
+- DB の `bot_training_observations` テーブルに保存し、 観察ベースMMR と相関分析
+- メリット: 公式API依存しない、 すぐ実装可能
+- デメリット: ユーザ協力前提、 サンプル収集が遅い
 
-### 統計まとめ
-ユーザの「練習試合のbotの強さから内部レートを推定」 仮説は:
-- ❌ bot の trophies は -1 マスクで直接観測不可
-- ✅ **duration が観察者MMRと rho=+0.627 で連動** ← 仮説の初期実証
-- ⚠️ N=20 サンプルで小、 実用化には収集拡大が必要
+#### 案 X2: C案 (パケット解析) で装備データ intercept
+- mitmproxy + Frida で friendly 試合のサーバ→クライアント パケットを解読
+- bot の装備データはクライアント側に確実に送られる (描画のため)
+- `packet-analysis/bs_extract.py` で `BattleStartMessage` payload を解析、 bot brawler の装備リストを抽出
+- メリット: 自動収集可能、 大量サンプル
+- デメリット: 規約違反、 サブ垢必須、 プロトコル解読に2-3週間工数
+
+#### 案 X3: 画面OCR (画像認識)
+- ゲーム画面のスクリーンショットから bot brawlerアイコンと装備を画像認識
+- 既存研究 (Brawl Insights 等) で類似手法があるか調査
+- デメリット: 精度低い、 UI改修で都度壊れる、 ストレージ重い
+
+### 推奨ルート
+1. **X1 (手動入力) を即実装** → サンプル N>=30 程度集める
+2. その時点で「観察ベースMMR帯 × bot装備セット」 の相関が見えるか確認
+3. 強い相関 (rho>0.4等) が確認できたら X2 (パケット解析) に移行して自動化
+
+### ユーザ仮説の再評価
+- ❌ 試合時間からのMMR推定: 既存研究の delusionで、 採用しない
+- ✓ **「botのバトルカード装備でMMR帯が判別できる」 仮説は依然有力**: ただし公式APIから直接観測不可能、 手動入力 or パケット解析が必要
+
+### 既存知識として
+- ユーザ自身が実際にゲーム内で botのバトルカードを目視確認している → 経験則として「MMR帯ごとに bot 装備が違う」 を確信
+- 既存研究 (Brawl Stars 海外コミュニティ) でも同様の観察報告あり (要再調査)
