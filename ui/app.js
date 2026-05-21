@@ -529,11 +529,17 @@ function onSynergySearchInput(slot, val) {
     sug.classList.add("hidden");
     return;
   }
-  const m = currentMap;
-  if (!m || !m.all_trios) { sug.classList.add("hidden"); return; }
+  // 候補は DB全体の brawlers ベース (そのマップで未出現でも検索できるように)
   const brawlerJpMap = {};
-  for (const t of m.all_trios) {
-    for (const mem of t.members) brawlerJpMap[mem.brawler] = mem.brawler_jp || mem.brawler;
+  if (DB && DB.brawlers) {
+    for (const b of DB.brawlers) brawlerJpMap[b.name] = b.name_jp || b.name;
+  }
+  // フォールバック: DB.brawlers が空でも、 現在マップの trio から拾う
+  const m = currentMap;
+  if (Object.keys(brawlerJpMap).length === 0 && m && m.all_trios) {
+    for (const t of m.all_trios) {
+      for (const mem of t.members) brawlerJpMap[mem.brawler] = mem.brawler_jp || mem.brawler;
+    }
   }
   const matches = Object.entries(brawlerJpMap).filter(([en, jp]) => brawlerNameMatches(en, jp, val));
   if (matches.length === 0) {
