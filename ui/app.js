@@ -601,45 +601,54 @@ function renderSynergySection(m) {
     </div>`;
   };
 
-  // フィルタ: 選択されたブロウラーを含むtrios
-  let filtered = m.all_trios;
-  if (synergyPick1) {
-    filtered = filtered.filter(t => t.members.some(mem => mem.brawler === synergyPick1));
-  }
-  if (synergyPick2) {
-    filtered = filtered.filter(t => t.members.some(mem => mem.brawler === synergyPick2));
-  }
-  if (synergyPick1 && synergyPick2 && synergyPick1 === synergyPick2) {
-    filtered = [];  // 同じキャラ2人選択は無効
-  }
+  // フィルタ: 選択されたブロウラーを含むtrios (信頼trio + 参考trio)
+  const applyFilter = (arr) => {
+    let f = arr || [];
+    if (synergyPick1) f = f.filter(t => t.members.some(mem => mem.brawler === synergyPick1));
+    if (synergyPick2) f = f.filter(t => t.members.some(mem => mem.brawler === synergyPick2));
+    if (synergyPick1 && synergyPick2 && synergyPick1 === synergyPick2) f = [];
+    return f;
+  };
+  const filtered = applyFilter(m.all_trios);
+  const filteredLow = applyFilter(m.all_trios_low);
 
   // 表示制限
   const top = filtered.slice(0, 30);
+  const topLow = filteredLow.slice(0, 30);
   const selectedSet = new Set([synergyPick1, synergyPick2].filter(Boolean));
 
-  const resultHtml = top.length === 0
-    ? `<div class="p-3 text-gray-500 text-sm">該当する組み合わせなし (5戦以上のトリオから検索)</div>`
-    : top.map(t => {
-        const others = t.members.filter(mem => !selectedSet.has(mem.brawler));
-        const wrColor = t.win_rate >= 0.75 ? "text-green-400" : t.win_rate >= 0.5 ? "text-yellow-400" : "text-red-400";
-        return `<div class="flex items-center justify-between p-2 bg-gray-700/30 hover:bg-gray-700/50 rounded">
-          <div class="flex items-center gap-2 flex-wrap">
-            ${t.members.map((mem, i) => `
-              ${i > 0 ? '<span class="text-gray-500">+</span>' : ""}
-              <div class="flex items-center gap-1 px-2 py-1 ${selectedSet.has(mem.brawler) ? 'bg-blue-700/50 ring-1 ring-blue-500' : 'bg-gray-700'} rounded">
-                ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ""}
-                <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
-              </div>
-            `).join("")}
+  const renderTrioRow = (t) => {
+    const wrColor = t.win_rate >= 0.75 ? "text-green-400" : t.win_rate >= 0.5 ? "text-yellow-400" : "text-red-400";
+    return `<div class="flex items-center justify-between p-2 bg-gray-700/30 hover:bg-gray-700/50 rounded">
+      <div class="flex items-center gap-2 flex-wrap">
+        ${t.members.map((mem, i) => `
+          ${i > 0 ? '<span class="text-gray-500">+</span>' : ""}
+          <div class="flex items-center gap-1 px-2 py-1 ${selectedSet.has(mem.brawler) ? 'bg-blue-700/50 ring-1 ring-blue-500' : 'bg-gray-700'} rounded">
+            ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ""}
+            <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
           </div>
-          <div class="text-sm whitespace-nowrap ml-2 flex items-center gap-2">
-            <span class="font-mono font-bold ${wrColor}">${(t.win_rate * 100).toFixed(0)}%</span>
-            <span class="text-green-300 font-mono text-xs">1位${t.rank1_count || 0}</span>
-            <span class="text-blue-300 font-mono text-xs">2位${t.rank2_count || 0}</span>
-            <span class="text-gray-400 font-mono text-xs">/${t.picks}戦</span>
-          </div>
-        </div>`;
-      }).join("");
+        `).join("")}
+      </div>
+      <div class="text-sm whitespace-nowrap ml-2 flex items-center gap-2">
+        <span class="font-mono font-bold ${wrColor}">${(t.win_rate * 100).toFixed(0)}%</span>
+        <span class="text-green-300 font-mono text-xs">1位${t.rank1_count || 0}</span>
+        <span class="text-blue-300 font-mono text-xs">2位${t.rank2_count || 0}</span>
+        <span class="text-gray-400 font-mono text-xs">/${t.picks}戦</span>
+      </div>
+    </div>`;
+  };
+
+  const noMain = top.length === 0;
+  const mainHtml = noMain
+    ? `<div class="p-3 text-gray-500 text-sm">5戦以上の該当trio なし</div>`
+    : top.map(renderTrioRow).join("");
+  const lowHtml = topLow.length === 0 ? "" : `
+    <div class="mt-3 pt-2 border-t border-gray-700">
+      <div class="text-xs text-gray-400 mb-1">📊 参考 trio (2〜4戦、 サンプル少)</div>
+      ${topLow.map(renderTrioRow).join("")}
+    </div>`;
+
+  const resultHtml = mainHtml + lowHtml;
 
   const hint = !synergyPick1
     ? "1人目を選ぶと相方候補、2人決めると3人目候補が出ます"

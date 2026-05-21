@@ -381,15 +381,18 @@ def main():
         )
 
         # 推奨編成 + 全trios (シナジー検索用)
+        # main: picks >= 5 (信頼trio、 既存ロジック)
+        # low_sample: 2 <= picks < 5 (参考trio、 マイナーキャラ用)
         m_trios = trio_stats.get(map_name, {})
         all_trios = []
+        all_trios_low = []
         for trio_key, s in m_trios.items():
-            if s["picks"] < MIN_PICKS_FOR_TRIO:
+            picks = s["picks"]
+            if picks < 2:
                 continue
             # 同じブロウラーが複数いる編成は除外 (3人とも別キャラの場合のみ採用)
             if len(set(trio_key)) != 3:
                 continue
-            picks = s["picks"]
             wins = s["wins"]
             wr = wins / picks
             ranks = s["ranks"]
@@ -409,23 +412,27 @@ def main():
                         "image_url": bm_img,
                     }
                 )
-            all_trios.append(
-                {
-                    "members": members,
-                    "picks": picks,
-                    "wins": wins,
-                    "win_rate": round(wr, 3),
-                    "avg_rank": round(avg_r, 2),
-                    "rank1_count": r1c,
-                    "rank2_count": r2c,
-                    "rank3_count": r3c,
-                    "rank4_count": r4c,
-                }
-            )
+            entry = {
+                "members": members,
+                "picks": picks,
+                "wins": wins,
+                "win_rate": round(wr, 3),
+                "avg_rank": round(avg_r, 2),
+                "rank1_count": r1c,
+                "rank2_count": r2c,
+                "rank3_count": r3c,
+                "rank4_count": r4c,
+            }
+            if picks >= MIN_PICKS_FOR_TRIO:
+                all_trios.append(entry)
+            else:
+                all_trios_low.append(entry)
         all_trios.sort(key=lambda x: (-x["win_rate"], -x["picks"]))
         rec_trios = all_trios[:TOP_N_TRIOS]
         # シナジー検索用は picks降順で TOP1500 に絞り (db.json サイズ抑制、 GitHub 100MB制限対策)
         synergy_trios = sorted(all_trios, key=lambda x: -x["picks"])[:1500]
+        # 参考trio (picks 2-4) は top 1500 (win_rate降順、 マイナーキャラの相方候補ノイズを減らす)
+        synergy_trios_low = sorted(all_trios_low, key=lambda x: (-x["win_rate"], -x["picks"]))[:1500]
 
         maps_out.append(
             {
@@ -440,7 +447,8 @@ def main():
                 "map_avg_rank": round(map_avg_rank, 2),
                 "tier_list": tier_list,
                 "recommended_trios": rec_trios,
-                "all_trios": synergy_trios,  # シナジー検索用 (picks上位1500のみ)
+                "all_trios": synergy_trios,  # シナジー検索用 (picks>=5, 上位1500)
+                "all_trios_low": synergy_trios_low,  # 参考trio (picks 2-4, 上位1500)
             }
         )
     maps_out.sort(key=lambda m: -m["total_picks"])
