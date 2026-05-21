@@ -55,7 +55,6 @@
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="club">クラブ</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="ranking">ランキング</button>
       <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="roulette">ルーレット</button>
-      <button class="tab-btn px-4 py-2 rounded font-semibold bg-gray-700 whitespace-nowrap" data-tab="queue">マッチング計測</button>
     </div>
   </nav>
 
@@ -201,27 +200,6 @@
         </button>
       </div>
       <div id="roulette-result"></div>
-    </div>
-
-    <div id="tab-queue" class="tab-content hidden">
-      <div class="bg-gray-800 p-4 rounded mb-4">
-        <div class="text-lg font-semibold mb-2">⏱ マッチング時間 実測</div>
-        <div class="text-xs text-gray-400 mb-3 leading-relaxed">
-          ゲーム内で <b>「バトル開始」 を押す直前に「計測開始」 を押す</b> → サーバが12秒ごとに公式APIを叩いて新試合を検出 → 「バトルタイム - duration - 計測開始時刻」 でマッチング待ち秒数を算出します。<br>
-          フレンド戦は検出されません (battlelogに記録されないため)。 ガチ・ランクド・通常モード全対応。<br>
-          同時計測上限 8人。 30分タイムアウト。
-        </div>
-        <div class="flex gap-2 relative">
-          <input type="text" id="queue-tag" placeholder="#XXXXXXXX または プレイヤー名"
-            class="flex-1 p-2 bg-gray-900 border border-gray-700 rounded font-mono focus:outline-none focus:border-blue-500" autocomplete="off">
-          <button id="queue-start" class="px-4 py-2 bg-green-600 hover:bg-green-500 rounded font-semibold whitespace-nowrap">
-            ▶ 計測開始
-          </button>
-          <div id="queue-suggest" class="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-700 rounded shadow-lg max-h-72 overflow-y-auto z-30 hidden"></div>
-        </div>
-        <div id="queue-status" class="mt-3"></div>
-      </div>
-      <div id="queue-history"></div>
     </div>
 
   </main>
