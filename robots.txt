@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brawl-trio.vercel.app/sitemap.xml
+Sitemap: https://brawl-showdown.com/sitemap.xml
