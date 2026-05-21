@@ -223,7 +223,7 @@ async function load() {
     if (baseToday.getHours() < 5) baseToday.setDate(baseToday.getDate() - 1);
     baseToday.setHours(12, 0, 0, 0);
     const todayJp = rotationMapForDate(baseToday);
-    initialMap = candidates.find(m => (m.name_jp || m.name) === todayJp);
+    initialMap = candidates.find(m => (dispName(m.name, m.name_jp)) === todayJp);
   }
   if (!initialMap) initialMap = candidates[0];
   if (initialMap) selectMap(initialMap);
@@ -289,7 +289,7 @@ function renderMapList() {
   if (ROTATION) {
     // 周期14マップを基準に並べる (DBに居ないマップもプレースホルダ生成)
     const dbByJp = new Map();
-    for (const m of DB.maps) dbByJp.set(m.name_jp || m.name, m);
+    for (const m of DB.maps) dbByJp.set(dispName(m.name, m.name_jp), m);
     candidates = ROTATION.rotation.map(jp => {
       const m = dbByJp.get(jp);
       if (m) return m;
@@ -307,8 +307,8 @@ function renderMapList() {
       };
     });
     candidates.sort((a, b) => {
-      const aN = nextAppearance(a.name_jp || a.name);
-      const bN = nextAppearance(b.name_jp || b.name);
+      const aN = nextAppearance(dispName(a.name, a.name_jp));
+      const bN = nextAppearance(dispName(b.name, b.name_jp));
       return (aN ? aN.daysAhead : 999) - (bN ? bN.daysAhead : 999);
     });
   } else {
@@ -320,7 +320,7 @@ function renderMapList() {
   // candidates をグローバルに保持しておく (selectMap 用)
   DB._mapCandidates = candidates;
   sel.innerHTML = candidates.map(m => {
-    const next = nextAppearance(m.name_jp || m.name);
+    const next = nextAppearance(dispName(m.name, m.name_jp));
     let badge = "";
     if (next) {
       if (next.daysAhead === 0) badge = " 【今日】";
@@ -330,7 +330,7 @@ function renderMapList() {
       badge = " ★プール外";
     }
     const dataMark = m._placeholder ? " ⏳" : "";
-    const label = `${m.name_jp || m.name} (${m.total_picks})${badge}${dataMark}`;
+    const label = `${dispName(m.name, m.name_jp)} (${m.total_picks})${badge}${dataMark}`;
     return `<option value="${escapeHtml(m.hash)}">${escapeHtml(label)}</option>`;
   }).join("");
   sel.addEventListener("change", () => {
@@ -371,7 +371,7 @@ function renderMapDetail() {
   if (!m.tier_list || m.tier_list.length === 0) {
     el.innerHTML = `
       <div class="bg-gray-800 p-6 rounded">
-        <h2 class="text-xl font-bold">${escapeHtml(m.name_jp || m.name)}</h2>
+        <h2 class="text-xl font-bold">${escapeHtml(dispName(m.name, m.name_jp))}</h2>
         <div class="text-sm text-gray-400 mt-1">${escapeHtml(m.name)}</div>
         <div class="mt-4 p-4 bg-yellow-900/30 border border-yellow-700 rounded text-yellow-200">
           このマップのデータが不足しています (総ピック ${m.total_picks})。<br>
@@ -424,7 +424,7 @@ function renderMapDetail() {
       <td class="py-2 px-2">
         <div class="flex items-center">
           ${t.image_url ? `<img src="${t.image_url}" class="w-8 h-8 mr-2 rounded flex-shrink-0">` : ""}
-          <span class="truncate">${escapeHtml(t.brawler_jp || t.brawler)}</span>
+          <span class="truncate">${escapeHtml(dispName(t.brawler, t.brawler_jp))}</span>
         </div>
       </td>
       <td class="py-2 px-2 text-right w-12">${t.picks}</td>
@@ -457,7 +457,7 @@ function renderMapDetail() {
     <div class="bg-gray-800 rounded overflow-hidden">
       ${m.image_url ? `<img src="${m.image_url}" class="w-full" style="max-height:280px;object-fit:cover">` : ""}
       <div class="p-6">
-        <h2 class="text-2xl font-bold">${escapeHtml(m.name_jp || m.name)}</h2>
+        <h2 class="text-2xl font-bold">${escapeHtml(dispName(m.name, m.name_jp))}</h2>
         ${m.name_jp ? `<div class="text-sm text-gray-400">${escapeHtml(m.name)}</div>` : ""}
         <div class="text-sm text-gray-400 mt-2">
           総ピック ${m.total_picks} / 掲載 ${m.tier_list.length}人 /
@@ -482,7 +482,7 @@ function renderMapDetail() {
                     ${i > 0 ? '<span class="text-gray-500">+</span>' : ''}
                     <div class="flex items-center gap-1 px-2 py-1 bg-gray-700 rounded">
                       ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ''}
-                      <span class="text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
+                      <span class="text-sm">${escapeHtml(dispName(mem.brawler, mem.brawler_jp))}</span>
                     </div>
                   `).join("")}
                 </div>
@@ -532,13 +532,13 @@ function onSynergySearchInput(slot, val) {
   // 候補は DB全体の brawlers ベース (そのマップで未出現でも検索できるように)
   const brawlerJpMap = {};
   if (DB && DB.brawlers) {
-    for (const b of DB.brawlers) brawlerJpMap[b.name] = b.name_jp || b.name;
+    for (const b of DB.brawlers) brawlerJpMap[b.name] = dispName(b.name, b.name_jp);
   }
   // フォールバック: DB.brawlers が空でも、 現在マップの trio から拾う
   const m = currentMap;
   if (Object.keys(brawlerJpMap).length === 0 && m && m.all_trios) {
     for (const t of m.all_trios) {
-      for (const mem of t.members) brawlerJpMap[mem.brawler] = mem.brawler_jp || mem.brawler;
+      for (const mem of t.members) brawlerJpMap[mem.brawler] = dispName(mem.brawler, mem.brawler_jp);
     }
   }
   const matches = Object.entries(brawlerJpMap).filter(([en, jp]) => brawlerNameMatches(en, jp, val));
@@ -581,7 +581,7 @@ function renderSynergySection(m) {
   // 出現する全ブロウラー (sorted) + JP名マップ
   const brawlerJp = {};  // EN → JP
   for (const t of m.all_trios) {
-    for (const mem of t.members) brawlerJp[mem.brawler] = mem.brawler_jp || mem.brawler;
+    for (const mem of t.members) brawlerJp[mem.brawler] = dispName(mem.brawler, mem.brawler_jp);
   }
   const brawlers = Object.keys(brawlerJp).sort((a, b) =>
     brawlerJp[a].localeCompare(brawlerJp[b], "ja")
@@ -625,7 +625,7 @@ function renderSynergySection(m) {
           ${i > 0 ? '<span class="text-gray-500">+</span>' : ""}
           <div class="flex items-center gap-1 px-2 py-1 ${selectedSet.has(mem.brawler) ? 'bg-blue-700/50 ring-1 ring-blue-500' : 'bg-gray-700'} rounded">
             ${mem.image_url ? `<img src="${mem.image_url}" class="w-6 h-6 rounded">` : ""}
-            <span class="text-xs sm:text-sm">${escapeHtml(mem.brawler_jp || mem.brawler)}</span>
+            <span class="text-xs sm:text-sm">${escapeHtml(dispName(mem.brawler, mem.brawler_jp))}</span>
           </div>
         `).join("")}
       </div>
@@ -748,7 +748,7 @@ function renderBrawlerCard(b) {
     <div class="brawler-card relative p-0.5 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded text-center border border-transparent hover:border-blue-500 ${dim}" data-name="${escapeHtml(b.name)}">
       ${tierBadge}
       ${b.image_url ? `<img src="${b.image_url}" class="w-full rounded">` : '<div class="w-full aspect-square bg-gray-700 rounded"></div>'}
-      <div class="text-[10px] mt-0.5 truncate font-semibold leading-tight px-0.5">${escapeHtml(b.name_jp || b.name)}</div>
+      <div class="text-[10px] mt-0.5 truncate font-semibold leading-tight px-0.5">${escapeHtml(dispName(b.name, b.name_jp))}</div>
       <div class="text-[9px] ${wrColor} leading-tight">${wrText}</div>
     </div>`;
 }
@@ -779,7 +779,7 @@ function renderBrawlerGrid(filter = "") {
     if (sort === "weighted_wr") return (b._weightedWr || 0) - (a._weightedWr || 0);
     if (sort === "weighted_avg_rank") return (a._weightedAvgRank ?? 99) - (b._weightedAvgRank ?? 99);
     if (sort === "picks") return (b.total_picks || 0) - (a.total_picks || 0);
-    if (sort === "name") return (a.name_jp || a.name).localeCompare(b.name_jp || b.name, "ja");
+    if (sort === "name") return (dispName(a.name, a.name_jp)).localeCompare(dispName(b.name, b.name_jp), "ja");
     return 0;
   });
 
@@ -842,7 +842,7 @@ function renderBrawlerGrid(filter = "") {
 
 function selectBrawler(b) {
   const el = document.getElementById("brawler-detail");
-  const dispName = b.name_jp || b.name;
+  const dispName = dispName(b.name, b.name_jp);
   // PC・モバイルとも詳細にスクロール
   setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
   el.innerHTML = `
@@ -862,7 +862,7 @@ function selectBrawler(b) {
             ? '<div class="text-gray-500 text-sm">サンプル不足</div>'
             : b.best_maps.map(m => `
               <div class="flex justify-between items-center p-2 hover:bg-gray-700/50 rounded">
-                <span>${escapeHtml(m.map_jp || m.map)}</span>
+                <span>${escapeHtml(dispName(m.map, m.map_jp))}</span>
                 <span class="text-sm font-mono">${(m.win_rate * 100).toFixed(1)}% (${m.picks}p)</span>
               </div>
             `).join("")}
@@ -873,7 +873,7 @@ function selectBrawler(b) {
             ? '<div class="text-gray-500 text-sm">サンプル不足</div>'
             : b.worst_maps.map(m => `
               <div class="flex justify-between items-center p-2 hover:bg-gray-700/50 rounded">
-                <span>${escapeHtml(m.map_jp || m.map)}</span>
+                <span>${escapeHtml(dispName(m.map, m.map_jp))}</span>
                 <span class="text-sm font-mono">${(m.win_rate * 100).toFixed(1)}% (${m.picks}p)</span>
               </div>
             `).join("")}
@@ -952,11 +952,17 @@ function brawlerNameMatches(enName, jpName, query) {
 // ============================================================
 
 // EN→JP マッピングを DB から構築
+// 言語に応じて表示名を返す (en時は英語、 ja時は日本語 fallback 英語)
+function dispName(en, jp) {
+  if (LANG === "en") return en || jp || "";
+  return jp || en || "";
+}
+
 function buildBrawlerJpMap() {
   const map = {};
   if (!DB || !DB.brawlers) return map;
   for (const b of DB.brawlers) {
-    map[b.name] = b.name_jp || b.name;
+    map[b.name] = dispName(b.name, b.name_jp);
   }
   return map;
 }
@@ -970,12 +976,12 @@ function buildBrawlerImgMap() {
   return map;
 }
 
-// マップ EN → JP マッピング
+// マップ EN → 表示名 マッピング (言語連動)
 function buildMapJpMap() {
   const map = {};
   if (!DB || !DB.maps) return map;
   for (const m of DB.maps) {
-    map[m.name] = m.name_jp || m.name;
+    map[m.name] = dispName(m.name, m.name_jp);
   }
   return map;
 }
@@ -1991,7 +1997,7 @@ function renderMypageRecommendations(myBrawlers, brawlerJp, brawlerImg, globalSt
   for (const x of sTierUnused) {
     if (!agg[x.brawler]) agg[x.brawler] = { count: 0, maps: [] };
     agg[x.brawler].count++;
-    agg[x.brawler].maps.push({ map: x.map_jp || x.map, tier: x.tier, wr: x.win_rate });
+    agg[x.brawler].maps.push({ map: dispName(x.map, x.map_jp), tier: x.tier, wr: x.win_rate });
   }
   const recos = Object.entries(agg)
     .sort((a, b) => b[1].count - a[1].count)
@@ -2167,7 +2173,7 @@ function populateRouletteMaps() {
   if (ROTATION) {
     const todayJp = rotationMapForDate(new Date());
     const dbByJp = new Map();
-    for (const m of DB.maps) dbByJp.set(m.name_jp || m.name, m);
+    for (const m of DB.maps) dbByJp.set(dispName(m.name, m.name_jp), m);
     for (const jp of ROTATION.rotation) {
       const m = dbByJp.get(jp);
       if (!m) continue;
@@ -2237,7 +2243,7 @@ function spinRoulette() {
   function makeSlot(i, b) {
     return `<div data-slot="${i}" class="bg-gray-700 rounded p-3 text-center">
       ${b.image_url ? `<img src="${b.image_url}" class="w-full max-w-[120px] mx-auto rounded mb-2">` : '<div class="w-full aspect-square max-w-[120px] mx-auto bg-gray-600 rounded mb-2"></div>'}
-      <div class="font-bold truncate" data-name>${escapeHtml(b.name_jp || b.name)}</div>
+      <div class="font-bold truncate" data-name>${escapeHtml(dispName(b.name, b.name_jp))}</div>
       ${b.tier ? `<div class="mt-1"><span class="px-2 py-0.5 rounded text-xs font-bold ${TIER_COLORS[b.tier] || ''}">${b.tier}</span> ${b.win_rate != null ? `<span class="text-xs text-gray-400 ml-1">${(b.win_rate*100).toFixed(0)}%</span>` : ""}</div>` : ""}
     </div>`;
   }
