@@ -270,8 +270,8 @@ function renderRotationBanner() {
   baseToday.setHours(12, 0, 0, 0);
   const items = [];
   for (let d = 0; d < 2; d++) {
-    const t = new Date(baseToday.getFullYear(), baseToday.getMonth(), baseToday.getDate() + d, 12);
-    const map = rotationMapForDate(t);
+    const dt = new Date(baseToday.getFullYear(), baseToday.getMonth(), baseToday.getDate() + d, 12);
+    const map = rotationMapForDate(dt);
     const label = d === 0 ? t("today") : t("tomorrow");
     const color = d === 0 ? "text-yellow-300 font-bold" : "text-gray-200";
     items.push(`<span class="${color}">${label}</span>: <span class="text-white font-semibold">${escapeHtml(map || "?")}</span>`);
