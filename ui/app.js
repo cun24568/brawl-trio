@@ -2035,7 +2035,7 @@ setupMypage();
 setupClub();
 setupRoulette();
 setupRanking();
-setupQueue();
+// setupQueue() は QUEUE_LAST_TAG 等の let 宣言を参照するため、 宣言行の後で呼ぶ (ファイル末尾)
 
 // ============================================================
 // ランキング (全ウォッチリストプレイヤーの戦績)
@@ -2822,4 +2822,5 @@ async function deleteBotObs(obsId, tag) {
   } catch (e) { /* ignore */ }
 }
 
+setupQueue();
 load();
