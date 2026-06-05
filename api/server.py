@@ -45,9 +45,9 @@ app.add_middleware(
 @app.on_event("startup")
 def _startup():
     db.init_db()
-    # 名前検索インデックスを background で構築 (jsonl 40万行で数秒〜10秒)
+    # 名前検索インデックスは初回検索リクエスト時 on-demand 構築 (起動時の jsonl 745MB 全読込を回避)
+    # クラブインデックスは小さい (各国TOP200のみ) のでそのまま background 起動
     import threading as _t
-    _t.Thread(target=_build_player_index, daemon=True).start()
     _t.Thread(target=_build_club_index, daemon=True).start()
 
 
