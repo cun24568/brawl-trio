@@ -23,6 +23,8 @@ import brawl_api  # noqa: E402
 import db  # noqa: E402
 
 ALLOWED_ORIGINS = [
+    "https://brawl-showdown.com",
+    "https://www.brawl-showdown.com",
     "https://brawl-trio.vercel.app",
     "http://localhost:8000",
     "http://localhost:5173",
