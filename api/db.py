@@ -18,11 +18,19 @@ COOLDOWN_SECONDS = 30 * 60  # 30分
 
 
 def normalize_tag(tag: str) -> str:
-    """'#YQ8YY09R' or 'yq8yy09r' → '#YQ8YY09R'"""
+    """'#YQ8YY09R' or 'yq8yy09r' → '#YQ8YY09R'
+    Brawl Stars タグの charset は 0289CGJLPQRUVY のみ。 紛らわしい O/I/B 等は使われないので
+    入力ミスを補正:
+      O → 0  (オー → ゼロ)
+      I → 1  (アイ → イチ)
+    """
     t = tag.strip().upper()
     if not t.startswith("#"):
         t = "#" + t
-    return t
+    body = t[1:]
+    # Brawl Stars のタグ文字を補正 (公式 charset に O/I は無い)
+    body = body.replace("O", "0").replace("I", "1")
+    return "#" + body
 
 
 @contextmanager
