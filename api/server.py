@@ -479,7 +479,7 @@ def leaderboard(
                   w.trophies AS trophies
                 FROM battles b
                 LEFT JOIN watchlist w ON b.tag = w.tag
-                WHERE b.mode = 'trioShowdown'{extra}
+                WHERE b.mode = 'trioShowdown' AND b.rank > 0{extra}
                 GROUP BY b.tag
                 HAVING battles >= ?
                 ORDER BY {order_sql}

@@ -243,7 +243,8 @@ def get_player_matchups(tag: str, since: str | None = None, min_seen: int = 5) -
     }
     """
     tag = normalize_tag(tag)
-    extra = " AND mode = 'trioShowdown'"
+    # rank=0 (= 公式APIが rank field を返さなかったケース、 取得不能データ) は集計から除外
+    extra = " AND mode = 'trioShowdown' AND rank > 0"
     params: list = [tag]
     if since:
         extra += " AND battle_time >= ?"
@@ -329,7 +330,8 @@ def get_player_stats(tag: str, since: str | None = None) -> dict:
     """そのタグのトリオサバイバル集計データを返す (全モード保存後も既存挙動維持: trioShowdownフィルタ)。
     since: battle_time の下限 (YYYYMMDDTHHMMSS.000Z 形式)、 None なら全期間。"""
     tag = normalize_tag(tag)
-    extra = " AND mode = 'trioShowdown'"
+    # rank=0 (= 公式APIが rank field を返さなかったケース、 取得不能データ) は集計から除外
+    extra = " AND mode = 'trioShowdown' AND rank > 0"
     base_params = [tag]
     if since:
         extra += " AND battle_time >= ?"
