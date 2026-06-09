@@ -191,10 +191,25 @@ def upsert_battles(tag: str, battles: list[dict]) -> int:
     return inserted
 
 
+def _estimate_rank_from_trophy_change(tc: int | None) -> int:
+    """rank が公式APIから取れない場合に trophyChange から推定 (新トロフィー制度ベース)。
+    tc >= 15 → 1位、 1 <= tc < 15 → 2位、 -5 < tc < 0 → 3位、 tc <= -5 → 4位、 0/None → 0 (不能)"""
+    if tc is None or tc == 0:
+        return 0
+    if tc >= 15: return 1
+    if tc > 0:   return 2
+    if tc > -5:  return 3
+    return 4
+
+
 def _extract_self(tag: str, battle: dict) -> tuple[str, int]:
     """全モード対応: battle.teams (trio/duo/3v3) または battle.players (solo) から
-    自分のブロウラーと順位を取り出す。 3v3 のような順位なしモードは rank=0。"""
+    自分のブロウラーと順位を取り出す。 3v3 のような順位なしモードは rank=0。
+    showdown系で rank が API レスポンスにない (公式APIアカウント別の謎仕様) 場合は
+    trophyChange から推定する。"""
     rank = battle.get("rank") or 0
+    if rank == 0 and battle.get("mode", "").lower().endswith("showdown"):
+        rank = _estimate_rank_from_trophy_change(battle.get("trophyChange"))
     teams = battle.get("teams") or []
     for team in teams:
         for p in team:
