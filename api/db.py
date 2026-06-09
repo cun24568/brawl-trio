@@ -135,7 +135,7 @@ def add_to_watchlist(
             if victim:
                 c.execute("DELETE FROM watchlist WHERE tag=?", (victim["tag"],))
         c.execute(
-            "INSERT INTO watchlist (tag, registered_at, name, trophies, highest_trophies, profile_json) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT OR IGNORE INTO watchlist (tag, registered_at, name, trophies, highest_trophies, profile_json) VALUES (?, ?, ?, ?, ?, ?)",
             (tag, now, name, trophies, highest_trophies, profile_json),
         )
         return True, "登録完了"
