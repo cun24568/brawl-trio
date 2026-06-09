@@ -2123,7 +2123,7 @@ function renderRanking(data, order) {
       <td class="py-2 px-2 text-right text-yellow-400 font-mono text-xs hidden md:table-cell">🏆${(r.trophies || 0).toLocaleString()}</td>
       <td class="py-2 px-2 text-right font-mono text-xs">${r.battles.toLocaleString()}</td>
       <td class="py-2 px-2 text-right font-mono ${order === "rank1_rate" ? "text-green-300 font-bold" : "text-green-300"} text-xs">${rank1pct}%</td>
-      <td class="py-2 px-2 text-right font-mono ${order === "top2_rate" ? "text-blue-300 font-bold" : "text-blue-300"} text-xs hidden sm:table-cell">${top2pct}%</td>
+      <td class="py-2 px-2 text-right font-mono ${order === "top2_rate" ? "text-blue-300 font-bold" : "text-blue-300"} text-xs">${top2pct}%</td>
       <td class="py-2 px-2 text-right font-mono ${order === "rank4_rate_low" ? "text-red-300 font-bold" : "text-red-300"} text-xs hidden md:table-cell">${rank4pct}%</td>
       <td class="py-2 px-2 text-right font-mono ${order === "avg_rank" ? "font-bold" : ""} text-xs">${avg}</td>
     </tr>`;
@@ -2140,7 +2140,7 @@ function renderRanking(data, order) {
           <th class="pb-2 px-2 text-right hidden md:table-cell">トロ</th>
           <th class="pb-2 px-2 text-right">試合</th>
           <th class="pb-2 px-2 text-right">1位率</th>
-          <th class="pb-2 px-2 text-right hidden sm:table-cell">TOP2率</th>
+          <th class="pb-2 px-2 text-right">TOP2率</th>
           <th class="pb-2 px-2 text-right hidden md:table-cell">4位率</th>
           <th class="pb-2 px-2 text-right">平均順</th>
         </tr></thead>
