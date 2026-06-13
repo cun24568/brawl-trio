@@ -46,7 +46,9 @@ def main():
     kept = 0
     dropped = 0
     malformed = 0
-    tmp = JSONL.with_suffix(".jsonl.tmp")
+    # tmp は PID 固有名 (複数prune が同時に走っても衝突しない。 通常 update.sh の flock 内で
+    # 単独実行されるが、 手動実行が cron と被るケースの保険)
+    tmp = JSONL.with_name(f"{JSONL.name}.tmp.{os.getpid()}")
 
     # battleTime は各行の先頭付近 ({"battleTime": "20260613T...") にあるので、
     # json parse せず文字列スライスで高速に日時判定する。
