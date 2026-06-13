@@ -33,16 +33,25 @@ python3 -u fetch_official_brawlers.py || echo "official brawlers fetch failed (n
 #   MemoryHigh=3000M : これを超えると積極的に reclaim/throttle (soft limit)
 #   MemorySwapMax=0  : swap を食わせない (swap thrash で box全体が固まるのを防ぐ)
 # systemd-run --user が使えない環境では素の python にフォールバック。
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=${XDG_RUNTIME_DIR}/bus}"
+# systemd-run --user の可用性を1回だけ判定 (cron からは dbus 不通のことがある)
+CAP_OK=0
+if command -v systemd-run >/dev/null 2>&1 \
+   && systemd-run --user --scope --quiet -p MemoryHigh=100M -- true >/dev/null 2>&1; then
+    CAP_OK=1
+else
+    echo "(systemd-run --user unavailable, crawl will run uncapped)"
+fi
 run_capped() {
-    if command -v systemd-run >/dev/null 2>&1 && [ -n "${XDG_RUNTIME_DIR:-}" ]; then
-        systemd-run --user --scope --quiet \
-            -p MemoryHigh=3000M -p MemorySwapMax=0 \
+    # cgroup メモリ隔離で python を実行 (uvicorn を OOM 巻き添えから守る)
+    if [ "$CAP_OK" = "1" ]; then
+        systemd-run --user --scope --quiet -p MemoryHigh=3000M -p MemorySwapMax=0 \
             -- python3 -u "$@"
     else
         python3 -u "$@"
     fi
 }
-export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 run_capped crawl_full.py
 run_capped build_db.py
 
