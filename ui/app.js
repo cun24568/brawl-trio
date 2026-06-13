@@ -230,6 +230,60 @@ async function load() {
   renderBrawlerGrid();
   setupTabs();
   setupSearch();
+  setupPeriodSelector();  // 月別アーカイブ (失敗しても致命的でない)
+}
+
+// ============================================================
+// 月別ティアアーカイブ (期間セレクタ)
+// ============================================================
+let PERIOD_MONTH = null;        // null = 直近(live db.json)、 "YYYY-MM" = その月のアーカイブ
+let ARCHIVE_INDEX = null;       // {months:[...], current:...}
+const ARCHIVE_CACHE = {};       // "YYYY-MM" → snapshot {maps:[...]}
+
+async function setupPeriodSelector() {
+  try {
+    const res = await fetch("/data/archive/index.json", { cache: "no-cache" });
+    if (!res.ok) return;
+    ARCHIVE_INDEX = await res.json();
+  } catch (e) { return; }
+  const months = (ARCHIVE_INDEX && ARCHIVE_INDEX.months) || [];
+  if (months.length === 0) return;
+  const wrap = document.getElementById("period-wrap");
+  const sel = document.getElementById("period-select");
+  if (!wrap || !sel) return;
+  const liveLabel = LANG === "en" ? "Recent (30d)" : "直近30日";
+  sel.innerHTML = `<option value="">${liveLabel}</option>` +
+    months.map(m => `<option value="${m}">${m}</option>`).join("");
+  sel.addEventListener("change", () => setPeriodMonth(sel.value || null));
+  wrap.classList.remove("hidden");
+}
+
+async function setPeriodMonth(month) {
+  PERIOD_MONTH = month;
+  if (month && !ARCHIVE_CACHE[month]) {
+    try {
+      const res = await fetch(`/data/archive/tiers-${month}.json`, { cache: "no-cache" });
+      if (res.ok) ARCHIVE_CACHE[month] = await res.json();
+    } catch (e) { /* keep live */ }
+  }
+  // 月別はティアのみ → セクションをtierに固定
+  if (month) currentMapSection = "tier";
+  renderMapDetail();
+}
+
+// 現在の期間に応じた map データ (月別なら archive 版に差し替え)。 hash で突き合わせ。
+function effectiveMap(m) {
+  if (!PERIOD_MONTH || !m) return m;
+  const snap = ARCHIVE_CACHE[PERIOD_MONTH];
+  if (!snap || !snap.maps) return m;
+  const am = snap.maps.find(x => x.hash === m.hash || x.name === m.name);
+  if (!am) {
+    // その月にこのマップのデータが無い
+    return { ...m, tier_list: [], total_picks: 0, _noMonthData: true,
+             recommended_trios: [], all_trios: [], all_trios_low: [] };
+  }
+  // archive は tier_list のみ。 trio系は持たないので空に
+  return { ...m, ...am, recommended_trios: [], all_trios: [], all_trios_low: [] };
 }
 
 // ローテーション計算: 指定日付 (Date) のマップ名(JP)を返す
@@ -365,17 +419,26 @@ function resetSynergy() {
 }
 
 function renderMapDetail() {
-  const m = currentMap;
+  const m = effectiveMap(currentMap);
   if (!m) return;
   const el = document.getElementById("map-detail");
+  // 月別バナー (アーカイブ表示中)
+  const monthBanner = PERIOD_MONTH
+    ? `<div class="mb-3 px-3 py-2 bg-indigo-900/40 border border-indigo-700 rounded text-sm text-indigo-200">
+         📅 <b>${escapeHtml(PERIOD_MONTH)}</b> ${LANG === "en" ? "monthly tier snapshot (tier list only)" : "の月別ティア表（ティアリストのみ）"}
+       </div>`
+    : "";
   if (!m.tier_list || m.tier_list.length === 0) {
+    const noDataMsg = m._noMonthData
+      ? `${PERIOD_MONTH} はこのマップのデータがありません (その月にプレイ/集計されていません)。`
+      : `このマップのデータが不足しています (総ピック ${m.total_picks})。<br>ローテーションで戻ってきたら再クロールしてください。`;
     el.innerHTML = `
+      ${monthBanner}
       <div class="bg-gray-800 p-6 rounded">
         <h2 class="text-xl font-bold">${escapeHtml(dispName(m.name, m.name_jp))}</h2>
         <div class="text-sm text-gray-400 mt-1">${escapeHtml(m.name)}</div>
         <div class="mt-4 p-4 bg-yellow-900/30 border border-yellow-700 rounded text-yellow-200">
-          このマップのデータが不足しています (総ピック ${m.total_picks})。<br>
-          ローテーションで戻ってきたら再クロールしてください。
+          ${noDataMsg}
         </div>
       </div>`;
     return;
@@ -454,6 +517,7 @@ function renderMapDetail() {
     </div>`;
 
   el.innerHTML = `
+    ${monthBanner}
     <div class="bg-gray-800 rounded overflow-hidden">
       ${m.image_url ? `<img src="${m.image_url}" class="w-full" style="max-height:280px;object-fit:cover">` : ""}
       <div class="p-6">
@@ -465,7 +529,7 @@ function renderMapDetail() {
           ${!m.in_pool ? '<span class="ml-2 text-yellow-500">[プール外マップ]</span>' : ""}
         </div>
         <div class="text-xs text-gray-500 mt-1">スコア: 1位+9 / 2位+4 / 3位-4 / 4位-9。高トロ帯(2000+)バトル2倍。500戦以下は0.9倍ペナルティ。ベイズ平均化。50戦以上でpercentileティア</div>
-        ${renderMapSectionSelector()}
+        ${PERIOD_MONTH ? "" : renderMapSectionSelector()}
         ${currentMapSection === "tier" ? `
           ${filterButtons}
           <h3 class="text-sm font-bold mt-4 mb-2 text-gray-300 uppercase tracking-wide">ティアリスト ${currentTierFilter !== 'all' ? `(${currentTierFilter}のみ)` : ''}</h3>

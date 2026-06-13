@@ -60,9 +60,15 @@
 
   <main class="max-w-7xl mx-auto p-4">
     <div id="tab-maps" class="tab-content">
-      <div class="mb-4">
-        <label class="text-sm text-gray-400 block mb-1">マップ選択</label>
-        <select id="map-select" class="w-full p-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500 text-base"></select>
+      <div class="mb-4 flex flex-wrap gap-3">
+        <div class="flex-1 min-w-[200px]">
+          <label class="text-sm text-gray-400 block mb-1">マップ選択</label>
+          <select id="map-select" class="w-full p-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500 text-base"></select>
+        </div>
+        <div id="period-wrap" class="hidden">
+          <label class="text-sm text-gray-400 block mb-1">期間</label>
+          <select id="period-select" class="p-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500 text-base"></select>
+        </div>
       </div>
       <div id="map-detail"></div>
     </div>

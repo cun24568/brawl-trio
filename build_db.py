@@ -19,7 +19,6 @@ trio_meta_full.csv + manual_mappings.json + brawlers.json + maps_pool.json
   ]
 }
 """
-import csv
 import json
 import re
 import sys
@@ -32,7 +31,6 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 
-META_CSV = DATA / "trio_meta_full.csv"
 BATTLES_JSON = DATA / "trio_battles_full.json"  # 旧形式 (互換)
 BATTLES_JSONL = DATA / "trio_battles.jsonl"  # 新形式 (蓄積型)
 MANUAL = DATA / "manual_mappings.json"
@@ -40,6 +38,7 @@ BRAWLERS = DATA / "brawlers.json"
 OFFICIAL_BRAWLERS = DATA / "official_brawlers.json"  # 公式API IDマップ (Brawlify未収録対応)
 MAPS_POOL = DATA / "maps_pool.json"
 OUT = DATA / "db.json"
+ARCHIVE = DATA / "archive"  # 月別ティアスナップショット (tiers-YYYYMM.json + index.json)
 BRAWLIFY_CDN = "https://cdn.brawlify.com/brawlers/borders"
 
 MIN_PICKS_ABS = 1  # 絶対最小pick数 (すべてのプレイされたブロウラーを表示)
@@ -252,24 +251,52 @@ def get_brawler_image(brawler_name, brawler_by_name, official_id_map):
     return None
 
 
+def _new_rank_dist():
+    return defaultdict(lambda: defaultdict(lambda: {"r1": 0.0, "r2": 0.0, "r3": 0.0, "r4": 0.0}))
+
+
+def _new_brawler_meta():
+    # map → brawler → {picks, wins, rank_sum} (UNWEIGHTED、 旧 trio_meta_full.csv 相当)
+    return defaultdict(lambda: defaultdict(lambda: {"picks": 0, "wins": 0, "rank_sum": 0}))
+
+
+def _accumulate_brawler(rank_dist, brawler_meta, map_name, brawlers, rank, is_win, weight):
+    """1試合の requester チーム3人を rank_dist(weighted) + brawler_meta(unweighted) に反映"""
+    for br in brawlers:
+        rd = rank_dist[map_name][br]
+        if rank == 1: rd["r1"] += weight
+        elif rank == 2: rd["r2"] += weight
+        elif rank == 3: rd["r3"] += weight
+        else: rd["r4"] += weight
+        bm = brawler_meta[map_name][br]
+        bm["picks"] += 1
+        if is_win:
+            bm["wins"] += 1
+        bm["rank_sum"] += rank
+
+
 def extract_trios_and_rank_dist(battles):
     """
     raw battles から
     - trio 編成統計 (map → trio_key → 集計)
     - ブロウラー別順位分布 (map → brawler → 1位/2位/3位/4位 count, weighted)
+    - ブロウラー別メタ (map → brawler → picks/wins/rank_sum, unweighted) ← 旧CSVの代替、 ティア計算用
+    - 月別 (YYYYMM) の rank_dist + brawler_meta (月次ティアスナップショット用、 brawler粒度のみで軽量)
     高トロ帯(2000+)バトルは2倍重みでカウント。
+    返値: (trio_stats, rank_dist, brawler_meta, monthly)
+      monthly: {"YYYYMM": {"rank_dist": ..., "brawler_meta": ...}}
     """
     # メモリ削減: ranks リスト([]) ではなく avg_rank に必要な カウンタのみ保持。
-    #   rank_sum: 順位の総和 (avg = rank_sum / picks)
-    #   r1c/r2c/r3c/r4c: 各順位のカウント
     trio_stats = defaultdict(lambda: defaultdict(
         lambda: {"picks": 0, "wins": 0, "rank_sum": 0, "r1c": 0, "r2c": 0, "r3c": 0, "r4c": 0}))
-    rank_dist = defaultdict(lambda: defaultdict(lambda: {"r1": 0.0, "r2": 0.0, "r3": 0.0, "r4": 0.0}))
-    # dedup: (battleTime, _requester_tag) の 64bit ハッシュを int で保持 (tuple-of-str より 3倍省メモリ)。
-    # 衝突確率は 1000万件でも ~10^-6 で無視可能、 最悪1試合スキップのみ。
+    rank_dist = _new_rank_dist()
+    brawler_meta = _new_brawler_meta()
+    monthly = {}  # "YYYYMM" → {"rank_dist", "brawler_meta"} (brawler粒度のみ = 軽量)
+    # dedup: (battleTime, _requester_tag) の 64bit ハッシュを int で保持。
     seen = set()
     for b in battles:
-        key = hash((b.get("battleTime", ""), b.get("_requester_tag", ""))) & 0xFFFFFFFFFFFFFFFF
+        bt_str = b.get("battleTime", "")
+        key = hash((bt_str, b.get("_requester_tag", ""))) & 0xFFFFFFFFFFFFFFFF
         if key in seen:
             continue
         seen.add(key)
@@ -289,14 +316,12 @@ def extract_trios_and_rank_dist(battles):
         is_win = rank <= 2
         map_name = ev.get("map", "?")
 
-        # チーム平均トロフィー(各ブロウラーのpersonalトロ)
         team_trophies = [
             (p.get("brawler") or {}).get("trophies", 0) for p in team
         ]
         avg_trophy = (
             sum(team_trophies) / len(team_trophies) if team_trophies else 0
         )
-        # 高トロ帯(2000+)は重み2倍、それ以外は1.0
         weight = HIGH_TROPHY_WEIGHT if avg_trophy >= HIGH_TROPHY_THRESHOLD else 1.0
 
         # trio 統計 (推奨編成は素のpicks/winsで集計)
@@ -311,18 +336,38 @@ def extract_trios_and_rank_dist(battles):
         elif rank == 3: s["r3c"] += 1
         else: s["r4c"] += 1
 
-        # 各ブロウラーの順位分布 (weighted)
-        for br in brawlers:
-            rd = rank_dist[map_name][br]
-            if rank == 1:
-                rd["r1"] += weight
-            elif rank == 2:
-                rd["r2"] += weight
-            elif rank == 3:
-                rd["r3"] += weight
-            else:
-                rd["r4"] += weight
-    return trio_stats, rank_dist
+        # 全期間 brawler集計 (rank_dist + brawler_meta)
+        _accumulate_brawler(rank_dist, brawler_meta, map_name, brawlers, rank, is_win, weight)
+
+        # 月別集計 (battleTime "YYYYMMDDT..." の先頭6文字 = YYYYMM)
+        ym = bt_str[:6]
+        if len(ym) == 6 and ym.isdigit():
+            mb = monthly.get(ym)
+            if mb is None:
+                mb = {"rank_dist": _new_rank_dist(), "brawler_meta": _new_brawler_meta()}
+                monthly[ym] = mb
+            _accumulate_brawler(mb["rank_dist"], mb["brawler_meta"], map_name, brawlers, rank, is_win, weight)
+
+    return trio_stats, rank_dist, brawler_meta, monthly
+
+
+def brawler_meta_to_rows(brawler_meta):
+    """brawler_meta (map→brawler→{picks,wins,rank_sum}) を 旧CSV rows 形式の list に変換"""
+    rows = []
+    for map_name, brs in brawler_meta.items():
+        for br, m in brs.items():
+            picks = m["picks"]
+            if picks <= 0:
+                continue
+            rows.append({
+                "map": map_name,
+                "brawler": br,
+                "picks": picks,
+                "wins": m["wins"],
+                "win_rate": round(m["wins"] / picks, 3),
+                "avg_rank": round(m["rank_sum"] / picks, 2),
+            })
+    return rows
 
 
 def main():
@@ -344,20 +389,8 @@ def main():
     pool_maps = json.loads(MAPS_POOL.read_text(encoding="utf-8"))
     pool_by_hash = {m["hash"]: m for m in pool_maps}
 
-    # メタCSV読み込み
-    rows = list(csv.DictReader(META_CSV.open(encoding="utf-8-sig")))
-    for r in rows:
-        r["picks"] = int(r["picks"])
-        r["wins"] = int(r["wins"])
-        r["win_rate"] = float(r["win_rate"])
-        r["avg_rank"] = float(r["avg_rank"])
-
-    # マップ別グループ
-    by_map_name = defaultdict(list)
-    for r in rows:
-        by_map_name[r["map"]].append(r)
-
-    # 推奨編成 + 順位分布抽出 (JSONL streaming 優先, 互換でJSONも対応)
+    # 推奨編成 + 順位分布 + brawlerメタ + 月別 を JSONL から直接集計
+    # (旧 trio_meta_full.csv 依存を廃止: CSV生成を crawl_full から削除したため、 ここで直接集計する)
     if BATTLES_JSONL.exists():
         def battle_iter():
             with open(BATTLES_JSONL, encoding="utf-8") as f:
@@ -374,8 +407,16 @@ def main():
         battles = json.loads(BATTLES_JSON.read_text(encoding="utf-8"))
     else:
         battles = []
-    trio_stats, rank_dist = extract_trios_and_rank_dist(battles)
-    print(f"Extracted trio + rank dist for {len(trio_stats)} maps")
+    trio_stats, rank_dist, brawler_meta, monthly = extract_trios_and_rank_dist(battles)
+    print(f"Extracted trio + rank dist for {len(trio_stats)} maps, {len(monthly)} months")
+
+    # 旧CSV rows 形式を jsonl集計から構築 (tier計算 + brawler別best/worstマップで使用)
+    rows = brawler_meta_to_rows(brawler_meta)
+
+    # マップ別グループ
+    by_map_name = defaultdict(list)
+    for r in rows:
+        by_map_name[r["map"]].append(r)
 
     # マップDB生成
     maps_out = []
@@ -521,6 +562,75 @@ def main():
     print(f"  maps: {db['stats']['total_maps']} ({db['stats']['maps_in_pool']} in pool)")
     print(f"  brawlers: {db['stats']['total_brawlers']}")
     print(f"  total picks: {db['stats']['total_picks']}")
+
+    # 月別ティアスナップショット生成
+    build_monthly_archives(
+        monthly, map_jp, pool_by_hash, brawler_by_name, brawler_jp, official_id_map
+    )
+
+
+def build_monthly_archives(monthly, map_jp, pool_by_hash, brawler_by_name, brawler_jp, official_id_map):
+    """月別 (YYYYMM) のティアスナップショットを data/archive/tiers-YYYYMM.json に書き出す。
+    - 各月の brawler_meta/rank_dist から tier_list のみ生成 (trio synergy は含めない = 軽量)
+    - 窓から外れた過去月のファイルは消さない (一度フリーズしたら保持)
+    - index.json は 既存archiveファイル ∪ 現在処理した月 の和集合
+    """
+    ARCHIVE.mkdir(exist_ok=True)
+    written = []
+    for ym, mb in sorted(monthly.items()):
+        rows = brawler_meta_to_rows(mb["brawler_meta"])
+        if not rows:
+            continue
+        rdist = mb["rank_dist"]
+        by_map = defaultdict(list)
+        for r in rows:
+            by_map[r["map"]].append(r)
+        maps_out = []
+        for map_name, brawler_rows in by_map.items():
+            hash_guess = map_name.lower().replace(" ", "-")
+            in_pool = hash_guess in pool_by_hash
+            total = sum(r["picks"] for r in brawler_rows)
+            tier_list, map_avg_wr, map_avg_rank = build_map_tier_list(
+                brawler_rows, brawler_by_name, rdist.get(map_name), brawler_jp, official_id_map
+            )
+            maps_out.append({
+                "hash": hash_guess,
+                "name": map_name,
+                "name_jp": map_jp.get(hash_guess, ""),
+                "in_pool": in_pool,
+                "total_picks": total,
+                "map_avg_wr": round(map_avg_wr, 3),
+                "map_avg_rank": round(map_avg_rank, 2),
+                "tier_list": tier_list,
+            })
+        maps_out.sort(key=lambda m: -m["total_picks"])
+        # YYYYMM → "YYYY-MM"
+        label = f"{ym[:4]}-{ym[4:6]}"
+        snap = {
+            "month": label,
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "total_picks": sum(m["total_picks"] for m in maps_out),
+            "maps": maps_out,
+        }
+        (ARCHIVE / f"tiers-{label}.json").write_text(
+            json.dumps(snap, ensure_ascii=False), encoding="utf-8"
+        )
+        written.append(label)
+
+    # index: 既存の tiers-*.json を全部拾って和集合 (窓外の過去月も残す)
+    months = set(written)
+    for p in ARCHIVE.glob("tiers-*.json"):
+        m = p.stem.replace("tiers-", "")
+        if len(m) == 7 and m[4] == "-":
+            months.add(m)
+    months_sorted = sorted(months, reverse=True)
+    index = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "months": months_sorted,  # 新しい順
+        "current": months_sorted[0] if months_sorted else None,
+    }
+    (ARCHIVE / "index.json").write_text(json.dumps(index, ensure_ascii=False), encoding="utf-8")
+    print(f"Monthly archives: {len(written)} updated ({', '.join(written)}), {len(months_sorted)} total in index")
 
 
 if __name__ == "__main__":

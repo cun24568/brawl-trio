@@ -58,8 +58,8 @@ run_capped() {
 run_capped crawl_full.py
 run_capped build_db.py
 
-# db.json に変更があるときだけ commit & push
-git add data/db.json
+# db.json + 月別アーカイブ に変更があるときだけ commit & push
+git add data/db.json data/archive/
 if ! git diff --cached --quiet; then
     MSG="auto: data update $(date -u +%FT%TZ)"
     git commit -m "$MSG"
