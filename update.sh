@@ -58,6 +58,9 @@ run_capped() {
 run_capped crawl_full.py
 run_capped build_db.py
 
+# 名前検索インデックスを SQLite に更新 (jsonl streaming, O(1)メモリ, 軽量)
+python3 -u api/build_player_index.py || echo "player index build failed (non-fatal)"
+
 # db.json + 月別アーカイブ に変更があるときだけ commit & push
 git add data/db.json data/archive/
 if ! git diff --cached --quiet; then

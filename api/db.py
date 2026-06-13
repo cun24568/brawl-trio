@@ -68,6 +68,16 @@ def init_db():
                 raw_json TEXT,
                 PRIMARY KEY (tag, battle_time)
             );
+            -- 名前検索インデックス (jsonl をメモリ展開せず SQLite で検索)。
+            -- build_player_index.py が jsonl streaming で upsert (O(1)メモリ)。 APIは LIKE で直接query。
+            CREATE TABLE IF NOT EXISTS player_index (
+                tag TEXT PRIMARY KEY,
+                name TEXT,
+                name_lower TEXT,
+                trophies INTEGER
+            );
+            CREATE INDEX IF NOT EXISTS idx_player_index_namelower ON player_index(name_lower);
+            CREATE INDEX IF NOT EXISTS idx_player_index_tro ON player_index(trophies DESC);
             CREATE INDEX IF NOT EXISTS idx_battles_tag_mode ON battles(tag, mode);
             CREATE INDEX IF NOT EXISTS idx_battles_tag_map ON battles(tag, map);
             CREATE INDEX IF NOT EXISTS idx_battles_tag_brawler ON battles(tag, brawler);
@@ -256,6 +266,53 @@ def cooldown_remaining(tag: str) -> int:
         return 0
     elapsed = int(time.time()) - last
     return max(0, COOLDOWN_SECONDS - elapsed)
+
+
+def upsert_player_index(rows: list[tuple]) -> int:
+    """player_index に upsert。 rows = [(tag, name, name_lower, trophies), ...]。
+    同じtagは name/trophies を上書き (jsonl append順なので後勝ち = 最新)。"""
+    if not rows:
+        return 0
+    with conn() as c:
+        c.executemany(
+            """INSERT INTO player_index (tag, name, name_lower, trophies)
+               VALUES (?, ?, ?, ?)
+               ON CONFLICT(tag) DO UPDATE SET
+                 name=excluded.name, name_lower=excluded.name_lower, trophies=excluded.trophies""",
+            rows,
+        )
+    return len(rows)
+
+
+def search_player_index(q: str, limit: int = 30) -> list[dict]:
+    """名前で部分一致検索。 完全一致→前方一致→部分一致 の順、 各群トロフィー降順。"""
+    q = (q or "").strip().lower()
+    if not q:
+        return []
+    if limit > 100:
+        limit = 100
+    like_q = q.replace("%", r"\%").replace("_", r"\_")
+    with conn() as c:
+        # 1クエリで rank付け: exact=0, prefix=1, contains=2
+        rows = c.execute(
+            r"""
+            SELECT tag, name, trophies,
+              CASE WHEN name_lower = ? THEN 0
+                   WHEN name_lower LIKE ? ESCAPE '\' THEN 1
+                   ELSE 2 END AS grp
+            FROM player_index
+            WHERE name_lower LIKE ? ESCAPE '\'
+            ORDER BY grp ASC, trophies DESC
+            LIMIT ?
+            """,
+            (q, like_q + "%", "%" + like_q + "%", limit),
+        ).fetchall()
+        return [{"tag": r["tag"], "name": r["name"], "trophies": r["trophies"] or 0} for r in rows]
+
+
+def player_index_count() -> int:
+    with conn() as c:
+        return c.execute("SELECT COUNT(*) FROM player_index").fetchone()[0]
 
 
 def get_player_matchups(tag: str, since: str | None = None, min_seen: int = 5) -> dict:

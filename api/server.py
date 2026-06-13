@@ -47,10 +47,10 @@ app.add_middleware(
 @app.on_event("startup")
 def _startup():
     db.init_db()
-    # 名前検索インデックス + クラブインデックスを background thread で構築 (起動はブロックしない)。
-    # 名前indexは jsonl 全読みで数十秒かかるため、 構築完了までは検索が "indexing" 応答になる。
+    # 名前検索は SQLite player_index を直接query (起動時のメモリ展開なし)。
+    # player_index の中身は cron (build_player_index.py) が jsonl から更新する。
+    # クラブインデックスのみ background 構築 (各国TOP200で軽量)。
     import threading as _t
-    _t.Thread(target=_build_player_index, daemon=True).start()
     _t.Thread(target=_build_club_index, daemon=True).start()
 
 
@@ -60,17 +60,12 @@ def health():
 
 
 # ============================================================
-# 名前検索インデックス
+# 名前検索 (SQLite player_index を直接query。 in-memory index 廃止)
 # ============================================================
 import json
 import os
 import threading
 from urllib.parse import quote
-
-_PLAYER_INDEX = None  # list[(name_lower, name, tag, trophies)]
-_PLAYER_INDEX_LOCK = threading.Lock()
-_PLAYER_INDEX_BUILT_AT = 0
-_JSONL_PATH = Path(__file__).parent.parent / "data" / "trio_battles.jsonl"
 
 _CLUB_INDEX = []  # list of dict {tag, name, trophies, country}
 _CLUB_INDEX_BUILT_AT = 0
@@ -125,43 +120,19 @@ def _build_player_index():
 @app.get("/api/search/players")
 @limiter.limit("30/minute")
 def search_players(request: Request, q: str = "", limit: int = 30):
-    """プレイヤー名で部分一致検索 (case insensitive)。
-    完全一致 → 開始一致 → 部分一致 の順 (各群はトロフィー降順)。"""
-    # インデックス構築中 (起動直後の数十秒) はブロックせず即応答 (リクエストがtimeoutしないように)
-    if _PLAYER_INDEX is None:
-        return {"results": [], "total": 0, "query": q, "indexing": True}
-    q = (q or "").strip().lower()
-    if not q:
-        return {"results": [], "total": 0, "query": q}
-    if limit > 100:
-        limit = 100
-    exact = []
-    starts = []
-    contains = []
-    for name_lower, name, tag, tro in _PLAYER_INDEX:
-        item = {"tag": tag, "name": name, "trophies": tro}
-        if name_lower == q:
-            exact.append(item)
-        elif name_lower.startswith(q):
-            starts.append(item)
-        elif q in name_lower:
-            contains.append(item)
-    exact.sort(key=lambda x: -x["trophies"])
-    starts.sort(key=lambda x: -x["trophies"])
-    contains.sort(key=lambda x: -x["trophies"])
-    merged = exact + starts + contains
-    return {"results": merged[:limit], "total": len(merged), "query": q}
+    """プレイヤー名で部分一致検索 (case insensitive)。 SQLite player_index を直接query。
+    完全一致 → 前方一致 → 部分一致 の順 (各群トロフィー降順)。"""
+    results = db.search_player_index(q, limit)
+    return {"results": results, "total": len(results), "query": (q or "").strip().lower()}
 
 
 @app.post("/api/search/players/rebuild")
-@limiter.limit("2/minute")
+@limiter.limit("1/minute")
 def rebuild_player_index(request: Request):
-    _build_player_index()
-    return {
-        "ok": True,
-        "size": len(_PLAYER_INDEX) if _PLAYER_INDEX else 0,
-        "built_at": _PLAYER_INDEX_BUILT_AT,
-    }
+    # jsonl → player_index 再構築 (streaming, O(1)メモリ)。 通常は cron で更新。
+    import build_player_index
+    build_player_index.main()
+    return {"ok": True, "size": db.player_index_count()}
 
 
 def _build_club_index():
