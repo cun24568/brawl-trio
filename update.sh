@@ -27,8 +27,24 @@ git pull --rebase --autostash || echo "git pull failed, continue with current co
 rm -f data/trio_battles_full.json data/trio_battles_partial.json
 
 python3 -u fetch_official_brawlers.py || echo "official brawlers fetch failed (non-fatal)"
-python3 -u crawl_full.py
-python3 -u build_db.py
+
+# crawl_full / build_db はメモリを大量に使う (peak ~2.8GB)。
+# cgroup スコープで隔離し、 uvicorn (brawl-api.service) のページを追い出さないようにする。
+#   MemoryHigh=3000M : これを超えると積極的に reclaim/throttle (soft limit)
+#   MemorySwapMax=0  : swap を食わせない (swap thrash で box全体が固まるのを防ぐ)
+# systemd-run --user が使えない環境では素の python にフォールバック。
+run_capped() {
+    if command -v systemd-run >/dev/null 2>&1 && [ -n "${XDG_RUNTIME_DIR:-}" ]; then
+        systemd-run --user --scope --quiet \
+            -p MemoryHigh=3000M -p MemorySwapMax=0 \
+            -- python3 -u "$@"
+    else
+        python3 -u "$@"
+    fi
+}
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+run_capped crawl_full.py
+run_capped build_db.py
 
 # db.json に変更があるときだけ commit & push
 git add data/db.json
