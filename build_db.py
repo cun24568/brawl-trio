@@ -259,11 +259,17 @@ def extract_trios_and_rank_dist(battles):
     - ブロウラー別順位分布 (map → brawler → 1位/2位/3位/4位 count, weighted)
     高トロ帯(2000+)バトルは2倍重みでカウント。
     """
-    trio_stats = defaultdict(lambda: defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []}))
+    # メモリ削減: ranks リスト([]) ではなく avg_rank に必要な カウンタのみ保持。
+    #   rank_sum: 順位の総和 (avg = rank_sum / picks)
+    #   r1c/r2c/r3c/r4c: 各順位のカウント
+    trio_stats = defaultdict(lambda: defaultdict(
+        lambda: {"picks": 0, "wins": 0, "rank_sum": 0, "r1c": 0, "r2c": 0, "r3c": 0, "r4c": 0}))
     rank_dist = defaultdict(lambda: defaultdict(lambda: {"r1": 0.0, "r2": 0.0, "r3": 0.0, "r4": 0.0}))
+    # dedup: (battleTime, _requester_tag) の 64bit ハッシュを int で保持 (tuple-of-str より 3倍省メモリ)。
+    # 衝突確率は 1000万件でも ~10^-6 で無視可能、 最悪1試合スキップのみ。
     seen = set()
     for b in battles:
-        key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
+        key = hash((b.get("battleTime", ""), b.get("_requester_tag", ""))) & 0xFFFFFFFFFFFFFFFF
         if key in seen:
             continue
         seen.add(key)
@@ -299,7 +305,11 @@ def extract_trios_and_rank_dist(battles):
         s["picks"] += 1
         if is_win:
             s["wins"] += 1
-        s["ranks"].append(rank)
+        s["rank_sum"] += rank
+        if rank == 1: s["r1c"] += 1
+        elif rank == 2: s["r2c"] += 1
+        elif rank == 3: s["r3c"] += 1
+        else: s["r4c"] += 1
 
         # 各ブロウラーの順位分布 (weighted)
         for br in brawlers:
@@ -395,12 +405,11 @@ def main():
                 continue
             wins = s["wins"]
             wr = wins / picks
-            ranks = s["ranks"]
-            avg_r = sum(ranks) / len(ranks) if ranks else 0
-            r1c = sum(1 for x in ranks if x == 1)
-            r2c = sum(1 for x in ranks if x == 2)
-            r3c = sum(1 for x in ranks if x == 3)
-            r4c = sum(1 for x in ranks if x >= 4)
+            avg_r = s["rank_sum"] / picks if picks else 0
+            r1c = s["r1c"]
+            r2c = s["r2c"]
+            r3c = s["r3c"]
+            r4c = s["r4c"]
             members = []
             for br in trio_key:
                 bm_jp = get_brawler_jp(br, brawler_by_name, brawler_jp)

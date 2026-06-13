@@ -26,6 +26,9 @@ git pull --rebase --autostash || echo "git pull failed, continue with current co
 # 旧形式ファイル(JSONL移行後不要)を削除
 rm -f data/trio_battles_full.json data/trio_battles_partial.json
 
+# trio_battles.jsonl を時間窓でprune (無限増殖防止、 メモリ/IO bound)。 軽い (streaming, O(1)メモリ)
+python3 -u prune_jsonl.py || echo "prune failed (non-fatal)"
+
 python3 -u fetch_official_brawlers.py || echo "official brawlers fetch failed (non-fatal)"
 
 # crawl_full / build_db はメモリを大量に使う (peak ~2.8GB)。

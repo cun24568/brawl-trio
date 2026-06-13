@@ -7,13 +7,11 @@
 - 50,000+トロフィープレイヤーをqualifying_tags.jsonに永続蓄積
 - 毎cycleで最大100人ぶんトロチェック (徐々に拡大)
 """
-import csv
 import json
 import random
 import sys
 import threading
 import time
-from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -137,21 +135,39 @@ def migrate_legacy_json():
         print(f"  migration failed: {e}")
 
 
+RECENT_DEDUP_DAYS = 10  # dedup対象は直近N日分のみ (battlelogは直近しか返さないので十分)
+_KEY_MASK = 0xFFFFFFFFFFFFFFFF
+
+
+def _key_hash(b):
+    """battle_key の 64bit ハッシュ (str set より ~5倍省メモリ)"""
+    return hash(battle_key(b)) & _KEY_MASK
+
+
 def load_existing_battle_keys():
-    """JSONLから既存battle keysを読み込む(streaming)"""
+    """JSONLから既存battle keysを読み込む(streaming)。
+    メモリ削減:
+      - 直近 RECENT_DEDUP_DAYS 日分のみ対象 (公式battlelogは直近しか返さないので、
+        それより古い試合と新規取得が衝突することはない)
+      - キーは 64bit ハッシュ int で保持 (1000万件の文字列setだと ~2GB → int set で ~400MB)
+    battleTime は "YYYYMMDDTHHMMSS.000Z" の zero-padded 形式なので文字列比較で日付カットオフ可能。
+    """
     keys = set()
     if not BATTLES_JSONL.exists():
         return keys
+    cutoff = time.strftime("%Y%m%dT%H%M%S", time.gmtime(time.time() - RECENT_DEDUP_DAYS * 86400))
     with open(BATTLES_JSONL, encoding="utf-8") as f:
         for line in f:
-            line = line.strip()
-            if not line:
-                continue
+            # battleTime での高速 prefix フィルタ (json parse 前に文字列で足切り)
+            # 行頭は {"battleTime": "20260613T..." なので 17文字目あたりに日時がある
             try:
                 b = json.loads(line)
-                keys.add(battle_key(b))
             except Exception:
-                pass
+                continue
+            bt = b.get("battleTime", "")
+            if bt[:15] < cutoff:  # 古い試合は dedup 不要
+                continue
+            keys.add(_key_hash(b))
     return keys
 
 
@@ -160,21 +176,6 @@ def append_battles_jsonl(battles):
     with open(BATTLES_JSONL, "a", encoding="utf-8") as f:
         for b in battles:
             f.write(json.dumps(b, ensure_ascii=False) + "\n")
-
-
-def stream_all_battles():
-    """JSONLを順次読み出すgenerator (集計用)"""
-    if not BATTLES_JSONL.exists():
-        return
-    with open(BATTLES_JSONL, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                yield json.loads(line)
-            except Exception:
-                pass
 
 
 def collect_tags():
@@ -257,8 +258,8 @@ def _process_one_battlelog(tag, discovered, existing_keys, lock):
     for b in data.get("items", []):
         if not is_trio_battle(b):
             continue
-        # dedup: 既存JSONLや今cycle内の他workerで取得済みならskip
-        k = battle_key(b)
+        # dedup: 既存JSONLや今cycle内の他workerで取得済みならskip (64bit ハッシュで判定)
+        k = _key_hash(b)
         with lock:
             if k in existing_keys:
                 continue
@@ -331,35 +332,6 @@ def fetch_battles(tags, discovered, existing_keys):
         append_battles_jsonl(new_battles)
 
     return len(new_battles), fail, rate_limited
-
-
-def aggregate_from_jsonl():
-    """JSONL を streaming で読んで集計"""
-    agg = defaultdict(lambda: {"picks": 0, "wins": 0, "ranks": []})
-    seen = set()
-    n_total = 0
-    for b in stream_all_battles():
-        n_total += 1
-        key = (b.get("battleTime", ""), b.get("_requester_tag", ""))
-        if key in seen:
-            continue
-        seen.add(key)
-        ev = b.get("event", {})
-        bt = b.get("battle", {})
-        teams = bt.get("teams", [])
-        ti = b.get("_requester_team_idx")
-        if ti is None or ti >= len(teams):
-            continue
-        rank = bt.get("rank") or 5
-        is_win = rank <= 2
-        for p in teams[ti]:
-            br = (p.get("brawler") or {}).get("name", "?")
-            mkey = (ev.get("map", "?"), br)
-            agg[mkey]["picks"] += 1
-            if is_win:
-                agg[mkey]["wins"] += 1
-            agg[mkey]["ranks"].append(rank)
-    return agg, len(seen), n_total
 
 
 def _check_one_player(tag):
@@ -448,45 +420,8 @@ def main():
     save_discovered(discovered)
 
     print(f"Saved: {BATTLES_JSONL}")
-
-    print("\n[Phase 3] 集計 (JSONL streaming)")
-    agg, unique_n, total_n = aggregate_from_jsonl()
-    print(f"raw lines: {total_n} / unique: {unique_n} / cells: {len(agg)}\n")
-
-    # CSV出力
-    rows = []
-    for (m, br), s in agg.items():
-        picks = s["picks"]
-        wins = s["wins"]
-        wr = wins / picks if picks else 0
-        avg_r = sum(s["ranks"]) / len(s["ranks"]) if s["ranks"] else 0
-        rows.append(
-            {
-                "map": m,
-                "brawler": br,
-                "picks": picks,
-                "wins": wins,
-                "win_rate": round(wr, 3),
-                "avg_rank": round(avg_r, 2),
-            }
-        )
-    rows.sort(key=lambda x: (x["map"], -x["picks"]))
-    with open(OUT / "trio_meta_full.csv", "w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(
-            f,
-            fieldnames=["map", "brawler", "picks", "wins", "win_rate", "avg_rank"],
-        )
-        w.writeheader()
-        w.writerows(rows)
-    print(f"Saved: {OUT / 'trio_meta_full.csv'}")
-
-    # マップ別picks サマリ
-    map_total = defaultdict(int)
-    for r in rows:
-        map_total[r["map"]] += r["picks"]
-    print("\n--- マップ別picks (上位20) ---")
-    for m, c in sorted(map_total.items(), key=lambda x: -x[1])[:20]:
-        print(f"  {c:5d}  {m}")
+    # 集計 + db.json 生成は build_db.py が JSONL から直接行うため、 ここでは行わない
+    # (旧 aggregate_from_jsonl + trio_meta_full.csv は未使用 = メモリ/IO の無駄だったので削除)
 
     # トロフィーチェック → qualifying プール拡大
     if not rate_limited:
