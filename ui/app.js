@@ -1188,6 +1188,12 @@ function attachNameSuggest(input, suggestEl, kind, onSelect) {
         const res = await fetch(url);
         if (!res.ok) { hideSuggest(suggestEl); return; }
         const data = await res.json();
+        if (data.indexing) {
+          suggestEl.innerHTML = '<div class="px-3 py-2 text-sm text-yellow-400">検索インデックス構築中… 数十秒後にもう一度お試しください</div>';
+          suggestEl.classList.remove("hidden");
+          lastQuery = "";  // 次入力で再試行できるよう
+          return;
+        }
         renderSuggest(suggestEl, data.results || [], onSelect);
       } catch (e) { hideSuggest(suggestEl); }
     }, 250);

@@ -47,9 +47,10 @@ app.add_middleware(
 @app.on_event("startup")
 def _startup():
     db.init_db()
-    # 名前検索インデックスは初回検索リクエスト時 on-demand 構築 (起動時の jsonl 745MB 全読込を回避)
-    # クラブインデックスは小さい (各国TOP200のみ) のでそのまま background 起動
+    # 名前検索インデックス + クラブインデックスを background thread で構築 (起動はブロックしない)。
+    # 名前indexは jsonl 全読みで数十秒かかるため、 構築完了までは検索が "indexing" 応答になる。
     import threading as _t
+    _t.Thread(target=_build_player_index, daemon=True).start()
     _t.Thread(target=_build_club_index, daemon=True).start()
 
 
@@ -126,8 +127,9 @@ def _build_player_index():
 def search_players(request: Request, q: str = "", limit: int = 30):
     """プレイヤー名で部分一致検索 (case insensitive)。
     完全一致 → 開始一致 → 部分一致 の順 (各群はトロフィー降順)。"""
+    # インデックス構築中 (起動直後の数十秒) はブロックせず即応答 (リクエストがtimeoutしないように)
     if _PLAYER_INDEX is None:
-        _build_player_index()
+        return {"results": [], "total": 0, "query": q, "indexing": True}
     q = (q or "").strip().lower()
     if not q:
         return {"results": [], "total": 0, "query": q}
